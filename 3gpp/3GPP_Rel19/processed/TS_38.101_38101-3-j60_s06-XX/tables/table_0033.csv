@@ -1,8 +1,0 @@
-Parameter,Unit,Value
-EN-DCACLR for PC3,dBc,30
-EN-DCACLR for PC2,dBc,31
-EN-DCACLR for PC1.5,dBc,31
-Measurement bandwidth of EN-DC channel,,1.00*ENBW
-Measurement bandwidth of adjacent channel,,0.95*ENBW
-Frequency offset of adjacent channel,,ENBW/-ENBW
-NOTE 1:ENBW is the aggregated bandwidth in MHz as defined in clause 5.3B.NOTE 2:The frequency offset is that in between the centre frequencies of the measurement filters,,

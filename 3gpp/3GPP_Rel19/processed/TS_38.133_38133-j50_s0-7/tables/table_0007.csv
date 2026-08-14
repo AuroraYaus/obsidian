@@ -1,6 +1,0 @@
-DRX cycle length [s],Scaling Factor (N1),Nserv [number of DRX cycles]
-0.32,N2Note1,M1*N1*4
-0.64,5,M1*N1*4
-1.28,4,N1*2
-2.56,3,N1*2
-NOTE 1:N2 = 2 when highSpeedMeasFlagFR2-r17 = [set1]; N2 = 6 when highSpeedMeasFlagFR2-r17 = set2.,,

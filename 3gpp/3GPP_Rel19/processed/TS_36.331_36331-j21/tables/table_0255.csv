@@ -1,3 +1,0 @@
-Conditional presence,Explanation,
-reportCGI,"The field is optional, need OR, in case purpose is included and set to reportCGI; otherwise the field is not present and the UE shall delete any existing value for this field.",
-reportCGI-NR,"The field is optional, need OR, in case purpose is included and set to reportCGI, and reportConfig is linked to a measObject set to measObjectNR, otherwise the field is not present and the UE shall delete any existing value for this field.",

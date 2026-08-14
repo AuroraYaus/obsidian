@@ -1,5 +1,0 @@
-Test Number,Reference Channel,OGCN pattern,,Time offset between TPs (s),Propagation Conditions (Note1),,Correlation Matrix and Antenna Configuration (Note 2),Reference Value,,UE Category
-,,TP 1,TP 2,,TP 1,TP 2,,Fraction of Maximum Throughput (%),SNR (dB) (Note 3),
-1,R.52 FDD,NA,OP.1 FDD,2,EPA5,EPA5,2x2 Low,70,12.1,≥2
-2,R.52 FDD,NA,OP.1 FDD,-0.5,EPA5,EPA5,2x2 Low,70,12.6,≥2
-Note 1:The propagation conditions for TP 1 and TP 2 are statistically independent.Note 2:The correlation matrix and antenna configuration apply for TP 1 and TP 2.Note 3:SNR corresponds to of TP 2 as defined in clause 8.1.1.,,,,,,,,,,

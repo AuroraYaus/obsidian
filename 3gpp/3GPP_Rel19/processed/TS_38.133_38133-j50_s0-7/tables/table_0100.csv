@@ -1,6 +1,0 @@
-DRX cycle length [s],"Tdetect,EUTRAN_RedCap_Relax [s] (number of DRX cycles)","Tmeasure,EUTRAN_RedCap_Relax [s] (number of DRX cycles)","Tevaluate,EUTRAN_RedCap_Relax[s] (number of DRX cycles)"
-0.32,11.52 x K1 (36 x K1),1.28 x K1 (4 x K1),5.12 x K1 (16 x K1)
-0.64,17.92 x K1 (28 x K1),1.28 x K1 (2 x K1),5.12 x K1 (8 x K1)
-1.28,32 x K1 (25 x K1),1.28 x K1 (1 x K1),6.4 x K1 (5 x K1)
-2.56,58.88 x K1 (23 x K1),2.56 (1 x K1),7.68 x K1 (3 x K1)
-NOTE 1:K1 = 3 is the measurement relaxation factor applicable for UE fulfilling the lowMobilityEvalutation [2] criterion.,,,

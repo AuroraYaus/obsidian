@@ -1,5 +1,0 @@
-Configuration,Description for target cell,Description for serving cell
-1,"NR TDD, SSB SCS 120 kHz, data SCS 120 kHz, BW 100 MHz","NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode"
-2,"NR TDD, SSB SCS 480 kHz, data SCS 480 kHz, BW 400 MHz","NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode"
-3,"NR TDD, SSB SCS 960 kHz, data SCS 960 kHz, BW 400 MHz","NR 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode"
-NOTE: The UE is only required to be tested in one of the supported test configurations,,

@@ -1,8 +1,0 @@
-PCMAX(dBm),ToleranceTLOW(PCMAX_L  )(dB),ToleranceTHIGH ( PCMAX_H )(dB)
-PCMAX = 23,3.0,2.0
-"22 ≤PCMAX,< 23",5.0,2.0
-21 ≤ PCMAX< 22,5.0,3.0
-"20 ≤ PCMAX, < 21",6.0,4.0
-16 ≤ PCMAX < 20,5.0,
-"11 ≤ PCMAX, < 16",6.0,
--40 ≤ PCMAX < 11,7.0,

@@ -1,4 +1,0 @@
-Conditional Presence,Explanation
-condReconfigAdd,"The field is mandatory present when a condReconfigId is being added. Otherwise the field is optional, need M."
-condReconfigCHO-WithSCG,"This field is optional present, need M, if the RRCReconfiguration message contained in corresponding condRRCReconfig includes the nr-SCG and condExecutionCond is configured. Otherwise, it is absent."
-CPAC,"The field is optionally present, need M, when the conditional reconfiguration includes at least one candidate PSCell supporting subsequent CPAC. Otherwise, the field is absent, need R."

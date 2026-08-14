@@ -1,7 +1,0 @@
-Test number,Bandwidth and MCS,Reference Channel,OCNG Pattern,Propagation Condition,Correlation Matrix and Antenna Configuration,Reference value,,UE Category
-,,,,,,Fraction of MaximumThroughput (%),SNR (dB),
-1,10MHz QPSK 1/3,R.90 FDD,OP.2 FDD,EPA5,2x1 Low,70,-5.4,M2
-2,10MHz QPSK 1/10,R.91 FDD,OP.2 FDD,ETU1,2x1 Low,70,-13.1,M2
-2a,10MHz QPSK 1/10,R.91 FDD,OP.2 FDD,ETU1,2x1 Low,70,-12.9,M2
-3,10MHz QPSK 1/2,R.92-1 FDD,OP.2 FDD,EPA5,2x2 Low,70,-4.8,≥1
-4,10MHz QPSK 1/2,R.92-2 FDD,OP.2 FDD,EPA5,2x4 Low,70,-4.9,≥1

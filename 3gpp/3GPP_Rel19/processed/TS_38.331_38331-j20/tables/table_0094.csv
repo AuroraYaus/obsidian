@@ -1,5 +1,0 @@
-ConnEstFailReport field descriptions
-"measResultFailedCellThis field refers to the last measurement results taken in the cell, where connection establishment failure or connection resume failure happened."
-measResultNeighCellsThis field refers to the neighbour cell measurements when connection establishment failure or connection resume failure happened.
-numberOfConnFailThis field is used to indicate the latest number of consecutive failed RRCSetup or RRCResume procedures in the same cell independent of RRC state transition.
-timeSinceFailureThis field is used to indicate the time that elapsed since the connection (establishment or resume) failure. Value in seconds. The maximum value 172800 means 172800s or longer.

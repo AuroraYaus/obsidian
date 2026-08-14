@@ -1,8 +1,0 @@
-NR,Total number of interrupted slots on serving cell,,,,,,,,,
-SCS,When MG timing advance of 0 ms is applied,,,,,When MG timing advance of 0.5 ms is applied,,,,
-(kHz),MGL=20 ms,MGL=10 ms,MGL=6 ms,MGL=4 ms,MGL=3 ms,MGL=20 ms,MGL=10 ms,MGL=6 ms,MGL=4 ms,MGL=3 ms
-15,20,10,6,4,3,21 Note3,11 Note3,7Note3,5Note3,4Note3
-30,40,20,12,8,6,40,20,12,8,6
-60,80,40,24,16,12,80,40,24,16,12
-120,160,80,48,32,24,160,80,48,32,24
-"NOTE 1:For Gap Pattern ID 0, 1, 2 and 3, total number of interrupted subframes on serving cell is MGL subframes when MG timing advance of 0 ms is applied, and (MGL+1) subframes when MG timing advance of 0.5 ms is applied.NOTE 2:NR SCS of 120 kHz is only applicable to the case with per-UE measurement gap.NOTE 3:Non-overlapped half-slots occur before and after the measurement gap. Whether a RedCap UE can receive and/or transmit in those half-slots is up to UE implementation.",,,,,,,,,,

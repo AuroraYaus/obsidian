@@ -1,9 +1,0 @@
-SL-CommConfig field descriptions
-commTxAllowRelayDedicatedIndicates whether the UE is allowed to transmit relay related sidelink communication using the configured dedicated transmission resources i.e. either via scheduled or via UE selected resources.
-commTxPoolNormalDedicatedIndicates a pool of transmission resources the UE is allowed to use while in RRC_CONNECTED.
-"logicalChGroupInfoListIndicates for each logical channel group the list of associated priorities, used as specified in TS 36.321 [6], in order of increasing logical channel group identity."
-"mcsIndicates the MCS as defined in TS 36.212 [23], clause 14.2.1. If not configured, the selection of MCS is up to UE implementation."
-"multipleTxIndicates whether the UE should perform multiple transmissions to different destinations in one SC period in accordance with TS 36.321 [6], clause 5.14.1.1. Value TRUE indicates that multiple transmissions should be performed."
-"sc-CommTxConfigIndicates a pool of resources for SC when E-UTRAN schedules Tx resources (i.e. when indices included in DCI format 5 indicate the actual data resources to be used as specified in TS 36.212 [22], clause 5.3.3.1.9)."
-scheduledIndicates the configuration for the case E-UTRAN schedules the transmission resources based on sidelink specific BSR from the UE.
-ue-SelectedIndicates the configuration for the case the UE selects the transmission resources from a pool of resources configured by E-UTRAN.

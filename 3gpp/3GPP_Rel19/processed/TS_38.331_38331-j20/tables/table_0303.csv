@@ -1,3 +1,0 @@
-Conditional Presence,Explanation
-FDD-OrSUL,The field is mandatory present if this FrequencyInfoUL-SIB is for the paired UL for a DL (defined in a FrequencyInfoDL-SIB) or if this FrequencyInfoUL-SIB is for a supplementary uplink (SUL). It is absent otherwise (if this FrequencyInfoUL-SIB is for an unpaired UL (TDD).
-FDD-TDD-OrSUL-Optional,"The field is optionally present, Need R, if this FrequencyInfoUL-SIB is for the paired UL for a DL (defined in a FrequencyInfoDL-SIB), or if this FrequencyInfoUL-SIB is for an unpaired UL (TDD) in certain bands (as defined in clause 5.4.2.1 of TS 38.101-1 and in clause 5.4.2.1 of TS 38.104 [12]), or if this FrequencyInfoUL-SIB is for a supplementary uplink (SUL). It is absent otherwise."

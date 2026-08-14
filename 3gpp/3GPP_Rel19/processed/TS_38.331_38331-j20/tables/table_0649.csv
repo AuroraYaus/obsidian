@@ -1,4 +1,0 @@
-UplinkTxDirectCurrentCell field descriptions
-servCellIndexThe serving cell ID of the serving cell corresponding to the uplinkDirectCurrentBWP.
-uplinkDirectCurrentBWPThe Tx Direct Current locations for all the uplink BWPs configured at the corresponding serving cell.
-uplinkDirectCurrentBWP-SULThe Tx Direct Current locations for all the supplementary uplink BWPs configured at the corresponding serving cell.

@@ -1,5 +1,0 @@
-Protected band,Frequency range (MHz),,,Maximum Level (dBm),MBW (MHz),NOTE
-Frequency range,2570,-,2575,+1.6,5,"1, 2"
-Frequency range,2575,-,2595,-15.5,5,"1, 2"
-Frequency range,2595,-,2620,-40,1,1
-"NOTE 1:This requirement is applicable for all carriers confined in 2500-2570 MHz. For power class 3 UE special restrictions apply for channel bandwidths up to 20MHz: For carriers of 15 MHz bandwidth when carrier centre frequency is within the range 2560.5 - 2562.5 MHz and for carriers of 20 MHz bandwidth when carrier centre frequency is within the range 2552 - 2560 MHz the requirement is applicable only for an uplink transmission bandwidth less than or equal to 54 RB with the minimum supported SCS of 15KHz.NOTE 2:For these adjacent bands, the emission limit could imply risk of harmful interference to UE(s) operating in the protected operating band.",,,,,,

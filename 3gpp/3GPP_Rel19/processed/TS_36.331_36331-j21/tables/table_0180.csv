@@ -1,2 +1,0 @@
-Conditional presence,Explanation
-SRS-Trigger-TypeA,The field is mandatory present if typeA-SRS-TPC-PDCCH-Group-r14 is present. Otherwise the field is not present and the UE shall delete any existing value for this field.

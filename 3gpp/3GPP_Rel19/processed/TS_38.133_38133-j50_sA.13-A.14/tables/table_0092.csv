@@ -1,6 +1,0 @@
-Configuration,Description of serving cell,Description of target cell
-1,"GSO, NR FDD, SSB SCS 15 kHz, data SCS 15 kHz, BW 10 MHz","LTE 10 MHz bandwidth, TDD duplex mode"
-2,"NGSO, NR FDD, SSB SCS 15 kHz, data SCS 15 kHz, BW 10 MHz","LTE 10 MHz bandwidth, TDD duplex mode"
-3,"GSO, NR FDD, SSB SCS 15 kHz, data SCS 15 kHz, BW 10 MHz","LTE 10 MHz bandwidth, FDD duplex mode"
-4,"NGSO, NR FDD, SSB SCS 15 kHz, data SCS 15 kHz, BW 10 MHz","LTE 10 MHz bandwidth, FDD duplex mode"
-"NOTE:If UE supports both NGSO and GSO, the GSO-based test cases can be skipped if the UE passes NGSO-based test cases, and the UE is only required to be tested in one of the supported test configurations of the applicable scenario (GSO or NGSO).",,

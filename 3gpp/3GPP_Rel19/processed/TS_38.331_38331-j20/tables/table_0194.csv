@@ -1,6 +1,0 @@
-CellDTX-DRX-Config field descriptions
-cellDTX-DRX-CycleStartOffsetIndicates cellDTX-DRX-Cycle in ms and cellDTX-DRX-StartOffset in multiples of 1 ms.The configured cellDTX-DRX-Cycle is an integer multiple of configured drx-longCycle or vice versa.
-"cellDTX-DRX-onDurationTimerValue in multiples of 1/32 ms (subMilliSeconds) or in ms (milliSecond). For the latter, value ms1 corresponds to 1 ms, value ms2 corresponds to 2 ms, and so on."
-"cellDTX-DRX-SlotOffsetValue in 1/32 ms. Value 0 corresponds to 0 ms, value 1 corresponds to 1/32 ms, value 2 corresponds to 2/32 ms, and so on."
-cellDTX-DRX-ActivationStatusInitial activation status of cell DTX/DRX indicating whether the UE shall activate the configuration according to the received parameters. This field is only used upon setup of a cell DTX/DRX configuration.
-"cellDTX-DRX-ConfigTypeIndicates whether the configuration is for cell DTX only, cell DRX only, or joint cell DTX/DRX configuration."

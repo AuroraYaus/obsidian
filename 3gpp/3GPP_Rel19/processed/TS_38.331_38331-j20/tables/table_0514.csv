@@ -1,3 +1,0 @@
-RadioLinkMonitoringRS field descriptions
-detectionResourceA reference signal that the UE shall use for radio link monitoring or beam failure detection (depending on the indicated purpose). Only periodic 1-port CSI-RS can be configured on SCell for beam failure detection purpose.
-"purposeDetermines whether the UE shall monitor the associated reference signal for the purpose of cell- and/or beam failure detection. For SCell, network only configures the value to beamFailure."

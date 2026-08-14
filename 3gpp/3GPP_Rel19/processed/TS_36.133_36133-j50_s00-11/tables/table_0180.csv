@@ -1,6 +1,0 @@
-Discovery Period [s],"Tdetect,EUTRAN_ProSe_Intra (number of discovery periods)","Tmeasure,EUTRAN_ProSe_Intra (number of discovery periods)","Tevaluate,E-UTRAN_ProSe_Intra(number of discovery periods)"
-Discovery Period≤0.32,Note 1 (36),Note 1 (4),Note 1 (16)
-0.32<Discovery Period≤0.64,Note 1 (28),Note 1 (2),Note 1 (8)
-0.64<Discovery Period≤1.28,Note 1 (25),Note 1 (1),Note 1 (5)
-1.28<Discovery Period≤10.24,Note 1 (23),Note 1 (1),Note 1 (3)
-NOTE 1:Time depends upon the configured Discovery period.,,,

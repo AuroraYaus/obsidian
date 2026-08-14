@@ -1,3 +1,0 @@
-SL-CarrierFailure field descriptions
-"sl-CarrierFailureIndicate the carrier(s) where the Sidelink carrier failure has been indicated by lower layer as specified in TS 38.321 [3]. The value 1 corresponds to the frequency of first entry in sl-FreqInfoList broadcast in SIB12, the value 2 corresponds to the frequency of first entry in sl-FreqInfoListSizeExt broadcast in SIB12, the value 3 corresponds to the frequency of second entry in sl-FreqInfoListSizeExt broadcast in SIB12 and so on."
-sl-DestinationIdentityThis field is used to indicate the destination L2 ID for which the per-carrier failure report is concerned.

@@ -1,4 +1,0 @@
-Frequency range,TPSS/SSS_sync_intra_ODSSB
-FR1,"ceil(M Note 2 x Kp_OD-SSB) x max(Tlower Note 1, EMP) x CSSFintra"
-FR2,"ceil(M Note 2 x KFR x Kp_OD-SSB x Klayer1_measurement)  x max(Tlower Note 1, EMP) x CSSFintra"
-"NOTE 1:When UE reports not supporting lower bound capability, the Tlower equals 10ms; Otherwise, Tlower equals 0ms.NOTE 2:When multiple frequency layers are configured, M equals 6 in FR1 and Mpss/sss_sync_w/o_gaps+1 in FR2. Otherwise, M equals 5 in FR1 and Mpss/sss_sync_w/o_gaps in FR2.",

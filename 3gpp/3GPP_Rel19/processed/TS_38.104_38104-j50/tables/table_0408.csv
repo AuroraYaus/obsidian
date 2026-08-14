@@ -1,7 +1,0 @@
-Frequency Range,Frequency range of interfering signal(MHz),Wanted signal mean power(dBm),Interferer RMS field-strength(V/m),Type of interfering signal
-FR2-1,30 to 12750,EISREFSENS + 6 dB,0.36,CW
-,"12750 to FUL,low – 1500",EISREFSENS + 6 dB,0.1,CW
-,"FUL,high + 1500 to 2nd harmonic of the upper frequency edge of the operating band",EISREFSENS + 6 dB,0.1,CW
-FR2-2,30 to 12750,EISREFSENS + 6 dB,0.36,CW
-,"12750 to FUL,low – 3500",EISREFSENS + 6 dB,0.1,CW
-,"FUL,high + 3500 to 2nd harmonic of the upper frequency edge of the operating band",EISREFSENS + 6 dB,0.1,CW

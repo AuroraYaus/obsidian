@@ -1,5 +1,0 @@
-ΔfOOB(MHz),"Frequency offset of measurement filter centre frequency, f_offset",Minimum requirement(dBm),Measurement bandwidth
-0 MHz  f < 0.1 MHz,0.015 MHz  f_offset < 0.085 MHz,-13,30 kHz
-0.1 MHz  f < ENBW,0.15 MHz  f_offset < ENBW – 0.05 MHz,-13,100 kHz
-ENBW  f < ENBW + 5 MHz,ENBW+0.5 MHz  f_offset < ENBW + 4.5 MHz,-25,1 MHz
-NOTE 1:ENBW is the aggregated bandwidth of an E-UTRA sub-block and an adjacent NR sub-block; there is no frequency separation between the said sub-blocks. The sub-block bandwidths include any internal guard bands.,,,

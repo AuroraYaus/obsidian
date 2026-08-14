@@ -1,6 +1,0 @@
-SystemInformationBlockType27 field descriptions
-"carrierFreqProvides the ARFCN applicable for the NB-IoT carrier frequency as defined in TS 36.101 [42], Table 5.7.3-1 and TS 36.102 [113] Table 5.4A.2-1."
-"carrierFreqListNBIOTProvides a list of neighbouring NB-IoT carrier frequencies, which may be searched for neighbouring NB-IoT cells. If E-UTRAN includes carrierFreqListNBIOT-v1900, it includes the same number of entries, and listed in the same order, as in carrierFreqListNBIOT-r16."
-"carrierFreqListNRProvides a list of neighbouring NR NTN carrier frequencies, which may be searched for neighbouring NR NTN cells."
-"carrierFreqOffsetOffset of the NB-IoT channel number to EARFCN as defined in TS 36.101 [42], clause 5.7.3F and TS 36.102 [113] clause 5.4B.2.1. Value v-10 means -10, v-9 means -9, and so on. The values v-8dot5, v-4dot5, v3dot5 and v7dot5 are only applicable for a carrier in a TDD band."
-"satelliteAssistanceInfoListList of satellite ID(s), used to associate with the satellite assistance information for inter-RAT (i.e., E-UTRAN to NB-IoT NTN) cell selection."

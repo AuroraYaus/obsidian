@@ -1,8 +1,0 @@
-Reported value,Measured quantity value,Unit
-CLI-RSSI_00,CLI-RSSI < 100,dBm
-CLI-RSSI_01,-100  CLI-RSSI < 99,dBm
-CLI-RSSI_02,-99  CLI-RSSI < 98,dBm
-…,…,…
-CLI-RSSI_74,-27  CLI-RSSI < -26,dBm
-CLI-RSSI_75,-26  CLI-RSSI < -25,dBm
-CLI-RSSI_76,-25  CLI-RSSI,dBm

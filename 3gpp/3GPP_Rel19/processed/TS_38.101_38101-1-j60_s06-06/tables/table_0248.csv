@@ -1,8 +1,0 @@
-Pre-coding,Modulation,RB Allocation,,,
-,,Outer RB set configuration3,,Inner RB set configuration3,
-,,Full (dB),Partial (dB),Full (dB),Partial (dB)
-CP-OFDM,QPSK,≤ 6.0,≤ 6.0,≤ 6.0,≤ 6.0
-,16 QAM,≤ 6.0,≤ 6.0,≤ 6.0,≤ 6.0
-,64 QAM,≤ 6.0,≤ 6.0,≤ 6.0,≤ 6.0
-,256 QAM,≤ 7.0,≤ 7.5,≤ 7.0,≤ 7.5
-NOTE 1:The A-MPR shall apply to all SCS in all active 20 MHz sub-bands contiguously allocated in the channel.NOTE 2:Full allocation A-MPR applies when all RB’s in a 20 MHz channel or all RB’s in all sub-bands for wideband operation are fully allocated and all sub-bands are transmitted.  Partial allocation A-MPR applies when one or more RB’s in one or more sub-bands are not allocated or when not all transmitted sub-bands for wideband operation are transmitted.NOTE 3:Contiguous outer sub-band configuration and contiguous inner sub-band configuration in Table 6.2E.2F-3 apply.,,,,,

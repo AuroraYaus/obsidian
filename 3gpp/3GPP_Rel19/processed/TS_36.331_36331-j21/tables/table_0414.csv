@@ -1,3 +1,0 @@
-TDD-Config field descriptions
-"specialSubframePatternsIndicates Configuration as in TS 36.211 [21], table 4.2-1 where ssp0 points to Configuration 0, ssp1 to Configuration 1 etc. Value ssp10-CRS-LessDwPTS corresponds to ssp10 without CRS transmission on the 5th symbol of DwPTS."
-"subframeAssignmentIndicates DL/UL subframe configuration where sa1 points to Configuration1, sa2 to Configuration 2 and so on, as specified in TS 36.211 [21], table 4.2-2.E-UTRAN configures the same value for serving cells residing on same frequency band."

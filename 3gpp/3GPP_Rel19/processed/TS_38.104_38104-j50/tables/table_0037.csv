@@ -1,9 +1,0 @@
-Modulation scheme used,RE power control dynamic range (dB),
-on the RE,(down),(up)
-QPSK (PDCCH),-6,+4
-QPSK (PDSCH),-6,+3
-16QAM (PDSCH),-3,+3
-64QAM (PDSCH),0,0
-256QAM (PDSCH),0,0
-1024QAM (PDSCH),0,0
-NOTE:The output power per carrier shall always be less or equal to the maximum output power of the base station.,,

@@ -1,3 +1,0 @@
-SL-PosBWP-ConfigCommon field descriptions
-sl-BWP-GenericThis field indicates the generic parameters on the configured sidelink BWP.
-sl-BWP-PRS-PoolConfigCommonThis field indicates the dedicated SL-PRS resource pool configurations for SL-PRS on the configured sidelink BWP. Dedicated SL-PRS resource pool is not expected to be configured in the slots colliding with the slots (pre)configured for any other resource pool(s) or S-SSB resource(s) in other SL carriers.

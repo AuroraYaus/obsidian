@@ -1,5 +1,0 @@
-ULFPTx Mode,Transmission scheme,DCI format,Modulation,Number of layers,TPMI index
-Mode-1,Codebook based uplink,DCI format 0_1,"DFT-s-OFDM, CP-OFDM 1",1,2
-Mode-2,Codebook based uplink,DCI format 0_1,"DFT-s-OFDM, CP-OFDM",1,0 or 12
-Mode-full power,Codebook based uplink,DCI format 0_1,"DFT-s-OFDM, CP-OFDM",1,"0,1"
-"NOTE 1:For PUSCH configured with ULFPTxModes set to Mode-1, all requirements for 1-layer CP-OFDM based modulation in subsection 6.2D are assumed to be met if the requirement for 2-layer UL MIMO has been validated. NOTE 2:TPMI index selected shall be based upon the full power TPMI reported by the UE [10, TS 38.213].",,,,,

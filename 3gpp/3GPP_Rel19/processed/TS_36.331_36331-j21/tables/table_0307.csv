@@ -1,2 +1,0 @@
-SL-RestrictResourceReservationPeriodList field descriptions
-"SL-RestrictResourceReservationPeriodValue v0dot2 means SL-RestrictResourceReservationPeriod is set to 0.2, value v0dot5 means SL-RestrictResourceReservationPeriod is set to 0.5, value v1 means SL-RestrictResourceReservationPeriod is set to 1, and so on. Value v0dot2 and value v0dot5 are configured in a pool-specific manner only. E-UTRAN should not set value v0dot2 and v0dot5 for transmission pool for P2X related V2X sidelink communication."

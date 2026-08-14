@@ -1,6 +1,0 @@
-SCPTMConfiguration-BR field descriptions
-"p-bParameter:  for the PDSCH scrambled by G-RNTI, see TS 36.213 [23], Table 5.2-1."
-"multiTB-GapIndicates scheduling gaps in sub-frames for SC-MTCH using multi-TB scheduling. Value sf2 corresponds to 2 sub-frames, value sf4 corresponds to 4 sub-frames and so on. If the field is absent, there is no scheduling gap."
-sc-mtch-InfoListProvides the configuration of each SC-MTCH not using multi-TB scheduling in the current cell for BL UEs or UEs in CE.
-"sc-MTCH-InfoList-MultiTBProvides the configuration of each SC-MTCH using multi-TB scheduling in the current cell for BL UEs or UEs in CE. When this field is included, the total number of SC-MTCH configurations in sc-mtch-InfoList and sc-MTCH-InfoList-MultiTB cannot be more than maxSC-MTCH-BR-r14."
-"scptm-NeighbourCellListList of neighbour cells providing MBMS services via SC-MRB. When absent, the BL UE or UE in CE shall assume that MBMS services listed in the SCPTMConfiguration-BR message are not provided via SC-MRB in any neighbour cell."

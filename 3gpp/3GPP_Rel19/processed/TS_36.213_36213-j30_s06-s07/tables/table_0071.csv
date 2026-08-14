@@ -1,5 +1,0 @@
-Value of CSI request field,Description
-'00',No aperiodic CSI report is triggered
-'01',Aperiodic CSI report is triggered for serving cell
-'10',Aperiodic CSI report is triggered for a 1st set of serving cells configured by higher layers
-'11',Aperiodic CSI report is triggered for a 2nd set of serving cells configured by higher layers

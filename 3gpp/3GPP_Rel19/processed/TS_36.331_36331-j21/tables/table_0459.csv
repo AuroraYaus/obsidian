@@ -1,6 +1,0 @@
-Source RAT,E-UTRA capabilites,UTRA capabilities,GERAN capabilities,MR DC capabilities,NR capabilities
-UTRAN,Included,"May be included, ignored by eNB if received",May be included,Excluded,Excluded
-GERAN CS,Excluded,"May be included, ignored by eNB if received",Included,Excluded,Excluded
-GERAN PS,Excluded,"May be included, ignored by eNB if received",Included,Excluded,Excluded
-E-UTRAN,May be included if UE Radio Capability ID as specified in 23.502 [102] is used for the UE. Included otherwise.,May be included,May be included,May be included,May be included
-NR,May be included if UE Radio Capability ID as specified in 23.502 [102] is used for the UE. Included otherwise.,Excluded,Excluded,May be included,May be included

@@ -1,7 +1,0 @@
-E-UTRA band,Parameter,Unit,Case 1,Case 2,Case 3,Case 4,Case 5,Case 6
-,PInterferer,dBm,-56,-44,Void,Void,-38,-15
-,FInterferer (offset),MHz,"=-BW/2 – FIoffset,case 1&=+BW/2 + FIoffset,case 1","≤-BW/2 – FIoffset,case 2&≥+BW/2 + FIoffset,case 2",,,-BW/2 - 11,
-"1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 17, 18, 19, 20, 21, 22, 23,25, 26, 27, 28, 31, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 48, 50, 51, 52, 53, 54, 65, 66, 68, 70, 72, 73, 74, 85, 87, 88, 106, 111",FInterferer,MHz,(NOTE 2),FDL_low – 15toFDL_high + 15,,,,
-30,FInterferer,MHz,(NOTE 2),FDL_low – 15toFDL_high + 15,,,FDL_low – 11,
-71,FInterferer,MHz,(NOTE 2),FDL_low – 12 to FDL_high + 15,,,,FDL-low - 12
-"NOTE 1:For certain bands, the unwanted modulated interfering signal may not fall inside the UE receive band, but within the first 15 MHz below or above the UE receive bandNOTE 2:For each carrier frequency the requirement is valid for two frequencies:a. the carrier frequency -BW/2 - FIoffset, case 1 andb. the carrier frequency +BW/2 + FIoffset, case 1NOTE 3:FInterferer range values for unwanted modulated interfering signal are interferer center frequencies",,,,,,,,

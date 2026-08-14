@@ -1,8 +1,0 @@
-NCR-AperiodicFwdConfig field descriptions
-aperiodicBeamFieldWidthIndicates the bitwidth of each beam index field in DCI carrying aperiodic beam indication.
-aperiodicFwdTimeRsrcToAddModListList of aperiodic forwarding time resources to be added or modified.
-durationInSymbolsIndicates the time duration in number of symbols.
-numberOfFieldsIndicates the number of time resource fields in DCI carrying aperiodic beam indication.
-"referenceSCSIndicates the reference subcarrier spacing for all the time resources in the list. Only values kHz15, kHz30, kHz60, kHz120 and kHz240 are applicable."
-slotOffsetAperiodicIndicates the slot offset used to define the start slot of aperiodic time resource.
-symbolOffsetIndicates the symbol offset in one slot.

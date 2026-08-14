@@ -1,5 +1,0 @@
-Transmission scheme,DCI format,Number of layers,TPMI index
-Codebook based uplink,DCI format 0_1,2,0
-Codebook based uplink,DCI format 0_1,3,"02,3"
-Codebook based uplink,DCI format 0_1,4,02
-NOTE 1:The UE is configured with one SRS resource with the parameter nrofSRS-Ports set to 2.NOTE 2:The UE is configured with one SRS resource with the parameter nrofSRS-Ports set to 4.NOTE 3:The parameter fourPortSRS-3Tx-r19 is configured for a SRS resource set,,,

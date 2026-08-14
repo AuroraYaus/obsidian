@@ -1,4 +1,0 @@
-GroupB-ConfiguredTwoStepRA field descriptions
-"messagePowerOffsetGroupBThreshold for preamble selection. Value is in dB. Value minusinfinity corresponds to –infinity. Value dB0 corresponds to 0 dB, dB5 corresponds to 5 dB and so on. (see TS 38.321 [3], clause 5.1.1)."
-numberOfRA-PreamblesGroupAThe number of CB preambles per SSB in group A for idle/inactive or connected mode. The setting of the number of preambles for each group should be consistent with msgA-SSB-PerRACH-OccasionAndCB-PreamblesPerSSB or msgA-CB-PreamblesPerSSB-PerSharedRO if configured.
-"ra-MsgA-SizeGroupATransport block size threshold in bits below which the UE shall use a contention-based RA preamble of group A. (see TS 38.321 [3], clause 5.1.1)."

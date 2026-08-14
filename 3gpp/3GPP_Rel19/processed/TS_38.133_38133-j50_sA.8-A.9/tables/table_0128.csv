@@ -1,8 +1,0 @@
-Parameter,Unit,Value,Comment
-RF Channel Number,-,"1, 2",RF channel 1 is non-V2X sidelink carrierRF channel 2 is V2X sidelink carrier
-SCS,kHz,30,
-Active cell,-,Cell 1,PCell on RF channel number 1
-CP length of Cell 1,-,Normal,
-T1,s,5.12,
-T2,s,"Up to receiving RRC reconfiguration setup complete from the UE, or up to 2 second if UE does not transmit SidelinkUEInformationNR during this period.",
-T3,s,10,

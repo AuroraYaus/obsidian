@@ -1,8 +1,0 @@
-Parameter,Unit,Value,Comment
-NR RF Channel Number,,"1, 2, 3",Three NR radio channels are used for this test
-Active PCell,,Cell 1,PCell on RF channel number 1.
-Active SCell,,Cell 2,SCell on RF channel number 2.
-CP length,,Normal,
-DRX,,OFF,
-Cell 2 timing offset to Cell 1,s,0,Time alignment error as specified in TS 38.104 [13] clause 6.5.3.1.
-T1,s,0.2,"During T1, RRC-based simultaneous BWP switching of PCell and SCell is carried out."

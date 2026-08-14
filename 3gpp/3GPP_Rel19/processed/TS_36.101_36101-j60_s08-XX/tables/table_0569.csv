@@ -1,4 +1,0 @@
-Test Number,Reference Channel,Propagation Conditions (Note 1),,,Antenna Configuration and Correlation Matrix (Note 2),Reference Value,
-,,Cell 1,Cell 2,Cell 3,,Pm-bch (%),SNR (dB) (Note 3)
-1,R.22,ETU30,ETU30,ETU30,2x2 Low,1,-3.0
-"Note 1:The propagation conditions for Cell 1, Cell 2 and Cell 3 are statistically independent.Note 2:The correlation matrix and antenna configuration apply for Cell 1, Cell 2 and Cell 3.Note 3:SNR corresponds to of cell 1.",,,,,,,

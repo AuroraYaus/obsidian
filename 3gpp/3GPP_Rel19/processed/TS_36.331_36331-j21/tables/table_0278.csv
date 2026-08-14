@@ -1,2 +1,0 @@
-Conditional presence,Explanation
-EDTorPUR,"The field is optionally present, Need OR, if edt-Parameters is present in SIB2 or the UE is configured with pur-Config; otherwise the field is not present and the UE shall delete any existing value for this field."

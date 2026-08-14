@@ -1,9 +1,0 @@
-Parameter,,Unit,Value,Comment
-Initial conditions,Active PCell,,Cell 1,
-,Neighbouring cell,,"Cell 2, Cell 3",
-Final condition,Active PCell,,Cell 2,
-,Active PSCell,,Cell 3,
-,Neighbouring cell,,Cell 1,
-Access Barring Information,,-,Not Sent,No additional delays in random access procedure.
-T1,,s,5,
-T2,,s,5,

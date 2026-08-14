@@ -1,5 +1,0 @@
-Protected band,Frequency range (MHz),,,Maximum Level (dBm),MBW (MHz),NOTE
-E-UTRA band 34,FDL_low,-,FDL_high,-50,1,
-Frequency range,1900,-,1915,-15.5,5,"1, 2"
-Frequency range,1915,-,1920,+1.6,5,"1, 2"
-"NOTE 1:The requirement also applies for the frequency ranges that are less than FOOB (MHz) in Table 6.6.3.1-1 and Table 6.6.3.1A-1 from the edge of the channel bandwidth.NOTE 2:For these adjacent bands, the emission limit could imply risk of harmful interference to UE(s) operating in the protected operating band.",,,,,,

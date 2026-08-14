@@ -1,8 +1,0 @@
-ChannelBandwidth MHz,FFT size,,Cyclic prefix length for symbols 0 in FFT samples,Cyclic prefix length  for symbols 16 in FFT samples,EVM window length W,Ratio of W to total CP for symbols 16(Note 1) [%]
-1.4,128,,10,9,5,55.6
-3,256,,20,18,12,66.7
-5,512,,40,36,32,88.9
-10,1024,,80,72,66,91.7
-15,1536,,120,108,102,94.4
-20,2048,,160,144,136,94.4
-Note 1:These percentages are informative and apply to symbols 1 through 6. Symbol 0 has a longer CP and therefore a lower percentage.,,,,,,

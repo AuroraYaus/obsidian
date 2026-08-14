@@ -1,6 +1,0 @@
-Conditional Presence,Explanation
-DLorJointTCI-SRS,"The field is mandatory present if srs-DLorJointTCI-State is configured, otherwise it is absent Need R."
-FollowUTCI,"The field is optionally present, Need R, if the field followUnifiedTCI-StateSRS is present. Otherwise, it is absent."
-NonCodebook,"This field is optionally present, Need M, in case of non-codebook based transmission, otherwise the field is absent."
-Pathloss,"The field is mandatory present if the IE SSB-InfoNcell for neighboring cell is included in pathlossReferenceRS-Pos; otherwise it is optionally present, Need R"
-Setup,"This field is mandatory present upon configuration of SRS-ResourceSet or SRS-Resource and optionally present, Need M, otherwise."

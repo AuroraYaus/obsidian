@@ -1,8 +1,0 @@
-Parameter,Unit,Value,Comment
-PDSCH parameters:DL Reference Measurement Channel,,R.48 FDD,As specified in clause A.3.1.4.1
-MPDCCH parameters:DL Reference Measurement Channel,,R.46 FDD,As specified in clause A.3.1.3.1
-Timing Advance Command (TA) value during T1,,31,NTA = 0 for the purpose of establishing a reference value from which the timing advance adjustment accuracy can be measured during T2
-Timing Advance Command (TA) value during T2,,39,NTA = 128
-DRX,,OFF,
-T1,s,5,
-T2,s,5,

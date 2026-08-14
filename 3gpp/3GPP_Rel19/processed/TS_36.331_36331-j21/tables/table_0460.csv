@@ -1,6 +1,0 @@
-Conditional presence,Explanation
-HO,"The field is mandatory present in case of handover or UE context retrieval, e.g. in case of resume or re-establishment within E-UTRA; otherwise the field is not present."
-HO2,"The field is optional present in case of handover or UE context retrieval, e.g. in case of resume or re-establishment within E-UTRA; otherwise the field is not present."
-HO3,"The field is optional present in case of handover from GERAN to E-UTRA, otherwise the field is not present."
-HO4,"The field is mandatory present in case of handover or UE context retrieval, e.g. in case of resume or re-establishment within E-UTRA/5GC and optional present in case of handover from NR to E-UTRA/5GC; otherwise the field is not present."
-HO5,"The field is optional present in case of handover within E-UTRA, or handover from NR to E-UTRA; otherwise the field is not present."

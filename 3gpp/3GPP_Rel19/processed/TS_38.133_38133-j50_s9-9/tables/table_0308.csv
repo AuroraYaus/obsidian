@@ -1,8 +1,0 @@
-DRX cycle length (s),Tmeasurement_ UTRA_FDD (s) (DRX cycles),
-,Gap period = 40 ms,Gap period = 80 ms
-≤ 0.04,Non DRX Requirements in clause 9.4.6.2 are applicable,Non DRX Requirements in clause 9.4.6.2 are applicable
-0.064,0.48* CSSFinterRAT (7.5* Nfreq*CSSFinterRAT),0.8 *CSSFinterRAT(12.5 *CSSFinterRAT)
-0.08,0.48 *CSSFinterRAT (6 *CSSFinterRAT),0. 8*CSSFinterRAT (10 *CSSFinterRAT)
-0.128,0.64 *CSSFinterRAT (5 *CSSFinterRAT),0. 8 *CSSFinterRAT (6.25 *CSSFinterRAT)
-0.128 < DRX-cycle ≤ 2.56,Note1 (5 *CSSFinterRAT),Note1 (5 *CSSFinterRAT)
-NOTE 1:Time depends upon the DRX cycle in use.NOTE 2:CSSFinterRAT is as defined in clause 9.4.2.2.,,

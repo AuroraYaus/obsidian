@@ -1,8 +1,0 @@
-Accuracy,,Conditions,,,
-Normal condition,Extreme condition,CSI-RS Ês/Iot,Io Note 2 range,,
-,,,Minimum Io,,Maximum Io
-dB,dB,dB,dBm / SCSCSI-RS Note 1,,dBm/BWChannel
-,,,SCSCSI-RS = 60 kHz,SCSCSI-RS = 120 kHz,
-2.5,4,≥-3,"Same value as CSI_RP in Table B.2.9-2, according to UE Power class, operating band and angle of arrival",,-50
-3.5,4,≥-4,,,
-"NOTE 1:Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 2:Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3:In the test cases, the CSI-RS Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table.",,,,,

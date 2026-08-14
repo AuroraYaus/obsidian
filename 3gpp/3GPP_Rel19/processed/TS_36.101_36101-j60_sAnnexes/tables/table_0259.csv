@@ -1,7 +1,0 @@
-Parameter,Unit,Value,
-Reference channel,,R.NB.1,R.NB.2
-Number of transmitter antennas,,1,2
-Channel bandwidth,KHz,200,200
-Modulation,,QPSK,QPSK
-Target coding rate,,50/1600,50/1600
-Payload (without CRC),Bits,34,34

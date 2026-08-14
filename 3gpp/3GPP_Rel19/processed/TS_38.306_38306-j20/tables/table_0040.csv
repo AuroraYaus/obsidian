@@ -1,4 +1,0 @@
-Definitions for parameters,Per,M,FDD-TDDDIFF,FR1-FR2DIFF
-"f1c-OverEUTRA-r16Indicates whether the IAB-MT supports F1-C signalling over DLInformationTransfer and ULInformationTransfer messages via MN when IAB-MT operates in EN-DC mode, as specified in TS 36.331 [17].",IAB-MT,No,No,No
-scg-DRB-NR-IAB-r16Indicates whether the IAB-MT supports SCG DRB with NR PDCP when IAB-MT operates in EN-DC mode.,IAB-MT,No,No,No
-interNR-MeasEUTRA-IAB-r16Indicates whether the IAB-MT supports NR measurement and reports while in EUTRA connected and event B1-based measurement and reports while in EUTRA connected.,IAB-MT,No,No,No

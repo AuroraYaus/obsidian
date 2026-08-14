@@ -1,4 +1,0 @@
-PUSCH mapping type,Normal cyclic prefix,,,Extended cyclic prefix,,
-,S,L,S+L,S,L,S+L
-Type A (repetition Type A only),0,"{4,…,14}","{4,…,14}",0,"{4,…,12}","{4,…,12}"
-Type B,"{0,…,13}","{1,…,14}","{1,…,14} for repetition Type A, {1,…,27} for repetition Type B","{0,…, 11}","{1,…,12}","{1,…,12} for repetition Type A, {1,…,23} for repetition Type B"

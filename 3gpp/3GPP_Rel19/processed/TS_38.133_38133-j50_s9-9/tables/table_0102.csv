@@ -1,5 +1,0 @@
-DRX cycle,TSSB_time_index_intra
-No DRX,"max(120 ms, 3 x KNCSG x max(VIRP, SMTC period)) x CSSFintra"
-DRX cycle≤ 320 ms,"max(120 ms, ceil(M2Note 1x 3 x KNCSG) x max(VIRP, SMTC period,DRX cycle) x CSSFintra)"
-DRX cycle>320 ms,"3 x KNCSG x max(VIRP, DRX cycle) x CSSFintra"
-"NOTE 1:highSpeedMeasFlag-r16 is not configured, M2 = 1.5; When highSpeedMeasFlag-r16 is configured, M2 = 1.5 if SMTC periodicity > 40 ms, otherwise M2=1.NOTE 2:When highSpeedMeasFlag-r16 is configured, the requirements apply only to UE supporting either measurementEnhancement-r16 or [intraRAT-MeasurementEnhancement-r16] on measurements of the primary component carrier and do not apply to measurements of a secondary component carrier with active SCell.",

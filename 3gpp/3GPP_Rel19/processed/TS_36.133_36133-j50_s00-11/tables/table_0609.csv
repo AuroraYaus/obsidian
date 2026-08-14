@@ -1,5 +1,0 @@
-DRX cycle length (s) Note 3,Tmeasure_SFTD1 (s)
-≤0.04,"max(0.2,(5 + L) x SMTC period) (Note1)"
-0.04<DRX cycle≤0.32,"(8 + L) x max(DRX cycle, SMTC period)"
-0.32<DRX cycle≤10.24,(5 + L) x DRX cycle
-"Note 1:Number of DRX cycles depends upon the DRX cycle in use.Note 2:DRX cycle length in this table refers to the DRX cycle length configured for PCell or PSCell. When DRX is used in both PCell and PSCell, DRX cycle length in this table refers to the longer of the DRX cycle lengths for PCell and PSCell.Note 3:L is the total number of SMTC occasions not available at the UE. The maximum value of L, Lmax, is defined in Table 8.17.2.2.a-2. When configured with DRX, the UE is not required to determine the availability of SMTC occasions more frequent than once per DRX cycle.",

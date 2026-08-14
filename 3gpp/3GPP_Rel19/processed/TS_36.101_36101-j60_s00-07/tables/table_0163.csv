@@ -1,5 +1,0 @@
-BW [MHz],10
-"(NBindex,SCstart)","(0, < 9)"
-Lcsc,2
-AMPR [dB],≤ 0.5
-"NOTE 1:NBindex is the narrowband index that is defined in 6.2.7 in [4]. The resource block assignment is defined within the narrowband as defined in 5.3.3.1.12 and 5.3.3.1.13 in [5].NOTE 2:Lcsc is the length of the continuous subcarrier, SCstart is the subcarrier offset relative to the first subcarrier of the first PRB of NB indicated with NBindex.",

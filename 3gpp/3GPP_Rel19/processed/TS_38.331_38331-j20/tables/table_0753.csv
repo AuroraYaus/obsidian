@@ -1,4 +1,0 @@
-SL-RBSetConfig field descriptions
-"sl-GapBetweenSSSBRepetitionIndicate the gap between two adjacent S-SSB repetitions in frequency domain in one RB set, and the gap is between the lowest subcarrier of the upper PSBCH and the highest subcarrier of the lower PSBCH. The Unit is PRB."
-"sl-NumOfSSSBRepetitionIndicate the number of S-SSB repetitions in frequency domain in one RB set. S-SSB in the frequency domain indicated by sl-AbsoluteFrequencySSB (i.e. S-SSB transmission without repetition) is applicable in region with no OCB requirement, or with OCB exemption."
-sl-RBSetIndexIndicates the index of RB-set for which the configuration applies.

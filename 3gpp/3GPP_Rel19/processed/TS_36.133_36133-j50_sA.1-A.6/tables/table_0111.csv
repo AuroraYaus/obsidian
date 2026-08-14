@@ -1,6 +1,0 @@
-Configuration,,,PDP.1.FDD,PDP.2.FDD
-Channel BW,,MHz,5,
-Number of Active Sidelink UEs per Discovery subframe,,,12,
-Active Sidelink UEs,Sidelink UE Transmissions,,PSDCH(RMC D.1 FDD),PSDCH(RMC D.1 FDD)+SLSS on synchronization subframe
-,Resource allocation,,Non overlapping RBs in a subframe,
-,RSRP,dBm/15kHz,-95,

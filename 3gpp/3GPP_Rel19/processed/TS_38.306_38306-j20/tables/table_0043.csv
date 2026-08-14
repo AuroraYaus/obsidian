@@ -1,4 +1,0 @@
-Definitions for parameters,Per,M,FDD-TDDDIFF,FR1-FR2DIFF
-outOfOrderDeliverySidelink-r16Indicates whether UE supports out of order delivery of data to upper layers by PDCP for sidelink.,UE,No,No,No
-pdcp-DuplicationDRB-sidelink-r18Indicates whether the UE supports CA-based duplication over sidelink DRB as specified in TS 38.323 [16].,UE,No,No,No
-pdcp-DuplicationSRB-sidelink-r18Indicates whether the UE supports CA-based duplication over sidelink SRB1/2/3 as specified in TS 38.323 [16].,UE,No,No,No

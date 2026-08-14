@@ -1,5 +1,0 @@
-Operating band,Parameter,Unit,Case 1,Case 2
-,PInterferer,dBm,-56,-44
-,FInterferer (offset),MHz,"=-BW/2 – FIoffset,case 1&=+BW/2 + FIoffset,case 1","≤-BW/2 – FIoffset,case 2&≥+BW/2 + FIoffset,case 2"
-"107, 108, 112, 113",FInterferer,MHz,(NOTE 2),FDL_low – 15toFDL_high + 15
-"NOTE 1:For certain bands, the unwanted modulated interfering signal may not fall inside the UE receive band, but within the first 15 MHz below or above the UE receive bandNOTE 2:For each carrier frequency the requirement is valid for two frequencies:a. the carrier frequency -BW/2 - FIoffset, case 1 andb. the carrier frequency +BW/2 + FIoffset, case 1NOTE 3:FInterferer range values for unwanted modulated interfering signal are interferer center frequencies NOTE 4:   BW refers to 10 MHz",,,,

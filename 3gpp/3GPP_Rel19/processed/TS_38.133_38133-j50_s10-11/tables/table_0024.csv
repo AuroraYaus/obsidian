@@ -1,8 +1,0 @@
-Accuracy,,Conditions,,,,,
-Normal condition,Extreme condition,SSB Ês/Iot Note 2,Io Note 1 range,,,,
-,,,NR operating band groups Note 3,Minimum Io,,,Maximum Io
-dB,dB,dB,,dBm / SCSSSB,,dBm/BWChannel,dBm/BWChannel
-,,,,SCSSSB = 15 kHz,SCSSSB = 30 kHz,,
-5.5,10,-6,NR_FDD_SAB_FR1_A,-121,-118,N/A,-70
-9,12,-6,NR_FDD_SAB_FR1_A,N/A,N/A,-70,-50
-NOTE 1:Io is assumed to have constant EPRE across the bandwidth.NOTE 2:VoidNOTE 3:NR operating band groups in FR1 are as defined in clause 3.5.2A.,,,,,,,

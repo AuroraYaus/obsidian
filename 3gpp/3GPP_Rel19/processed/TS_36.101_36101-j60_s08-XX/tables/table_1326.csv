@@ -1,4 +1,0 @@
-Test number,Bandwidth combination (MHz)
-1,1x20(FDD)+ 5x20(TDD)MHz
-2,2x20(FDD)+4x20(TDD)MHz
-"Note 1:The applicability of requirements for different CA configurations and bandwidth combination sets is defined in 9.1.1.2A. The test coverage for different number of component carriers is defined in 9.1.1.3.Note 2:If more than one cell can be configured as PCell, choose one of the cells with the smallest bandwidth as PCell. Mapping of PCell and Scells to the CCs shall be constant for all the iterations during the test. Each execution of the test shall use the same mapping.",

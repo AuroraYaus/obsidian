@@ -1,4 +1,0 @@
-Test number,Deployment mode,Repetition number(R),Carrier Type,Reference Channel,Propagation Condition,Number of NRS ports,Antenna Configuration and correlation matrix,Reference value,,UE Category
-,,,,,,,,Pm-dsg (%),SNR (dB),
-1,In-band,64,Anchor,R.NB.4 FDD,EPA5,2,2x1 Low,1,-3.9,"NB1, NB2"
-2,In-band,512,Non-anchor,R.NB.4 FDD,ETU1,2,2x1 Low,1,-10.0,"NB1, NB2"

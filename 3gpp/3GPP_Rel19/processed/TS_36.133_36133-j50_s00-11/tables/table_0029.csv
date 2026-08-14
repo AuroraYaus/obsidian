@@ -1,8 +1,0 @@
-eDRX_IDLE cycle length [s],DRX cycle length [s],PTW length [s] (number of 1.28s periods),"Tdetect,NR [s] (number of DRX cycles Note 4)","Tmeasure,NR [s] (number of DRX cycles Note 4)","Tevaluate,NR [s] (number of DRX cycles Note 4)"
-,,,,,
-5.12,-,-,117.76 (23),5.12 (1),10.24 (2)
-10.24  ≤  eDRX_IDLE cycle length ≤2621.44,0.32,≥1.28 (1),(23)eDRX_cycle_length×23PTW/DRX_cycle_length,0.32 x 1.5 (1 x 1.5),0.64 x 1.5 (2 x 1.5)
-,0.64,≥1.28 (1),,0.64 (1),1.28 (2)
-,1.28,≥2.56 (2),,1.28 (1),2.56 (2)
-,2.56,≥5.12 (4),,2.56 (1),5.12 (2)
-"NOTE 1:The number of DRX cycles in this table is given for the DRX cycles within PTWs.NOTE 2:The eDRX_IDLE cycle lengths are as specified in Section 10.5.5.32 of TS 24.008 [34].NOTE 3:Number of eDRX cycles when eDRX_IDLE cycle length equals 5.12s. Otherwise, number of DRX cycles.",,,,,

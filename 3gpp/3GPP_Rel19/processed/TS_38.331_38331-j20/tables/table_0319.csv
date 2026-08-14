@@ -1,5 +1,0 @@
-LTM-ReportContent field descriptions
-nrOfReportedCellsThis field defines how many cells are reported within a single L1 measurement report instance.
-nrOfReportedRS-PerCellThis field defines how many RSs per cell are reported within a single L1 measurement report instance.
-spCellInclusionThis field indicates whether the UE shall include a L1 measurement report associated to the current SpCell. This field can only be configured if the current SpCell is configured as an SpCell of an LTM candidate configuration and the LTM-CSI-ResourceConfig IE associated to the LTM-CSI-ReportConfig IE includes resources for the current SpCell.
-reportQuantityIndicates the report quantity for the CSI report. The network does not set this field to the value dummy.

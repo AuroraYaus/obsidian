@@ -1,2 +1,10 @@
 __pycache__/
 *.pyc
+
+# Obsidian UI 状态文件（2026-08-14 移出版本控制——易失状态入库造成每次会话必 dirty）
+.obsidian/workspace.json
+.obsidian/graph.json
+
+# 协议证据数据（2026-08-14 拆分至独立数据仓 gitee.com/aurorayaus/3gpp_docs，
+# 可选下载：clone 数据仓到 3gpp/3GPP_Rel19/ 即复原讲义协议锚点）
+3gpp/3GPP_Rel19/

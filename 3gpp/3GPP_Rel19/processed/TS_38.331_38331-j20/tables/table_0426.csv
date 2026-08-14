@@ -1,4 +1,0 @@
-PDCCH-ServingCellConfig field descriptions
-availabilityIndicatorUse to configure monitoring a PDCCH for Availability Indicators (AI).
-"searchSpaceSwitchTimerThe value of the timer in slots for monitoring PDCCH in the active DL BWP of the serving cell before moving to the default search space group (see TS 38.213 [13], clause 10.4).For 15 kHz SCS, {1..20} are valid.For 30 kHz SCS, {1..40} are valid.For 60kHz SCS, {1..80} are valid.For 120 kHz SCS, {1..160} are valid.For 480 kHz SCS, {1..640} are valid.For 960 kHz SCS, {1..1280} are valid.The network configures the same value for all serving cells in the same CellGroupForSwitch."
-slotFormatIndicatorConfiguration of Slot-Format-Indicators to be monitored in the correspondingly configured PDCCHs of this serving cell.

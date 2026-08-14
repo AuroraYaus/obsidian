@@ -1,4 +1,0 @@
-SCPTMConfiguration field descriptions
-sc-mtch-InfoListProvides the configuration of each SC-MTCH in the current cell.
-"scptm-NeighbourCellListList of neighbour cells providing MBMS services via SC-MRB. When absent, the UE shall assume that MBMS services listed in the SCPTMConfiguration message are not provided via SC-MRB in any neighbour cell."
-"p-bParameter:  for the PDSCH scrambled by G-RNTI, see TS 36.213 [23], Table 5.2-1."

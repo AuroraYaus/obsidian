@@ -1,7 +1,0 @@
-RX parameter,Units,,Channel bandwidth,,,,,
-,,,,10 MHz,20 MHz,30 MHz,40 MHz,
-Power in transmission bandwidth configuration,,dBm,,-56.5,-50.5,-49.0,-47.5,
-Pinterferer,,dBm,,-25,,,,
-BWinterferer,,MHz,,10,10,10,10,
-Finterferer (offset),,MHz,,10 / -10,15 / -15,20 / -20,25 / -25,
-NOTE 1:The interferer is QPSK modulated PUSCH containing data and reference symbols. Normal cyclic prefix is used.NOTE 2:The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to MHz with SCS the sub-carrier spacing of the wanted signal in MHz. The interferer is an NR signal with 15 kHz SCS.,,,,,,,,

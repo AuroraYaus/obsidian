@@ -1,6 +1,0 @@
-NR CA combination,Band,AppliedNS,Requirements (clause)(TS 36.101 [4]),Requirements (clause)(TS 38.101-1 [2]),A-MPR(table/clause)(TS 36.101 [4]),A-MPR(table/clause)(TS 38.101-1 [2]),Note
-DC_n1_28,n1,05,N/A,6.5.3.3.4,N/A,Clause 6.2.3.4,"1, 2"
-,,05U,N/A,"6.5.3.3.4, 6.5.2.4.2",N/A,Clause 6.2.3.4,
-,28,17,6.6.3.3.10,N/A,Table 6.2.4-1(NS_17),N/A,
-DC_n78_1,1,05,6.6.3.3.1,N/A,Table 6.2.4-1(NS_05),N/A,
-NOTE 1:NS_05U can be signalled for NR bands that have UTRA services deployed and protected range is specified in clause 6.5.2.4.2 of TS38.101-1[2] and the requirements in clause 6.5.2.4.2 are only appliable to the signalling band.NOTE 2:Applicable when the assigned NR carrier is confined within 718 MHz and 748 MHz and when the channel bandwidth used is 5 or 10 MHz.,,,,,,,

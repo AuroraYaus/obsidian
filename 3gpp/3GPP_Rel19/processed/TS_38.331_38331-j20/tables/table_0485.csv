@@ -1,4 +1,0 @@
-PUSCH-TPC-CommandConfig field descriptions
-"targetCellThe serving cell to which the acquired power control commands are applicable. If the value is absent, the UE applies the TPC commands to the serving cell on which the command has been received."
-tpc-IndexAn index determining the position of the first bit of TPC command inside the DCI format 2-2 payload.
-tpc-IndexSULAn index determining the position of the first bit of TPC command inside the DCI format 2-2 payload.

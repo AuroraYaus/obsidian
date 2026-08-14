@@ -1,4 +1,0 @@
-SCS (kHz),"(BW[MHz], LCRB)",,,,,,,,
-15,"(10, 50)","(15, 75)","(20, 100)","(25, 128)","(30, 160)","(35, 180)","(40, 216)","(45, 240)","(50, 270)"
-30,"(10, 24)","(15, 36)","(20, 50)","(25, 64)","(30, 75)","(35, 90)","(40, 100)","(45, 108)","(50, 128)"
-"NOTE 1: A Lcrb value for 30kHz SCS that is not defined in this table can be determined as the closest integer number that is lower or equal to half the corresponding Lcrb value for 15kHz SCS and satisfies the following equation:  (where X, Y and Z are non-negative integers), except for 1 RB LCRB for 15 kHz SCS which is kept to 1 RB LCRB for 30 kHz SCS.NOTE 2: A value of RBstart for 30kHz SCS is determined as the closest integer number that is lower or equal to half the corresponding RBstart for 15 kHz SCS. If RBstart + LCRB would exceed NRB, RBstart is adjusted so that UL RB allocation fits inside NRB.Number of RBs= 2X×3Y×5Z",,,,,,,,,

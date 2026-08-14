@@ -1,8 +1,0 @@
-NR band,Parameter,Unit,Case 1,Case 2
-n14,PInterferer,dBm,-56,-44
-,FInterferer (offset),MHz,"-BW/2 – FIoffset,case 1&BW/2 + FIoffset,case 1","≤-BW/2 – FIoffset,case 2&≥BW/2 + FIoffset,case 2"
-,FInterferer,MHz,NOTE 2,FDL_low – 15toFDL_high + 15
-"n38, n47",Pinterferer,dBm,-44,-44
-,Finterferer (offset),MHz,"-BW/2 – FIoffset, case 1andBW/2 + FIoffset, case 1","≤ -BW/2 – FIoffset, case 2and≥ BW/2 + FIoffset, case 2"
-,Finterferer,MHz,NOTE 2,FDL_low – 30toFDL_high + 30
-"NOTE 1:For certain bands, the unwanted modulated interfering signal may not fall inside the UE receive band, but within the first 15 MHz below or above the UE receive band.NOTE 2:For each carrier frequency the requirement is valid for two frequencies:a. the carrier frequency -BW/2 – FIoffset, case 1 andb. the carrier frequency +BW/2 + FIoffset, case 1NOTE 3:FInterferer range values for unwanted modulated interfering signal are interferer center frequencies NOTE 4:The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to MHz with SCS the sub-carrier spacing of the wanted signal in MHz. The interferer is an NR signal with 15 kHz SCS.",,,,

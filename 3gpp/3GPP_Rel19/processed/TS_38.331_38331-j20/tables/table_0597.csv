@@ -1,7 +1,0 @@
-SRS-SpatialRelationInfoPos field descriptions
-csi-RS-IndexServingIndicates CSI-RS index belonging to a serving cell.
-dl-PRSThis field indicates a PRS configuration.
-resourceSelectionIndicates whether the configured SRS spatial relation resource is a SRS-Resource or SRS-PosResource.
-"servingCellIdThe serving Cell ID of the source SSB, CSI-RS, or SRS for the spatial relation of the target SRS resource. If this field is absent the SSB, the CSI-RS, or the SRS is from the same serving cell where the SRS is configured."
-ssb-IndexServingIndicates SSB index belonging to a serving cell.
-ssb-NcellThis field indicates a SSB configuration from neighboring cell.

@@ -1,9 +1,0 @@
-SL-ConfiguredGrantConfigDedicatedSL-PRS-RP field descriptions
-sl-PRS-ConfigIndexCGThis field indicates the ID to identify sidelink configured grant. The field value should not be duplicated with sl-ConfigIndexCG in IE SL-ConfiguredGrantConfig.
-sl-PRS-PeriodCGThis field indicates the period of SL PRS configured grant in a dedicated resources in ms for either CG type 1 or CG type 2.
-sl-PRS-ResourceIndicationFirstType1Indicates SL-PRS Resource ID for the first SL-PRS transmission.
-sl-PRS-ResourceIndicationFutureType1Indicates SL-PRS resource IDs for future SL PRS transmissions. An index giving valid combinations of up to two SL PRS resource IDs (jointly encoded) .
-sl-PRS-ResourcePoolIDIndicates the resource pool in which the configured sidelink grant Type 1 is applied. This field value is configured with value up to 8 (maxNrofSL-PRS-TxPool-r18). The network always configures this field when rrc-ConfiguredSidelinkGrantDedicatedSL-PRS-RP contains parameters for a type 1 configured grant.
-"sl-TimeOffsetCG-Type1This field indicates the slot offset with respect to logical slot defined by sl-TimeReferenceSFN-Type1, as specified in TS 38.321 [3]."
-"sl-TimeReferenceSFN-Type1Indicates SFN used for determination of the offset of a resource in time domain. If it is present, the UE uses the 1st logical slot of associated resource pool after the starting time of the closest SFN with the indicated number preceding the reception of the sidelink configured grant configuration type 1 as reference logical slot, see TS 38.321 [3], clause 5.8.3. If it is not present, the reference SFN is 0."
-"sl-TimeResourceCG-Type1This field indicates the time resource location of sidelink configured grant type 1. An index giving valid combinations of up to two slot positions (jointly encoded) as time resource indicator value (TRIV), as defined in TS 38.212 [17]."

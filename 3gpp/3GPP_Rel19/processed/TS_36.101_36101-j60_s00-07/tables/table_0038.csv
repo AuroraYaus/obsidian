@@ -1,7 +1,0 @@
-,,V2X multi-carrier configuration / Bandwidth combination set,,,,,,
-V2X intra-band multi-carrier configuration,V2X intra-band multi-carrier configuration for TX,Component carriers in order of increasing carrier frequency,,,,,Maximum aggregated bandwidth [MHz],Bandwidth combination set
-,,Channel bandwidths for carrier [MHz],Channel bandwidths for carrier [MHz],Channel bandwidths for carrier [MHz],Channel bandwidths for carrier [MHz],Channel bandwidths for carrier [MHz],,
-V2X_47B,V2X_47B,10,10,,,,20,0
-V2X_47C,V2X_47C,10,20,,,,30,0
-,,20,10,,,,,
-V2X_47C1,V2X_47B,10,10,10,,,30,0

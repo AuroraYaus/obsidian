@@ -1,3 +1,0 @@
-NeedForInterruptionInfoNR field descriptions
-intraFreq-needForInterruptionIndicates the interruption requirement information for NR intra-frequency measurement. Each entry in the list is associated to the entry in list intraFreq-needForGap-r16 with the same index. This field shall be set to no-gap-no-interruption for the serving cell(s) belonging to the corresponding band(s) where bwpOperationMeasWithoutInterrupt-r18 is supported by the UE.
-interFreq-needForInterruptionIndicates the interruption requirement information for NR inter-frequency measurement. Each entry in the list is associated to the entry in list interFreq-needForGap-r16 with the same index.

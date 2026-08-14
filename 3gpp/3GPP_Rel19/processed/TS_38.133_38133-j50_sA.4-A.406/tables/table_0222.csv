@@ -1,8 +1,0 @@
-Configuration,Description
-1,"LTE FDD, NR SCS 15 kHz, BW 10 MHz, FDD"
-2,"LTE FDD, NR SCS 15 kHz, BW 10 MHz, TDD"
-3,"LTE FDD, NR SCS 30 kHz, BW 40 MHz, TDD"
-4,"LTE TDD, NR SCS 15 kHz, BW 10 MHz, FDD"
-5,"LTE TDD, NR SCS 15 kHz, BW 10 MHz, TDD"
-6,"LTE TDD, NR SCS 30 kHz, BW 40 MHz, TDD"
-NOTE:The UE is only required to pass in one of the supported test configurations in FR1,

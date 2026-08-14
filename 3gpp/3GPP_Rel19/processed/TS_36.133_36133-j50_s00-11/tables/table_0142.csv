@@ -1,8 +1,0 @@
-eDRX_IDLE cycle length [s],DRX_INACTIVE cycle length [s],Nserv [number of DRX cycles]
-5.12 ≤eDRX_IDLE cycle length ≤ 2621.44,0.32,4
-,0.64,4
-,1.28,2
-,2.56,2
-,5.12,2
-,10.24 Note 1,2
-Note 1:DRX_INACTIVE cycle length of 10.24s applies when eDRX_IDLE cycle length is >= 10.24s.,,

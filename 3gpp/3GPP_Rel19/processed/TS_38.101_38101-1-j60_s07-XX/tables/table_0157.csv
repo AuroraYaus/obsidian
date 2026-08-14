@@ -1,5 +1,0 @@
-NR SL CA band,Parameter,Unit,Case 1,Case 2
-,PInterferer,dBm,-44,-44
-SL_n47B,FInterferer(offset),MHz,"- BWchannel CA/2 – FIoffset,case 1&+ BWchannel CA/2  + FIoffset,case 1","≤- BWchannel CA/2 – FIoffset,case 2&≥+ BWchannel CA/2 + FIoffset,case 2"
-,FInterferer (Range),MHz,NOTE 2,FDL_low – 30toFDL_high + 30
-"NOTE 1:For certain bands, the unwanted modulated interfering signal may not fall inside the UE receive band, but within the first 30 MHz below or above the UE receive bandNOTE 2:For each carrier frequency the requirement is valid for two frequencies:a. the carrier frequency - BWchannel CA/2  - FIoffset, case 1 andb. the carrier frequency + BWchannel CA/2 + FIoffset, case 1NOTE 3:BWchannel CA denotes the aggregated channel bandwidth of the wanted signal",,,,

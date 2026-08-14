@@ -1,4 +1,0 @@
-BS channel bandwidth of NR carrier transmitted BWChannel adjacent to sub-block gap or inter RF Bandwidth gap (MHz),Sub-block or Inter RF Bandwidth gap size (Wgap) where the limit applies (MHz),BS adjacent channel centre frequency offset below or above the sub-block or Base Station RF Bandwidth edge (inside the gap),Assumed adjacent channel carrier,Filter on the adjacent channel frequency and corresponding filter bandwidth,ACLR limit
-"10, 20, 40, 60, 80",Wgap ≥ 60,10 MHz,20 MHz NR (Note 2),Square (BWConfig),35 dB
-,Wgap ≥ 80,30 MHz,20 MHz NR (Note 2),Square (BWConfig),40 dB
-NOTE 1:BWConfig is the transmission bandwidth configuration of the assumed adjacent channel carrier.NOTE 2:With SCS that provides largest transmission bandwidth configuration (BWConfig).,,,,,

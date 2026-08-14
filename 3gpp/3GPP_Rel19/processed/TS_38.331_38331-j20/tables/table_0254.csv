@@ -1,3 +1,0 @@
-TDCP field descriptions
-"delayDSetofLengthYConfigures a set of Y delay values for TDCP reporting, see reference TS 38.214 clause 5.2.1.4. The symb4 denotes 4 symbols, the slot1 denotes 1 slot, the slot2 denotes 2 slots and so on. The value slot10 is applicable only to SCS >=30kHz. The parameter Y, see reference TS38.214 clause 5.2.1.4, is given by the length of the set of D values."
-phaseReportingConfigures the UE for phase reporting for TDCP reporting see reference TS 38.214 clause 5.2.1.4

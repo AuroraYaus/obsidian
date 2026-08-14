@@ -1,4 +1,0 @@
-DRX cycle,TSSB_time_index_intra_less_than_5MHz
-No DRX,Ceil(7 x Kp) x measCyclePSCell x CSSFintra
-DRX cycle≤ 320ms,"Ceil(7 x Kp) x max(measCyclePSCell, 1.5xDRX cycle) x CSSFintra"
-DRX cycle> 320ms,"Ceil(7 x Kp) x max(measCyclePSCell, DRX cycle) x CSSFintra"

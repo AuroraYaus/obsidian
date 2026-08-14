@@ -1,4 +1,0 @@
-Parameter,Unit,Value,Note
-Total transmitted power spectral density,dBm/15 kHz,Test specific,1. shall be kept constant throughout all OFDM symbols
-Cell-specific reference signal power ratio,,Test specific,1. Applies for antenna port p
-Energy per resource element EPRE,,Test specific,"1. The complex-valued symbols  and defined in [4] shall conform to the given EPRE value.2. For TM8, TM9 and TM10 the reference point for EPRE is before the precoder in Annex B.4."

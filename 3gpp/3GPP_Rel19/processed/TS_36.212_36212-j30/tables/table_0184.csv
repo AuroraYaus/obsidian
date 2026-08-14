@@ -1,9 +1,0 @@
-Field,Bit width,,,
-,8/12/16/20/24/28/32 antenna ports,,,
-,Rank = 1,,Rank = 2,
-,PTI=0,PTI=1,PTI=0,PTI=1
-Wide-band CQI,0,4,0,4
-Spatial differential CQI,0,0,0,3
-"Wideband first PMI i1,1",,0,,0
-"Wideband first PMI i1,2",,0,,0
-Wide-band i2,0,0,0,0

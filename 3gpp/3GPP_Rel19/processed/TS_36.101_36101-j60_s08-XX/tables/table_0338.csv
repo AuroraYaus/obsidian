@@ -1,9 +1,0 @@
-Parameter,Unit,Value
-Inter-TTI Distance,,1
-Number of HARQ processes per component carrier,Processes,8
-Maximum number of HARQ transmission (Note 1),,4
-Redundancy version coding sequence,,"{0,1,2,3} for QPSK and 16QAM{0,0,1,2} for 64QAM and 256QAM"
-Cyclic Prefix,,Normal
-Cell_ID,,0
-Cross carrier scheduling,,Not configured
-"Note 1:For retransmission in partial subframes, the TB size should be kept the same as the initial transmission regardless of the initial transmission is performed in full subframes or partial subframes.",,

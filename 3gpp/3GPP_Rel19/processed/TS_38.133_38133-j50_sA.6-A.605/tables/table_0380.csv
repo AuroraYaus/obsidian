@@ -1,8 +1,0 @@
-Parameter,,Unit,Cell 2,,
-,,,T1,T2,T3
-BWchannel,ConfigSCell 1,MHz,3 MHz,,
-BWoccupied,ConfigSCell 1,RB,12,,
-PDSCH Reference measurement channel,ConfigSCell 1,,SR.1.3 FDD,,
-SSB Configuration,ConfigSCell 1,,SSB.13 FR1,,
-Io Note3,ConfigSCell 1,dBm/2.7 MHz,-65.33,-62.36,-62.366
-NOTE : Io levels have been derived from other parameters for information purposes. They are not settable parameters themeselves.,,,,,

@@ -1,6 +1,0 @@
-Value of 'SPUCCH resource indication' field as defined in clause 5.3.3.1.17 of [4],or
-'00',The 1st PUCCH resource value configured by the higher layers
-'01',The 2nd PUCCH resource value configured by the higher layers
-'10',The 3rd PUCCH resource value configured by the higher layers
-'11',The 4th PUCCH resource value configured by the higher layers
-"NOTE:are respectively determined from the first and second PUCCH resource lists configured by n1SlotSPUCCH-hoppingAN-List in [11] for slot-PUCCH when hopping is enabled, and by n1SlotSPUCCH-nohoppingAN-List in [11] for slot-PUCCH when hopping is disabled.",

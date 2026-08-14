@@ -1,5 +1,0 @@
-"Frequency offset of measurement filter 3dB point, ΔfBE_offset","Frequency offset of measurement filter centre frequency, f_BE_offset",Basic limits,Measurement bandwidth
-0 MHz  ΔfBE_offset < 1 MHz,0.05 MHz  f_BE_offset < 1.05 MHz,"Prated,x-10log10BWChannel100kHz-20f_BE_offsetMHz-0.05dB",100 kHz
-1 MHz  ΔfBE_offset < 10 MHz,1.05 MHz  f_BE_offset < 10.05 MHz,"Prated,x-10log10BWChannel100kHz-20-13f_BE_offsetMHz-1.05dB",100 kHz
-10 MHz  ΔfBE_offset < 19 MHz,10.05 MHz  f_BE offset < 19.05 MHz,"Prated,x-10log10BWChannel100kHz-23+13f_BE_offsetMHz-10.05dB",100 kHz
-19 MHz  ΔfBE_offset < 19.9 MHz,19.05 MHz  f_BE_offset < 19.95 MHz,"Prated,x-10log10BWChannel100kHz-20+20f_BE_offsetMHz-19.05dB",100 kHz

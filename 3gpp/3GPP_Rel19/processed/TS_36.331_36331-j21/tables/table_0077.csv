@@ -1,6 +1,0 @@
-Conditional presence,Explanation
-NCL-1XRTT,"The field is optional present, need OR, if cellReselectionParameters1xRTT is present; otherwise it is not present."
-NCL-HRPD,"The field is optional present, need OR, if cellReselectionParametersHRPD is present; otherwise it is not present."
-PerPLMN-LC,"The field is optional present, need OR, when systemTimeInfo is included in SIB8PerPLMN for this CDMA2000 network; otherwise it is not present."
-REG-1XRTT,"The field is optional present, need OR, if csfb-RegistrationParam1XRTT is present; otherwise it is not present."
-REG-1XRTT-PerPLMN,"The field is optional present, need OR, if csfb-RegistrationParam1XRTT is included in SIB8PerPLMN for this CDMA2000 network; otherwise it is not present."

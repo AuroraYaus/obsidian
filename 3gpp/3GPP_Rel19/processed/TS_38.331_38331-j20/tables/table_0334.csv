@@ -1,5 +1,0 @@
-Conditional Presence,Explanation
-G-RNTI,"This field is optionally present, Need S, if groupCommon-RNTI is set to g-RNTI. The field is absent when groupCommon-RNTI is set to g-CS-RNTI."
-HARQFeedback,The field is mandatory present when harq-FeedbackEnablerMulticast is present. It is absent otherwise.
-MCG-Only,"This field is optionally present, Need M, for the MAC-CellGroupConfig of the MCG. It is absent otherwise."
-LCH-PrioWithReTxTimer,"This field is optionally present, Need R, if lch-BasedPrioritization-r16 is configured in this MAC entity and cg-RetransmissionTimer-r16 is configured for any configured grant configuration associated with this MAC entity. It is absent otherwise, Need R."

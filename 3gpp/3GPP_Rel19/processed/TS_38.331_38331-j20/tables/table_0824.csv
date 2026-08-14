@@ -1,4 +1,0 @@
-UuMessageTransferSidelink-IEs field descriptions
-sl-PagingDeliveryThis field is used to transfer PagingRecord and PagingRecord-v1700 relevant to the L2 U2N Remote UE in RRC_IDLE or RRC_INACTIVE.
-sl-SIB1-DeliveryThis field is used to transfer SIB1 to the L2 U2N Remote UE in RRC_IDLE or RRC_INACTIVE.
-sl-SystemInformationDeliveryThis field is used to transfer SIBs and posSIBs to the L2 U2N Remote UE in RRC_IDLE or RRC_INACTIVE.

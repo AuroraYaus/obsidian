@@ -1,8 +1,0 @@
-Parameter,,Unit,Value
-Downlink power allocation,,dB,-3
-,,dB,-3 (NOTE 1)
-,,dB,0
-at antenna port,,dBm/15kHz,-98
-PDSCH transmission mode,,,TM3
-Subframe configuration,,,Non-MBSFN
-NOTE 1:.NOTE 2:PUCCH format 3 is used to feedback ACK/NACK.NOTE 3:Void.,,,

@@ -1,7 +1,0 @@
-SRSConf.1,1T2RNote 1,,2T4RNote 1,,1T4RNote 1,,,
-srs-ResourceId,0,1,0,1,0,1,2,3
-startPosition,5,3,5,3,5,3,5,3
-nrofSymbols,1,1,1,1,1,1,1,1
-nrofSRS-Ports,port1,port1,port2,port2,port1,port1,port1,port1
-periodicityAndOffset-p,"sl40, 1","sl40, 1","sl40, 1","sl40, 1","sl40, 1","sl40, 1","sl40, 6","sl40, 6"
-"Note 1:‘xTyR’ depends on indicated UE capability for SRS antenna port switchingNote 2:SRS configurations follow (the dedicated configuration table) if the entries are included, otherwise following corresponding common configuration SRS.1 TDD in A.3.24",,,,,,,,

@@ -1,9 +1,0 @@
-Parameter,Unit,nrCell 1
-BWchannel,MHz,5
-NOCNG Pattern,,NOP.6 FDD
-OCNGNote 1,dB,BWchannel 5MHz: OP.1 in TS 38.133 [50]
-Note2,dBm/15 kHz,-98
-,dB,-12
-Propagation Condition,,AWGN
-Antenna Configuration,,1x1
-Note 1:OCNG shall be used such that the eCell 1 is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power .,,

@@ -1,5 +1,0 @@
-Conditional Presence,Explanation
-MeasObject-NCD-SSB,"This field is optionally present, Need S, if nonCellDefiningSSB is configured in this DL BWP. It is absent otherwise."
-PreConfigMG,"The field is optionally present, Need R, if there is at least one per UE gap configured with preConfigInd or there is at least one per FR gap of the same FR which the BWP belongs to and configured with preConfigInd. It is absent, Need R, otherwise."
-ScellOnly,"The field is optionally present, Need M, in the BWP-DownlinkDedicated of an Scell. It is absent otherwise."
-SpCellOnly,"The field is optionally present, Need M, in the BWP-DownlinkDedicated of an Spcell. It is absent otherwise."

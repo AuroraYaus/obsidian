@@ -1,8 +1,0 @@
-ChannelBandwidth MHz,Cyclic prefix length1,Nominal FFT size,Cyclic prefix in FFT samples,EVM window length W in FFT samples,Ratio of W to CP 2
-1.4,512,128,32,28,87.5
-3,,256,64,58,90.6
-5,,512,128,124,96.9
-10,,1024,256,250,97.4
-15,,1536,384,374,97.4
-20,,2048,512,504,98.4
-"Note 1: The unit is number of samples, sampling rate of 30.72MHz is assumed.Note 2: These percentages are informative",,,,,

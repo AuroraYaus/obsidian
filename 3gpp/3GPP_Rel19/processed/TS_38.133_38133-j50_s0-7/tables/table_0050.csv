@@ -1,7 +1,0 @@
-DRX cycle length [s],Scaling Factor (N1),,Nserv_RedCap [number of DRX cycles]
-,FR1,FR2Note1,
-0.32,1,8,M1*N1*4
-0.64,,5,M1*N1*4
-1.28,,4,N1*2
-2.56,,3,N1*2
-NOTE 1:Applies for RedCap UE of all FR2 power class.,,,

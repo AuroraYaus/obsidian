@@ -1,3 +1,0 @@
-SCGFailureInformationEUTRA field descriptions
-measResultFreqListMRDCThe field contains available results of measurements on E-UTRA frequencies the UE is configured to measure by measConfig.
-measResultSCG-FailureMRDCIncludes the E-UTRA MeasResultSCG-FailureMRDC IE as specified in TS 36.331 [10]. The field contains available results of measurements on E-UTRA frequencies the UE is configured to measure by the E-UTRA RRCConnectionReconfiguration message.

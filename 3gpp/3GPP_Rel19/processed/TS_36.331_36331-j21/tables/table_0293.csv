@@ -1,9 +1,0 @@
-SL-CommTxPoolSensingConfig field descriptions
-gapCandidateSensingIndicates which subframe should be sensed when a certain subframe is considered as a candidate resource (see TS 36.213 [23]).
-minNumCandidateSFIndicates the minimum number of subframes that are included in the possible candidate resources.
-p2x-SensingConfigIndicates the sensing configuration for P2X related V2X sidelink communication transmission only.
-probResourceKeepIndicates the probability with which the UE keeps the current resource when the resource reselection counter reaches zero for sensing based UE autonomous resource selection (see TS 36.321 [6]).
-"pssch-TxConfigListIndicates PSSCH TX parameters such as MCS, PRB number, retransmission number, associated to different UE absolute speeds and different synchronization reference types for UE autonomous resource selection (see TS 36.213 [23])."
-restrictResourceReservationPeriodIndicates which values are allowed for the signaling of the resource reservation period in PSCCH.
-sl-ReselectAfterIndicates the number of consecutive skipped transmissions before triggering resource reselection for V2X sidelink communication (see TS 36.321 [6]).
-"thresPSSCH-RSRP-ListIndicates a list of 64 thresholds, and the threshold should be selected based on the priority in the decoded SCI and the priority in the SCI to be transmitted (see TS 36.213 [23]). A resource is excluded if it is indicated or reserved by a decoded SCI and PSSCH RSRP in the associated data resource is above a threshold."

@@ -1,7 +1,0 @@
-Carrier frequency [MHz],RB allocations,A-MPR (dB),,,
-,,QPSK,16QAM,64QAM,256QAM
-"5870,5910",outer,≤ 8.5,,,≤ 8.5
-,inner,≤ 6.0,,,
-"5880,5890,5900",outer,≤ 6.0,,,≤ 6.5
-,inner,≤ 3.5,,≤ 4.5,
-NOTE 1:Inner and Outer RB allocations are defined in clause 6.2E.2.1NOTE 2:Applicable for Channel Bandwidth = 10 MHz,,,,,

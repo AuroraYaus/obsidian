@@ -1,5 +1,0 @@
-Value of Cast type indicator or COT sharing cast type,Cast type
-00,Broadcast
-01,Groupcast when HARQ-ACK information includes ACK or NACK
-10,Unicast
-11,"Groupcastwhen HARQ-ACK information includes only NACK; orreserved, if higher layer parameter sl-TransmissionStructureForPSCCHandPSSCH in SL-BWP-Config is configured"

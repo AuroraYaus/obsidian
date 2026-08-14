@@ -1,8 +1,0 @@
-Configuration,Description
-1,"FR1 FDD, NR SCS 15 kHz, BW 10 MHz, FDD"
-2,"FR1 FDD, NR SCS 15 kHz, BW 10 MHz, TDD"
-3,"FR1 FDD, NR SCS 30 kHz, BW 40 MHz, TDD"
-4,"FR1 TDD, NR SCS 15 kHz, BW 10 MHz, FDD"
-5,"FR1 TDD, NR SCS 15 kHz, BW 10 MHz, TDD"
-6,"FR1 TDD, NR SCS 30 kHz, BW 40 MHz, TDD"
-NOTE:The UE is only required to pass in one of the supported test configurations in FR1,

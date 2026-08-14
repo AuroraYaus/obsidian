@@ -1,4 +1,0 @@
-Parameter,,Unit,Value,Comment
-T1,,ms,100,"During this time the PCell shall be known and the SCell configured, but not detected."
-Propagation Condition,"Config 1,2,1A,2A",,AWGN + 220Hz,
-,"Config 3,3A",,AWGN +500Hz,

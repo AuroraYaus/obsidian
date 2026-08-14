@@ -1,5 +1,0 @@
-Configuration,TL1_SRS_measurement_period (ms)
-No DRX,"Max(TReport, (M +L1) X TSRS)"
-DRX cycle ≤ 320 ms,"Max(TReport, Ceil(1.5 X (M +L1)) X max(TSRS, TDRX))"
-DRX cycle > 320 ms,(M +L1) X TDRX
-"NOTE 1:TSRS is SRS measurement periodicity configured SRS-PeriodicityAndOffset, and TDRX is the DRX cycle length. TReport is configured periodicity for reporting.NOTE 2:M=1 if higher layer parameter timeRestrictionForChannelMeasurement is configured, and M=3 otherwise.",

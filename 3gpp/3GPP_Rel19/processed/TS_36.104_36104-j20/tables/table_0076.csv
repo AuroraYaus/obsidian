@@ -1,5 +1,0 @@
-"Frequency offset of measurement filter centre frequency, f_offset",Declared emission level [dBm],Measurement bandwidth
-2.5 MHz,"PEM,B32,B75,B76,a",5 MHz
-7.5 MHz,"PEM,B32,B75,B76,b",5 MHz
-12.5 MHz ≤ f_offset ≤ f_offsetmax,"PEM,B32,B75,B76,c",5 MHz
-"NOTE:For Band 32, when non-MFCN services are deployed in the adjacent bands, f_offsetmax  denotes the frequency difference between the lower channel edge and 1454.5 MHz, and the frequency difference between the upper channel edge and 1489.5 MHz for the set channel position. For Band 32, when MFCN services are deployed in the adjacent frequencies, Band 75 and Band 76, f_offsetmax denotes the frequency difference between the lower channel edge and 1429.5 MHz, and the frequency difference between the upper channel edge and 1514.5 MHz for the set channel position.",,

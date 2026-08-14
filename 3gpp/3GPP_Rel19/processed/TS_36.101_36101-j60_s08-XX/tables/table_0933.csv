@@ -1,6 +1,0 @@
-Parameter,,Unit,Single antenna port,Transmit diversity
-Downlink power allocation,NPBCH_RA,dB,0,-3
-,NPBCH_RB,dB,0,-3
-at antenna port,,dBm/15kHz,-98,-98
-Cyclic prefix,,,Normal,Normal
-Cell ID,,,0,0

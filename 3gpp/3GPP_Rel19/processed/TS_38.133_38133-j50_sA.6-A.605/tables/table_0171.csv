@@ -1,8 +1,0 @@
-Parameter,,Unit,Value,Comment
-Initial conditions,Active cell,,Cell 2,
-,Neighbouring cell,,Cell 4,
-Final condition,Active cell,,Cell 4,
-Access Barring Information,,-,Not Sent,No additional delays in random access procedure.
-Time offset between cells,,,3 s,Cell 2 and Cell 4 are Synchronous cells
-T1,,s,5,
-T2,,s,10,

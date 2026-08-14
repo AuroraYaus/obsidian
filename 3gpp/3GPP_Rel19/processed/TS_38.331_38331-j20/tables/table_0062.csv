@@ -1,4 +1,0 @@
-RRCResumeRequest1-IEs field descriptions
-resumeCauseProvides the resume cause for the RRCResumeRequest1 as provided by the upper layers or RRC. A gNB is not expected to reject an RRCResumeRequest1 due to unknown cause value being used by the UE.
-resumeIdentityUE identity to facilitate UE context retrieval at gNB.
-resumeMAC-IAuthentication token to facilitate UE authentication at gNB. The 16 least significant bits of the MAC-I calculated using the AS security configuration as specified in 5.3.13.3.

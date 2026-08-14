@@ -1,3 +1,0 @@
-UECapabilityEnquiry-IEs field descriptions
-rrc-MaxCapaSegAllowedThis field is used to enable the UL message segment transfer for UECapabilityInformation message with the number of segments allowed by the network. The field is present only if rrc-SegAllowed is not present.
-rrc-SegAllowedThis field is used to enable the UL message segment transfer for UECapabilityInformation message. The field is present only if rrc-MaxCapaSegAllowed is not present.

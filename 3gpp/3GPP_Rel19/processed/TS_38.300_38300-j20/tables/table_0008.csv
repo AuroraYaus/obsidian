@@ -1,5 +1,0 @@
-Temp ID,NSSAI,AMF Selection by NG-RAN
-not available or invalid,not available,One of the default AMFs is selected (NOTE)
-not available or invalid,present,Selects AMF which supports UE requested slices
-valid,"not available, or present",Selects AMF per CN identity information in Temp ID
-NOTE:The set of default AMFs is configured in the NG-RAN nodes via OAM.,,

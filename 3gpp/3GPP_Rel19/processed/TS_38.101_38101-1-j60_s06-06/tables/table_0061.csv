@@ -1,7 +1,0 @@
-Channel BW,"Carrier Frequency, Fc, MHz",RBStart*12*SCS (MHz),LCRB*12*SCS (MHz),A-MPR
-3MHz,815.5 ≤ Fc < 817.5,≤0.9,>0,A2
-5MHz,,≤1.8,>0,A1
-,,≤ 1.8,≤ 0.72,A3
-7 MHz,817.5 ≤ Fc < 820.5,≤ 1.8,> 0.72,A4
-,,> 1.8,> 1.44,A5
-10MHz,,≤3.6,>0,A1

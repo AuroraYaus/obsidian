@@ -1,7 +1,0 @@
-V2X Operating Band,Sidelink (SL) Transmission operating band,,,Sidelink (SL)  Reception operating band,,,Duplex Mode,Interface
-,FUL_low   –  FUL_high,,,FDL_low  –  FDL_high,,,,
-n142,788 MHz,-,798 MHz,788 MHz,-,798 MHz,HD,PC5
-n381,2570 MHz,-,2620 MHz,2570 MHz,-,2620 MHz,HD,PC5
-n47,5855 MHz,-,5925 MHz,5855 MHz,-,5925 MHz,HD,PC5
-n79,4400 MHz,-,5000 MHz,4400 MHz,-,5000 MHz,HD,PC5
-"NOTE 1:When this band is used for V2X SL service, the band is exclusively used for NR V2X in particular region.NOTE 2:When this band is used for public safety service, the NR band is operated with both in-coverage scenarios and out-of-coverage scenarios.",,,,,,,,

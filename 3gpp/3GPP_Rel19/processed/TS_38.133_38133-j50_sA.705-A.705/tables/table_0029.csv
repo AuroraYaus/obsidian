@@ -1,6 +1,0 @@
-Parameter,Unit,Test configuration,Value,Comment
-RF Channel Number,,1,1,
-SSB configuration,,1,SSB.1 FR2,
-SMTC configuration,,1,SMTC.3,
-DRX cycle length,s,1,OFF,
-T1,s,1,5,During T1 the UE is required to correctly transmit ACK/NACK

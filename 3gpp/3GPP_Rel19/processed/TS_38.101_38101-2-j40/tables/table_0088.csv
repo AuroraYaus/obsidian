@@ -1,7 +1,0 @@
-Network Signalling value,Requirements (clause),NR Band,Channel bandwidth (MHz),Resources Blocks (NRB),A-MPR (dB)
-CA_NS_200,,,,,N/A
-CA_NS_201,6.5A.3.2.2,n258,,,6.2A.3.2
-CA_NS_202,6.5A.3.2.3,"n257, n258",,,6.2A.3.3
-CA_NS_203,6.5A.3.2.4,n258,,,6.2A.3.4
-CA_NS_205,6.5A.3.2.6,"n257, n258",,,6.2A.3.6
-"NOTE:CA_NS_201 is obsolete, the associated additional spurious emission requirements are not applicable.",,,,,

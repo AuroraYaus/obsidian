@@ -1,4 +1,0 @@
-Tests,CA capability where the tests apply,CA configuration from the selected CA capbility where the tests apply,CA Bandwidth combination to be tested in priority order
-CA tests with 2CCs in Clause 9.6.1.1,Any of one of the supported CA capabilities,Any one of the supported FDD CA configurations,"10+10 MHz, 20+20 MHz, 5+5 MHz, 10MHz+5MHz, 15MHz+5MHz"
-CA tests with 2CCs in Clause 9.6.1.2,Any of one of the supported CA capabilities with largest aggregated CA bandwidth combination,Any one of the supported TDD CA configurations with largest aggregated CA bandwidth combination,Largest aggregated CA bandwidth combination
-"Note 1:The applicability and test rules are specified in this table, unless otherwise stated.Note 2:Number of the supported bandwidth combinations to be tested from each selected CA configuration is 1.Note 3:A single Uplink CC is configured for all tests",,,

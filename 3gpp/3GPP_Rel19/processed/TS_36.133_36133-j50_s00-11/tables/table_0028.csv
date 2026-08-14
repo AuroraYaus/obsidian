@@ -1,7 +1,0 @@
-DRX cycle length [s],"Tdetect,NR_HST [s] (number of DRX cycles)","Tmeasure,NR_HST [s] (number of DRX cycles)","Tevaluate,NR_HST[s] (number of DRX cycles)"
-,,,
-0.32,4.16 x M2 (13 x M2)Note 2,0.64 x M3 (2 x M3)Note 2,0.96 x M4 (3 x M4) Note 2
-0.64,7.68 (12)),1.28 (2),1.92 (3)
-1.28,12.8(10),1.28 (1),3.84 (3)
-2.56,58.88 (23),2.56 (1),7.68 (3)
-"Note 1:FR2 high speed requirements are not specified.Note 2: M2=1.5, M3=2 and M4=2 if SMTC periodicity of measured intra-frequency cell > 40 ms; otherwise M2=M3=M4=1..",,,

@@ -1,4 +1,0 @@
-SL-LBT-FailureRecoveryConfig field descriptions
-"sl-LBT-FailureDetectionTimerTimer for consistent sidelink LBT failure detection (see TS 38.321 [3]). Value ms10 corresponds to 10 ms, value ms20 corresponds to 20 ms, and so on."
-"sl-LBT-FailureInstanceMaxCountThis field determines after how many LBT failure indications received from the physical layer the UE triggers sidelink LBT failure recovery (see TS 38.321 [3]). Value n4 corresponds to 4, value n8 corresponds to 8, and so on."
-"sl-LBT-RecoveryTimerTimer for consistent sidelink LBT failure cancellation (see TS 38.321 [3]). Value ms10 corresponds to 10 ms, value ms20 corresponds to 20 ms, and so on."

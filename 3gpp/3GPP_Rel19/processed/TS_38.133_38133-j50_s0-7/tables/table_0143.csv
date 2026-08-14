@@ -1,9 +1,0 @@
-eDRX_IDLE cycle length [s],DRX or eDRX INACTIVE cycle length [s],"Tdetect,NR_Intra_Relax [s] (number of DRX or eDRX INACTIVE cycles)","Tmeasure,NR_Intra_Relax [s] (number of DRX or eDRX INACTIVE cycles)","Tevaluate,NR_Intra_Relax [s] (number of DRX or INACTIVE eDRX cycles)"
-,,,,
-20.48 ≤eDRX_IDLE cycle length ≤10485.76,0.32,11.52 x M2 x K1 (36 x M2 x K1),1.28 x M2 x K1 (4 x M2 x K1),5.12 x M2 x K1 (16 x M2 x K1)
-,0.64,17.92 x K1 (28 x K1),1.28 x K1 (2 x K1),5.12 x K1 (8 x K1)
-,1.28,32 x K1 (25 x K1),1.28 x K1 (1 x K1),6.4 x K1 (5 x K1)
-,2.56,58.88 x K1 (23 x K1),2.56 x K1 (1 x K1),7.68 x K1 (3 x K1)
-,5.12,117.76 x K1 (23 x K1),5.12 x K1 (1 x K1),15.36 x K1 (3 x K1)
-,10.24,235.52 x K1 (23 x K1),10.24 x K1 (1 x K1),30.72 x K1 (3 x K1)
-NOTE 1: M2 = 1.5 if SMTC periodicity of measured intra-frequency cell > 20 ms; otherwise M2=1.NOTE 2: K1 = 3 is the measurement relaxation factor applicable for UE fulfilling the lowMobilityEvaluation [2] criterion or fulfilling the cellEdgeEvaluation [2] criterion.,,,,

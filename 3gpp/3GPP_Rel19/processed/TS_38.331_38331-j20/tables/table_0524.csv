@@ -1,4 +1,0 @@
-PeriodicalReportConfigInterRAT field descriptions
-maxReportCellsMax number of non-serving cells/candidate L2 U2N Relay UEs to include in the measurement report.
-reportAmountNumber of measurement reports applicable for eventTriggered as well as for periodical report types
-"reportQuantity, reportQuantityUTRA-FDDThe cell measurement quantities to be included in the measurement report. If the field reportQuantityUTRA-FDD is present, the UE shall ignore the value(s) provided in reportQuantity."

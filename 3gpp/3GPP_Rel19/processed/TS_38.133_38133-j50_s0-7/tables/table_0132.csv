@@ -1,6 +1,0 @@
-eDRX_IDLE cycle and eDRX INACTIVE cycle length [s],T [s],eDRX INACTIVE PTW length [s] (number of 1.28 s periods),Scaling Factor (N1),Nserv [number of T Note 3]
-20.48 ≤ eDRX_IDLE cycle length ≤10485.7620.48 ≤ eDRX_INACTIVE cycle length ≤10485.76,0.32,≥5.12 (4),8,N1*2
-,0.64,≥6.4 (5),5,N1*2
-,1.28,≥10.24 (8),4,N1*2
-,2.56,≥15.36 (12),3,N1*2
-"NOTE 1:Applies for UE of all FR2 power class.NOTE 2:eDRX INACTIVE PTW in this table is RAN configured PTW.NOTE 3:Nserv requirements are only defined within a single eDRX INACTIVE PTW duration.NOTE 4:T is determined according to clause 7.1 in [1].NOTE 5:The eDRX_INACTIVE cycle lengths are as specified in section 10.5.5.32 of TS 24.008 [42].NOTE 6:The lower bound of PTW length is derived based on .NOTE 7:When eDRX=20.48 s and DRX=0.32 s, UE is allowed to perform cell evaluation within PTW in every 2 eDRX cycles.Nserv *DRX_cycle1.28*1.28",,,,

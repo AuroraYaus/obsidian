@@ -1,3 +1,0 @@
-SL-Failure field descriptions
-sl-DestinationIdentityIndicates the destination for which the SL failure is reporting for unicast.
-"sl-FailureIndicates the sidelink cause for the sidelink RLF (value rlf), sidelink AS configuration failure (value configFailure) and the rejection of sidelink DRX configuration (value drxReject-v1710) for the associated destination for unicast."

@@ -1,8 +1,0 @@
-Parameter,Unit,Value,Comment
-RF Channel Number,,"1, 2","Two NR radio channel (1, 2) are used for this test"
-Active PCell,,Cell 1,Primary cell on NR RF channel number 1
-Configured SCell,,Cell 2,Activated secondary cell on NR RF channel number 2
-CP length,,Normal,
-DRX,,OFF,Continuous monitoring of PCell
-T1,s,5,
-T2,ms,100,UE shall perform SRS switching during T2

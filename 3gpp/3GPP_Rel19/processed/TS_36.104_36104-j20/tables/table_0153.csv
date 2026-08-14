@@ -1,6 +1,0 @@
-E-UTRAchannel bandwidth of the lowesthighest carrier received [MHz],NB-IoT wanted signal mean power [dBm],Interfering signal mean power [dBm],Interfering signal centre frequency offset from the lower/upper Base Station RF Bandwidth edge or sub-block edge inside a sub-block gap [MHz],Type of interfering signal
-5,PREFSENS + 26dB (Note),-28,±2.5025,5MHz E-UTRA signal
-10,PREFSENS + 24dB (Note),-28,±2.5075,5MHz E-UTRA signal
-15,PREFSENS + 22dB (Note),-28,±2.5125,5MHz E-UTRA signal
-20,PREFSENS + 22dB (Note),-28,±2.5025,5MHz E-UTRA signal
-Note:PREFSENS depends on the sub-carrier spacing as specified in Table 7.2.1-5b.,,,,

@@ -1,3 +1,0 @@
-Conditional presence,Explanation
-FieldAsetToX,"The field is mandatory present if fieldA is included and set to valueX. Otherwise the field is optionally present, need R."
-FieldCsetToY,"The field is optionally present, need M, if fieldC is configured and set to valueY. Otherwise the field is absent and the UE does not maintain the value"

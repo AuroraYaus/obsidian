@@ -1,7 +1,0 @@
-targetRAT-Type,Standard to apply,targetRAT-MessageContainer,
-cdma2000-1XRTT,"C.S0001 or later, C.S0007 or later, C.S0008 or later",,
-cdma2000-HRPD,C.S0024 or later,,
-eutra,TS 36.331 (clause 5.4.2),RRCConnectionReconfiguration,
-geran,"GSM TS 04.18, version 8.5.0 or later, or TS 44.018 (clause 9.1.15)TS 44.060, version 6.13.0 or later (clause 11.2.43)TS 44.060, version 7.6.0 or later (clause 11.2.46)",HANDOVER COMMANDPS HANDOVER COMMANDDTM HANDOVER COMMAND,
-nr,TS 38.331 (clause 6.2.2),RRCReconfiguration,
-utra,TS 25.331 (clause 10.2.16a),Handover TO UTRAN command,

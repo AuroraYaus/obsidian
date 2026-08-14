@@ -1,6 +1,0 @@
-Parameter,Value
-Wanted signal,"E-UTRA single carrier, or multi-carrier, or multiple intra-band contiguously or non-contiguously aggregated carriers with NB-IoT in-band and/or guard band operation"
-Interfering signal type,E-UTRA signal of channel bandwidth 5 MHz
-Interfering signal level,Rated total output power in the operating band – 30 dB
-Interfering signal centre frequency offset from the lower/upper edge of the wanted signal or edge of sub-block inside a sub-block gap,± 2.5 MHz± 7.5 MHz± 12.5 MHz
-"NOTE1:Interfering signal positions that are partially or completely outside of any downlink operating band of the base station are excluded from the requirement, unless the interfering signal positions fall within the frequency range of adjacent downlink operating bands in the same geographical area. In case that none of the interfering signal positions fall completely within the frequency range of the downlink operating band, TS 36.141 [4] provides further guidance regarding appropriate test requirements.NOTE2:In certain regions, NOTE1 is not applied in Band 1, 3, 8, 9, 11, 18, 19, 21, 28, 32 operating within 1475.9-1495.9MHz, 34, 74.",

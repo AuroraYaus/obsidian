@@ -1,8 +1,0 @@
-Conditional presence,Explanation
-inband,In FDD: The field is mandatory present if IE operationModeInfo in MIB-NB is set to inband-SamePCI or inband-DifferentPCI. Otherwise the field is not present.In TDD: The field is mandatory present if:- IE operationModeInfo in MIB-TDD-NB is set to inband-SamePCI or inband-DifferentPCI or- IE operationModeInfo in MIB-TDD-NB is set to guardband and IE sib-GuardbandInfo in MIB-TDD-NB is set to sib-GuardbandInbandSamePCI or sib-GuardbandinbandDiffPCI and IE tdd-SI-CarrierInfo is set to non-anchor
-inband-SamePCI,"The field is mandatory present, if IE operationModeInfo in MIB-NB is set to inband-SamePCI. Otherwise the field is not present."
-inband-SamePCI-ExceptAnchor,"The field is optionally present if IE operationModeInfo in MIB-NB is set to a value other than inband-SamePCI, and at least one non-anchor carrier is inband carrier and uses the same PCI as the E-UTRA carrier. Otherwise the field is not present."
-Qrxlevmin,"This field is optionally present, Need OR, if q-RxLevMin is set to the minimum value. Otherwise the field is not present."
-SIB1,"The field is not present in IoT NTN TDD mode. In FDD and TDD, the field is mandatory present if IE additionalTransmissionSIB1 in MIB-NB is set to TRUE. Otherwise the field is optionally present, Need OP."
-TDD,The field is mandatory present for TDD; otherwise the field is not present and the UE shall delete any existing value for this field.
-TDD-SI-NonAnchor,The field is mandatory present for TDD if si-CarrierInfo is set to non-anchor; otherwise the field is not present and the UE shall delete any existing value for this field.

@@ -1,7 +1,0 @@
-Parameter,Unit,Value,Comment
-Active PCell,,Cell 1,Primary cell on E-UTRAN RF channel number 1.As specified in clause A.3.7.2.2
-T1,ms,100,"During this time the PSCell shall be known and the SCell configured, but not detected."
-T2,s,2 or 12,"During this time the UE shall activate the SCell. Depends on the UE capability, 2 s for the case where DRX is not applicable and 12 s for the case where DRX is applicable."
-T3,s,1,During this time the UE shall deactivate the SCell.
-X1,,"1,2,4,6 (Default 8)",Optionally signaled by the UE capabilities as part of beamSweepingFactorReduction-r18:reduceForCellDetection
-X2,,"0,1,2,3,4,5,6,7 (Default 8)",Optionally signaled by the UE capabilities as part of beamSweepingFactorReduction-r18:reduceForSSB-L1-RSRP-Meas

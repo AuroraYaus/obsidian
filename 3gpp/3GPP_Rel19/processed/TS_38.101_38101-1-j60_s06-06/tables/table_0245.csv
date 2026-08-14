@@ -1,8 +1,0 @@
-Pre-coding,Modulation,RB Allocation3,,,,RB Allocation4,,,,
-,,Outer RB set configuration,,Inner RB set configuration,,Outer RB set configuration,,Inner RB set configuration,,
-,,Full (dB),Partial (dB),Full (dB),Partial (dB),Full (dB),Partial (dB),Full (dB),Partial (dB),
-CP-OFDM,QPSK,≤ 14.0,≤ 15.0,≤ 9.0,≤ 11.5,≤ 9.0,≤ 11.5,≤ 8.5,≤ 11.5,
-,16 QAM,≤ 14.0,≤ 15.0,≤ 9.0,≤ 11.5,≤ 9.0,≤ 11.5,≤ 8.5,≤ 11.5,
-,64 QAM,≤ 14.0,≤ 15.0,≤ 9.0,≤ 11.5,≤ 9.0,≤ 11.5,≤ 8.5,≤ 11.5,
-,256 QAM,≤ 15.0,≤ 15.0,≤ 9.0,≤ 11.5,≤ 9.0,≤ 11.5,≤ 8.5,≤ 11.5,
-"NOTE 1:The A-MPR shall apply to all SCS in all active 20 MHz sub-bands contiguously allocated in the channel.NOTE 2:Full allocation A-MPR applies when all RB’s in a 20 MHz channel or all RB’s in all sub-bands for wideband operation are fully allocated and all sub-bands are transmitted.  Partial allocation A-MPR applies when one or more RB’s in one or more sub-bands are not allocated or when not all transmitted sub-bands for wideband operation are transmitted.NOTE 3:Applicable for 20 MHz channels centered at the nearest NR-ARFCN corresponding to 5955 MHz, 40 MHz channels centered at the nearest NR-ARFCN corresponding to 5965 MHz, 60 MHz channels centered at the nearest NR-ARFCN corresponding to 5975 MHz, 80 MHz channels centered at the nearest NR-ARFCN corresponding to 5985 MHz, and 100 MHz channels centered at the nearest NR-ARFCN corresponding to 5995 MHz. NOTE 4:Applicable for all valid channels other than those enumerated under NOTE 3.",,,,,,,,,,

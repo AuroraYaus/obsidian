@@ -1,4 +1,0 @@
-AntennaInfoUL field descriptions
-"fourAntennaPortActivatedParameter indicates if four antenna ports are used. See TS 36.213 [23], clause 8.2. E-UTRAN optionally configures fourAntennaPortActivated only if transmissionModeUL is set to tm2."
-"transmissionModeULPoints to one of UL Transmission modes defined in TS 36.213 [23], clause 8.0, where tm1 refers to transmission mode 1, tm2 to transmission mode 2 etc."
-"transmissionModeUL-STTIIndicates the UL transmission mode as defined in TS 36.213 [23], clause 8.0, where tm1 refers to transmission mode 1 and tm2 to transmission mode 2 for slot or subslot operation."

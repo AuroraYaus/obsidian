@@ -44,7 +44,7 @@ source_spec: "Local project instructions"
 - `docs/` — 153 篇讲义（L0 阅读引导 1 → L1 基础 46 → L2 协议/算法 70 → L3 工程 36；口径 = 仅 `type: algorithm` 讲义，另含入口/术语总表等 spec 文件 6 个，2026-08-14 审核统一口径）
 - `sim/` — Python 仿真（CRC/GF(2) 等）
 - `tools/` — 审计/抽取/渲染工具链
-- `3GPP_Rel19/` — 协议原始资料和结构化抽取
+- `3GPP_Rel19/` — 协议原始资料和结构化抽取（2026-08-14 已拆分至独立数据仓 `gitee.com/aurorayaus/3gpp_docs`，本地目录为可选 clone 复原，主仓不再跟踪）
 
 ### 3. 强制 DOXYGEN 风格注释（知识库红线）
 

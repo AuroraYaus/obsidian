@@ -1,5 +1,0 @@
-DRX cycle length (s),"Tmeasure, E-UTRAN TDD (s) (DRX cycles)"
-≤ 0.08,[Non-DRX Requirements in clause 9.4.8.4.2 apply]
-0.128,"[For configuration 2 Note3, non-DRX requirements in clause 9.4.8.4.2 apply,]Otherwise: Note1 (5*CSSFinterRAT*Kp)"
-0.128 < DRX-cycle ≤ 10.24,Note1 (5*CSSFinterRAT*Kp)
-NOTE 1:The time depends on the DRX cycle length.NOTE 2:CSSFinterRAT is as defined in clause 9.4.8.4.2.NOTE 3:See Table 9.4.8.4.2-1.,

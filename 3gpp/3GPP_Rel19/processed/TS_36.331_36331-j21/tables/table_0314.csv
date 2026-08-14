@@ -1,4 +1,0 @@
-SL-V2X-FreqSelectionConfig field descriptions
-priorityListIndicates the list of PPPP(s) which is associated with the configurations in threshCBR-FreqReselection and in threshCBR-FreqKeeping.
-threshCBR-FreqReselectionIndicates the CBR threshold to determine whether the carrier frequency can be (re)selected for the transmission of V2X sidelink communication. See TS 36.321 [6].
-threshCBR-FreqKeepingIndicates the CBR threshold to determine whether the UE can keep using the carrier which was selected for the transmission of V2X sidelink communication. See TS 36.321 [6].

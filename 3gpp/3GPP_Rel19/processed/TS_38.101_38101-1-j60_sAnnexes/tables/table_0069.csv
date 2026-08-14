@@ -1,6 +1,0 @@
-Preamble format,Cyclic prefix length NCP,Nominal FFT size1,EVM window length W in FFT samples,Ratio of W to CP2
-0,3168,24576,2307,72.8%
-1,21024,24576,20163,95.9%
-2,4688,24576,3827,81.6%
-3,3168,6144,2952,93.2%
-NOTE 1:The use of other FFT sizes is possible as long as appropriate scaling of the window length is appliedNOTE 2:These percentages are informative,,,,

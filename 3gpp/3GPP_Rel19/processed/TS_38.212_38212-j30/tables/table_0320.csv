@@ -1,5 +1,0 @@
-Value of the Embedded SCI format field,Embedded SCI format,Embedded SCI format payload
-00,SCI format 2-A,"Set to all fields included in SCI format 2-A. Padding bits, if necessary, are appended to the 'Embedded SCI format payload' field untill the bitwidth equals the larger payload size of SCI format 2-A and SCI format 2-B."
-01,SCI format 2-B,"Set to all fields included in SCI format 2-B. Padding bits, if necessary, are appended to the 'Embedded SCI format payload' field untill the bitwidth equals the larger payload size of SCI format 2-A and SCI format 2-B."
-10,Reserved,Reserved
-11,Reserved,Reserved

@@ -1,4 +1,0 @@
-Configuration,TEvaluate_out_SSB_Relax (ms)
-"Max(TDRX,TSSB) ≤80 ms","Max(200 K4 NOTE3, Ceil(15  K2 NOTE2  P  N)  Max(TDRX,TSSB))"
-"80 ms < Max(TDRX,TSSB) ≤160 ms","Ceil(15  P  N)  Max(TDRX,TSSB)"
-"NOTE 1:TSSB is the periodicity of the SSB configured for RLM. TDRX is the DRX cycle length and no longer than 80 ms.NOTE 2:K2 = 2.NOTE 3:K4 = K2, if K2 ≤ 2; otherwise K4 = 1.",

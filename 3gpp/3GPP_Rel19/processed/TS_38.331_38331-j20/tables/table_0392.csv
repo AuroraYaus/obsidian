@@ -1,3 +1,0 @@
-NeedForGapsNR field descriptions
-bandNRIndicates the NR target band to be measured.
-"gapIndicationIndicates whether measurement gap is required for the UE to perform SSB based measurements on the concerned NR target band while NR-DC or NE-DC is not configured. The UE determines this information based on the resultant configuration of the RRCReconfiguration or RRCResume message that triggers this response. Value gap indicates that a measurement gap is needed, value no-gap indicates a measurement gap is not needed."

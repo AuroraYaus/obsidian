@@ -1,5 +1,0 @@
-SNPN-AccessInfo field descriptions
-extCH-SupportedIndicates whether the SNPN supports access using credentials from a Credentials Holder as specified in TS 23.501 [32].
-extCH-WithoutConfigAllowedIndicates whether the SNPN allows registration attempts with credentials from a Credentials Holder from UEs that are not explicitly configured to select the SNPN as specified in TS 23.501 [32].
-"imsEmergencySupportForSNPNIndicates whether the SNPN supports IMS emergency bearer services for UEs in limited service mode in the cell. If absent, IMS emergency call is not supported by the SNPN in the cell for UEs in limited service mode."
-onboardingEnabledIndicates whether the onboarding SNPN allows registration for onboarding in the cell as specified in TS 23.501 [32].

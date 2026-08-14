@@ -1,2 +1,0 @@
-Definition,Multicast channel block error rate (MCH BLER) estimation shall be based on evaluating the CRC of MCH transport blocks. The BLER shall be computed over the measurement period as the ratio between the number of received MCH transport blocks resulting in a CRC error and the total number of received MCH transport blocks of an MCH. The MCH BLER estimation shall only consider MCH transport blocks using the same MCS.
-Applicable for,"RRC_IDLE intra-frequency,RRC_IDLE inter-frequency, RRC_CONNECTED intra-frequency,RRC_CONNECTED inter-frequency"

@@ -1,7 +1,0 @@
-Parameter,Unit,Value,Comment
-RF Channel Number,-,"1, 2",RF channel 1 is non-V2X sidelink carrierRF channel 2 is V2X sidelink carrier
-SCS,kHz,30,
-Active cell,-,Cell 1,PCell on RF channel number 1
-CP length of Cell 1,-,Normal,
-SL-DRX,,SL-DRX.3,SL-DRX related parameters are defined in table A.3.21.4.2-1
-T1,s,10,

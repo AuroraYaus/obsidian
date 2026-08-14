@@ -1,3 +1,0 @@
-SIB24 field descriptions
-"cfr-ConfigMCCH-MTCHCommon frequency resource used for multicast MCCH and/or multicast MTCH reception. If the field is absent, the CFR for multicast has the same location and size as CORESET#0 and PDSCH configuration of multicast MCCH, if present, is the same as PDSCH configuration provided in initialDownlinkBWP in SIB1."
-multicastMCCH-ConfigIndicates MCCH configuration for MBS multicast reception in RRC_INACTIVE. This field is always included if it is provided via broadcast signalling in SIB24.

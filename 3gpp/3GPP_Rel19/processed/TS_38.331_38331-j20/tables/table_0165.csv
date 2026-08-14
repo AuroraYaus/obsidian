@@ -1,3 +1,0 @@
-BFR-SSB-Resource field descriptions
-ra-PreambleIndexThe preamble index that the UE shall use when performing BFR upon selecting the candidate beams identified by this SSB.
-ssbThe ID of an SSB transmitted by this serving cell. It determines a candidate beam for beam failure recovery (BFR).

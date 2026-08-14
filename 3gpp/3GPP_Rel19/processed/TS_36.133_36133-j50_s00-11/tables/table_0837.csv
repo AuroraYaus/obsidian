@@ -1,6 +1,0 @@
-Accuracy,Conditions,,,,,
-,NPRS Ês/Iot,UE NPRS measurementbandwidth on the reference cell and the measured neighbour cell i Note 3,"Minimum number of available measurement subframes among the reference cell and the measured neighbour cell i , NNPRS_total Note 6",Io Note 7 range,,
-,,,,E-UTRA/NR operating band groups Note 7,MinimumIo Note 1,MaximumIo
-Ts Note 2,dB,RB,,,dBm/15kHz,dBm/BWChannel
-±40,(NPRS Ês/Iot)ref ≥-15dBand(NPRS Ês/Iot)i ≥-15dB,1,320,"NFDD_G, NTDD_G",-118,-70
-"NOTE 1:This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2:Ts is the basic timing unit defined in TS 36.211 [16].NOTE 3:The serving cell, the reference cell, and the measured neighbour cell i are on the same carrier frequency.NOTE 4:The Io is defined in NPRS positioning subframes. The same Io range applies to NPRS and non-NPRS symbols. Io levels are different in NPRS and non-NPRS symbols within the same subframe.NOTE 5:E-UTRA/NR operating band groups are as defined in Section 3.5.NOTE 6:NNPRS_total can be in one or more NPRS positioning occasions.",,,,,,

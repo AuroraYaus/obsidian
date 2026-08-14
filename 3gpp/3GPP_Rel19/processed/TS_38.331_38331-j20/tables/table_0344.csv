@@ -1,4 +1,0 @@
-SRS-ResourceConfigCLI field descriptions
-"refBWPDL BWP id that is used to derive the reference point of the SRS resource (see TS 38.211[16], clause 6.4.1.4.3)"
-"refServCellIndexThe index of the reference serving cell that the refBWP belongs to. If this field is absent, the reference serving cell is PCell."
-"srs-SCSSubcarrier spacing for SRS.Only the following values are applicable depending on the used frequency:FR1:    15, 30, or 60 kHzFR2-1:  60 or 120 kHzFR2-2:  120, 480, or 960 kHz"

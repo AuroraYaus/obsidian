@@ -1,5 +1,0 @@
-NCR-FwdConfig field descriptions
-aperiodicFwdConfigAperiodic time resource configuration for beam indication for NCR. The configuration includes a list of time domain resources that can be selected for aperiodic forwarding.
-periodicFwdRsrcSetToAddModListList of periodic forwarding resource configurations to be added or modified.
-periodicFwdRsrcSetToReleaseListList of periodic forwarding resource configurations to be released.
-semiPersistentFwdRsrcSetToAddModListList of semi-persistent forwarding resource configurations to be added or modified.

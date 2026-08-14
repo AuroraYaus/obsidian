@@ -1,4 +1,0 @@
-RRCConnectionResumeRequest field descriptions
-resumeCauseProvides the resume cause for the RRC connection resume request as provided by the upper layers. The network is not expected to reject a RRCConnectionResumeRequest due to unknown cause value being used by the UE.
-resumeIdentityUE identity to facilitate UE context retrieval at eNB
-shortResumeMAC-IAuthentication token to facilitate UE authentication at eNB

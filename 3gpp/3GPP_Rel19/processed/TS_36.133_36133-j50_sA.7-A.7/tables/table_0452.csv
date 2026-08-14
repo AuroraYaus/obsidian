@@ -1,9 +1,0 @@
-Parameter,Unit,Value,Comment
-E-UTRA RF Channel Number,,"1, 2",RF channel 1 is servingRF channel 2 is non-serving
-Channel Bandwidth (BWchannel),MHz,5,
-Active cell,,Cell 1,Serving E-UTRA FDD cell on RF channel number 1
-Non-serving cell,,"Cell 2, Cell 3",Non-serving E-UTRA FDD cells on RF channel number 2
-"CP length of Cell 1, 2, 3",,Normal,
-T1,s,2,
-T2,s,14,
-T3,s,5,

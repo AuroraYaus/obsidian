@@ -1,6 +1,0 @@
-Conditional Presence,Explanation
-FR2-Only,This field is mandatory present for an FR2 carrier frequency. It is absent otherwise and UE releases any configured value.
-FDD,"The field is optionally present, Need R, for FDD cells; otherwise it is absent."
-SUL,"The field is mandatory present, in IE sib1-RequestConfigSUL; otherwise it is absent."
-TDD,"The field is optionally present, Need R, for TDD cells; otherwise it is absent."
-TDD_NES,"The field is mandatory present for TDD cells, otherwise it is optionally present, Need R."

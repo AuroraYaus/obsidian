@@ -1,9 +1,0 @@
-Value of CSI request field,Description
-'000',No aperiodic CSI report is triggered
-'001',"Aperiodic CSI report is triggered for a set of CSI process(es) and/or {CSI process, CSI subframe set}-pair(s) configured by higher layers for serving cell"
-'010',"Aperiodic CSI report is triggered for a 1st set of CSI process(es) and/or {CSI process, CSI subframe set}-pair(s) configured by higher layers"
-'011',"Aperiodic CSI report is triggered for a 2nd set of CSI process(es) and/or {CSI process, CSI subframe set}-pair(s) configured by higher layers"
-'100',"Aperiodic CSI report is triggered for a 3rd set of CSI process(es) and/or {CSI process, CSI subframe set}-pair(s) configured by higher layers"
-'101',"Aperiodic CSI report is triggered for a 4th set of CSI process(es) and/or {CSI process, CSI subframe set}-pair(s) configured by higher layers"
-'110',"Aperiodic CSI report is triggered for a 5th set of CSI process(es) and/or {CSI process, CSI subframe set}-pair(s) configured by higher layers"
-'111',"Aperiodic CSI report is triggered for a 6th set of CSI process(es) and/or {CSI process, CSI subframe set}-pair(s) configured by higher layers"

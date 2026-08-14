@@ -1,6 +1,0 @@
-Field,Bit width,,,,,,,
-,2 antenna ports,,4 antenna ports,,8 antenna ports,,,
-,Rank = 1,Rank = 2,Rank = 1,Rank > 1,Rank = 1,"Rank = 2,3",Rank = 4,Rank > 4
-Wide-band CQI,4,4,4,4,4,4,4,4
-Spatial differential CQI,0,3,0,3,0,3,3,3
-Wide-band PMI (2 or 4 antenna ports) or i2 (8 antenna ports),2,1,4,4,4,4,3,0

@@ -1,8 +1,0 @@
-Parameter,Value
-Reference configuration,DRX_P1
-onDurationTimer,psf1
-drx-InactivityTimer,psf1
-drx-RetransmissionTimer,psf1
-longDRX-CycleStartOffset,"sf320, 0"
-shortDRX,Disabled
-Note:For further information see clause 6.3.2 in TS 36.331.,

@@ -1,5 +1,0 @@
-HandoverPreparationInformation-NB field descriptions
-as-ConfigThe radio resource configuration.
-as-ContextThe local E-UTRAN context required by the target eNB.
-"rrm-ConfigThe local E-UTRAN context used depending on the target node's implementation, which is mainly used for the RRM purpose."
-"ue-RadioAccessCapabilityInfo, ue-RadioAccessCapabilityInfoExtThe NB-IoT UE Radio Access Capability Parameters, see TS 36.306 [5]."

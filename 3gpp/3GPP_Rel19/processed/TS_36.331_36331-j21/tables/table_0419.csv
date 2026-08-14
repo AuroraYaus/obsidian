@@ -1,3 +1,0 @@
-NSSS-RRM-Config-NB field descriptions
-"nsss-RRM-PowerOffsetNSSS to NRS ratio for the serving cell as specified in TS 36.214 [48]. Value in dB. Value dB-3 corresponds to -3 dB, dB0 corresponds to 0 dB and so on."
-"nsss-NumOccDiffPrecodersNumber of consecutive NSSS occasions that use different precoders for NSSS transmission.See TS 36.211 [21]. Value n1 corresponds to 1 occasion, n2 corresponds to 2 occasions and so on.For value n2, n4, and n8, UE may assume for nsss-NumOccDiffPrecoders consecutive NSSS occasions, E-UTRAN uses different precoders for NSSS transmission. For value n1, UE may assume that E-UTRAN always uses the same precoder.If the field is absent, the UE makes no assumption on the antenna port(s) used for NSSS."

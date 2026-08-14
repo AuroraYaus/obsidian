@@ -1,9 +1,0 @@
-Parameter,,Unit,Value,Comment
-RF Channel Number,,,1,One NR NTN satellite RF channel
-Initial conditions,Active cell,,Cell 1,
-Final condition,Active cell,,Cell 2,
-"UE position (L,B, H)",,,"(0, 0, 0)","Set by any pre-configured means(L,B,H) is Geodetic coordinate, where L is latitude, B is longitude, and H is height."
-Access Barring Information,,-,Not barred,No additional delays in random access procedure.
-Time offset between cells,,,3 s,Synchronous cells
-T1,,s,5,
-T2,,s,5,

@@ -1,5 +1,0 @@
-Test Number,Bandwidth (MHz),,Reference channel,,Power at antenna port (dBm/15KHz),,Reference valueFraction of MaximumThroughput (%),,UE Category
-,PCell,SCell,PCell,SCell,for PCell,for Scell,PCell,SCell,
-1,20,20,R.49 TDD,NA,-85,-79,85,NA,≥5
-2,20,15,NA,R.49-1 TDD,-79,-85.8,NA,85,≥5
-Note 1: The OCNG pattern for PCell is used to fill the control channel. The OCNG pattern for SCell is used to fill the control channel and PDSCH.Note 2: The applicability of requirements for different CA configurations and bandwidth combination sets is defined in 8.1.2.3.,,,,,,,,,

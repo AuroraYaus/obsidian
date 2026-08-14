@@ -1,7 +1,0 @@
-Parameter,Unit,Value
-,,Test 1
-Channel Bandwidth (BWchannel),MHz,5
-PDCCH/PCFICH/PHICH Reference measurement channelNote1,,R.11 FDD
-OCNG PatternNote2,,OP.16 FDD
-IoNote4,dBm/4.5 MHz,-68.5
-"Note 1:For the reference measurement channels, see clause A.3.1.Note 2:For the OCNG pattern, see clause A.3.2.Note 3:See Table A.7.1.1.1-1 for the other parameters.Note 4:This test is according to the principle defined in section A.3.7.2.",,

@@ -1,9 +1,0 @@
-CA_1C: CA_NS_01,RBstart,LCRB [RBs],RBstart + LCRB[RBs],"A-MPR for QPSK, 16 QAM, 64 QAM and 256 QAM [dB]"
-100 RB / 100 RB,0 – 23 and 176 – 199,> 0,N/A,≤ 12.0
-,24 – 105,> 64,N/A,≤ 6.0
-,106 – 175,N/A,> 175,≤ 5.0
-75 RB / 75 RB,0 – 6 and 143 – 149,0 < LCRB ≤ 10,N/A,≤ 11.0
-,,> 10,N/A,≤ 6.0
-,7 – 90,> 44,N/A,≤ 5.0
-,91 – 142,N/A,> 142,≤ 2.0
-"NOTE 1:RB_start indicates the lowest RB index of transmitted resource blocksNOTE 2:L_CRB is the length of a contiguous resource block allocationNOTE 3:For intra-subframe frequency hopping which intersects regions, notes 1 and 2 apply on a per slot basis. For intra-slot or intra-subslot frequency hopping which intersects regions, notes 1 and 2 apply on a per Tno_hopping basis.NOTE 4:For intra-subframe frequency hopping which intersects regions, the larger A-MPR value may be applied for both slots in the subframe. For intra-slot frequency hopping which intersects regions, the larger A-MPR value may be applied for the slot. For intra-subslot frequency hopping which intersects regions, the larger A-MPR value may be applied for the subslot.",,,,

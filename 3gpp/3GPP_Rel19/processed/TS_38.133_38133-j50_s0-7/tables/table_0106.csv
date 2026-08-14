@@ -1,7 +1,0 @@
-DRX cycle length [s],Scaling Factor (N1),Nserv [number of DRX cycles]
-,FR1-NTN and FR2-NTN,
-0.32,1,M1*N1*4
-0.64,,M1*N1*4
-1.28,,N1*2
-2.56,,N1*2
-NOTE 1:The UE is not required to meet the requirements for 2.56 s DRX cycle length for earth-moving LEO deployment.,,

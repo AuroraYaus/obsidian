@@ -1,7 +1,0 @@
-DRX-ConfigPTM field descriptions
-drx-HARQ-RTT-TimerDL-PTMValue in number of symbols of the CFR where the transport block was received.
-"drx-InactivityTimerPTMValue in multiple integers of 1 ms. ms0 corresponds to 0, ms1 corresponds to 1 ms, ms2 corresponds to 2 ms, and so on."
-drx-LongCycleStartOffsetPTMdrx-LongCycle-PTM in ms and drx-StartOffset-PTM in multiples of 1 ms.
-"drx-onDurationTimerPTMValue in multiples of 1/32 ms (subMilliSeconds) or in ms (milliSecond). For the latter, value ms1 corresponds to 1 ms, value ms2 corresponds to 2 ms, and so on."
-"drx-RetransmissionTimerDL-PTMValue in number of slot lengths of the CFR where the transport block was received. value sl0 corresponds to 0 slots, sl1 corresponds to 1 slot, sl2 corresponds to 2 slots, and so on."
-"drx-SlotOffsetPTMValue in 1/32 ms. Value 0 corresponds to 0 ms, value 1 corresponds to 1/32 ms, value 2 corresponds to 2/32 ms, and so on."

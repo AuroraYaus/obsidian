@@ -1,7 +1,0 @@
-Test,Bandwidth (MHz),Transmission mode,Antenna configuration,Codebook subset restriction,Downlink power allocation (dB),,,,at antenna port (dBm/15kHz),Symbols for unused PRBs,ACK/NACK feedback mode
-,,,,,,,,δ,,,
-1,10,1,1 x 2,N/A,0,0,0,0,-85,OP.6 TDD,Bundling
-2,10,3,2 x 2,10,-3,-3,0,3,-85,OP.1 TDD,Bundling
-3,20,3,2 x 2,10,-3,-3,0,3,-85,OP.1 TDD,Bundling
-3A,15,3,2 x 2,10,-3,-3,0,3,-85,OP.2 TDD,Multiplexing
-"4,6",20,3,2 x 2,10,-3,-3,0,3,-85,OP.1 TDD,Multiplexing

@@ -1,9 +1,0 @@
-ULFPTx Mode,Transmission scheme,DCI format,Modulation,Number of layers,Number of Tx Port,TPMI index
-Mode-1,Codebook based uplink,DCI format 0_1,"DFT-s-OFDM, CP-OFDM NOTE3",1,2 NOTE1,2
-,,,,,,
-,,,,,,
-Mode-2,Codebook based uplink,DCI format 0_1,"DFT-s-OFDM, CP-OFDM",1,2 NOTE1,0 or 1NOTE2
-,,,,,,
-,,,,,,
-Mode-full power,Codebook based uplink,DCI format 0_1,"DFT-s-OFDM, CP-OFDM",1,2 NOTE1,"0,1"
-"NOTE 1:The UE is configured with one SRS resource with the parameter nrofSRS-Ports set to 2.NOTE 2:TPMI index selected shall be based upon the full power TPMI reported by the UE [8, TS 38.213].",,,,,,

@@ -1,7 +1,0 @@
-RX parameter,Units,Channel bandwidth (MHz)
-,,"10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100"
-Power in transmission bandwidth configuration,dBm,-73.54-61.55
-Pinterferer,dBm,-424-305
-BWinterferer,MHz,BWChannel
-Finterferer (offset),MHz,BWChannel/-BWChannel
-"NOTE 1:The transmitter shall be set to 24 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2J.2NOTE 2:The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to MHz with SCS the sub-carrier spacing of the wanted signal in MHz. The interferer is an NR signal with an SCS equal to that of the wanted signal.NOTE 3:The interferer consists of the RMC specified in Annexes A.3.2.2 and A.3.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1. NOTE 4:Pinterferer shall be set to -42dBm for omni-directional antenna.NOTE 5:Pinterferer shall be set to -30dBm for antenna array.",,

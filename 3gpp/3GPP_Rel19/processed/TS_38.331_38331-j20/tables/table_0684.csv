@@ -1,3 +1,0 @@
-Conditional Presence,Explanation
-QoENRDC,"This field is optionally present, Need M, when QoE for an NR-DC configuration is configured, i.e. when either QoE for an SCG is configured or when SRB5 is configured. Otherwise, it is absent."
-ServiceType,"This field is optionally present, Need M, when serviceType is set to streaming or vr. Otherwise, it is absent."

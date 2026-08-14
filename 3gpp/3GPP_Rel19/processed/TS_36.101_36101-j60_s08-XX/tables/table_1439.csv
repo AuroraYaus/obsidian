@@ -1,7 +1,0 @@
-Test number,Cell,Bandwidth (MHz),Reference Channel,OCNG Pattern,Propagationcondition,Correlation Matrix and antenna,Reference value,,MBMS UE Category
-,,,,,,,BLER (%),SNR(dB),
-1,PCell,10,N/A,OP.1 FDD,AWGN,1x2 low,N/A,N/A,N/A
-,MBMS Dedicated Cell,10,R.107 FDD,N/A,MBSFN channel model (Table B.2.6.4-1),1x2 low,1,12.9,≥ 2
-,MBMS Dedicated Cell,6,R.107-1 FDD,N/A,MBSFN channel model (Table B.2.6.4-1),1x2 low,1,12.9,≥ 2
-,MBMS Dedicated Cell,7,R.107-2 FDD,N/A,MBSFN channel model (Table B.2.6.4-1),1x2 low,1,12.9,≥ 2
-,MBMS Dedicated Cell,8,R.107-3 FDD,N/A,MBSFN channel model (Table B.2.6.4-1),1x2 low,1,12.9,≥ 2

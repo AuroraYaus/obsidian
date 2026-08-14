@@ -1,7 +1,0 @@
-DRX cycle length (s),"TIdentify, E-UTRAN TDD (s) (DRX cycles)",
-,"EMW period = 40 ms, or the measurement is performed without EMW",EMW period = 80 ms
-≤ 0.16,Non-DRX requirements in clause 9.4.8.4.2 apply,Non-DRX requirements in clause 9.4.8.4.2 apply
-0.256,[5.12* CSSFinterRAT*Kp (20*CSSFinterRAT*Kp)],[7.68* CSSFinterRAT*Kp (30*CSSFinterRAT*Kp)]
-0.32,[6.4* CSSFinterRAT*Kp (20*CSSFinterRAT*Kp)],[7.68* CSSFinterRAT*Kp (24*CSSFinterRAT*Kp)]
-0.32 < DRX-cycle ≤ 10.24,Note1 (20*CSSFinterRAT*Kp),Note1 (20*CSSFinterRAT*Kp)
-NOTE 1:The time depends on the DRX cycle length.NOTE 2:CSSFinterRAT is as defined in clause 9.4.8.4.2.NOTE 3:Kp is as defined in clause 9.4.8.4.2.NOTE 4:Void,,

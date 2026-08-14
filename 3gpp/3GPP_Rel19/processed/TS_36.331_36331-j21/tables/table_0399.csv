@@ -1,8 +1,0 @@
-Conditional presence,Explanation
-additionalSIB1,"This field is optionally present, Need OR, if additionalTransmissionSIB1 is set to TRUE in MasterInformationBlock-NB; otherwise it is not present."
-dl-NonAnchor,"The field is optionally present, Need ON, for a DL non-anchor carrier; otherwise the field is not present and the UE shall delete any existing value for this field."
-npusch-16QAM,"This field is mandatory present, if npusch-16QAM-Config-r17 is true; otherwise the field is not present and the UE shall delete any existing value for this field."
-NTN,"The field is optionally present, Need ON, for NTN other than IoT NTN TDD mode. Otherwise, the field is not present and the UE shall delete any existing value for this field."
-TDD,"The field is optionally present, Need OR, for TDD; otherwise the field is not present and the UE shall delete any existing value for this field."
-twoHARQ,"The field is optionally present, Need OR, if twoHARQ-ProcessesConfig is configured; otherwise the field is not present and the UE shall delete any existing value for this field."
-ul-NonAnchor,"The field is optionally present, Need ON, for an UL non-anchor carrier; otherwise the field is not present and the UE shall delete any existing value for this field."

@@ -1,6 +1,0 @@
-Wanted signalchannel bandwidth,BWChannel,
-Interference signalfrequency offset from channel center,BWChannel,2*BWChannel
-Interference CW signal level,-40 dBc,
-Intermodulation product,< -29 dBc,< -35 dBc
-Measurement bandwidth,The maximum transmission bandwidth configuration among the different SCS's for the channel BW as defined in Table 6.5.2.4.1-1,
-Measurement offset from channel center,BWChannel and 2*BWChannel,2*BWChannel and 4*BWChannel

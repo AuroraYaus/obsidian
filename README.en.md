@@ -18,7 +18,7 @@ A full-stack teaching Obsidian knowledge base for the 3GPP LTE/NR decoding chain
 │   ├── 项目规则与记忆索引.md   # Rules / writing conventions / sync checklist
 │   └── README.md             # Detailed knowledge-base documentation (Chinese)
 ├── .obsidian/               # Obsidian app configuration
-└── 3gpp/3GPP_Rel19/         # Rel-19 specs and structured extraction
+└── 3gpp/3GPP_Rel19/         # Protocol evidence data (optional clone from separate repo, see "Protocol evidence data")
 ```
 
 ## Quick Start

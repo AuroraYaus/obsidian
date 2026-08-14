@@ -1,5 +1,0 @@
-TPMI index i,Intermediate precoder matrix W'
-0 – 3,"12W3, i04×3"
-4 – 7,"1204×3W3, i-4"
-8 – 135,"12W1,(i-8)804×204×1W2,i mod 8"
-136 – 263,"12W2,(i-136)1604×104×2W1,i-136mod 16"

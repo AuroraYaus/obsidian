@@ -1,3 +1,0 @@
-RRCReestablishmentRequest-IEs field descriptions
-reestablishmentCauseIndicates the failure cause that triggered the re-establishment procedure. gNB is not expected to reject a RRCReestablishmentRequest due to unknown cause value being used by the UE.
-ue-IdentityUE identity included to retrieve UE context and to facilitate contention resolution by lower layers.

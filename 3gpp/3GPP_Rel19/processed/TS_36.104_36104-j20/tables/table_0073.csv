@@ -1,3 +1,0 @@
-Channel bandwidth,"Frequency offset of measurement filter 3dB point, f","Frequency offset of measurement filter centre frequency, f_offset",Minimum requirement,Measurement bandwidth (Note 8)
-All,0 MHz  f < 100 kHz,0.015 MHz  f_offset < 0.085 MHz,-13 dBm,30 kHz
-All,100  kHz  f < fmax,150 kHz  f_offset < f_offsetmax,-13 dBm,100 kHz

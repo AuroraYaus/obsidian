@@ -1,8 +1,0 @@
-eDRX_IDLE cycle length [s],DRX cycle length [s],PTW length [s] (number of 1.28s periods Note 5),"Tdetect,NR_Inter_CCA [s] (number of DRX cycles Note 4)","Tmeasure,NR_Inter_CCA [s] (number of DRX cycles Note 4)","Tevaluate,NR_Inter_CCA [s] (number of DRX cycles Note 4)"
-,,,,,
-5.12,-,-,5.12x([23]+ Md){[23]+ Md},5.12 *(1+Mm) {1+ Mm },5.12*(2+ Me) {2+ Me }
-10.24  ≤  eDRX_IDLE cycle length ≤2621.44,0.32,≥11.52 (9),(23+Md)eDRX_cycle_length×(23+Md)PTW/DRX_cycle_length,0.32 x (1.5+ Mm)) {1.5+ Mm },0.32 x (2*1.5+ Me) {3+ Me}
-,0.64,≥11.52(9),,0.64 x (1+ Mm)  {1+ Mm },0.64 x (2+ Me)  {2+ Me }
-,1.28,≥12.8 (10),,1.28 x (1+ Mm)  {1+ Mm },1.28 x (2+ Me)  {2+ Me }
-,2.56,≥25.6 (20),,2.56 x (1+ Mm)  {1+ Mm },2.56 x (2+ Me)  {2+ Me }
-"Note 1:Md, Mm, Me are the number of DRX cycles each with at least one SMTC occasion not available at the UE during the Tdetect,NR_Inter_CCA,, Tmeasure,NR_Inter_CCA and Tevaluate,NR_Inter_CCA, respectively. Mm,max, Md,max and Me,max are the maximum values of Mm, Md and Me, respectively.Note 2:Mm ≤ Mm,max, where: Mm,max = 16 for DRX cycle = 0.32 seconds, Mm,max = 8 for DRX cycle = 0.64 seconds, Mm,max = 4 for DRX cycle = 1.28 seconds, Mm,max = 4 for DRX cycle = 2.56 seconds,Note 3:Md ≤ Md,max, where: Md,max = 4 * Mm,max,Note 4:Me ≤ Me,max, where: Me,max = 2 * Mm,max,Note 5: The lower bound of PTW window shall be derived based on .  is the inter-RAT NR cell evaluation period without CCA, as defined in Table 4.2.2.5.6-3.NOTE 6:The number of DRX cycles in this table is given for the DRX cycles within PTWs.NOTE 7:The eDRX_IDLE cycle lengths are as specified in Section 10.5.5.32 of TS 24.008 [34].(Tevaluate,NR+Me,max)*DRX_cycle1.28*1.28Tevaluate,NR",,,,,

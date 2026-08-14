@@ -1,6 +1,0 @@
-CA configuration,SCS(PCC/SCC)(kHz),Aggregated channel bandwidth (PCC+SCC),UL PCC allocation(LCRB),UL SCC allocation(LCRB),PCC ΔRIBC (dB),SCC ΔRIBC (dB),Duplex mode
-CA_n3B5,15/15,20MHz + 20MHz,25 (RBSTART = 0),25 (RBSTART = 81),25.1,12.4,FDD
-CA_n5B,15/15,10MHz + 10MHz,10 (RBstart = 0),10 (RBstart = 42),30.8,26.1,FDD
-CA_n5B5,15/15,5MHz + 20MHz,4 (RBSTART = 0),16 (RBSTART = 90),44.6,23.0,FDD
-CA_n7B,15/15,10MHz + 40MHz,9 (RBstart = 26),36 (RBstart = 180),34,25,FDD
-NOTE 1:All combinations of channel bandwidths defined in Table 5.5A.1-1.NOTE 2:The carrier centre frequency of SCC in the UL operating band is configured closer to the DL operating band.NOTE 3:The transmitted power over both PCC and SCC shall be set to PUMAX as defined in subclause 6.2A.4.NOTE 4:The PCC allocation is same as Transmission bandwidth configuration NRB as defined in Table 5.3.2-1. NOTE 5:Applicable only to BCS 1 and to BCS 4 and 5.,,,,,,,

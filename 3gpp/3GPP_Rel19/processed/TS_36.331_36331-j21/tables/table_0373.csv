@@ -1,3 +1,0 @@
-SystemInformationBlockType32-NB field descriptions
-"carrierFreqListIncludes a list of NB-IoT frequencies, see TS 36.304 [4]."
-"satelliteInfoListList of satellite information. If E-UTRAN includes satelliteInfoList-v1830, it includes the same number of entries, and listed in the same order, as in satelliteInfoList-r17.In this version of the specification, E-UTRAN does not include satelliteInfoList-v1800."

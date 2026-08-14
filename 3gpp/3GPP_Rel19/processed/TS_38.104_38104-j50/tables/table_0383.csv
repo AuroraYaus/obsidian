@@ -1,8 +1,0 @@
-BS channel bandwidth (MHz),Sub-carrier spacing (kHz),Reference measurement channel,"OTA reference sensitivity level, EISREFSENS(dBm)"
-"5, 7, 10, 15",15,G-FR1-A1-1,-96.7 - ΔOTAREFSENS
-"10, 15",30,G-FR1-A1-2,-96.8 - ΔOTAREFSENS
-"10, 15",60,G-FR1-A1-3,-93.9 - ΔOTAREFSENS
-"20, 25, 30, 35, 40, 45, 50",15,G-FR1-A1-4,-90.3 - ΔOTAREFSENS
-"20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100",30,G-FR1-A1-5,-90.6 - ΔOTAREFSENS
-"20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100",60,G-FR1-A1-6,-90.7 - ΔOTAREFSENS
-"NOTE:EISREFSENS is the power level of a single instance of the reference measurement channel. This requirement shall be met for each consecutive application of a single instance of the reference measurement channel mapped to disjoint frequency ranges with a width corresponding to the number of resource blocks of the reference measurement channel each, except for one instance that might overlap one other instance to cover the full BS channel bandwidth.",,,

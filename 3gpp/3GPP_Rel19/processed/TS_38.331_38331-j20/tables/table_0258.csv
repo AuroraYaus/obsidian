@@ -1,4 +1,0 @@
-CSI-RS-ResourceConfigMobility field descriptions
-csi-RS-CellList-MobilityList of cells for CSI-RS based RRM measurements.
-"refServCellIndexIndicates the serving cell providing the timing reference for CSI-RS resources without associatedSSB. The field may be present only if there is at least one CSI-RS resource configured without associatedSSB. If this field is absent, the UE shall use the timing of the PCell for measurements on the CSI-RS resources without associatedSSB. The CSI-RS resources and the serving cell indicated by refServCellIndex for timing reference should be located in the same band."
-"subcarrierSpacingSubcarrier spacing of CSI-RS.Only the following values are applicable depending on the used frequency:FR1/FR1-NTN:    15, 30, or 60 kHzFR2-1/FR2-NTN:  60 or 120 kHzFR2-2:  120, 480, or 960 kHz"

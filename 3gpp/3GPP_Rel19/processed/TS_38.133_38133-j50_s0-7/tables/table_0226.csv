@@ -1,4 +1,0 @@
-SSB Ês/Iot (dB),cell,Known NR cell,Unknown NR cell
-≥ -8,FR1,"MAX (200 ms, 5 x TSMTC)","MAX (800 ms, 10 x N1Note2 x TSMTC)"
-< -8,FR1,N/A,800Note1
-"NOTE 1:The UE is not required to successfully identify a cell on any NR frequency layer when TSMTC > 20 ms and serving cell SSB Ês/Iot < -8 dB.NOTE 2:For ATG UEs capable of antennaArrayType-r18, N1 = 3 when network assistance on ATG cells reference locations is provided, otherwise N1 = 4.Otherwise, N1 = 1.",,,

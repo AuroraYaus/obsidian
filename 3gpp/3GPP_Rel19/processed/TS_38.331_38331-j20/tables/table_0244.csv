@@ -1,8 +1,0 @@
-CSI-IM-Resource field descriptions
-"csi-IM-ResourceElementPatternThe resource element pattern (Pattern0 (2,2) or Pattern1 (4,1)) with corresponding parameters (see TS 38.214 [19], clause 5.2.2.4)"
-"freqBandFrequency-occupancy of CSI-IM (see TS 38.214 [19], clause 5.2.2.4)"
-periodicityAndOffsetPeriodicity and slot offset for periodic/semi-persistent CSI-IM. Network always configures the UE with a value for this field for periodic and semi-persistent CSI-IM-Resources (as indicated in CSI-ResourceConfig). A change of configuration between periodic or semi-persistent and aperiodic for a CSI-IM-Resource is not supported without a release and add.
-"subcarrierLocation-p0OFDM subcarrier occupancy of the CSI-IM resource for Pattern0 (see TS 38.214 [19], clause 5.2.2.4)"
-"subcarrierLocation-p1OFDM subcarrier occupancy of the CSI-IM resource for Pattern1 (see TS 38.214 [19], clause 5.2.2.4)"
-"symbolLocation-p0OFDM symbol location of the CSI-IM resource for Pattern0 (see TS 38.214 [19], clause 5.2.2.4)"
-"symbolLocation-p1OFDM symbol location of the CSI-IM resource for Pattern1 (see TS 38.214 [19], clause 5.2.2.4)"

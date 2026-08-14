@@ -1,6 +1,0 @@
-Frequency range,Measurementbandwidth,Maximum level,NOTE
-30 MHz  f < 1 GHz,100 kHz,-57 dBm,
-1 GHz  f  12.75 GHz,1 MHz,-47 dBm,
-12.75 GHz  f  5th harmonic of the upper frequency edge of the DL operating band in GHz,1 MHz,-47 dBm,2
-12.75 GHz – 26 GHz,1 MHz,-47 dBm,3
-NOTE 1:Unused PDCCH resources are padded with resource element groups with power level given by PDCCH as defined in Annex C.3.1.NOTE 2:Applies for Band that the upper frequency edge of the DL Band more than 2.69 GHz.NOTE 3:Applies for Band that the upper frequency edge of the DL Band more than 5.2 GHz.,,,

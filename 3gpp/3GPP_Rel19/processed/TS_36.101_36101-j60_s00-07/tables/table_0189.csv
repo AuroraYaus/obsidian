@@ -1,8 +1,0 @@
-"PCMAX,c(dBm)","Tolerance T(PCMAX,c)(dB)"
-18 ≤ PCMAX ≤ 20,2.0
-"17 ≤ PCMAX,c < 18",2.5
-"16 ≤ PCMAX,c < 17",3.5
-"15 ≤ PCMAX,c < 16",4.0
-"10 ≤ PCMAX,c < 15",5.0
-"5 ≤ PCMAX,c < 10",6.0
-"-40 ≤ PCMAX,c < 5",7.0

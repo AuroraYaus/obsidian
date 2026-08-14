@@ -1,3 +1,0 @@
-Measurement gap pattern configuration,Serving cell,Measurement Purpose,Applicable Gap Pattern Id,
-Per-UE measurement gap,FR1,FR1,0-11,
-"NOTE 1:VoidNOTE 2:VoidNOTE 3:VoidNOTE 4:If per-UE measurement gap is configured with MG timing advance of TMG ms, the measurement gap starts at time TMG ms advanced to the end of the latest subframe occurring immediately before the configured measurement gap among all serving cells subframes.TMG is the MG timing advance value provided in mgta according to [2].In determining the measurement gap starting point, UE shall use the DL timing of the latest subframe occurring immediately before the configured measurement gap among serving cells.",,,,

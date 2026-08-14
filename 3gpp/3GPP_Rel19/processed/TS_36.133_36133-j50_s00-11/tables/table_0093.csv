@@ -1,6 +1,0 @@
-DRX cycle length [s],Value
-0.32,"Min(n , 32)"
-0.64,"Min(n , 16)"
-1.28,"Min(n , 8)"
-2.56,"Min(n , 4)"
-NOTE:n is signalled by the network by using num-DRX-CyclesRelaxed defined in TS 36.331 [2].,

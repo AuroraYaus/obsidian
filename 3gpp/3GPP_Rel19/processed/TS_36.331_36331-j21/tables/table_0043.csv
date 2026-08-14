@@ -1,2 +1,0 @@
-RRCEarlyDataRequest field descriptions
-"establishmentCauseProvides the establishment cause for the RRC Early Data Request as provided by the upper layers. W.r.t. the cause value names: 'mo' stands for 'Mobile Originating'. eNB is not expected to reject a RRCEarlyDataRequest due to unknown cause value being used by the UE. If establishmentCause-v1610 is included, E-UTRAN ignores establishmentCause-r15."

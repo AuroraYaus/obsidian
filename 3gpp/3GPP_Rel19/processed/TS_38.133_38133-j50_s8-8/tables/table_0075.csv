@@ -1,8 +1,0 @@
-,NR Slot,SRS carrier,Interruption length X2 (slots),
-,length (ms) of victim cell,switching time (us) Note,Sub carrier spacing for aggressor cell (kHz),
-,,,60,120
-0,1,≤ 200,2,2
-1,0.5,≤ 200,2,2
-2,0.25,≤ 200,3,3
-3,0.125,≤ 200,4,4
-NOTE 1:NR SRS carrier switching time is UE capability indicated by higher layer parameter SRS-SwitchingTimeNR.,,,,

@@ -1,8 +1,0 @@
-Bit field mapped to index,Message
-0,4 layers: Transmit diversity
-1,1 layer: TPMI=0
-2,1 layer: TPMI=1
-,
-16,1 layer: TPMI=15
-17,1 layer: Precoding according to the latest PMI report on PUSCH using the precoder(s) indicated by the reported PMI(s)
-18~31,reserved

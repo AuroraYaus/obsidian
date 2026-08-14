@@ -1,9 +1,0 @@
-DMRS-DownlinkConfig field descriptions
-"dmrs-AdditionalPositionPosition for additional DM-RS in DL, see Tables 7.4.1.1.2-3 and 7.4.1.1.2-4 in TS 38.211 [16]. If the field is absent, the UE applies the value pos2. See also clause 7.4.1.1.2 for additional constraints on how the network may set this field depending on the setting of other fields."
-"dmrs-DownlinkThis field indicates whether low PAPR DMRS is used, as specified in TS38.211 [16], clause 7.4.1.1.1."
-"dmrs-TypeSelection of the DMRS type to be used for DL (see TS 38.211 [16], clause 7.4.1.1.1). If the field is absent, the UE uses DMRS type 1."
-"dmrs-TypeEnhThis field is used in TS 38.211 [16], clause 7.4.1.1.2."
-"maxLengthThe maximum number of OFDM symbols for DL front loaded DMRS. len1 corresponds to value 1. len2 corresponds to value 2. If the field is absent, the UE applies value len1. If set to len2, the UE determines the actual number of DM-RS symbols by the associated DCI. (see TS 38.211 [16], clause 7.4.1.1.2)."
-"phaseTrackingRSConfigures downlink PTRS. If the field is not configured, the UE assumes that downlink PTRS are absent. See TS 38.214 [19] clause 5.1.6.3."
-"scramblingID0DL DMRS scrambling initialization (see TS 38.211 [16], clause 7.4.1.1.1). When the field is absent the UE applies the value physCellId configured for this serving cell."
-"scramblingID1DL DMRS scrambling initialization (see TS 38.211 [16], clause 7.4.1.1.1). When the field is absent the UE applies the value physCellId configured for this serving cell."

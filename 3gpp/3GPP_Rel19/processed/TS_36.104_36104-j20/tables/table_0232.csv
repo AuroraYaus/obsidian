@@ -1,8 +1,0 @@
-Parameter,unit,Mode A,Mode B
-,,,
-Maximum number of HARQ transmissions,,4,2
-RV sequences,,"0, 2, 3, 1, 0, 2, 3, 1","FDD: 0, 0, 0, 0, 2, 2, 2, 2, 3, 3, 3, 3, 1, 1, 1, 1TDD: 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 1, 1, 1, 1,1"
-Number of PUSCH repetitions,,8,256
-Frequency hopping,,ON,ON
-Frequency hopping interval,subframes,4: FDD5: TDD,4: FDD5: TDD
-"Note 1:Guard period shall be created according to TS36.211, 5.2.5 [12]",,,

@@ -1,6 +1,0 @@
-DRX cycle length [s],Scaling Factor (N1),"Tdetect,NR_Intra [s] (number of DRX cycles)","Tmeasure,NR_Intra [s] (number of DRX cycles)","Tevaluate,NR_Intra[s] (number of DRX cycles)"
-0.32,N2Note2,2.56 x N1 x M2 (8 x N1 x M2),0.32 x N1 x M3 (1 x N1 x M3),0.96 x N1 x M4 (3 x N1 x M4)
-0.64,5,17.92 x N1 (28 x N1),1.28 x N1 (2 x N1),5.12 x N1 (8 x N1)
-1.28,4,32 x N1 (25 x N1),1.28 x N1 (1 x N1),6.4 x N1 (5 x N1)
-2.56,3,58.88 x N1 (23 x N1),2.56 x N1 (1 x N1),7.68 x N1 (3 x N1)
-"NOTE 1:When SMTC < = 40 ms, M2 = M3 = M4 = 1; and when SMTC > 40 ms, M2 = 1.5, M3 = M4 = 2NOTE 2:N2 = 2 when highSpeedMeasFlagFR2-r17 = set1; N2 = 6 when highSpeedMeasFlagFR2-r17 = set2.",,,,

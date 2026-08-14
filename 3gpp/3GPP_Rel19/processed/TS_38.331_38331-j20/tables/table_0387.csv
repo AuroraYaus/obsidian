@@ -1,8 +1,0 @@
-NCR-PeriodicFwdResourceSet field descriptions
-beamIndexIndicates the logical beam index for NCR-Fwd access link. NCR-Fwd is assumed to be ON over the indicated time domain resource if there is beam indication.
-durationInSymbolsIndicates the time duration in number of symbols.
-periodicFwdRsrcToAddModListList of periodic forwarding resources to be added or modified.
-"periodicityAndOffsetIndicates the periodicity and slot offset for the periodic forwarding resource. All the periodic forwarding resources configured within the same resource set should have the same periodicity. If the periodicity is expressed in [ms], the value range of slot offset is from 0 to Periodicity[ms] * referenceSCS[kHz]/15 -1."
-"priorityFlagIndicates the priority for the list of periodic forwarding resources, as specified in TS 38.213 [13], clause 20."
-"referenceSCSIndicates the reference subcarrier spacing for all the time resources in the list. Only values kHz15, kHz30, kHz60, kHz120 and kHz240 are applicable."
-symbolOffsetIndicates the symbol offset in one slot.

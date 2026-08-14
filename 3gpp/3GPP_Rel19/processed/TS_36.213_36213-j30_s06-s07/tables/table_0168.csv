@@ -1,4 +1,0 @@
-HARQ-ACK,SR transmission,Resource for HARQ-ACK bits transmission
-ACK/NACK,negative,HARQ-ACK PUCCH format 1a resource
-NACK,positive,The first SR PUCCH resource value configured by the higher layers
-ACK,positive,The second SR PUCCH resource value configured by the higher layers

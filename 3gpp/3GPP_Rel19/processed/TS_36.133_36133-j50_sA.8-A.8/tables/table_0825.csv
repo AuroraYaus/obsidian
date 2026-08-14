@@ -1,7 +1,0 @@
-Parameter,Unit,Value,,Comment
-,,Test 1,Test 2,
-PCFICH/PDCCH/PHICH parameters,,Cell 1: R.6 TDDCell 2: R.11 TDDCell 3: R.11 TDD,Cell 1: R.6 TDDCell 2: R.11 TDDCell 3: R.11 TDD,As specified in section A.3.1.2.2
-Channel Bandwidth (BWchannel),MHz,Cell 1: 10Cell 2: 5Cell 3: 5,Cell 1: 10Cell 2: 5Cell 3: 5,
-PRS Transmission Bandwidth,RB,Cell 1: 50Cell 2: 25Cell 3: 25,Cell 1: 50Cell 2: 25Cell 3: 25,PRS are transmitted over the system bandwidth
-PRS occasion length,,Cell 1: 1Cell 2: 2Cell 3: 2,Cell 1: 1Cell 2: 2Cell 3: 2,
-Note 1:See Table A.8.17.2.1-1 for the other parameters.Note 2:This test verifies the RRM requirement which is independent of channel bandwidth and is performed according to the principle defined in section A.3.6.1.,,,,

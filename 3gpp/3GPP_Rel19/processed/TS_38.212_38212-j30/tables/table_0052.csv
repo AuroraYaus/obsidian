@@ -1,6 +1,0 @@
-CSI report number,CSI fields
-CSI report #nCSI part 1,"CRI as in Tables 6.3.1.1.2-3A, if associated with one CSI-RS resource pair and if reported;CRI as in Tables 6.3.1.1.2-3B, if associated with one CSI-RS resource and if reported"
-,"Rank Combination Indicator as in Tables 6.3.1.1.2-3A, if associated with one CSI-RS resource pair and if reported;Rank Indicator as in Tables 6.3.1.1.2-3B, if associated with one CSI-RS resource and if reported;Zero padding bits , if neededOP"
-,"Wideband CQI for the first TB as in Tables 6.3.1.1.2-3A, if associated with one CSI-RS resource pair and if reported;Wideband CQI for the first TB as in Tables 6.3.1.1.2-3B, if associated with one CSI-RS resource and if reported"
-,"Subband differential CQI for the first TB with increasing order of subband number as in Tables 6.3.1.1.2-3A, if associated with one CSI-RS resource pair and if reported;Subband differential CQI for the first TB with increasing order of subband number as in Tables 6.3.1.1.2-3B, if associated with one CSI-RS resource and if reported"
-NOTE:Subbands for given CSI report n indicated by the higher layer parameter csi-ReportingBand with value set to '1' are numbered continuously in the increasing order with the lowest subband of csi-ReportingBand with value set to '1' as subband 0.,

@@ -1,2 +1,0 @@
-Conditional Presence,Explanation
-OptULNotSIB2,"The field is absent for SIB2 and is mandatory present if the parent IE is included in SIB4 or frequencyInfoDL-SIB. Otherwise, if the field is absent in frequencyInfoUL-SIB in UplinkConfigCommonSIB, the UE will use the frequency band indicated in frequencyInfoDL-SIB in DownlinkConfigCommonSIB."

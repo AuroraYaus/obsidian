@@ -1,9 +1,0 @@
-Parameter,Candidate DLorJoint TCI.State.0,Candidate DLorJoint TCI.State.1,Candidate DLorJoint TCI.State.2,Candidate DLorJoint TCI.State.3
-Candidatetci-StateId,Id0,Id1,Id2,Id3
-qcl-Type1,typeA,typeA,typeA,typeA
-referenceSignal of qcl-Type 1 Note2,SSB0,Resource #4 in TRS resource set 1 Note3,SSB0,Resource #4 in TRS resource set 1 Note3
-qcl-Type2Note1,typeD,typeD,typeD,typeD
-referenceSignal of qcl-Type2 Note2,SSB0,Resource #4 in TRS resource set 1 Note3,SSB0,Resource #4 in TRS resource set 1 Note3
-pathlossReferenceRS,SSB0,SSB0,N/A,N/A
-additionalPCI,N/A,N/A,N/A,N/A
-"NOTE 1:qcl-Type2 of typeD only where applicable. For RRM test cases, this will be only in FR2NOTE 2:referenceSignal configurations towards which the TCI states are configured are defined in a test-specific manner.NOTE 3:Reference TRS resource sets are defined in clause A.3.17, and the applicable TRS resource set(s) are specified in each test case. When a single TRS resource set is configured for a candidate cell in a test case, it is considered as resource set 1. The TCI state of the TRS is the CandidateDLorJoint TCI.State.2.",,,,

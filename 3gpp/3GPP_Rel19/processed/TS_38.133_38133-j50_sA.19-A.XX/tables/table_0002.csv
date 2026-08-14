@@ -1,5 +1,0 @@
-Parameter,Unit,Test configuration,Value,Comment
-,,,,
-Access Barring Information,-,"1, 2, 3",not barred,No additional delays in random access procedure.
-T2,s,"1, 2, 3",40,T2 needs to be defined so that cell re-selection reaction time is taken into account.The value applies for UEs that don’t support antennaArrayType-r18 and UEs that support antennaArrayType-18
-T3,s,"1, 2, 3",15,T3 needs to be defined so that cell re-selection reaction time is taken into account.The value applies for UEs that don’t support antennaArrayType-r18 and UEs that support antennaArrayType-18

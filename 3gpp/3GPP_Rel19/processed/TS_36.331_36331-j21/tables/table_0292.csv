@@ -1,4 +1,0 @@
-Conditional presence,Explanation
-A2X,"The field is mandatory present when included in sl-A2X-ConfigCommon. Otherwise the field is optionally present, Need OP."
-Tx,"The field is mandatory present when included in commTxPoolNormalDedicated, commTxPoolNormalDedicatedExt, commTxPoolNormalCommon, commTxPoolNormalCommonExt, commTxPoolExceptional, sc-CommTxConfig, v2x-CommTxPoolNormalCommon, v2x-CommTxPoolExceptional, v2x-CommTxPoolNormalDedicated, p2x-CommTxPoolNormalCommon or v2x-CommTxPoolNormal and p2x-CommTxPoolNormal in v2x-InterFreqInfoList. Otherwise the field is not present."
-P2X,"The field is mandatory present when included in p2x-CommTxPoolNormalCommon, v2x-CommTxPoolNormalDedicated in sl-V2X-ConfigDedicated for P2X related V2X sidelink communication or p2x-CommTxPoolNormal in v2x-InterFreqInfoList. Otherwise the field is not present."

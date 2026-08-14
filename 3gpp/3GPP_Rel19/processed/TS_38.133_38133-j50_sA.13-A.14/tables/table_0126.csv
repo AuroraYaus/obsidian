@@ -1,6 +1,0 @@
-Configuration,Description
-1,"GSO, NR FDD, 120 kHz SSB SCS, 100 MHz BW"
-2,"NGSO, NR FDD, 120 kHz SSB SCS, 100 MHz BW"
-3,"GSO, NR FDD, 30 kHz SSB SCS, 10 MHz BW"
-4,"NGSO, NR FDD, 30 kHz SSB SCS, 10 MHz BW"
-"NOTE:If UE supports both NGSO and GSO, the GSO-based test cases can be skipped if the UE passes NGSO-based test cases.",

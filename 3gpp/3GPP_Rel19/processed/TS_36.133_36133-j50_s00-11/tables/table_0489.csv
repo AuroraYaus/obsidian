@@ -1,7 +1,0 @@
-Target cell SCH Ês/Iot: Q2 [dB],Gap pattern ID,DRX cycle length (s),Tmeasure_intra_UE cat M1 (s) (DRX cycles)
-Q2-15,0,≤0.16,0.8 * Kintra_M1_EC *  KRSTD_M1_EC (Note1)
-,,0.16<DRX-cycle≤2.56,Note2(5 * Kintra_M1_EC*  KRSTD_M1_EC)
-,1,≤0.32,1.6 * Kintra_M1_EC *  KRSTD_M1_EC (Note1)
-,,0.32<DRX-cycle≤2.56,Note2(5 * Kintra_M1_EC*  KRSTD_M1_EC)
-N/A,N/A,N/A,"Max(DRX cycle length, TRSS ) x 5 (Note 3)"
-Note1:Number of DRX cycle depends upon the DRX cycle in useNote2:Time depends upon the DRX cycle in use,,,

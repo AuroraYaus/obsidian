@@ -1,8 +1,0 @@
-PDCCH-ConfigSCell field descriptions
-"maxNumberOfSchedSubframes-Format0BIndicates maximum number of schedulable subframes for DCI format 0B as specified in TS 36.213 [23]. Value sf2 corresponds to 2 subframes, value sf3 corresponds to 3 subframes and so on."
-"maxNumberOfSchedSubframes-Format4BIndicates maximum number of schedulable subframes for DCI format 4B as specified in TS 36.213 [23]. Value sf2 corresponds to 2 subframes, value sf3 corresponds to 3 subframes and so on."
-"skipMonitoringDCI-format0-1AIndicates whether the UE is configured to omit monitoring DCI fromat 0/1A, see TS 36.213 [23], clause 9.1.1."
-skipMonitoringDCI-Format0AIndicates whether the UE is configured to omit monitoring DCI fromat 0A as specified in TS 36.213 [23].
-skipMonitoringDCI-Format4AIndicates whether the UE is configured to omit monitoring DCI fromat 4A as specified in TS 36.213 [23].
-"pdcch-candidateReductionALxIndicates reduced (E)PDCCH monitoring requirements on UE specific search space of the x-th aggregation level, see TS 36.213 [23], clause 9.1.1. Value n0 corresponds to 0%, value n33 corresponds to 33% and so on."
-"pdcch-CandidateReductions-FormatxIndicates number of blind detections on UE specific search space for each aggregation layer as specified in TS 36.213 [23]. The field can only be present when the UE is configured with uplink of an LAA SCell. If pdcch-CandidateReductions-Formatx is not configured, pdcch-CandidateReductions-r13 applies to the corresponding DCIs (if configured)."

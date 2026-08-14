@@ -1,4 +1,0 @@
-Conditional presence,Explanation
-QrxlevminCE1,"The field is optionally present, Need OR, if q-RxLevMinCE1-r13 is set below -140 dBm. Otherwise the field is not present."
-RSRQ,"The field is optionally present, Need OR, if threshServingLowQ is present in SIB3; otherwise it is not present."
-WB-RSRQ,"The field is optionally present, need OP if the measurement bandwidth indicated by allowedMeasBandwidth is 50 resource blocks or larger; otherwise it is not present."

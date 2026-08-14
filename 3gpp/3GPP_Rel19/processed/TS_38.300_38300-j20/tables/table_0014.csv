@@ -1,8 +1,0 @@
-Component,Meaning
-TRRC,Processing time for RRCReconfiguration carrying candidate configurations
-TMAC,Time for processing the LTM cell switch command MAC CE
-TRRC-target,Time for processing and applying the target configuration
-TDL-sync,Time for DL synchronization
-TRA,Time until RA transmission
-TRAR,Time until RAR reception
-Tfirst-data,"Time for UE performs the first DL/UL reception/ transmission on the indicated beam of the target cell, after RAR"

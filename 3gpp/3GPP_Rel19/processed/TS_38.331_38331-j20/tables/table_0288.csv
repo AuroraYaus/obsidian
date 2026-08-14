@@ -1,2 +1,0 @@
-EpochTime field descriptions
-"sfnFor serving cell, it indicates the current SFN or the next upcoming SFN after the frame where the message indicating the epochTime is received. For neighbour or target cell when explicit epoch time is present, it indicates the SFN nearest to the frame where the message indicating the epochTime is received."

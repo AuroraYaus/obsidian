@@ -1,4 +1,0 @@
-DRX cycle,TSSB_measurement_period_intra
-No DRX,"max(400ms, Mmeas_period with_ncsg  x KNCSG x max(VIRP, SMTC period)) x CSSFintra"
-DRX cycle≤ 320 ms,"max(400ms, ceil(1.5 x Mmeas_period with_ncsg x KNCSG) x max(VIRP, SMTC period, DRX cycle)) Note 1 x CSSFintra"
-DRX cycle>320 ms,"Mmeas_period with_ncsg  x KNCSG x max(VIRP, DRX cycle) x CSSFintra"

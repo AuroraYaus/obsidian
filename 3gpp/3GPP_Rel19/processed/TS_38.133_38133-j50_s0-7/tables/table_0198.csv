@@ -1,5 +1,0 @@
-,NR Slot length (ms),"Interruption length Tinterrupt1 (slotsNote 1), synchronous DAPS HO","Interruption length Tinterrupt1 (slotsNote 1), asynchronous DAPS HO"
-0,1,1,2
-1,0.5,2,3
-2,0.25,4,5
-NOTE 1:The same SCS of source cell and target cell is assumed.NOTE 2:It is assumed that the BWP of target cell is not larger than the BWP of source cell. It is assumed that the CBW of target cell is not larger than the CBW of source cellNOTE 3:Void,,,

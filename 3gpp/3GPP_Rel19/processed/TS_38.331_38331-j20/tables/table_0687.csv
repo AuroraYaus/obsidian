@@ -1,5 +1,0 @@
-EUTRA-MBSFN-SubframeConfig field descriptions
-radioframeAllocationOffsetField as defined in MBSFN-SubframeConfig in TS 36.331 [10].
-"radioframeAllocationPeriodField as defined in MBSFN-SubframeConfig in TS 36.331 [10], where SFN refers to the SFN of the NR serving cell."
-"subframeAllocation1Field as defined in MBSFN-SubframeConfig in TS 36.331 [10], where the UE assumes the duplex mode (FDD or TDD) of the NR cell for which the E-UTRA-MBSFN-SubframeConfig is provided."
-"subframeAllocation2Field as defined in MBSFN-SubframeConfig-v1430 in TS 36.331 [10], where the UE assumes the duplex mode (FDD or TDD) of the NR cell for which the E-UTRA-MBSFN-SubframeConfig is provided."

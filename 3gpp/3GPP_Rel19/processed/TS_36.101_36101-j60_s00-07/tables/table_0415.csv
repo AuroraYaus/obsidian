@@ -1,8 +1,0 @@
-Rx parameter,Units,Channel bandwidth,,,,,
-,,1.4 MHz,3 MHz,5 MHz,10 MHz,15 MHz,20 MHz
-Power in Transmission Bandwidth Configuration,dBm,REFSENS + channel bandwidth specific value below,,,,,
-,,6,6,6,6,7,9
-BWInterferer,MHz,1.4,3,5,5,5,5
-"FIoffset, case 1",MHz,2.1+0.0125,4.5+0.0075,7.5+0.0125,7.5+0.0025,7.5+0.0075,7.5+0.0125
-"FIoffset, case 2",MHz,3.5+0.0075,7.5+0.0075,12.5+0.0075,12.5+0.0125,12.5+0.0025,12.5+0.0075
-"NOTE 1: The transmitter shall be set to 4dB below PCMAX_L at the minimum uplink configuration specified in Table 7.3.1-2 with PCMAX_L as defined in subclause 6.2.5.NOTE 2:The interferer consists of the Reference measurement channel specified in Annex A.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD as described in Annex A.5.1.1/A.5.2.1 and set-up according to Annex C.3.1.NOTE 3:The REFSENS power level is specified in Table 7.3.1-1 and Table 7.3.1-1a for two and four antenna ports, respectively.NOTE 4:For DL category M1 and M2 UE, the reference sensitivity for category M1 in table 7.3.1E-3 and category M2 in Table 7.3.1E-8 should be used as REFSENS for the power in Transmission Bandwidth Configuration.NOTE5:For DL category M1 and M2 UE, the parameters for the applicable channel bandwidth apply.",,,,,,,

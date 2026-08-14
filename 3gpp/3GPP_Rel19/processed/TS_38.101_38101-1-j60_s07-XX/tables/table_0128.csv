@@ -1,4 +1,0 @@
-,Units,Value
-ACS for Type1 LR,dB,24.5 + Z
-ACS for Type2 LR,dB,32.0
-"NOTE1:Z = 0.0 with 7 guard RBs for 15 kHz SCS or 2 guard RBs for 30 kHz SCS, and Z = - 5 with 0 guard RB. NOTE2:For channel bandwidths without sufficient guard RBs, only Z = - 5 with 0 guard RB applies.",,

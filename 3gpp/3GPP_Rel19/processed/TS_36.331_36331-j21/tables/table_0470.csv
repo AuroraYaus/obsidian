@@ -1,5 +1,0 @@
-ReestablishmentInfo field descriptions
-"additionalReestabInfoListContains a list of shortMAC-I and KeNB* for cells under control of the target eNB, required for potential re-establishment by the UE in these cells to succeed."
-"Key-eNodeB-StarParameter KeNB*: See TS 33.401 [32], clause 7.2.8.4. If the cell identified by cellIdentity belongs to multiple frequency bands, the source eNB selects the DL-EARFCN for the KeNB* calculation using the same logic as UE uses when selecting the DL-EARFCN in IDLE as defined in clause 6.2.2. This parameter is only used for X2 handover, and for S1 handover, it shall be ignored by target eNB."
-"sourcePhyCellIdThe physical cell identity of the source PCell, used to determine the UE context in the target eNB at re-establishment."
-"targetCellShortMAC-IThe ShortMAC-I for the handover target PCell, in order for potential re-establishment to succeed."

@@ -1,5 +1,0 @@
-Configuration,TEvaluate_out_CSI-RS (ms),TEvaluate_in_CSI-RS (ms)
-no DRX,Ceil(Mout×P) × measCyclePSCell,Ceil(Min×P) × measCyclePSCell
-DRX ≤ 320 ms,"Ceil(1.5 ×Mout×P) × Max(TDRX, measCyclePSCell)","Ceil(1.5 ×Min×P) × Max(TDRX, measCyclePSCell)"
-DRX > 320 ms,"Ceil(Mout×P) × Max(TDRX, measCyclePSCell)","Ceil(Min×P) × Max(TDRX, measCyclePSCell)"
-NOTE:TDRX is the DRX cycle length of SCG. measCyclePSCell is the measurement cycle length of the  deactivated PSCell.,,

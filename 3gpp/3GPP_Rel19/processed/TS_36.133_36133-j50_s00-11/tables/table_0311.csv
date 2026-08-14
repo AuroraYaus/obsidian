@@ -1,8 +1,0 @@
-WLAN RSSI measurement configuration,,DRX cycle length (s),TWLAN_RSSI_DRX  (s)
-Type of Measurement,Minimum number of APs measured during TWLAN_RSSI,,
-Measurement of serving AP,1,0.002 ≤ DRX-cycle ≤ 0.320,"MAX (0.5, 5*LDRX)"
-Measurement of one known neighbor AP on a single channel,1,0.002 ≤ DRX-cycle ≤ 0.320,"MAX (5, 25*LDRX)"
-,,0.320 < DRX-cycle ≤ 2.56,"MAX (5, 20*LDRX)"
-Measurement of 3 unknown neighbor APs,3,0.002 ≤ DRX-cycle ≤ 0.320,"MAX (30, 150*LDRX)"
-,,0.320 < DRX-cycle ≤ 2.56,"MAX (30, 120*LDRX)"
-Note 1:LDRX is the length of DRX cycle in second(s),,,

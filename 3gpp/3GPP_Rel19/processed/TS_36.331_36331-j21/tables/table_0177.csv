@@ -1,3 +1,0 @@
-Conditional presence,Explanation
-TDD,"This field is optional present for TDD, need OR; it is not present for FDD and the UE shall delete any existing value for this field."
-SPS,"This field is optional present if sps-ConfigIndex-r14 is not configured, need OR; otherwise it is not present."

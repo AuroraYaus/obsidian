@@ -1,3 +1,0 @@
-DRX_CONN cycle length (s),Tmeasure_inter,,,
-,Tburst = 1280 ms,Tburst = 2560 ms,Tburst = 5120 ms,Tburst = 10240 ms
-DRX-cycle ≤2.56,5*Nfreq*(Tburst/480),5*Nfreq*(Tburst/480),5*Nfreq*(Tburst/480),5*Nfreq*(Tburst/480)

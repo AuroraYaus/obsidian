@@ -1,5 +1,0 @@
-eDRX_IDLE cycle length [s],eDRX INACTIVE cycle length[s],Tserv [s],Scaling Factor (N1),Nserv [number of Tserv]
-2.56 ≤eDRX_IDLE cycle length ≤10485.76,eDRX INACTIVE cycle length ≥ TPOS,0.32 ≤ Tserv < 0.64,8,[4* M1*N1]
-,,0.64 ≤ Tserv < 1.28,5,[4* M1*N1
-,,1.28 ≤ Tserv < 2.56,4,[2*N1]
-,,2.56 ≤ Tserv,3,[2*N1]

@@ -1,5 +1,0 @@
-PDSCH-TimeDomainResourceAllocation field descriptions
-"k0Slot offset between DCI and its scheduled PDSCH (see TS 38.214 [19], clause 5.1.2.1). k0-v1710 is only applicable for PDSCH SCS of 480 kHz and 960 kHz. If multiple PDSCHs are configured per PDCCH, the network always configures this field. Otherwise, when the field is absent and only one PDSCH is configured per PDCCH, the UE applies the value 0."
-"mappingTypePDSCH mapping type (see TS 38.214 [19], clause 5.3)."
-repetitionNumberIndicates the number of PDSCH transmission occasions for slot-based repetition scheme in IE RepetitionSchemeConfig. The parameter is used as specified in 38.214 [19].
-"startSymbolAndLengthAn index giving valid combinations of start symbol and length (jointly encoded) as start and length indicator (SLIV). The network configures the field so that the allocation does not cross the slot boundary (see TS 38.214 [19], clause 5.1.2.1)."

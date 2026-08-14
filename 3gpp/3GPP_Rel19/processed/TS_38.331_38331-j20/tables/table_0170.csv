@@ -1,3 +1,0 @@
-Conditional Presence,Explanation
-LCH-Setup,"This field is mandatory present upon creation of a new logical channel for a BH RLC channel. It is optionally present, Need M, otherwise."
-LCH-SetupOnly,"This field is mandatory present upon creation of a new logical channel for a BH RLC channel. It is absent, Need M otherwise."

@@ -1,2 +1,0 @@
-Conditional Presence,Explanation
-SCellAddOnly,"It is optionally present, Need S, for (non-PUCCH) SCells when adding a new SCell. The field is absent, Need M, when reconfiguring SCells. The field is also absent for the SpCells as well as for a PUCCH SCell."

@@ -1,6 +1,0 @@
-NR,Total number of interrupted slots on FR2 serving cell,,,,,,,,,
-SCS,When MG timing advance of 0 ms is applied,,,,,When MG timing advance of 0.25 ms is applied,,,,
-(kHz),MGL=20 ms,MGL=10 ms,MGL=5.5 ms,MGL=3.5 ms,MGL=1.5 ms,MGL=20 ms,MGL=10 ms,MGL=5.5 ms,MGL=3.5 ms,MGL=1.5 ms
-60,80,40,22,14,6,80,40,22,14,6
-120,160,80,44,28,12,160,80,44,28,12
-NOTE 1:The total number of interrupted slots is based on that SFN and subframe reference for per-FR gap in FR2 indicated by high layer parameter refServCellIndicator is an FR2 serving cell.NOTE 2:Slot occurs before or after the measurement gap may be interrupted additionally if SFN and subframe reference for per-FR gap in FR2 indicated by high layer parameter refServCellIndicator is an FR1 serving cell.,,,,,,,,,,

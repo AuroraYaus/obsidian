@@ -1,9 +1,0 @@
-Parameter,Unit,Set 1,Set 2
-Refence signal,,CRS,CRS
-Transmission type,,Localized,Localized
-Number of OFDM symbols,,2,2
-Number of PRBs per SPDCCH-PRB set (Note 1),,8,8
-Rate Matching mode,,Not configured,Mode 1
-SPDCCH L1 Reuse Indication,,"{1, 1}",Not configured
-Aggregation level,SCCE,4,4
-"Note 1: The two SPDCCH-PRB sets are non-overlapping with PRB = {0, 1, …, 7} for Set 1, and PRB = {8, 9, …, 15} for Set 2",,,

@@ -1,9 +1,0 @@
-Parameter,Unit,Value,Comment
-E-UTRA RF Channel Number,,1,
-Channel Bandwidth (BWchannel),MHz,5 or 10,According to principle defined in clause A.3.12.3
-Active cell,,Cell 1,E-UTRA FDD Cell1 on RF channel number 1
-CP length of Cell 1,,Normal,
-T1,s,5.12,
-T2,s,"Up to receiving RRC reconfiguration setup complete from the UE, or up to [2] sec if UE does not transmit SidelinkUEInformation during this period.",
-T3,s,10.24,
-Note 1:This test is according to the principle defined in section A.3.12.3.,,,

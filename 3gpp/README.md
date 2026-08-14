@@ -17,7 +17,7 @@
 ├── sim/python/              # Python 仿真（CRC/GF(2) 等）
 ├── tools/                   # 审计与工具链（SVG 布局审计、术语/LaTeX/讲义审计、文档转换）
 ├── tests/                   # 单元测试
-├── 3GPP_Rel19/              # 协议原始资料与结构化抽取
+├── 3GPP_Rel19/              # 协议证据数据（可选 clone 自独立数据仓）
 ├── CLAUDE.md                # 会话硬性规则（SKILL 优先/DOXYGEN/SVG 验证/合规基线）
 ├── 合规与遵从.md            # 23 条 Hard Constraints
 ├── 项目规则与记忆索引.md     # 规则/写作规范/同步清单一处总览
@@ -67,7 +67,7 @@
 
 ## 外部素材
 
-- `3GPP_Rel19/`：Rel-19 协议原文与结构化抽取（讲义协议锚点的本地引用源）
+- `3GPP_Rel19/`：Rel-19 协议原文与结构化抽取（讲义协议锚点的本地引用源）。**本目录已拆分至独立数据仓** `gitee.com/aurorayaus/3gpp_docs`（GitHub 镜像 `AuroraYaus/3gpp_docs`），主仓不再跟踪；可选复原：`git clone https://gitee.com/aurorayaus/3gpp_docs.git 3gpp/3GPP_Rel19`。
 - `3GPP_FULL_LINK/`（仓库外 `/home/yys/AGENT/3GPP_FULL_LINK/`）：Qualcomm evaluation-link-simulator 代码 + 分析/深挖文档（概念/讲义的数值素材来源）
 
 ## 变更与同步

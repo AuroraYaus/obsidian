@@ -1,2 +1,0 @@
-DeactivatedSCG-Config field descriptions
-"bfd-and-RLMIf the field is set to true, the UE shall perform RLM and BFD on the PSCell when the SCG is deactivated and the network ensures that beamFailure-r17 is not configured in the radioLinkMonitoringConfig of the DL BWP of the PSCell in which the UE performs BFD. If set to false, the UE is not required to perform RLM and BFD on the PSCell when the SCG is deactivated."

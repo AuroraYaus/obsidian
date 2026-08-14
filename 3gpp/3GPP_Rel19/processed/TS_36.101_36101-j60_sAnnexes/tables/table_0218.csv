@@ -1,9 +1,0 @@
-Parameter,Unit,Value,,,,
-Reference channel,,R.18,R.19,R.19-1,R.20,R.24
-Number of transmitter antennas,,1,2,2,4,1
-Channel bandwidth,MHz,10,10,5,5,10
-User roles (Note 1),,W I1 I2,W I1 I2,W I1 I2,W I1 I2,W I1
-Resource allocation (Note 2),,"(0,0) (0,1) (0,4)","(0,0) (0,1) (0,4)","(0,0) (0,1) (0,4)","(0,0) (0,1) (0,4)","(0,0) (0,1)"
-Power offsets (Note 3),dB,-4 0 -3,-4 0 -3,-4 0 -3,-4 0 -3,+3 0
-Payload (Note 4),,A R R,A R R,A R R,A R R,A R
-"Note 1:W=wanted user, I1=interfering user 1, I2=interfering user 2.Note 2:The resource allocation per user is given as (N_group_PHICH, N_seq_PHICH).Note 3:The power offsets (per user) represent the difference of the power of BPSK modulated symbol per PHICH relative to the first interfering user.Note 4:A=fixed ACK, R=random ACK/NACK.",,,,,,

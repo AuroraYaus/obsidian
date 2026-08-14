@@ -1,6 +1,0 @@
-PDCP-Config-NB field descriptions
-"cipheringDisabledIf included, ciphering is disabled for this DRB regardless of which ciphering algorithm is configured for the SRB/DRBs. E-UTRAN may include this field only when the UE is connected to 5GC. The value for this field cannot be changed after the DRB is set up."
-"discardTimerIndicates the discard timer value specified in TS 36.323 [8]. Value in milliseconds. Value ms5120 means 5120 ms, ms10240 means 10240 ms and so on."
-headerCompressionE-UTRAN does not reconfigure header compression except optionally upon RRC Connection Resumption.
-maxCIDIndicates the value of the MAX_CID parameter as specified in TS 36.323 [8]. The total value of MAX_CIDs across all bearers for the UE should be less than or equal to the value of maxNumberROHC-ContextSessions parameter as indicated by the UE.
-"profilesThe profiles used by both compressor and decompressor in both UE and E-UTRAN. The field indicates which of the ROHC profiles specified in TS 36.323 [8] are supported, i.e. value true indicates that the profile is supported. Profile 0x0000 shall always be supported when the use of ROHC is configured. If support of two ROHC profile identifiers with the same 8 LSB's is signalled, only the profile corresponding to the highest value shall be applied."

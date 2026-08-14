@@ -1,9 +1,0 @@
-UL/DL configuration,Minimum number of transmitted ACK/NACKs
-0 (Note 1),18
-1,35
-2,43
-3,36
-4,39
-5,42
-6,30
-Note 1:When a UE is configured with EIMTA-MainConfigServCell via RRC signalling [2] only this requirement shall apply.,

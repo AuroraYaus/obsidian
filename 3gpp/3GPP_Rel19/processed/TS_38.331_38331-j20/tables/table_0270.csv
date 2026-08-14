@@ -1,3 +1,0 @@
-Conditional Presence,Explanation
-InterFreqHOAndServCellAdd,"This field is mandatory present for inter-frequency handover, and upon serving cell (PSCell/SCell) addition. Otherwise, the field is optionally present, Need M."
-ServCellAdd,"This field is mandatory present upon serving cell addition (for PSCell and SCell) and upon handover from E-UTRA to NR. It is optionally present, Need M otherwise."

@@ -1,6 +1,0 @@
-RSRP-Range field descriptions
-"RSRP-RangeFor UE supporting CE Mode B, when CE mode B is not restricted by upper layers, RSRP-Range-v1360 (i.e., with suffix) is reported if the measured RSRP is less than -140 dBm."
-"RSRP-RangeSLValue 0 corresponds to -infinity, value 1 to -115dBm, value 2 to -110dBm, and so on (i.e. in steps of 5dBm) until value 12, which corresponds to -60dBm, while value 13 corresponds to +infinity."
-"RSRP-RangeSL2Value 0 corresponds to -infinity, value 1 to -110dBm, value 2 to -100dBm, and so on (i.e. in steps of 10dBm) until value 6, which corresponds to -60dBm, while value 7 corresponds to +infinity."
-"RSRP-RangeSL3Value 0 corresponds to -110dBm, value 1 to -105dBm, value 2 to -100dBm, and so on (i.e. in steps of 5dBm) until value 10, which corresponds to -60dBm, while value 11 corresponds to +infinity."
-"RSRP-RangeSL4Indicates the range for SD-RSRP. Value 0 corresponds to -130dBm, value 1 to -128dBm, value 2 to -126dBm, and so on (i.e. in steps of 2dBm) until value 48, which corresponds to -34dBm, while value 49 corresponds to +infinity."

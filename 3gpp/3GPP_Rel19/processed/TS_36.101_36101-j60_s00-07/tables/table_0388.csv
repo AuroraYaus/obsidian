@@ -1,7 +1,0 @@
-Rx Parameter,Units,V2X Bandwidth Class,,,,,
-,,A,B,C/C1,D,E,F
-Power in largest Transmission Bandwidth Configuration CC,dBm,,-222,-222,,,
-,,,-233,-233,,,
-Power in each other CC,dBm,,"-22+ 10log(NRB,c /NRB,largest BW) 2","-222+ 10log(NRB,c /NRB,largest BW) 2",,,
-,,,"-23+ 10log(NRB,c /NRB,largest BW) 3","-23+ 10log(NRB,c /NRB,largest BW) 3",,,
-NOTE 1:VoidNOTE 2:The requirement is applied for multi-carrier intra-band concurrent receptions when 2 carrier transmissions are activated at the same time.NOTE 3:This requirement is applicable for 64QAM.,,,,,,,

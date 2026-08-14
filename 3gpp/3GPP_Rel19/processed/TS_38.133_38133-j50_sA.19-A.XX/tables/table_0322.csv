@@ -1,6 +1,0 @@
-Configuration,Description
-1,"GSO, NR FDD, 15 kHz SSB SCS, 10 MHz BW"
-2,"NGSO, NR FDD, 15 kHz SSB SCS, 10 MHz BW"
-3,"GSO, NR HD-FDD, 15 kHz SSB SCS, 10 MHz BW"
-4,"NGSO, NR HD-FDD, 15 kHz SSB SCS, 10 MHz BW"
-"NOTE 1:If (e)RedCap UE supports both NGSO and GSO, the GSO-based test cases can be skipped if the UE passes NGSO-based test cases.NOTE 2:If (e)RedCap UE supports both FDD and HD-FDD operation, the UE is only required to be tested in one of both.",

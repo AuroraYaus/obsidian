@@ -1,5 +1,0 @@
-NR CA Band,MPR,Value (dB),Condition
-CA_n257A-n259A,MPR1,"Max(0, 6 - 10*log10(Max(1.0, LRB,min*12*SCS/1e6)))","LRB,min = Min (LRB,n257 , LRB,n259 ), where LRB,n is the number of non-zero power UL RBs in band ‘n’"
-,MPR2,0.0,-
-CA_n260A-n261A,MPR1,"Max(0, 6 - 10*log10(Max(1.0, LRB,min*12*SCS/1e6)))","LRB,min = Min (LRB,n260 , LRB,n261 ), where LRB,n is the number of non-zero power UL RBs in band ‘n’"
-,MPR2,"2.0 if condition satisfied, 0.0 otherwise",47.2 GHz <= 2*fn260 - fn261 <= 48.2 GHzWhere fn is any frequency inside the UL allocation in band ‘n’

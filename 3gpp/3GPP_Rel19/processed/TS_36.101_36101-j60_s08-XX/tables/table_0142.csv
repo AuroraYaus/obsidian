@@ -1,7 +1,0 @@
-Parameter,,Unit,Value
-Downlink power allocation,,dB,-3
-,,dB,-3 (NOTE 1)
-,,dB,0
-at antenna port,,dBm/15kHz,-98
-PDSCH transmission mode,,,3
-"NOTE 1:.NOTE 2:PUCCH format 1b with channel selection is used to feedback ACK/NACK for Tests in Table 8.2.1.3.1-4, PUCCH format 3 is used to feedback ACK/NACK for Tests in Table 8.2.1.3.1-6.NOTE 3:The same PDSCH transmission mode is applied to each component carrier.",,,

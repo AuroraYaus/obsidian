@@ -1,8 +1,0 @@
-RNTI,PDCCH search space,pusch-ConfigCommon includes pusch-TimeDomainAllocationList,pusch-Config includes pusch-TimeDomainAllocationList,PUSCH time domain resource allocation to apply
-"PUSCH scheduled by MAC RAR as described in clause 8.2 of [6, TS 38.213] or MAC fallbackRAR as described in clause 8.2A of [6, 38.213] or for MsgA PUSCH transmission",,No,-,Default A
-,,Yes,,pusch-TimeDomainAllocationList provided in pusch-ConfigCommon
-"C-RNTI, MCS-C-RNTI, TC-RNTI, CS-RNTI",Any common search space associated with CORESET 0,No,-,Default A
-,,Yes,,pusch-TimeDomainAllocationList provided in pusch-ConfigCommon
-"C-RNTI, MCS-C-RNTI, TC-RNTI, CS-RNTI","Any common search space not associated with CORESET 0,DCI format 0_0 inUE specific search space",No,No,Default A
-,,Yes,No,pusch-TimeDomainAllocationList provided in pusch-ConfigCommon
-,,No/Yes,Yes,pusch-TimeDomainAllocationList provided in pusch-Config

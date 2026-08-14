@@ -1,5 +1,0 @@
-Uu-RelayRLC-ChannelConfig field descriptions
-uu-LogicalChannelIdentityIndicates the logical channel id for Uu Relay RLC channel of the L2 U2N Relay UE or of the L2 Last U2N Relay UE.
-uu-RelayRLC-ChannelIDIndicates the Uu Relay RLC channel in the link between L2 U2N Relay UE and network or between L2 Last U2N Relay UE and network.
-reestablishRLCIndicates that RLC should be re-established.
-"rlc-ConfigDetermines the RLC mode (UM, AM) and provides corresponding parameters."

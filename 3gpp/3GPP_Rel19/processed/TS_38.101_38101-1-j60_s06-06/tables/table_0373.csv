@@ -1,4 +1,0 @@
-Channel bandwidth,(MHz),"3,5,7,10,15,20,25,30,35,40,45,50","60,70,80,90,100"
-REF_SCS,(kHz),15,30
-NR ACLR measurement bandwidth,(MHz),MBW=REF_SCS*(12*NRB+1)/1000,
-NOTE :“NRB” in the formula is the maximum transmission bandwidth configuration as defined in Table 5.3.2-1.,,,

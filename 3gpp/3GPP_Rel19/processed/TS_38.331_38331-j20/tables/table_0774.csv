@@ -1,4 +1,0 @@
-SL-PTRS-Config field descriptions
-"sl-PTRS-FreqDensityPresence and frequency density of SL PT-RS  as a function of scheduled BW. If the field is not configured, the UE uses K_PT-RS = 2"
-"sl-PTRS-TimeDensityPresence and time density of SL PT-RS  as a function of MCS. If the field is not configured, the UE uses L_PT-RS = 1"
-"sl-PTRS-RE-OffsetIndicates the subcarrier offset for SL PT-RS . If the field is not configured, the UE applies the value offset00 (see TS 38.211 [16], clause 8.4.1.2.2)."

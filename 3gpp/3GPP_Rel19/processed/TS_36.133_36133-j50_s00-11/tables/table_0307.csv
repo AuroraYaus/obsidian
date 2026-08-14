@@ -1,7 +1,0 @@
-DRX cycle length (s),"Tidentify, UTRA_TDD (s) (DRX cycles)",,"Tidentify, UTRA_TDD (s) (DRX cycles)","Tidentify, UTRA_TDD (s) (DRX cycles)"
-,Gap period = 40 ms,Gap period = 80 ms,Gap period = 40 ms,Gap period = 80 ms
-≤0.16,Non DRX Requirements in clause 8.1.2.4.3.1 are applicable,Non DRX Requirements in clause 8.1.2.4.3.1 are applicable,Non DRX Requirements in clause 8.1.2.4.3.1 are applicable,Non DRX Requirements in clause 8.1.2.4.3.1 are applicable
-0.16<DRX cycle≤0.256,"Note (25*Kn* Nfreq,n)","Note (50*Kn * Nfreq,n)","Note (25*Kr* Nfreq,r)","Note (50*Kr * Nfreq,r)"
-0.256<DRX cycle≤0.32,"Note (25*Kn * Nfreq,n)","Note (45*Kn * Nfreq,n)","Note (25*Kr * Nfreq,r)","Note (45*Kr * Nfreq,r)"
-0.32<DRX cycle≤2.56,"Note (25*Kn * Nfreq,n)","Note (25*Kn * Nfreq,n)","Note (25*Kr * Nfreq,r)","Note (25*Kr * Nfreq,r)"
-Note: Time depends upon the DRX cycle in use,,,,

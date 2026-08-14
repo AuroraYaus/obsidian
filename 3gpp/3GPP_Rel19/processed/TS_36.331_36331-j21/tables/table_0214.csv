@@ -1,3 +1,0 @@
-PhysCellIdRangeUTRA-FDDList field descriptions
-"rangeIndicates the number of primary scrambling codes in the range (including start). The UE shall apply value 1 in case the field is absent, in which case only the primary scrambling code value indicated by start applies."
-startIndicates the lowest primary scrambling code in the range.

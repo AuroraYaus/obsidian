@@ -1,5 +1,0 @@
-Rx parameter,Units,Channel bandwidth,,,,,
-,,1.4 MHz,3 MHz,5 MHz,10 MHz,15 MHz,20 MHz
-Power in Transmission Bandwidth Configuration,dBm,REFSENS + channel bandwidth specific value below,,,,,
-,,6,6,6,6,7,9
-"NOTE 1:The transmitter shall be set to 4dB below PCMAX_L at the minimum uplink configuration specified in Table 7.3.1-2.N OTE 2:Reference measurement channel is specified in Annex A.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD as described in Annex A.5.1.1/A.5.2.1.NOTE 3:The REFSENS power level is specified in Table 7.3.1-1 and Table 7.3.1-1a for two and four antenna ports, respectively.",,,,,,,

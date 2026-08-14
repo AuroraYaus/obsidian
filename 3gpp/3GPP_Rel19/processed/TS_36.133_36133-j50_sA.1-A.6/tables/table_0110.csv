@@ -1,8 +1,0 @@
-Configuration,,,PCP.1.FDD
-Channel BW,,MHz,5 or 10
-Number of Active Sidelink UEs per sc-period,,,5 MHz: 1210 MHz: 16
-Active Sidelink UEs,PSCCH RMC(defined in A.3.12.7),,5 MHz: CC.1 FDD10 MHz: CC.2 FDD
-,PSCCH resource allocation,,"5MHz: [2i:2i], for Sidelink UE i=0,..,1110MHz:[3i:3i], for Sidelink UE i = 0, .., 15"
-,PSSCH RMC(defined in A.3.12.7),,5 MHz: CD.1 FDD10 MHz: CD.2 FDD
-,PSSCH resource allocation,,"Non-overlapping RBs5MHz: [2i:2i+1], for Sidelink UE i = 0, .., 1110MHz:[3i:3i+2], for Sidelink UE i = 0, .., 15"
-,RSRP,dBm/15kHz,-98

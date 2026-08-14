@@ -1,4 +1,0 @@
-UL channel,Aggregate power tolerance,
-,15 kHz / 12 tones within 81 ms,15 kHz / 1 tone within 177 ms
-NPUSCH,±3.5 dB,
-NOTE:For five consecutive UE transmissions the transmission gaps are 19 ms for 12 tone and 23 ms for single tone transmissions. Uplink scheduling grant is transmitted via NPDCCH eight subframes before NPUSCH transmission.,,

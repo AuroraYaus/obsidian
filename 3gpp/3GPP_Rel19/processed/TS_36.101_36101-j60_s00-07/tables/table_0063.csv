@@ -1,2 +1,0 @@
-MPR to meet -13dBm/MHz:MPR = 9; 0 ≤ B < 0.548.5; 0.54 ≤ B < 1.088; 1.08 ≤ B < 2.167; 2.16 ≤ B < 3.246; 3.24 ≤ B < 5.45; 5.4 ≤ B,MPR to meet -30dBm/MHz:MPR = 15; 0 ≤ B < 1.0814; 1.08 ≤ B < 2.16           13; 2.16 ≤ B < 3.24                 12;      3.24 ≤ B < 5                 11; 5 ≤ B < 1010; 10 ≤ B < 16.4 9;        16.4 ≤ B < 21.8                  8;        21.8 ≤ B
-"B=( LCRB1* 12* SCS1 + LCRB2* 12 * SCS2)/1,000,000LCRB1, SCS1 are for CC1, LCRB2, SCS2 are for CC2. CC1 is the component carrier with lower frequency.",

@@ -1,3 +1,0 @@
-ResourceConfigNRDC field descriptions
-"fr1-ResourceConfig, fr2-ResourceConfigIndicates the maximum number of resources that SCG is allowed to configure for FR1/FR2, respectively."
-maxNumberResAcrossCC-AcrossFRIndicates the maximum number of configured CSI-RS resources. Corresponds to the UE capability maxNumberResAcrossCC-AcrossFR-r16 in maxTotalResourcesForAcrossFreqRanges-r16.

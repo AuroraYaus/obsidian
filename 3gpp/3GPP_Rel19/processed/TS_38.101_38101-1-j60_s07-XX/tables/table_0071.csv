@@ -1,4 +1,0 @@
-Aggressor band,Victim band,Aggressor band Fc,Aggressor band BW,SCS of Aggressor band,Aggressor band RB Allocation,Victim band Fc,Victim band BW,MSD
-,,(MHz),(MHz),(kHz),LCRB,(MHz),(MHz),(dB)
-n79,n47,4980,40,15,216(RBstart=0),5860,10,3.3
-n47,n79,5860,10,15,50 (RBstart=0),4980,40,3.3

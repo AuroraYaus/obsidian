@@ -1,6 +1,0 @@
-EarlyCSI-Acquisition field descriptions
-early-NZP-CSI-RS-ResourceSetIndicates the resource set for measurement based on periodic CSI-RS. This is used in early CSI acquisition for the reconfiguration with sync.
-early-CSI-IM-ResourceSetIndicates the resource set for interference measurements. This is used in early CSI acquisition for the reconfiguration with sync.
-earlyCSI-ReportQuantityThis field indicates the CSI related quantities for early CSI report.
-earlyCSI-CQI-TableThis field indicates the cqi-Table for early CSI report.
-earlyCSI-CodeBookConfigThis field indicates the CodeBook configuration for early CSI report. Network can only set codebookType to typeI-SinglePanel in earlyCSI-Acquisition.

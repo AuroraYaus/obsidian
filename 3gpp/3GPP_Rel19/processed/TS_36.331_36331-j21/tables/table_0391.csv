@@ -1,4 +1,0 @@
-Conditional presence,Explanation
-InBand,"The field is mandatory present if carrier is inband; otherwise, the field is not present and the UE shall delete any existing value for this field."
-interleaved,"The field is optionally present, Need OR, if multiTB-Config is set to interleaved; otherwise the field is not present and the UE shall delete any existing value for this field."
-twoHARQ,"The field is optionally present, Need OR, if twoHARQ-ProcessesConfig is configured; otherwise the field is not present and the UE shall delete any existing value for this field."

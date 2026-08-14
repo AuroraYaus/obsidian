@@ -1,2 +1,0 @@
-MeasObjectNR-SL field descriptions
-"sl-FrequencyIndicates the sidelink frequency associated to this MeasObjectNR-SL. The value 1 corresponds to the frequency of first entry in sl-FreqInfoList broadcast in SIB12, the value 2 corresponds to the frequency of first entry in sl-FreqInfoListSizeExt broadcast in SIB12, the value 3 corresponds to the frequency of second entry in sl-FreqInfoListSizeExt broadcast in SIB12 and so on."

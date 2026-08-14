@@ -1,6 +1,0 @@
-Configuration,Description
-1,"15 kHz SSB SCS, cell bandwidth 50 Hz, FDD duplex mode"
-2,"15 kHz SSB SCS, cell bandwidth 50 Hz, TDD duplex mode"
-3,"30 kHz SSB SCS, cell bandwidth 100 Hz, TDD duplex mode"
-4,"15 kHz SSB SCS, cell bandwidth 50 Hz, HD-FDD duplex mode"
-NOTE 1:The UE is only required to be tested in one of the supported test configurations.NOTE 2: UE with 1 Rx or 2 Rx is required to meet the same requirements specified in this clause.NOTE 3:   This test case is applicable to the UE supporting per hop bandwidth ≥ 10 MHz for SCS 15 kHz. NOTE 4:   This test case is applicable to the UE supporting per hop bandwidth = 20 MHz for SCS 30 kHz.,

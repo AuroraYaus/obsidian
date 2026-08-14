@@ -1,6 +1,0 @@
-SL-CBR-CommonTxDedicatedSL-PRS-RP-List field descriptions
-"sl-CBR-RangeDedicatedSL-PRS-RP-ListIndicates the list of CBR ranges. Each entry of the list in SL-CBR-LevelsDedicatedSL-PRS-RP indicates the upper bound of the CBR range for the respective entry. The upper bounds of the CBR ranges are configured in ascending order for consecutive entries of SL-CBR-LevelsDedicatedSL-PRS-RP. For the first entry of SL-CBR-LevelsDedicatedSL-PRS-RP the lower bound of the CBR range is 0. Value 0 corresponds to 0, value 1 to 0.01, value 2 to 0.02, and so on."
-sl-CBR-SL-PRS-TxConfigListIndicates the list of available SL PRS transmission parameters configurations.
-"sl-PRS-CR-LimitIndicates the maximum limit on the occupancy ratio. Value 0 corresponds to 0, value 1 to 0.0001, value 2 to 0.0002, and so on (i.e. in steps of 0.0001) until value 10000, which corresponds to 1."
-sl-PRS-MaxNumTransmissionsIndicates the maximum number of SL PRS (re-)transmissions.
-sl-PRS-MaxTx-powerIndicates the maximum SL PRS transmission power. The unit is dBm.

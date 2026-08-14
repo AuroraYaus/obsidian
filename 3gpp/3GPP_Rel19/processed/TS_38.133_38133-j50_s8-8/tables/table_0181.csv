@@ -1,4 +1,0 @@
-Configuration,TEvaluateC_CBD_CSI-RS (ms),
-"non-DRX, DRX cycle ≤ 320 ms","Max(25, Ceil((MCBD+L1)  P  PCBD)  max(TCSI-RS, Tproc))",
-DRX cycle > 320 ms,Ceil((MCBD+L1)  P  PCBD)  TDRX,
-"NOTE 1:TCSI-RS is the periodicity of CSI-RS resource in the set . TDRX is the DRX cycle length.NOTE 2:If UE indicates ‘full’ or ‘partial’ for timeline-r19 in sbfd-Aware-r19 and the CSI-RS resource for CBD is across 2 DL subbands, Tproc = 8ms; otherwise Tproc = 0.",,

@@ -1,7 +1,0 @@
-Parameter,,Unit,Value,Comment
-,,,Test 4,
-PCFICH/PDCCH/PHICH parameters,,,R.12 FDD,As specified in clause A.3.1.2.1.None of the PDCCH are intended for the UE under test
-OCNG parameters,,,OP.16 FDD,As specified in clause A.3.2.1.16.
-E-UTRA Channel Bandwidth (BWchannel),,MHz,5,
-Out of sync transmission parameters (Note 1),Number of Control OFDM Symbols,,3,Out of sync threshold Qout and the corresponding hypothetical PDCCH/PCFICH transmission parameters are as specified in clause 7.6.1 and Table 7.6.1-1 respectively.
-Note 1: PDCCH/PCFICH corresponding to the out of sync transmission parameters need not be included in the Reference Measurement Channel.Note 2:See Table A.7.3.1.1-1 for other general test parameters.Note 3:This test is according to the principle defined in section A.3.7.2.,,,,

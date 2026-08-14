@@ -1,8 +1,0 @@
-Clause,Test case slogan
-A.14.2.1.x,Intra-frequency SAN time-based conditional Handover from FR1 to FR1 for UE operating on a cell with less than 5 MHz BW
-A.14.2.2.x,RACH-based hard Satellite switching with re-synchronization from FR1 to FR1 for less than 5MHz with NTN
-A.14.4.1.x,Radio Link Monitoring Out-of-sync Test for FR1 SAN PCell configured with SSB-based RLM RS in non-DRX mode
-A.14.4.2.x,Beam Failure Detection and Link Recovery Test for FR1 PCell for satellite access configured with SSB-based BFD and LR in non-DRX mode for a UE operating on a cell with less than 5 MHz BW
-A.14.2.2.x,Location-based Cell reselection to FR1 inter-frequency NR satellite access case
-A.14.5.,SA event triggered reporting tests for FR1 with SSB time index detection when DRX is used with single gap for 3 MHz channel bandwidth in satellite access
-A.14.1.x,Cell reselection to FR1 intra-frequency NR case for UE operating on a cell with less than 5 MHz BW

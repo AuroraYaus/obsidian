@@ -1,5 +1,0 @@
-PDSCH-ConfigCommon includes pdsch-TimeDomainAllocationList,PDSCH-Config includes pdsch-TimeDomainAllocationList,PDSCH-Config includes pdsch- TimeDomainAllocationListDCI-1-2,PDSCH time domain resource allocation to apply
-No,No,No,Default A
-Yes,No,No,pdsch-TimeDomainAllocationList provided in PDSCH-ConfigCommon
-No/Yes,Yes,No,pdsch-TimeDomainAllocationList provided in PDSCH-Config
-No/Yes,No/Yes,Yes,pdsch-TimeDomainAllocationListDCI-1-2 provided in PDSCH-Config

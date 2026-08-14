@@ -1,9 +1,0 @@
-Duplex,Table,Name,BW,Mod,TCR,RB,RBOffset,UE Categ,Notes
-FDD,,,,,,,,,
-FDD,Table A.3.16.1-1,R.sTTI.1 FDD,10,16QAM,1/2,50,,≥2,Slot-PDSCH
-FDD,Table A.3.16.1-2,R.sTTI.2 FDD,10,16QAM,0.45,50,,≥2,Subslot-PDSCH
-FDD,Table A.3.16.1-3,R.sTTI.3 FDD,10,QPSK,1/3,50,,≥2,Slot-PDSCH
-FDD,Table A.3.16.1-4,R.sTTI.4 FDD,10,QPSK,1/3,50,,≥2,Subslot-PDSCH
-TDD,,,,,,,,,
-TDD,Table A.3.16.2-1,R.sTTI.1 TDD,10,16QAM,1/2,50,,≥2,Slot-PDSCH
-TDD,Table A.3.16.2-1,R.sTTI.2 TDD,10,QPSK,1/3,50,,≥2,Slot-PDSCH

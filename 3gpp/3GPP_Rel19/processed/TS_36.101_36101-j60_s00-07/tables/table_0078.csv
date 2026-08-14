@@ -1,5 +1,0 @@
-Parameters,Region A,,Region B,,Region C
-RBstart,0 - 12,,13 – 18,19 – 42,43 – 49
-LCRB [RBs],6-8,1 to 5 and 9-50,≥8,≥18,≤2
-A-MPR [dB],≤ 8,≤ 12,≤ 12,≤ 6,≤ 3
-"NOTE 1;RBstart indicates the lowest RB index of transmitted resource blocksNOTE 2;LCRB is the length of a contiguous resource block allocationNOTE 3:For intra-subframe frequency hopping between two regions, notes 1 and 2 apply on a per slot basis. For intra-slot or intra-subslot frequency hopping between two regions, notes 1 and 2 apply on a per Tno_hopping basis.NOTE 4;For intra-subframe frequency hopping between two regions, the larger A-MPR value of the two regions may be applied for both slots in the subframe. For intra-slot frequency hopping between two regions, the larger A-MPR value of the two regions may be applied for the slot. For intra-subslot frequency hopping between two regions, the larger A-MPR value of the two regions may be applied for the subslot.",,,,,

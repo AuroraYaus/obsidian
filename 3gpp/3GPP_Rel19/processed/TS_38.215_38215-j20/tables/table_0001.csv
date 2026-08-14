@@ -1,3 +1,0 @@
-Column field,Comment
-Definition,Contains the definition of the measurement.
-Applicable for,States in which state(s) it shall be possible to perform this measurement. The following terms are used in the tables:RRC_IDLE;RRC_INACTIVE;RRC_CONNECTED;Intra-frequency appended to the RRC state: Shall be possible to perform in the corresponding RRC state on an intra-frequency cell;Inter-frequency appended to the RRC state:Shall be possible to perform in the corresponding RRC state on an inter-frequency cellInter-RAT appended to the RRC state:Shall be possible to perform in the corresponding RRC state on an inter-RAT cell.If sidelink: it shall be possible to perform this measurement on sidelink.

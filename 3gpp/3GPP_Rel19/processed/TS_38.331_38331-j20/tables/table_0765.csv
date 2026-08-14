@@ -1,8 +1,0 @@
-SL-EventTriggerConfig field descriptions
-sl-EventIdChoice of sidelink measurement event triggered reporting criteria.
-sl-ReportAmountNumber of sidelink measurement reports applicable for sl-EventTriggered report type.
-"sl-ReportIntervalIndicates the interval between periodical reports (i.e., when sl-ReportAmount exceeds 1) for sl-EventTriggered report type."
-"sl-ReportOnLeaveindicates whether or not the UE shall initiate the sidelink measurement reporting procedure when the leaving condition is met for a frequency in sl-FrequencyTriggeredList, as specified in 5.8.10.4.1."
-sl-ReportQuantityThe sidelink measurement quantities to be included in the sidelink measurement report.
-sl-TimeToTriggerTime during which specific criteria for the event needs to be met in order to trigger a sidelink measurement report.
-"sN-ThresholdThreshold used for events S1 and S2 specified in clauses 5.8.10.4.2 and 5.8.10.4.3, respectively."

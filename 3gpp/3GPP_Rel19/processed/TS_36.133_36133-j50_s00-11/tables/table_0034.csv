@@ -1,8 +1,0 @@
-eDRX_IDLE cycle length [s],DRX cycle length [s],PTW length [s] (number of 1.28s periods),"Tdetect,NR_RedCap [s] (number of DRX cycles)","Tmeasure,NR_RedCap [s] (number of DRX cycles)","Tevaluate,NR_RedCap [s] (number of DRX cycles)"
-,,,,,
-5.12,-,-,117.76 (23),5.12 (1),10.24 (2)
-10.24  ≤  eDRX_IDLE cycle length ≤2621.44,0.32,≥1.28 (1),(23)eDRX_cycle_length×23PTW/DRX_cycle_length,0.32 x M2 (1 x M2),0.64 x M2 (2 x M2)
-,0.64,≥1.28 (1),,0.64 (1),1.28 (2)
-,1.28,≥2.56 (2),,1.28 (1),2.56 (2)
-,2.56,≥5.12 (4),,2.56 (1),5.12 (2)
-"NOTE 1:The number of DRX cycles in this table is given for the DRX cycles within PTWs.NOTE 2:The eDRX_IDLE cycle lengths are as specified in Section 10.5.5.32 of TS 24.008 [34].NOTE 3:Number of eDRX cycles when eDRX_IDLE cycle length equals, 5.12s. Otherwise, number of DRX cycles.NOTE 4:M2 = 1.5 if SMTC periodicity of measured Inter-RAT NR cell > 20 ms; otherwise M2=1. If different SMTC periodicities are configured for different cells, the SMTC periodicity in this note is the one used by the cell being identified. During PSS/SSS detection, the periodicity of the SMTC configured for the Inter-RAT NR carrier is assumed, and if the actual SSB transmission periodicity is greater than the SMTC configured for the Inter-RAT NR carrier, longer Tdetect, NR_intra is expected.",,,,,

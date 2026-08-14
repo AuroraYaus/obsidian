@@ -1,3 +1,0 @@
-LBT-FailureRecoveryConfig field descriptions
-"lbt-FailureDetectionTimerTimer for consistent uplink LBT failure detection (see TS 38.321 [3]). Value ms10 corresponds to 10 ms, value ms20 corresponds to 20 ms, and so on."
-"lbt-FailureInstanceMaxCountThis field determines after how many LBT failure indications received from the physical layer the UE triggers uplink LBT failure recovery (see TS 38.321 [3]). Value n4 corresponds to 4, value n8 corresponds to 8, and so on."

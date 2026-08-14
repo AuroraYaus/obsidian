@@ -1,5 +1,0 @@
-Configuration,Description
-1,"GSO, NR FDD, SSB SCS 15 kHz, data SCS 15 kHz, BW 10 MHz"
-2,void
-3,"NGSO with varying Doppler and delay shift NTN channel model, NR FDD, SSB SCS 15 kHz, data SCS 15 kHz, BW 10 MHz"
-"NOTE:If UE supports both NGSO and GSO, the test case Config 1 can be skipped if the UE passes test case Config 3.",

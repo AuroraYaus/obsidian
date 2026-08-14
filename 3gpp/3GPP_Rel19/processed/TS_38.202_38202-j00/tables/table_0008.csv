@@ -1,9 +1,0 @@
-Supported Combinations,Comment
-A,
-B,"Note 1, Note 2"
-C,"Note 1, Note 2"
-E,"Note 3, Note 5"
-EM1×,Note 4
-DM×,Note 2
-B+C,"Note 1, Note 2"
-"Note 1:Corresponds to simultaneous reception within one sub-channelNote 2:Depending on the UE capability, the UE may be able to perform simultaneous sidelink communication receptions of the same sidelink “Reception Type” combinations across multiple SL carriers.Note 3:Applicable for a shared SL PRS resource pool. Corresponds to simultaneous reception within one sub-channel.Note 4:Applicable for a dedicated SL PRS resource pool with M1≥1. Corresponds to simultaneous reception within one dedicated SL PRS resource pool.Note 5:For a shared SL PRS resource pool, depending on the UE capability, the reception(s) of SL-PRS in a single SL carrier can be simultaneously received with PSSCH in other one or more SL carrier(s).",

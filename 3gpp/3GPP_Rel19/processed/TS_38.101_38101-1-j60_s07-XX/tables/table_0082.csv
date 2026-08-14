@@ -1,5 +1,0 @@
-UL band,DL band,UL Fc,UL BW,SCS of UL band,UL RB Allocation,DL Fc,DL BW,MSD,Cross-bandInterferencesource
-,,(MHz),(MHz),(kHz),LCRB,(MHz),(MHz),(dB),
-n39,n3,1900,30,15,160 (RBstart=0),1817.5,25,A11,>ACLR2
-n3,n39,1722.5,25,15,50 (RBstart=83),1900,30,A22,>ACLR2
-NOTE1:MSD is A1 value corresponding to UL output power in Table 7.3J.2A.4-1a.NOTE2:MSD is A2 value corresponding to UL output power in Table 7.3J.2A.4-1a.NOTE3:MSD only applies for ATG UE targeted for CPE form factor.,,,,,,,,,

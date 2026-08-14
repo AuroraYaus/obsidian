@@ -1,5 +1,0 @@
-CandidateTCI-State field descriptions
-pathlossReferenceRS-IdIndicates a PathlossReferenceRS of the candidate that includes this CandidateTCI-State and it refers to one of the PathlossReferenceRS configured within LTM-TCI-Info. In this version of the specification only SSB can be included as reference signal when PathlossReferenceRS is included within a CandidateTCI-State IE.
-"qcl-Type1, qcl-Type2QCL information for the TCI state."
-tci-StateIdThe ID number of the TCI state.
-"ul-PowerControlIndicates the UL power control parameters for PUSCH, PUCCH, and SRS of the candidate that includes this CandidateTCI-State. This field refers to an element in the list configured using uplink-PowerControlToAddModList in the SpCellConfig of the ltm-CandidateConfig in the LTM-Candidate where the ltm-TCI-Info is configured."

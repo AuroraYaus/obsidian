@@ -1,3 +1,0 @@
-BS channel bandwidth (MHz),Wanted signal mean power (dBm),Interfering signal mean power (dBm)
-"3, 5, 7, 10, 15, 20, 25, 30, 35, 40, 45, 50",PREFSENS + x dB (Note 2),Wide Area: -49Medium Range: -44Local Area: -41
-"NOTE 1:PREFSENS depends on the sub-carrier spacing as specified in tables 7.2.1-5, 7.2.1-5a and 7.2.1-5c of TS 36.104 [13]. NOTE 2: “x” is equal to 11 in case of 3 MHz channel bandwidth, equal to 8 in case of 5 MHz channel bandwidth and equal to 6 otherwise.",,

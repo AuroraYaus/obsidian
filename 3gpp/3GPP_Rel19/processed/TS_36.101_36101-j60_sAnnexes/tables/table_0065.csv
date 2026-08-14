@@ -1,8 +1,0 @@
-Parameter,Unit,Value
-DCI format,,DCI format N0
-NPDCCH format,,1
-Scheduling delay (),,0
-DCI subframe repetition number,,00
-(npdcch-NumRepetitions),,1
-G(NPDCCH-startSF-USS),,8
-(npdcch-Offset-USS),,1/4

@@ -1,2 +1,0 @@
-FreqPriorityListSlicing field descriptions
-"dl-ImplicitCarrierFreqIndicates the downlink carrier frequency to which sliceInfoList is associated with. The frequency is signalled implicitly, value 0 corresponds to the serving frequency, value 1 corresponds to the first frequency indicated by the InterFreqCarrierFreqList in SIB4, and value 2 corresponds to the second frequency indicated by the InterFreqCarrierFreqList in SIB4, and so on."

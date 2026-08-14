@@ -1,6 +1,0 @@
-NR CA Configuration,Class 1 (dBm),Tolerance (dB),Class 2 (dBm),Tolerance (dB),Class 3 (dBm),Tolerance (dB),Class 5 (dBm),Tolerance (dB)
-CA_n96B,,,,,,,20,+2/-3
-CA_n96C,,,,,,,20,+2/-3
-CA_n102B,,,,,,,20,+2/-3
-CA_n102C,,,,,,,20,+2/-3
-NOTE 1:PPowerClass is the maximum UE power specified without taking into account the tolerance.NOTE 2:Power class 5 is default power class unless otherwise stated.,,,,,,,,

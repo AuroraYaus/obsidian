@@ -1,4 +1,0 @@
-Conditional Presence,Explanation
-2TA,"This field is optionally present, Need R, if tag2 is present in the SpCellConfig in ltm-CandidateConfig. It is absent otherwise."
-L139,"The field is mandatory present if prach-RootSequenceIndex L=139, otherwise the field is absent, Need S."
-TDD,"This field is optionally present, Need R, for TDD LTM candidate cells. It is absent otherwise."

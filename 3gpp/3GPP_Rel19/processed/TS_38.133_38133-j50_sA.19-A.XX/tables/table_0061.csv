@@ -1,5 +1,0 @@
-Configuration,Description
-1,"FDD duplex mode, 15 kHz SSB SCS, 10 MHz bandwidth"
-2,"TDD duplex mode, 15 kHz SSB SCS, 10 MHz bandwidth"
-3,"TDD duplex mode, 30 kHz SSB SCS, 40 MHz bandwidth"
-NOTE 1:The UE is only required to pass in one of the supported test configurations in FR1NOTE 2:The UE is only required to be tested in one with smallest aggregated channel bandwidth from supported band combinations which is composed of CCs ≥ the bandwidth (BWchannel) defined in each test configuration.NOTE 3:Test configuration for NR PCell and test configuration for NR SCell shall be chosen independently.,

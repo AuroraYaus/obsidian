@@ -1,5 +1,0 @@
-BH-RLC-ChannelConfig field descriptions
-bh-LogicalChannelIdentityIndicates the logical channel id for BH RLC channel of the IAB-node.
-bh-RLC-ChannelIDIndicates the BH RLC channel in the link between IAB-MT of the IAB-node and IAB-DU of the parent IAB-node or IAB-donor-DU.
-reestablishRLCIndicates that RLC should be re-established.
-"rlc-ConfigDetermines the RLC mode (UM, AM) and provides corresponding parameters."

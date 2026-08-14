@@ -1,5 +1,0 @@
-MeasResultCellSFTD field descriptions,
-physCellIdIndicates the physical layer identity (PCI) of an NR cell.,
-sfn-OffsetResultIndicates the SFN difference between the PCell and the NR cell as an integer value according to TS 38.215 [89].,
-frameBoundaryOffsetResultIndicates the frame boundary difference between the PCell and the NR cell as an integer value according to TS 38.215 [89].,
-rsrpResultMeasured RSRP result of an NR cell.,

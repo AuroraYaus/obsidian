@@ -1,5 +1,0 @@
-BWP Parameters,Unit,Values,,
-Reference BWP,,DLBWP.0.1,DLBWP.0.2,
-Starting PRB index,,0,RBc Note 1,
-Bandwidth,PRB,Same as RF channel defined in each test,same as RMSI CORESET (CORESET #0) defined in each test Note 2,
-"NOTE 1:RBc is the lowest PRB index to guarantee the BWP including CORESET #0 which is defined in clause A.3.1.2.Note 2:In case CORESET#0 and SSBs defined in the test do not completely fit into the bandwidth of the reference BWP bandwidth, the latter one is extended to the next smallest size which can fully accommodate the respective CORESET#0 and SSBs..",,,,

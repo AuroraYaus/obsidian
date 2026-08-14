@@ -1,5 +1,0 @@
-MeasSensing-Config field descriptions
-"sensingReselectionCounterIndicate the value of SL_RESOURCE_RESELECTION_COUNTER, which is used to derive, as specified in TS 36.213 [23], clause 14.1.1.6."
-"sensingSubchannelNumberIndicate the number of sub-channels, i.e., parameter, as specified in TS 36.213 [23], clause 14.1.1.6."
-"sensingPeriodicityIndicate the resource reservation interval, i.e., parameter, as specified in TS 36.213 [23], clause 14.1.1.6."
-"sensingPriorityIndicate the priority, i.e., parameter  as specified in TS 36.213 [23], clause 14.1.1.6."

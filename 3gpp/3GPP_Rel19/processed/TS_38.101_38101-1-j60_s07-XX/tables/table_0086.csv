@@ -1,5 +1,0 @@
-Rx Parameter,Units,Channel bandwidth (MHz),,
-,,"3, 5, 7, 10, 15, 20","25, 30, 35, 40, 45, 50","60, 70, 80, 90, 100"
-Power in Transmission Bandwidth Configuration4,dBm,-252,-25 + 10log10(BWChannel /20)Note 2,-202
-,,"-273,5","-27 + 10log10(BWChannel /20)Note 3,5","-223,5"
-"NOTE 1:The transmitter shall be set to 4 dB below PCMAX_L,f,c at the minimum uplink configuration specified in Table 7.3.2-3 and 7.3F.2-3 for shared spectrum channel access operation with PCMAX_L,f,c as defined in clause 6.2.4.NOTE 2:Reference measurement channel is A.3.2.3 or A.3.3.3 for 64 QAM.NOTE 3:Reference measurement channel is A.3.2.4 or A.3.3.4 for 256 QAM.NOTE 4:10log10(x) is rounded to the nearest 0.5dB value.NOTE 5:Reference measurement channel is A.3.2.5 or A.3.3.5 for 1024 QAM.",,,,

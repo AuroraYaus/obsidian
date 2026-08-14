@@ -1,5 +1,0 @@
-RX parameter,Units,Value
-Total power including LP-WUS RBs and non-LPWUS RBs,dBm,-25.0
-ASCS Guard RB1,PRB,X
-LP-WUS power boosting,dB,0
-"NOTE 1:ASCS Guard RBs are zero-power and exist when NRB,LP-WUS < NRB. X=1 for type 1 LR and X=0 for type 2 LR. NOTE 2:The interfering NR RBs consists of QPSK with the same SCS as LP-WUS, in all PRB in the DL transmission BW configuration not occupied by either LP-WUS or Guard RB.",,

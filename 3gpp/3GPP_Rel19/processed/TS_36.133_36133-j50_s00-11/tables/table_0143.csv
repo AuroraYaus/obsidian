@@ -1,8 +1,0 @@
-eDRX_IDLE cycle length [s],DRX_INACTIVE cycle length [s],"Tdetect,EUTRAN_Intra_NC [s] (number of DRX cycles)","Tmeasure,EUTRAN_Intra_NC [s] (number of DRX cycles)","Tevaluate,E-UTRAN_intra_NC[s] (number of DRX cycles)","Tevaluate,E-UTRAN_intra_NC_RSS[s] (number of DRX cycles)"
-5.12 ≤eDRX_IDLE cycle length ≤ 2621.44,0.32,11.52 (36),1.28 (4),5.12 (16),3.84 (12)
-,0.64,17.92 (28),1.28 (2),5.12 (8),3.84 (6)
-,1.28,32(25),1.28 (1),6.4 (5),3.84 (3)
-,2.56,58.88 (23),2.56 (1),7.68 (3),3.84 (3)
-,5.12,117.76 (23),5.12 (1),15.36 (3),15.36 (3)
-,10.24 Note 1,235.52 (23),10.24 (1),30.72 (3),30.72 (3)
-Note 1:DRX_INACTIVE cycle length of 10.24s applies when eDRX_IDLE cycle length is >= 10.24s.,,,,,

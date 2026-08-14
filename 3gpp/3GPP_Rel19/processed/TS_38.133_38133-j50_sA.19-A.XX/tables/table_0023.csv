@@ -1,6 +1,0 @@
-Parameter,Config,Unit,Value,Comment
-Propagation condition,"1,2",,AWGN + 220 Hz,
-,3,,AWGN + 500 Hz,
-DRX,"1,2,3",,OFF,Only non-DRX tests apply
-T2,"1,2,3",ms,240,The value applies for UEs that don’t support antennaArrayType-r18 and UEs that support antennaArrayType-18
-T3,"1,2,3",s,2,The value applies for UEs that don’t support antennaArrayType-r18 and UEs that support antennaArrayType-18

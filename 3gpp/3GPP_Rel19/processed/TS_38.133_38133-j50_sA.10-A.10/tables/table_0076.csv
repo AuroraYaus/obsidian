@@ -1,8 +1,0 @@
-Field,Test1Value,Test2Value,Comment
-,,,
-drx-onDurationTimer,ms1,ms1,As specified in clause 6.3.2 in TS 38.331 [2]
-drx-InactivityTimer,ms1,ms1,
-drx-RetransmissionTimerDL,sl1,sl1,
-drx-RetransmissionTimerUL,sl1,sl1,
-drx-LongCycleStartOffset,ms40,Ms640,
-shortDRX,disable,disable,

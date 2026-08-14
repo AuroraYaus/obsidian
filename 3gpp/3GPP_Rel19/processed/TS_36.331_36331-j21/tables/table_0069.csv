@@ -1,3 +1,0 @@
-Conditional presence,Explanation
-CSG,"This field is optional, need OP, for non-CSG cells, and mandatory for CSG cells."
-RSS,"This field is optional, need OP, if rss-MeasConfig is included in SIB2. Otherwise the field is not present, and the UE shall delete any existing value for this field."

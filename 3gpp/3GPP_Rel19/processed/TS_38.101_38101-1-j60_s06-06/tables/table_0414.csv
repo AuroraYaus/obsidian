@@ -1,6 +1,0 @@
-,ACLR / Measurement bandwidth
-CA ACLR,30 dB
-CA Measurement bandwidth(NOTE 1),"Nominal channel space+MBWACLR,low/2+ MBWACLR,high/2"
-Adjacent channel centre frequency offset (in MHz),+ BWChannel_CA/- BWChannel_CA
-"Difference between ACLR MBW center and Fc,low","MBWshift= (MBWACLR_CA-MBWACLR,low)/2"
-"NOTE 1:MBWACLR,low and MBWACLR,high are the single-channel ACLR measurement bandwidths specified for channel bandwidths BWchannel(low) and BWchannel(high) in 6.5.2.4.1, respectively.",

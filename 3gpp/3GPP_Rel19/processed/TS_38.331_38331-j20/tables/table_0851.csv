@@ -1,3 +1,0 @@
-HandoverCommand field descriptions
-"candPSCellExecCondReportConfigNRContains execution condition parameters of candidate PSCells in case of CHO with candidate SCG(s). This fields can include only a4-Threshold, hysteresis, timeToTrigger, and rsType associated to condEventA4."
-"handoverCommandMessageContains the RRCReconfiguration message used to perform handover within NR or handover to NR, as generated (entirely) by the target gNB."

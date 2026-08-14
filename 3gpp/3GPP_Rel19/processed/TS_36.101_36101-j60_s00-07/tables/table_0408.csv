@@ -1,7 +1,0 @@
-Rx Parameter,Units,Channel bandwidth,,,,,
-,,1.4 MHz,3 MHz,5 MHz,10 MHz,15 MHz,20 MHz
-Power in Transmission Bandwidth Configuration,dBm,,,,-53.5,,-47.5
-PInterferer,dBm,-22,,,,,
-BWInterferer,MHz,,,,10,,10
-FInterferer (offset),MHz,,,,10+0.0125/-10-0.0125,,15+0.0075/-15-0.0075
-NOTE 1:The interferer is QPSK modulated PUSCH containing data and reference symbols. Normal cyclic prefix is used. The data content shall be uncorrelated to the wanted signal and modulated according to clause 5 of TS36.211.,,,,,,,

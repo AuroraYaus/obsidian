@@ -1,5 +1,0 @@
-"EN-DC Aggregated Bandwidth, MHz",<=100,">100, <=120",">120, <=140",">140, <=160"
-"ACS, dB",X1,19.2,18.5,17.9
-"Pinterferer, dBm",PI 2,Aggregated power + 17.7 dB,Aggregated power + 17 dB,Aggregated power + 16.4dB
-"Pw in Transmission BW configuration, per CC, dBm",REFSENS +14dB,,,
-NOTE 1:X is ACS level at the specified EN-DC aggregated bandwidth from Table 7.5.1A-1 in TS 36.101 [4]NOTE 2:PI is from Table 7.5.1A-2 in TS 36.101 [4]NOTE 3:Jammer BW and offset is from Table 7.5.1A-2 [4] and is applied from the lowest edge of the lowest carrier and the highest edge of the highest carrierNOTE 4:Void.NOTE 5:Void.,,,,

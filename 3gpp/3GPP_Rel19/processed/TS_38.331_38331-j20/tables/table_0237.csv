@@ -1,3 +1,0 @@
-Conditional Presence,Explanation
-FollowUTCI,"The field is absent if the field followUnifiedTCI-State is present or if more than one value for the field coresetPoolIndex is configured in controlResourceSet for the same bandwidthpart. Otherwise, it is optionally present, Need R."
-NotSIB-initialBWP,"The field is absent in SIB1/SIB20 and in the PDCCH-ConfigCommon of the initial BWP in ServingCellConfigCommon, if SIB1/SIB20 is broadcasted. Otherwise, it is optionally present, Need N."

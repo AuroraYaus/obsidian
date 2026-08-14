@@ -1,5 +1,0 @@
-Configuration,TEvaluate_BFD_SSB (ms)
-no DRX,Ceil(5  P)  measCyclePscell
-DRX cycle ≤ 320 ms,"Ceil(7.5  P)  Max(measCyclePscell, TDRX)"
-DRX cycle > 320 ms,"Ceil(5  P)  Max(measCyclePscell, TDRX)"
-NOTE:DRX cycle is the configured DRX cycle of the PSCell. measCyclePSCell is the measurement cycle length of the deactivated PSCell.,

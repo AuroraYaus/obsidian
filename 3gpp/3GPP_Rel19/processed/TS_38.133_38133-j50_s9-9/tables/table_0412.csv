@@ -1,3 +1,0 @@
-FR,TSSB_time_index_intra_ODSSB
-FR1,"ceil( 3 x Kp_OD-SSB ) x max(Tlower Note 1, EMP) x CSSFintra"
-"NOTE 1:When UE reports not supporting lower bound capability, the Tlower equals 10ms; Otherwise, Tlower equals 0ms.",

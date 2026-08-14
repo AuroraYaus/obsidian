@@ -1,6 +1,0 @@
-NR,Total number of interrupted slots on serving cells,,,,,
-SCS,When MG timing advance of 0 ms is applied,,,When MG timing advance of 0.5 ms is applied,,
-(kHz),MGL=6 ms,MGL=4 ms,MGL=3 ms,MGL=6 ms,MGL=4 ms,MGL=3 ms
-15,6,4,3,7Note3,5Note3,4Note3
-30,12,8,6,12,8,6
-"NOTE 1:For Gap Pattern ID 0, 1, 2 and 3, total number of interrupted subframes on the serving cell is MGL subframes when MG timing advance of 0 ms is applied, and (MGL+1) subframes when MG timing advance of 0.5 ms is applied.NOTE 2:  VoidNOTE 3:Non-overlapped half-slots occur before and after the measurement gap. Whether a Rel-15 UE can receive and/or transmit in those half-slots is up to UE implementation.",,,,,,

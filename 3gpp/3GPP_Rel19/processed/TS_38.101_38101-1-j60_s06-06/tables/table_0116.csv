@@ -1,6 +1,0 @@
-Network signalling label,Requirements (clause),NR CA Band,Aggregated channel bandwidth (MHz),Resources blocks (NRB),A-MPR (dB)
-CA_NS_01,6.5A.2.2.16.5A.3.2.1,Table 5.2A.1-1,All applicable NR CA bands,All applicable NR CA configurations,N/A
-CA_NS_04,6.5A.2.3.1.16.5A.3.3.1.1,CA_n41,Table 5.5A.1-1,6.2A.3.1.1.1,6.2A.3.1.1.1
-CA_NS_27,6.5A.2.3.1.26.5A.3.3.1.2,CA_n48,Table 5.5A.1-1,6.2A.3.1.1.2,6.2A.3.1.1.2
-CA_NS_46,6.5A.3.3.1.3,CA_n7,Table 5.5A.1-1,6.2A.3.1.1.3,6.2A.3.1.1.3
-"CA_NS_55, CA_NS_57",See CA_NS_01,CA_n77,Table 5.5A.1-1,6.2A.2.1,See CA_NS_01

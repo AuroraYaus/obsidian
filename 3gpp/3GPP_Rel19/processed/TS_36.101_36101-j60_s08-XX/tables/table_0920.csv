@@ -1,4 +1,0 @@
-Test number,Bandwidth,Carrier Type,Reference Channel,Repetition number,Propagation condition,Number of NRS ports,Antenna Configuration,Reference value,,UE Category
-,,,,,,,,Fraction of MaximumThroughput (%),SNR (dB),
-1,200kHz,Anchor,R.NB.6 TDD,32,EPA5,1,1x1,70%,-3.4,"NB1, NB2"
-2,200kHz,Non-anchor,R.NB.6-1 TDD,256,ETU1,1,1x1,70%,-10.2,"NB1, NB2"

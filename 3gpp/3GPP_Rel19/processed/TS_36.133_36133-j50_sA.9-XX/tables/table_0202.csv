@@ -1,5 +1,0 @@
-Parameter,Unit,Accuracy [dB],,Conditions,
-,,Normal condition,Extreme condition,"Io [dBm/3,84 MHz]",
-CPICH_Ec/Io,dB,-2.7…1.5 for 14  CPICH Ec/Io-3.2…2 for 16  CPICH Ec/Io < -14-4.2…3 for 20  CPICH Ec/Io < -16,-4.2…3,"-94...-87(Band I, IV, VI, X, XI, XIX, XXI)-92…-85 (Band II, V, VII) -90.5…-83.5 (Band XXV, XXVI (Note 2))-91…-84 (Band III, VIII, XII, XIII, XIV, XX, XXII)93…-86 (Band IX (Note 1))",
-,,1.5 for 14  CPICH Ec/Io 2 for 16  CPICH Ec/Io < -14 3 for 20  CPICH Ec/Io < -16,3,"-87...-50(Band I, IV, VI, X, XI,  XIX, XXI)-85…-50 (Band II, V, VII) -83.5…-50 (Band XXV, XXVI (Note 2))-84…-50 (Band III, VIII, XII, XIII, XIV, XX, XXII)-86…-50 (Band IX (Note 1))",
-"NOTE1:For the UE which supports both Band III and Band IX operating frequencies, the measurement performance requirements for Band III shall apply to the multi-band UE.NOTE 2:The test parameter is modified by -1.5 dB when the carrier frequency of the assigned UTRA channel is within 869-894 MHz for the UE which supports both Band V and Band XXVI operating frequencies.",,,,,

@@ -1,8 +1,0 @@
-Rx Parameter,Units,Shared access CA bandwidth class
-,,"B, C, D, E, M, N, O"
-"Pw in Transmission Bandwidth Configuration, per CC",dBm,REFSENS + aggregated channel bandwidth value below
-,dB,9 + 10log10(BWChannel_CA/20)
-BWInterferer,MHz,20
-"FIoffset, case 1",MHz,30
-"FIoffset, case 2",MHz,≥ 50
-"NOTE 1:The transmitter shall be set to 4dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2.4.NOTE 2:The interferer consists of the Reference measurement channel specified in Annexes A.3.2 and A.3.3 with one sided dynamic OCNG Pattern OP.1 FDD/TDD as described in Annex A.5.1.1/A.5.2.1 and set-up according to Annex C.3.1",,

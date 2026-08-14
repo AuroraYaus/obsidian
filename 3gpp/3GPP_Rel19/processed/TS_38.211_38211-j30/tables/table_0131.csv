@@ -1,6 +1,0 @@
-Channel or signal,OFDM symbol number relative to the start of an S-SS/PSBCH blockl,Subcarrier number relative to the start of an S-SS/PSBCH blockk
-S-PSS,"1, 2","2, 3, …, 127, 128"
-S-SSS,"3, 4","2, 3, …, 127, 128"
-Set to zero,"1, 2, 3, 4","0, 1, 129, 130, 131"
-PSBCH,"0, 5, 6, …, NsymbS-SSB-1","0, 1,…, 131"
-DM-RS for PSBCH,"0, 5, 6, …, NsymbS-SSB-1","0, 4, 8, …., 128"

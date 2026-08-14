@@ -1,8 +1,0 @@
-,CA bandwidth class / CA NRACLR / Measurement bandwidth
-,Any CA bandwidth class
-"CA NRACLR for band n257, n258, n261",17 dB
-CA NRACLR for band n260,16 dB
-CA NRACLR for band n263,15 dB
-NR channel measurement bandwidth1,"(BWChannel,block)"
-Adjacent sub-block centre frequency offset (in MHz),"+ BWChannel,block/- BWChannel_block"
-NOTE 1:BWChannel_block is defined in clause 5.3A.2. NOTE 2: ‘Adjacent sub-block centre frequency offset’ is defined for each sub-block in the UL CA configuration,

@@ -1,6 +1,0 @@
-Parameter,Ch BW,Allocated RBs,DFT-OFDM Symbols per Sub-Frame,Mod’n,Target Coding rate,Payload size,Transport block CRC,Number of code blocks per Sub-Frame (Note 1),Total number of bits per Sub-Frame,Total symbols per Sub-Frame,UE UL Category
-Unit,MHz,,,,,Bits,Bits,,Bits,,
-,1.4 - 20,1,12,16QAM,3/4,408,24,1,576,144,0
-,1.4 - 20,2,12,16QAM,3/4,840,24,1,1152,288,0
-,1.4 - 20,4,12,16QAM,2/5,904,24,1,2304,576,0
-"Note 1:If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit)Note 2:For HD-FDD UE, the uplink subframes are scheduled at the 4th, 5th, 6th, 12th, 13th, 14th, 20th, 21st, 22nd, 28th, 29th, 30th, 36th, 37th, and 38th subframes every 40ms. Information bit payload is available if uplink subframe is scheduled.",,,,,,,,,,,

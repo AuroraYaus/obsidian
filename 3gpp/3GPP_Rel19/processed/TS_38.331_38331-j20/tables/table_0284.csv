@@ -1,3 +1,0 @@
-DRX-ConfigSL field descriptions
-"drx-HARQ-RTT-TimerSLFor sidelink configured grant Type 1, value in number of symbols of the activated DL BWP of PCell. For other cases, value in number of symbols of the BWP where the PDCCH was transmitted. Value 0 is used in case sl-PUCCH-Config is not configured and the corresponding resource pool is not configured with PSFCH."
-"drx-RetransmissionTimerSLFor sidelink configured grant Type 1, value in number of slot lengths of the activated DL BWP of PCell. For other cases, value in number of slot lengths of the BWP where the PDCCH was transmitted. sl0 corresponds to 0 slots, sl1 corresponds to 1 slot, sl2 corresponds to 2 slots, and so on."

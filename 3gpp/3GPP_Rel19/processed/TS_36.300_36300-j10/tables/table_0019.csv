@@ -1,4 +1,0 @@
-Configuration parameter,Value,Meaning
-E-UTRAN carriers priority,high,The selection priorities for idle and connected mode of all E-UTRAN carriers are higher than the priorities for all UTRAN and GERAN carriers
-UTRAN carriers priority,medium,The selection priorities for idle and connected mode of all UTRAN carriers are lower than the priorities for all E-UTRAN carriers and higher than the priorities for all GERAN carriers
-GERAN carriers priority,low,The selection priorities for idle and connected mode of all GERAN carriers are lower than the priorities for all E-UTRAN and UTRAN carriers

@@ -1,8 +1,0 @@
-BS channel bandwidth (MHz),Subcarrier spacing (kHz),Reference measurement channel,Wanted signal mean power (dBm),Interfering signal mean power (dBm),Type of interfering signal
-"20, 30",15,G-FR1-A1-1,-97.7-ΔminSENS,-76.4-ΔminSENS,"DFT-s-OFDM NR signal, 15 kHz SCS,25 RBs"
-"40, 50",15,G-FR1-A1-4,-91.3-ΔminSENS,-70.4-ΔminSENS,"DFT-s-OFDM NR signal, 15 kHz SCS, 100 RBs"
-"20, 30",30,G-FR1-A1-2,-97.8-ΔminSENS,-77.4-ΔminSENS,"DFT-s-OFDM NR signal, 30 kHz SCS,10 RBs"
-"40, 50, 60, 70, 80, 90, 100",30,G-FR1-A1-5,-91.6-ΔminSENS,-70.4-ΔminSENS,"DFT-s-OFDM NR signal, 30 kHz SCS,50 RBs"
-"20,  30",60,G-FR1-A1-9,-97.2-ΔminSENS,-77.4-ΔminSENS,"DFT-s-OFDM NR signal, 60 kHz SCS,5 RBs"
-"40, 50, 60, 70, 80, 90, 100",60,G-FR1-A1-6,-91.7-ΔminSENS,-70.6-ΔminSENS,"DFT-s-OFDM NR signal, 60 kHz SCS,24 RBs"
-"NOTE 1:Wanted and interfering signal are placed adjacently around Fc, where the Fc is defined for BS channel bandwidth of the wanted signal according to the table 5.4.2.2-1. The aggregated wanted and interferer signal shall be centred in the BS channel bandwidth of the wanted signal.",,,,,

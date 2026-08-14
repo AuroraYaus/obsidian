@@ -1,3 +1,0 @@
-Conditional Presence,Explanation
-Setup,"The field is mandatory present in case of sidelink DRB setup via dedicated signaling and in case of sidelink DRB configuration via system information and pre-configuration; otherwise the field is optionally present, need M."
-Setup2,"The field is mandatory present in case of sidelink DRB setup via dedicated signaling and in case of sidelink DRB configuration via system information and pre-configuration for RLC-AM and RLC-UM for unicast NR sidelink communication; otherwise the field is not present, Need M."

@@ -1,6 +1,0 @@
-DRX cycle,T SSB_measurement_period_inter
-No DRX,"max(400 ms, ceil(M1Note 3  x Kgap ) x max(MGRP, SMTC period)) x CSSFinter"
-DRX cycle≤ 80 ms,"max(400 ms, ceil(M1Note 3 x Kgap) x max(MGRP, SMTC period, DRX cycle)) Note 1 x CSSFinter"
-80 ms< DRX cycle≤ 320 ms,"max(400 ms, ceil(Mmeas_period with_gaps x Kgap) x max(MGRP, SMTC period, DRX cycle)) Note 1 x CSSFinter"
-DRX cycle>320 ms,"Ceil( Mmeas_period with_gaps x Kgap ) x max(MGRP, DRX cycle) x CSSFinter"
-"NOTE 1:DRX or non DRX requirements apply according to the conditions described in clause 3.6.1NOTE 2:For a UE supporting concurrent measurement GAPs, the MGRP above is the MGRP of the activated Pre-MG or the measurement gap associated with the target frequency layer to be measured if concurrent GAPs are configured.NOTE 3:For UE supporting power class 6 and measEnhCAInterFreqFR2-r18, M1 = 6 if highSpeedMeasFlagFR2-r17 = set1 or M1 = 18 if highSpeedMeasFlagFR2-r17 = set2",

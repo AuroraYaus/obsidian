@@ -1,7 +1,0 @@
-,MAC control,,RRC control
-Control entity,MAC,,RRC
-Signalling,PDCCH,MAC control PDU,RRC message
-Signalling reliability,~ 10-2 (no retransmission),~ 10-3 (after HARQ),~ 10-6 (after ARQ)
-Control delay,Very short,Short,Longer
-Extensibility,None or very limited,Limited,High
-Security,No integrity protection No ciphering,No integrity protectionNo ciphering,Integrity protection Ciphering

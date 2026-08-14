@@ -1,3 +1,0 @@
-,"Test requirement Notes1,2"
-(CSI-RS#0 for CMR + CSI-RS#0 for IMR) – (CSI-RS#1 for CMR + CSI-RS#1 for IMR),L1-SINR0 - L1-SINR1 - σ≤ Reported DIFFSINR (dB) ≤ L1-SINR0 - L1-SINR1 + σ
-"NOTE 1:L1-SINRn is the equivalent SINR received by an antenna with 0 dBi gain at the centre of the quiet zone configured in the test for the (CSI-RS#n for CMR + CSI-RS#n for IMR) under considerationNOTE 2:σ is the SINR relative requirement from Table 10.1.28.3.2-1, selected according to the Io used in the test",

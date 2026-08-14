@@ -1,4 +1,0 @@
-MAC-MainConfigSL field descriptions
-sl-BSR-ConfigThis field is to configure the sidelink buffer status report.
-"sl-PrioritizationThresIndicates the SL priority threshold, which is used to determine whether SL TX is prioritized over UL TX, as specified in TS 38.321 [3]. Network does not configure the sl-PrioritizationThres and the ul-PrioritizationThres to the UE separately."
-"ul-PrioritizationThresIndicates the UL priority threshold, which is used to determine whether SL TX is prioritized over UL TX, as specified in TS 38.321 [3]. Network does not configure the sl-PrioritizationThres and the ul-PrioritizationThres to the UE separately."

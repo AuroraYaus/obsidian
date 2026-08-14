@@ -1,5 +1,0 @@
-MeasResultNR-SL field descriptions
-measResultListCBR-DedicatedSL-PRSCBR measurement results for NR sidelink positioning for dedicated SL PRS resource pool.
-measResultListCBR-NRCBR measurement results for NR sidelink communication/discovery.
-sl-poolReportIdentityThe identity of the transmission resource pool which is corresponding to the sl-ResourcePoolID configured in a resource pool for NR sidelink communication/discovery.
-sl-PRS-ResourcePoolIDThe ID of the transmission resource pool which is corresponding to the sl-PRS-ResourcePoolID configured in a resource pool for NR sidelink positioning.

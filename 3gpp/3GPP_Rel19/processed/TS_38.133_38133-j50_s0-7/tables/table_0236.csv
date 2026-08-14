@@ -1,6 +1,0 @@
-Frequency range and band of cell used for uplink transmission,(Unit: TC)NTA offset
-FR1 FDD or TDD band with neither E-UTRA–NR nor NB-IoT–NR coexistence case,25600 (Note 1)
-FR1 FDD band with E-UTRA–NR and/or NB-IoT–NR coexistence case,0 (Note 1)
-FR1 TDD band with E-UTRA–NR and/or NB-IoT–NR coexistence case,39936 (Note 1)
-FR2,13792
-"Note 1:The UE identifies  based on the information n-TimingAdvanceOffset as specified in TS 38.331 [2]. If UE is not provided with the information n-TimingAdvanceOffset, the default value of  is set as 25600 for FR1 band.Note 2:VoidNTA offsetNTA offset",

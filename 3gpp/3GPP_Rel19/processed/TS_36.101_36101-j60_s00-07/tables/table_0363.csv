@@ -1,7 +1,0 @@
-Inter-band E-UTRA ProSe/E-UTRA configuration,,E-UTRA UL band / Channel BW / NRB / Duplex mode,,,
-E-UTRA ProSe band,E-UTRA band / E-UTRA CA band,E-UTRA UL band,Channel Bandwidth (MHz),NRB,Duplex Mode
-2,4,4,5,25,FDD
-2,CA_2-4,4,5,25,FDD
-28,1,1,5,25,FDD
-28,CA_1-28,1,5,25,FDD
-"NOTE 1:For E-UTRA ProSe reception on SCC, the channel bandwith of the E-UTRA downlink SCC is set same as the ProSe channel bandwidth for which reference sensitivity is being measured.",,,,,

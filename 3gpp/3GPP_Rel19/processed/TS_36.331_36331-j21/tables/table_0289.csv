@@ -1,8 +1,0 @@
-SL-CBR-PPPP-TxConfigList field descriptions
-cbr-ConfigIndexIndicates the CBR ranges to be used by an index to the entry of the CBR range configuration in cbr-RangeCommonConfigList.
-"defaultTxConfigIndexIndicates the PSSCH transmission parameters to be used by the UEs which do not have available CBR measurement results, by means of an index to the corresponding entry in tx-ConfigIndexList. Value 0 indicates the first entry in tx-ConfigIndexList. The field is ignored if the UE has available CBR measurement results."
-"mcs-PSSCH-RangeListIf included, this field applies to the PPPP(s) indicated by the priorityThreshold and each entry in this field sequentially corresponds to each CBR range indicated by cbr-ConfigIndex."
-"minMCS-PSSCH, maxMCS-PSSCHIndicates the minimum and maximum MCS values which correspond to both the MCS table in Table 8.6.1-1 and Table 14.1.1-2 in TS 36.213 [23] used for transmission on PSSCH."
-"priorityThresholdIndicates the upper bound of PPPP range which is associated with the configurations in cbr-ConfigIndex and in tx-ConfigIndexList. The upper bounds of the PPPP ranges are configured in ascending order for consecutive entries of SL-PPPP-TxConfigIndex in SL-CBR-PPPP-TxConfigList. For the first entry of SL-PPPP-TxConfigIndex, the lower bound of the PPPP range is 1."
-"SL-CBR-PPPP-TxConfigList-v1530If included, E-UTRAN shall include the same number of entries, and listed in the same order, as in SL-CBR-PPPP-TxConfigList-r14."
-tx-ConfigIndexListIndicates the list of the PSSCH transmission parameters and CR limit by the indexes to the entries of the configurations in sl-CBR-PSSCH-TxConfigList. Each index in tx-ConfigIndexList sequentially maps to each CBR range indicated by cbr-ConfigIndex.

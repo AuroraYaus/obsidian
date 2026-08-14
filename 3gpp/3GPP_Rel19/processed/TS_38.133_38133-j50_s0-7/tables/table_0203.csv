@@ -1,5 +1,0 @@
-,NR Slot length (ms),Tinterrupt2 (slotsNote 1) for synchronous DAPS HO,Tinterrupt2 (slotsNote 1) for asynchronous DAPS HO
-0,1,"1 + TSMTC_duration *  Nslotsubframe,μ","2+ TSMTC_duration * Nslotsubframe,μ"
-1,0.5,"2 + TSMTC_duration *  Nslotsubframe,μ","3+ TSMTC_duration * Nslotsubframe,μ"
-2,0.25,"4 + TSMTC_duration *  Nslotsubframe,μ","5+ TSMTC_duration * Nslotsubframe,μ"
-"NOTE 1:The same SCS of source cell and target cell is assumed.NOTE 2:TSMTC_duration measured in subframes is the longest SMTC duration between source cell and target cell.NOTE 3:Void.NOTE 4:  is as defined in TS 38.211 [6].Nslotsubframe,μ",,,

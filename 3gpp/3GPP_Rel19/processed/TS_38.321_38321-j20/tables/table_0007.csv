@@ -1,9 +1,0 @@
-Switching scenario,,Field for number of guard symbols in MAC CE
-IAB-MT operation to IAB-DU operation,MT Rx to DU Tx,NmbGS1
-,MT Rx to DU Rx,NmbGS2
-,MT Tx to DU Tx,NmbGS3
-,MT Tx to DU Rx,NmbGS4
-IAB-DU operation to IAB-MT operation,DU Rx to MT Tx,NmbGS5
-,DU Rx to MT Rx,NmbGS6
-,DU Tx to MT Tx,NmbGS7
-,DU Tx to MT Rx,NmbGS8

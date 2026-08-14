@@ -1,6 +1,0 @@
-DLInformationTransfer field descriptions
-clockQualityDetailsLevelThis field indicates the clock quality reporting control information as defined in TS 23.501 [32].
-eventID-TSSThis field indicates the status of the 5G access stratum time distribution parameter Clock Quality Reporting Control Information as defined in TS 23.501 [32].
-"rxTxTimeDiff-gNBIndicates the Rx-Tx time difference measurement at the gNB (see clause 5.2.3, TS 38.215 [9]). Upon receiving this field, the UE calculates the propagation delay based on the RTT-based PDC mechanism method as described in TS 38.300 [2]. The network does not configure this field, if the UE is configured with ta-PDC with value activate."
-sib9FallbackIndicates that the UE fallbacks to receive referenceTimeInfo in SIB9.
-"ta-PDCIndicates whether the UE-side TA-based propagation delay compensation (PDC) is activated or de-activated. The network does not configure this field with activate, if the field rxTxTimeDiff-gNB is configured."

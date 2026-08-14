@@ -1,8 +1,0 @@
-Configuration,Description
-1,"Cell 1 LTE FDD,Cell 2 LTE FDD, Cell 3 NR FDD 15 kHz SSB SCS, 10 MHz bandwidth,Cell 4 NR TDD 120 kHz SSB SCS, 100 MHz bandwidth"
-2,"Cell 1 LTE FDD,Cell 2 LTE FDD, Cell 3 NR TDD 15 kHz SSB SCS, 10 MHz bandwidth,Cell 4 NR TDD 120 kHz SSB SCS, 100 MHz bandwidth"
-3,"Cell 1 LTE FDD,Cell 2 LTE FDD, Cell 3 NR TDD 30 kHz SSB SCS, 40 MHz bandwidth,Cell 4 NR TDD 120 kHz SSB SCS, 100 MHz bandwidth"
-4,"Cell 1 LTE TDD,Cell 2 LTE TDD, Cell 3 NR FDD 15 kHz SSB SCS, 10 MHz bandwidth,Cell 4 NR TDD 120 kHz SSB SCS, 100 MHz bandwidth"
-5,"Cell 1 LTE TDD,Cell 2 LTE TDD, Cell 3 NR TDD 15 kHz SSB SCS, 10 MHz bandwidth,Cell 4 NR TDD 120 kHz SSB SCS, 100 MHz bandwidth"
-6,"Cell 1 LTE TDD,Cell 2 LTE TDD, Cell 3 NR TDD 30 kHz SSB SCS, 40 MHz bandwidth,Cell 4 NR TDD 120 kHz SSB SCS, 100 MHz bandwidth"
-NOTE: The UE is only required to be tested in one of the supported test configurations,

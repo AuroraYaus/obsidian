@@ -1,7 +1,0 @@
-RACH-ConfigTwoTA field descriptions
-additionalPCI-andRACH-IndexIndicates the associated PCI to this random access configuration.
-"msg1-SubcarrierSpacingSubcarrier spacing of PRACH when prach-RootSequenceIndex has value set to l139 (see TS 38.211 [16], clause 5.3.2). Only the following values are applicable depending on the used frequency: FR1: 15 or 30 kHz FR2-1: 60 or 120 kHz FR2-2: 120, 480, or 960 kHz. If absent, the UE applies the SCS as derived from the prach-ConfigurationIndex in RACH-ConfigGeneric (see tables Table 6.3.3.1-1, Table 6.3.3.1-2, Table 6.3.3.2-2 and Table 6.3.3.2-3, TS 38.211 [16])."
-"prach-RootSequenceIndexPRACH root sequence index (see TS 38.211 [16], clause 6.3.3.1). The value range depends on whether L=839, L=139, L=571 or L=1151.For FR2-2, only the following values are applicable depending on the used subcarrier spacing:120 kHz:  L=139, L=571, and L=1151480 kHz:  L=139, and L=571960 kHz:  L=139"
-rach-ConfigGenericRACH parameters for contention free random access occasions for CFRA.
-ssb-perRACH-OccasionNumber of SSBs per RACH occasion.
-"twoTA-restrictedSetConfigConfiguration of an unrestricted set or one of two types of restricted sets associated with additional PCI, see TS 38.211 [16], clause 6.3.3.1."

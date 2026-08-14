@@ -1,3 +1,0 @@
-Definitions for parameters,Per,M,FDD-TDDDIFF,FR1-FR2DIFF
-inactiveStateNCR-r18Indicates whether the NCR-MT supports RRC_INACTIVE as specified in TS 38.331 [9].,NCR-MT,No,No,No
-"supportedNumberOfDRBs-NCR-r18Indicates the number of DRB that NCR-MT supports. If absent, NCR-MT does not support DRB. If absent, NCR-MT also does not support SDU discard in PDCP and RLC, and counter check in RRC.Value n1 indicates support of 1 DRB, value n16 indicates the support of 16 DRBs.",NCR-MT,No,No,No

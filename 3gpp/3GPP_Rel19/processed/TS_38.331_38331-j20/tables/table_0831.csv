@@ -1,9 +1,0 @@
-Name,Value,Semantics description,Ver
-SDAP configuration,Not used,,
-PDCP configuration,Not used,,
-RLC configuration,TM,,
-Logical channel configuration,,,
->priority,1,Highest priority,
->prioritisedBitRate,infinity,,
->bucketSizeDuration,ms1000,,
->logicalChannelGroup,0,,

@@ -1,4 +1,0 @@
-Measurement gap pattern configuration,Serving cell,Measurement Purpose NOTE 2,Applicable Gap Pattern Id
-Per-UE measurement,FR1-NTN,FR1-NTN,"0-11, 24, 25 NOTE 1"
-,FR2-NTN,FR2-NTN,12-25 NOTE 1
-NOTE 1:Measurement gap patterns #24 and #25 can be requested [2] only when the UE is configured with UE Rx-Tx measurements requiring such gaps and can only be used during the corresponding positioning measurement period.NOTE 2:Inclusion of positioning measurements for measurement gaps: Measurement purpose which includes FR1-NTN measurements includes also UE Rx-Tx measurements.,,,

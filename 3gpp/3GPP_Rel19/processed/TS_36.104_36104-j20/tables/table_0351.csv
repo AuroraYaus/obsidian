@@ -1,3 +1,0 @@
-FFT size,Cyclic prefix length for symbols 0 in FFT samples,Cyclic prefix length  for symbols 16 in FFT samples,EVM window length W,Ratio of W to total CP for symbols 16(Note 1) [%]
-128,10,9,3,33.3
-Note 1:These percentages are informative and apply to symbols 1 through 6. Symbol 0 has a longer CP and therefore a lower percentage.,,,,

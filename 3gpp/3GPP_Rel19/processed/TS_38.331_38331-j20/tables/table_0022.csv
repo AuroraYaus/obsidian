@@ -1,5 +1,0 @@
-MBSInterestIndication field descriptions
-mbs-FreqListList of MBS frequencies on which the UE is receiving or interested to receive MBS broadcast service via a broadcast MRB.
-mbs-NonServingInfoListIndicates information for MBS broadcast reception on the non-serving cell.
-"mbs-PriorityIndicates whether the UE prioritises MBS broadcast reception above unicast and MBS multicast reception. The field is present (i.e. value true), if the UE prioritises reception of broadcast services, on frequencies indicated in mbs-FreqList, above a reception of any of the unicast bearers and multicast MRBs. Otherwise the field is absent."
-mbs-ServiceListList of MBS broadcast services which the UE is receiving or interested to receive.

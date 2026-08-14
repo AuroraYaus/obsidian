@@ -1,8 +1,0 @@
-E-UTRAchannel bandwidth [MHz],Reference measurement channel,Wanted signal mean power [dBm],Interfering signal mean power [dBm] / BWConfig,Type of interfering signal
-1.4,FRC A2-1 in Annex A.2,-76.3,-88.7,AWGN
-3,FRC A2-2 in Annex A.2,-72.4,-84.7,AWGN
-5,FRC A2-3 in Annex A.2,-70.2,-82.5,AWGN
-10,FRC A2-3 in Annex A.2*,-70.2,-79.5,AWGN
-15,FRC A2-3 in Annex A.2*,-70.2,-77.7,AWGN
-20,FRC A2-3 in Annex A.2*,-70.2,-76.4,AWGN
-Note*:The wanted signal mean power is the power level of a single instance of the reference measurement channel. This requirement shall be met for each consecutive application of a single instance of FRC A2-3 mapped to disjoint frequency ranges with a width of 25 resource blocks each.,,,,

@@ -1,5 +1,0 @@
-ConfigurationSCell,Description
-1A,"15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode"
-2A,"15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode"
-3A,"30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode"
-"NOTE 1:The UE is only required to be tested in one of the supported test configurations.NOTE 2:The UE is only required to be tested in one of the supported test configurations with smallest aggregated channel bandwidth from supported band combinations which is composed of CCs ≥ the bandwidth (BWchannel) defined in each test configuration.NOTE 3:NR Cell 3 has the same SCS, BW and duplex mode as NR Cell 2.",

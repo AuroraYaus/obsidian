@@ -1,7 +1,0 @@
-Parameter,Unit,Value
-Number of HARQ processes,Processes,None
-Subcarrier spacing,kHz,15 kHz
-Allocated subframes per Radio Frame (Note 1),,5 subframes
-Number of OFDM symbols for PDCCH,,2
-Cyclic Prefix,,Extended
-"Note1:For TDD mode, in line with TS 36.331, Uplink-Downlink Configuration 5 is proposed, up to 5 subframes (#3/4/7/8/9) are available for MBMS.",,

@@ -1,8 +1,0 @@
-One codeword: Codeword 0 enabledCodeword 1 disabled,,Two codewords: Codeword 0 enabledCodeword 1 enabled,
-Bit field mapped to index,Message,Bit field mapped to index,Message
-0,1 layer: TPMI=0,0,2 layers: TPMI=0
-1,1 layer: TPMI=1,1-7,reserved
-2,1 layer: TPMI=2,,
-…,…,,
-5,1 layer: TPMI=5,,
-6-7,reserved,,

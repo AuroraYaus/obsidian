@@ -1,6 +1,0 @@
-TTI pattern,Channel BW (MHz),TTI Duration,Transient period length (µs)
-Subframe TTI,,1ms,20
-Slot TTI,1.4,1 slot,20
-,> 1.4,1 slot,10
-Subslot TTI,1.4,2os  or 3 os,20
-,> 1.4,2os  or 3 os,10

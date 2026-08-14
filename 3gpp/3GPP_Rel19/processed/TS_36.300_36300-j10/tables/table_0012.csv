@@ -1,7 +1,0 @@
-Target RAT,Solutions,Release,UE Capability,FGI Index
-CS fallback to 1xRTT,RRC Connection Release with Redirection,Rel-8,(NOTE 1)Mandatory for UEs supporting CS fallback to 1xRTT,
-,enhanced 1xCSFB,Rel-9,(NOTE 1)e-CSFB-1XRTT,
-,enhanced 1xCSFB with concurrent HRPD handover,Rel-9,"(NOTE 1)e-CSFB-ConcPS-Mob1XRTT, Support of HRPD, supportedBandListHRPD","FGI12, FGI26"
-,dual receiver 1xCSFB (RRC Connection Release without Redirection),Rel-9,(NOTE 1)rx-Config1XRTT (set to 'dual'),
-,dual receiver/transmitter enhanced 1xCSFB,Rel-10,(NOTE 1)e-CSFB-dual-1XRTT,
-NOTE 1:All CS fallback to 1xRTT capable UE shall indicate that it supports 1xRTT and supported band list in the UE capability.NOTE 2:The measurement may be performed before any of the above CS fallback solution is triggered to select the target cell or frequency layer more accurately based on eNB decision. eNB may trigger any of above CS fallback solutions blindly.,,,,

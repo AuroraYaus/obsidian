@@ -1,7 +1,0 @@
-Parameter,Io Note 1 range,,,
-,"NR operating band groups Note 4, 5","Minimum Io Note 2, 3",,Maximum Io
-,,dBm/ SCSSSB,,dBm/BWChannel
-,,SCSSSB = 15 kHz,SCSSSB = 30 kHz,
-Conditions,NR_CCA_FR1_I,-117,-114,-50
-,NR_CCA_FR1_J,-116.5,-113.5,-50
-"NOTE 1:Io is assumed to have constant EPRE across the bandwidth.NOTE 2:The condition level is increased by ΔRIB,c as defined in clause 7.3B in TS 38.101-3 [54], depending on E-UTRA – NR band combination.NOTE 3:The condition level is increased by MSD as defined in clause 7.3B in TS 38.101-3 [54], if applicable depending on E-UTRA – NR band combination.NOTE 4:NR operating band groups are as defined in clause 3.5 in TS 38.133 [50].NOTE 5:Only NR bands within EN-DC band combinations as specified in clause 5.5B in TS 38.101-3 [54] are applicable.",,,,

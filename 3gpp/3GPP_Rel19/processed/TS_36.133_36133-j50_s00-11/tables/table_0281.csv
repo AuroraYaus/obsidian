@@ -1,6 +1,0 @@
-Configuration,Physical Layer Measurement period: TMeasurement_Period _Inter_FDD [ms] (normal performance),Physical Layer Measurement period: TMeasurement_Period _Inter_FDD [ms] (reduced performance),Measurement bandwidth [RB]
-0,"720 x Kn x Nfreq,n","720 x Kr x Nfreq,r",6
-1 (Note 1),"480 x Kn x  Nfreq,n","480 x Kr x  Nfreq,r",50
-2 (Note 2),1.5∙Tburst x Nfreq,1.5∙Tburst x Nfreq,6
-3 (Note 3),Tburst x Nfreq,Tburst x Nfreq,50
-Note 1:This configuration is optionalNote 2:This configuration is for when nonUniform1 – nonUniform4 are configuredNote 3:This configuration is optional and when nonUniform1 – nonUniform4 are configured,,,

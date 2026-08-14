@@ -1,7 +1,0 @@
-Rx Parameter,Units,V2X Bandwidth Class,,,,
-,,B,C/ C1,D,E,F
-"Pw in Transmission Bandwidth Configuration, per CC",dBm,"-50.5 +10log10(NRB,c/ NRB agg)","-47.5 +10log10(NRB,c/ NRB agg)",,,
-PInterferer,dBm,-22,,,,
-BWInterferer,MHz,10,10,,,
-FInterferer (offset),MHz,5+ Foffset/-5- Foffset,5+ Foffset/-5- Foffset,,,
-NOTE 1:The Finterferer (offset) is the frequency separation of the center frequency of the carrier closest to the interferer and the center frequency of the adjacent channel interferer and shall be further adjusted to MHz to be offset from the sub-carrier raster.NOTE 2:The requirement is applied for multi-carrier intra-band concurrent receptions when 2 carrier transmissions are activated at the same time.,,,,,,

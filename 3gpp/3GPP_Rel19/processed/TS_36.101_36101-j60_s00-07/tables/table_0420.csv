@@ -1,8 +1,0 @@
-Rx Parameter,Units,CA Bandwidth Class,,,,
-,,B,C,D,E,F
-"Pw in Transmission Bandwidth Configuration, per CC",dBm,REFSENS + CA Bandwidth Class specific value below,,,,
-,,9,12,13.8,15,16
-BWInterferer,MHz,5,5,5,5,5
-"FIoffset, case 1",MHz,7.5,7.5,7.5,7.5,7.5
-"FIoffset, case 2",MHz,12.5,12.5,12.5,12.5,12.5
-"NOTE 1: The transmitter shall be set to 4dB below PCMAX_L,c or PCMAX_L as defined in subclause 6.2.5ANOTE 2:The interferer consists of the Reference measurement channel specified in Annex A.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD as described in Annex A.5.1.1/A.5.2.1 and set-up according to Annex C.3.1",,,,,,

@@ -1,3 +1,0 @@
-PLMN-Identity field descriptions
-"mccThe first element contains the first MCC digit, the second element the second MCC digit and so on. If the field is absent, it takes the same value as the mcc of the immediately preceding IE PLMN-Identity. See TS 23.003 [27]."
-"mncThe first element contains the first MNC digit, the second element the second MNC digit and so on. See TS 23.003 [27]."

@@ -1,6 +1,0 @@
-BS channel bandwidth of the lowest carrier received (MHz),Interfering RB centre frequency offset from the lower Base Station RF Bandwidth edge  (kHz)(Note 3),Type of interfering signal
-3,-360,CW
-,-960,"3 MHz DFT-s-OFDM NR signal, 15 kHz SCS, 1 RB (Note 1)"
-5,-360,CW
-,-1420,"5 MHz DFT-s-OFDM NR signal, 15 kHz SCS, 1 RB (Note 1)"
-"NOTE 1:Interfering signal consisting of one resource block positioned at the stated offset, the BS channel bandwidth of the interfering signal is located adjacently to the lower Base Station RF Bandwidth edge.NOTE 2:This requirement shall apply only for a G-FRC mapped to the frequency range at the channel edge adjacent to the interfering signals.NOTE 3: The centre of the interfering RB refers to the frequency location between the two central subcarriers.",,

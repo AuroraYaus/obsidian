@@ -1,6 +1,0 @@
-MeasResultIdleNR field descriptions
-carrierFreqIndicates the NR carrier frequency.
-measIdleResultNRIdle/inactive measurement results for an NR cell (optionally including beam level measurements).
-"measResultServingCellMeasured results of the serving cell (i.e., PCell) from idle/inactive measurements."
-measResultsPerCellListIdleNRList of idle/inactive measured results for the maximum number of reported best cells for a given NR carrier.
-"resultsSSB-IndexesBeam level measurement results (indexes and optionally, beam measurements)."

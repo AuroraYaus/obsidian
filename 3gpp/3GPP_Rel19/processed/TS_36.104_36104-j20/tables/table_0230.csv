@@ -1,6 +1,0 @@
-Number of TX antennas (Note 1),Number of RX antennas(Note 1),Propagation conditions and correlation matrix (Annex B) (Note 2),,,FRC(Annex A),Fraction of  maximum throughput,SINR [dB] (Note 3)
-,,Tested signal,Interferer 1-1,Interferer 1-2,,,
-1,2,EPA 5 Low,ETU 5 Low,ETU 5 Low,A12-5,70%,-2.7
-,4,EPA 5 Low,ETU 5 Low,ETU 5 Low,A13-5,70%,-1.1
-,8,EPA 5 Low,ETU 5 Low,ETU 5 Low,A4-7,70%,-1.4
-"Note 1:Antenna configuration applies for each of the tested signal, interferer 1-1 and interferer 1-2.Note 2:The propagation conditions for the tested signal, interferer 1-1 and interferer 1-2 are statistically independent.Note 3:SINR corresponds to  of the tested signal as defined in clause 8.1.",,,,,,,

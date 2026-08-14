@@ -1,5 +1,0 @@
-NR Band / Harmonic order / Channel BW (MHz) in UL,,,,,,,,,,,,,,,
-ULBand,UL/DL Harmonic Order,DLBand,5,10,15,20,25,30,40,50,60,70,80,90,100
-n77,UL3/DL2,n46,,+/-23,+/-35,+/-45,+/-60,+/-70,+/-90,+/-115,+/-140,+/-160,+/-180,+/-210,+/-230
-n78,UL3/DL2,n46,,+/-23,+/-35,+/-45,+/-60,+/-70,+/-90,+/-115,+/-140,+/-160,+/-180,+/-210,+/-230
-NOTE 1:Even though UL harmonic does not fall directly into NR-U band the exclusion region still applies.NOTE 2:The center of the exclusion region is obtained by multiplying the UL channel center frequency by the ratio of the UL harmonic order over the DL harmonic order.,,,,,,,,,,,,,,,

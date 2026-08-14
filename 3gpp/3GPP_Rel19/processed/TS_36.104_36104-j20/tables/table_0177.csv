@@ -1,6 +1,0 @@
-BS type,Wanted signal mean power [dBm],Interfering signal mean power [dBm],Type of interfering signal
-Wide Area BS,PREFSENS + 6dB*,-52,See Table 7.8.1-2
-Medium Range BS,PREFSENS + 6dB**,-47,
-Local Area BS,PREFSENS + 6dB***,-44,
-Home BS,PREFSENS + 14dB****,-36,
-Note*:PREFSENS depends on the sub-carrier spacing as specified in Table 7.2.1-5.Note**:PREFSENS depends on the sub-carrier spacing as specified in Table 7.2.1-5c.Note***:PREFSENS depends on the sub-carrier spacing as specified in Table 7.2.1-5a.Note****:PREFSENS depends on the sub-carrier spacing as specified in Table 7.2.1-5b.,,,

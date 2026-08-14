@@ -1,6 +1,0 @@
-Test number,Bandwidth,Reference Channel,OCNG Pattern,Propagation Condition,Correlation Matrix and Antenna Configuration,Reference value,,UE Category
-,,,,,,Fraction of MaximumThroughput (%),SNR (dB),
-1,2x20MHz,R.42 TDD,OP.1 TDD (Note 1),EVA5,1x2 Low,70,-1.2,≥5
-2,20MHz+ 15MHz,R.42 TDD for 20MHz CC,OP.1 TDD (Note 1),EVA5,1x2 Low,70,-1.4,≥5
-,,R.42-3 TDD for 15MHz CC,OP.1 TDD (Note 1),,,70,-1.4,
-"Note 1:The OCNG pattern applies for each CC.Note 2: The applicability of requirements for different CA configurations and bandwidth combination sets is defined in 8.1.2.3.Note 3:30usec timing difference between PCell and any SCell is applied in inter-band CA case, where PCell can be assigned on any CC.",,,,,,,,

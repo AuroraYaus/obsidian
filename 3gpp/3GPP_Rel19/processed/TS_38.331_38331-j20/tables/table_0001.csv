@@ -1,8 +1,0 @@
-Abbreviation,Meaning
-Cond conditionTag,Conditionally presentPresence of the field is specified in a tabular form following the ASN.1 segment.
-CondC conditionTag,Configuration conditionPresence of the field is conditional to other configuration settings.
-CondM conditionTag,Message conditionPresence of the field is conditional to other fields included in the message.
-Need S,"SpecifiedUsed for (configuration) fields, whose field description or procedure specifies the UE behavior performed upon receiving a message with the field absent (and not if field description or procedure specifies the UE behavior when field is not configured)."
-Need M,"MaintainUsed for (configuration) fields that are stored by the UE i.e. not one-shot. Upon receiving a message with the field absent, the UE maintains the current value."
-Need N,"No action (one-shot configuration that is not maintained)Used for (configuration) fields that are not stored and whose presence causes a one-time action by the UE. Upon receiving message with the field absent, the UE takes no action."
-Need R,"ReleaseUsed for (configuration) fields that are stored by the UE i.e. not one-shot. Upon receiving a message with the field absent, the UE releases the current value."

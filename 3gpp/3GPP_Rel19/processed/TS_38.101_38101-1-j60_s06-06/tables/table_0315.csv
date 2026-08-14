@@ -1,8 +1,0 @@
-Inter-band ULCA Power class(NOTE 1),Uplink band of same power class in inter-band UL CA,,Uplink band of different power class in inter-band UL CA,
-,One 2TX band,Other 2Tx band,One 2Tx band,Other 2TX band
-Class 3,Class 3,Class 3,,
-Class 2,Class 3,Class 3,Class 2,Class 3
-,Class 2,Class 2,,
-Class 1.5,Class 2,Class 2,Class 1.5,Class 3
-,,,Class 1.5,Class 2
-NOTE 1:Indicated by powerClass/powerClass-v1610.NOTE 2:   This table is intended for FWA form factor,,,,

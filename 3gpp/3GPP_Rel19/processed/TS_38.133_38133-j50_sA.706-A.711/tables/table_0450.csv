@@ -1,4 +1,0 @@
-,"Test requirement Notes1,2,3"
-CSI-RS0,CSI-RS _RP0 -δ + Gmin ≤ Reported RSRP(dBm) ≤CSI-RS _RP0 +δ + Gmax
-CSI-RS1,CSI-RS _RP1 -δ + Gmin ≤ Reported RSRP(dBm) ≤CSI-RS _RP1 +δ + Gmax
-"NOTE 1:CSI-RS_RPn is the  equivalent power received by an antenna with 0 dBi gain at the centre of the quiet zone configured in the test for the CSI-RS n under considerationNOTE 2:δ is the RSRP absolute accuracy requirement from Table 10.1.20.2.1-1, selected according to the Io used in the testNOTE 3:Gmin and Gmax are the minimum and maximum UE gain values from Table B.2.1.5.1-1, selected according to the UE power class",

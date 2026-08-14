@@ -1,4 +1,0 @@
-Config,Description
-1,"GSO, NR 15 kHz SSB SCS, 3 MHz bandwidth, FDD duplex mode"
-2,"NGSO, NR 15 kHz SSB SCS, 3 MHz bandwidth, FDD duplex mode"
-"NOTE 1:If UE supports both NGSO and GSO, the test case Config 1 can be skipped if the UE passes test case Config 2.NOTE 2:target NR cell has the same SCS, BW and duplex mode as NR serving cell",

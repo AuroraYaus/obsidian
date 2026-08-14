@@ -1,8 +1,0 @@
-Parameter,Unit,CA Bandwidth Class,,,,
-,,B,C,D,E,F
-"Pw in Transmission Bandwidth Configuration, per CC",dBm,REFSENS + CA Bandwidth Class specific value below,,,,
-,,16,164,16,16,16
-Puw (CW),dBm,-55,-55,-55,-55,-55
-Fuw (offset forf = 15 kHz),MHz,- Foffset – 0.2/+ Foffset + 0.2,- Foffset – 0.2/+ Foffset + 0.2,- Foffset – 0.2/+ Foffset + 0.2,- Foffset – 0.2/+ Foffset + 0.2,- Foffset – 0.2/+ Foffset + 0.2
-Fuw (offset forf = 7.5 kHz),MHz,,,,,
-"NOTE 1:The transmitter shall be set to 4dB below PCMAX_L,c or PCMAX_L as defined in subclause 6.2.5A.NOTE 2:Reference measurement channel is specified in Annex A.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD as described in Annex A.5.1.1/A.5.2.1.NOTE 3:The Fuw (offset) is the frequency separation of the center frequency of the carrier closest to the interferer and the center frequency of the interferer and shall be further adjusted to MHz to be offset from the sub-carrier raster.NOTE 4:  The requirement is applied for the band combinations whose component carriers’ BW≥5 MHz.",,,,,,

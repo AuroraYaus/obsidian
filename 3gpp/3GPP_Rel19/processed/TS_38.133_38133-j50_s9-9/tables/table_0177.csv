@@ -1,5 +1,0 @@
-DRX cycle,TPSS/SSS_sync_intra
-No DRX,"max(600 ms, 5 x Kgap x N1 Note 2 x max(MGRP, SMTC period)) x CSSFintra"
-DRX cycle≤ 320 ms,"max(600 ms, ceil(1.5 x 5 x Kgap x N1 Note 2) x max(MGRP, SMTC period,DRX cycle)) x CSSFintra"
-DRX cycle>320 ms,"Ceil( 5 x Kgap x N1 Note 2) x max(MGRP, DRX cycle) x CSSFintra"
-"NOTE 1:void.NOTE 2:For ATG UE capable of antennaArrayType-r18, N1 = 3 when network assistance on ATG cells reference locations is provided, otherwise N1 = 4.Otherwise, N1 = 1.",

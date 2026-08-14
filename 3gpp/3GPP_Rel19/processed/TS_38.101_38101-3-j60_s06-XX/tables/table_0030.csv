@@ -1,6 +1,0 @@
-ΔfOOB(MHz),Spectrum emission limit (dBm),Measurement bandwidth
-± 0 - 1,"Max(Round(10*log(0.15/ENBW)),-24)",30 kHz
-± 1 - 5,-10,1 MHz
-± 5 - ENBW,-13,1 MHz
-± ENBW – (ENBW+5),-25,1 MHz
-NOTE:ENBW refers to the aggregated channel bandwidth in MHz as defined in clause 5.3B.,,

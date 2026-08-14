@@ -1,6 +1,0 @@
-DRX cycle length [s],"Tdetect,EUTRAN_Relax [s] (number of DRX cycles)","Tmeasure,EUTRAN_Relax [s] (number of DRX cycles)","Tevaluate,EUTRAN_Relax[s] (number of DRX cycles)"
-0.32,11.52 x KLPW (36 x KLPW),1.28 x KLPW (4 x KLPW),5.12 x KLPW (16 x KLPW)
-0.64,17.92 x KLPW (28 x KLPW),1.28 x KLPW (2 x KLPW),5.12 x KLPW (8 x KLPW)
-1.28,32 x KLPW (25 x KLPW),1.28 x KLPW (1 x KLPW),6.4 x KLPW (5 x KLPW)
-2.56,58.88 x KLPW (23 x KLPW),2.56 x KLPW (1 x KLPW),7.68 x KLPW (3 x KLPW)
-NOTE 1:KLPW = 16 is the measurement relaxation factor applicable for UE with LP-WUR fulfilling relaxed measurement criterion.,,,

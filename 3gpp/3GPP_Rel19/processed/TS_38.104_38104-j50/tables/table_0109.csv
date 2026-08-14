@@ -1,6 +1,0 @@
-Parameter,Value
-Wanted signal type,NR signal
-Interfering signal type,NR signal of the same BS channel bandwidth and SCS as the wanted signal (Note 1).
-Interfering signal level,Power level declared by the base station manufacturer (Note 2).
-Frequency offset between interfering signal and wanted signal,0 MHz
-"NOTE 1:The interfering signal shall be incoherent with the wanted signal.NOTE 2:The declared interfering signal power level at each TAB connector is the sum of the co-channel leakage power coupled via the combined RDN and Antenna Array from all the other TAB connectors, but does not comprise power radiated from the Antenna Array and reflected back from the environment. The power at each of the interfering TAB connectors is Prated,c,TABC.",

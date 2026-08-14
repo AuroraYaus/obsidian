@@ -1,8 +1,0 @@
-LTM-Candidate field descriptions
-ltm-CandidateConfigThis field includes an RRCReconfiguration message used to configure an LTM candidate configuration.
-ltm-CandidatePCIThis field identifies the PCI of the SpCell of the LTM candidate configuration contained in ltm-CandidateConfig.
-"ltm-EarlyUL-SyncConfig, ltm-EarlyUL-SyncConfigSULA configuration used to perform the early UL synchronization procedure over an UL or SUL carrier."
-ltm-ExecutionConditionThis field can only be included in an ltm-Config associated with the MCG.
-"ltm-NoResetIDIf the network configures this field for one LTM candidate configuration, the network configures also for all LTM candidate configurations within ltm-CandidateToAddModList in LTM-Config and ensures that the UE has stored a value for ltm-ServingCellNoResetID within VarLTM-ServingCellNoResetID."
-"ltm-NoSecurityChangeIDIf the network configures this field for one LTM candidate configuration, the network configures also for all LTM candidate configurations within ltm-CandidateToAddModList in LTM-Config and ensures that the UE has stored a value for ltm-ServingCellNoSecurityChangeID within VarLTM-ServingCellNoSecurityChange."
-"ltm-UE-MeasuredTA-IDIf the network configures this field for one LTM candidate configuration, the network configures also for all LTM candidate configurations within ltm-CandidateToAddModList in LTM-Config and ensures that the UE has stored a value for ltm-ServingCellUE-MeasuredTA-ID within VarLTM-ServingCellUE-MeasuredTA-ID. This field is absent if tag2 is present for this LTM candidate configuration."

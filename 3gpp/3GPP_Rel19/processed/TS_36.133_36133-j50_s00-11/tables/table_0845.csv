@@ -1,7 +1,0 @@
-Accuracy,,Conditions,,,,
-Normal condition,Extreme condition,Ês/Iot,Io Note 1 range,,,
-,,,E-UTRA/NR operating band groups Note 2,Minimum Io,,Maximum Io
-dB,dB,dB,,dBm/15kHz,dBm/BWChannel,dBm/BWChannel
-6,9,-1 dB,NTDD_SAB_O,-122.9,N/A,-70
-8,11,-1 dB,NTDD_SAB_O,N/A,-70,-50
-NOTE 1:Io is assumed to have constant EPRE across the bandwidth.NOTE 2:E-UTRA/NR operating band groups are as defined in Section 3.5.,,,,,,

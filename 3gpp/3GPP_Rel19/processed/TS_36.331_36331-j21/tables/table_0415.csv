@@ -1,6 +1,0 @@
-UplinkPowerControl-NB field descriptions
-"alphaParameter: αc(1). See TS 36.213 [23], clause 16.2.1.1, where al0 corresponds to 0, al04 corresponds to value 0.4, al05 to 0.5, al06 to 0.6, al07 to 0.7, al08 to 0.8, al09 to 0.9 and al1 corresponds to 1."
-"deltaMCS-EnabledParameter: KS. See TS 36.213 [23], clause 16.2.1.1.1. Value en0 corresponds to value 0 corresponding to state ""disabled"" and value en1 corresponds to value 1.25 corresponding to state ""enabled""."
-"deltaPreambleMsg3Parameter: . See TS 36.213 [23], clause 16.2.1.1. Actual value = IE value * 2 [dB]."
-"p0-NominalNPUSCHParameter: . See TS 36.213 [23], clause 16.2.1.1, unit dBm."
-"p0-UE-NPUSCHParameter: . See TS 36.213 [23], clause 16.2.1.1, unit dB."

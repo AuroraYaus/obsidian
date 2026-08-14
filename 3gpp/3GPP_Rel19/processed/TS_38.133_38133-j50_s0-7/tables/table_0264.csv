@@ -1,6 +1,0 @@
-Sub-carrier spacing ofEUTRA cell in MCG (kHz),DL Sub-carrier spacing of cell in SCG (kHz) (Note 1),Maximum receive timing difference (µs)
-15,15,500
-15,30,250
-15,60,125
-15,120Note2,62.5
-"NOTE 1:DL Sub-carrier spacing is min{SCSSS, SCSDATA}.NOTE 2:For E-UTRA FDD-NR FDD intra-band EN-DC, for which the requirement is defined in clause 7.6.3 and this table 7.6.2-1 is also applicable, the scenario with 120 kHz does not exit.",,

@@ -1,4 +1,0 @@
-CellIndividualOffsetList-EUTRA field descriptions
-"carrierFreqIndicates the EUTRA frequency for which cellIndividualOffset is applicable. If the field is not configured, the EUTRA frequency indicated by carrierFreq within the MeasObjectEUTRA of the measID associated with this ReportConfigInterRAT applies."
-"cellIndividualOffsetCell individual offsets applicable to a specific measurement event. If this field is present, the UE, for the same cell, shall ignore the cell individual offset configured within the MeasObjectEUTRA of the measID associated with this ReportConfigInterRAT."
-physCellIdPhysical cell identity of a E-UTRAN cell in the cell list.

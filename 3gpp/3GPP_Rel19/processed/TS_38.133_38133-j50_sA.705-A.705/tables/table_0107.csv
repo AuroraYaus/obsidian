@@ -1,5 +1,0 @@
-Configuration,Description
-1,"PCell: 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex modeFR1 SCell: 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex modeFR2 Target SCell: 120 kHz SSB SCS, 100 MHz bandwidth, TDD duplex mode"
-2,"PCell: 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex modeFR1 SCell: 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex modeFR2 Target SCell: 120 kHz SSB SCS, 100 MHz bandwidth, TDD duplex mode"
-3,"PCell: 30kHz SSB SCS, 40 MHz bandwidth, TDD duplex modeFR1 SCell: 30kHz SSB SCS, 40 MHz bandwidth, TDD duplex modeFR2 Target SCell: 120 kHz SSB SCS, 100 MHz bandwidth, TDD duplex mode"
-Note 1:The UE is only required to pass in one of the supported test configurationsNote 2:A UE which passes the requirements in test case A.7.5.3.15 can skip the test cases in A.7.5.3.19,

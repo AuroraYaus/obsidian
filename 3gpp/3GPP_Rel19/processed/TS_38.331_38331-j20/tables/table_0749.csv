@@ -1,7 +1,0 @@
-SL-PQI field descriptions
-"sl-AveragingWindowIndicates the Averaging Window for a QoS flow, and applies to GBR QoS flows only. Unit: ms. The default value of the IE is 2000ms."
-"sl-MaxDataBurstVolumeIndicates the Maximum Data Burst Volume for a QoS flow, and applies to delay critical GBR QoS flows only. Unit: byte."
-sl-PacketDelayBudgetIndicates the Packet Delay Budget for a QoS flow. Upper bound value for the delay that a packet may experience expressed in unit of 0.5ms.
-sl-PacketErrorRateIndicates the Packet Error Rate for a QoS flow. The packet error rate is expressed as Scalar x 10-k where k is the Exponent.
-"sl-PriorityLevelIndicates the Priority Level for a QoS flow. Values ordered in decreasing order of priority, i.e. with 1 as the highest priority and 8 as the lowest priority."
-sl-StandardizedPQIIndicate the PQI for standardized PQI.

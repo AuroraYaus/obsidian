@@ -1,4 +1,0 @@
-Conditional Presence,Explanation
-SIB12,"This field is optional present if included within SIB12, need R. Otherwise, the field is absent."
-SIB23,"This field is optional present if included within SIB23, need R. Otherwise, the field is absent."
-V2X-SL-Shared,"This field is mandatory present if the carrier frequency configured for NR sidelink communication is shared by V2X sidelink communication. It is absent, Need R, otherwise."

@@ -1,8 +1,0 @@
-Parameter,,Unit,Value,,Comment
-,,,Test 1,Test 2,
-LTM-CSI-ReportConfig,ltm3-Threshold-r19,dB,4,,
-,hysteresis-r19,dB,0,,
-,timeToTrigger-r19,ms,0,,
-,maxNumberOfReportedBeams-r19,,16,,
-,allowReportAnyBeam-r19,,enabled,,
-,reportCurrentBeam-r19,,enabled,,

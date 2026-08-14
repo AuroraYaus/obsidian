@@ -1,3 +1,0 @@
-BS channel bandwidth of the lowest/highest carrier received (MHz),Wanted signal mean power (dBm),Interfering signal mean power (dBm),Interfering signal centre frequency minimum offset from the lower/upper Base Station RF Bandwidth edge or sub-block edge inside a sub-block gap (MHz),Type of interfering signal
-"20, 40, 60, 80",PREFSENS + 6 dB,Medium Range BS: -38Local Area BS: -35,±30,"20 MHz DFT-s-OFDM NR signal15 kHz SCS, 100 RBs"
-"NOTE 1:PREFSENS depends on the RAT. For NR, PREFSENS depends also on the BS channel bandwidth as specified in tables 7.2.2-2b and 7.2.2-3b.",,,,

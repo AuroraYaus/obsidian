@@ -1,7 +1,0 @@
-Layers,
-,
-υ=1,"Wm,n3,p1(1),p12,i2,5,1,t(1)=Wm,n3,p1(1),p12,i2,5,1,t1"
-υ=2,"Wm,n3,p1(1),p12,i2,5,1,p2(1),p22,i2,5,2,t(2)=12Wm,n3,p1(1),p12,i2,5,1,t1  Wm,n3,p2(1),p22,i2,5,2,t2"
-υ=3,"Wm,n3,p1(1),p12,i2,5,1,p2(1),p22,i2,5,2,p3(1),p32,i2,5,3,t(3)=13Wm,n3,p1(1),p12,i2,5,1,t1  Wm,n3,p2(1),p22,i2,5,2,t2  Wm,n3,p3(1),p32,i2,5,3,t3"
-υ=4,"Wm,n3,p1(1),p12,i2,5,1,p2(1),p22,i2,5,2,p3(1),p32,i2,5,3,p4(1),p42,i2,5,4,t(4)=12Wm,n3,p1(1),p12,i2,5,1,t1  Wm,n3,p2(1),p22,i2,5,2,t2  Wm,n3,p3(1),p32,i2,5,3,t3  Wm,n3,p4(1),p42,i2,5,4,t4"
-"Where ,and the mappings from  to, , and from  to , , , , , , , , , ,  are as described above, including the ranges of the constituent indices of  and . Wm,n3,pl(1),pl2,i2,5,l,tl=1γt,li=0L-1vm(i)pl,0(1)f=0M-1yt(f)pl,i,f(2)φl,i,fi=0L-1vm(i)pl,1(1)f=0M-1yt(f)pl,i+L,f(2)φl,i+L,f,  l=1,2,3,4γt,l=i=02L-1pl,iL12f=0M-1yt(f)pl,i,f(2)φl,i,f2i1 mn3i2i2,5,1i2,5,2i2,5,3 i2,5,4,p1(1)p2(1)p3(1)p4(1) p1(2)p2(2)p3(2)p4(2)i1i2",

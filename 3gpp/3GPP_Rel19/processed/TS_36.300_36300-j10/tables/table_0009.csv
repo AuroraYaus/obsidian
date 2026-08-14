@@ -1,5 +1,0 @@
-HARQ feedback seen by the UE,PDCCHseen by the UE,UE behaviour
-ACK or NACK,New Transmission,New transmission according to PDCCH
-ACK or NACK,Retransmission,Retransmission according to PDCCH (adaptive retransmission)
-ACK,None,"No (re)transmission, keep data in HARQ buffer and a PDDCH is required to resume retransmissions"
-NACK,None,Non-adaptive retransmission

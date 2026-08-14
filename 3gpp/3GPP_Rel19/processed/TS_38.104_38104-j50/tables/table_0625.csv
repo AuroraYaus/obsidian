@@ -1,6 +1,0 @@
-Channel bandwidth (MHz),FFT size,CP length in FFT samples,EVM window length W,Ratio of W to total CP length (Note) (%)
-400,512,36,[18],[50]
-800,1024,72,[36],[50]
-1600,2048,144,[72],[50]
-2000,[2048],[144],[72],[50]
-NOTE 1:These percentages are informative and apply to all OFDM symbols within subframe except for symbol 0 of slot 0 and slot 4. Symbol 0 of slot 0 and slot 4 may have a longer CP and therefore a lower percentage.,,,,

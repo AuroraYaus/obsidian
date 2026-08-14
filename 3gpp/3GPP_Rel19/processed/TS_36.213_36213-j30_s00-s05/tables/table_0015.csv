@@ -1,4 +1,0 @@
-Number of antenna ports,OFDM symbol indices within a slot where the ratio of the corresponding PDSCH EPRE to the cell-specific RS EPRE is denoted by,,OFDM symbol indices within a slot where the ratio of the corresponding PDSCH EPRE to the cell-specific RS EPRE is denoted by,
-,Normal cyclic prefix,Extended cyclic prefix,Normal cyclic prefix,Extended cyclic prefix
-One or two,"1, 2, 3, 5, 6","1, 2, 4, 5","0, 4","0, 3"
-Four,"2, 3, 5, 6","2, 4, 5","0, 1, 4","0, 1, 3"

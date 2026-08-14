@@ -1,5 +1,0 @@
-DRX cycle,TPSS/SSS_sync_inter
-No DRX,"max( 600 ms, ceil( 5 x Kp) x SMTC period )Note 1 x CSSFinter"
-DRX cycle≤ 320 ms,"max( 600 ms, ceil(1.5x 5 x Kp) x max(SMTC period,DRX cycle)) x CSSFinter"
-DRX cycle>320 ms,ceil(5 x Kp) x DRX cycle x CSSFinter
-NOTE 1:SMTC period is the SMTC period in SMTC configuration which is associated with the target cell to be measured configured in SSB-MTC4List-r17.,

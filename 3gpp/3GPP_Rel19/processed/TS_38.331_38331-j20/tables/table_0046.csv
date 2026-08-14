@@ -1,3 +1,0 @@
-PLMN-RAN-AreaCell field descriptions
-plmn-IdentityPLMN Identity to which the cells in ran-AreaCells belong. If the field is absent the UE not in SNPN access mode uses the ID of the registered PLMN. This field is not included for UE in SNPN access mode (for UE in SNPN access mode the ran-AreaCells always belongs to the registered SNPN).
-ran-AreaCellsThe total number of cells of all PLMNs does not exceed 32.

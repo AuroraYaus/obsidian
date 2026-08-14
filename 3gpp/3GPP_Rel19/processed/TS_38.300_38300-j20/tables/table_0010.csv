@@ -1,4 +1,0 @@
-Profile ID,UE specific reference,"NG-RAN node address index (e.g., gNB ID, eNB ID)",RAT-specific information,PLMN-specific information,Comment
-1,20 bits(~1 million values),20 bits(~1 million values),N/A,N/A,NG-RAN node address index may be very well represented by the LSBs of the gNB ID.This profile may be applicable for any NG-RAN RAT.
-2,20 bits(~1 million values),16 bits(65.000 nodes),N/A,4 bits (Max 16 PLMNs),Max number of PLMN IDs broadcast in NR is 12.This profile may be applicable for any NG-RAN RAT.
-3,24 bits(16 million values),16 bits(65.000 nodes),N/A,N/A,Reduced node address to maximise addressable UE contexts.This profile may be applicable for any NG-RAN RAT.

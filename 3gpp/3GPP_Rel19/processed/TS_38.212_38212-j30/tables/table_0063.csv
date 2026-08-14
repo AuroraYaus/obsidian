@@ -1,6 +1,0 @@
-UCI bit sequence,CSI report number
-,CSI report #1as in Table 6.3.1.1.2-7/7A/7B/8/8A/8B/8C/8D/8E/8F/8G/8H
-,CSI report #2as in Table 6.3.1.1.2-7/7A/7B/8/8A/8B/8C/8D/8E/8F/8G/8H
-,…
-,CSI report #nas in Table 6.3.1.1.2-7/7A/7B/8/8A/8B/8C/8D/8E/8F/8G/8H
-"NOTE:For a CSI report #i containing  CSI sub-reports, where , all CSI sub-reports within the CSI report #i are mapped to the corresponding segment of the UCI bit sequence of CSI report #i, from upper part to lower part of the segment, in increasing order of CSI sub-report number. CSI sub-report #1, CSI sub-report #2, …, CSI sub-report # correspond to the CSI sub-reports in increasing order of reportSubConfigId.Nisubi∈{1,2,…,n}Nisub",

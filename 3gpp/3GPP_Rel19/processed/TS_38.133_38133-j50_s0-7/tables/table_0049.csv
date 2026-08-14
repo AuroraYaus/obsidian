@@ -1,7 +1,0 @@
-DRX cycle length [s],Scaling Factor (N1),,"Tdetect,NR_Inter_CCA [s] (number of DRX cycles)","Tmeasure,NR_Inter_CCA [s] (number of DRX cycles)","Tevaluate,NR_Inter_CCA[s] (number of DRX cycles)"
-,FR1,FR2-2Note 5,,,
-0.32,1,12,0.32xN1x(36+Md)xM2 {(36+Md)xN1xM2},0.32xN1x(4+Mm) xM2{(4+Mm)xN1xM2},0.32xN1x(16+Me) x M2{(16+Me)xN1 xM2}
-0.64,,8,0.64xN1x(28+Md)  {(28+Md)xN1 },0.64xN1x(2+Mm) {(2+Mm)xN1 },0.64xN1x(8+Me) {(8+Me)xN1 }
-1.28,,6,1.28xN1x(25+Md){(25+Md)xN1 },1.28xN1x(1+Mm){(1+Mm)xN1 },1.28xN1x(5+Me) {(5+Me)xN1}
-2.56,,5,2.56xN1x(23+Md){(23+Md)xN1 },2.56xN1x(1+Mm){(1+Mm)xN1 },2.56xN1x(3+Me) {(3+Me)xN1}
-"Note 1:M2 = 1.5 if SMTC periodicity of measured intra-frequency cell > 20 ms; otherwise M2=1.Note 2:Md, Mm, Me are the number of groups of consecutive N1 DRX cycles each group with at least one SMTC occasion not available at the UE during Tdetect,NR_Inter_CCA, Tmeasure,NR_Inter_CCA and Tevaluate,NR_Inter_CCA, and Mm ≤ Mm,max, Md ≤ Md,max and Me ≤  Me,max Note 3:Mm,max = 16 for DRX cycle length = 0.32s; Mm,max = 8 for DRX cycle length = 0.64s;Mm,max = 4 for DRX cycle length = 1.28s;Mm,max = 4 for DRX cycle length = 2.56s Note 4:Md,max = 4*Mm,max, Me,max = 2*Mm,max.Note 5:Applies for UE supporting FR2-2 power class 2&3. For UE supporting FR2-2 power class 1, N1 = 12 for all DRX cycle length.",,,,,

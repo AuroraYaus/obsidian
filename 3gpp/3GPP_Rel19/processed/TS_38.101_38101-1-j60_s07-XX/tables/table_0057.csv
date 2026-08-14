@@ -1,5 +1,0 @@
-UL band,DL band,UL BW,SCS of UL band,UL RB Allocation,DL BW,MSD,UL/DL fc condition,UL/DL harmonic order
-,,(MHz),(kHz),LCRB,(MHz),(dB),,
-n98,n41,5,15,6,10,9.3,NOTE 2,UL4/DL3
-n98,n41,5,15,6,100,2.2,NOTE 2,UL4/DL3
-"NOTE 1:The requirements should be verified using RBstart = floor((NRB-LCRB)/2), where floor(x) is the greatest integer less than or equal to x, and where the UL parameters NRB and LCRB are respectively, the transmission bandwidth configuration and the number of RB’s for the specified UL band channel bandwidth and the UL band subcarrier spacing.NOTE 2:The requirements should be verified for UL NR-ARFCN of the aggressor (lower) band (superscript LB) such that in MHz and  with carrier frequency in the victim (higher) band in MHz and  the channel bandwidth configured in the lower band.",,,,,,,,

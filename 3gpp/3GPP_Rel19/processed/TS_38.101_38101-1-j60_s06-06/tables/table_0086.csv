@@ -1,9 +1,0 @@
-"Channel Bandwidth, MHz","Carrier Center Frequency, Fc, MHz",Regions,,A-MPR
-,,RBend*12*SCSMHz,LCRB*12*SCSMHz,
-50 MHz,Fc ≤ 1945,≤ 4.5,> 0,A7
-,,">4.5, < 32.4","≥ max(0, 12*SCS*RBend - 14.4)",A4
-,,< 32.4,"< max(0, 12*SCS*RBend - 14.4)",A5
-,,≥ 32.4,> 0,A6
-50 MHz,1945 < Fc ≤ 1980,< 27,"≥ max(0, 12*SCS*RBend - 14.4)",A1
-,,< 27,"< max(0, 12*SCS*RBend - 14.4)",A2
-,,≥ 27,> 0,A3

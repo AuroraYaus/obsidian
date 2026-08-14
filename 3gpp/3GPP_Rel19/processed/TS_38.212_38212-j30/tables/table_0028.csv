@@ -1,9 +1,0 @@
-Field,Bitwidth,
-,1 antenna port per Resource,> 1 antenna ports per Resource
-Rank Combination Indicator,0,"min(2,log2 nRI,NCJT)"
-The first Layer Indicator,0,log2v1
-The second Layer Indicator,0,log2v2
-Wide-band CQI for the first TB,4,4
-Subband differential CQI for the first TB,2,2
-CRI if csi-ReportMode= Mode 1,log2N,log2N
-CRI if csi-ReportMode= Mode 2,log2M1+M2+N,log2M1+M2+N

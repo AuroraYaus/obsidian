@@ -1,4 +1,0 @@
-DRX cycle,TSSB_time_index_intra
-No DRX,3 x KNCSG x measCycleSCellx CSSFintra
-DRX cycle≤ 320 ms,"3 x KNCSG x max(measCycleSCell, 1.5xDRX cycle) x CSSFintra"
-DRX cycle> 320 ms,"3 x KNCSG x max(measCycleSCell, DRX cycle) x CSSFintra"

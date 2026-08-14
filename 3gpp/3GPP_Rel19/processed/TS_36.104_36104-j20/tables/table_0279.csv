@@ -1,9 +1,0 @@
-Number of TX antennas,Number of RX antennas,Propagation conditions andcorrelation matrix (Annex B),Frequency offset,SNR [dB],,,,
-,,,,Burst format 0,Burst format 1,Burst format 2,Burst format 3,Burst format 4
-1,2,AWGN,0,-14.2,-14.2,-16.4,-16.5,-7.2
-,,ETU 70 Low*,270 Hz,-8.0,-7.8,-10.0,-10.1,-0.1
-,4,AWGN,0,-16.9,-16.7,-19.0,-18.8,-9.8
-,,ETU 70 Low*,270 Hz,-12.1,-11.7,-14.1,-13.9,-5.1
-,8,AWGN,0,-19.8,-19.4,-21.5,-21.3,-11.8
-,,ETU 70 Low*,270 Hz,-16.3,-15.9,-17.8,-17.5,-8.6
-Note*:Not applicable for Local Area BS and Home BS.,,,,,,,,

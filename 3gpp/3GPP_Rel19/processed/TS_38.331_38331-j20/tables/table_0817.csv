@@ -1,5 +1,0 @@
-SL-SRAP-ConfigPC5 field descriptions
-sl-RemoteUE-LocalIdentityIndicates the local UE ID of the L2 U2U Remote UE used in SRAP as specified in TS 38.351 [66].
-sl-RemoteUE-L2IdentityIndicates the Source L2 ID of the L2 U2U Remote UE as specified in TS 23.304 [65].
-sl-PeerRemoteUE-LocalIdentityIndicates the local UE ID of the peer L2 U2U Remote UE used in SRAP as specified in TS 38.351 [66].
-sl-PeerRemoteUE-L2IdentityIndicates the destination L2 ID identifying the peer L2 U2U Remote UE as specified in TS 23.304 [65].

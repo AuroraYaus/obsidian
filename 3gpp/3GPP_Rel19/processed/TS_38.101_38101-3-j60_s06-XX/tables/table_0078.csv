@@ -1,4 +1,0 @@
-"EN-DC Aggregated Bandwidth, ENBW, MHz",≤100,">100, ≤120",">120, ≤140",">140, ≤160"
-"Pw in Transmission Bandwidth Configuration, perCC, dBm",PW 1,"-42.7 +10log10(NRB,c/ NRB_agg)","-42 +10log10(NRB,c/ NRB_agg)","-41.4 +10log10(NRB,c/ NRB_agg)"
-"Pinterferer, dBm",-25,,,
-NOTE 1:PW is wanted signal power level at the specified EN-DC aggregated Bandwidth from Table 7.5.1A-3 in TS 36.101 [4]NOTE 2:Jammer BW and offset is from Table 7.5.1A-3 [4] and is applied from the lowest edge of the lowest carrier and the highest edge of the highest carrierNOTE 3:Void.NOTE 4:Void.,,,,

@@ -1,8 +1,0 @@
-SCGFailureInformationNR field descriptions
-failedPSCellIdThis field indicates the physical cell id and carrier frequency of the cell in which SCG failure is detected or the target PSCell of the failed PSCell change or failed PSCell addition.
-"failureTypeIndicates the cause of the SCG failure. When the field failureType-v1610 is included, the network ignores the field failureType-r15."
-measResultFreqListNRThe field contains available results of measurements on NR frequencies the UE is configured to measure by measConfig.
-measResultSCGIncludes the NR MeasResultSCG-Failure IE as specified in TS 38.331 [82]. The field contains available results of measurements on NR frequencies the UE is configured to measure by the NR RRCConfiguration message.
-"perRA-InfoListNRThis field is used to indicate per NR RACH report information. The perRA-InfoList-r16 IE includes PerRAInfoList-r16, and the perRA-InfoList-v1660 IE includes PerRAInfoList-v1660, and the perRA-InfoList-v1800 includes PerRAInfoList-v1800, which are specified in TS 38.331 [82]."
-"previousPSCellIdThis field indicates the physical cell id and carrier frequency of the cell that is the source PSCell of the last PSCell change. In case of PSCell addition, this field is absent."
-timeSCG-FailureThis field is used to indicate the time elapsed since the last execution of RRCReconfiguration with reconfigurationWithSync for the SCG until the SCG failure. Actual value = field value * 100ms. The maximum value 1023 means 102.3s or longer.

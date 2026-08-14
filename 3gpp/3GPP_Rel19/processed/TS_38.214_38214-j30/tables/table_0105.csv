@@ -1,8 +1,0 @@
-,PDSCH decoding time N1 [symbols],
-,"dmrs-AdditionalPosition = 'pos0' in DMRS-DownlinkConfig indmrs-DownlinkForPDSCH-MappingTypeA and dmrs-DownlinkForPDSCH-MappingTypeB if either higher layer parameter is configured, and in dmrs-DownlinkForPDSCH-MappingTypeA-DCI-1-2 and dmrs-DownlinkForPDSCH-MappingTypeB-DCI-1-2 if either higher layer parameter is configured","dmrs-AdditionalPosition ≠ 'pos0' in DMRS-DownlinkConfig in any of dmrs-DownlinkForPDSCH-MappingTypeA, dmrs-DownlinkForPDSCH-MappingTypeB, dmrs-DownlinkForPDSCH-MappingTypeA-DCI-1-2, dmrs-DownlinkForPDSCH-MappingTypeB-DCI-1-2, or if none of the higher layer parameters is configured"
-0,8,"N1,0"
-1,10,13
-2,17,20
-3,20,24
-5,80,96
-6,160,192

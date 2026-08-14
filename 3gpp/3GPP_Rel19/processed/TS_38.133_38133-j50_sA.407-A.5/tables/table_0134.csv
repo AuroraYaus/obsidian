@@ -1,6 +1,0 @@
-Parameter,Unit,Test configuration,Value,Comment
-RF Channel Number,,"1, 2",1 and 2,1 for NR PSCell and 2 for LTE PCell
-SSB configuration,,"1, 2",SSB.1 FR2,
-SMTC configuration,,"1, 2",SMTC.3,
-DRX cycle length,s,"1, 2",OFF,
-T1,s,"1, 2",5,During T1 the UE is required to correctly transmit ACK/NACK

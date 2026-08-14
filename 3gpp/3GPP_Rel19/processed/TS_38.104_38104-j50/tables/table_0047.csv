@@ -1,4 +1,0 @@
-BS channel bandwidth of lowest/highest NR carrier transmitted BWChannel (MHz),BS adjacent channel centre frequency offset below the lowest or above the highest carrier centre frequency transmitted,Assumed adjacent channel carrier (informative),Filter on the adjacent channel frequency and corresponding filter bandwidth,ACLR limit
-"10, 20, 40, 60, 80",BWChannel,NR of same BW (Note 2),Square (BWConfig),35 dB
-,2 x BWChannel,NR of same BW (Note 2),Square (BWConfig),40 dB
-NOTE 1:BWChannel and BWConfig are the BS channel bandwidth and transmission bandwidth configuration of the lowest/highest NR carrier transmitted on the assigned channel frequency.NOTE 2:With SCS that provides largest transmission bandwidth configuration (BWConfig).,,,,

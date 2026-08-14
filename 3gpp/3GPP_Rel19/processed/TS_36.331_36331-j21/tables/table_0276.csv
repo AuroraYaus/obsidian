@@ -1,8 +1,0 @@
-UE-RadioPagingInfo field descriptions
-"ce-ModeA, ce-ModeBIndicates whether the UE supports operation in CE mode A and/or B, as specified in TS 36.211 [21] and TS 36.213 [23]."
-"groupWakeUpSignal, groupWakeUpSignalTDDIndicates whether the UE supports GWUS for paging in RRC_IDLE as specified in TS 36.211 [21], TS 36.213 [23] and TS 36.304 [4]. If this field is included, the minimum gap between GWUS and associated PO for DRX is fixed as 40 ms."
-"groupWakeUpSignalAlternation, groupWakeUpSignalAlternationTDDIndicates whether the UE supports GWUS with group resource alternation for paging in RRC_IDLE as specified in TS 36.211 [21], TS 36.213 [23] and TS 36.304 [4]. If this field is included, the minimum gap between GWUS and associated PO for DRX is fixed as 40 ms."
-"inactiveStatePO-DeterminationIndicates whether the UE other than BL UE or UE in CE supports to use the same i_s in RRC_INACTIVE state as in RRC_IDLE state, as specified in TS 36.304 [4]."
-"ue-Category, ue-CategoryDLUE category as defined in TS 36.306 [5]. A category M2 UE shall also include the field ue-CategoryDL-v1310 in this version of the specification."
-"wakeUpSignal, wakeUpSignal-TDDIndicates whether the UE supports WUS for paging in RRC_IDLE as specified in TS 36.213 [22] and TS 36.304 [4]. If this field is included, the minimum gap between WUS and associated PO for DRX is fixed as 40 ms."
-"wakeUpSignalMinGap-eDRX, wakeUpSignalMinGap-eDRX-TDDIndicates the minimum gap the UE supports between WUS and associated PO for eDRX as specified in TS 36.213 [22] and TS 36.304 [4]. Value ms40 corresponds to 40 ms, ms240 corresponds to 240 ms and so on. If this field is included, the UE shall also indicate support of WUS or GWUS for paging."

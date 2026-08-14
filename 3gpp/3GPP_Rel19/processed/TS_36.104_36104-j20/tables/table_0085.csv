@@ -1,6 +1,0 @@
-,Frequency range,Maximum Level,Measurement Bandwidth,Note
-Wide Area BS,FUL_low  – FUL_high,-96 dBm,100 kHz,
-Medium Range BS,FUL_low  – FUL_high,-91 dBm,100 kHz,
-Local Area BS,FUL_low  – FUL_high,-88 dBm,100 kHz,
-Home BS,FUL_low  – FUL_high,-88 dBm,100 kHz,
-"Note 1:For BS operating in regions where a band is only partially allocated for E-UTRA operations (e.g. band 28), this requirement only applies in the UL frequency range of the partial allocation.NOTE 2: For BS capable of multi-band operation, Table 6.6.4.2-1 assumes that the supported operating bands, where the corresponding BS transmit and receive frequency ranges in table 5.5-1 would be overlapping, are not deployed in the same geographical area. For such a case of operation with overlapping frequency arrangements in the same geographical area, special protection requirements may apply that are not covered by the 3GPP specifications.",,,,

@@ -1,9 +1,0 @@
-Parameter,Unit,Value,Comment
-NR RF Channel Number,,1,One NR radio channel is used for this test
-Active PCell,,Cell 1,PCell on RF channel number 1.
-CP length,,Normal,
-DRX,,OFF,
-Cell-individual offset for cells on RF channel number 1,dB,0,Individual offset for cells on PCC.
-timeRestrictionForChannelMeasurements,,configured,"Time domain measurement restriction for the channel (signal) measurements (see TS 38.214 [19], clause 5.2.1.1)"
-T1,s,0.5,
-T2,s,1.5,

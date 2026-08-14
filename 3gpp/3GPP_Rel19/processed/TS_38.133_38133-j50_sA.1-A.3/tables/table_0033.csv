@@ -1,8 +1,0 @@
-Field,Value
-drx-onDurationTimer,psf2
-drx-InactivityTimer,psf2
-drx-RetransmissionTimer,Psf16
-longDRX-CycleStartOffset,"sf160, 0"
-shortDRX,disable
-TimeAlignmentTimer,Infinity
-NOTE:This DRX configuration is applicable for E-UTRA serving cell. For further information see clause 6.3.2 in TS 36.331 [16].,

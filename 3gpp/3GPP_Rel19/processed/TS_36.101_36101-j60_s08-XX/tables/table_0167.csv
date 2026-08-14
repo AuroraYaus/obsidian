@@ -1,5 +1,0 @@
-Test number,Bandwidth,Reference Channel,OCNG Pattern,Propagation Condition,Correlation Matrix and Antenna Configuration,Reference value,,UE Category
-,,,,,,Fraction of MaximumThroughput (%),SNR (dB),
-1,10 MHz,R.11 TDD,OP.1 TDD,EVA5,2x2 Medium,70,6.8,≥2
-,5 MHz,R.11-2 TDD,OP.1 TDD,EVA5,2x2 Medium,70,6.8,1
-2,10 MHz,R.10 TDD,OP.1 TDD,HST,2x2,70,-2.3,≥1

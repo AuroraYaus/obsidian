@@ -1,2 +1,0 @@
-Conditional presence,Explanation
-TDD,"The field is mandatory present for TDD if the pucch-Format is not present. If the pucch-Format is present, the field is not present and the UE shall delete any existing value for this field. It is not present for FDD and the UE shall delete any existing value for this field."

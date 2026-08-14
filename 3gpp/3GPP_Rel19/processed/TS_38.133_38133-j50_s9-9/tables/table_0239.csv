@@ -1,4 +1,0 @@
-"Condition NOTE1,2,3,4",T CO_measurement_period_inter_cca
-No DRX,"max(reportInterval, max(rmtc-Periodicity, MGRP) x CSSFinter)"
-DRX,"max(reportInterval, max(rmtc-Periodicity, MGRP,DRX cycle) x CSSFinter)"
-"NOTE 1:DRX or non DRX requirements apply according to the conditions described in clause 3.6.1NOTE 2:CSSFinter is a carrier specific scaling factor and is determined according to CSSFwithin_gap,i in clause 9.1.5.2 for measurement conducted within measurement gaps.",

@@ -1,6 +1,0 @@
-eDRX_IDLE cycle length [s],"Tdetect,NR_Inter_RedCap_Relax [s] (number of eDRX cycles)","Tmeasure,NR_Inter_RedCap_Relax [s] (number of eDRX cycles)","Tevaluate,NR_Inter_RedCap_Relax [s] (number of eDRX cycles)"
-,,,
-2.56,58.88 x N1 x K3 (23 x N1 x K3),2.56 x N1 x K3 (1 x N1 x K3),7.68 x N1 x K3 (3 x N1 x K3)
-5.12,117.76 x N1 x K3 (23 x N1 x K3),5.12 x N1 x K3 (1 x N1 x K3),10.24 x N1 x K3 (2 x N1 x K3)
-10.24,235.52 x N1 x K3 (23 x N1 x K3),10.24 x N1 x K3 (1 x N1 x K3),20.48 x N1 x K3 (2 x N1 x K3)
-NOTE 1:K3 = 6 is the measurement relaxation factor applicable for UE fulfilling the stationaryMobilityEvaluation [2] criterion.,,,

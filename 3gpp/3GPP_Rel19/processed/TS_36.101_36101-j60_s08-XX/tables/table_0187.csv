@@ -1,6 +1,0 @@
-Test number,Bandwidth,Reference Channel,OCNG Pattern,Propagation Condition,Correlation Matrix and Antenna Configuration,Reference value,,UE Category
-,,,,,,Fraction of MaximumThroughput (%),SNR (dB),
-1,2x20 MHz,R.30-1 TDD,OP.1 TDD (Note 1),EVA70,2x2 Low,70,13.7,≥5
-2,20MHz+15MHz,R.30-1 TDD for 20MHz CC,OP.1 TDD (Note 1),EVA70,2x2 Low,70,13.0,≥5
-,,R.11-9 TDD for 15MHz CC,OP.1 TDD (Note 1),EVA70,,70,12.9,
-Note 1:The OCNG pattern applies for each CC.Note 2: The applicability of requirements for different CA configurations and bandwidth combination sets is defined in 8.1.2.3.,,,,,,,,

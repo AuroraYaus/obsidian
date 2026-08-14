@@ -1,4 +1,0 @@
-DRX cycle,TSSB_time_index_intra
-No DRX,"max(160 ms, 6 x Kgap x Kmulti_SMTC x max(MGRP, SMTC period)) x CSSFintra_RedCap"
-DRX cycle≤ 320 ms,"max(160 ms, ceil(1.5 x 6) x Kgap x Kmulti_SMTC x max(MGRP, SMTC period,DRX cycle) x CSSFintra)"
-DRX cycle>320 ms,"6 x Kgap x Kmulti_SMTC x max(MGRP, DRX cycle) x CSSFintra"

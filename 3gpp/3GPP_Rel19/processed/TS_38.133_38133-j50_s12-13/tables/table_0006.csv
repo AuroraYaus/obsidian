@@ -1,4 +1,0 @@
-DRX cycle in NR cell,"Tevaluate,SLSS"
-No DRX,"max(400 ms, 2 x 5 x max(MGRP, SMTC period)) x CSSFintra"
-DRX cycle≤ 320 ms,"max(400 ms, ceil(2 x 1.5x 5) x max(MGRP, SMTC period,DRX cycle)) x CSSFintra"
-DRX cycle>320 ms,"7 x max(MGRP, DRX cycle) x CSSFintra"

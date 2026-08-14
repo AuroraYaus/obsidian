@@ -1,3 +1,0 @@
-UECapabilityEnquirySidelink-IEs field descriptions
-frequencyBandListFilterSidelinkThis field is used to indicate frequency bands for which the peer UE is requested to provide supported bands and band combinations for NR sidelink communications. The UE always provides this field.
-"ue-CapabilityInformationSidelinkThis field indicates the UECapabilityInformationSidelink message to provide the UE sidelink capability, which can be optionally sent together with UECapabilityEnquirySidelink."

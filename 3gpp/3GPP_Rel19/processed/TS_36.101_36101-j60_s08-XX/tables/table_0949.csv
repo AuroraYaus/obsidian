@@ -1,9 +1,0 @@
-Test num.,Band-width combination,Requirement,UE category
-1,20+20+15MHz,As specified in Table 8.13.1.1.2-2 per CC depending on either 2Rx CC or 4Rx CC,≥5
-2,20+15+15MHz,As specified in Table 8.13.1.1.2-2 per CC depending on either 2Rx CC or 4Rx CC,≥5
-3,3x20 MHz,As specified in Table 8.13.1.1.2-2 per CC depending on either 2Rx CC or 4Rx CC,≥5
-4,20+20+10 MHz,As specified in Table 8.13.1.1.2-2 per CC depending on either 2Rx CC or 4Rx CC,≥5
-5,20+15+10 MHz,As specified in Table 8.13.1.1.2-2 per CC depending on either 2Rx CC or 4Rx CC,≥5
-6,20+10+10 MHz,As specified in Table 8.13.1.1.2-2 per CC depending on either 2Rx CC or 4Rx CC,≥5
-7,15+15+10 MHz,As specified in Table 8.13.1.1.2-2 per CC depending on either 2Rx CC or 4Rx CC,≥5
-Note 1:The OCNG pattern applies for each CC.Note 2: The applicability of requirements for different dual connectvity configurations and bandwidth combination sets is defined in 8.1.2.6.,,,

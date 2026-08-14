@@ -1,5 +1,0 @@
-Test number,Bandwidth and MCS,Reference Channel,OCNG Pattern,Propagation Condition,Correlation Matrix and Antenna Configuration,Reference value,,UE Category
-,,,,,,Fraction of MaximumThroughput (%),SNR (dB),
-1,10 MHz16QAM,R.75 FDD,OP.1 FDD,EPA5,4x4 Low,70,18.4,≥5
-1a,10MHz16QAM,R.75A FDD,OP.1 FDD,EPA5,4x4 Low,70,[17.4],≥5
-"NOTE:For a UE supporting TM9 rank3/4 transmission based on DMRS OCC length 4, Test 1a will be run and Test 1 will be skipped. Otherwise, Test 1a is not applicable and only Test 1 will be run.",,,,,,,,

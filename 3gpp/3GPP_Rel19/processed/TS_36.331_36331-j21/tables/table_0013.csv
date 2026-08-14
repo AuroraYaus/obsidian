@@ -1,7 +1,0 @@
-MasterInformationBlock field descriptions
-"dl-BandwidthParameter: transmission bandwidth configuration, NRB in downlink, see TS 36.101 [42], table 5.6-1 and TS 36.102 [113], table 5.3A-1. n6 corresponds to 6 resource blocks, n15 to 15 resource blocks and so on."
-"earfcn-LSBIndicates the 2 least significant bits of the EARFCN for NTN bands where 100 kHz raster is used, see TS 36.102 [113]."
-"phich-ConfigSpecifies the PHICH configuration. If the UE is a BL UE or UE in CE, it shall ignore this field."
-"schedulingInfoSIB1-BRIndicates the index to the tables that define SystemInformationBlockType1-BR scheduling information. The tables are specified in TS 36.213 [23], Table 7.1.6-1 and Table 7.1.7.2.7-1. Value 0 means that SystemInformationBlockType1-BR is not scheduled."
-"systemFrameNumberDefines the 8 most significant bits of the SFN. As indicated in TS 36.211 [21], 6.6.1, the 2 least significant bits of the SFN are acquired implicitly in the P-BCH decoding, i.e. timing of 40ms P-BCH TTI indicates 2 least significant bits (within 40ms P-BCH TTI, the first radio frame: 00, the second radio frame: 01, the third radio frame: 10, the last radio frame: 11). One value applies for all serving cells of a Cell Group (i.e. MCG or SCG). The associated functionality is common (i.e. not performed independently for each cell)."
-"systemInfoUnchanged-BRValue TRUE indicates that no change has occurred in the SIB1-BR and SI messages at least over the SI validity time.NOTE:Value of systemInfoUnchanged-BR is also carried in RSS (if transmitted), see TS 36.211 [21]."

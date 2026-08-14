@@ -1,4 +1,0 @@
-RX parameter,Units,Channel bandwidth
-,,"20, 40, 60, 80, 100 MHz"
-ACS,dB,24 – 10log10(BWChannel /20)
-NOTE1: ACS value is rounded to the next higher 0.5dB value,,

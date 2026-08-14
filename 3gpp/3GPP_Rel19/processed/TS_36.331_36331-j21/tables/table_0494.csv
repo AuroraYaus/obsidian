@@ -1,6 +1,0 @@
-Feature,GERAN,UTRAN,HRPD,1xRTT,EUTRAN
-A. Measurements and cell reselection procedure in E-UTRA idle mode,Supported if GERAN band support is indicated,Supported if UTRAN band support is indicated,Supported if CDMA2000 HRPD band support is indicated,Supported if CDMA2000 1xRTT band support is indicated,Supported for supported bands
-B. RRC release with blind redirection procedure in E-UTRA connected mode,Supported if GERAN band support is indicated,Supported if UTRAN band support is indicated,Supported if CDMA2000 HRPD band support is indicated,Supported if CDMA2000 1xRTT band support is indicated,Supported for supported bands
-C. Cell Change Order (with or without) Network Assisted Cell Change) in E-UTRA connected mode,Group 10,N.A.,N.A.,N.A.,N.A.
-"D. Inter-frequency/RAT measurements, reporting and measurement reporting event B2 (for inter-RAT) in E-UTRA connected mode",Group 23,Group 22/39,Group 26,Group 24,Group 25
-E. Inter-frequency/RAT handover procedure in E-UTRA connected mode,Group 9 (GSM_connected handover)Separate UE capability bit defined in TS 36.306 [5] for PS handover,Group 8/38 (PS handover) or Group 27/40 (SRVCC handover),Group 12,Group 11,Group 13 (within FDD or TDD)Group 30 (between FDD and TDD)

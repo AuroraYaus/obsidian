@@ -1,7 +1,0 @@
-Attribute,Event E1,Event E2
-DCI format,6-1A,6-1A
-Starting OFDM symbols,4; Bandwidth = 1.4MHz,4; Bandwidth = 1.4MHz
-Maximum M-PDCCH repetition level,Rmax/2 Note1,Rmax/8 Note1
-Aggregation level (ECCE),L’max-1Note2,L’max-2Note2
-M-PDCCH Transmission type,Distributed,Distributed
-"Note 1:Rmax is determined by the configurable parameter mPDCCH-NumRepetition defined in 36.331 and Rmax ≥ 2 to trigger Event E1 and Rmax ≥ 8 to trigger Event E2.Note 2:L’max-1 and L’max-2 is derived from the configurable parameter numberPRB-Pairs defined in 36.331. L’max-1 is 16, 8 and 4, if numberPRB-Pairs is 6, 4 and 2, respectively. L’max-2 is the aggregation level one level below L’max-1, and L’max-2 is 8, 4 and 2, if numberPRB-Pairs is 6, 4 and 2, respectively.",,

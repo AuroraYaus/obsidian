@@ -1,6 +1,0 @@
-CA config,Maximum supported Bandwidth/ Bandwidth combination (MHz),Cat. 1,Cat. 2,Cat. 3,Cat. 4,"Cat. 6,7","Cat. 9,10","Cat 11, 12",DL Cat. 15
-,,,,,,,,"DL Cat. 11,12",
-Single carrier,10,1,2,3A,3A,3A,3A,3A,3A
-CA with 2CCs (Note1),10+10,-,-,3B,4A,4A,4A,4A,4A
-,10+20,-,-,3B,4A,6C,6C,6C,6C
-NOTE 1:Sidelink operation is configured on PCC,,,,,,,,,

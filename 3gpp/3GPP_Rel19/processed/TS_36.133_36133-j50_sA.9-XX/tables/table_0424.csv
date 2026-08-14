@@ -1,5 +1,0 @@
-Configuration,Description
-1,"GEO/GSO, HD-FDD duplex mode"
-2,"NGSO, HD-FDD duplex mode"
-3,"NGSO, TDD Duplex Mode"
-"Note 1:If UE supports both NGSO and GSO, the test case Config 1 can be skipped if the UE passes test case Config 2. GEO configuration only applies for Rel-17 UEs. GSO configuration is applicable for Rel-18 and onward UEs, when SIB33 is provided to the UE.Note 2:Config 2 and Config 3 are applicable when SIB33 is provided to the UE.",

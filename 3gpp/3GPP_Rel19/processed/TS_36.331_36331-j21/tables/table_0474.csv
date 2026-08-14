@@ -1,2 +1,0 @@
-Conditional presence,Explanation
-CBP,This field is mandatory present if cbp-Index has been provided to UE via dedicated signaling (see RRCConnectionRelease-NB and RRCEarlyDataComplete-NB). Otherwise this field is not present.

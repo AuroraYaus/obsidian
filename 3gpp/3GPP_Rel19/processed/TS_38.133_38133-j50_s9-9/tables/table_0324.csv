@@ -1,7 +1,0 @@
-DRX cycle length (s),"TIdentify_RedCap, E-UTRAN TDD (s) (DRX cycles)",
-,"Gap period = 40 ms, 20 ms",Gap period = 80 ms
-≤ 0.16,Non-DRX requirements in clause 9.4A.3.2 apply,Non-DRX requirements in clause 9.4A.3.2 apply
-0.256,5.12* CSSFinterRAT_RedCap (20*CSSFinterRAT_RedCap),7.68* CSSFinterRAT_RedCap (30*CSSFinterRAT_RedCap)
-0.32,6.4* CSSFinterRAT_RedCap (20*CSSFinterRAT_RedCap),7.68* CSSFinterRAT_RedCap (24*CSSFinterRAT_RedCap)
-0.32 < DRX-cycle ≤ 10.24,Note1 (20*CSSFinterRAT_RedCap),Note1 (20*CSSFinterRAT_RedCap)
-NOTE 1:The time depends on the DRX cycle length.NOTE 2: CSSFinterRAT_RedCap is as defined in clause 9.4A.3.2.,,

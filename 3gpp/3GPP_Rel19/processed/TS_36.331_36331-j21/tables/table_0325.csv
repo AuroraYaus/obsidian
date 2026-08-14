@@ -1,5 +1,0 @@
-PURConfigurationRequest-NB field descriptions
-requestedNumOccasionsIndicates the requested number of PUR occasions. Value one corresponds to one occasion and value infinite corresponds to infinite occasions.
-requestedPeriodicityAndOffsetIndicates the requested periodicity of the PUR occasions and time offset until the first PUR occasion.
-"requestedTBSIndicates the requested TBS. Value b328 corresponds to 328 bits, value b376 corresponds to 376 bits, and so on."
-rrc-ACKIndicates RRC response message is prefered by the UE for acknowledging the reception of a transmission using PUR.

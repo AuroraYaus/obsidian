@@ -1,9 +1,0 @@
-Rx Parameter,Units,Channel bandwidth,,,,,,
-,,50 MHz,100 MHz,200 MHz,400 MHz,800 MHz,1600 MHz,2000 MHz
-Power in Transmission Bandwidth Configuration,dBm,REFSENS + 14 dB,,,,,,
-"PInterferer for band n257, n258, n261",dBm,REFSENS + 35.5 dB,REFSENS +35.5 dB,REFSENS +35.5 dB,REFSENS +35.5 dB,N/A,N/A,N/A
-"PInterferer for band n259, n260, n262",dBm,REFSENS + 34.5 dB,REFSENS +34.5 dB,REFSENS +34.5 dB,REFSENS +34.5 dB,N/A,N/A,N/A
-PInterferer for band n263,dBm,N/A,REFSENS +33.5 dB,N/A,REFSENS +33.5 dB,REFSENS + 32.5 dB,REFSENS + 32.5 dB,REFSENS + 32.5 dB
-BWInterferer,MHz,50,100,200,400,,,
-FInterferer (offset),MHz,50/-50NOTE 3,100/-100NOTE 3,200/-200NOTE 3,400/-400NOTE 3,800/-800NOTE 3,1600/-1600NOTE 3,2000/-2000NOTE 3
-"NOTE 1:The interferer consists of the Reference measurement channel specified in Annex A.3.3.2 with one sided dynamic OCNG Pattern OP.1 TDD as described in Annex A.5.2.1 and set-up according to Annex C.NOTE 2:The REFSENS power level is specified in Clause 7.3.2, which are applicable to different UE power classes.NOTE 3:The absolute value of the interferer offset FInterferer (offset) shall be further adjusted to (CEIL(|FInterferer(offset)|/SCS) + 0.5)*SCS MHz with SCS the sub-carrier spacing of the wanted signal in MHz. Wanted and interferer signal have same SCS.NOTE 4:The transmitter shall be set to 4 dB below the PUMAX,f,c as defined in clause 6.2.4, with uplink configuration specified in Table 7.3.2.1-2.",,,,,,,,

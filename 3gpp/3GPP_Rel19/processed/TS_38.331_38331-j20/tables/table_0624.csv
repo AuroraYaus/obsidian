@@ -1,4 +1,0 @@
-Conditional Presence,Explanation
-2TA,"This field is mandatory present if tag2 is present for the serving cell. It is absent, Need R, otherwise."
-CSI-RSorSRS-Indicated,"This field is mandatory present if referenceSignal is set to csi-RS-index or to srs, absent otherwise"
-Mandatory,The field is mandatory present.

@@ -1,9 +1,0 @@
-Parameter,Unit,Value,Comment
-RF Channel Number,,"1, 2",One is NR RF channel and the other is E-UTRAN RF channel
-Active PCell,,Cell 1,PCell on E-UTRAN RF channel number 1.
-Configured PSCell,,Cell 2,PSCell on NR RF channel number 2.
-CP length,,Normal,"Applicable to Cell 1, Cell 2"
-DRX,,OFF,
-Measurement gap pattern Id,,OFF,
-PSCell measurement cycle (measCyclePSCell),ms,640,
-T1,s,10,

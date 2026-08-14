@@ -1,9 +1,0 @@
-Test num.,Bandwidth,discSupportedProc,Number of configured resource pools,at antenna port (dBm/15kHz,Reference value
-,,,,,Fraction of maximum throughput (%) for Sidelink UE i=0…discSupportedProc-1
-1,5 MHz,50,5,-85,95
-2,10 MHz,50,2,-85,95
-3,15 MHz,50,2,-85,95
-4,20 MHz,50,1,-85,95
-5,10 MHz,400,16,-85,95
-6,15 MHz,400,11,-85,95
-7,20 MHz,400,8,-85,95

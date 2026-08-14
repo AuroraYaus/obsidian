@@ -1,5 +1,0 @@
-SL-RLC-ChannelConfig field descriptions
-sl-MAC-LogicalChannelConfigThe field is used to configure MAC SL logical channel parameters.
-"sl-RLC-ChannelIDIndicates the PC5 Relay RLC channel in the link between L2 U2N Relay UE and L2 U2N Remote UE, or between L2 U2U Remote UE and L2 U2U Relay UE or between L2 U2N Relay UEs (in case of multi-hop L2 U2N relay communication)."
-"sl-RLC-ConfigDetermines the RLC mode (UM, AM) and provides corresponding parameters."
-sl-PacketDelayBudgetIndicates the Packet Delay Budget for a PC5 Relay RLC channel used in L2 U2N relay operation. Upper bound value for the delay that a packet may experience expressed in unit of 0.5ms.

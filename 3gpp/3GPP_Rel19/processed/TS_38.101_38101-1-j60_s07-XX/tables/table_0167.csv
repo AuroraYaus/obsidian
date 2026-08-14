@@ -1,5 +1,0 @@
-Operating band,Parameter,Unit,Range1,Range 2,Range 3
-,Pinterferer,dBm,-44,-30,-15
-"n46, n96",Finterferer (CW),MHz,N/A,-200 < f – FDL_low ≤    -3*CBWor3*CBW ≤ f – FDL_high < 200,"1 ≤ f ≤ FDL_low – MAX(200,3*CBW)orFDL_high                   + MAX(200,3*CBW)≤ f ≤ 12750"
-n102,Finterferer (CW),MHz,N/A,"-200 < f – FDL_low ≤    -3*CBWorFDL_high + MAX(200,3*CBW) ≤ f < 7125 +  MAX(375,3*CBW)","1 ≤ f ≤ FDL_low – MAX(200,3*CBW)or7125 +  MAX(375,3*CBW) ≤ f ≤ 12750"
-"NOTE 1:The power level of the interferer (PInterferer) for Range 3 shall be modified to -20 dBm for FInterferer > 4200 MHz.NOTE 2:CBW denotes the channel bandwidth of the wanted signalNOTE 3: For band n102, the power level of the interferer (PInterferer) for Range 2 shall be modified to -33dBm for the range FDL_high + MAX(200,3*CBW) ≤ f < 7125 +  MAX(375,3*CBW).",,,,,

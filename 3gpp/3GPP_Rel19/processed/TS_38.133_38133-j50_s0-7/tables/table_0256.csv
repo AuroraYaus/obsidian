@@ -1,5 +1,0 @@
-Sub-carrier spacing in E-UTRA PCell (kHz),UL Sub-carrier spacing for data in PSCell (kHz),Maximum uplink transmission timing difference (µs)
-15,15,"5.21Note1,Note 2"
-15,30,5.21Note 2
-15,60,5.21 Note 2
-"NOTE 1:This is not applicable for a UE which indicates the capability of only supporting single UL timing (ul-TimingAlignmentEUTRA-NR is signalled). Single UL timing for E-UTRA and NR cell is assumed for this UE.NOTE 2:If the transmission timing difference exceeds the cyclic prefix length of the UL Sub-carrier spacing for data in PSCell, NR UE Tx EVM degradation is expected for the symbol that is overlapping the LTE subframe boundaryNOTE 3:The requirement in this table is also applicable for intra-band synchronous NE-DC.",,

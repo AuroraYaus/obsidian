@@ -1,9 +1,0 @@
-Parameter,Unit,Value,,,,,,,,,,,
-Reference channel,,R.15 TDD,R.15-1 TDD,R.15-2 TDD,R.16 TDD,R.16-1 TDD,R.16-2 TDD,R.16-3 TDD,R.16-4 TDD,R.17 TDD,R.17-1 TDD,R.17-2 TDD,R.17-3 TDD
-Number of transmitter antennas,,1,2,2,2,2,2,2,2,4,4,4,4
-Channel bandwidth,MHz,10,10,10,10,10,10,10,10,5,10,10,10
-Number of OFDM symbols for PDCCH,symbols,2,3,2,2,3,3,1,1,2,2,2,2
-Aggregation level,CCE,8,8,8,4,2,4,2,4,2,2,1,4
-DCI Format,,1,1,1,2,2,2,2,2,2,2,2,2
-Cell ID,,0,0,0,0,0,0,0,0,0,0,0,0
-Payload (without CRC),Bits,34,34,34,46,46,46,46,46,45,49,49,49

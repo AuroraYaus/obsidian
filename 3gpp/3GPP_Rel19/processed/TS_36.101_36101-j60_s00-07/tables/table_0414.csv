@@ -1,7 +1,0 @@
-Rx Parameter,Units,PMCH bandwidth,,
-,,6 MHz,7 MHz,8 MHz
-Power in Transmission Bandwidth Configuration,dBm,-49.5,-51,-52
-PInterferer,dBm,-22,,
-BWInterferer,MHz,5,,
-FInterferer (offset),MHz,5.5+0.0125/-5.5-0.0125,6.0+0.0075/-6.0-0.0075,6.5+0.0025/-6.5-0.0025
-NOTE:The interferer consists of the Reference measurement channel specified in Annex A.3.18.,,,,

@@ -1,9 +1,0 @@
-Parameter,Unit,Value
-Reference channel,,R.4 FS3
-Number of transmitter antennas,,2
-Channel bandwidth,MHz,20
-Number of OFDM symbols for PDCCH,symbols,2
-Aggregation level,CCE,4
-DCI Format,,Format 2A
-Cell ID,,0
-Payload (without CRC),Bits,51

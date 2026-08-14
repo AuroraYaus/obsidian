@@ -1,5 +1,0 @@
-Gap pattern ID,Cell identification delay (Tidentify_intra_UE cat M1),Measurement delay (Tmeasure_intra_UE cat M1)
-0,1.44 * Kintra_M1_NC *  KSatellite_intra seconds,480 * Kintra_M1_NC *  KSatellite_intra ms
-1,2.88 * Kintra_M1_NC *  KSatellite_intra seconds,960 * Kintra_M1_NC *  KSatellite_intra ms
-N/A,N/A,3 x TRSS (Note 1)
-Note 1:It is the measurement period for RSRP measured on RSS signals defined in RSS-Config [2].,,

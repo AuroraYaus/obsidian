@@ -1,5 +1,0 @@
-Parameter,Unit,Value,Comment
-PRS muting info,,Cell 1: ‘11111111111111110000000000000000’Cell 2: ‘00000000000000001111111111111111’Cell 3: ‘11111111111111110000000000000000’,Correponds to prs-MutingInfo defined in TS 36.355 [24]
-T1,s,3,The length of the time interval from the beginning of each test
-T2,s,5.12,The length of the time interval that follows immediately after time interval T1
-T3,s,5.12,The length of the time interval that follows immediately after time interval T2

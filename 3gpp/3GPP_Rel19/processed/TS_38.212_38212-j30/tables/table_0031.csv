@@ -1,8 +1,0 @@
-Field,Bitwidth
-Rank Indicator,
-Layer Indicator,
-Wide-band CQI,4
-Subband differential CQI,2
-CRI if codebookType=typeI-MultiPanel,
-CRI if codebookType=typeI-MultiPanel-r19,0
-"NOTE: is the number of allowed rank indicator values according to Clause 5.2.2.2.2 and 5.2.2.2.2a in [6, TS 38.214],  is the value of the rank, and   is the number of CSI-RS resources in the corresponding resource set. The values of the rank indicator field are mapped to allowed rank indicator values with increasing order, where '0' is mapped to the smallest allowed rank indicator value.nRIυKsCSI-RS",

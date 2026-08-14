@@ -1,2 +1,0 @@
-Conditional presence,Explanation
-EDT,"The field is optionally present, Need OR, if edt-Parameters in SystemInformationBlockType2-NB is present; otherwise the field is not present and the UE shall delete any existing value for this field."

@@ -1,4 +1,0 @@
-Frequency range,Parameter,Maximum ripple (dB)
-|FUL_Meas – Fcenter| ≤ X MHz(Range 1),X1,6 (p-p)
-|FUL_Meas – Fcenter| > X MHz(Range 2),X2,10 (p-p)
-"NOTE 1:FUL_Meas refers to the sub-carrier frequency for which the equalizer coefficient is evaluatedNOTE 2:Fcenter refers to the center frequency of an allocated block of PRBsNOTE 3:X, in MHz, is equal to 0.35*LCRB*12*SCS/1000 MHz NOTE 4:See Figure 6.4.2.4.2-1 for description of X1, X2",,

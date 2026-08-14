@@ -1,3 +1,0 @@
-N3C-IndirectPathConfigRelay field descriptions
-n3c-MappingToAddModListIndicates the list of mappings between the bearer identity of the N3C remote UE and the Uu Relay RLC channel to be added or modified. The Uu Relay RLC channel is associated to only one N3C remote UE's end-to-end bearer.
-n3c-MappingToReleaseListIndicates the list of mappings between the bearer identity of the N3C remote UE and the Uu Relay RLC channel to be released.

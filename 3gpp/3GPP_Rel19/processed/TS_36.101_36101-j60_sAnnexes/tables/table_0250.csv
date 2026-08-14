@@ -1,9 +1,0 @@
-Parameter,Unit,Value,Value,Value
-Reference channel,,R.82 TDD,R.83 TDD,R.96 TDD
-Number of transmitter antennas,,2,2,2
-Channel bandwidth,MHz,10,10,10
-OFDM starting symbol (startSymbolLC),symbols,2,2,2
-Aggregation level,ECCE,16,24,4
-DCI Format,,6-1A,6-1B,6-1A
-Payload (without CRC),Bits,32,18,32
-PRB allocation,,8-th ~11-th PRB,As specified in Test,8-th ~11-th PRB

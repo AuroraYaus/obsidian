@@ -1,3 +1,0 @@
-Gap pattern ID,Cell identification delay (Tidentify_inter_UE cat M1),Measurement delay (Tmeasure_inter_UE cat M1)
-0,"Max(20 * rmax*G / 1000, 1.44) * Kinter_M1_NC *  KRSTD_M1_NC seconds","Max(5 * rmax*G, 480) * Kinter_M1_NC *  KRSTD_M1_NC  ms"
-1,"Max(20 * rmax*G / 1000, 2.88) * Kinter_M1_NC *  KRSTD_M1_NC seconds","Max(5 * rmax*G, 960) * Kinter_M1_NC *  KRSTD_M1_NC  ms"

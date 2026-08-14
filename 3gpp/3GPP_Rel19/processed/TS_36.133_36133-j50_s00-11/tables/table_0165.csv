@@ -1,7 +1,0 @@
-TTI duration,Processing time,Requirement to update timing,Units
-ShortTTI-r15 not configured Note 1,ShortProcessingTime=TRUE,n+5,Subframe
-dl-STTI-Length-r15=slot Note 1,N/A,n+8,Slot
-dl-STTI-Length-r15=subslot Note 1,proc-Timeline-r15= nplus4set1,n+16,Subslot
-dl-STTI-Length-r15=subslot Note 1,proc-Timeline-r15= nplus6set1 or proc-Timeline-r15= nplus6set2,n+18,Subslot
-dl-STTI-Length-r15=subslot Note 1,proc-Timeline-r15= nplus8set2,n+20,Subslot
-"Note 1:If the PDSCH HARQ processing time is modified by RRC signalling during an ongoing connection, the requirement to update timing is not defined from the time when the RRC command is received by the UE until the UE has applied the updated PDSCH HARQ processing time",,,

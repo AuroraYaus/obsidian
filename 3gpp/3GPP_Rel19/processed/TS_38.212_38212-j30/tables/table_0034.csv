@@ -1,7 +1,0 @@
-Field,Bitwidth
-CRI,log2KsCSI-RS
-SSBRI,log2KsSSB
-SINR,7
-Differential SINR,4
-CapabilityIndex,2
-"NOTE: is the number of CSI-RS resources in the corresponding resource set, and   is the configured number of SS/PBCH blocks in the corresponding resource set for reporting 'ssb-Index-SINR' or 'ssb-Index-SINR-Index'.KsCSI-RSKsSSB",

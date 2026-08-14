@@ -1,8 +1,0 @@
-CA configuration,SCS(kHz),Aggregated channel bandwidth (PCC+SCC),Wgap / [MHz],UL PCC allocation,SCCΔRIBNC1 (dB),SCCΔRIBNC2 (dB),Duplex mode
-CA_n71(2A),15/15,15MHz + 10MHz,Wgap = 10.0,5 (RBstart = 2),24.8,29.3,FDD
-,,25MHz + 5MHz1,Wgap = 5.0,20 (RBstart = 8),27.23,31.83,
-CA_n25(2A) 9,15/15,5MHz + 5MHz,Wgap = 55.0,105,7.3,10.0,FDD
-,,,Wgap = 30.0,25,0.0,0.0,
-CA_n25(2A) 10,15/15,40MHz + 5MHz,Wgap = 20.0,40 (RBstart = 176),[27.6] 8,32.68,FDD
-CA_n66(2A)CA_n66(3A),N/A,NOTE 4,NOTE 5,"NOTE 6, NOTE 7",0.0,0.0,FDD
-NOTE 1:Applicable to UE supporting PC2 with 1Tx. NOTE 2:Applicable to UE supporting PC2 with 2Tx.NOTE 3:Applicable only to BCS 4 and 5 and for UEs supporting the optional symmetrical UL/DL channel bandwidths.NOTE 4:All combinations of channel bandwidths defined in Table 5.5A.2-1.NOTE 5:All applicable sub-block gap sizes.NOTE 6:The PCC allocation is same as Transmission bandwidth configuration NRB as defined in Table 5.3.2-1. NOTE 7:Void.NOTE 9:Bandwidth Combination Set 0.NOTE 10:Bandwidth Combination Set 1,,,,,,,

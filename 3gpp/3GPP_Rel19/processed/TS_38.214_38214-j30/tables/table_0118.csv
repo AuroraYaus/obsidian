@@ -1,5 +1,0 @@
-pusch-ConfigCommon includes pusch-TimeDomainAllocationList,pusch-Config includes pusch-TimeDomainAllocationList,pusch-Config includes pusch-TimeDomainAllocationListDCI-0-2,PUSCH time domain resource allocation to apply
-No,No,No,Default A
-Yes,No,No,pusch-TimeDomainAllocationList provided in pusch-ConfigCommon
-No/Yes,Yes,No,pusch-TimeDomainAllocationList provided in pusch-Config
-No/Yes,No,Yes,pusch-TimeDomainAllocationListDCI-0-2 provided in pusch-Config

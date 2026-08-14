@@ -1,7 +1,0 @@
-Number of TX antennas,Number of RX antennas,Propagation conditions andcorrelation matrix (Annex B),Frequency offset,Number of Repetitions,SNR [dB],,,
-,,,,,Burst format 0,Burst format 1,Burst format 2,Burst format 3
-1,2,EPA1 Low,270 Hz,4,-,-,-15.5,-15.3
-,,,,8,-16.2,-15.8,-,-
-,,,,16,-,-,-20.1,-20.2
-,,,,32,-21.3,-21.1,-,-
-"Note 1:Under fading channels, the PRACH detection performance may be significantly different with different PRACH Configuration Indexes. The requirements in this table are defined based on the simulation results with PRACH Configuration Indexes (3, 19, 35, 51) for Format 0, Format 1, Format 2, and Format 3 respectively.Note 2:The requirements in this table are defined under the assumption that UE RF tuning during PRACH frequency hopping has no impact on the symbols in PRACH subframes and thus all symbols in PRACH subframes are available for the transmission of PRACH preambles.Note 3:The requirements in this table are defined under the assumption that the PRACH frequency offset (prach-FreqOffset-r13) is 0 and frequency hopping offset is  -6, where  is defined in TS36.211 [12].Note 4:The requirements in this table apply for channel bandwidth of 5MHz, 10MHz, 15MHz or 20MHz. For channel bandwidth of 3MHz, the requirements in Table 8.4.2.1-3 apply.",,,,,,,,

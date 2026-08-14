@@ -1,8 +1,0 @@
-Parameter,,Unit,Test 1
-Downlink power allocation,,dB,0
-,,dB,0 (NOTE 1)
-,,dB,0
-at antenna port,,dBm/15kHz,-98
-Symbols for MBSFN portion of MBSFN subframes (NOTE 2),,,OCNG (NOTE 3)
-PDSCH transmission mode,,,1
-"NOTE 1:NOTE 2:The MBSFN portion of an MBSFN subframe comprises the whole MBSFN subframe except the first two symbols in the first slot.NOTE 3:The MBSFN portion of the MBSFN subframes shall contain QPSK modulated data. Cell-specific reference signals are not inserted in the MBSFN portion of the MBSFN subframes, QPSK modulated MBSFN data is used instead.",,,

@@ -1,2 +1,0 @@
-UERadioPagingInformation-NB field descriptions
-ue-RadioPagingInfoThe field is used to transfer UE NB-IoT capability information used for paging. The eNB generates the ue-RadioPagingInfo and the contained UE capability information is absent when not supported bythe UE.

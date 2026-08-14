@@ -1,4 +1,0 @@
-Test number,Cell,Bandwidth (MHz),Reference Channel,OCNG Pattern,Propagationcondition,Correlation Matrix and antenna,Reference value,,MBMS UE Category
-,,,,,,,BLER (%),SNR(dB),
-1,PCell,10,NA,OP.1 FDD,AWGN,1x2 low,NA,NA,NA
-,FeMBMS Unicast-mixed Cell as non-serving cell,10,R.82-1 FDD,OP.4A FDD,MBSFN channel model (Table B.2.6.1-1),1x2 low,1,13.9,≥2

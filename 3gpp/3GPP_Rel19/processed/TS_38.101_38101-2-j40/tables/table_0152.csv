@@ -1,4 +1,0 @@
-UL channel,Modulation order,Phase difference between any slot p-1 and slot p (NOTE 2)
-PUSCH,"Pi/2 BPSK, QPSK",[25] degrees
-PUCCH,"Pi/2 BPSK, BPSK, QPSK",
-"NOTE 1: The UE capability of the length of maximum duration refers to the maximum time duration during which UE is able to meet the phase continuity requirements, assuming no phase consistency violating events defined in TS 38.214 in between.NOTE 2: This requirement applies for TDD bands, for supported DMRS bundling configurations ≤ 8 slots.",,

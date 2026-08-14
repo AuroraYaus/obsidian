@@ -1,6 +1,0 @@
-MCGFailureInformation field descriptions
-measResultFreqListEUTRAThe field contains available results of measurements on EUTRA frequencies the UE is configured to measure by measConfig.
-measResultFreqListGERANThe field contains available results of measurements on GERAN frequencies the UE is configured to measure by measConfig.
-measResultFreqListNRThe field contains available results of measurements on NR frequencies the UE is configured to measure by measConfig.
-measResultFreqListUTRAThe field contains available results of measurements on UTRA frequencies the UE is configured to measure by measConfig.
-measResultSCGIncludes the NR MeasResultSCG-Failure IE as specified in TS 38.331 [82]. The field contains available results of measurements on NR frequencies the UE is configured to measure by the NR RRCConfiguration message.

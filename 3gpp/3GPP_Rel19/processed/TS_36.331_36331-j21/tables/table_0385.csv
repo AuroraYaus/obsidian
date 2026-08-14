@@ -1,4 +1,0 @@
-Conditional presence,Explanation
-noWUSr15,The field is mandatory present if wus-Config-r15 is not present in SystemInformationBlockType2-NB; otherwise the field is not present.
-probabilityBased,"The field is mandatory present if paging probability based WUS group selection is configured; otherwise the field is not present, and the UE shall delete any existing value for this field."
-timeOffset,"The field is optionally present, Need OP, if timeOffset-eDRX-Long is present in timeParameters; otherwise the field is not present, and the UE shall delete any existing value for this field."

@@ -1,4 +1,0 @@
-MasterInformationBlock-SL field descriptions
-directFrameNumberIndicates the frame number in which SLSS and SL-BCH are transmitted. The subframe in the frame corresponding to directFrameNumber is indicated by directSubframeNumber.
-inCoverageValue TRUE indicates that the UE transmitting the MasterInformationBlock-SL is in E-UTRAN coverage.
-"sl-BandwidthParameter: transmission bandwidth configuration. n6 corresponds to 6 resource blocks, n15 to 15 resource blocks and so on."

@@ -1,9 +1,0 @@
-Parameter,Unit,Value
-Inter-TTI Distance,,1
-Number of HARQ processes per component carrier,Processes,8
-Maximum number of HARQ transmission,,4
-Redundancy version coding sequence,,"{0,1,2,3} for QPSK and 16QAM{0,0,1,2} for 64QAM, 256QAM and 1024QAM"
-Number of OFDM symbols for PDCCH per component carrier,OFDM symbols,"4 for 1.4 MHz bandwidth, 3 for 3 MHz and 5 MHz bandwidths,2 for 10 MHz, 15 MHz and 20 MHz bandwidths unless otherwise stated"
-Cyclic Prefix,,Normal
-Cell_ID,,0
-Cross carrier scheduling,,Not configured

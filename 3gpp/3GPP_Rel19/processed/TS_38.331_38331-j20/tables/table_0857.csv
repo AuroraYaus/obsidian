@@ -1,3 +1,0 @@
-Conditional Presence,Explanation
-HO,"The field is mandatory present in case of handover within NR or UE context retrieval, e.g. in case of resume or re-establishment. The field is optionally present in case of handover from E-UTRA/5GC. Otherwise the field is absent."
-HO2,The field is optionally present in case of handover within NR; otherwise the field is absent.

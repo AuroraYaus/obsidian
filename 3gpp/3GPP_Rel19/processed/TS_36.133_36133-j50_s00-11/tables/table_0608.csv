@@ -1,5 +1,0 @@
-DRX cycle length (s) Note 3,Tmeasure_SFTD1 (s)
-≤0.04,"max(0.2,5 x SMTC period) (Note1)"
-0.04<DRX cycle≤0.32,"8 x max(DRX cycle, SMTC period)"
-0.32<DRX cycle≤10.24,5 x DRX cycle
-"Note 1:Number of DRX cycles depends upon the DRX cycle in useNote 2:(Void)Note 3:DRX cycle length in this table refers to the DRX cycle length configured for PCell or PSCell. When DRX is used in both PCell and PSCell, DRX cycle length in this table refers to the longer of the DRX cycle lengths for PCell and PSCell.",

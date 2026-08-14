@@ -1,4 +1,0 @@
-Conditional Presence,Explanation
-InitialBWP-Only,"The field is mandatory present in the PUCCH-ConfigCommon of the initial BWP (BWP#0) in SIB1. It is absent in other BWPs including the RedCap-specific initial uplink BWP, if configured."
-InitialBWP-RedCap,"The field is mandatory present in the PUCCH-ConfigCommon of the RedCap-specific initial BWP. It is optional present, Need R, in the PUCCH-ConfigCommon of the initial BWP configured by initialUplinkBWP. It is absent in other BWPs."
-InitialBWP-RedCapOnly,"The field is optional present, Need S, in the PUCCH-ConfigCommon of the RedCap-specific initial BWP. It is absent in other BWPs."

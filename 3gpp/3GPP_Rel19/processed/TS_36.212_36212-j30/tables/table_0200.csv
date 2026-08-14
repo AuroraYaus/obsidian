@@ -1,5 +1,0 @@
-Value,Partial PUSCH Mode,Starting position,Ending symbol
-00,Partial PUSCH Mode 0,Indicated by 'PUSCH starting position' according to Table 5.3.3.1.1A-1,The last symbol of the subframe or the second to last symbol of the subframe
-01,Partial PUSCH Mode 1,"Indicated by 'PUSCH starting position' or at symbol 7, based on the result of the channel access procedure in 4.2.1 defined in [8]",The last symbol of the subframe or the second to last symbol of the subframe
-10,Partial PUSCH Mode 2,Indicated by 'PUSCH starting position' according to Table 5.3.3.1.1A-2,The last symbol of the subframe or the second to last symbol of the subframe
-11,Partial PUSCH Mode 3,Indicated by 'PUSCH starting position' according to Table 5.3.3.1.1A-1,Symbol 3 of the subframe or symbol 6 of the subframe

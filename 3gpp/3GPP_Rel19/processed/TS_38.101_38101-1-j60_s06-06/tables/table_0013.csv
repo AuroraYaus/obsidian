@@ -1,8 +1,0 @@
-TGBW range,A-MPRregrowth *(dB)
-G0dB(BWalloc)  TGBW,0
-G1dB(BWalloc)  TGBW < G0dB(BWalloc),1
-G2dB(BWalloc)  TGBW < G1dB(BWalloc),2
-G3dB(BWalloc)  TGBW < G2dB(BWalloc),3
-G4dB(BWalloc)  TGBW < G3dB(BWalloc),4
-G5dB(BWalloc)  TGBW < G4dB(BWalloc),5
-TGBW < G5dB(BWalloc),6

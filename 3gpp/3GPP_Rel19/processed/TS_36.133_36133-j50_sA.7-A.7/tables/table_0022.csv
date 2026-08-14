@@ -1,9 +1,0 @@
-Parameter,Unit,Cell 1,,Cell 2,
-,,Test 1,Test 2,Test 1,Test 2
-E-UTRA RF Channel Number,,1,1,2,2
-Channel Bandwidth (BWchannel),MHz,20,20,10,10
-PDCCH/PCFICH/PHICH Reference measurement channel defined in A.3.1.2.2,,R.10 TDD,R.10 TDD,R.6 TDD,R.6 TDD
-OCNG Pattern defined in A.3.2.2,,OP.8 TDD,OP.8 TDD,OP.2 TDD,OP.2 TDD
-IoNote1,dBm/18 MHz,-62.5,-62.5,-,-
-,dBm/9 MHz,-,-,-65.5,-65.5
-Note 1:Io level has been derived from other parameters for information purpose. It is not a settable parameter.,,,,,

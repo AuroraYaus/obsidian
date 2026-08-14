@@ -1,6 +1,0 @@
-DM-RS multiplexing,DM-RS duration,l',Supported antenna ports p,
-,,,Configuration type 1,Configuration type 2
-Basic,single-symbol DM-RS,0,1000 – 1003,1000 – 1005
-,double-symbol DM-RS,"0, 1",1000 – 1007,1000 – 1011
-Enhanced,single-symbol DM-RS,0,"1000 – 1003, 1008 – 1011","1000 – 1005, 1012 – 1017"
-,double-symbol DM-RS,"0, 1",1000 – 1015,1000 – 1023

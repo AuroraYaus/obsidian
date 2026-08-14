@@ -1,6 +1,0 @@
-"EN-DC Aggregated Bandwidth, MHz",<=100,">100, <=120",">120, <=140",">140, <=160"
-"Pw in Transmission Bandwidth Configuration, perCC, dBm",PW 1,REFSENS + Aggregated BW specific value below,,
-,,16.8,17.5,18.0
-"Pinterferer 1, dBm (CW)2",-46,,,
-"Pinterferer 2, dBm (Modulated)2",-46,,,
-NOTE 1:PW is wanted signal power level from Table 7.8.1A-1 in TS 36.101 [4]NOTE 2:Jammer BW and offsets is from Table 7.8.1A-1 [4] and is applied from the lowest edge of the lowest carrier and the highest edge of the highest carrierNOTE 3:Void.NOTE 4:Void.,,,,

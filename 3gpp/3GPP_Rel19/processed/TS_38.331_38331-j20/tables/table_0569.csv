@@ -1,7 +1,0 @@
-Conditional Presence,Explanation
-AbsFreqSSB,"The field is absent when absoluteFrequencySSB in frequencyInfoDL is absent, otherwise the field is mandatory present."
-HOAndServCellAdd,"This field is mandatory present upon SpCell change (including path switch between a serving cell and a L2 U2N Relay UE) and upon serving cell (PSCell/SCell) addition. Otherwise, the field is absent."
-HOAndServCellWithSSB,"This field is mandatory present upon SpCell change and upon serving cell (SCell with SSB or PSCell) addition. Otherwise, the field is absent."
-SharedSpectrum,"This field is mandatory present if this cell operates with shared spectrum channel access in FR1. Otherwise, it is absent, Need R."
-SharedSpectrum2,"This field is optionally present if this cell operates with shared spectrum channel access in FR2-2, Need R. Otherwise, it is absent, Need R."
-TDD,"The field is optionally present, Need R, for TDD cells; otherwise it is absent."

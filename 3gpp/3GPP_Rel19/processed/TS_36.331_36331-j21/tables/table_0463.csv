@@ -1,4 +1,0 @@
-Conditional presence,Explanation
-DRB-Setup,The field is mandatory present in case DRB establishment is requested; otherwise the field is not present.
-SCellAdd,The field is mandatory present in case SCG cell establishment is requested; otherwise the field is not present.
-SCellAdd2,The field is optional present in case SCG cell establishment is requested; otherwise the field is not present.

@@ -1,6 +1,0 @@
-SPUCCH format,,Frequency hopping,,,,
-Slot,"1, 1a, 1b",Disabled,0,12,See Table 5.5.2.2.1-2 for normal cyclic prefix,1
-,,Enabled,0,12,1,1
-,3,Disabled,0,12,See clause 5.5.2.2.2,1
-,4,Enabled,0,,1,1
-Subslot,4,Disabled,0,,1,1

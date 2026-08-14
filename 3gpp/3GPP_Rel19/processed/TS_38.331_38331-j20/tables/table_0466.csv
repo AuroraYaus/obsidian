@@ -1,4 +1,0 @@
-PUCCH-TPC-CommandConfig field descriptions
-tpc-IndexPCellAn index determining the position of the first bit of TPC command (applicable to the SpCell) inside the DCI format 2-2 payload.
-tpc-IndexPUCCH-SCellAn index determining the position of the first bit of TPC command (applicable to the PUCCH SCell) inside the DCI format 2-2 payload.
-"tpc-IndexPUCCH-sSCell, tpc-IndexPUCCH-sSCellSecondaryPUCCHgroupAn index determining the position of the first bit of TPC command (applicable to the alternative PUCCH cell for PUCCH cell switching) inside the DCI format 2-2 payload, for the primary PUCCH group and the secondary PUCCH group respectively."

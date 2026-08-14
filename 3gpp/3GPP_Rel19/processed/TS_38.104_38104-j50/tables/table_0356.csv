@@ -1,7 +1,0 @@
-Requirement,TAE,,
-,"60, 120 kHz SCS(ns)",480 kHz SCS(ns),960 kHz SCS(ns)
-MIMO transmission,65,32.5,32.5
-"intra-band contiguous carrier aggregation, with or without MIMO",130,32.5,32.5
-"intra-band non-contiguous carrier aggregation, with or without MIMO (Note)",260,N/A,N/A
-"inter-band carrier aggregation, with or without MIMO",3000,3000,3000
-NOTE: intra-band non-contiguous carrier aggregation is not supported for FR2-2 in this release.,,,

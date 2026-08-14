@@ -1,6 +1,0 @@
-DRX cycle,TSSB_measurement_period_intra_ODSSB
-No DRX Note 2,"max(200 ms, ceil( 5 x Kp) x SMTC period)Note 1 x CSSFintra"
-DRX cycle≤ 160 ms,"max(200 ms, ceil(5 x M2 Note 2 x Kp) x max(SMTC period, DRX cycle)) x CSSFintra"
-160 ms < DRX cycle≤ 320 ms,ceil(4 x M2 Note 2 x Kp) x DRX cycle x CSSFintra
-DRX cycle>320 ms,ceil( Y Note 3 x Kp ) x DRX cycle x CSSFintra
-"NOTE 1:If different SMTC periodicities are configured for different cells, the SMTC period in the requirement is the one used by the cell being identifiedNOTE 2:M2 = 1.5 if SMTC period > 40 ms, otherwise M2=1NOTE 3:Y=3 when SMTC period ≤ 40ms, Y=5 when SMTC period > 40msNOTE 4: When highSpeedMeasCA-Scell-r17 is configured, the requirements apply to measurements of secondary component carrier with active SCell.",

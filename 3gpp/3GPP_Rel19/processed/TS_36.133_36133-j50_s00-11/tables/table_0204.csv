@@ -1,4 +1,0 @@
-Parameter: excessRep-MPDCCH-r14,Value
-‘excessRep1’,2 Note1
-‘excessRep2’,4 Note1
-"Note 1:excessRep-MPDCCH-r14 is the factor by which UE recommends eNB to scale down Rmax (as per the formula Rmax / excessRep-MPDCCH-r14), where Rmax is determined by the configurable parameter mPDCCH-NumRepetition defined in 36.331.",

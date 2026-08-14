@@ -1,3 +1,0 @@
-Conditional Presence,Explanation
-MultiType,"The field is mandatory present when the UE reports its capability on supporting multiple processing types, otherwise it is absent."
-MultiState,"The field is mandatory present when the UE reports its capability on supporting option 1 or option 2 for the configured type, otherwise it is absent."

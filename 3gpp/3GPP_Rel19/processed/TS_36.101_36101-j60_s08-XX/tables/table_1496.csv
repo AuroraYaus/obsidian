@@ -1,9 +1,0 @@
-Test,Bandwidth (MHz),Number of bits of a DL-SCH transport block received within a TTI,Measurement channel,Reference value
-,,,,PDSCH TB success rate (%)
-1,10,10296,R.31-1 FDD (NOTE 2),95
-2,10,25456,R.31-2 FDD (NOTE 2),95
-3,20,51024,R.31-3 FDD,95
-3A,10,36696 (NOTE 1),R.31-3A FDD (NOTE 2),85
-4,20,75376 (Note 2),R.31-4 FDD,85
-6,20,75376 (Note 2),R.31-4 FDD,85
-NOTE 1:35160 bits for sub-frame 5.NOTE 2:71112 bits for sub-frame 5.,,,,

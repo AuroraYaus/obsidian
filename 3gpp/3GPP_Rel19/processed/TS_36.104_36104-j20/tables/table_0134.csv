@@ -1,7 +1,0 @@
-E-UTRAchannel bandwidth (MHz),Reference measurement channel,Wanted signal mean power [dBm],Interfering signal mean power [dBm],Type of interfering signal
-3,FRC A14-2 in Annex A.14,-122.2,-76,"3 MHz E-UTRA signal, 6 RBs (Note 2)"
-5,FRC A14-2 in Annex A.14,-122.2,-73,"5 MHz E-UTRA signal, 10 RBs (Note 1)"
-10,FRC A14-2 in Annex A.14,-122.2,-69,"10 MHz E-UTRA signal, 25 RBs (Note 1)"
-15,FRC A14-2 in Annex A.14,-122.2,-69,"15 MHz E-UTRA signal, 25 RBs (Note 1)"
-20,FRC A14-2 in Annex A.14,-122.2,-69,"20 MHz E-UTRA signal, 25 RBs (Note 1)"
-"Note 1:Interfering signal is placed in one side of the Fc, while the NB-IoT PRB is placed on the other side. Both interfering signal and NB-IoT PRB are placed at the middle of the available PRB locations. The wanted NB-IoT tone is placed at the centre of this NB-IoT PRB.Note 2:Interfering signal is placed from the edge of BWConfig, while the NB-IoT PRB is placed at the middle of the remaining PRB locations. The wanted NB-IoT tone is placed at the centre of this NB-IoT PRB.",,,,

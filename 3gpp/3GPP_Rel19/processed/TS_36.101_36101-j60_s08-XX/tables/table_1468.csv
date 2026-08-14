@@ -1,5 +1,0 @@
-Test num.,Sidelink UE,Band-width,Reference channel,Reference value,
-,,,,Probability of missed PSBCH (%) (NOTE 1),SNR (dB)
-1,1,10 MHz,PSBCH (CP.1 FDD),1,4.4
-,,5 MHz,,,
-NOTE 1:The probability is measured after 40 radio frames of lead time during which the test UE detects and synchronizes to Sidelink UE 1.,,,,,

@@ -1,3 +1,0 @@
-PosSIB-ReqInfo field descriptions
-gnss-idThe presence of this field indicates that the request positioning SIB type is for a specific GNSS. Indicates a specific GNSS (see also TS 37.355 [49])
-sbas-idThe presence of this field indicates that the request positioning SIB type is for a specific SBAS. Indicates a specific SBAS (see also TS 37.355 [49]). If the UE includes this field it shall set gnss-id to sbas.

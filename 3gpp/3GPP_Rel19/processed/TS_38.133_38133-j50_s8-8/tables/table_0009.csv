@@ -1,4 +1,0 @@
-Configuration,TEvaluate_out_SSB (ms),TEvaluate_in_SSB (ms)
-no DRX,"Max(200, Ceil(10  P  N Note2)  TSSB)","Max(100, Ceil(5  P  N Note2)  TSSB)"
-DRX cycle≤80 ms,"Max(200, Ceil(15  P  N Note2)  Max(TDRX,TSSB))","Max(100, Ceil(7.5  P  N Note2)  Max(TDRX,TSSB))"
-"NOTE 1:TSSB is the periodicity of the SSB configured for RLM. TDRX is the DRX cycle length.NOTE 2:For a UE not supporting simultaneousReceptionTwoQCL-r18 or when highSpeedDeploymentTypeFR2-r17 is not configured as bi-directional, scaling factor N=2 when highSpeedMeasFlagFR2-r17 is configured to set1 and scaling factor N=6 when highSpeedMeasFlagFR2-r17 is configured to set2. For a UE supporting simultaneousReceptionTwoQCL-r18 and when highSpeedDeploymentTypeFR2-r17 is configured as bidirectional, scaling factor N=1.5 when highSpeedMeasFlagFR2-r17 is configured to set1 and scaling factor N=4 when highSpeedMeasFlagFR2-r17 is configured to set2",,

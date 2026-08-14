@@ -1,7 +1,0 @@
-"Min(PRS BW, SRS BW) (MHz)",,Margin (Tc Note 1)
-SCS = 60 kHz,SCS = 120 kHz,
-≥ 24,N/A,76
-≥ 64,≥ 32,32
-≥ 132,≥ 64,24
-N/A,≥ 128,20
-"NOTE 1:Tc is the basic timing unit defined in TS 38.211 [6].NOTE 2: If SRS and PRS have different SCS, the margin corresponding to the smallest RS BW in MHz applies.",,

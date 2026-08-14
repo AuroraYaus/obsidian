@@ -1,7 +1,0 @@
-NR CA configuration / Bandwidth combination set,,,,,,,,
-NR CA configuration,Uplink CA configurations or single uplink carrier,Channel bandwidths for carrier (MHz),Channel bandwidths for carrier (MHz),Channel bandwidths for carrier (MHz),Channel bandwidths for carrier (MHz),Channel bandwidths for carrier (MHz),Maximum aggregated bandwidth (MHz),Bandwidth combination set
-CA_n79C,n79,50,"60, 80, 100",,,,200,0
-,,60,"60, 80, 100",,,,,
-,,80,"80, 100",,,,,
-,,100,100,,,,,
-,,See n79 channel bandwidths in Table 5.3.5-1 for each carrier,,,,,200,4 and 5

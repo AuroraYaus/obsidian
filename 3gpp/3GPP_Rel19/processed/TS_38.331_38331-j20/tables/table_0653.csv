@@ -1,4 +1,0 @@
-UplinkTxDirectCurrentCarrierInfo field descriptions
-bwp-IdThe BWP ID of the serving cell which is part of the two carrier uplink carrier aggregation. The UE shall not report this field if the serving cell is reported as deactivated using deactivatedCarrier-r16.
-"deactivatedCarrierFor the reported uplink Tx Direct Current location(s) corresponding to singlePA-TxDirectCurrent-r16, indicates whether the carrier is deactivated or not for this serving cell. If the carrier refers to the PCell, the UE shall not set this field to deactivated."
-servCellIndexThe serving cell ID of the serving cell which is part of the two carrier uplink carrier aggregation.

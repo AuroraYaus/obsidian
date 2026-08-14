@@ -1,8 +1,0 @@
-BS class,Wanted Signal mean power (dBm),Mean power of the interfering signals (dBm),Type of interfering signals
-Wide Area BS,EISREFSENS + 6 dB,-52 - ΔOTAREFSENS,
-,EISminSENS + 6 dB,-52 - ΔminSENS,
-Medium Range,EISREFSENS + 6 dB,-47 - ΔOTAREFSENS,See Table 10.8.2-2
-BS,EISminSENS + 6 dB,-47 - ΔminSENS,
-Local Area BS,EISREFSENS + 6 dB,-44 - ΔOTAREFSENS,
-,EISminSENS + 6 dB,-44 - ΔminSENS,
-"NOTE 1:EISREFSENS and EISminSENS depend on the BS class and on the BS channel bandwidth, see clause 10.3 and 10.2.",,,

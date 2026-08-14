@@ -1,5 +1,0 @@
-RRCSetup-IEs field descriptions
-"masterCellGroupThe network configures only the RLC bearer for the SRB1, mac-CellGroupConfig, physicalCellGroupConfig and spCellConfig."
-radioBearerConfigOnly SRB1 can be configured in RRC setup.
-sl-ConfigDedicatedNRContains dedicated configurations for NR sidelink communication. The network configures only the PC5 Relay RLC channel and sl-PHY-MAC-RLC-Config used for the SRB1.
-sl-L2RemoteUE-ConfigContains dedicated configurations used for L2 U2N relay related operation. The network configures only the SRAP configuration used for the SRB1 and local UE ID.

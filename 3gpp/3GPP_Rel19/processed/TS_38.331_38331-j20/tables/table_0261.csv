@@ -1,4 +1,0 @@
-CSI-SemiPersistentOnPUSCH-TriggerStateList field descriptions
-csi-ReportSubConfigTriggerListA list of sub-configuration ID(s) of N sub-configurations out of L configured sub-configurations within a CSI-ReportConfig associated with a triggering state for semi-persistent CSI reporting on PUSCH.
-ltm-AssociatedReportConfigInfoThis field configures semi-persistent CSI reports on PUSCH of LTM candidate cells. If ltm-associatedReportConfigInfo is configured the UE shall ignore the field associatedReportConfigInfo.
-sp-CSI-MultiplexingModeIndicates if the behavior of transmitting SP-CSI on the first PUSCH repetitions corresponding to two SRS resource sets configured in srs-ResourceSetToAddModList or srs-ResourceSetToAddModListDCI-0-2 with usage 'codebook' or 'noncodebook' is enabled or not.

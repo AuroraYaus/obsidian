@@ -1,8 +1,0 @@
-Number of narrowbands for MPDCCH monitoring,"UE reported bit(s) for narrowband position (MSB, LSB)",MPDCCH Narrowband Reported
-1,0,The narrowband used for MPDCCH monitoring
-2,0,Narrowband with lowest narrowband index
-,1,Narrowband with highest narrowband index
-4,00,Narrowband with lowest narrowband index
-,01,Narrowband with second lowest narrowband index
-,10,Narrowband with third lowest narrowband index
-,11,Narrowband with highest narrowband index

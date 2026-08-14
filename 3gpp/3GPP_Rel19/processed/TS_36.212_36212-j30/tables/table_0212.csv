@@ -1,6 +1,0 @@
-"One codeword: Codeword 0 enabled, Codeword 1 disabled",,"Two codewords: Codeword 0 enabled, Codeword 1 enabled",
-Bit field mapped to index,Message,Bit field mapped to index,Message
-0,4 layers: Transmit diversity,0,2 layers: precoder cycling with large delay CDD
-1,2 layers: precoder cycling with large delay CDD,1,3 layers: precoder cycling with large delay CDD
-2,reserved,2,4 layers: precoder cycling with large delay CDD
-3,reserved,3,reserved

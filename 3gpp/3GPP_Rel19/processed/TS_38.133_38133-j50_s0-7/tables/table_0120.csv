@@ -1,7 +1,0 @@
-DRX cycle length [s],Scaling Factor (N1),,"TSSB_index,NR_Inter [s] (number of DRX cycles)"
-,FR1,FR2Note1,
-0.32,1,8,N2 x 1.28 x N1 x 1.5 (N2 x 4 x N1 x 1.5)
-0.64,,5,N2 x 1.28 x N1 (N2 x 2 x N1)
-1.28,,4,N2 x 1.28 x N1 (N2 x 1 x N1)
-2.56,,3,N2 x 2.56 x N1 (N2 x 1 x N1)
-"NOTE 1:Applies for UE supporting power class 2&3&4. For UE supporting power class 1, N1 = 8 for all DRX cycle length.NOTE 2:N2 = 3 if the NR inter-frequency carrier for idle mode CA/DC measurement reporting is in FR1,N2=6 if the NR inter-frequency carrier for idle mode CA/DC measurement reporting is in FR1 and UE operating on a target cell with 12 PRB, and N2 = 5 if the NR inter-frequency carrier for idle mode CA/DC measurement reporting is in FR2.",,,

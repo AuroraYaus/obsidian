@@ -1,4 +1,0 @@
-Base Station Type,Wanted Signal mean power (dBm),Mean power of interfering signals (dBm),Type of interfering signals
-Medium Range BS,PREFSENS +6 dB,-47,See Table 7.7.2-2a
-Local Area BS,PREFSENS +6 dB,-44,
-"NOTE 1:PREFSENS depends on the RAT and the BS class. For NR, PREFSENS depends also on the BS channel bandwidth, see clause 7.2.5.",,,

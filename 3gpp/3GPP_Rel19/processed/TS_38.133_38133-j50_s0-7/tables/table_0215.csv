@@ -1,5 +1,0 @@
-Serving cell SSB Ês/Iot (dB),Frequency range,"Tidentify_inter_NR_CCA, i [ms]",
-,(FR) of target NR cell,Known NR cell,Unknown NR cell
-≥ -8,FR1,"MAX (200 ms, ([6]+K2,i) x TSMTC, i)","MAX (800 ms, ([13]+K2,i) x TSMTC, i)"
-< -8,FR1,N/A,"(800+20 x K2,i) Note1"
-"NOTE 1:The UE is not required to successfully identify a cell on any NR frequency layer with CCA when TSMTC,i > 20 ms and serving cell SSB Ês/Iot < -8 dB.NOTE 2:K2,i is the number of SMTC occasions not available at the UE during RRC re-establishment period on the “i” th carrier with CCA.",,,

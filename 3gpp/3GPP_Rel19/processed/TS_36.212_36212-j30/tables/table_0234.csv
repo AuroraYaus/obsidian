@@ -1,8 +1,0 @@
-Bit field mapped to index,Message
-0,2 layers: Transmit diversity
-1,1 layer: Precoding corresponding to precoding vector
-2,1 layer: Precoding corresponding to precoder vector
-3,1 layer: Precoding corresponding to precoder vector
-4,1 layer: Precoding corresponding to precoder vector
-5,"1 layer: Precoding according to the latest PMI report on PUSCH, using the precoder(s) indicated by the reported PMI(s)"
-6~8,reserved

@@ -1,3 +1,0 @@
-DLInformationTransferMRDC field descriptions
-"dl-DCCH-MessageNRIncludes the DL-DCCH-Message. In this version of the specification, the field is only used to transfer the NR RRCReconfiguration, RRCRelease, and MobilityFromNRCommand messages."
-"dl-DCCH-MessageEUTRAIncludes the DL-DCCH-Message. In this version of the specification, the field is only used to transfer the E-UTRA RRCConnectionReconfiguration, RRCConnectionRelease, and MobilityFromEUTRACommand messages as specified in TS 36.331 [10]."

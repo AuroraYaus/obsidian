@@ -1,5 +1,0 @@
-SCPTMConfiguration-NB field descriptions
-"multiTB-GapIndicates the scheduling gap for SC-MTCH using multiple TB scheduling, see TS 36.211 [21] and TS 36.213 [23]. Value sf16 corresponds to 16 subframes, sf32 corresponds to 32 subframes, and so on. If the field is absent, there is no scheduling gap."
-sc-mtch-InfoListProvides the configuration of each SC-MTCH not using multiple TB scheduling in the current cell.
-sc-mtch-InfoListMultiTBProvides the configuration of each SC-MTCH using multiple TB scheduling in the current cell.The total number of signalled SC-MTCH configuration in sc-mtch-InfoList and sc-mtch-InfoListMultiTB cannot be more than maxSC-MTCH-NB-r14.
-"scptm-NeighbourCellListList of neighbour cells providing MBMS services via SC-MRB. When absent, the UE shall assume that MBMS services listed in the SCPTMConfiguration-NB message are not provided via SC-MRB in any neighbour cell."

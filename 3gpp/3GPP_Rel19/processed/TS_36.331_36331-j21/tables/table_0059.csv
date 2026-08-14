@@ -1,2 +1,0 @@
-ULInformationTransferIRAT field descriptions
-"ul-DCCH-MessageNRIncludes the UL-DCCH-Message as defined in TS 38.331 [82]. In this version of the specification, the field is only used to transfer the NR RRC MeasurementReport, NR RRC SidelinkUEInformationNR and the NR RRC UEAssistanceInformation messages.This field is not applicable to 5GS Proximity based Services (ProSe) as defined in TS 23.304 [112] in this release."

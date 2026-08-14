@@ -1,3 +1,0 @@
-SemiStaticChannelAccessConfigUE field descriptions
-"periodUEIndicates the period of a channel occupancy that the UE can initiate as described in TS 37.213 [48], clause 4.3. Value ms1 corresponds to 1 ms, value ms2 corresponds to 2 ms, value ms2dot5 corresponds to 2.5 ms, and so on."
-"offsetUEIndicates the number of symbols from the beginning of the even indexed radio frame to the start of the first period within that radio frame that the UE can initiate a channel occupancy (see TS 37.213 [48], clause 4.3), based on the smallest SCS among the configured SCSs in the serving cell. The offset duration indicated by this field is less than the period duration indicated by periodUE. The maximum value is 139, 279 and 559 for 15, 30 and 60 kHz subcarrier spacing, respectively."

@@ -1,7 +1,0 @@
-CA bandwidth class(UL),B and C,,
-Interference SignalFrequency Offset,BWChannel_CA,2*BWChannel_CA,
-Interference CW Signal Level,-40dBc,,
-Intermodulation Product,-29dBc,-35dBc,
-Measurement bandwidth(NOTE1),"Nominal channel space+MBWACLR,low/2+ MBWACLR,high/2",,
-Measurement offset from channel center,BWChannel_CA and 2*BWChannel_CA,,2*BWChannel_CA and 4*BWChannel_CA
-"NOTE 1:MBWACLR,low and MBWACLR,high are the single-channel ACLR measurement bandwidths specified for channel bandwidths BWchannel(low) and BWchannel(high) in 6.5.2.4.1, respectively.",,,

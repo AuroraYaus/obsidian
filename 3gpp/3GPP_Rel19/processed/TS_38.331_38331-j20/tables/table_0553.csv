@@ -1,7 +1,0 @@
-SDAP-Config field descriptions
-"defaultDRBIndicates whether or not this is the default DRB for this PDU session. Among all configured instances of SDAP-Config with the same value of pdu-Session, this field shall be set to true in at most one instance of SDAP-Config and to false in all other instances."
-"mappedQoS-FlowsToAddIndicates the list of QFIs of UL QoS flows of the PDU session to be additionally mapped to this DRB. A QFI value can be included at most once in all configured instances of SDAP-Config with the same value of pdu-Session. For QoS flow remapping, the QFI value of the remapped QoS flow is only included in mappedQoS-FlowsToAdd in sdap-Config corresponding to the new DRB and not included in mappedQoS-FlowsToRelease in sdap-Config corresponding to the old DRB."
-mappedQoS-FlowsToReleaseIndicates the list of QFIs of QoS flows of the PDU session to be released from existing QoS flow to DRB mapping of this DRB.
-pdu-SessionIdentity of the PDU session whose QoS flows are mapped to the DRB.
-sdap-HeaderULIndicates whether or not a SDAP header is present for UL data on this DRB. The field cannot be changed after a DRB is established. The network sets this field to present if the field defaultDRB is set to true.
-sdap-HeaderDLIndicates whether or not a SDAP header is present for DL data on this DRB. The field cannot be changed after a DRB is established.

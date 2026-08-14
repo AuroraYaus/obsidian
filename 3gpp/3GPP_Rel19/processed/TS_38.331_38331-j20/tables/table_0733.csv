@@ -1,7 +1,0 @@
-SL-L2RemoteUE-Config field descriptions
-sl-SRAP-ConfigRemoteIndicates SRAP configuration used for L2 U2N Remote UE.
-sl-UEIdentityRemoteIndicates the C-RNTI to the L2 U2N Remote UE.
-sl-U2U-RelayUE-ToAddModListList of L2 U2U Relay UEs for which the related configuration is to be added and modified to the L2 U2U Remote UE.
-sl-U2U-RelayUE-ToReleaseListList of L2 U2U Relay UEs for which the related configuration is to be released by the L2 U2U Remote UE.
-sl-U2U-TargetRemoteUE-ToAddModListList of target L2 U2U Remote UEs for which the related configuration is to be added and modified relative to the L2 U2U Relay UE identified by the sl-L2IdentityRelay.
-sl-U2U-TargetRemoteUE-ToReleaseListList of target L2 U2U Remote UEs for which the related configuration is to be released relative to the L2 U2U Relay UE identified by the sl-L2IdentityRelay.

@@ -1,4 +1,0 @@
-Configuration,TEvaluate_CBD_SSB (ms),
-"non-DRX, DRX cycle ≤ 320 ms","Max(25, Ceil(3  P  PCBD)  TSSB)",
-DRX cycle > 320 ms,Ceil(3  P  PCBD)  TDRX,
-"NOTE:TSSB is the periodicity of SSB in the two sets   and . TDRX is the DRX cycle length.q1,0q1,1",,

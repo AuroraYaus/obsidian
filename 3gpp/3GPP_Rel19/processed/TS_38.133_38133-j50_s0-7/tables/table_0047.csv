@@ -1,7 +1,0 @@
-DRX cycle length [s],Scaling Factor (N1),,Nserv_CCA [number of DRX cycles]
-,FR1,FR2-2 Note 3,
-0.32,1,12,N1*M1*(4+ Ms)
-0.64,,8,N1*M1*(4+ Ms)
-1.28,,6,N1*(2+Ms)
-2.56,,5,N1*(2+Ms)
-"Note 1:Ms is the number of groups of consecutive N1 DRX cycles each group with at least one SMTC occasion not available at the UE during Nserv_CCA, and Ms< Ms,maxNote 2:Ms,max=8 for DRX cycle length < 1.28 s, Ms,max= 4 for DRX cycle length ≥ 1.28 s.Note 3:Applies for UE supporting FR2-2 power class 2&3. For UE supporting FR2-2 power class 1, N1 = 12 for all DRX cycle length.",,,

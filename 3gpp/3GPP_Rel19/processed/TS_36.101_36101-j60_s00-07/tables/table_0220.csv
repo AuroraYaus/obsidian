@@ -1,7 +1,0 @@
-Parameters,Relative limit (dBc),Applicable frequencies
-Output power >10 dBm,-28,Carrier center frequency < 1 GHz
-,-25,Carrier center frequency ≥ 1 GHz
-0 dBm ≤ Output power ≤10 dBm,-25,
--30 dBm ≤ Output power ≤0 dBm,-20,
--40 dBm  Output power < -30 dBm (NOTE 1),-10,
-NOTE 1:The requirement in this power range is not applicable for V2X sidelink transmission for E-UTRA V2X operating bands specified in Table 5.5G-1.,,

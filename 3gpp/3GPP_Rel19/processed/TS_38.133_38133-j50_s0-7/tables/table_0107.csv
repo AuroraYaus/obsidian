@@ -1,7 +1,0 @@
-DRX cycle length [s],Scaling Factor (N1),"Tdetect,NR_Intra [s] (number of DRX cycles)","Tmeasure,NR_Intra [s] (number of DRX cycles)","Tevaluate,NR_Intra[s] (number of DRX cycles)"
-,FR1-NTN and FR2-NTN,,,
-0.32,1,11.52 x N1 x M2 (36 x N1 x M2),1.28 x N1 x M2 (4 x N1 x M2),5.12 x N1 x M2 (16 x N1 x M2)
-0.64,,17.92 x N1 (28 x N1),1.28 x N1 (2 x N1),5.12 x N1 (8 x N1)
-1.28,,32 x N1 (25 x N1),1.28 x N1 (1 x N1),6.4 x N1 (5 x N1)
-2.56,,58.88 x N1 (23 x N1),2.56 x N1 (1 x N1),7.68 x N1 (3 x N1)
-"NOTE 1:M2 = 2 if SMTC periodicity of measured intra-frequency cell > 20 ms and 1<NSMTC  4 upon more than 1 SMTC configured at the UE; M2 = 1.5 if SMTC periodicity of measured intra-frequency cell > 20 ms and NSMTC=1 upon 1 SMTC configured at the UE; otherwise M2=1. Where, NSMTC is the number of SMTCs configured by SAN If different SMTC periodicities are configured for different cells, the SMTC periodicity in this note is the one used by the cell being identified. If the actual SSB transmission periodicity is greater than the periodicity of the associated configured SMTC, longer Tdetect, NR_intra is expected.NOTE 2: The UE is not required to meet the requirements for 2.56 s DRX cycle length for earth-moving LEO deployment.",,,,

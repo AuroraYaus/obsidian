@@ -1,4 +1,0 @@
-Configuration,TEvaluate_CBD_SSB (ms),
-"non-DRX, DRX cycle ≤ 320 ms","Max(25, Ceil(3  P  PCBD)  TSSB)",
-DRX cycle > 320 ms,Ceil(3  P  PCBD)  TDRX,
-"NOTE:TSSB is the periodicity of SSB in the set  for UE not supporting On-demand SSB operation or when OD-SSB transmission is not indicated, otherwise, TSSB = EMP of SSB in the set . The EMP is the periodicity of OD-SSBs in the configured DL BWP if no first SSB transmission is configured, or if UE supports timec1nc2 and OD-SSB transmission is indicated with first SSB transmission and the union of the first SSB transmission and OD-SSB transmission has a non-periodic time domain pattern, or the periodicity of the union of OD-SSBs and first SSBs if first SSBs are transmitted and the OD-SSB activation is indicated and the union of OD-SSBs and first SSBs has a periodic time domain pattern. TDRX is the DRX cycle length.q1q1",,

@@ -1,7 +1,0 @@
-Parameter,Unit,Value,Comment
-PCFICH/PDCCH/PHICH parameters,,Cell1: R.6 FDDCell2: R.11 FDDCell3: R.11 FDD,As specified in clause A.3.1.2.1
-OCNG Patterns defined in A.3.2.1,,Cell1: OP.6 FDDCell2: OP.19 FDDCell3: OP.19 FDD,OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols (other than those in the PRS subframes). There is no PDSCH allocated in the subframe transmitting PRS.
-Channel Bandwidth (BWchannel),MHz,Cell1: 10Cell2: 5Cell3: 5,
-PRS Bandwidth,RB,Cell1: 50Cell2: 25Cell3: 25,PRS Bandwidthbandwidth is as indicated in prs-Bandwidth in the OTDOA assistance data defined in [24].
-Number of consecutive positioning downlink subframes,,2,As defined in TS 36.211
-Note 1:See Table A.9.8.5.1-1 for other general test parameters.Note 2:N/A,,,

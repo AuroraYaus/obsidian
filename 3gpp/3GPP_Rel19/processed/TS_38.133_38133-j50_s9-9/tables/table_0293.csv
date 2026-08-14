@@ -1,7 +1,0 @@
-Configuration,Measurement bandwidth (RB),Number of UL/DL sub-frames per half frame (5 ms),,DwPTS,,"TMeasure, E-UTRAN TDD (ms)"
-,,DL,UL,Normal CP,Extended CP,
-0,6,2,2,19760×Ts,20480×Ts,480 x CSSFinterRAT x Ceil(Kgap_EUTRA) + 480 x ceil(T1/480) x CSSFinterRAT
-1 (Note 1),50,2,2,19760×Ts,20480×Ts,240 x CSSFinterRAT x Ceil(Kgap_EUTRA) + 480 x ceil(T1/480) x CSSFinterRAT
-2,6,1,3,19760×Ts,20480×Ts,720 x CSSFinterRAT x Ceil(Kgap_EUTRA) + 480 x ceil(T1/480) x CSSFinterRAT
-3 (Note 1),50,1,3,19760×Ts,20480×Ts,480 x CSSFinterRAT x Ceil(Kgap_EUTRA) + 480 x ceil(T1/480) x CSSFinterRAT
-"NOTE 1:This configuration is optional.NOTE 2:Kgap_EUTRA is only applicable for a UE supporting concurrent GAPs. Otherwise Kgap_EUTRA =1.NOTE 3:   T1 = ceil( Lcancel×KgapEUTRA)×MGRP. Lcancel is the number of gap occasions cancelled during measurement period during Tmeasure, E-UTRAN TDD for measurement.",,,,,,

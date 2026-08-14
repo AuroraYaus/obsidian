@@ -1,9 +1,0 @@
-Modulation,,"MPRWT, BWchannel ≤ 200 MHz",
-,,"Inner RB allocations,Region 1",Edge RB allocations
-DFT-s-OFDM,Pi/2 BPSK,0.0,≤ 2.0
-,QPSK,0.0,≤ 2.0
-,16 QAM,≤ 3.0,≤ 3.5
-,64 QAM,≤ 5.0,≤ 5.5
-CP-OFDM,QPSK,≤ 3.5,≤ 4.0
-,16 QAM,≤ 5.0,≤ 5.0
-,64 QAM,≤ 7.5,≤ 7.5

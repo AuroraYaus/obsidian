@@ -1,3 +1,0 @@
-Sensor-LocationInfo field descriptions
-sensor-MeasurementInformationThis field provides barometric pressure measurements as Sensor-MeasurementInformation defined in TS 37.355 [49]. The first/leftmost bit of the first octet contains the most significant bit.
-sensor-MotionInformationThis field provides motion sensor measurements as Sensor-MotionInformation defined in TS 37.355 [49]. The first/leftmost bit of the first octet contains the most significant bit.

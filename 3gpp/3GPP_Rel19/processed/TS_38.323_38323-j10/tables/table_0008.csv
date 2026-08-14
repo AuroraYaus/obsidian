@@ -1,3 +1,0 @@
-Bit,Description
-0,PDCP SDU with COUNT = (FDC + bit position) modulo 232 is not discarded.
-1,PDCP SDU with COUNT = (FDC + bit position) modulo 232 is discarded.

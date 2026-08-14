@@ -1,5 +1,0 @@
-Index of field    (bit number),Definition(description of the supported functionality if indicator set to one),Notes
-0 (leftmost bit),- The MPR for intra-band contiguous carrier aggregation bandwidth class C with non-contiguous resource allocation specified in Clause 6.2.3A in version 12.5.0 of this specification,- This bit shall be set to 1 by a UE supporting intra-band contiguous CA bandwidth class C
-1,- The A-MPR associated with NS_05 for Band 1 in Clause 6.2.4 in version 12.10.0 of this specification.,- This bit shall be set to 1 by a UE supporting A-MPR associated to NS_05 for Band 1.
-2,The A-MPR associated with NS_04 for Band 41 in Table 6.2.4-4 in version 14.1.0 of this specification.,- This bit shall be set to 1 by a power class 3 UE supporting A-MPR associated to NS_04 for Band 41.
-3,The A-MPR associated with NS_31 for Band 46 in Table 6.2.4-26 in version 15.3.0 of this specification.,- This bit shall be set to 1 by a UE supporting A-MPR associated to NS_31 for Band 46.

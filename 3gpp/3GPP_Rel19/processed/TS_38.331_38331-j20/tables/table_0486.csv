@@ -1,3 +1,0 @@
-Conditional Presence,Explanation
-SUL-Only,"The field is optionally present, Need R, if supplementaryUplink is configured within ServingCellConfig. It is absent otherwise."
-SUL,"The field is optionally present, Need R, if supplementaryUplink is configured within ServingCellConfig. It is mandatory present otherwise."

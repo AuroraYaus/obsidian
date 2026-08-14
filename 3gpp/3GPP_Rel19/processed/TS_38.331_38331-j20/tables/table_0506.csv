@@ -1,4 +1,0 @@
-RA-AdaptConfig field descriptions
-"prach-SubsetMaskIndexAdaptationIndicates the PRACH mask index for determining association periods for valid PRACH occasions associated with rach-ConfigAdapt. Value zero corresponds to mask index 0 and so on (See TS 38.213 [13], subclause 8.1)."
-"validityDurationForRACH-AdaptationIndicates the validity time duration for availability indication of additional PRACH resources indicated by DCI 1_0 with P-RNTI, time unit is one SI modification period (see TS 38.213 [13], subclause 8.1)."
-"valueKforAssociationPatternPeriodsForPRACH-SubsetMaskThe value of Kmask used for mapping of mask index to association periods per Kmask association pattern periods (See TS 38.213 [13], subclause 8.1). Absence of this field indicates the value 1."

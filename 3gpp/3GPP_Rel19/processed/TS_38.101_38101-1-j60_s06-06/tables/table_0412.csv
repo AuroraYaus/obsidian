@@ -1,8 +1,0 @@
-ΔfOOB MHz,BWChannel_CA (MHz) / Spectrum emission limit (dBm),,Measurementbandwidth
-,≤50,>50,
-± 0 – 1,-10,,2 % of BWChannel_CA
-,,-10,1 MHz
-± 1 – 5,-10,,1 MHz
-± 5 – X,-13,,
-± X - (BWChannel_CA + 5 MHz),-25,,
-NOTE:X is aggregated bandwidth,,,

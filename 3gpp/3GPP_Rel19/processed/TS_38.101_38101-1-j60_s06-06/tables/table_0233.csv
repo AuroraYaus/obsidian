@@ -1,8 +1,0 @@
-Pre-coding,Modulation,RB Allocation (Note 3),,,,RB Allocation (Note 4)
-,,Outer RB set configuration5,,Inner RB set configuration5,,
-,,Full (dB),Partial (dB),Full (dB),Partial (dB),Full/Partial
-CP-OFDM,QPSK,≤ 6.0,≤ 7.0,≤ 4.0,≤ 5.0,Table 6.2E.2F-1
-,16 QAM,≤ 6.0,≤ 7.5,≤ 4.0,≤ 5.0,
-,64 QAM,≤  6.5,≤ 7.5,≤ 4.5,≤ 5.5,
-,256 QAM,≤ 8.0,≤ 8.5,≤ 7.5,≤ 7.5,
-"NOTE 1:The A-MPR shall apply to all SCS in all active 20 MHz sub-bands contiguously allocated in the channel.NOTE 2:Full allocation A-MPR applies when all RB’s in a 20 MHz channel or all RB’s in all sub-bands for wideband operation are fully allocated and all sub-bands are transmitted.  Partial allocation A-MPR applies when one or more RB’s in one or more sub-bands are not allocated or when not all transmitted sub-bands for wideband operation are transmitted.NOTE 3:Applicable for 20 MHz channels centered at the nearest NR-ARFCN corresponding to 5160, 5340, 5480, and 5700 MHz, 40 MHz channels centered at the nearest NR-ARFCN corresponding to 5170, 5190, 5310, 5330, 5490, and 5510 MHz, 60 MHz channels centered at the nearest NR-ARFCN corresponding to 5180, 5200, 5300, 5320, 5500, 5520, 5680 MHz, and 80 MHz channels centered at the nearest NR-ARFCN corresponding to 5190, 5210, 5290, 5310, 5510, and 5530 MHz.  NOTE 4:Applicable for all valid channels other than those enumerated under NOTE 3.NOTE 5:Contiguous outer sub-band configuration and contiguous inner sub-band configuration in Table 6.2E.2F-3 apply.NOTE 6:In current release larger CBW than 80MHz are not applicable for this network signalling.",,,,,,

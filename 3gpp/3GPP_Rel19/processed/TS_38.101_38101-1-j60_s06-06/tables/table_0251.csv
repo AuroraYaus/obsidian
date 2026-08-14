@@ -1,8 +1,0 @@
-Pre-coding,Modulation,Channel bandwidth (Sub-band allocation) / RB Allocation,,,,,,,,,
-,,20MHz,,40MHz,,60MHz,,80MHz,,100MHz,
-,,Full (dB),Partial (dB),Full (dB),Partial (dB),Full (dB),Partial (dB),Full (dB),Partial (dB),Full (dB),Partial (dB)
-CP-OFDM,QPSK,≤ 16.5,≤ 19.0,≤ 13.5,≤ 16.0,≤ 11.5,≤ 14.0,≤ 10.0,≤ 12.5,≤ 9.0,≤ 11.5
-,16 QAM,≤ 16.5,≤ 19.0,≤ 13.5,≤ 16.0,≤ 11.5,≤ 14.0,≤ 10.0,≤ 12.5,≤ 9.0,≤ 11.5
-,64 QAM,≤ 16.5,≤ 19.0,≤ 13.5,≤ 16.0,≤ 11.5,≤ 14.0,≤ 10.0,≤ 12.5,≤ 9.0,≤ 11.5
-,256 QAM,≤ 16.5,≤ 19.0,≤ 13.5,≤ 16.0,≤ 11.5,≤ 14.0,≤ 10.0,≤ 12.5,≤ 9.0,≤ 11.5
-"NOTE 1:The A-MPR shall apply to all SCS in all active 20 MHz sub-bands contiguously allocated in the channel.NOTE 2:Full allocation A-MPR applies when all RB’s in a 20 MHz channel or all RB’s in all sub-bands for wideband operation are fully allocated and all sub-bands are transmitted.  Partial allocation A-MPR applies when one or more RB’s in one or more sub-bands are not allocated but when all sub-bands within the channel are transmitted.  When not all sub-bands within the channel are transmitted, the A-MPR associated with the channel bandwidth according to the bandwidth of the contiguously transmitted sub-bands and according to the allocation type applies.",,,,,,,,,,,

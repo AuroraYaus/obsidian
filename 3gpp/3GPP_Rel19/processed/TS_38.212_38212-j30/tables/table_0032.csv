@@ -1,7 +1,0 @@
-Field,Bitwidth
-Rank Indicator,
-Layer Indicator,
-Wide-band CQI,4
-Subband differential CQI,2
-Indicator of the number of non-zero wideband amplitude coefficients  for layer,
-"NOTE: is the number of allowed rank indicator values according to Clauses 5.2.2.2.3 and 5.2.2.2.4 [6, TS 38.214] and  is the value of the rank. The values of the rank indicator field are mapped to allowed rank indicator values with increasing order, where '0' is mapped to the smallest allowed rank indicator value.nRIυ",

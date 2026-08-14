@@ -1,6 +1,0 @@
-DRX cycle length (s),TEvaluate_Qout_DRX_NB-IoT and TEvaluate_Qin_DRX_NB-IoT (s),,
-,DRX cycles for Rmax ≤ 64,DRX cycles for Rmax > 64,
-0.256 < DRX cycle ≤ 1.024,Note 1 (20),Note 1 (40),
-1.024 < DRX cycle ≤ 3.072,Note 1 (10),Note 1 (20),
-4.096 < DRX cycle ≤ 10.24,Note 1 (5),Note 1 (10),
-NOTE 1:Evaluation period length in time depends on the length of the DRX cycle in use,,,

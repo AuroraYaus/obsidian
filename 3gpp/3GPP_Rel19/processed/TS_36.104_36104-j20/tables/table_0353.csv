@@ -1,8 +1,0 @@
-Channel Bandwidth [MHz],FFT size,Cyclic prefix in FFT samples,EVM window length W,Ratio of W to total CP (Note 1)[%]
-1.4,256,64,56,87.5
-3,512,128,116,90.6
-5,1024,256,248,96.9
-10,2048,512,500,97.7
-15,3072,768,756,98.4
-20,4096,1024,1008,98.4
-Note 1:These percentages are informative.,,,,

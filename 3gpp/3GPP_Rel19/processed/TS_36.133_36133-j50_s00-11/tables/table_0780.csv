@@ -1,6 +1,0 @@
-Reported value,MPDCCH repetition level
-No short DCQR,No measurement reporting
-Short DCQR 1,Rmax/8 (Note 1)
-Short DCQR 2,Rmax (Note 3)
-Short DCQR 3,4xRmax (Note 2)
-"Note 1:When Rmax is less than 8, set Short DCQR 1 to 1.Note 2:When Rmax is more than 32, set Short DCQR 3 to 256.Note 3: When Rmax is 1, set Short DCQR 2 to 2.Note 4: Aggregation level (ECCE) is assumed to be L’max = 24.",

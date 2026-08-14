@@ -1,9 +1,0 @@
-Accuracy,Conditions,,,,,
-,PRS Ês/Iot,Minimum PRS bandwidth per hop,PRS SCS,Total PRS bandwidth after FH,IoNote 4 range,
-,,,,,MinimumIoNote 1,MaximumIo
-TcNote 5,dB,PRB,kHz,PRB,dBm / SCSPRS,dBm/BWChannel
-±(11+),0,≥64,60,264,NOTE 5,NOTE 5
-±(5+),,64,120,264,NOTE 5,NOTE 5
-±(17+),-6,≥64,60,264,NOTE 5,NOTE 5
-±(14+),,64,120,264,NOTE 5,NOTE 5
-NOTE 1:This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2:NR operating band groups are as defined in Section 3.5.NOTE 3:The Io is defined in PRS slots. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same slot.NOTE 4:Tc is the basic timing unit defined in TS 38.211 [6].NOTE 5:The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS as defined in table 10.1A.18.2.3-3.NOTE 6:  is the margin determined from table 10.1A.18.2.3-6.,,,,,,

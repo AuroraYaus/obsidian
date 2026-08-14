@@ -1,5 +1,0 @@
-Configuration,TL1-SINR_Measurement_Period_SSB_CMR_IMR (ms)
-non-DRX,"max(TReport, ceil((M+L1)*P)* max(TSSB, Tproc))"
-DRX cycle ≤ 320 ms,"max(TReport, ceil(1.5*(M+L1)*P)*max(TDRX,TSSB, Tproc))"
-DRX cycle > 320 ms,ceil((M+L1)*P)*TDRX
-"NOTE 1:TSSB = ssb-periodicityServingCell is the periodicity of the SSB-Index configured for L1-SINR channel measurement if UE not supporting On-demand SSB operation or when OD-SSB transmission is not indicated, otherwise, TSSB = EMP of the SSB index configured for L1-SINR channel measurement. TDRX is the DRX cycle length. TReport is configured periodicity for reporting.NOTE 2:The requirements are applicable provided that the CSI-RS resource configured for interference measurement shall be 1-to-1 mapped to SSB configured for channel measurement, with the same periodicity.NOTE 3:If UE indicates ‘full’ or ‘partial’ for timeline-r19 in sbfd-Aware-r19 and the CSI-RS resource for IMR is across 2 DL subbands, Tproc = 8ms; otherwise Tproc = 0.",

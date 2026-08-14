@@ -1,8 +1,0 @@
-Pre-coding,Modulation,MPR for PSCCH and PSSCH simultaneous transmission (dB)/ RB Allocation,,,,
-,,Outer RB set configuration5,,Inner RB set configuration5,,
-,,Full2,Partial3,Full2,Partial3,Exception for 100MHz Full4
-CP-OFDM,QPSK,≤ 3.5,≤ 3.5,≤ 3.5,≤ 2.0,≤ 4.5
-,16 QAM,≤ 4.0,≤ 4.0,≤ 4.0,≤ 3.0,≤ 4.5
-,64 QAM,≤ 5.5,≤ 5.5,≤ 5.5,≤ 5.5,
-,256 QAM,≤ 7.0,≤ 7.0,≤ 7.0,≤ 7.0,
-NOTE 1:The MPR shall apply to all SCS in all active 20 MHz sub-bands contiguously allocated in the channel. NOTE 2:The MPR for Full RB allocation applies to all RB’s in all transmitted 20 MHz or larger channels that are fully allocated or all RB’s in all transmitted sub-bands for wideband operation that are fully allocated excluding the wideband configurations of Table 6.2E.2F-2. NOTE 3:The MPR for Partial RB allocation applies to interlaced allocations with uplink resource allocation type 2 as specified in TS 38.214 [10] or transmitted sub-bands for wideband operation are transmitted according to the wideband configurations of Table 6.2E.2F-2.  NOTE 4:Exception for 100MHz Full RB allocation MPR applies when all RB’s in all sub-bands for 100MHz wideband operation are fully allocated and sub-bands are transmitted according to the wideband configurations of Table 6.2E.2F-2. NOTE 5:Contiguous sub-band configuration in Table 6.2E.2F-3 applies.,,,,,,

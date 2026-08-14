@@ -1,7 +1,0 @@
-Inter-band CA combination,"ΔRIB,c for NR bands (dB)1",,,,,
-,Component band in order of bands in configuration2,,,,,
-CA_n1-n3-n7-n28-n38-n78,0.2,0.2,0.2,0.2,0.2,0.5
-CA_n1-n3-n7-n40-n78-n105,0.2,0.2,0.2,0.3,0.5,0.3
-CA_n1-n3-n20-n41-n71-n78,0.2,0.2,0.4,05 / 0.56,0.4,0.5
-CA_n1-n5-n7-n40-n78-n105,0.2,0.2,0.2,0.3,0.5,0.3
-"NOTE 1: “-” denotes ΔRIB,c = 0.NOTE 2:The component band order in the configuration should be listed by the order of NR bands, such as for CA_n1-n3-n5-n7-n78 the band order from left to right is n1 n3, n5, n7 and n78.",,,,,,

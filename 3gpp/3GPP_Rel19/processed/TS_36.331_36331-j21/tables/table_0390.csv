@@ -1,9 +1,0 @@
-NPDSCH-Config-NB field descriptions
-"downlinkHARQ-FeedbackDisabledBitmap-NBUsed to disable the DL HARQ feedback, sent in the uplink, per HARQ process ID, see TS 36.321 [6]. The first/leftmost bit corresponds to HARQ process ID 0, the next bit to HARQ process ID 1. The bit corresponding to HARQ process ID that is not configured shall be ignored. A bit set to one identifies a HARQ process with disabled DL HARQ feedback and a bit set to zero identifies a HARQ process with enabled DL HARQ feedback."
-downlinkHARQ-FeedbackDisabledDCI-NBPresence of this field indicates that DCI indication is used to directly indicate or override RRC configuration for disabling HARQ feedback
-"harq-AckBundlingFor FDD: Activation of HARQ ACK bundling for DL multiple TBs scheduling with interleaved transmission, see TS 36.213 [23]."
-"npdsch-16QAM-ConfigActivation of 16QAM for DL, see TS 36.213 [23]."
-"nrs-PowerProvides the downlink narrowband reference-signal EPRE, see TS 36.213 [23], clause 16.2. The actual value in dBm."
-"nrs-PowerRatioThe power ratio of NPDSCH EPRE to NRS EPRE in symbols without NRS for standalone and guardband deployments, or in symbols without NRS nor CRS for in-band deployments. See TS 36.213 [23]."
-"nrs-PowerRatioWithCRSThe power ratio of NPDSCH EPRE to NRS EPRE in symbols with CRS for inband deployments, see TS 36.213 [23]."
-"multiTB-ConfigFor FDD: Activation of multiple TBs scheduling in DL, see TS 36.213 [23]. Value interleaved indicates that multiple TBs scheduling with interleaved transmission is enabled, value nonInterleaved indicates that multiple TBs scheduling without interleaved transmission is enabled."

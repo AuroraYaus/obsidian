@@ -1,7 +1,0 @@
-Channel Bandwidth (MHz),"Carrier Centre Frequency, Fc (MHz)",Region AOuter/Inner,,,Region BOuter/Inner,,
-,,RBstart,LCRB,A-MPR (dB),RBstart,RBstart+LCRB,A-MPR (dB)
-5,1432.5 ≤ FC < 1437.5,≤ -3.6 MHz/12/SCS + LCRB,≥ 3.6 MHz/12/SCS,≤ 7,> -3.6 MHz/12/SCS + LCRB),≤ 2.16 MHz/12/SCS,≤ 5.5
-10,1435 ≤ FC < 1442,≤ -3.6 MHz/12/SCS + LCRB,≥ 3.6 MHz/12/SCS,≤ 12,> -3.6 MHz/12/SCS + LCRB),≤ 2.16 MHz/12/SCS,≤ 9
-15,1437.5 ≤ FC < 1447.5,≤ -3.6 MHz/12/SCS + LCRB,≥ 3.6 MHz/12/SCS,≤ 13,> -3.6 MHz/12/SCS + LCRB),≤ 3.6 MHz/12/SCS,≤ 10
-20,1440 ≤ FC < 1450,≤ -3.6 MHz/12/SCS + LCRB,≥ 3.6 MHz/12/SCS,≤ 13,> -3.6 MHz/12/SCS + LCRB),≤ 5.4 MHz/12/SCS,≤ 10
-NOTE 1 - 4:Void,,,,,,,

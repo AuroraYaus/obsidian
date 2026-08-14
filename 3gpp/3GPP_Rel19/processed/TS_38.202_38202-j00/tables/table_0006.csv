@@ -1,9 +1,0 @@
-Supported Combinations,Comment
-A,Note 2
-B,Note 2
-C,Note 2
-E,Note 4
-E,Note 5
-DN×,Note 2
-B+C,Note 2
-"Note 1:Depending on the UE capability, the UE may be able to perform simultaneous Uplink and Sidelink transmissions. If the simultaneous transmission of Sidelink and Uplink is beyond the UE capability, the one not prioritized can be dropped according to [TS 38.321].Note 2:Depending on the UE capability, the UE may be able to perform simultaneous sidelink communication transmissions of the same sidelink “Transmission Type” combinations across multiple SL carriers. Note 3:Simultaneous transmissions over multiple SL carriers with one or more UL carriers is left up to UE implementation.Note 4:Depending on the UE capability, the UE may be able to perform simultaneous SL PRS transmission and PSSCH transmission(s) for a shared SL PRS resource pool across multiple SL carriers.Note 5:Depending on the UE capability, applicable for a dedicated SL PRS resource pool across multiple SL carriers.",

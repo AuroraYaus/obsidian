@@ -1,7 +1,0 @@
-LO periodicity [s] Note 1,Scaling Factor (NLP-WUS),,Tevaluate-LP-WUR-PSS/SSS [s] (number of LO Cycles)
-,FR1,FR2,
-0.32,1,8,1.28s x NLP-WUS (4 x NLP-WUS)
-0.64,,5,2.56s x NLP-WUS (4 x NLP-WUS)
-1.28,,4,5.12s x NLP-WUS (4 x NLP-WUS)
-2.56,,3,10.24s x NLP-WUS (4 x NLP-WUS)
-Note 1:The LO periodicity is the same as the configured DRX cycle length,,,

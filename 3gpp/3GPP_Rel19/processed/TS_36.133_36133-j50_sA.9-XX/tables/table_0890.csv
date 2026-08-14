@@ -1,8 +1,0 @@
-Parameter,,Value
-,,66.67 μs (Note 1)
-,,166.67 μs (Note 2)
-,,200.00 μs (Note 3)
-,,309.90 μs (Note 4)
-,,352.08 μs (Note 5)
-,,452.08 μs (Note 6)
-Note 1:Maximum timing advance with dl-STTI-Length-r15=subslot and proc-Timeline-r15=nplus4set1 [16]Note 2:Maximum timing advance with dl-STTI-Length-r15=subslot and proc-Timeline-r15=nplus6set2 [16]Note 3:Maximum timing advance with ShortProcessingTime = TRUE  [16]Note 4:Maximum timing advance with dl-STTI-Length-r15=slot [16]Note 5:Maximum timing advance with dl-STTI-Length-r15=subslot and proc-Timeline-r15=nplus6set1 [16]Note 6:Maximum timing advance with dl-STTI-Length-r15=subslot and proc-Timeline-r15=nplus8set2 [16],,

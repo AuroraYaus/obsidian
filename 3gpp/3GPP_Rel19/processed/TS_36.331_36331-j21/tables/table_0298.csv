@@ -1,2 +1,0 @@
-SL-DiscTxPowerInfo field descriptions
-"discMaxTxPowerIndicates the P-Max parameter used to calculate the maximum transmit power a UE configured with the concerned range class, see TS 24.333 [70], clause 4.2.11. The first entry in SL-DiscTxPowerInfoList corresponds to UE range class 'short', the second entry corresponds to 'medium' and the third entry corresponds to 'long'."

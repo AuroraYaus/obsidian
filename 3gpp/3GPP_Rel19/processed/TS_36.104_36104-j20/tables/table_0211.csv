@@ -1,7 +1,0 @@
-Parameter,Value
-Maximum number of HARQ transmissions,4
-RV sequence,"0, 2, 3, 1, 0, 2, 3, 1"
-Uplink-downlink allocation for TDD,Configuration 1 (2:2)
-Subframes in which PUSCH is transmitted,"For FDD: subframe #0, #2, #4, #6, and #8 in radio framesFor TDD: subframe #2, #3, #7 and #8 in radio frames"
-Subframes in which sounding RS is transmitted(Note 1),For FDD: subframe #1 in radio framesFor TDD: UpPTS in subframe #1 in radio frames
-Note 1. The transmission of SRS is optional.,

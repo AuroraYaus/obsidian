@@ -1,3 +1,0 @@
-Frequency Range,BS channel bandwidth of the lowest/highest carrier received (MHz),OTA wanted signal mean power (dBm),OTA interfering signal mean power (dBm),OTA interfering signal centre frequency offsetfrom the lower/upper Base Station RF Bandwidth edge (MHz),Type of OTA interfering signal
-FR2-1,"100, 200, 400",EISREFSENS + 6 dB,EISREFSENS_50M + 37 + ΔFR2_REFSENS,±75,"50 MHz DFT-s-OFDM NR signal,60 kHz SCS, 64 RBs"
-"NOTE 1:EISREFSENS and EISREFSENS_50M are given in clause 12.6.3.NOTE 2:For lowest/highest carrier which is configured in DU/UD SBFD operation, the interference only applies when DL subband is adjacent to Base Station RF Bandwidth edge.",,,,,

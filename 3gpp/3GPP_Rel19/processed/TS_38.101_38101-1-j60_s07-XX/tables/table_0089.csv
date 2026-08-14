@@ -1,5 +1,0 @@
-Rx Parameter,Units,SL CA Bandwidth Class,
-,,A,B
-Power in largest Transmission Bandwidth Configuration CC,dBm,,-25 + 10log10(BWChannel /20)Note 1
-,,,-27 + 10log10(BWChannel /20)Note 2
-NOTE 1:Reference measurement channel is A.7.3 for 64 QAM.NOTE 2:Reference measurement channel is A.7.4 for 256 QAM.NOTE 3:10log10(x) is rounded to the nearest 0.5dB,,,

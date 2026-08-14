@@ -1,5 +1,0 @@
-Parameter,Unit,Value,Comment
-switchingPattern-r19,,0000000000000000011111111110000000000000,Pattern duration is 40 ms. PCell pathloss reference signal(SSB) is transmitted every 20 ms so that 50 % of the pathloss reference signals overlap with PCell active periods.
-gapDurationPCelltoSCell-r19,,"{35us, 70us, 140us}",Depending on UE capability
-gapDurationSCelltoPCell-r19,,"{35us, 70us, 140us}",Depending on UE capability
-SSB configuration,,SSB.23 FR1,

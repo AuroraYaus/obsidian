@@ -1,9 +1,0 @@
-Parameter,E-UTRA operating band groups Note 2,"Minimum PRP1,2"
-,,dBm/15kHz
-Conditions,"FDD_A, TDD_A",-136
-,FDD_D,-134.5
-,"FDD_E, TDD_E",-134
-,FDD_F,-133.5 Note 1
-,FDD_G,-133
-,FDD_N,-129.5
-NOTE 1:The condition is -125 dBm/15kHz when the carrier frequency of the assigned E-UTRA channel bandwidth is within 865-894 MHz.NOTE 2:E-UTRA operating band groups are as defined in Section 3.5.,,

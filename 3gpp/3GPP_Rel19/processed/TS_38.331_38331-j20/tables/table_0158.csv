@@ -1,3 +1,0 @@
-AvailabilityCombination field descriptions
-"availabilityCombinationIdThis ID is used in the DCI Format 2_5 payload to dynamically select this AvailabilityCombination, see TS 38.213 [13], clause 14."
-"resourceAvailabilityIndicates the resource availability of soft symbols for a set of consecutive slots in the time domain. The meaning of this field is described in TS 38.213 [13], Table 14.3. If included in RB-SetGroup within AvailabilityCombinationRB-Groups-r17, it indicates the availability of soft resources for an RB set group. If included in AvailabilityCombinationRB-Groups-r17 when the rb-SetGroups is not configured, it indicates the availability of soft resources in one or multiple slots for all RB sets of a DU cell."

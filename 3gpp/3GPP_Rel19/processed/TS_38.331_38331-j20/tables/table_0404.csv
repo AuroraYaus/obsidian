@@ -1,9 +1,0 @@
-NPN-IdentityInfoList field descriptions
-"iab-SupportThis field combines both the support of IAB and the cell status for IAB. If the field is present, the cell supports IAB and the cell is also considered as a candidate for cell (re)selection for IAB-nodes; if the field is absent, the cell does not support IAB and/or the cell is barred for IAB-node. This field is absent if mobileIAB-Cell is broadcasted in the cell."
-gNB-ID-LengthIndicates the length of the gNB ID out of the 36-bit long cellIdentity. This field is always present if the mobileIAB-Support is broadcasted.
-"mobileIAB-SupportThis field indicates the support of mobile IAB and whether the cell can be considered as a candidate for cell (re)selection for mobile IAB-node. This field is absent if mobileIAB-Cell is broadcasted in the cell. If the field is absent, the cell is barred for mobile IAB-node."
-NPN-IdentityInfoThe NPN-IdentityInfo contains one or more NPN identities and additional information associated with those NPNs. Only the same type of NPNs (either SNPNs or PNI-NPNs) can be listed in a NPN-IdentityInfo element.
-npn-IdentityListThe npn-IdentityList contains one or more NPN Identity elements.
-trackingAreaCodeIndicates the Tracking Area Code to which the cell indicated by cellIdentity field belongs.
-ranacIndicates the RAN Area Code to which the cell indicated by cellIdentity field belongs.
-cellReservedForOperatorUseIndicates whether the cell is reserved for operator use (for the NPN(s) identified in the npn-IdentityList) as defined in TS 38.304 [20]. This field is ignored by NPN capable IAB-MT and NPN capable NCR-MT.

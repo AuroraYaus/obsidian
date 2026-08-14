@@ -1,5 +1,0 @@
-DRX cycle,TSSB_measurement_period_intra_ODSSB
-No DRX,Ceil(Mmeas_period_w/o_gaps x Kp) x measCycleSCell x CSSFintra
-DRX cycle≤ 320 ms,"Ceil(Mmeas_period_w/o_gaps x Kp) x max(measCycleSCell, 1.5xDRX cycle) x CSSFintra"
-DRX cycle> 320 ms,"Ceil(Mmeas_period_w/o_gaps x Kp) x max(measCycleSCell, DRX cycle) x CSSFintra"
-NOTE 1:The requirements also apply to CC with deactivated SCell in SCG.,

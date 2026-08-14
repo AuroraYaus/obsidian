@@ -1,5 +1,0 @@
-DRX cycle,TPSS/SSS_sync_intra
-No DRX,Mpss/sss_sync_with_gaps x KFR x Kgap x measCycleSCell x CSSFintra
-DRX cycle≤ 320ms,"Ceil(Mpss/sss_sync_with_gaps x KFR x Kgap) x max(measCycleSCell, 1.5 x DRX cycle) x CSSFintra"
-DRX cycle>320ms,"Ceil(Mpss/sss_sync_with_gaps x KFR x Kgap ) x max(measCycleSCell, DRX cycle) x CSSFintra"
-"NOTE 1:The requirements also apply to CC with deactivated SCell in SCG.NOTE 2: KFR is a scaling factor depending on the frequency range and the SSB SCS. For FR2-1, KFR = 1. For FR2-2: KFR = 1 if the SCS of the SSB of the cell being detected is 120 kHz, KFR = 2 if the SCS of the SSB of the cell being detected is 480 kHz, and KFR = 3 if the SCS of the SSB of the cell being detected is 960 kHz.",

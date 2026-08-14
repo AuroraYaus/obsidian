@@ -1,8 +1,0 @@
-Band-width,Reference channel,,OCNG pattern,Propa-gation condi-tion,Correlation matrix and antenna config.,,Reference value,,
-,,,,,,,Fraction of maximum throughput (%),SNR (dB),
-,2Rx CC,4Rx CC,,,2Rx CC,4Rx CC,,2Rx CC,4Rx CC
-5MHz,R.51-2 TDD,R.51-2 TDD,OP.1 TDD,ETU5,2x2 Low,2x4 Low,70,14.0,9.0
-10 MHz,R.51 TDD,R.51 TDD,OP.1 TDD,ETU5,2x2 Low,2x4 Low,70,13.9,9.1
-15MHz,R.51-3 TDD,R.51-3 TDD,OP.1 TDD,ETU5,2x2 Low,2x4 Low,70,13.9,9.2
-20MHz,R.51-4 TDD,R.51-4 TDD,OP.1 TDD,ETU5,2x2 Low,2x4 Low,70,14.1,9.3
-Note 1:The propagation conditions for Cell 1 and Cell 2 are statistically independent.Note 2:Correlation matrix and antenna configuration parameters apply for each of Cell 1 and Cell 2.Note 3: SNR corresponds to  of Cell 1.,,,,,,,,,

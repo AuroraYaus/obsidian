@@ -1,5 +1,0 @@
-Value,Description
-00,Data field contains all bytes of an RLC SDU
-01,Data field contains the first segment of an RLC SDU
-10,Data field contains the last segment of an RLC SDU
-11,Data field contains neither the first nor last segment of an RLC SDU

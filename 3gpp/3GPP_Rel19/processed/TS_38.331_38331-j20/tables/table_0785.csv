@@ -1,7 +1,0 @@
-SL-ScheduledConfig field descriptions
-"sl-CS-RNTIIndicate the RNTI used to scramble CRC of DCI format 3_0, see TS 38.321 [3]."
-"sl-DCI-ToSL-TransIndicate the time gap between DCI reception and the first sidelink transmission scheduled by the DCI (see TS 38.214 [19], clause 8.1.2.1). Value 1 included in this field corresponds to 1 slot, value 2 corresponds to 2 slots and so on, based on the numerology of sidelink BWP."
-sl-PRS-CS-RNTIIndicates the RNTI used to scramble CRC of DCI format 3_2 for configured grants.
-sl-PRS-RNTIIndicates the SL-PRS-RNTI used for monitoring the network scheduling to transmit NR sidelink positioning reference signal (i.e. the mode 1) for dynamic grants.
-"sl-PSFCH-ToPUCCHFor dynamic grant and configured grant type 2, this field configures the values (in number of slot lengths) of the PSFCH to PUCCH gap. The field PSFCH-to-HARQ_feedback timing indicator in DCI format 3_0 selects one of the configured values of the PSFCH to PUCCH gap."
-sl-RNTIIndicate the SL-RNTI used for monitoring the network scheduling to transmit NR sidelink communication (i.e. the mode 1).

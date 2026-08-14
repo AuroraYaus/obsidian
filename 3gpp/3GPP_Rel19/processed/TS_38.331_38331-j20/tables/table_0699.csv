@@ -1,6 +1,0 @@
-SL-BWP-ConfigCommon field descriptions
-sl-BWP-DiscPoolConfigCommonThis field indicates the NR sidelink discovery dedicated resource pool configurations on the configured sidelink BWP. The total number of Rx/Tx resource pools configured for communication and discovery does not exceed the maximum number of Rx/Tx resource pool for NR sidelink communication (i.e. maxNrofRXPool-r16/maxNrofTXPool-r16).
-sl-BWP-GenericThis field indicates the generic parameters on the configured sidelink BWP.
-sl-BWP-PoolConfigCommonThis field indicates the resource pool configurations on the configured sidelink BWP.
-sl-BWP-PoolConfigCommonA2XThis field indicates the resource pool configurations for A2X services on the configured sidelink BWP. This field does not include sl-TxPoolExceptional.
-sl-BWP-PoolConfigCommonPSThis field indicates the resource pool configurations for power saving on the configured sidelink BWP. This field does not include sl-TxPoolExceptional.

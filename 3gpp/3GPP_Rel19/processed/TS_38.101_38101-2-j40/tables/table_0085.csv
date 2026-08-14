@@ -1,9 +1,0 @@
-,,Cumulative aggregated channel bandwidth (CABW),,,
-,,≤ 400 MHz,> 400 MHz and < 800 MHz,≥ 800 MHz and ≤ 1400 MHz,> 1400 MHz and ≤ 2400 MHz
-DFT-s-OFDM,Pi/2 BPSK,≤ 5.5,≤ 7.7,≤ 8.2,≤ 8.7
-,QPSK,≤ 6,≤ 7.7,≤ 8.2,≤ 8.7
-,16 QAM,≤ 7,≤ 8.7,≤ 9.3,≤ 9.8
-,64 QAM,≤ 9.0,≤ 10.7,≤ 11.2,≤ 11.7
-CP-OFDM,QPSK,≤ 6,≤ 7.5,≤ 8.0,≤ 8.5
-,16 QAM,≤ 7,≤ 8.7,≤ 9.2,≤ 9.7
-,64 QAM,≤ 9.0,≤ 10.7,≤ 11.2,≤ 11.7

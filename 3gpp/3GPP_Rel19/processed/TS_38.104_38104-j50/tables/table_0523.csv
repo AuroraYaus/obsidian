@@ -1,8 +1,0 @@
-BS Class,"Rated Output Power (PSBFD,rated,c,sys)",SBFD BS type
-FR1 WA BS,--,Configuration-limited
-FR1 MR BS,≥ 36 dBm,Configuration-limited
-FR1 MR BS,< 36 dBm,Configuration-flexible
-FR1 LA BS,--,Configuration-flexible
-FR2 WA BS,--,Configuration-flexible
-FR2 LA BS,--,Configuration-flexible
-"NOTE 1:A power level threshold of PSBFD,rated,c,sys = 36 dBm is used to distinguish between configuration-limited and configuration-flexible SBFD-capable BSs in the FR1 MR BS class.",,

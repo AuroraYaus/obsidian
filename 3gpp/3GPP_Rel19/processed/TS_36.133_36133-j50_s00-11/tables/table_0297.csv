@@ -1,8 +1,0 @@
-DRX cycle length (s),Tmeasure_UTRA_TDD (s) (DRX cycles) (normal requirement),,Tmeasure_UTRA_TDD (s) (DRX cycles) (reduced requirement),
-,Gap period = 40 ms,Gap period = 80 ms,Gap period = 40 ms,Gap period = 80 ms
-≤0.04,Non DRX Requirements in clause 8.1.2.4.3.1 are applicable,Non DRX Requirements in clause 8.1.2.4.3.1 are applicable,Non DRX Requirements in clause 8.1.2.4.3.1 are applicable,Non DRX Requirements in clause 8.1.2.4.3.1 are applicable
-0.064,"0.48*Kn*Nfreq,n (7.5*Kn *Nfreq,n)","0.8*Kn *Nfreq,n(12.5*Kn *Nfreq,n)","0.48* Kr* Nfreq,r (7.5* Kr* Nfreq,r)","0.8* Kr*  Nfreq,r(12.5* Kr*  Nfreq,r)"
-0.08,"0.48*Kn *Nfreq,n (6*Kn *Nfreq,n)","0. 8*Kn *Nfreq,n (10*Kn *Nfreq,n)","0.48* Kr* Nfreq,r (6* Kr*  Nfreq,r)","0. 8* Kr*  Nfreq,r (10* Kr*  Nfreq,r)"
-0.128,"0.64*Kn *Nfreq,n (5*Kn *Nfreq,n)","0. 8*Kn *Nfreq,n (6.25*Kn *Nfreq,n)","0.64* Kr*  Nfreq,r (5* Kr*  Nfreq,r)","0. 8* Kr*  Nfreq,r (6.25* Nfreq,r)"
-0. 128<DRX-cycle≤2.56,"Note (5*Kn *Nfreq,n)","Note (5*Kn *Nfreq,n)","Note (5* Kr* Nfreq,r)","Note (5* Kr* Nfreq,r)"
-Note: Time depends upon the DRX cycle in use,,,,

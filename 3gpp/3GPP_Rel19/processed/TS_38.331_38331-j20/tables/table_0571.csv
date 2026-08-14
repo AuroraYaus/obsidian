@@ -1,5 +1,0 @@
-Conditional Presence,Explanation
-FR2-Only,This field is mandatory present for an FR2 carrier frequency. It is absent otherwise and UE releases any configured value.
-SharedSpectrum,"This field is mandatory present if this cell operates with shared spectrum channel access in FR1. Otherwise, it is absent, Need R."
-SharedSpectrum2,"This field is optionally present if this cell operates with shared spectrum channel access in FR2-2, Need R. Otherwise, it is absent, Need R."
-TDD,"The field is optionally present, Need R, for TDD cells; otherwise it is absent."

@@ -1,9 +1,0 @@
-Test number,Bandwidth and MCS,Reference Channel,OCNG Pattern,Propagation Condition,Correlation Matrix and Antenna Configuration,Reference value,,UE Category,UE DL Cat-egory
-,,,,,,Fraction of MaximumThroughput (%),SNR (dB),,
-1,10 MHzQPSK 1/3,R.50-1 TDD,OP.1 TDD,EVA5,2x2 Low,70,-0.73,≥1,≥6
-1a,10 MHzQPSK 1/3,R.50-2 TDD,OP.1 TDD,EVA5,2x2 Low,70,[-0.6],≥1,≥6
-3,20MHz256QAM,R. 66 TDD,OP.1 TDD,EPA5,2x2 Low,70,24.3,11-12,≥11
-4,10 MHzQPSK 1/3,R.50-1 TDD,OP.1 TDD,EVA5,2x2 Low,70,[-0.73],≥1,≥6
-4a,10 MHzQPSK 1/3,R.50-2 TDD,OP.1 TDD,EVA5,2x2 Low,[70],TBD,≥1,≥6
-5,10MHz1024QAM,R.101 TDD,OP.1 TDD,EPA5,4x2 Low,70,29.0,TBD,"20, ≥ 22"
-"Note 1:For UE that does not support aperiodic ZP-CSI-RS, test 1a will be run and test 1 will be skipped if the UE indicates support of pdsch-CollisionHandling-r13. Otherwise, test 1 will be run and test 1a will be skipped. For UE that does not support aperiodic ZP-CSI-RS, test 4 and test 4a will be skipped.Note 2:For UE that supports AP ZP CSIRS, test 4a will be run and test 4 will be skipped if the UE indicates support of pdsch-CollisionHandling-r13. Otherwise, test 4 will be run and test 4a will be skipped. For UE that supports AP ZP CSIRS, test 1 and test 1a will be skipped.",,,,,,,,,

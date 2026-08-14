@@ -1,5 +1,0 @@
-DRX cycle length (s),Tmeasure_inter (s) (DRX cycles) (normal requirement),Tmeasure_inter (s) (DRX cycles) (reduced requirement)
-≤0.08,Non DRX Requirements in clause 8.1.2.3.2.1 are applicable,Non DRX Requirements in clause 8.1.2.3.2.1 are applicable
-0.128,"When configuration 2 non DRX Requirements in clause 8.1.2.3.2.1 are applicable,OtherwiseNote (10*Kn*Nfreq,n)","When configuration 2 non DRX Requirements in clause 8.1.2.3.2.1 are applicable,OtherwiseNote (10*Kr*Nfreq,r)"
-0.128<DRX-cycle≤2.56,"Note (10*Kn*Nfreq,n)","Note (10*Kr*Nfreq,r)"
-Note:Time depends upon the DRX cycle in use,,

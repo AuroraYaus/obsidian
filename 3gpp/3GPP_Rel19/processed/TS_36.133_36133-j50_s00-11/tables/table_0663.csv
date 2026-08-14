@@ -1,5 +1,0 @@
-Condition NOTE1,TSSB_measurement_period_irat_RedCap
-No DRX,"Max(400ms, Mmeas_period_irat_RedCap  Max(MGRP, SMTC period))  Nfreq_RedCap"
-DRX cycle ≤ 320ms,"Max(400ms, (1.5  Mmeas_period_irat_RedCap)  Max(MGRP, SMTC period, DRX cycle))  Nfreq_RedCap"
-DRX cycle > 320ms,Mmeas_period_irat_RedCap  DRX cycle  Nfreq_RedCap
-NOTE 1: DRX or non DRX requirements apply according to the conditions described in section 3.6.1 of TS 38.133 [50].,

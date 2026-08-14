@@ -1,5 +1,0 @@
-UplinkTxDirectCurrentTwoCarrier field descriptions
-carrierOneInfoThe serving cell ID and BWP ID of the first carrier of the uplink carrier aggregation for which the uplink Tx Direct Current location(s) are being reported.
-carrierTwoInfoThe serving cell ID and BWP ID of the second carrier of the uplink carrier aggregation for which the uplink Tx Direct Current location(s) are being reported.
-"singlePA-TxDirectCurrentThe uplink Tx Direct Current location for the UE which support single PA for this uplink carrier aggregation. For the UEs which support dual PA for this uplink carrier aggregation, this field is for reporting the uplink Tx Direct Current location of the first PA."
-secondPA-TxDirectCurrentThe uplink Tx Direct Current location used by the UE with the second PA for the UEs which support dual PA for this uplink carrier aggregation. This field shall be absent for the UplinkTxDirectCurrentTwoCarrier entity where deactivatedCarrier of carrierOneInfo or carrierTwoInfo is set to deactivated.

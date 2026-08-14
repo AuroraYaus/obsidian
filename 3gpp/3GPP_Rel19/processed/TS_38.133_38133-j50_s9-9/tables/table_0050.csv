@@ -1,5 +1,0 @@
-DRX cycle,TPSS/SSS_sync_intra
-No DRX,Ceil(5 x Kp) x measCycleSCell x CSSFintra
-DRX cycle≤ 320 ms,"Ceil(5 x Kp) x max(measCycleSCell, M2 Note 1xDRX cycle) x CSSFintra"
-DRX cycle> 320 ms,"Ceil(5 x Kp) x max(measCycleSCell, DRX cycle) x CSSFintra"
-NOTE 1:M2 = 1.5 if SMTC periodicity > 40 ms; otherwise M2=1,

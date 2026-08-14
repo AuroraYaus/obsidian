@@ -1,4 +1,0 @@
-MeasResultSFTD-EUTRA field descriptions
-eutra-PhysCellIdIdentifies the physical cell identity of the E-UTRA cell for which the reporting is being performed.
-sfn-OffsetResultIndicates the SFN difference between the PCell and the E-UTRA cell as an integer value according to TS 38.215 [9].
-frameBoundaryOffsetResultIndicates the frame boundary difference between the PCell and the E-UTRA cell as an integer value according to TS 38.215 [9].

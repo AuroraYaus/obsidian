@@ -1,6 +1,0 @@
-Conditional Presence,Explanation
-LessThan5MHz,"The field is mandatory present if the carrierBandwidth in SIB1 indicates UL or DL transmission bandwidth other than 15 PRB and the corresponding neighbour cell(s) support(s) 12 PRB, 15 PRB or 20 PRB transmission bandwidth configuration as defined in TS 38.101-1 [15], TS 38.101-5 [75], TS 38.211 [16] and TS 38.213 [13]. Otherwise, the field is optional, Need R."
-Mandatory,The field is mandatory present in SIB4.
-RSRQ,The field is mandatory present if threshServingLowQ is present in SIB2; otherwise it is absent.
-SharedSpectrum,"This field is mandatory present if this inter-frequency operates with shared spectrum channel access. Otherwise, it is absent, Need R."
-SharedSpectrum2,"The field is optional present, Need R, if this inter-frequency or neighbor cell operates with shared spectrum channel access. Otherwise, it is absent, Need R."

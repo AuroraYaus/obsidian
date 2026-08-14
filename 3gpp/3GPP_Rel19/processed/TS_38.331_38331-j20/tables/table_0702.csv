@@ -1,5 +1,0 @@
-SL-BWP-PoolConfig field descriptions
-"sl-RxPoolIndicates the receiving resource pool on the configured BWP. For the PSFCH related configuration, if configured, will be used for PSFCH transmission/reception. If the field is included, it replaces any previous list, i.e. all the entries of the list are replaced and each of the SL-ResourcePool entries is considered to be newly created."
-"sl-TxPoolExceptionalIndicates the resources by which the UE is allowed to perform NR sidelink transmission in exceptional conditions on the configured BWP. For the PSFCH related configuration, if configured, will be used for PSFCH transmission/reception."
-"sl-TxPoolSchedulingIndicates the resources by which the UE is allowed to perform NR sidelink transmission based on network scheduling on the configured BWP. For the PSFCH related configuration, if configured, will be used for PSFCH transmission/reception."
-"sl-TxPoolSelectedNormalIndicates the resources by which the UE is allowed to perform NR sidelink transmission by UE autonomous resource selection on the configured BWP. For the PSFCH related configuration, if configured, will be used for PSFCH transmission/reception."

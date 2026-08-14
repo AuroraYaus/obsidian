@@ -1,6 +1,0 @@
-MeasResultIdleEUTRA field descriptions
-carrierFreqEUTRAIndicates the E-UTRA carrier frequency.
-eutra-PhysCellIdIndicates the physical cell identity of an E-UTRA cell.
-measIdleResultEUTRAIdle/inactive measurement results for an E-UTRA cell.
-measResultsPerCarrierListIdleEUTRAList of idle/inactive measured results for the maximum number of reported E-UTRA carriers.
-measResultsPerCellListIdleEUTRAList of idle/inactive measured results for the maximum number of reported best cells for a given E-UTRA carrier.

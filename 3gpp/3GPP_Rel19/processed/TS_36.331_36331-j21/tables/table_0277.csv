@@ -1,3 +1,0 @@
-UE-TimersAndConstants field descriptions
-"n3xyConstants are described in clause 7.4. n1 corresponds with 1, n2 corresponds with 2 and so on."
-"t3xyTimers are described in clause 7.3. Value ms0 corresponds with 0 ms, ms50 corresponds with 50 ms and so on. EUTRAN includes an extended value t3xy-v1310 and t3xy-v1330 only in the Bandwidth Reduced (BR) version of the SIB. UEs that support Coverage Enhancement (CE) mode B shall use the extended values t3xy-v1310 and t3xy-v1330, if present, and ignore the value signaled by t3xy (without the suffix).t300-r15 is only applicable for EDT for mobile originating calls and for UL data transmission using PUR. UE performing EDT for mobile originating calls or UL data transmission using PUR shall use t300-r15, if present."

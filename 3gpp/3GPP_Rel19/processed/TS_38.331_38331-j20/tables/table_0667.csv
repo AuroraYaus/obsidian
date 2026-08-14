@@ -1,9 +1,0 @@
-NTN-Parameters field descriptions
-"fdd-Add-UE-NR-CapabilitiesNTNNTN related capabilities which the UE supports in NTN differently than in TN. If absent, fdd-Add-UE-NR-Capabilities applies to NTN."
-"fr1-Add-UE-NR-CapabilitiesNTNNTN related capabilities which the UE supports in NTN differently than in TN. If absent, fr1-Add-UE-NR-Capabilities applies to NTN."
-"fr2-Add-UE-NR-CapabilitiesNTNNTN related capabilities which the UE supports in NTN differently than in TN. If absent, fr2-Add-UE-NR-Capabilities applies to NTN. This field is not used in this release of specification."
-"mac-ParametersNTNNTN related capabilities which the UE supports in NTN differently than in TN. If absent, mac-Parameters applies to NTN."
-"measAndMobParametersNTNNTN related capabilities which the UE supports in NTN differently than in TN. If absent, measAndMobParameters applies to NTN."
-"phy-ParametersNTNNTN related capabilities which the UE supports in NTN differently than in TN. If absent, phy-Parameters applies to NTN."
-"son-ParametersNTNNTN related capabilities which the UE supports in NTN differently than in TN. If absent, son-Parameters-r16 applies to NTN."
-"ue-BasedPerfMeas-ParametersNTNNTN related capabilities which the UE supports in NTN differently than in TN. If absent, ue-BasedPerfMeas-Parameters-r16 applies to NTN."

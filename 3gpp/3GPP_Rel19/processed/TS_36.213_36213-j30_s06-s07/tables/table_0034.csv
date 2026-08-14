@@ -1,4 +1,0 @@
-DCI format,Search Space,Transmission scheme of PDSCH corresponding to MPDCCH
-DCI format 6-1A,Type2-Common,"If the number of PBCH antenna port is one, Single-antenna port, port 0 is used (see Clause 7.1.1), otherwise Transmit diversity (see Clause 7.1.2)"
-DCI format 6-1B,Type2-Common,"If the number of PBCH antenna port is one, Single-antenna port, port 0 is used (see Clause 7.1.1), otherwise Transmit diversity (see Clause 7.1.2)"
-Note 1: Only DCI format 6-1A is applicable for CB-RNTI during CB-Msg3-EDT procedure,,

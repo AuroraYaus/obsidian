@@ -1,3 +1,0 @@
-SL-QoS-Info field descriptions
-"sl-TxInterestedFreqListEach entry of this field indicates the index of frequency on which the UE is interested to transmit NR sidelink communication, for each QoS flow. The value 1 corresponds to the frequency of first entry in sl-FreqInfoList broadcast in SIB12, the value 2 corresponds to the frequency of first entry in sl-FreqInfoListSizeExt broadcast in SIB12, the value 3 corresponds to the frequency of second entry in sl-FreqInfoListSizeExt broadcast in SIB12 and so on."
-"sl-TxProfileIndicating Tx profile for each QoS flow, i.e., compatibility of supporting SL CA operation. The IE of SL-TxProfile is referred by upper layer signaling as specified TS 24.588 [78]."

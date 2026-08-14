@@ -1,3 +1,0 @@
-RRCReconfigurationCompleteSidelink field descriptions
-dummyThis field is not used in the specification. The UE shall not include this field. If received it shall be ignored by the peer UE.
-sl-DRX-ConfigRejectIndicates the rejection of sidelink DRX configuration received from the peer UE for the corresponding NR sidelink unicast communication.

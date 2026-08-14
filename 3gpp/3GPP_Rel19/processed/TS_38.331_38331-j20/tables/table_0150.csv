@@ -1,5 +1,0 @@
-SIB28 field descriptions
-"carrierFreqIoTProvides the IoT NTN carrier frequency as defined in TS 36.102 [82], clause 5.4A.2 and 5.4B.2."
-"carrierFreqOffsetOffset of the NB-IoT channel number to EARFCN as defined in TS 36.102 [82], clause 5.4B.2. This field is only present for NB-IoT frequencies."
-"ntn-ConfigProvides parameters needed for the UE to access IoT NTN such as ephemeris data, common TA parameters, validity duration for UL sync information andepoch time."
-"ntn-NeighCellConfigListBLCE, ntn-NeighCellConfigListNBProvides a list of E-UTRAN neighbour cells that provides IoT NTN access for NTN capable bandwidth reduced low complexity (BL) UEs, CE capable UEs and NB-IoT UEs."

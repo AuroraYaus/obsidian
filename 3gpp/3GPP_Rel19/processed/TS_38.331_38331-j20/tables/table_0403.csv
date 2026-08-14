@@ -1,6 +1,0 @@
-NPN-Identity field descriptions
-cag-IdentityA CAG-ID as specified in TS 23.003 [21]. The PLMN ID and a CAG ID in the NPN-Identity identifies a PNI-NPN.
-cag-IdentityListThe cag-IdentityList contains one or more CAG IDs. All CAG IDs associated to the same PLMN ID are listed in the same cag-IdentityList entry.
-manualCAGselectionAllowedThe manualCAGselectionAllowed indicates that the CAG ID can be selected manually even if it is outside the UE's allowed CAG list.
-NIDA NID as specified in TS 23.003 [21]. The PLMN ID and a NID in the NPN-Identity identifies a SNPN.
-nid-ListThe nid-List contains one or more NID.

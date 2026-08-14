@@ -1,6 +1,0 @@
-Parameter,Unit,Value (NOTE 1)
-Maximum number of HARQ transmissions,,4
-RV sequences,,"[0 ,2, 0, 2]"
-PUSCH starting position(NOTE 2),,'01'
-PUSCH ending symbol(NOTE 3),,'0'
-"NOTE 1:PUSCH scheduling pattern is defined as the bitmap {1111000000} with the periodicity of 10ms. Value 1 in the bitmap indicates there is PUSCH data transmission on the corresponding subrames; Value 0 indicates that there is no PUSCH data transmission on the corresponding subframes.NOTE 2:The PUSCH starting position is applicable to only the first PUSCH transmission subframe indicated in the bitmap. For other transmission subframes indicated in the bitmap, PUSCH starting position is at symbol 0.NOTE 3:The PUSCH ending symbol value indicates the configuration of the last symbol of the last PUSCH transmission subframe indicated in the bitmap.",,

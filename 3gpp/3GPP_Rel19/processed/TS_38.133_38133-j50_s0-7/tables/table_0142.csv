@@ -1,6 +1,0 @@
-eDRX_IDLE cycle andeDRX_Inactive cycle length [s],RAN DRX cycle length [s],eDRX Inactive PTW length [s] (number of 1.28 s periods),"Tdetect,EUTRAN [s] (number of RAN DRX cycles Note 3)","Tmeasure,EUTRAN [s] (number of RAN DRX cycles Note 3)","Tevaluate,E-UTRAN[s] (number of RAN DRX cycles Note 3)"
-20.48 ≤ eDRX_IDLE cycle length ≤10485.7620.48 ≤ eDRX_INACTIVE cycle length ≤10485.76,0.32,≥1.28 (1),(23)eDRX_cycle_length×23PTW/DRX_cycle_length,0.32 (1),0.64 (2)
-,0.64,≥1.28 (1),,0.64 (1),1.28 (2)
-,1.28,≥2.56 (2),,1.28 (1),2.56 (2)
-,2.56,≥5.12 (4),,2.56 (1),5.12 (2)
-"NOTE 1: RAN DRX cycle in this table is UE specific DRX value configured by RRC specified in [1].NOTE 2: The number of RAN DRX cycles in this table is given for the RAN DRX cycles within RAN configured PTWs.NOTE 3:  eDRX Inactive PTW in this table is RAN configured PTW [1].NOTE 4: The eDRX_IDLE cycle lengths are as specified in section 10.5.5.32 of TS 24.008 [42].NOTE 5: The eDRX_INACTIVE cycle lengths are ran-ExtendedPagingCycleConfig-r18 as specified in [2]NOTE 6: The lower bound of PTW length is derived based on .NOTE 7: When eDRX=20.48 s and DRX=0.32 s, UE is allowed to perform cell evaluation within PTW in every 2 eDRX cycles.Tevaluate,E-UTRAN*DRX_cycle1.28*1.28",,,,,

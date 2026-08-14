@@ -1,6 +1,0 @@
-Conditional presence,Explanation
-NoExtendedWaitTime,"The field is optionally present, Need ON, if the extendedWaitTime is not included; otherwise the field is not present."
-Redirection,"The field is optionally present, Need ON, if redirectedCarrierInfo is included; otherwise the field is not present."
-Redirection-TDD,"The field is optionally present, Need ON, if redirectedCarrierInfo is included in TDD mode. Otherwise, the field is not present."
-UP-EDT,"The field is optionally present, Need ON, if the UE supports UP-EDT or UP transmission using PUR and releaseCause is set to rrc-Suspend; otherwise the field is not present."
-EarlySec,"For EPC, the field is optionally present, Need ON, if the UE supports early security reactivation or UP-EDT or UP transmission using PUR and releaseCause is set to rrc-Suspend; otherwise the field is not present.For 5GC, the field is mandatory present if releaseCause is set to rrc-Suspend; otherwise the field is not present."

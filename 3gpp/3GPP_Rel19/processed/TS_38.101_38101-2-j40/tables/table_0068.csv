@@ -1,8 +1,0 @@
-Network Signalling label,Requirements (clause),NR Band,Channel bandwidth (MHz),Resources Blocks (NRB),A-MPR (dB)
-NS_200,,,,,N/A
-NS_201(NOTE 1),6.5.3.2.2,n258,,,6.2.3.2
-NS_202,6.5.3.2.3,"n257, n258","50, 100, 200, 400",Table 5.3.2-1,6.2.3.3
-NS_203,6.5.3.2.4,n258,"50, 100, 200, 400",Table 5.3.2-1,6.2.3.4
-NS_204,6.5.3.2.5,n263,"100, 400, 800, 1600, 2000",Table 5.3.2-1,
-NS_205,6.5.3.2.6,"n257, n258","50,100,200, 400",Table 5.3.2-1,6.2.3.6
-"NOTE 1:NS_201 is obsolete, the associated additional spurious emission requirements are not applicable.",,,,,

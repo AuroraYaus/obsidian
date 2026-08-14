@@ -1,5 +1,0 @@
-Channel Bandwidth (MHz),"Carrier Centre Frequency, Fc (MHz)",Region A(Outer/Inner),,,Region B(Outer/Inner),,,Region C(Outer/Inner),,
-,,RBstart,LCRB,A-MPR,RBstart,LCRB,A-MPR,RBstart,LCRB,A-MPR
-10,1452.9 < FC ≤ 1457.9,≥ 0,> 7.2 MHz/12/SCS,≤ A1,N/A,N/A,N/A,N/A,N/A,N/A
-15,FC = 1455.4,≥ 0,> 9.9 MHz/12/SCS,≤ A1,< 0.54 MHz/12/SCS,< 1.08 MHz/12/SCS,≤ A2,> 13.86 MHz/12/SCS,< 1.08 MHz/12/SCS,≤ A2
-NOTE 1:The A-MPR values are specified in Table 6.2.3.8-2NOTE 2:VoidNOTE 3:VoidNOTE 4:No A-MPR for SCS = 60 kHz for region B and C only.,,,,,,,,,,

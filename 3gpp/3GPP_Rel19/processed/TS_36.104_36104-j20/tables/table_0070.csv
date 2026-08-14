@@ -1,9 +1,0 @@
-"Frequency offset of measurement filter 3dB point, f","Frequency offset of measurement filter centre frequency, f_offset","Minimum requirement (Note 1, 2, 3, 4)",Measurement bandwidth (Note 8)
-0 MHz  f < 0.05 MHz(Note 1),0.015 MHz  f_offset < 0.065 MHz,,30 kHz
-0.05 MHz  f < 0.15 MHz,0.065 MHz  f_offset < 0.165 MHz,,30 kHz
-0.15 MHz  f < 0.6 MHz(Note 1),0.165MHz  f_offset < 0.615MHz,,30 kHz
-0.6 MHz  f < 1 MHz,0.615MHz  f_offset < 1.015MHz,,30 kHz
-(Note 6),1.015MHz  f_offset < 1.5 MHz,-34 dBm,30 kHz
-1 MHz  f  5 MHz,1.5 MHz  f_offset < 5.5 MHz,-21 dBm,1 MHz
-5 MHz  f  fmax,5.5 MHz  f_offset < f_offsetmax,-25 dBm,1 MHz
-"NOTE 1:The limits in this table only apply for operation with a NB-IoT carrier adjacent to the Base Station RF Bandwidth edge.NOTE 2:For BS supporting non-contiguous spectrum operation within any operating band the minimum requirement within sub-block gaps is calculated as a cumulative sum of contributions from adjacent sub blocks on each side of the sub block gap, where the contribution from the far-end sub-block shall be scaled according to the measurement bandwidth of the near-end sub-block.NOTE 3:For BS supporting multi-band operation with Inter RF Bandwidth gap < 20MHz the minimum requirement within the Inter RF Bandwidth gaps is calculated as a cumulative sum of contributions from adjacent sub-blocks or RF Bandwidth on each side of the Inter RF Bandwidth gap, where the contribution from the far-end sub-block or RF Bandwidth shall be scaled according to the measurement bandwidth of the near-end sub-block or RF Bandwidth.NOTE 4:In case the carrier adjacent to the RF bandwidth edge is a NB-IoT carrier, the value of X = PNB-IoTcarrier – 31, where PNB-IoTcarrier is the power level of the NB-IoT carrier adjacent to the RF bandwidth edge. In other cases, X = 0.",,,

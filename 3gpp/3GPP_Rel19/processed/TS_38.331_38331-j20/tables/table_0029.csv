@@ -1,5 +1,0 @@
-MobilityFromNRCommand-IEs field descriptions
-"nas-SecurityParamFromNRIf targetRAT-Type is eutra, this field is used to deliver the key synchronisation and Key freshness for the NR to LTE/EPC handovers and a part of the downlink NAS COUNT as specified in TS 33.501 [11] and the content of the parameter is defined in TS 24.501 [23]. If targetRAT-Type is utra-fdd, this field is used to deliver the key synchronisation and Key freshness for the NR to FDD UTRAN handover and a part of the downlink NAS COUNT as specified in TS 33.501 [11] and the content of the parameter is defined in TS 24.501 [23]."
-"targetRAT-MessageContainerThe field contains a message specified in another standard, as indicated by the targetRAT-Type, and carries information about the target cell identifier(s) and radio parameters relevant for the target radio access technology. A complete message is included, as specified in the other standard. See NOTE 1"
-targetRAT-TypeIndicates the target RAT type.
-voiceFallbackIndicationIndicates the handover is triggered by EPS fallback for IMS voice as specified in TS 23.502 [43].
