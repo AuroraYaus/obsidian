@@ -10,9 +10,11 @@
          （English_中文 六段式）、spec = 导航入口/规则/术语表。
          检查范围限定三类语义明确的文件；docs/audits/、docs/superpowers/、
          3GPP全流程_缩写概念理论清单.md 等内部工作文档豁免（语义未定，
-         不强行归类）。教训来源：2026-08-14 全库审核——type 字段错标
-         使 Obsidian 按类型过滤/查询静默失效，且无工具检查（口径
-         登记于《项目规则与记忆索引.md》六.9 与 lessons/
+         不强行归类）。概念笔记另加六段式章节完整性检查（2026-08-14 治理：
+         5 篇旧式"核心子概念"结构笔记曾无检查逃逸模板）。
+         教训来源：2026-08-14 全库审核——type 字段错标使 Obsidian 按类型
+         过滤/查询静默失效，且无工具检查（口径登记于
+         《项目规则与记忆索引.md》六.9 与 lessons/
          lesson-audit-governance-2026-08-14.md 教训二）。
 """
 
@@ -34,6 +36,17 @@ LECTURE_NAME_RE = re.compile(r"^(T\d.*|TX\d.*)\.md$")
 # 概念图谱入口是导航文件，单独归入 spec。
 CONCEPT_DIR = "concepts"
 CONCEPT_NAME_RE = re.compile(r"^[A-Za-z0-9]+_.+\.md$")
+
+# 六段式必检章节（documentation.md 三、概念笔记规范；2026-08-14 治理：
+# AWGN/GF2/Golden_Model 等 5 篇曾用旧式"核心子概念"结构逃逸模板）。
+CONCEPT_REQUIRED_SECTIONS = (
+    "## 独立解释任务",
+    "## 科学定义",
+    "## 直观模型",
+    "## 常见误解",
+    "## 协议锚点",
+    "## 图谱关联",
+)
 
 # 导航/规则/术语表：type: spec（相对 PROJECT_ROOT 的路径）。
 SPEC_FILES = {
@@ -104,6 +117,17 @@ def is_exempt(path: Path) -> bool:
     return any(p.match(rel) for p in EXEMPT_PATTERNS)
 
 
+def check_concept_structure(path: Path) -> list[str]:
+    """@brief 校验概念笔记的六段式章节完整性。
+    @param path 概念笔记文件路径。
+    @return  缺失章节名列表（空 = 完整）。
+    @note    2026-08-14 治理：六段式模板（documentation.md 三）之外曾存在
+             旧式"核心子概念"结构笔记（AWGN/GF2/Golden_Model 等 5 篇），
+             无任何工具检查；本函数把结构合规并入本审计，防复发。"""
+    text = path.read_text(encoding="utf-8")
+    return [s for s in CONCEPT_REQUIRED_SECTIONS if s not in text]
+
+
 def main() -> int:
     """@brief 脚本入口：全库 frontmatter type 一致性审计。
     @usage python3 tools/audit_frontmatter_types.py
@@ -123,6 +147,11 @@ def main() -> int:
             failures.append(
                 f"{path.relative_to(PROJECT_ROOT)}: type={actual!r}, 期望 {expected!r}"
             )
+        if expected == "definition":
+            for missing in check_concept_structure(path):
+                failures.append(
+                    f"{path.relative_to(PROJECT_ROOT)}: 概念笔记缺六段式章节 {missing}"
+                )
     if failures:
         print("FRONTMATTER_TYPE_AUDIT_FAIL")
         print("\n".join(failures))

@@ -58,16 +58,32 @@ BOUNDARY_PATTERNS = [
     "留到",
 ]
 
-# L3 工程篇分层口径（2026-08-14 审核裁定，同日二轮修正）：docs/L3_工程实现/
-# 的主题为综合/功耗/后端/SoC 协同等工程域，协议理论信号少属主题性质（非深度
-# 不足）。首轮口径为"理论阈值放宽 16→8"，但 T23.1-3 实测 score=2/2/4 仍低于
-# 8——证明放宽阈值表达不了主题性质：THEORY_HINTS 词汇表是协议教学向的，
-# 对工程篇没有判别力。二轮裁定：L3 停用理论信号与协议索引两项检查（工程
-# 深度指标待建，届时恢复），保留章节完整性/篇幅/边界短语检查。口径变更与
-# 理由的权威登记见《项目规则与记忆索引.md》六.6 与 PLAN.md。
+# L3 工程篇分层口径（2026-08-14 审核裁定，同日二轮修正；2026-08-14 补工程指标）：
+# docs/L3_工程实现/ 的主题为综合/功耗/后端/SoC 协同等工程域，协议理论信号少属
+# 主题性质（非深度不足）。首轮口径为"理论阈值放宽 16→8"，但 T23.1-3 实测
+# score=2/2/4 仍低于 8——证明放宽阈值表达不了主题性质：THEORY_HINTS 词汇表
+# 是协议教学向的，对工程篇没有判别力。二轮裁定：L3 停用理论信号与协议索引
+# 两项检查；三轮补建 ENGINEERING_HINTS 工程深度信号检查（2026-08-14 grill 锁定）。
+# 口径变更与理由的权威登记见《项目规则与记忆索引.md》六.6 与 PLAN.md。
 L3_DIR_MARKER = "L3_工程实现"
 CHARS_MIN_L12 = 9000
 CHARS_MIN_L3 = 5000
+
+# 工程深度信号词表（2026-08-14 grill 锁定：Q2-A）——覆盖 L3 T17-T23 各篇
+# 主题（浮点仿真/定点/RTL/验证/接收链工程/后端物理/功耗/SoC 协同）的实词。
+# 定标实测（36 篇全量）：min=40（T20.2 协议向量套件，主题性质词汇天然偏低）、
+# p25=94、median=114、max=491。阈值取 40 = 现有分布下限——低于此值判
+# "weak engineering depth signals"，为未来空壳工程篇留哨兵（2026-08-14 定标
+# 时全库零触发）。
+ENGINEERING_HINTS = [
+    "时序", "面积", "功耗", "吞吐", "时钟", "复位", "流水", "存储", "位宽",
+    "定点", "量化", "约束", "综合", "布局", "布线", "覆盖率", "验证", "断言",
+    "门控", "缓存", "并行", "频率", "时延", "握手", "仲裁", "复用", "寄存器",
+    "总线", "关键路径", "扫描链", "时钟树", "网表", "DFT", "黄金模型", "仿真",
+    "numpy", "BLER", "拥塞", "扇出", "建立时间", "保持时间", "功耗分析",
+    "时序收敛",
+]
+ENGINEERING_SCORE_MIN_L3 = 40
 
 # 非讲义目录（2026-08-14 审核裁定，与 audit_term_first_use.py 豁免区 h/i/j 对齐）：
 # 概念笔记（六段式，非讲义模板）、计划/设计文档、审计台账、L0 阅读引导
@@ -89,8 +105,9 @@ def audit_file(path: Path) -> list[str]:
              单方面满足（如仅大量引用但理论分数达标）不触发该警告。
              L3 工程篇（docs/L3_工程实现/）停用理论信号与协议索引两项检查
              （2026-08-14 二轮裁定：THEORY_HINTS 为协议教学向词汇表，对
-             综合/功耗/后端主题无判别力，T23.1-3 score=2-4 实测证明；
-             工程深度指标待建后恢复），仅保留章节/篇幅/边界短语检查。
+             综合/功耗/后端主题无判别力），改用 ENGINEERING_HINTS 工程
+             深度信号检查（阈值 40，2026-08-14 实测 36 篇定标见模块常量
+             注释），另保留章节/篇幅/边界短语检查。
     """
     text = path.read_text(encoding="utf-8")
     findings: list[str] = []
@@ -108,7 +125,13 @@ def audit_file(path: Path) -> list[str]:
 
     if chars < chars_min:
         findings.append(f"{path}: very short lesson ({chars} chars)")
-    if not is_l3:
+    if is_l3:
+        eng_score = sum(text.count(hint) for hint in ENGINEERING_HINTS)
+        if eng_score < ENGINEERING_SCORE_MIN_L3:
+            findings.append(
+                f"{path}: weak engineering depth signals (score={eng_score})"
+            )
+    else:
         if theory_score < 16:
             findings.append(f"{path}: weak zero-foundation theory signals (score={theory_score})")
         if protocol_hits >= 20 and theory_score < 24:
