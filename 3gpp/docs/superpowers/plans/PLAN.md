@@ -93,3 +93,9 @@ _Locked via grill — by Claude + AuroraYaus（2026-08-14）_
 ## 追加批次：frontmatter type 治理（2026-08-14 下午 grill 锁定）
 
 **决策（2 问收敛）**：全库规范化 + 工具化防复发——76 篇误标修正（L1 41 篇 definition→algorithm、L3 24 篇 spec→algorithm、L2 T9.8/T10.9 两篇 spec→algorithm、9 个概念笔记 algorithm→definition）；新建 `tools/audit_frontmatter_types.py`（讲义 T/TX=algorithm / 概念 English_中文=definition / 入口规则术语表=spec，audits/superpowers/清单豁免）；documentation.md §2.1 语义写死；映射表登记。
+
+## 追加批次二：概念笔记薄篇补写 + L3 工程深度指标（2026-08-14 grill 锁定）
+
+**决策（2 问收敛）**：
+1. 概念笔记薄篇——字符阈值分级：<900 字符的 17 篇全补至 1500-2500 字符（科学定义补公式/直观模型补数值例子/常见误解 ≥3 行/协议锚点补 TS 节号/图谱关联 ≥5 条）；900-1200 的 8 篇补短板段至 ≥1500。共 25 篇，参考单元充实而非扩成讲义。
+2. L3 工程深度指标——新建 `ENGINEERING_HINTS` 工程词表（~30 词，按 L3 各篇实词调校）+ 单一检查"工程深度信号"，阈值由 36 篇实测分布定标（不拍脑袋），写入 audit_lesson_depth.py @note 固化；协议索引检查不恢复。
