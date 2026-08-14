@@ -18,7 +18,7 @@ from pathlib import Path
 from PIL import Image
 
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[3]
 PDF = ROOT / "3GPP_Rel19/processed/TS_38.212_38212-j30/source.pdf"
 L1_ASSET_DIR = ROOT / "docs/L1_基础/assets"
 L2_ASSET_DIR = ROOT / "docs/L2_协议算法/assets"

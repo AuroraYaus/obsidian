@@ -16,7 +16,7 @@ class FigureTextFitStaticAuditTests(unittest.TestCase):
 
     def test_reports_silent_line_truncation(self):
         """ @brief 验证审计能检测到使用 lines[:2] 切片导致静默截断多余行的情况。 """
-        from tools.audit_figure_text_fit_static import audit_paths
+        from tools.archive_python_drawing.audit_figure_text_fit_static import audit_paths
 
         with tempfile.TemporaryDirectory() as tmp:
             script = Path(tmp) / "render_bad.py"
@@ -33,7 +33,7 @@ class FigureTextFitStaticAuditTests(unittest.TestCase):
 
     def test_reports_long_direct_draw_text_literal(self):
         """ @brief 验证审计能检测到 draw.text 使用过长字符串字面量（可能溢出固定尺寸盒子）。 """
-        from tools.audit_figure_text_fit_static import audit_paths
+        from tools.archive_python_drawing.audit_figure_text_fit_static import audit_paths
 
         with tempfile.TemporaryDirectory() as tmp:
             script = Path(tmp) / "render_bad.py"
@@ -49,7 +49,7 @@ class FigureTextFitStaticAuditTests(unittest.TestCase):
 
     def test_reports_character_by_character_wrapping(self):
         """ @brief 验证审计能检测到逐字符拼接换行逻辑（for ch in text: current += ch）而非使用标准换行函数。 """
-        from tools.audit_figure_text_fit_static import audit_paths
+        from tools.archive_python_drawing.audit_figure_text_fit_static import audit_paths
 
         with tempfile.TemporaryDirectory() as tmp:
             script = Path(tmp) / "render_bad.py"
@@ -67,7 +67,7 @@ class FigureTextFitStaticAuditTests(unittest.TestCase):
 
     def test_reports_wrapped_text_without_layout_guard(self):
         """ @brief 验证审计能检测到调用 draw_wrapped 但结果 y 坐标未与面板底边比较（无布局保护）。 """
-        from tools.audit_figure_text_fit_static import audit_paths
+        from tools.archive_python_drawing.audit_figure_text_fit_static import audit_paths
 
         with tempfile.TemporaryDirectory() as tmp:
             script = Path(tmp) / "render_bad.py"
@@ -87,7 +87,7 @@ class FigureTextFitStaticAuditTests(unittest.TestCase):
 
     def test_text_fit_audit_exit_code_blocks_long_direct_text(self):
         """ @brief 验证 main() 函数在检测到长直文文字时返回非零退出码（1）。 """
-        from tools.audit_figure_text_fit_static import main
+        from tools.archive_python_drawing.audit_figure_text_fit_static import main
 
         with tempfile.TemporaryDirectory() as tmp:
             script = Path(tmp) / "render_bad.py"
@@ -103,7 +103,7 @@ class FigureTextFitStaticAuditTests(unittest.TestCase):
 
     def test_allows_nearby_text_fit_ok_comment_for_short_label(self):
         """ @brief 验证带有 TEXT_FIT_OK 注释的短标签 draw.text 调用不产生审计告警。 """
-        from tools.audit_figure_text_fit_static import audit_paths
+        from tools.archive_python_drawing.audit_figure_text_fit_static import audit_paths
 
         with tempfile.TemporaryDirectory() as tmp:
             script = Path(tmp) / "render_ok.py"
@@ -124,7 +124,7 @@ class FigureTextOverlapDynamicAuditTests(unittest.TestCase):
 
     def test_reports_overlapping_text_bboxes(self):
         """ @brief 验证审计能检测到 'Title Text' 和 'Body Text' 两个 draw.text 调用产生的 bbox 重叠。 """
-        from tools.audit_figure_text_overlap_dynamic import audit_script
+        from tools.archive_python_drawing.audit_figure_text_overlap_dynamic import audit_script
 
         with tempfile.TemporaryDirectory() as tmp:
             script = Path(tmp) / "render_bad_overlap.py"
@@ -146,7 +146,7 @@ class FigureTextOverlapDynamicAuditTests(unittest.TestCase):
 
     def test_accepts_non_overlapping_text_bboxes(self):
         """ @brief 验证两个 draw.text 调用之间间距足够（y=40 vs y=100）时通过文字重叠审计。 """
-        from tools.audit_figure_text_overlap_dynamic import audit_script
+        from tools.archive_python_drawing.audit_figure_text_overlap_dynamic import audit_script
 
         with tempfile.TemporaryDirectory() as tmp:
             script = Path(tmp) / "render_ok_overlap.py"
@@ -172,7 +172,7 @@ class FigureTextPaddingDynamicAuditTests(unittest.TestCase):
 
     def test_reports_text_tight_to_rounded_box_edge(self):
         """ @brief 验证审计能检测到文字贴边放置在圆角矩形框内部（padding 不足）。 """
-        from tools.audit_figure_text_padding_dynamic import audit_script
+        from tools.archive_python_drawing.audit_figure_text_padding_dynamic import audit_script
 
         with tempfile.TemporaryDirectory() as tmp:
             script = Path(tmp) / "render_bad_padding.py"
@@ -194,7 +194,7 @@ class FigureTextPaddingDynamicAuditTests(unittest.TestCase):
 
     def test_accepts_text_with_padding_inside_rounded_box(self):
         """ @brief 验证文字在圆角矩形框内有足够内边距时通过审计。 """
-        from tools.audit_figure_text_padding_dynamic import audit_script
+        from tools.archive_python_drawing.audit_figure_text_padding_dynamic import audit_script
 
         with tempfile.TemporaryDirectory() as tmp:
             script = Path(tmp) / "render_ok_padding.py"
@@ -216,7 +216,7 @@ class FigureTextPaddingDynamicAuditTests(unittest.TestCase):
 
     def test_skips_large_containers_by_default_but_can_include_them(self):
         """ @brief 验证默认跳过大型容器（白底黑边）的内边距检查，但 include_containers=True 时包含。 """
-        from tools.audit_figure_text_padding_dynamic import audit_script
+        from tools.archive_python_drawing.audit_figure_text_padding_dynamic import audit_script
 
         with tempfile.TemporaryDirectory() as tmp:
             script = Path(tmp) / "render_container_padding.py"
@@ -278,7 +278,7 @@ class PythonFigureBodyEquivalentAuditTests(unittest.TestCase):
 
     def test_reports_png_without_nearby_equivalent_marker(self):
         """ @brief 验证审计能检测到 PNG 图片嵌入后附近无正文等价标记（如"Mermaid 等价图""Markdown 等价表"）。 """
-        from tools.audit_python_figure_body_equivalents import audit_markdown_files
+        from tools.archive_python_drawing.audit_python_figure_body_equivalents import audit_markdown_files
 
         with tempfile.TemporaryDirectory() as tmp:
             md = Path(tmp) / "lesson.md"
@@ -296,7 +296,7 @@ class PythonFigureBodyEquivalentAuditTests(unittest.TestCase):
 
     def test_accepts_nearby_mermaid_equivalent_marker(self):
         """ @brief 验证 PNG 嵌入附近有完整 Mermaid 等价图和等价表时通过审计。 """
-        from tools.audit_python_figure_body_equivalents import audit_markdown_files
+        from tools.archive_python_drawing.audit_python_figure_body_equivalents import audit_markdown_files
 
         with tempfile.TemporaryDirectory() as tmp:
             md = Path(tmp) / "lesson.md"
@@ -326,7 +326,7 @@ class PythonFigureBodyEquivalentAuditTests(unittest.TestCase):
 
     def test_rejects_body_png_embed_even_with_nearby_equivalent(self):
         """ @brief 验证当 allow_body_image_embeds=False 时，即使有完整等价图/表仍拒绝 PNG 嵌入（正文不应直接引用图片）。 """
-        from tools.audit_python_figure_body_equivalents import audit_markdown_files
+        from tools.archive_python_drawing.audit_python_figure_body_equivalents import audit_markdown_files
 
         with tempfile.TemporaryDirectory() as tmp:
             md = Path(tmp) / "lesson.md"
@@ -356,7 +356,7 @@ class PythonFigureBodyEquivalentAuditTests(unittest.TestCase):
 
     def test_accepts_retained_asset_marker_with_nearby_equivalent(self):
         """ @brief 验证"原图片资产"标记配合等价图/表（allow_body_image_embeds=False）时通过审计。 """
-        from tools.audit_python_figure_body_equivalents import audit_markdown_files
+        from tools.archive_python_drawing.audit_python_figure_body_equivalents import audit_markdown_files
 
         with tempfile.TemporaryDirectory() as tmp:
             md = Path(tmp) / "lesson.md"
@@ -386,7 +386,7 @@ class PythonFigureBodyEquivalentAuditTests(unittest.TestCase):
 
     def test_reports_retained_asset_marker_without_nearby_equivalent(self):
         """ @brief 验证仅有"原图片资产"标记但无等价内容时审计报告缺失等价标记。 """
-        from tools.audit_python_figure_body_equivalents import audit_markdown_files
+        from tools.archive_python_drawing.audit_python_figure_body_equivalents import audit_markdown_files
 
         with tempfile.TemporaryDirectory() as tmp:
             md = Path(tmp) / "lesson.md"
@@ -403,7 +403,7 @@ class PythonFigureBodyEquivalentAuditTests(unittest.TestCase):
 
     def test_rejects_meta_equivalent_labels_in_lesson_body(self):
         """ @brief 验证审计能检测到等价表中使用元标签（如"图片":"assets/a.png""生成脚本":"tools/..."). """
-        from tools.audit_python_figure_body_equivalents import audit_markdown_files
+        from tools.archive_python_drawing.audit_python_figure_body_equivalents import audit_markdown_files
 
         with tempfile.TemporaryDirectory() as tmp:
             md = Path(tmp) / "lesson.md"
@@ -424,7 +424,7 @@ class PythonFigureBodyEquivalentAuditTests(unittest.TestCase):
 
     def test_rejects_image_generation_prose_in_lesson_body(self):
         """ @brief 验证审计能检测到讲义正文中出现图片生成散文（如"由 tools/figures/render.py 生成"）。 """
-        from tools.audit_python_figure_body_equivalents import audit_markdown_files
+        from tools.archive_python_drawing.audit_python_figure_body_equivalents import audit_markdown_files
 
         with tempfile.TemporaryDirectory() as tmp:
             md = Path(tmp) / "lesson.md"
@@ -441,7 +441,7 @@ class PythonFigureBodyEquivalentAuditTests(unittest.TestCase):
 
     def test_allows_image_generation_prose_in_evidence_section(self):
         """ @brief 验证"执行与证据记录"章节中的图片生成散文不产生审计告警。 """
-        from tools.audit_python_figure_body_equivalents import audit_markdown_files
+        from tools.archive_python_drawing.audit_python_figure_body_equivalents import audit_markdown_files
 
         with tempfile.TemporaryDirectory() as tmp:
             md = Path(tmp) / "lesson.md"
@@ -463,7 +463,7 @@ class PythonFigureBodyEquivalentAuditTests(unittest.TestCase):
 
     def test_accepts_nearby_markdown_table_marker(self):
         """ @brief 验证 PNG 嵌入附近有"Markdown 等价表"和包含具体字段/含义的表时通过审计。 """
-        from tools.audit_python_figure_body_equivalents import audit_markdown_files
+        from tools.archive_python_drawing.audit_python_figure_body_equivalents import audit_markdown_files
 
         with tempfile.TemporaryDirectory() as tmp:
             md = Path(tmp) / "lesson.md"
@@ -486,7 +486,7 @@ class PythonFigureBodyEquivalentAuditTests(unittest.TestCase):
 
     def test_rejects_placeholder_mermaid_equivalent(self):
         """ @brief 验证审计能检测到 Mermaid 等价图中使用通用占位符节点（如"读图顺序为""相邻正文表格承接字段"），而非具体内容。 """
-        from tools.audit_python_figure_body_equivalents import audit_markdown_files
+        from tools.archive_python_drawing.audit_python_figure_body_equivalents import audit_markdown_files
 
         with tempfile.TemporaryDirectory() as tmp:
             md = Path(tmp) / "lesson.md"
@@ -514,7 +514,7 @@ class PythonFigureDirectExecutionTests(unittest.TestCase):
     def test_shared_text_fit_helper_imports_when_script_is_executed_by_path(self):
         """ @brief 验证 render_lte_turbo_interleaver_table.py 通过 subprocess 直接执行时不出现 ModuleNotFoundError。 """
         root = Path(__file__).resolve().parents[1]
-        script = root / "tools/figures/render_lte_turbo_interleaver_table.py"
+        script = root / "tools/archive_python_drawing/figures/render_lte_turbo_interleaver_table.py"
 
         proc = subprocess.run(
             [sys.executable, str(script)],
@@ -529,7 +529,7 @@ class PythonFigureDirectExecutionTests(unittest.TestCase):
 
     def test_rejects_generic_table_equivalent(self):
         """ @brief 验证审计能检测到等价表中使用通用模板文字（如"图片中的关键字段、流程或矩阵含义由正文表格化承接"）而非具体内容。 """
-        from tools.audit_python_figure_body_equivalents import audit_markdown_files
+        from tools.archive_python_drawing.audit_python_figure_body_equivalents import audit_markdown_files
 
         with tempfile.TemporaryDirectory() as tmp:
             md = Path(tmp) / "lesson.md"
@@ -551,7 +551,7 @@ class PythonFigureDirectExecutionTests(unittest.TestCase):
 
     def test_rejects_generic_decoder_pipeline_equivalent(self):
         """ @brief 验证审计能检测到 Mermaid 等价图中使用通用流水线节点（如"输入字段""地址/状态转换""译码器消费""验证输出"）而非具体协议字段。 """
-        from tools.audit_python_figure_body_equivalents import audit_markdown_files
+        from tools.archive_python_drawing.audit_python_figure_body_equivalents import audit_markdown_files
 
         with tempfile.TemporaryDirectory() as tmp:
             md = Path(tmp) / "lesson.md"
@@ -587,7 +587,7 @@ class PythonFigureDirectExecutionTests(unittest.TestCase):
 
     def test_accepts_split_figure_group_sharing_one_equivalent(self):
         """ @brief 验证两张分图共享一个等价表且表内包含具体字段（row index, column index, set index, shift value）时通过审计。 """
-        from tools.audit_python_figure_body_equivalents import audit_markdown_files
+        from tools.archive_python_drawing.audit_python_figure_body_equivalents import audit_markdown_files
 
         with tempfile.TemporaryDirectory() as tmp:
             md = Path(tmp) / "lesson.md"
@@ -616,7 +616,7 @@ class PythonFigureElementCoverageAuditTests(unittest.TestCase):
 
     def test_reports_missing_visible_text_from_render_script(self):
         """ @brief 验证审计能检测到渲染脚本中有 'CN Unit' 和 'Sign product, min1, min2, argmin' 但讲义中未覆盖。 """
-        from tools.audit_python_figure_element_coverage import audit_pair
+        from tools.archive_python_drawing.audit_python_figure_element_coverage import audit_pair
 
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -637,7 +637,7 @@ class PythonFigureElementCoverageAuditTests(unittest.TestCase):
 
     def test_accepts_chinese_expansion_when_key_terms_are_covered(self):
         """ @brief 验证渲染脚本中的英文关键词（Layered Controller 等）在讲义中文展开中已覆盖时通过审计。 """
-        from tools.audit_python_figure_element_coverage import audit_pair
+        from tools.archive_python_drawing.audit_python_figure_element_coverage import audit_pair
 
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -663,7 +663,7 @@ class PythonFigureElementCoverageAuditTests(unittest.TestCase):
 
     def test_extracts_visible_text_from_assigned_lists_and_tables(self):
         """ @brief 验证元素覆盖审计能从赋值列表（titles/bodies）和二维列表（rows）中提取可见文字并检查讲义覆盖。 """
-        from tools.audit_python_figure_element_coverage import audit_pair
+        from tools.archive_python_drawing.audit_python_figure_element_coverage import audit_pair
 
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

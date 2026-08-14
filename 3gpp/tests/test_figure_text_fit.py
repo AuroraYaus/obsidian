@@ -6,7 +6,7 @@ import unittest
 
 from PIL import Image, ImageDraw, ImageFont
 
-from tools.figures.figure_text_fit import wrap_text
+from tools.archive_python_drawing.figures.figure_text_fit import wrap_text
 
 
 def _font(size: int = 22) -> ImageFont.FreeTypeFont:

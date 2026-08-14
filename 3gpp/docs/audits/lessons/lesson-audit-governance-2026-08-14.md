@@ -26,3 +26,7 @@
 1. UI 状态文件一律 `git rm --cached` + .gitignore（配置类 app.json/core-plugins.json/snippets 保留）。
 2. 大体量派生/原始数据拆独立数据仓，主仓 README 写明可选复原方式（clone 到原相对路径即恢复所有引用）；首次全量推 Gitee、GitHub 走 Import 中转（本仓 2.6GB/81359 文件 2026-08-14 实测可行）。
 3. 主仓历史保留不 filter-repo——双端 force push 风险大于收益。
+
+## 补记：归档移动后引用必须同类同步
+
+Python 绘图工具归档至 `tools/archive_python_drawing/` 时，多级相对根 `parents[2]` 少算一层（4 个 render 脚本同类）、测试文件 3 类 import 路径未更新（tools.figures / tools.audit_* → archive 前缀）——测试套件 33 个失败全是 `ModuleNotFoundError`。**How to apply**：目录归档/移动后，除 md 引用外，必须扫描 py 脚本内 `parents[N]`/`__file__` 相对根与测试 import，跑一遍测试套件闭环（2026-08-14 修复后 59/59 通过）。

@@ -79,7 +79,7 @@ class PythonFigureOutputAuditTests(unittest.TestCase):
 
     def test_reports_script_that_exits_zero_without_png_output(self) -> None:
         """ @brief 验证审计能检测到脚本正常退出但未生成声明 PNG 输出的情况。 """
-        from tools.audit_python_figure_outputs import audit_scripts
+        from tools.archive_python_drawing.audit_python_figure_outputs import audit_scripts
 
         with tempfile.TemporaryDirectory() as tmp:
             script = Path(tmp) / "render_no_output.py"
@@ -91,7 +91,7 @@ class PythonFigureOutputAuditTests(unittest.TestCase):
 
     def test_accepts_script_that_writes_declared_png(self) -> None:
         """ @brief 验证脚本正确生成声明的 PNG 输出时通过审计。 """
-        from tools.audit_python_figure_outputs import audit_scripts
+        from tools.archive_python_drawing.audit_python_figure_outputs import audit_scripts
 
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -114,7 +114,7 @@ class PythonFigureOutputAuditTests(unittest.TestCase):
 
     def test_ignores_function_local_png_path_variables_as_declared_outputs(self) -> None:
         """ @brief 验证审计忽略函数局部变量声明的 PNG 输出路径，不将其视为模块级输出声明。 """
-        from tools.audit_python_figure_outputs import audit_scripts
+        from tools.archive_python_drawing.audit_python_figure_outputs import audit_scripts
 
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -141,7 +141,7 @@ class PythonFigureOutputAuditTests(unittest.TestCase):
 
     def test_does_not_attribute_preexisting_recent_png_to_script(self) -> None:
         """ @brief 验证审计不会将已存在的 PNG 文件误判为脚本生成的新输出。 """
-        from tools.audit_python_figure_outputs import audit_scripts
+        from tools.archive_python_drawing.audit_python_figure_outputs import audit_scripts
 
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

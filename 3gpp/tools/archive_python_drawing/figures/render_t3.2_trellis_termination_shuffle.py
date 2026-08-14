@@ -7,7 +7,7 @@
 import sys, re
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[3]
 
 
 def text_width_estimate(text: str, font_size: float) -> float:

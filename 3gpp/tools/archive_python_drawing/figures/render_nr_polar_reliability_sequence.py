@@ -17,7 +17,7 @@ except ModuleNotFoundError:
 
 
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[3]
 CSV_PATH = ROOT / "3GPP_Rel19/processed/TS_38.212_38212-j30/tables/table_0012.csv"
 OUT_PATH = ROOT / "docs/L2_协议算法/assets/T10.3_TS38.212_Table_5.3.1.2-1_Polar_sequence.png"
 

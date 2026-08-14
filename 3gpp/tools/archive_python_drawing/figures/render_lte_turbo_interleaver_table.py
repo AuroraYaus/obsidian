@@ -19,7 +19,7 @@ except ModuleNotFoundError:
     from figure_text_fit import font
 
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[3]
 CSV_PATH = ROOT / "3GPP_Rel19/processed/TS_36.212_36212-j30/tables/table_0009.csv"
 OUT_PATH = ROOT / "docs/L1_基础/assets/T3.3_TS36.212_Table_5.1.3-3.png"
 
