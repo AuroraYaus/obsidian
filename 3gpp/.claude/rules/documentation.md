@@ -108,7 +108,7 @@ source_spec: "docs/L<层>_<语义名>/<文件名>.md"
 
 ## 四、SVG 与图片资产
 
-- **生成后强制验证**（CLAUDE.md 第 4 条三步）：① Y 坐标扫描（间距 ≥8px）② 边界间距检查（`tools/audit_svg_layout.py` R1-R7：文字宿主/越界/重叠/箭头落点/**边界间距 ≥8px**/**部分重叠禁止**）③ PNG 预览（cairosvg）
+- **生成后强制验证**（CLAUDE.md 第 4 条三步）：(1) Y 坐标扫描（间距 ≥8px）(2) 边界间距检查（`tools/audit_svg_layout.py` R1-R11：文字宿主/越界/重叠/箭头落点/**边界间距 ≥8px**/**部分重叠禁止**/free 文字重叠/箭头三角/曲线贴字/circle 贴边）(3) PNG 预览（cairosvg）
 - 资产命名：`T<编号>_<英文主题>.svg`，与讲义编号对应（讲义重编号时资产同步重命名）
 - 图片资产登记台账：`docs/audits/image_asset_inventory.md` + migration 台账
 - SVG 文件由脚本生成时：脚本路径登记台账；SVG 内容内嵌文字同时随目录改名更新（sed 覆盖 svg 内嵌说明）

@@ -41,7 +41,7 @@ source_spec: "Local project instructions"
 ### 2. 项目背景
 
 本项目是 3GPP LTE/NR 译码链路的全栈教学工程，包含：
-- `docs/` — 128 篇讲义（L1 基础 42 → L2 协议/算法 57 → L3 工程 29）
+- `docs/` — 153 篇讲义（L0 阅读引导 1 → L1 基础 46 → L2 协议/算法 70 → L3 工程 36；口径 = 仅 `type: algorithm` 讲义，另含入口/术语总表等 spec 文件 6 个，2026-08-14 审核统一口径）
 - `sim/` — Python 仿真（CRC/GF(2) 等）
 - `tools/` — 审计/抽取/渲染工具链
 - `3GPP_Rel19/` — 协议原始资料和结构化抽取
@@ -61,7 +61,7 @@ source_spec: "Local project instructions"
 
 验证步骤：
 1. **Y 坐标扫描**（必须）：提取所有 `<text>`、`<rect>`、`<line>` 的 y 坐标，逐层核对间距 ≥ 8 px
-2. **全量几何审计**（必须，`tools/audit_svg_layout.py` R1-R9）：R1-R3 文字宿主/越界/宽度、R4 text-text 重叠、R5 箭头终点贴盒边、R6 框外文字与文本框边界间距 ≥ 8 px（重叠/接触同样报）、R7 rect 部分重叠、R8 free 文字与任意 rect 重叠（网格格、图例色块等）、R9 polygon 箭头三角侵入 rect/text（贴边豁免，面积阈值 15px²）
+2. **全量几何审计**（必须，`tools/audit_svg_layout.py` R1-R11）：R1-R3 文字宿主/越界/宽度、R4 text-text 重叠、R5 箭头终点贴盒边、R6 框外文字与文本框边界间距 ≥ 8 px（重叠/接触同样报）、R7 rect 部分重叠、R8 free 文字与任意 rect 重叠（网格格、图例色块等）、R9 polygon 箭头三角侵入 rect/text（贴边豁免，面积阈值 15px²）、R10 circle 距宿主 rect 边界过近、R11 曲线 path 与 text 重叠
 3. **PNG 预览**（推荐）：`cairosvg` 或 ImageMagick `convert` 转 PNG，肉眼确认无交叠
 4. **旋转文字禁令**（必须）：禁止裸 `transform="rotate"`——审计工具无法解析旋转 bbox，会漏报真实遮盖；旋转轴标签必须用 tspan 逐字竖排
 5. **宿主文字豁免规则**：文字完全位于某 rect 内（宿主关系）时，与相邻无缝小格（如 26x22 导频格）的间距由 R3 内边距管理，R6 不适用——不要在密集小格图里为凑 8px 把文字缩小到不可读
@@ -101,7 +101,7 @@ source_spec: "Local project instructions"
 
 ### 9. 重绘交付检查清单
 
-**重绘/新绘 SVG 交付前四查**：① 图模型节点组水平中心 = 宿主面板中心；② 节点距面板边 ≥ 8px（R10）；③ 布局密度（面板内容纵向填满，无大段空白）；④ 文字右缘余量 ≥ 10px、两行行距 ≥ 16px。工具盲区未覆盖的维度（居中、密度）必须手工坐标核算，不能只依赖工具 PASS（T11.1 四次返工教训）。
+**重绘/新绘 SVG 交付前四查**：(1) 图模型节点组水平中心 = 宿主面板中心；(2) 节点距面板边 ≥ 8px（R10）；(3) 布局密度（面板内容纵向填满，无大段空白）；(4) 文字右缘余量 ≥ 10px、两行行距 ≥ 16px。工具盲区未覆盖的维度（居中、密度）必须手工坐标核算，不能只依赖工具 PASS（T11.1 四次返工教训）。
 
 ### 10. 序号写法规则
 
@@ -111,15 +111,6 @@ source_spec: "Local project instructions"
 2. **审计命令**：`python3 tools/audit_circled_digits.py`（默认扫 docs/tools/sim；发现即 FAIL）。新增/修改任何文档、SVG、代码后运行；全库回归在阶段验收时运行。
 3. **教训来源**：2026-08-04 用户两次要求消除圈号——第一次替换 323 处后未固化规则，子代理写新内容又引入 186 处。一次性替换不是治理，检查规则才是。
 
-### 12. 经验教训库（项目永久存储）
-
-**每次会话开始即知**：本项目经验教训的权威副本在 `docs/audits/lessons/lesson-*.md`（10 条，随 git 双推保存，与 `~/.claude/projects/*/memory/` 的 auto-memory 同步维护，**以项目副本为准**）。
-
-1. **使用时机**：遇到用户纠错、新问题、或规则未覆盖的场景，**先查经验库**（grep `docs/audits/lessons/` 关键字）是否已有同类教训——避免重复踩坑（每一条 lesson 都对应一次真实返工）。
-2. **维护流程**（配合第 7 条纠错固化元规则）：新教训 → 写入 `docs/audits/lessons/lesson-<主题>.md`（含根因 + How to apply）→ 更新 `项目规则与记忆索引.md` 第七节登记表 → `git push origin master`（自动双推 Gitee+GitHub）。
-3. **规则的可执行形态**：CLAUDE.md 各条、`合规与遵从.md`、`tools/audit_*.py`（审计工具即规则）均为经验的落地；经验库记录的是"为什么"。
-4. **本地-云端双写机制**：`~/.claude/projects/<项目>/memory/` 是 auto-memory 工作层（会话自动加载，保留不动）；新经验**双写**——本地 memory + 项目仓库 `docs/audits/lessons/`（或 ic/docs/lessons、workspace-memory）。删除本地 projects 目录不影响云端。
-
 ### 11. 合规基线
 
 所有讲义和代码必须遵守 `合规与遵从.md` 中的 23 条 Hard Constraints（含 Rule 23 SVG T2.1 基准）。关键规则：
@@ -128,6 +119,15 @@ source_spec: "Local project instructions"
 - 3GPP/LTE/NR 不机械重复全称（Rule 15）
 - LaTeX 公式必须可渲染（Rule 20）
 - 零基础保护（Rule 8）
+
+### 12. 经验教训库（项目永久存储）
+
+**每次会话开始即知**：本项目经验教训的权威副本在 `docs/audits/lessons/lesson-*.md`（21 条，随 git 双推保存，与 `~/.claude/projects/*/memory/` 的 auto-memory 同步维护，**以项目副本为准**）。
+
+1. **使用时机**：遇到用户纠错、新问题、或规则未覆盖的场景，**先查经验库**（grep `docs/audits/lessons/` 关键字）是否已有同类教训——避免重复踩坑（每一条 lesson 都对应一次真实返工）。
+2. **维护流程**（配合第 7 条纠错固化元规则）：新教训 → 写入 `docs/audits/lessons/lesson-<主题>.md`（含根因 + How to apply）→ 更新 `项目规则与记忆索引.md` 第七节登记表 → `git push origin master`（自动双推 Gitee+GitHub）。
+3. **规则的可执行形态**：CLAUDE.md 各条、`合规与遵从.md`、`tools/audit_*.py`（审计工具即规则）均为经验的落地；经验库记录的是"为什么"。
+4. **本地-云端双写机制**：`~/.claude/projects/<项目>/memory/` 是 auto-memory 工作层（会话自动加载，保留不动）；新经验**双写**——本地 memory + 项目仓库 `docs/audits/lessons/`（或 ic/docs/lessons、workspace-memory）。删除本地 projects 目录不影响云端。
 
 ### 13. 绘图政策（2026-08-07 用户确立）
 

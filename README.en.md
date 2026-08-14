@@ -6,7 +6,7 @@ A full-stack teaching Obsidian knowledge base for the 3GPP LTE/NR decoding chain
 
 ```
 ├── 3gpp/                    # Core knowledge base (lectures / concepts / audits / tools)
-│   ├── docs/L0_协议阅读引导/  # Protocol reading map, master glossary (155 terms + 71 concept index)
+│   ├── docs/L0_协议阅读引导/  # Protocol reading map, master glossary (254 terms + 104 concept index)
 │   ├── docs/L1_基础/         # Math foundations, OFDM & soft demodulation, CRC/segmentation, decoding theory, HW basics
 │   ├── docs/L2_协议算法/     # Decoder protocols & algorithms (Turbo/LDPC/Polar), MIMO reception, probabilistic shaping
 │   ├── docs/L3_工程实现/     # Decoder engineering (simulation/fixed-point/RTL/verification), receiver-link engineering budgets
@@ -14,7 +14,7 @@ A full-stack teaching Obsidian knowledge base for the 3GPP LTE/NR decoding chain
 │   ├── docs/audits/          # Audit ledgers & reviews
 │   ├── sim/ tools/ tests/    # Python simulation, audit toolchain, unit tests
 │   ├── CLAUDE.md             # Session hard rules
-│   ├── 合规与遵从.md          # 22 Hard Constraints
+│   ├── 合规与遵从.md          # 23 Hard Constraints
 │   ├── 项目规则与记忆索引.md   # Rules / writing conventions / sync checklist
 │   └── README.md             # Detailed knowledge-base documentation (Chinese)
 ├── .obsidian/               # Obsidian app configuration
@@ -26,12 +26,12 @@ A full-stack teaching Obsidian knowledge base for the 3GPP LTE/NR decoding chain
 1. **Detailed docs**: see [`3gpp/README.md`](3gpp/README.md) (structure / lecture system / reading path / quality system)
 2. **Reading entry**: `3gpp/docs/3GPP_讲义入口.md`
 3. **Terminology lookup**: `3gpp/docs/L0_协议阅读引导/L0_terminology_glossary.md`
-4. **Lecture system**: L1 foundations (T1-T5 + TX1-TX5 TX mirror) → L2 protocol/algorithms (M6-M16: decoding/control-plane/uplink/scheduling) → L3 engineering (T17-T23: decoder/RX chain/backend), all complete ✅ (155 lectures + 106 concept notes)
+4. **Lecture system**: L1 foundations (T1-T5 + TX1-TX5 TX mirror) → L2 protocol/algorithms (M6-M16: decoding/control-plane/uplink/scheduling) → L3 engineering (T17-T23: decoder/RX chain/backend), all complete ✅ (153 lectures + 6 entry/glossary spec files + 106 concept notes)
 
 ## Quality System
 
-- Compliance baseline: 22 Hard Constraints (`3gpp/合规与遵从.md`)
-- SVG mandatory validation: geometry audit R1-R7 (boundary gaps ≥8px, no overlap)
+- Compliance baseline: 23 Hard Constraints (`3gpp/合规与遵从.md`)
+- SVG mandatory validation: geometry audit R1-R11 (boundary gaps ≥8px, no overlap)
 - Lecture audits: term pairing / LaTeX rendering / depth / headings
 - Code comments: DOXYGEN style enforced
 - Full-base sync: 8 sync categories (terms/entries/numbers/assets/paths/ledgers) — see `3gpp/项目规则与记忆索引.md` §6
