@@ -58,17 +58,16 @@ BOUNDARY_PATTERNS = [
     "留到",
 ]
 
-# L3 工程篇分层口径（2026-08-14 审核裁定）：docs/L3_工程实现/ 的主题为
-# 综合/功耗/后端/SoC 协同等工程域，协议理论信号少属主题性质（非深度不足），
-# 因此理论信号与篇幅阈值按层放宽；协议索引风险仅在理论信号几乎缺失时提示。
-# 口径变更与理由的权威登记见《项目规则与记忆索引.md》六.6 与 PLAN.md。
+# L3 工程篇分层口径（2026-08-14 审核裁定，同日二轮修正）：docs/L3_工程实现/
+# 的主题为综合/功耗/后端/SoC 协同等工程域，协议理论信号少属主题性质（非深度
+# 不足）。首轮口径为"理论阈值放宽 16→8"，但 T23.1-3 实测 score=2/2/4 仍低于
+# 8——证明放宽阈值表达不了主题性质：THEORY_HINTS 词汇表是协议教学向的，
+# 对工程篇没有判别力。二轮裁定：L3 停用理论信号与协议索引两项检查（工程
+# 深度指标待建，届时恢复），保留章节完整性/篇幅/边界短语检查。口径变更与
+# 理由的权威登记见《项目规则与记忆索引.md》六.6 与 PLAN.md。
 L3_DIR_MARKER = "L3_工程实现"
-THEORY_MIN_L12 = 16
-THEORY_MIN_L3 = 8
 CHARS_MIN_L12 = 9000
 CHARS_MIN_L3 = 5000
-PROTO_INDEX_THEORY_MAX_L12 = 24
-PROTO_INDEX_THEORY_MAX_L3 = 10
 
 # 非讲义目录（2026-08-14 审核裁定，与 audit_term_first_use.py 豁免区 h/i/j 对齐）：
 # 概念笔记（六段式，非讲义模板）、计划/设计文档、审计台账、L0 阅读引导
@@ -88,9 +87,10 @@ def audit_file(path: Path) -> list[str]:
     @note    协议索引风险判断采用双重阈值：协议引用>=20 且理论分数<24，
              因为真正的教学文档应该同时包含大量协议引用和充分的理论解释。
              单方面满足（如仅大量引用但理论分数达标）不触发该警告。
-             L3 工程篇（docs/L3_工程实现/）按分层口径放宽（2026-08-14 裁定）：
-             理论阈值 16→8、篇幅阈值 9000→5000、协议索引理论上限 24→10——
-             综合/功耗/后端主题协议理论少属主题性质，见模块常量注释。
+             L3 工程篇（docs/L3_工程实现/）停用理论信号与协议索引两项检查
+             （2026-08-14 二轮裁定：THEORY_HINTS 为协议教学向词汇表，对
+             综合/功耗/后端主题无判别力，T23.1-3 score=2-4 实测证明；
+             工程深度指标待建后恢复），仅保留章节/篇幅/边界短语检查。
     """
     text = path.read_text(encoding="utf-8")
     findings: list[str] = []
@@ -99,9 +99,7 @@ def audit_file(path: Path) -> list[str]:
             findings.append(f"{path}: missing required section {section}")
 
     is_l3 = L3_DIR_MARKER in path.parts
-    theory_min = THEORY_MIN_L3 if is_l3 else THEORY_MIN_L12
     chars_min = CHARS_MIN_L3 if is_l3 else CHARS_MIN_L12
-    proto_theory_max = PROTO_INDEX_THEORY_MAX_L3 if is_l3 else PROTO_INDEX_THEORY_MAX_L12
 
     theory_score = sum(text.count(hint) for hint in THEORY_HINTS)
     boundary_score = sum(len(re.findall(pattern, text)) for pattern in BOUNDARY_PATTERNS)
@@ -110,12 +108,13 @@ def audit_file(path: Path) -> list[str]:
 
     if chars < chars_min:
         findings.append(f"{path}: very short lesson ({chars} chars)")
-    if theory_score < theory_min:
-        findings.append(f"{path}: weak zero-foundation theory signals (score={theory_score})")
-    if protocol_hits >= 20 and theory_score < proto_theory_max:
-        findings.append(
-            f"{path}: protocol-index risk (protocol_hits={protocol_hits}, theory_score={theory_score})"
-        )
+    if not is_l3:
+        if theory_score < 16:
+            findings.append(f"{path}: weak zero-foundation theory signals (score={theory_score})")
+        if protocol_hits >= 20 and theory_score < 24:
+            findings.append(
+                f"{path}: protocol-index risk (protocol_hits={protocol_hits}, theory_score={theory_score})"
+            )
     if boundary_score >= 12:
         findings.append(f"{path}: too many deferral/boundary phrases (count={boundary_score})")
 
