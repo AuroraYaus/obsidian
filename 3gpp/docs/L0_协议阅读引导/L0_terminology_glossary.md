@@ -12,7 +12,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 ---
 # 译码讲义术语总表
 
-本章集中收纳 `docs/` 作者讲义中反复出现的术语、缩写和简要解释。其他讲义正文默认直接使用这些简称；只有当某一节正在讲解概念本身时，才在正文中补充上下文说明。条目合并自既有术语表与 `docs/concepts/3GPP全流程_缩写概念理论清单.md` 缩写清单；末尾「概念笔记索引」收录 `docs/concepts/` 全部概念笔记（106 篇），可经 wikilink 跳转阅读。
+本章集中收纳 `docs/` 作者讲义中反复出现的术语、缩写和简要解释。其他讲义正文默认直接使用这些简称；只有当某一节正在讲解概念本身时，才在正文中补充上下文说明。条目合并自既有术语表与 `docs/concepts/3GPP全流程_缩写概念理论清单.md` 缩写清单；末尾「概念笔记索引」收录 `docs/concepts/` 全部概念笔记（107 篇），可经 wikilink 跳转阅读。
 
 ## 系统与协议
 
@@ -97,6 +97,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | UE | 用户设备 | User Equipment；协议与链路仿真的收端主体。 |
 | BWP | 带宽部分 | Bandwidth Part；UE 工作带宽的子集，是调度与 RF 配置的粒度。 |
 | RRC | 无线资源控制 | Radio Resource Control；信令层，负责配置与连接管理。 |
+| PI | 抢占指示 | Pre-emption Indication；DCI 2_1（INT-RNTI）的 14 位位图，通知被抢占 eMBB 丢弃受损 LLR。→ [[Preemption_Indication_抢占指示]] |
 
 ## 译码对象与算法
 
@@ -298,7 +299,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 
 ## 概念笔记索引
 
-> `docs/concepts/` 全部概念笔记（106 篇），按主题分组；每条一句话取自笔记首段。
+> `docs/concepts/` 全部概念笔记（107 篇），按主题分组；每条一句话取自笔记首段。
 
 ### 协议、信道与信号
 
@@ -337,6 +338,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | [[PBCH_MIB_广播信道]] | MIB 字段与 PBCH 编码（NR Polar / LTE TBCC）。 |
 | [[PDCCH_物理下行控制信道]] | CORESET/CCE/聚合等级/搜索空间与盲检机制。 |
 | [[DCI_下行控制信息]] | DCI 格式体系与字段语义，调度指令本体。 |
+| [[Preemption_Indication_抢占指示]] | 下行抢占指示：DCI 2_1 位图通知 eMBB 丢弃被 URLLC 抢占的受损 LLR。 |
 | [[PUCCH_上行控制信道与UCI]] | UCI 三兄弟与 PUCCH format 0-4。 |
 | [[Scheduler_MAC调度器与资源分配]] | MAC 调度器决策与 RBG/VRB/Type 0-1 资源分配。 |
 | [[Scheduling_Grant_调度与授权]] | 动态授权与 SPS/configured grant 机制。 |

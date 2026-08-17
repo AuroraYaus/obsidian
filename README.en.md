@@ -26,7 +26,7 @@ A full-stack teaching Obsidian knowledge base for the 3GPP LTE/NR decoding chain
 1. **Detailed docs**: see [`3gpp/README.md`](3gpp/README.md) (structure / lecture system / reading path / quality system)
 2. **Reading entry**: `3gpp/docs/3GPP_讲义入口.md`
 3. **Terminology lookup**: `3gpp/docs/L0_协议阅读引导/L0_terminology_glossary.md`
-4. **Lecture system**: L1 foundations (T1-T5 + TX1-TX5 TX mirror) → L2 protocol/algorithms (M6-M16: decoding/control-plane/uplink/scheduling) → L3 engineering (T17-T23: decoder/RX chain/backend), all complete ✅ (153 lectures + 6 entry/glossary files + 106 concept notes)
+4. **Lecture system**: L1 foundations (T1-T5 + TX1-TX5 TX mirror) → L2 protocol/algorithms (M6-M16: decoding/control-plane/uplink/scheduling) → L3 engineering (T17-T23: decoder/RX chain/backend), all complete ✅ (153 lectures + 6 entry/glossary files + 107 concept notes)
 
 ## Quality System
 

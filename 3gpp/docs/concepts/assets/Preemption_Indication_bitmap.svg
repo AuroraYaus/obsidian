@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+@file    Preemption_Indication_bitmap.svg
+@brief   PI（抢占指示）14 位位图在 set0/set1 两种粒度下映射到时频资源的对照示意图
+@note    本图以两个面板对照展示 Pre-emption indication 的位图在 set0（纯时域）与 set1（时频二维）
+         两种 timeFrequencySet 粒度下的映射拓扑，补充正文逐位对照表格之外的直观信息。
+         示例高亮均为 T_INT = 1、μ = μ_INT 的典型情形（N_INT = 14）。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="660" viewBox="0 0 1100 660" font-family="DejaVu Sans, sans-serif">
+  <rect x="0" y="0" width="1100" height="660" fill="#ffffff"/>
+
+  <!-- 标题 -->
+  <text x="550" y="52" font-size="19" font-weight="bold" text-anchor="middle" fill="#222222">PI 位图的时频映射（DCI format 2_1，每小区 14 位）</text>
+
+  <!-- ============ 面板 A：set0 ============ -->
+  <rect x="35" y="80" width="500" height="360" fill="#fdfdfd" stroke="#444444" stroke-width="1.5"/>
+  <text x="285" y="114" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">set0：纯时域粒度（每位 = 一组连续符号）</text>
+  <text x="285" y="142" font-size="11" text-anchor="middle" fill="#333333">频域 = 整个 BWP 宽度；时域 = 符号索引（本例 N_INT = 14）</text>
+
+  <!-- 符号索引标签（网格上方） -->
+  <g font-size="11" text-anchor="middle" fill="#333333">
+    <text x="90" y="163">0</text><text x="120" y="163">1</text><text x="150" y="163">2</text><text x="180" y="163">3</text>
+    <text x="210" y="163">4</text><text x="240" y="163">5</text><text x="270" y="163">6</text><text x="300" y="163">7</text>
+    <text x="330" y="163">8</text><text x="360" y="163">9</text><text x="390" y="163">10</text><text x="420" y="163">11</text>
+    <text x="450" y="163">12</text><text x="480" y="163">13</text>
+  </g>
+
+  <!-- 网格：14 列 × 1 行（BWP 全宽），位 5、6 = 1 高亮 -->
+  <g stroke="#9a9a9a" stroke-width="1">
+    <rect x="75"  y="172" width="30" height="150" fill="#fafafa"/>
+    <rect x="105" y="172" width="30" height="150" fill="#fafafa"/>
+    <rect x="135" y="172" width="30" height="150" fill="#fafafa"/>
+    <rect x="165" y="172" width="30" height="150" fill="#fafafa"/>
+    <rect x="195" y="172" width="30" height="150" fill="#e57368" stroke="#c0392b"/>
+    <rect x="225" y="172" width="30" height="150" fill="#e57368" stroke="#c0392b"/>
+    <rect x="255" y="172" width="30" height="150" fill="#fafafa"/>
+    <rect x="285" y="172" width="30" height="150" fill="#fafafa"/>
+    <rect x="315" y="172" width="30" height="150" fill="#fafafa"/>
+    <rect x="345" y="172" width="30" height="150" fill="#fafafa"/>
+    <rect x="375" y="172" width="30" height="150" fill="#fafafa"/>
+    <rect x="405" y="172" width="30" height="150" fill="#fafafa"/>
+    <rect x="435" y="172" width="30" height="150" fill="#fafafa"/>
+    <rect x="465" y="172" width="30" height="150" fill="#fafafa"/>
+  </g>
+
+  <!-- 位索引标签（网格下方） -->
+  <g font-size="11" text-anchor="middle" fill="#333333">
+    <text x="90" y="342">1</text><text x="120" y="342">2</text><text x="150" y="342">3</text><text x="180" y="342">4</text>
+    <text x="210" y="342">5</text><text x="240" y="342">6</text><text x="270" y="342">7</text><text x="300" y="342">8</text>
+    <text x="330" y="342">9</text><text x="360" y="342">10</text><text x="390" y="342">11</text><text x="420" y="342">12</text>
+    <text x="450" y="342">13</text><text x="480" y="342">14</text>
+  </g>
+
+  <text x="285" y="362" font-size="11" text-anchor="middle" fill="#333333">位索引（自 MSB）；位值 1 = 无传输（可能被抢占）</text>
+  <text x="285" y="398" font-size="12" text-anchor="middle" fill="#c0392b">示例：位 5、6 = 1 → 符号 4、5 被指示无传输（红色）</text>
+
+  <!-- ============ 面板 B：set1 ============ -->
+  <rect x="565" y="80" width="500" height="360" fill="#fdfdfd" stroke="#444444" stroke-width="1.5"/>
+  <text x="815" y="114" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">set1：时频二维粒度（每位对 = 一组符号 × 半个 BWP）</text>
+  <text x="815" y="142" font-size="11" text-anchor="middle" fill="#333333">位对（自 MSB）→ 时域：7 组连续符号（本例每组 2 符号）</text>
+
+  <!-- 位对标签（网格上方） -->
+  <g font-size="11" text-anchor="middle" fill="#333333">
+    <text x="689" y="163">1·2</text><text x="731" y="163">3·4</text><text x="773" y="163">5·6</text>
+    <text x="815" y="163">7·8</text><text x="857" y="163">9·10</text><text x="899" y="163">11·12</text>
+    <text x="941" y="163">13·14</text>
+  </g>
+
+  <!-- 频域半区标签（网格左侧竖排） -->
+  <text x="642" font-size="12" fill="#333333">
+    <tspan x="642" y="205">前</tspan><tspan x="642" y="221">半</tspan>
+  </text>
+  <text x="642" font-size="12" fill="#333333">
+    <tspan x="642" y="280">后</tspan><tspan x="642" y="296">半</tspan>
+  </text>
+
+  <!-- 网格：7 列（符号组）× 2 行（PRB 半区）；位对 5·6 = 10 → 组 3 前半高亮 -->
+  <g stroke="#9a9a9a" stroke-width="1">
+    <rect x="668" y="172" width="42" height="75" fill="#fafafa"/>
+    <rect x="710" y="172" width="42" height="75" fill="#fafafa"/>
+    <rect x="752" y="172" width="42" height="75" fill="#e57368" stroke="#c0392b"/>
+    <rect x="794" y="172" width="42" height="75" fill="#fafafa"/>
+    <rect x="836" y="172" width="42" height="75" fill="#fafafa"/>
+    <rect x="878" y="172" width="42" height="75" fill="#fafafa"/>
+    <rect x="920" y="172" width="42" height="75" fill="#fafafa"/>
+    <rect x="668" y="247" width="42" height="75" fill="#fafafa"/>
+    <rect x="710" y="247" width="42" height="75" fill="#fafafa"/>
+    <rect x="752" y="247" width="42" height="75" fill="#fafafa"/>
+    <rect x="794" y="247" width="42" height="75" fill="#fafafa"/>
+    <rect x="836" y="247" width="42" height="75" fill="#fafafa"/>
+    <rect x="878" y="247" width="42" height="75" fill="#fafafa"/>
+    <rect x="920" y="247" width="42" height="75" fill="#fafafa"/>
+  </g>
+
+  <!-- 符号组标签（网格下方） -->
+  <g font-size="11" text-anchor="middle" fill="#333333">
+    <text x="689" y="342">组 1</text><text x="731" y="342">组 2</text><text x="773" y="342">组 3</text>
+    <text x="815" y="342">组 4</text><text x="857" y="342">组 5</text><text x="899" y="342">组 6</text>
+    <text x="941" y="342">组 7</text>
+  </g>
+
+  <text x="815" y="362" font-size="11" text-anchor="middle" fill="#333333">频域：前半 = 前 ⌈B_INT/2⌉ PRB，后半 = 后 ⌊B_INT/2⌋ PRB</text>
+  <text x="815" y="398" font-size="12" text-anchor="middle" fill="#c0392b">示例：位对 5·6 = 10 → 符号组 3 的前半 BWP 无传输（红色）</text>
+
+  <!-- ============ 图例 ============ -->
+  <rect x="330" y="478" width="440" height="78" fill="#f7f7f7" stroke="#888888" stroke-width="1"/>
+  <rect x="352" y="498" width="14" height="14" fill="#e57368" stroke="#c0392b" stroke-width="1"/>
+  <text x="382" y="510" font-size="12" fill="#333333">位值 1：无传输（可能被抢占）</text>
+  <rect x="352" y="530" width="14" height="14" fill="#fafafa" stroke="#9a9a9a" stroke-width="1"/>
+  <text x="382" y="542" font-size="12" fill="#333333">位值 0：有传输</text>
+
+  <!-- 底部说明 -->
+  <text x="550" y="596" font-size="12" text-anchor="middle" fill="#555555">两面板均为 T_INT = 1、μ = μ_INT 的典型情形；阴影块由位值 1 的位/位对映射得到。</text>
+</svg>

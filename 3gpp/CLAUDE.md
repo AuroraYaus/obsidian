@@ -122,7 +122,7 @@ source_spec: "Local project instructions"
 
 ### 12. 经验教训库（项目永久存储）
 
-**每次会话开始即知**：本项目经验教训的权威副本在 `docs/audits/lessons/lesson-*.md`（22 条，随 git 双推保存，与 `~/.claude/projects/*/memory/` 的 auto-memory 同步维护，**以项目副本为准**）。
+**每次会话开始即知**：本项目经验教训的权威副本在 `docs/audits/lessons/lesson-*.md`（23 条，随 git 双推保存，与 `~/.claude/projects/*/memory/` 的 auto-memory 同步维护，**以项目副本为准**）。
 
 1. **使用时机**：遇到用户纠错、新问题、或规则未覆盖的场景，**先查经验库**（grep `docs/audits/lessons/` 关键字）是否已有同类教训——避免重复踩坑（每一条 lesson 都对应一次真实返工）。
 2. **维护流程**（配合第 7 条纠错固化元规则）：新教训 → 写入 `docs/audits/lessons/lesson-<主题>.md`（含根因 + How to apply）→ 更新 `项目规则与记忆索引.md` 第七节登记表 → `git push origin master`（自动双推 Gitee+GitHub）。

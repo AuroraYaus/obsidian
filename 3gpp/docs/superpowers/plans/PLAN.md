@@ -99,3 +99,46 @@ _Locked via grill — by Claude + AuroraYaus（2026-08-14）_
 **决策（2 问收敛）**：
 1. 概念笔记薄篇——字符阈值分级：<900 字符的 17 篇全补至 1500-2500 字符（科学定义补公式/直观模型补数值例子/常见误解 ≥3 行/协议锚点补 TS 节号/图谱关联 ≥5 条）；900-1200 的 8 篇补短板段至 ≥1500。共 25 篇，参考单元充实而非扩成讲义。
 2. L3 工程深度指标——新建 `ENGINEERING_HINTS` 工程词表（~30 词，按 L3 各篇实词调校）+ 单一检查"工程深度信号"，阈值由 36 篇实测分布定标（不拍脑袋），写入 audit_lesson_depth.py @note 固化；协议索引检查不恢复。
+
+## 追加批次三：下行抢占概念笔记 Preemption_Indication（2026-08-17 grill 锁定）
+
+_Locked via grill — by Claude + AuroraYaus（2026-08-17，6 问收敛）_
+
+## Goal
+
+将"下行抢占/抢占指示（Pre-emption Indication，PI）"沉淀为独立六段式概念笔记 `docs/concepts/Preemption_Indication_抢占指示.md`，深度 = 全流程（TS 38.214 §11.2.2 过程 + TS 38.212 DCI 2_1 字段 + TS 38.213 §11.2 监测 + TS 38.331 RRC 配置要点；TS 38.133 监测性能一句带过），含 14 位时频映射表 + 1 张手绘 SVG；完成术语登记、图谱挂载、T14.2/T2.2 wikilink 关联与 README 计数同步。
+
+## Approach
+
+1. **证据先行**：阅读本地协议原文并抽取——TS 38.214 §11.2.2（`3GPP_Rel19/processed/TS_38.214_38214-j30/full.md` 抢占段）、TS 38.212 §7.3.1.3.2（DCI 2_1 字段）、TS 38.213 §11.2（INT-RNTI 监测）、TS 38.331（`int-RNTI`/`dci-Format2-1`/`int-ConfigurationPerServingCell`/`positionInDCI`/`timeFrequencySet`）；14 位映射逐位核对（Set1/Set2 语义、符号组×频域分区映射顺序）。
+2. 新建 `docs/concepts/Preemption_Indication_抢占指示.md`（六段式模板）：frontmatter `type: definition` + `queries: 1` + aliases（下行抢占/抢占指示/PI/Pre-emption indication/Downlink Preemption）；独立解释任务 → 科学定义（含 14 行映射表：位索引→时域符号组→频域分区）→ 直观模型（生活类比）→ 常见误解（≥3 行，含"PI 是下行、CI 是上行"对照行 + wikilink 指向 T14.2）→ 协议锚点（TS 小节号 + 本地路径）→ 图谱关联（≥5 wikilink + 关系语义）。
+3. 手绘 SVG `docs/concepts/assets/Preemption_Indication_bitmap.svg`（全库首个概念笔记图例）：PI 位图时频映射示意；`python3 tools/audit_svg_layout.py` R1-R11 ALL_PASS + cairosvg PNG 渲染目检 + Y 坐标扫描 + 重绘交付四查；登记 `docs/audits/image_asset_inventory.md`。
+4. 术语登记：`L0_terminology_glossary.md` 缩写表加 `| PI | 抢占指示 | Pre-emption Indication; ... |` 行 + 概念索引 wikilink 行 + "106 篇"→"107 篇"。
+5. 图谱挂载：`概念图谱入口.md` 协议结构分区加 wikilink。
+6. 高频查询排名：`L0_术语入口.md` 排名表加行（抢占指示/1/2026-08-17）。
+7. 关联加链：T14.2 §2_1 正文、T2.2 uRLLC 抢占两处加 `[[Preemption_Indication_抢占指示]]`（仅机械加链，不扩充章节）。
+8. 审计闭环：`audit_link_integrity.py` / `audit_circled_digits.py` / `audit_frontmatter_types.py` / `audit_markdown_headings.py` / `audit_project_image_inventory.py`；README 三语计数 106→107 同步。
+9. 提交 + `git push origin master`（双推 Gitee + GitHub）。
+
+## Key decisions & tradeoffs（6 问）
+
+| 决策点 | 结论 | 理由 |
+|:---|:---|:---|
+| 落点 | 新建概念笔记；T14.2/T2.2 仅加 wikilink | PI 有独立协议锚点（38.214 §11.2.2），符合概念笔记定位；T14.2 边界声明本就有意不展开，扩充会破坏其 DCI 讲义定位 |
+| 主题边界 | 主体纯下行；上行取消（CI/2_4）仅误解表一行对照 + wikilink 指向 T14.2 | 38.214 §11.2.2 是纯下行过程；CI 在 38.213 §11.2A 独立小节，机制不共享；合写两头不深 |
+| 配图 | 表格 + 1 张手绘 SVG 双表达（用户明确拍板打破概念笔记零图惯例） | 14 位映射表逐行可查询；SVG 给时频平面直观 |
+| 资产落点 | 新建 `docs/concepts/assets/`；命名 `Preemption_Indication_bitmap.svg` | 分层 assets 惯例的最小惊讶扩展；概念名前缀保证图↔笔记可追溯 |
+| 深度 | 全流程（38.214/38.212/38.213/38.331），38.133 一句带过 | 概念笔记定位是可查询协议锚点笔记；测量性能属 RAN4 域 |
+| 命名 | `Preemption_Indication_抢占指示.md` | 与 38.214 §11.2.2 节名/38.212 字段名一致；"下行抢占"进 aliases |
+
+## Risks / open questions
+
+- **SVG 是主要返工风险点**：概念笔记首例图，必须过 R1-R11 + cairosvg + 四查，不依赖工具盲区（rotate 禁用、free 文字、polygon）。
+- 14 位映射表的 Set1/Set2 语义必须与 38.214 §11.2.2 原文逐位核对，先抽证据再写正文。
+- `audit_project_image_inventory.py` 是否自动覆盖 `concepts/assets/` 需实测——不覆盖则台账手工登记并在工具盲区声明。
+- queries=1 与排名表为存量不回填口径（pipeline 第 4 条）。
+
+## Out of scope
+
+- T14.2 §2_1 章节扩充（Q1 排除）；上行取消指示正文展开（Q2 排除）；TS 38.133 性能要求展开（Q5 排除）。
+- 讲义层任何内容改动（除步骤 7 两个机械 wikilink）。
