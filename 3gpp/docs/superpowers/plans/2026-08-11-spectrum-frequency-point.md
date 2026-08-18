@@ -162,6 +162,7 @@ flowchart LR
     SYNC["同步栅格 GSCN<br/>SSB 盲检位置"]
     SSB["UE 扫频找 SSB<br/>→ MIB → 对齐频点"]
     SPEC --> BAND --> POINT --> ARFCN --> RASTER --> SYNC --> SSB
+classDef default fill:#F7F9FC,stroke:#C9D4DF,color:#17212F;
 ```
 
 频点 → 编号的公式（TS 38.101-1 §5.4.2.1）：

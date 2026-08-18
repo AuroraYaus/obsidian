@@ -112,6 +112,7 @@ flowchart TB
     PDCP --> RLC
     RLC --> MAC
     MAC --> PHY
+classDef default fill:#F7F9FC,stroke:#C9D4DF,color:#17212F;
 ```
 
 ## 常见误解
@@ -203,6 +204,7 @@ flowchart TB
     PDCP --> RLC
     RLC --> MAC
     MAC --> PHY
+classDef default fill:#F7F9FC,stroke:#C9D4DF,color:#17212F;
 ```
 
 图注：3GPP 用户面与控制面协议栈合并示意，参照 TS 38.300 Figure 4.4.1-1/4.4.2-1。层2 = SDAP/PDCP/RLC/MAC 子层的集合；**图示为 NR（含 SDAP），LTE 用户面无 SDAP**。

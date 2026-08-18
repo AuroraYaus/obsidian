@@ -82,6 +82,7 @@ flowchart TB
     PSK --> BPSK["BPSK<br/>1 bit/符号"]
     PSK --> QPSK["QPSK<br/>2 bit/符号"]
     PSK --> QAM["QAM 幅度+相位<br/>16/64/256QAM<br/>LTE/NR 数据信道"]
+classDef default fill:#F7F9FC,stroke:#C9D4DF,color:#17212F;
 ```
 
 ## 直观模型

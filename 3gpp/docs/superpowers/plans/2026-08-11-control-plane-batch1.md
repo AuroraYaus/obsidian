@@ -232,6 +232,7 @@ flowchart LR
     SSS["SSS 检测<br/>帧定时 + N_ID1"]
     PBCH["解 PBCH<br/>读 MIB"]
     SW --> PSS --> SSS --> PBCH
+classDef default fill:#F7F9FC,stroke:#C9D4DF,color:#17212F;
 ```
 
 ## 直观模型

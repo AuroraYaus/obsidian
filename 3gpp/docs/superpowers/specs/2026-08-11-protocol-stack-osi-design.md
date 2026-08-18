@@ -117,6 +117,7 @@ flowchart TB
     PDCP --> RLC
     RLC --> MAC
     MAC --> PHY
+classDef default fill:#F7F9FC,stroke:#C9D4DF,color:#17212F;
 ```
 
 3. **整合对照表**（4 行含表头）：3GPP 层 ↔ 子层/协议 ↔ OSI 对应层（类比）↔ OSI 典型协议 ↔ 职责概述。

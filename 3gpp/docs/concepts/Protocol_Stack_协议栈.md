@@ -76,6 +76,7 @@ flowchart TB
     PDCP --> RLC
     RLC --> MAC
     MAC --> PHY
+classDef default fill:#F7F9FC,stroke:#C9D4DF,color:#17212F;
 ```
 
 ## 常见误解

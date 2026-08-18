@@ -64,6 +64,7 @@ flowchart TB
     RES --> T["TDMA：横条分时<br/>每用户轮转一个时隙"]
     RES --> C["CDMA：整面共享<br/>同频同时，靠码区分"]
     RES --> O["OFDMA：格子分块<br/>子载波分组（RB）分配"]
+classDef default fill:#F7F9FC,stroke:#C9D4DF,color:#17212F;
 ```
 
 ### 四种方式对比

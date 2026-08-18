@@ -99,6 +99,7 @@ flowchart TB
     RES --> T["TDMA：横条分时<br/>每用户轮转一个时隙"]
     RES --> C["CDMA：整面共享<br/>同频同时，靠码区分"]
     RES --> O["OFDMA：格子分块<br/>子载波分组（RB）分配"]
+classDef default fill:#F7F9FC,stroke:#C9D4DF,color:#17212F;
 ```
 
 ### 四种方式对比
@@ -269,6 +270,7 @@ flowchart TB
     PSK --> BPSK["BPSK<br/>1 bit/符号"]
     PSK --> QPSK["QPSK<br/>2 bit/符号"]
     PSK --> QAM["QAM 幅度+相位<br/>16/64/256QAM<br/>LTE/NR 数据信道"]
+classDef default fill:#F7F9FC,stroke:#C9D4DF,color:#17212F;
 ```
 
 ## 直观模型
@@ -404,6 +406,7 @@ flowchart LR
     SP --> CH --> DESP
     C --> DESP
     DESP --> OUT
+classDef default fill:#F7F9FC,stroke:#C9D4DF,color:#17212F;
 ```
 
 ### 与 CDMA 的关系

@@ -57,6 +57,7 @@ flowchart LR
         B5 --> B6["波形生成（IFFT+CP）"]
     end
     A5 --> B1
+classDef default fill:#F7F9FC,stroke:#C9D4DF,color:#17212F;
 ```
 
 | 段 | 环 | 输入 → 输出 | 讲义 |

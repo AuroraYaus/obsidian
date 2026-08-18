@@ -71,6 +71,7 @@ flowchart LR
     SP --> CH --> DESP
     C --> DESP
     DESP --> OUT
+classDef default fill:#F7F9FC,stroke:#C9D4DF,color:#17212F;
 ```
 
 ### 与 CDMA 的关系
