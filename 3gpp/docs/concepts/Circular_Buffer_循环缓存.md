@@ -13,6 +13,7 @@ tags:
   - circular-buffer
   - rate-matching
 source_spec: "TS 36.212 §5.1.4; TS 38.212 §5.4"
+queries: 1
 ---
 
 # Circular Buffer 循环缓存
