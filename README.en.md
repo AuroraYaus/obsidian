@@ -5,20 +5,20 @@ A full-stack teaching Obsidian knowledge base for the 3GPP LTE/NR decoding chain
 ## Repository Layout
 
 ```
-├── 3gpp/                    # Core knowledge base (lectures / concepts / audits / tools)
-│   ├── docs/L0_协议阅读引导/  # Protocol reading map, master glossary (254 terms + 104 concept index)
-│   ├── docs/L1_基础/         # Math foundations, OFDM & soft demodulation, CRC/segmentation, decoding theory, HW basics
-│   ├── docs/L2_协议算法/     # Decoder protocols & algorithms (Turbo/LDPC/Polar), MIMO reception, probabilistic shaping
-│   ├── docs/L3_工程实现/     # Decoder engineering (simulation/fixed-point/RTL/verification), receiver-link engineering budgets
-│   ├── docs/concepts/        # Concept graph (71+ concept notes)
-│   ├── docs/audits/          # Audit ledgers & reviews
-│   ├── sim/ tools/ tests/    # Python simulation, audit toolchain, unit tests
-│   ├── CLAUDE.md             # Session hard rules
-│   ├── 合规与遵从.md          # 23 Hard Constraints
-│   ├── 项目规则与记忆索引.md   # Rules / writing conventions / sync checklist
-│   └── README.md             # Detailed knowledge-base documentation (Chinese)
-├── .obsidian/               # Obsidian app configuration
-└── 3gpp/3GPP_Rel19/         # Protocol evidence data (optional clone from separate repo, see "Protocol evidence data")
+├── 3gpp/                      # Core knowledge base (lectures / concepts / audits / tools)
+│   ├── docs/L0_协议阅读引导/    # Protocol reading map, master glossary (254 terms + 104 concept index)
+│   ├── docs/L1_基础/           # Math foundations, OFDM & soft demodulation, CRC/segmentation, decoding theory, HW basics
+│   ├── docs/L2_协议算法/       # Decoder protocols & algorithms (Turbo/LDPC/Polar), MIMO reception, probabilistic shaping
+│   ├── docs/L3_工程实现/       # Decoder engineering (simulation/fixed-point/RTL/verification), receiver-link engineering budgets
+│   ├── docs/concepts/          # Concept graph (107 concept notes, six-section template)
+│   ├── docs/audits/            # Audit ledgers, lessons-learned library (23 items) & reviews
+│   ├── sim/ tools/ tests/      # Python simulation, audit toolchain, unit tests
+│   ├── CLAUDE.md               # Session hard rules (15 rules)
+│   ├── 合规与遵从.md            # 23 Hard Constraints
+│   ├── 项目规则与记忆索引.md     # Rules / writing conventions / sync checklist
+│   └── README.md               # Detailed knowledge-base documentation (Chinese)
+├── .obsidian/                 # Obsidian app configuration
+└── 3gpp/3GPP_Rel19/           # Protocol evidence data (optional clone, see "Protocol evidence data")
 ```
 
 ## Quick Start
@@ -34,11 +34,12 @@ A full-stack teaching Obsidian knowledge base for the 3GPP LTE/NR decoding chain
 - SVG mandatory validation: geometry audit R1-R11 (boundary gaps ≥8px, no overlap)
 - Lecture audits: term pairing / LaTeX rendering / depth / headings
 - Code comments: DOXYGEN style enforced
+- Lessons-learned library: `3gpp/docs/audits/lessons/` (23 items; every correction is solidified and pushed with the repo)
 - Full-base sync: 8 sync categories (terms/entries/numbers/assets/paths/ledgers) — see `3gpp/项目规则与记忆索引.md` §6
 
 ## Usage
 
-This repository is an **Obsidian vault**. Open it with Obsidian for the full experience (`[ [wikilink]]` graph navigation, backlinks, relationship graphs).
+This repository is an **Obsidian vault**. Open it with Obsidian for the full experience (`[[wikilink]]` graph navigation, backlinks, relationship graphs).
 
 ### Downloading & Installing Obsidian
 
@@ -60,6 +61,14 @@ This repository is an **Obsidian vault**. Open it with Obsidian for the full exp
 
 - Lecture bodies embed runnable numpy verification snippets to reproduce numerical results
 - Concepts and lectures are bidirectionally linked; each concept note is a standalone six-section teaching unit
+
+## Protocol Evidence Data
+
+`3gpp/3GPP_Rel19/` holds Rel-19 protocol sources and structured extraction (the local reference for lecture protocol anchors). This directory has been split into a **separate data repository** (Gitee `gitee.com/aurorayaus/3gpp_docs`, GitHub mirror `AuroraYaus/3gpp_docs`); the main repo no longer tracks it. To restore it locally:
+
+```bash
+git clone https://gitee.com/aurorayaus/3gpp_docs.git 3gpp/3GPP_Rel19
+```
 
 ## Contribution
 

@@ -12,8 +12,8 @@
 │   ├── L2_协议算法/         # 译码协议与算法（M6-M11）、MIMO 接收机与检测器（M12）、概率整形（M13）
 │   ├── L3_工程实现/         # 译码器工程（浮点仿真/定点/RTL/验证，T17-T20）、接收链路工程预算（M16/T21）
 │   ├── concepts/            # 概念图谱（107 概念笔记，六段式模板）
-│   ├── audits/              # 审计文档（台账、评审、覆盖矩阵）
-│   └── superpowers/         # 教材设计工作区（UbD/章节树/术语表/.progress.json）
+│   ├── audits/              # 审计文档（台账、评审、经验教训库）
+│   └── superpowers/         # 规划工作区（plans/specs 计划与归档）
 ├── sim/python/              # Python 仿真（CRC/GF(2) 等）
 ├── tools/                   # 审计与工具链（SVG 布局审计、术语/LaTeX/讲义审计、文档转换）
 ├── tests/                   # 单元测试
@@ -52,6 +52,7 @@
 - **SVG 图强制验证**：`tools/audit_svg_layout.py` R1-R11（文字宿主/越界/重叠/箭头落点/边界间距/free 文字重叠/箭头三角/曲线贴字/circle 贴边等），Y 扫描 + 渲染预览
 - **讲义审计**：`tools/audit_lesson_*.py`（术语配对/LaTeX 渲染/深度/标题）
 - **代码注释**：所有 Python/Shell 必须 DOXYGEN 风格（细则见 `.claude/rules/documentation.md`）
+- **经验教训库**：`docs/audits/lessons/`（23 条，纠错必固化，随库双推保存）
 - **写作规范**：讲义正文不含代码中间运行结果；概念首现必须讲解；新术语必须登记术语总表（同步清单见 `项目规则与记忆索引.md` 第六节）
 - **测试**：`python3 -m unittest discover -s tests`（全绿基线）
 
@@ -60,8 +61,8 @@
 | 教材 | 工作目录 | 讲义落点 | 状态 |
 |---|---|---|---|
 | M12 MIMO 接收机与检测器 | — | `docs/L2_协议算法/T12.x` | ✅ 完成 |
-| M13 概率整形算法 | `docs/superpowers/textbooks/ps-lectures/` | `docs/L2_协议算法/T13.x` | ✅ 完成 |
-| M16 接收链路工程预算 | `docs/superpowers/textbooks/l3-engineering-lectures/` | `docs/L3_工程实现/T21.x` | ✅ 完成 |
+| M13 概率整形算法 | 已清理 | `docs/L2_协议算法/T13.x` | ✅ 完成 |
+| M16 接收链路工程预算 | 已清理 | `docs/L3_工程实现/T21.x` | ✅ 完成 |
 
 每套教材含 UbD 五件套设计、章节树、例题梯度报告、术语表与 `.progress.json`（可重入续写）。
 
