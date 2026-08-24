@@ -63,5 +63,6 @@ $$H(X) = -\sum_{x} p(x)\log_2 p(x)$$
 - [[Polar_码]]
 - [[概念图谱入口]]
 - [[T1.6_information_theory_minimum_for_decoding]]
+- [[dB_分贝]]（Eb/N0 与香农限的对数读数标度）
 - [[T4.5_decoder_performance_metrics]]
 - 关系语义：信息论给出译码性能的理论上限。

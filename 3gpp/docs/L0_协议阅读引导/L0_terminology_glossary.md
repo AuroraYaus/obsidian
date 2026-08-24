@@ -12,7 +12,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 ---
 # 译码讲义术语总表
 
-本章集中收纳 `docs/` 作者讲义中反复出现的术语、缩写和简要解释。其他讲义正文默认直接使用这些简称；只有当某一节正在讲解概念本身时，才在正文中补充上下文说明。条目合并自既有术语表与 `docs/concepts/3GPP全流程_缩写概念理论清单.md` 缩写清单；末尾「概念笔记索引」收录 `docs/concepts/` 全部概念笔记（109 篇），可经 wikilink 跳转阅读。
+本章集中收纳 `docs/` 作者讲义中反复出现的术语、缩写和简要解释。其他讲义正文默认直接使用这些简称；只有当某一节正在讲解概念本身时，才在正文中补充上下文说明。条目合并自既有术语表与 `docs/concepts/3GPP全流程_缩写概念理论清单.md` 缩写清单；末尾「概念笔记索引」收录 `docs/concepts/` 全部概念笔记（112 篇），可经 wikilink 跳转阅读。
 
 ## 系统与协议
 
@@ -155,6 +155,8 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | MCS | 调制与编码方案 | Modulation and Coding Scheme；调度侧选择调制阶数和目标码率的索引。→ [[MCS_Table_Effective_Code_Rate_MCS表与有效码率]] |
 | TBS | 传输块大小 | Transport Block Size；调度侧得到的 TB 比特规模。 |
 | SNR | 信噪比 | Signal-to-Noise Ratio；信号功率与噪声功率的比值。 |
+| dB | 分贝 | Decibel；对数比值单位：功率比 10log10、幅度比 20log10，+3 dB ≈ 功率×2。→ [[dB_分贝]] |
+| dBm | 毫瓦分贝 | dB relative to 1 mW；绝对功率单位，0 dBm = 1 mW（30 dBm = 1 W），RSRP/RSCP 测量表单位。→ [[dB_分贝]] |
 | SINR | 信干噪比 | Signal to Interference plus Noise Ratio；描述信号相对干扰和噪声的强弱。→ [[CSI_SINR]] |
 | BLER | 块错误率 | Block Error Rate；多帧统计中块译码失败比例。 |
 | BER | 比特错误率 | Bit Error Rate；按比特统计的错误比例。 |
@@ -303,7 +305,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 
 ## 概念笔记索引
 
-> `docs/concepts/` 全部概念笔记（109 篇），按主题分组；每条一句话取自笔记首段。
+> `docs/concepts/` 全部概念笔记（112 篇），按主题分组；每条一句话取自笔记首段。
 
 ### 协议、信道与信号
 
@@ -403,6 +405,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | [[TDL_信道模型]] | 3GPP 定义的多径衰落信道模型：若干不同时延的抽头叠加，TDL-A~E 剖面可选。 |
 | [[Fading_Channel_衰落信道]] | 实际无线信道的多径衰落；瑞利衰落是 NLOS 默认模型，LLR 可信度随瞬时信道质量波动。 |
 | [[Coherence_Bandwidth_Time_相干带宽与时间]] | 衰落信道在频率/时间上"看起来一样"的两个尺度，是信道估计与均衡颗粒度设计的依据。 |
+| [[Beam_Coherence_波束相干理论]] | 角度域相干函数：回答"信道在多大角度范围内一样"，与相干带宽/时间对偶，决定波束宽度与角度分辨率。 |
 | [[Timing_Sync_定时同步]] | OFDM 接收的第一关：FFT 窗口必须对准符号边界；仿真用理想定时，实际靠 PSS/SSS 或 CP 相关。 |
 | [[Modulation_Constellations_调制星座]] | 比特组到复基带符号的映射；LTE/NR 用格雷映射使相邻星座点仅差 1 bit。 |
 
@@ -411,6 +414,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | 笔记 | 一句话 |
 |:---|:---|
 | [[MIMO_多天线系统]] | 收发两端都用多根天线的传输方式，基带模型 y=HPx+n，能提升容量。 |
+| [[Massive_MIMO_超大规模MIMO]] | 天线数远大于流数/用户数的多天线系统；阵列增益、信道硬化、干扰消失让线性处理成为最优。 |
 | [[MMSE_均衡]] | 用线性滤波器 W=Hᴴ(HHᴴ+σ²I)⁻¹ 最小化均方误差，在消除干扰与不放大噪声之间折中。 |
 | [[Sphere_Decoding_球面检测]] | ML 最优检测算法，用"半径剪枝"把搜索限制在球内，避免指数枚举。 |
 | [[Detector_Comparison_检测器对比]] | MF/ZF/MMSE/Sphere 四族检测器是精度与实现代价之间的不同折中。 |
@@ -448,4 +452,5 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | [[GF2_伽罗瓦域]] | 只含 {0,1} 的有限域：加法为 XOR、乘法为 AND，是 CRC/LDPC/Polar 运算的基础。 |
 | [[GF2_Polynomials_GF2多项式]] | 系数在 GF(2) 上的多项式，二进制串与多项式系数一一对应，是 CRC 与 LDPC 校验矩阵的代数基础。 |
 | [[Information_Theory_信息论基础]] | 熵度量不确定性，信道容量给出可靠通信最大速率，香农限是任何译码器无法超越的 Eb/N0 下界。 |
+| [[dB_分贝]] | 对数比值标度：功率比 10log、幅度比 20log，dBm/dBc/dBi/dBFS 后缀与速算规则。 |
 | [[Probability_Bayes_概率与贝叶斯]] | 贝叶斯定理把先验信念与观测证据结合产出后验概率，是 SISO 译码器的推理核心。 |
