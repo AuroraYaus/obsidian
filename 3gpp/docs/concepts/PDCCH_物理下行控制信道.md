@@ -77,6 +77,7 @@ PDCCH 盲检像"信箱没有门牌号的集体邮箱"：邮差（基站）把信
 - [[Polar_码]]
 - [[Physical_Channels_物理信道]]
 - [[PBCH_MIB_广播信道]]
+- [[PCFICH_物理控制格式指示信道]]（LTE 控制域 OFDM 符号数指示，解 PDCCH 的前提）
 - [[Scheduling_Grant_调度与授权]]
 - [[Scheduler_MAC调度器与资源分配]]
 - [[T14.1_PDCCH_blind_decoding|T14.1 PDCCH 盲检]]

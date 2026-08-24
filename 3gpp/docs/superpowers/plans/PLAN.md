@@ -142,3 +142,46 @@ _Locked via grill — by Claude + AuroraYaus（2026-08-17，6 问收敛）_
 
 - T14.2 §2_1 章节扩充（Q1 排除）；上行取消指示正文展开（Q2 排除）；TS 38.133 性能要求展开（Q5 排除）。
 - 讲义层任何内容改动（除步骤 7 两个机械 wikilink）。
+
+## 追加批次四：PCICP 歧义四概念入库（2026-08-24 grill 锁定）
+
+_Locked via grill — by Claude + AuroraYaus（2026-08-24，3 问收敛）_
+
+## Goal
+
+用户提问"什么是 PCICP"——该词非任何一代 3GPP 标准正式术语，字母构成与 P-CPICH/PCFICH/PCI/PCCPCH 四概念相近，用户确认四概念全覆盖。检索结果全部无匹配（仅存在于 processed 规范表格，无概念笔记、术语总表无条目）→ 按 Q&A 流水线（规则 15）新建 4 篇六段式概念笔记 + 术语总表登记 + 高频查询排名 + 图谱挂载 + 既有笔记反向链接；UMTS/TD-SCDMA 两篇以"演进对照"视角入库（服务 36.133 UTRA 互操作测量的悬空引用消除）。
+
+## Approach
+
+1. **证据先行**：读 PSS_SSS/PBCH_MIB/Pilot/CRS/PDCCH 既有笔记确认上下游关系；定位 `概念图谱入口.md` 实际路径与分区结构；核对 README 三语与术语表概念计数当前值。
+2. 新建 4 篇概念笔记（六段式模板，frontmatter `type: definition` + `queries: 1` + aliases + tags）：
+   - `docs/concepts/PCFICH_物理控制格式指示信道.md`：CFI 编码（TS 36.212 §5.3.4 表 5.3.4-1）、4 REG 频域映射（TS 36.211 §6.7.4）、v_shift 小区 ID 频移、NR 删除 PCFICH 由 CORESET#0/MIB 替代的演进对照。
+   - `docs/concepts/PCI_物理小区标识.md`：LTE 504 与 NR 1008 双视角、PSS/SSS 推导公式、冲突/混淆规划、作为加扰/RS 序列生成种子的角色；与 PSS_SSS 双向链接。
+   - `docs/concepts/CPICH_公共导频信道.md`：P-CPICH/S-CPICH、主扰码、CPICH RSCP/Ec/No 测量量；演进对照（CPICH→CRS→SSB）；协议锚点主定义 TS 25.211 §5.3.3.2（本地无 25 系列语料）+ 36.133 UTRA 测量表本地锚点 + 显式标注。
+   - `docs/concepts/PCCPCH_主公共控制物理信道.md`：TD-SCDMA TS0/SF=16 双码道与 WCDMA P-CCPCH（30 kbps、无导频、SCH 预留）差异辨析；BCH 物理承载；与 P-CPICH 一字之差的对照行。
+3. 术语总表 `L0_terminology_glossary.md`：缩写表 4 行（PCFICH/PCI 含 PCID 别名/CPICH 含 P-CPICH/PCCPCH）+ 概念索引 4 行 wikilink + 概念计数按实际值 +4 同步。
+4. 图谱挂载：`概念图谱入口.md` 对应分区加 4 条 wikilink。
+5. 高频查询排名：`L0_术语入口.md` 排名表加 4 行（各 queries=1，2026-08-24）。
+6. 反向链接（仅机械加链，不扩充章节）：PSS_SSS←[[PCI_物理小区标识]]；Pilot_导频←[[CPICH_公共导频信道]]；PBCH_MIB←[[PCCPCH_主公共控制物理信道]]；PDCCH_物理下行控制信道←[[PCFICH_物理控制格式指示信道]]。
+7. 审计闭环：`audit_link_integrity.py` / `audit_circled_digits.py` / `audit_frontmatter_types.py` / `audit_markdown_headings.py`；README 三语概念计数 +4 同步。
+8. 提交 + `git push origin master`（双推 Gitee + GitHub）。
+
+## Key decisions & tradeoffs（3 问）
+
+| 决策点 | 结论 | 理由 |
+|:---|:---|:---|
+| 落库形态 | 4 篇全部新建六段式概念笔记 | 流水线无匹配→新建；四篇相互辨析（尤其 P-CPICH vs P-CCPCH 一字之差）；CPICH/PCCPCH 已被 36.133 测量表引用，落库消除悬空引用 |
+| PCI 形态 | 独立新建 + PSS_SSS 双向链接 | PCI 被 PSS_SSS/CRS/Gold 加扰多篇引用，是公共种子概念；LTE 504/NR 1008 与规划维度与"小区搜索流程"主题分离更清晰 |
+| 配图 | 本次不配图 | 四篇均可用表格/文字/数值辨析覆盖；每张手绘 SVG 需 R1-R11 审计 + cairosvg 渲染，成本与增益不成比例；后续讲义引用时再补并登记台账 |
+
+## Risks / open questions
+
+- **UMTS 主定义锚点缺失**：CPICH/PCCPCH 主定义在 TS 25.211/25.221，本地 processed 库仅 36/38 系列——协议锚点用 36.133 UTRA 测量表本地锚点 + 显式标注主定义 TS 节号与"本地未收录 25 系列"声明，不得伪装为本地锚点。
+- **计数同步**：README 三语与术语表"概念索引 N 篇"计数以执行时实际值为准，+4 后全库一致。
+- **命名歧义**：P-CPICH 连字符按 PSS_SSS 先例下划线化入文件名（`CPICH_公共导频信道.md`），正文保留官方写法 P-CPICH；PCCPCH 笔记正文区分 TD-SCDMA PCCPCH 与 WCDMA P-CCPCH 双名。
+- queries=1 与排名表为存量不回填口径（pipeline 第 4 条）。
+
+## Out of scope
+
+- 讲义层内容改动（仅机械 wikilink）；SVG 配图（Q3 排除）；TS 25 系列本地语料收录（数据仓范围外）。
+- `3GPP全流程_缩写概念理论清单.md` 无增删（该清单只列"项目内没有的缩写"，本次 4 词本就不在清单内，新笔记落地后回流方向为"已覆盖"而非增删）。

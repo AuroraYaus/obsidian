@@ -12,7 +12,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 ---
 # 译码讲义术语总表
 
-本章集中收纳 `docs/` 作者讲义中反复出现的术语、缩写和简要解释。其他讲义正文默认直接使用这些简称；只有当某一节正在讲解概念本身时，才在正文中补充上下文说明。条目合并自既有术语表与 `docs/concepts/3GPP全流程_缩写概念理论清单.md` 缩写清单；末尾「概念笔记索引」收录 `docs/concepts/` 全部概念笔记（107 篇），可经 wikilink 跳转阅读。
+本章集中收纳 `docs/` 作者讲义中反复出现的术语、缩写和简要解释。其他讲义正文默认直接使用这些简称；只有当某一节正在讲解概念本身时，才在正文中补充上下文说明。条目合并自既有术语表与 `docs/concepts/3GPP全流程_缩写概念理论清单.md` 缩写清单；末尾「概念笔记索引」收录 `docs/concepts/` 全部概念笔记（109 篇），可经 wikilink 跳转阅读。
 
 ## 系统与协议
 
@@ -43,6 +43,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | SDAP | 服务数据适配协议 | Service Data Adaptation Protocol；NR 层2 子层，QoS 流到无线承载映射。 |
 | 数据链路层 | 数据链路层 | Data Link Layer；OSI 第二层，负责相邻节点成帧与差错控制；与 3GPP 层2 功能对应。 |
 | PBCH | 物理广播信道 | Physical Broadcast Channel；承载 MIB，NR 用 Polar 编码、LTE 用 TBCC 编码。→ [[PBCH_MIB_广播信道]] |
+| PCCPCH | 主公共控制物理信道 | Primary Common Control Physical Channel；TD-SCDMA/WCDMA 承载 BCH 广播的公共物理信道，与 P-CPICH 一字之差、职能相反。→ [[PCCPCH_主公共控制物理信道]] |
 | MIB | 主信息块 | Master Information Block；小区接入最少系统参数（SFN/公共子载波间隔/PDCCH-ConfigSIB1 等）。 |
 | SIB | 系统信息块 | System Information Block；SIB1 由 MIB 指向，其余 SIB 由 SIB1 调度。 |
 | TBCC | 咬尾卷积码 | Tail Biting Convolutional Code；LTE PDCCH/PBCH 信道编码，非递归无迭代。→ [[TBCC_咬尾卷积码]] |
@@ -75,6 +76,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | UCI | 上行控制信息 | Uplink Control Information；NR Polar 或 small block coding 的常见控制负载来源。 |
 | DCI | 下行控制信息 | Downlink Control Information；PDCCH 盲检、CRC/RNTI 和 Polar 译码相关。 |
 | PDCCH | 物理下行控制信道 | Physical Downlink Control Channel；承载 DCI，是控制信息盲检与 Polar 译码的入口。 |
+| PCFICH | 物理控制格式指示信道 | Physical Control Format Indicator Channel；LTE 每子帧第 1 符号 16 RE 承载 CFI，指示控制区域 OFDM 符号数，解 PDCCH 的前提。→ [[PCFICH_物理控制格式指示信道]] |
 | PDSCH | 物理下行共享信道 | Physical Downlink Shared Channel；下行数据或 PCH 承载入口。 |
 | PUSCH | 物理上行共享信道 | Physical Uplink Shared Channel；上行数据承载信道。 |
 | PUCCH | 物理上行控制信道 | Physical Uplink Control Channel；承载 UCI 的上行控制信道。 |
@@ -142,6 +144,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | PTRS | 相位跟踪参考信号 | Phase Tracking Reference Signal；补偿相位噪声 CPE，随数据同传。→ [[PTRS_相位跟踪参考信号]] |
 | TRS | 跟踪参考信号 | Tracking Reference Signal；时频跟踪用，CSI-RS 的 trs-Info 子集。→ [[TRS_跟踪参考信号]] |
 | CRS | 小区特定参考信号 | Cell-specific Reference Signal；LTE 专属广播式下行参考信号。→ [[CRS_小区特定参考信号]] |
+| CPICH | 公共导频信道 | Common Pilot Channel；WCDMA 主公共导频（P-CPICH），相位参考与 RSCP/Ec-No 测量的基准，公共参考信号的前身。→ [[CPICH_公共导频信道]] |
 | BFR | 波束失败恢复 | Beam Failure Recovery；波束失效检测与恢复过程。→ [[Beam_Management_波束管理]] |
 | CA | 载波聚合 | Carrier Aggregation；多 CC 聚合提升带宽。→ [[Carrier_Aggregation_载波聚合]] |
 | CC | 分量载波 | Component Carrier；CA 中被聚合的单个载波。 |
@@ -162,6 +165,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | TDL | 抽头延迟线信道模型 | Tapped Delay Line；3GPP 定义的多径衰落信道模型，TDL-A~E 剖面可选。→ [[TDL_信道模型]] |
 | PSS | 主同步信号 | Primary Synchronization Signal；用于定时/小区搜索的同步信号。 |
 | SSS | 辅同步信号 | Secondary Synchronization Signal；用于定时/小区搜索的同步信号。 |
+| PCI | 物理小区标识 | Physical Cell Identity；PSS/SSS 检测推导的小区物理层编号（LTE 504/NR 1008），是下行序列生成的种子。→ [[PCI_物理小区标识]] |
 | OFDM | 正交频分复用 | Orthogonal Frequency Division Multiplexing；多载波调制，子载波正交重叠。→ [[DFT_sOFDM_上行波形]] |
 | CP | 循环前缀 | Cyclic Prefix；OFDM 符号前部冗余，消除 ISI/ICI。 |
 | FFT | 快速傅里叶变换 | Fast Fourier Transform；OFDM 接收端时频变换。 |
@@ -299,7 +303,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 
 ## 概念笔记索引
 
-> `docs/concepts/` 全部概念笔记（107 篇），按主题分组；每条一句话取自笔记首段。
+> `docs/concepts/` 全部概念笔记（109 篇），按主题分组；每条一句话取自笔记首段。
 
 ### 协议、信道与信号
 
@@ -335,8 +339,11 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | [[Spreading_扩频与解扩]] | DSSS 扩频-解扩机制、处理增益与 CDMA 关系。 |
 | [[TBCC_咬尾卷积码]] | LTE 控制信道编码（PDCCH/PBCH），咬尾网格零码率损失。 |
 | [[PSS_SSS_同步信号与小区搜索]] | 小区搜索流程：同步栅格→PSS/SSS→小区 ID→SSB。 |
+| [[PCI_物理小区标识]] | 小区物理层"身份证号"：PSS/SSS 检测推导（LTE 504/NR 1008），参考信号与加扰序列的生成种子。 |
 | [[PBCH_MIB_广播信道]] | MIB 字段与 PBCH 编码（NR Polar / LTE TBCC）。 |
+| [[PCCPCH_主公共控制物理信道]] | 3G 广播载体：TD-SCDMA/WCDMA 承载 BCH，与 P-CPICH 一字之差、职能相反。 |
 | [[PDCCH_物理下行控制信道]] | CORESET/CCE/聚合等级/搜索空间与盲检机制。 |
+| [[PCFICH_物理控制格式指示信道]] | LTE 下行第一块路牌：每子帧第 1 符号 16 RE 承载 CFI，指示控制区域 OFDM 符号数。 |
 | [[DCI_下行控制信息]] | DCI 格式体系与字段语义，调度指令本体。 |
 | [[Preemption_Indication_抢占指示]] | 下行抢占指示：DCI 2_1 位图通知 eMBB 丢弃被 URLLC 抢占的受损 LLR。 |
 | [[PUCCH_上行控制信道与UCI]] | UCI 三兄弟与 PUCCH format 0-4。 |
@@ -356,6 +363,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | [[PTRS_相位跟踪参考信号]] | 相位噪声 CPE 补偿，随数据同传。 |
 | [[TRS_跟踪参考信号]] | CSI-RS 的 trs-Info 子集，时频跟踪。 |
 | [[CRS_小区特定参考信号]] | LTE 专属广播式参考信号（解调/测量/同步）。 |
+| [[CPICH_公共导频信道]] | WCDMA 主公共导频：小区常亮"灯塔"，相位参考与 RSCP/Ec-No 测量，公共参考信号一脉的起点。 |
 | [[Beam_Management_波束管理]] | 波束测量/报告/指示/BFR 四步闭环。 |
 | [[MAC_Layer_Mapping_MAC层映射]] | 逻辑→传输→物理三层信道映射与 MAC PDU 复用。 |
 | [[Carrier_Aggregation_载波聚合]] | 多 CC 聚合、PCell/SCell 分工与跨载波调度。 |

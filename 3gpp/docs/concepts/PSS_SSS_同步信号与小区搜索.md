@@ -85,4 +85,5 @@ classDef default fill:#F7F9FC,stroke:#C9D4DF,color:#17212F;
 - [[Gold_序列加扰]]
 - [[T14.4_PBCH_cell_search_system_info|T14.4 小区搜索与系统信息]]
 - [[PBCH_MIB_广播信道]]
+- [[PCI_物理小区标识]]（PSS/SSS 检测推导出的小区标识本体）
 - 关系语义：小区搜索是接收链路的第一个环节——同步栅格决定搜哪里（频谱与频点），PSS/SSS 给定时与 ID（T2.7/T2.8 的输入），PBCH 把搜索流程接到系统信息获取（广播信道）。
