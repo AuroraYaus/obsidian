@@ -56,6 +56,7 @@ $$
 - [[Turbo_码]]
 - [[Iterative_Decoding_迭代译码]]
 - [[BCJR_Algorithm_BCJR算法]]
+- [[Interleaver_交织器]]
 - [[T6.4_LTE_Turbo_internal_interleaver]]
 - [[T6.3_LTE_Turbo_encoder_trellis_termination]]
 - [[概念图谱入口]]

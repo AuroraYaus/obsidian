@@ -120,6 +120,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | CA-SCL | CRC 辅助 SCL | CRC-aided SCL；用 CRC 在 Polar SCL 候选路径中辅助最终选择。→ [[CA_SCL_CRC辅助SCL]] |
 | k0 | 速率匹配起点 | Rate matching starting position；由 RV 决定的循环缓存起始位置，是 rate recovery 的坐标语义。→ [[Rate_Matching_速率匹配]] |
 | 迭代译码 | iterative decoding | 多个软输入软输出译码器反复交换外信息、逐步提升比特置信度的译码范式。→ [[Iterative_Decoding_迭代译码]] |
+| 交织器 | interleaver | 按确定性置换重排比特/符号顺序的部件，不改变码率；QPP/三角/子块/块交织、SBPM、VRB 映射构成协议交织器家族。→ [[Interleaver_交织器]] |
 | SC | 逐次消除 | Successive Cancellation；Polar 译码的基础策略，逐比特依次译码，是 SCL/CA-SCL 的基础。→ [[Polar_码]] |
 | RSC | 递归系统卷积码 | Recursive Systematic Convolutional Code；Turbo 码的组成编码器，含反馈回路，LTE 用两个 8-state RSC 并行级联。→ [[RSC_Code_递归系统卷积码]] |
 | BG | 基图 | Base Graph；NR LDPC 码的模板矩阵，BG1 用于大 TB 高吞吐、BG2 用于小 TB 低延迟。→ [[Base_Graph_基图]] |
@@ -305,7 +306,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 
 ## 概念笔记索引
 
-> `docs/concepts/` 全部概念笔记（112 篇），按主题分组；每条一句话取自笔记首段。
+> `docs/concepts/` 全部概念笔记（113 篇），按主题分组；每条一句话取自笔记首段。
 
 ### 协议、信道与信号
 
@@ -316,6 +317,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | [[Precoding_预编码]] | 把层上的 QAM 符号通过矩阵 P 映射到天线端口的发射链路步骤，接收端不需要知道预编码矩阵。 |
 | [[DMRS_解调参考信号]] | 收发双方都已知的参考符号，接收端用它估计信道，才能解调数据。 |
 | [[Pilot_导频]] | 收发双方都已知的参考符号（NR 中称参考信号）；从序列生成、资源映射到接收端提取、估计、插值、使用的完整链路。 |
+| [[Interleaver_交织器]] | 按确定性置换重排比特/符号顺序的部件；QPP/三角/子块/块交织、SBPM、VRB 映射构成协议交织器家族。 |
 
 | [[Gold_序列加扰]] | 用两个 m 序列逐位异或生成的伪随机序列对编码 bit 流做 XOR，把数据"白化"。 |
 | [[HARQ_混合自动重传请求]] | 把前向纠错和自动重传结合，CRC 失败后保留同一 process 的软信息，按 RV 和调度上下文补充接收证据。 |
