@@ -11,6 +11,7 @@ tags:
   - concepts
   - probability-shaping
 source_spec: "非 3GPP 标准（6G 候选）; Qualcomm evaluation-link-simulator"
+queries: 1
 ---
 
 # ESS 枚举球面整形
