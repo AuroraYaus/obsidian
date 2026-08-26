@@ -87,7 +87,7 @@
   <text x="841" y="216" text-anchor="middle" class="chip">hard</text>
   <text x="518" y="252" class="note">6 个 VN 的 sum / Lpost / hard1 逐项数值见讲义表</text>
   <rect x="518" y="276" width="384" height="48" rx="8" fill="#FFFFFF" stroke="#6C7A2E" stroke-width="1.3"/>
-  <text x="534" y="300" class="small">syndrome 检查：H·x^T 模 2</text>
+  <text x="534" y="300" class="small">syndrome 检查：H·x<tspan dy="-4" font-size="9">T</tspan> 模 2</text>
   <text x="534" y="316" class="note">全零才满足 LDPC 约束</text>
   <path d="M 710 324 L 710 340" stroke="#6C7A2E" stroke-width="1.6" marker-end="url(#arrow)"/>
   <rect x="518" y="340" width="384" height="48" rx="8" fill="#EDF2E2" stroke="#6C7A2E" stroke-width="1.4"/>

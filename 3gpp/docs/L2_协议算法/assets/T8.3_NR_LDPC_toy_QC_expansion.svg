@@ -120,15 +120,15 @@
   <!-- 子块标签（白底胶囊；避开本块内的 1 标记位置） -->
   <g font-size="8.5" font-weight="700" text-anchor="middle">
     <rect x="255" y="125" width="25" height="14" rx="3" fill="#FFFFFF"/>
-    <text x="267.5" y="136" fill="#D18A2F" font-size="8.5" font-weight="700" text-anchor="middle">P^0</text>
+    <text x="267.5" y="136" fill="#D18A2F" font-size="8.5" font-weight="700" text-anchor="middle">P<tspan dy="-4" font-size="9">0</tspan></text>
     <rect x="301" y="125" width="27" height="14" rx="3" fill="#FFFFFF"/>
     <text x="314.5" y="136" fill="#C4553D" font-size="8.5" font-weight="700" text-anchor="middle">zero</text>
     <rect x="344" y="132" width="25" height="14" rx="3" fill="#FFFFFF"/>
-    <text x="356.5" y="143" fill="#D18A2F" font-size="8.5" font-weight="700" text-anchor="middle">P^2</text>
+    <text x="356.5" y="143" fill="#D18A2F" font-size="8.5" font-weight="700" text-anchor="middle">P<tspan dy="-4" font-size="9">2</tspan></text>
     <rect x="252" y="194" width="25" height="14" rx="3" fill="#FFFFFF"/>
-    <text x="264.5" y="205" fill="#D18A2F" font-size="8.5" font-weight="700" text-anchor="middle">P^1</text>
+    <text x="264.5" y="205" fill="#D18A2F" font-size="8.5" font-weight="700" text-anchor="middle">P<tspan dy="-4" font-size="9">1</tspan></text>
     <rect x="303" y="181" width="25" height="14" rx="3" fill="#FFFFFF"/>
-    <text x="315.5" y="192" fill="#D18A2F" font-size="8.5" font-weight="700" text-anchor="middle">P^0</text>
+    <text x="315.5" y="192" fill="#D18A2F" font-size="8.5" font-weight="700" text-anchor="middle">P<tspan dy="-4" font-size="9">0</tspan></text>
     <rect x="357" y="181" width="27" height="14" rx="3" fill="#FFFFFF"/>
     <text x="370.5" y="192" fill="#C4553D" font-size="8.5" font-weight="700" text-anchor="middle">zero</text>
   </g>

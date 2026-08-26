@@ -107,5 +107,5 @@
   <!-- 底部验证与注记 -->
   <text x="80" y="636" font-size="13" font-weight="bold" fill="#1a6e3c" class="free">能量验证：ΣΔ = 0+0+1+0+1+0+0+0 = 2 ≤ E_max−1 = 2 ✓（残差索引 3−2 = 1 ≥ 1）</text>
   <text x="80" y="664" font-size="12" fill="#333333" class="free">逆路径（解码）：从尾向前把扣减的分支宽度加回——4 与 16 → B=20 → 1 0 1 0 0，与输入一致</text>
-  <text x="80" y="686" font-size="12" fill="#333333" class="free">C(8,3)=37 个序列 vs 2^5=32 个编号：5 个序列不可达——&lt;1 bit/块的枚举固有浪费（floor 损失）</text>
+  <text x="80" y="686" font-size="12" fill="#333333" class="free">C(8,3)=37 个序列 vs 2<tspan dy="-4" font-size="9">5</tspan>=32 个编号：5 个序列不可达——&lt;1 bit/块的枚举固有浪费（floor 损失）</text>
 </svg>

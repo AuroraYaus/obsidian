@@ -61,7 +61,7 @@
   <path d="M 705 186 L 705 202" stroke="#6C7A2E" stroke-width="1.6" marker-end="url(#arrow)"/>
   <rect x="510" y="202" width="390" height="56" rx="8" fill="#FFFFFF" stroke="#6C7A2E" stroke-width="1.3"/>
   <text x="526" y="226" class="small">syndrome 检查</text>
-  <text x="526" y="248" class="note">H·x^T 模 2，全零才满足 LDPC 约束</text>
+  <text x="526" y="248" class="note">H·x<tspan dy="-4" font-size="9">T</tspan> 模 2，全零才满足 LDPC 约束</text>
   <path d="M 705 258 L 705 274" stroke="#6C7A2E" stroke-width="1.6" marker-end="url(#arrow)"/>
   <rect x="510" y="274" width="390" height="56" rx="8" fill="#EDF2E2" stroke="#6C7A2E" stroke-width="1.4"/>
   <text x="526" y="298" class="small">全零 → syndrome early stop</text>
