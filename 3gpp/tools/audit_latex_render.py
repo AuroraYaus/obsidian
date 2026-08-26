@@ -26,6 +26,31 @@ from _md_utils import iter_markdown, line_for_offset, strip_code_fences
 BLOCK_RE = re.compile(r"\$\$(.*?)\$\$", re.DOTALL)
 INLINE_RE = re.compile(r"(?<!\$)\$(?!\$)(.+?)(?<!\$)\$(?!\$)", re.DOTALL)
 
+# 裸数学标记检测：正文中未加 $ 围栏的数学记号（教训：2026-08-26
+# T2.0 图 1 说明 "x(t)/X(k)/|X_k|=1" 与 T2.10 表格 "c_init/N_ID/n_SCID"
+# 渲染失败——KaTeX 审计只查围栏内公式，漏掉"该围栏未围栏"的裸标记）。
+# 匹配模式（均要求未被 $ 包裹）：
+#   BARE_SUB    单字符变量+单字符下标记号（x_0 / X_k / H_k / f_c）
+#               —— 多字母参数名（c_init/N_C/R_eff/n_SCID）是协议命名
+#               约定（行内代码风格），不属于数学记号，不报；
+#   BARE_FUNC   函数记号 x(t) / X(k) / r(n)（排除 GF(2) 等合法术语）
+#   BARE_ABS    绝对值 |X_k|=1
+BARE_SUB_RE = re.compile(r"(?<!\$)\b[A-Za-z]_[a-z0-9](?![A-Za-z])(?!\$)")
+BARE_FUNC_RE = re.compile(r"(?<!\$)\b[A-Za-z]\([A-Za-z0-9_^=+*/<>, -]{0,6}\)(?!\$)")
+BARE_ABS_RE = re.compile(r"(?<!\$)\|[A-Za-z]_[A-Za-z0-9]+\|(?!\$)")
+# 合法裸术语白名单（不含 $ 也允许出现，如 GF(2)）
+BARE_TERM_ALLOW = {
+    "GF(2)",
+    "crc_check()",
+    "channel_decode()",
+    "check_crc()",
+    "build_trace()",
+    "complex()",
+    "hadamard()",
+    "Q(rank)",
+    "O(n)",
+}
+
 
 @dataclass
 class Formula:
@@ -124,6 +149,53 @@ def render_with_katex(formula: Formula, katex_bin: str) -> str | None:
         input_path.unlink(missing_ok=True)
 
 
+def check_bare_math(path: Path) -> list[str]:
+    """
+    @brief   检测正文中未加 $ 围栏的裸数学标记（下标记号/函数记号/绝对值）。
+             教训来源：2026-08-26 T2.0 图 1 说明 "x(t)/X(k)/|X_k|=1" 与
+             T2.10 表格 "c_init/N_ID/n_SCID" 渲染失败——原审计只验证围栏内
+             公式可渲染，漏掉"该围栏未围栏"的裸标记；本检查补上该盲区。
+    @param   path  Markdown 文件路径。
+    @return  裸标记错误列表；空列表表示通过。
+    @note    先在全文层面剔除代码围栏、$$ 块公式、$ 内联公式与反引号
+             行内代码（块公式跨行，必须整文剔除后再逐行扫描，否则块内
+             内容会被误报——2026-08-26 T2.8 块公式 f_c/s(t) 误报教训）；
+             合法术语白名单不报。
+    """
+    raw = path.read_text(encoding="utf-8")
+    # 清单/台账类文件豁免：缩写概念理论清单、术语表、台账登记表的内容是
+    # 参数名/缩写枚举（协议命名约定），不是讲义正文，裸标记规则不适用。
+    if "3GPP全流程_缩写概念理论清单" in str(path):
+        return []
+    text = strip_code_fences(raw)
+    # 整文剔除已围栏公式与行内代码（跨行块公式必须在全文层处理；
+    # 用等量换行替换以保持行号，否则审计行号与原文错位）
+    text = re.sub(r"\$\$.*?\$\$", lambda m: "\n" * m.group(0).count("\n"), text, flags=re.DOTALL)
+    text = re.sub(r"(?<!\$)\$(?!\$).+?(?<!\$)\$(?!\$)", "", text, flags=re.DOTALL)
+    text = re.sub(r"`[^`]*`", "", text)
+    errors: list[str] = []
+    for lineno, line in enumerate(text.splitlines(), start=1):
+        stripped = line.strip()
+        # 跳过整行行内代码 / 纯链接 / 图片引用 / Mermaid 节点行
+        if stripped.startswith("`") or stripped.startswith("![") or stripped.startswith("[["):
+            continue
+        if "--> " in stripped or stripped.startswith("    ") or "graph " in stripped:
+            continue
+        for match in BARE_SUB_RE.finditer(line):
+            token = match.group(0)
+            if token in BARE_TERM_ALLOW:
+                continue
+            errors.append(f"{path}:{lineno}: bare math subscript '{token}' missing $ fences")
+        for match in BARE_FUNC_RE.finditer(line):
+            token = match.group(0)
+            if token in BARE_TERM_ALLOW or token.startswith("GF("):
+                continue
+            errors.append(f"{path}:{lineno}: bare math function '{token}' missing $ fences")
+        for match in BARE_ABS_RE.finditer(line):
+            errors.append(f"{path}:{lineno}: bare math abs '{match.group(0)}' missing $ fences")
+    return errors
+
+
 def main() -> int:
     """
     @brief   LaTeX 渲染审计入口——提取 Markdown 公式并验证 KaTeX 可渲染性。
@@ -152,6 +224,7 @@ def main() -> int:
         found, file_errors = extract_formulas(path)
         formulas.extend(found)
         errors.extend(file_errors)
+        errors.extend(check_bare_math(path))
 
     if not args.syntax_only:
         for formula in formulas:

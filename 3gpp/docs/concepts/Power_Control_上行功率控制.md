@@ -44,7 +44,7 @@ $$
 | α | 路损补偿系数（0-1，部分补偿省干扰） | RRC 配置 |
 | PL | 下行路径损耗估计 | UE 测量 |
 | ΔTF | 传输格式补偿（MCS（调制与编码方案，Modulation and Coding Scheme）相关） | 按 MCS 查表 |
-| f(TPC) | 闭环累计项（TPC 命令累加，含饱和） | DCI 的 TPC 字段（见 [[DCI_下行控制信息]]） |
+| $f(TPC)$ | 闭环累计项（TPC 命令累加，含饱和） | DCI 的 TPC 字段（见 [[DCI_下行控制信息]]） |
 
 PUCCH（物理上行控制信道，Physical Uplink Control Channel）/SRS（探测参考信号，Sounding Reference Signal）/PRACH（物理随机接入信道，Physical Random Access Channel）各有独立功控参数集（TS 38.213 §7.2/§7.3/§7.4）。
 

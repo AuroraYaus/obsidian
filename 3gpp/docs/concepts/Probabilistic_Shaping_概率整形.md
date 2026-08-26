@@ -24,7 +24,7 @@ source_spec: "非 3GPP 标准（6G 候选）; Qualcomm evaluation-link-simulator
 ## 科学定义
 
 - **整形增益（shaping gain）**：概率重分配省下的平均能量（dB）。理论上限 1.53 dB（二维，无限星座/无限长极限）；实测 AWGN 0.5-1.2 dB、TDL 衰落 0.2-0.6 dB
-- **rate loss（速率损失）**：概率不均匀 → 每符号熵下降 → 信息率损失（P(1)=0.734 时熵 0.835 < 1 bit/符号）——**整形是用速率换能量**，最优 ν 需按目标码率折中
+- **rate loss（速率损失）**：概率不均匀 → 每符号熵下降 → 信息率损失（$P(1)$=0.734 时熵 0.835 < 1 bit/符号）——**整形是用速率换能量**，最优 ν 需按目标码率折中
 - **体系结构**：概率由 MB 分布定义；均匀 bit 到非均匀幅度的映射由 DM/ESS 完成；bit 位置由 SBPM 组织；统计由选择性加扰保护；接收端用 LLR prior 感知
 - **四个接入点架构**：PS 只改 4 处——TB 构造（build_tb_for_ps）、加扰（ps_scramble）、解调前（preprocess_demod_input）、LDPC 解码后（deshape_tb）；NR spine（nrDLSCH/OFDM/检测器/nrDLSCHDecoder）全部复用——数据路径只认长度与统计约定，不认内容语义
 - **PS 几何可行性条件**：numParityBits ≤ 2N_s(Qm/2−k)−L_cb 且 2Zc+2kN_s ≤ K−F−L_cb——整形区不能侵占 LDPC 打孔前缀（2Zc）与校验 bit 预算
