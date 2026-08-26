@@ -171,8 +171,8 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | PCI | 物理小区标识 | Physical Cell Identity；PSS/SSS 检测推导的小区物理层编号（LTE 504/NR 1008），是下行序列生成的种子。→ [[PCI_物理小区标识]] |
 | OFDM | 正交频分复用 | Orthogonal Frequency Division Multiplexing；多载波调制，子载波正交重叠。→ [[DFT_sOFDM_上行波形]] |
 | CP | 循环前缀 | Cyclic Prefix；OFDM 符号前部冗余，消除 ISI/ICI。 |
-| FFT | 快速傅里叶变换 | Fast Fourier Transform；OFDM 接收端时频变换。 |
-| IFFT | 逆快速傅里叶变换 | Inverse Fast Fourier Transform；OFDM 发送端频时变换。 |
+| FFT | 快速傅里叶变换 | Fast Fourier Transform；OFDM 接收端时频变换。→ [[Fourier_Transform_傅里叶变换]] |
+| IFFT | 逆快速傅里叶变换 | Inverse Fast Fourier Transform；OFDM 发送端频时变换。→ [[Fourier_Transform_傅里叶变换]] |
 | SSB | 同步信号块 | Synchronization Signal Block；PSS+SSS+PBCH 一体。→ [[PSS_SSS_同步信号与小区搜索]] |
 | SRS | 探测参考信号 | Sounding Reference Signal；上行信道探测。→ [[SRS_探测参考信号]] |
 | CORESET | 控制资源集 | Control Resource Set；PDCCH 可占用的时频资源块。→ [[PDCCH_物理下行控制信道]] |
@@ -263,7 +263,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | Nfft | FFT 点数 | FFT size；OFDM 处理的变换规模。 |
 | Nlayers | 层数 | Number of layers；空间复用维度，决定每符号承载的数据流数。 |
 | Nre | 资源元素数 | Number of resource elements；吞吐/复杂度计算的 RE 规模。 |
-| DFT | 离散傅里叶变换 | Discrete Fourier Transform；预编码矩阵之一（也用于 OFDM 调制）。 |
+| DFT | 离散傅里叶变换 | Discrete Fourier Transform；预编码矩阵之一（也用于 OFDM 调制）。→ [[Fourier_Transform_傅里叶变换]] |
 | Hadamard | 阿达玛矩阵 | Hadamard Matrix；±1 正交的预编码矩阵之一。 |
 | 周期预算 | cycle budget | 时隙内各处理阶段可用的时钟周期数（如 61,440 @122.88 MHz）。 |
 
@@ -306,7 +306,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 
 ## 概念笔记索引
 
-> `docs/concepts/` 全部概念笔记（113 篇），按主题分组；每条一句话取自笔记首段。
+> `docs/concepts/` 全部概念笔记（114 篇），按主题分组；每条一句话取自笔记首段。
 
 ### 协议、信道与信号
 
@@ -454,5 +454,6 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | [[GF2_伽罗瓦域]] | 只含 {0,1} 的有限域：加法为 XOR、乘法为 AND，是 CRC/LDPC/Polar 运算的基础。 |
 | [[GF2_Polynomials_GF2多项式]] | 系数在 GF(2) 上的多项式，二进制串与多项式系数一一对应，是 CRC 与 LDPC 校验矩阵的代数基础。 |
 | [[Information_Theory_信息论基础]] | 熵度量不确定性，信道容量给出可靠通信最大速率，香农限是任何译码器无法超越的 Eb/N0 下界。 |
+| [[Fourier_Transform_傅里叶变换]] | 时域↔频域互译的数学工具；DFT/IDFT 是定义、FFT/IFFT 是算法，OFDM 正交复用与 DFT-s-OFDM 的数学引擎。 |
 | [[dB_分贝]] | 对数比值标度：功率比 10log、幅度比 20log，dBm/dBc/dBi/dBFS 后缀与速算规则。 |
 | [[Probability_Bayes_概率与贝叶斯]] | 贝叶斯定理把先验信念与观测证据结合产出后验概率，是 SISO 译码器的推理核心。 |
