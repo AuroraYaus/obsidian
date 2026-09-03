@@ -10,7 +10,7 @@ tags:
   - physical-layer
   - l1
 source_spec: "TS 38.331 Rel-19 §6.2.2; TS 38.212 §7.1; TS 36.211 §6.6"
-queries: 1
+queries: 2
 ---
 
 # PBCH MIB 广播信道
