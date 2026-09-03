@@ -5,15 +5,19 @@ A full-stack teaching Obsidian knowledge base for the 3GPP LTE/NR decoding chain
 ## Repository Layout
 
 ```
+├── CLAUDE.md                  # Workspace rules entry (required-reading list / behavior constraints)
+├── .claude/                   # Project rules + user-level SKILL executables copy (skills/, synced from ~/.claude/skills/)
+├── docs/rules/                # User global rules mirror copy (full text of ~/.claude/CLAUDE.md, synced on update)
 ├── 3gpp/                      # Core knowledge base (lectures / concepts / audits / tools)
 │   ├── docs/L0_协议阅读引导/    # Protocol reading map, master glossary (255 terms + 114 concept index)
 │   ├── docs/L1_基础/           # Math foundations, OFDM & soft demodulation, CRC/segmentation, decoding theory, HW basics
 │   ├── docs/L2_协议算法/       # Decoder protocols & algorithms (Turbo/LDPC/Polar), MIMO reception, probabilistic shaping
 │   ├── docs/L3_工程实现/       # Decoder engineering (simulation/fixed-point/RTL/verification), receiver-link engineering budgets
 │   ├── docs/concepts/          # Concept graph (114 concept notes, six-section template)
-│   ├── docs/audits/            # Audit ledgers, lessons-learned library (23 items) & reviews
+│   ├── docs/audits/            # Audit ledgers, lessons-learned library (25 items) & reviews
+│   ├── docs/memory/            # Authoritative in-project auto-memory copy (travels with the folder, CLAUDE.md rule 17)
 │   ├── sim/ tools/ tests/      # Python simulation, audit toolchain, unit tests
-│   ├── CLAUDE.md               # Session hard rules (15 rules)
+│   ├── CLAUDE.md               # Session hard rules (17 rules)
 │   ├── 合规与遵从.md            # 23 Hard Constraints
 │   ├── 项目规则与记忆索引.md     # Rules / writing conventions / sync checklist
 │   └── README.md               # Detailed knowledge-base documentation (Chinese)
@@ -34,7 +38,7 @@ A full-stack teaching Obsidian knowledge base for the 3GPP LTE/NR decoding chain
 - SVG mandatory validation: geometry audit R1-R11 (boundary gaps ≥8px, no overlap)
 - Lecture audits: term pairing / LaTeX rendering / depth / headings
 - Code comments: DOXYGEN style enforced
-- Lessons-learned library: `3gpp/docs/audits/lessons/` (23 items; every correction is solidified and pushed with the repo)
+- Lessons-learned library: `3gpp/docs/audits/lessons/` (25 items; every correction is solidified and pushed with the repo)
 - Full-base sync: 8 sync categories (terms/entries/numbers/assets/paths/ledgers) — see `3gpp/项目规则与记忆索引.md` §6
 
 ## Usage

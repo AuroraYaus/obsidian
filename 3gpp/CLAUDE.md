@@ -188,4 +188,4 @@ auto-memory（经验教训）必须随项目文件夹走，防止项目拷贝到
 
 1. **权威副本在项目内**：`docs/memory/`（含 MEMORY.md 索引）随项目文件夹拷贝、在项目内演进——新增/修改记忆先改项目内副本（与第七节 `docs/audits/lessons/` 同一原则）；
 2. **会话加载镜像在 ~/.claude**：`~/.claude/projects/-home-yys-AGENT-obsidian/memory/` 仅用于跨会话自动加载——每次修改项目内副本后同步过去，方向是"项目内 → 镜像"；
-3. **本项目规则文件已全部在项目文件夹内**（CLAUDE.md、`.claude/rules/documentation.md`、`合规与遵从.md`、`项目规则与记忆索引.md`、`docs/audits/lessons/`、`docs/memory/`、`tools/audit_*.py`）——拷贝 3gpp/ 文件夹到任何位置，规则与记忆完整随行。
+3. **本项目规则文件已全部在项目文件夹内**（CLAUDE.md、`.claude/rules/documentation.md`、`合规与遵从.md`、`项目规则与记忆索引.md`、`docs/audits/lessons/`、`docs/memory/`、`tools/audit_*.py`）——拷贝 3gpp/ 文件夹到任何位置，规则与记忆完整随行；**工作区级随行副本（2026-09-03 扩展）**：工作区根 `docs/rules/用户全局规则.md`（`~/.claude/CLAUDE.md` 全文镜像，全局文件更新后同步本副本）与 `.claude/skills/`（用户级 SKILL 执行体全量拷贝，用户级更新后同步）——拷贝整个工作区文件夹时，全局规则与 SKILL 执行体同样完整随行。
