@@ -22,7 +22,7 @@
 - [Q&A 沉淀流水线](qa-pipeline-knowledge-base.md) — 知识库问答先检索→命中策略（queries+1/扩充/链接/新建）→写回沉淀→终端展示归纳答案；复制自 ic 项目
 - [讲义习题数量上限](lecture-exercise-count-limit.md) — 每类 ≤3 禁止凑行数；深度不足合并而非注水（T15.1 并入 T15.5 先例）
 - [Claude settings.json 不可改](claude-settings-json-do-not-modify.md) — 用户明确 ~/.claude/settings.json 不要改；deepseek harness key 只动 settings_deepseek.json 与 ~/.bashrc
-- [dsh web 崩溃 ctx.webserver 笔误](dsh-web-cordis-webserver-typo.md) — "cannot get property webserver without inject" = 小写 webserver 笔误（应 ctx.webServer）；Cordis 插件自身 inject 始终生效，bundle 入口 inject 只服务 config 表达式；pkill -f "dsh web" 在 Bash 工具里会自杀；2026-08-27 已整体换为官方源码版（checkout ~/deepseek-harness，npm link，更新走 git pull + pnpm build，注意不可 npm i -g 目录装）
+- [dsh web 崩溃 ctx.webserver 笔误](dsh-web-cordis-webserver-typo.md) — "cannot get property webserver without inject" = 小写 webserver 笔误（应 ctx.webServer）；Cordis 插件自身 inject 始终生效，bundle 入口 inject 只服务 config 表达式；pkill -f "dsh web" 在 Bash 工具里会自杀；2026-08-27 已整体换为官方源码版（checkout ~/deepseek-harness，npm link，更新走 git pull + pnpm build，注意不可 npm i -g 目录装）；2026-09-03 Windows 机配置记录（npm 0.1.0-rc.6 + .credentials.yaml key 落点/解析顺序/api.deepseek.com 端点）
 - [docx WMF 公式抽取](docx-wmf-formula-extraction.md) — processed 抽取丢公式时从 docx word/media WMF 恢复：rId 映射 + LibreOffice SVG glyph 重组 + OCR 互证（38.213 §11.2 实例）
 - [插件更新走 SSH 443](plugin-update-git-url-rewrite-ssh443.md) — claude plugin update 卡死在 GitHub https clone 时用 GIT_CONFIG_COUNT URL 改写（insteadOf → git@github.com:）走 443 通道；Codex/Claude 两侧 superpowers 各持一份均已升 6.3.0
 - [计数声明必须实测](count-claims-verify-by-measurement.md) — README/口径线的术语 254+104/概念 107 与实测 241+105 漂移（上次 commit 还宣称已核实）；计数必须 grep/awk 实测行数再写声明

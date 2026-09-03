@@ -27,4 +27,14 @@ metadata:
 
 **2026-08-27 深夜替换完成**：用户删除自己的 `~/deepseek-harness`（setup.sh 安装包）后明确要求重做。最终状态：官方源码 checkout 在 `~/deepseek-harness`（master b150a55）；全局 dsh 已卸载 npm 版、`npm link` 指向 checkout 构建物（`~/.npm-global/lib/node_modules/@deepseek-ai/dsh -> ../../../../deepseek-harness/apps/cli`）；官方构建物无 `ctx.webserver`（0 处），`dsh web --no-open` 实测 HTTP 200 无崩溃，`/api/deepseek-pricing` 404（定价补丁按"都回退"弃用）。**更新方式**：`cd ~/deepseek-harness && git pull && pnpm install && pnpm run build`（pnpm@11.7.0 已全局安装）。注意：不可 `npm i -g <checkout>/apps/cli` 方式装（npm 会按 registry 装其依赖，拉到带笔误的发布版 web-app）；必须 npm link 使依赖从 checkout node_modules 解析。
 
-相关：[[claude-settings-json-do-not-modify]]（deepseek harness 环境约束）
+## 2026-09-03 Windows 机器（D:/ClaudeCode/obsidian 工作机）dsh 配置记录
+
+- 本机 dsh = **npm 全局安装版 0.1.0-rc.6**（`%APPDATA%\npm\node_modules\@deepseek-ai\dsh`），无源码 checkout（Linux 机的官方源码流程未在本机复现）。
+- API key 落点：`~/.dsh/.credentials.yaml`（DSH_HOME 默认 `~/.dsh`），格式 `DEEPSEEK_API_KEY: sk-...`——插件 `dsh-llm-deepseek` 默认读 env 名 `DEEPSEEK_API_KEY`（`DEFAULT_API_KEY_ENV`），官方端点 `PUBLIC_BASE_URL = https://api.deepseek.com`。
+- 凭据解析顺序（dsh-credentials-local）：继承的进程环境变量 > `$DSH_HOME/.credentials.yaml`（provider 管理、watch 热发布）> 调用 cwd 的 `.env` > `$DSH_HOME/.env`。
+- 验证：key 用 `curl /models` 实测有效（deepseek-v4-flash / deepseek-v4-pro / deepseek-v4-flash-vision-exp）；`dsh web --port 8123` 启动 root HTTP 200。
+- 本机杀 dsh：`netstat -ano | grep :<port>` 取 PID → `taskkill //PID <pid> //F`（pkill -f "dsh web" 自杀坑同前）。
+
+## 相关
+
+- [[claude-settings-json-do-not-modify]]（deepseek harness 环境约束）
