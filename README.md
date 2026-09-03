@@ -68,11 +68,41 @@
 
 ## 协议证据数据
 
-`3gpp/3GPP_Rel19/` 存放 Rel-19 协议原文与结构化抽取（讲义协议锚点的本地引用源）。该目录已拆分至**独立数据仓**（Gitee `gitee.com/aurorayaus/3gpp_docs`，GitHub 镜像 `AuroraYaus/3gpp_docs`），主仓不再跟踪；需要时可复原：
+`3gpp/3GPP_Rel19/` 存放 Rel-19 协议原文与结构化抽取，是讲义协议锚点、概念笔记「协议锚点」段、协议证据表（`3gpp/docs/audits/*_evidence.md`）的本地引用源。该目录已拆分至**独立数据仓**（Gitee `gitee.com/aurorayaus/3gpp_docs`，GitHub 镜像 `AuroraYaus/3gpp_docs`），主仓不再跟踪——克隆主仓不会带下此目录，需要单独配置。
 
-```bash
-git clone https://gitee.com/aurorayaus/3gpp_docs.git 3gpp/3GPP_Rel19
-```
+### 配置步骤
+
+1. 在仓库根目录（`obsidian/`）执行 clone，**落点必须精确为 `3gpp/3GPP_Rel19/`**：
+
+   ```bash
+   git clone https://gitee.com/aurorayaus/3gpp_docs.git 3gpp/3GPP_Rel19
+   ```
+
+   Gitee 不可用时用 GitHub 镜像：`git clone https://github.com/AuroraYaus/3gpp_docs.git 3gpp/3GPP_Rel19`。
+
+2. 验证配置成功——目录结构齐备：
+
+   ```text
+   3gpp/3GPP_Rel19/
+   ├── manifest.csv          # 协议号、ZIP 包名、SHA-256、官方 URL
+   ├── Rel19_协议下载清单.md   # 协议号、ZIP 包、官方 URL 对照表
+   ├── archive/              # 官方下载 ZIP 包
+   ├── specs/                # 官方 Word 文档解压结果
+   └── processed/            # 结构化抽取（manifest.json / extraction_report.md / Rel19_processed_目录入口.md）
+   ```
+
+   同时主仓 `git status` 应保持干净（根 `.gitignore` 已忽略该目录）。
+
+3. 后续数据更新：`3GPP_Rel19/` 是独立 git 仓，在该目录内执行 `git pull` 即可。
+
+### 落点警告
+
+clone 必须带目标路径 `3gpp/3GPP_Rel19`，放错位置（如直接落在仓库根 `3GPP_Rel19/`）会导致：
+
+1. 协议锚点类引用全部失效——`3GPP_Rel19_资料入口总览.md` 的清单链接、概念笔记「协议锚点」段、讲义证据表均按相对路径解析到 `3gpp/3GPP_Rel19/`；
+2. 数据目录成为主仓未跟踪目录（约 8 万个文件）——根 `.gitignore` 的忽略规则只匹配 `3gpp/3GPP_Rel19/`，此时 `git add .` 会把数据误提交进主仓。
+
+未配置数据仓时，讲义与概念笔记正文不受影响（仍可独立阅读），仅协议锚点跳转失效。
 
 ## 参与贡献
 

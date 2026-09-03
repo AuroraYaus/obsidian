@@ -68,11 +68,41 @@ This repository is an **Obsidian vault**. Open it with Obsidian for the full exp
 
 ## Protocol Evidence Data
 
-`3gpp/3GPP_Rel19/` holds Rel-19 protocol sources and structured extraction (the local reference for lecture protocol anchors). This directory has been split into a **separate data repository** (Gitee `gitee.com/aurorayaus/3gpp_docs`, GitHub mirror `AuroraYaus/3gpp_docs`); the main repo no longer tracks it. To restore it locally:
+`3gpp/3GPP_Rel19/` holds Rel-19 protocol sources and structured extraction — the local reference for lecture protocol anchors, concept-note "Protocol Anchors" sections, and evidence tables (`3gpp/docs/audits/*_evidence.md`). This directory has been split into a **separate data repository** (Gitee `gitee.com/aurorayaus/3gpp_docs`, GitHub mirror `AuroraYaus/3gpp_docs`); the main repo no longer tracks it — cloning the main repo does not include this directory, so it must be configured separately.
 
-```bash
-git clone https://gitee.com/aurorayaus/3gpp_docs.git 3gpp/3GPP_Rel19
-```
+### Setup
+
+1. Run the clone from the repository root (`obsidian/`). **The target must be exactly `3gpp/3GPP_Rel19/`**:
+
+   ```bash
+   git clone https://gitee.com/aurorayaus/3gpp_docs.git 3gpp/3GPP_Rel19
+   ```
+
+   If Gitee is unreachable, use the GitHub mirror: `git clone https://github.com/AuroraYaus/3gpp_docs.git 3gpp/3GPP_Rel19`.
+
+2. Verify the setup — the directory structure should be complete:
+
+   ```text
+   3gpp/3GPP_Rel19/
+   ├── manifest.csv          # Spec numbers, ZIP names, SHA-256, official URLs
+   ├── Rel19_协议下载清单.md   # Spec / ZIP / official URL lookup table
+   ├── archive/              # Official ZIP downloads
+   ├── specs/                # Extracted official Word documents
+   └── processed/            # Structured extraction (manifest.json / extraction_report.md / Rel19_processed_目录入口.md)
+   ```
+
+   The main repo's `git status` should also remain clean (the root `.gitignore` ignores this directory).
+
+3. Later data updates: `3GPP_Rel19/` is its own git repository — run `git pull` inside that directory.
+
+### Placement Warning
+
+The clone must include the target path `3gpp/3GPP_Rel19`. Placing it elsewhere (e.g. directly at the repository root as `3GPP_Rel19/`) causes:
+
+1. All protocol-anchor references to break — links in `3GPP_Rel19_资料入口总览.md`, the "Protocol Anchors" sections of concept notes, and lecture evidence tables resolve relative to `3gpp/3GPP_Rel19/`;
+2. The data directory to become an untracked directory in the main repo (~80,000 files) — the root `.gitignore` rule only matches `3gpp/3GPP_Rel19/`, so `git add .` would accidentally commit the data into the main repo.
+
+Without the data repo, lecture and concept-note bodies are unaffected (still fully readable); only protocol-anchor jumps break.
 
 ## Contribution
 

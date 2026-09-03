@@ -27,6 +27,10 @@
 2. 大体量派生/原始数据拆独立数据仓，主仓 README 写明可选复原方式（clone 到原相对路径即恢复所有引用）；首次全量推 Gitee、GitHub 走 Import 中转（本仓 2.6GB/81359 文件 2026-08-14 实测可行）。
 3. 主仓历史保留不 filter-repo——双端 force push 风险大于收益。
 
+## 补记：数据仓复原 clone 必须带目标路径（2026-09-03）
+
+拆仓后的复原 clone 若漏掉目标路径参数（只复制数据仓 URL），目录会落在仓库根 `3GPP_Rel19/`——协议锚点类引用全部失效，且约 8 万文件成为主仓未跟踪目录（根 `.gitignore` 只匹配 `3gpp/3GPP_Rel19/`，`git add .` 即误入库）。**How to apply**：README「协议证据数据」章节已扩充为配置步骤 + 落点警告（clone 必须带目标路径、放错位置的双后果、克隆后结构验证 + git status 干净）；复原或指导复原时直接照抄 README 命令，不得只发 URL。
+
 ## 补记：归档移动后引用必须同类同步
 
 Python 绘图工具归档至 `tools/archive_python_drawing/` 时，多级相对根 `parents[2]` 少算一层（4 个 render 脚本同类）、测试文件 3 类 import 路径未更新（tools.figures / tools.audit_* → archive 前缀）——测试套件 33 个失败全是 `ModuleNotFoundError`。**How to apply**：目录归档/移动后，除 md 引用外，必须扫描 py 脚本内 `parents[N]`/`__file__` 相对根与测试 import，跑一遍测试套件闭环（2026-08-14 修复后 59/59 通过）。
