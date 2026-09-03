@@ -17,7 +17,7 @@ metadata:
 4. 目录改名 → 全库路径引用 + 工具常量/正则 + 测试夹具 + 台账路径 + 教材设计文档
 5. 图片资产变化 → image_asset_inventory.md + migration 台账 + SVG 审计 R1-R7
 6. 术语变化 → 首现即登记 L0 总表；清单文件与知识库覆盖状态回流
-7. git/远程 → 推送（gitee 2FA 需私人令牌）；工作区存量定期提交
+7. git/远程 → 推送（SSH 双推 gitee+github 公钥认证，无需令牌；HTTPS 路线 gitee 2FA 需私人令牌）；工作区存量定期提交
 8. Obsidian 应用状态 → 目录改名后 graph.json/workspace.json 重开自愈
 9. README 双语同步 → 内容变化后三份 README（根 README.md 中文 + README.en.md 英文 + 3gpp/README.md 详细）同步更新，英文不落后中文
 

@@ -108,4 +108,4 @@ Without the data repo, lecture and concept-note bodies are unaffected (still ful
 
 1. New content (concept notes / lectures / terms) must be checked against the sync checklist item by item
 2. Code must carry DOXYGEN comments and pass tests
-3. Push after commit (gitee 2FA accounts require a personal access token)
+3. Push after commit (SSH dual push to Gitee + GitHub, key auth — no token needed)

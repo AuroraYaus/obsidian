@@ -24,18 +24,19 @@
 2. insteadOf 改写陷阱：配置 `git@github.com:...` 会被全局 insteadOf 变 HTTPS——SSH 推送必须用显式 `ssh://git@ssh.github.com:443/AuroraYaus/obsidian.git` 形式（或先确认/删除 insteadOf 规则）。
 3. 主机密钥：ssh.github.com:443 与 github.com:22 同密钥，可用已信任的 known_hosts 条目交叉验证后固定（`ssh-keyscan -p 443 ssh.github.com` → 比对 ed25519 → printf 追加 `[ssh.github.com]:443` 行）。
 
-**标准恢复命令链**（新机器/新拷贝）：
+**标准恢复命令链**（新机器/新拷贝，2026-09-03 实测通过）：
 
 ```bash
-ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -N "" -C "<user>"   # 公钥登记 GitHub Settings→SSH keys
+ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -N "" -C "<user>"   # 公钥登记 GitHub Settings→SSH keys + Gitee profile/sshkeys（两端同一把）
 printf '\nHost github.com\n  HostName ssh.github.com\n  Port 443\n  User git\n' >> ~/.ssh/config
 ssh-keyscan -p 443 ssh.github.com >> ~/.ssh/known_hosts          # 与已信任 github.com 密钥比对后固定
+ssh-keyscan gitee.com >> ~/.ssh/known_hosts                      # gitee.com 主机密钥（22 端口）
 git config --unset-all remote.origin.pushurl
-git config --add remote.origin.pushurl https://gitee.com/aurorayaus/obsidian.git
+git config --add remote.origin.pushurl git@gitee.com:aurorayaus/obsidian.git
 git config --add remote.origin.pushurl ssh://git@ssh.github.com:443/AuroraYaus/obsidian.git
 ```
 
-GitHub 仓库规范名 `AuroraYaus/obsidian`（小写旧名 redirect 可用）；Gitee 2FA 账号推送凭据必须是私人令牌（Windows 凭据管理器 `git:https://gitee.com`，密码字段填令牌，令牌不得贴聊天）。
+GitHub 仓库规范名 `AuroraYaus/obsidian`（小写旧名 redirect 可用）。**双端一律 SSH 公钥认证，推送无需令牌**。Gitee HTTPS 路线（2FA 账号需私人令牌：Windows 凭据管理器 `git:https://gitee.com` 密码字段填令牌，令牌不得贴聊天）实测有坑——旧密码凭据藏在 cmdkey/vaultcmd 两保险库均不可见的 GCM 存储中且 `credential-manager erase` 无效，2FA 账号 HTTPS 推送被锁死，故弃用 HTTPS 改 SSH。
 
 ## 相关教训
 

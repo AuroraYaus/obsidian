@@ -75,4 +75,4 @@
 ## 变更与同步
 
 - 任何新增内容（概念笔记/讲义系列/重编号/改名）必须对照 `项目规则与记忆索引.md` 第六节**同步清单**逐项检查（术语登记/入口挂载/资产台账/路径引用等）
-- git 远程：`https://gitee.com/aurorayaus/obsidian.git`（2FA 账号推送需私人令牌）
+- git 远程：`git@gitee.com:aurorayaus/obsidian.git` + `ssh://git@ssh.github.com:443/AuroraYaus/obsidian.git`（双 pushurl，SSH 公钥认证无需令牌）
