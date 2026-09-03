@@ -11,6 +11,7 @@ tags:
   - concepts
   - probability-shaping
 source_spec: "非 3GPP 标准（6G 候选）; Qualcomm evaluation-link-simulator"
+queries: 1
 ---
 
 # Probabilistic Shaping 概率整形
@@ -51,6 +52,18 @@ source_spec: "非 3GPP 标准（6G 候选）; Qualcomm evaluation-link-simulator
 - 接口锚：TS 38.211 Rel-19 §5.1（星座）、§7.3.1.1/2（加扰/调制映射）；TS 38.214 Rel-19 §5.1.3（MCS/TBS）。
 - **PS 本身：非 3GPP 标准，无标准小节**。
 - 仿真器实现：`+toolbox/+ProbShaping/`（ESS/SBPM/选择性加扰/功率缩放全套）。
+
+## 协议分布与边界（PS 的协议族位置）
+
+PS 本身是 6G 候选技术，**不落入任何 TS 小节**——它必须"贴"在标准接口上工作，涉及的标准协议只有两类接口：
+
+| 协议 | 讲了 PS 的哪个方面 |
+|:---|:---|
+| TS 38.211 Rel-19 §5.1 | 星座坐标与 QAM 标签——PS 不改坐标只改概率，幅度位结构是 PS 的载体 |
+| TS 38.211 Rel-19 §7.3.1.1/§7.3.1.2 | 加扰与调制映射——选择性加扰贴此接口 |
+| TS 38.214 Rel-19 §5.1.3 | MCS/TBS——TBS matching 公平对比贴此接口 |
+
+**联系链**：211 固定"坐标与映射"（PS 不敢动的部分）→ 214 固定"速率与载荷口径"（PS 公平对比的标尺）——PS 的全部自由度（MB 分布/DM/ESS/SBPM/选择性加扰/LLR prior）都在标准接口之外实现；标准链路（NR spine）只认长度与统计约定，不认内容语义。这就是"非标准技术在标准系统里工作"的边界纪律：**接口贴标准、算法在标准外**。
 
 ## 图谱关联
 

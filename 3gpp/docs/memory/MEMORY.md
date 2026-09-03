@@ -1,0 +1,28 @@
+> **本目录为 auto-memory 的项目内权威副本**：随项目文件夹拷贝、在项目内演进——新增/修改记忆先改本目录（含本索引），再同步到会话加载镜像 `~/.claude/projects/-home-yys-AGENT-obsidian/memory/`，保证项目拷到任何位置固化经验不失效。规则见 CLAUDE.md 第 17 条。
+
+- [IC vault session 2026-07-22](session-2026-07-22-ic-vault-creation.md) — Built independent digital IC Obsidian vault ~/AGENT/ic/, 45 files, 6 domains, recovered from regex corruption
+- [编辑前同步远程仓库](sync-before-edit.md) — 编辑前先同步：干净 pull --rebase、脏则 fetch + 检查领先（CLAUDE.md 第 16 条）
+- [Doxygen documentation requirement](doxygen-documentation-requirement.md) — 所有代码必须使用完整 DOXYGEN 风格注释，知识库面向新手，教学可读性优先
+- [讲义正文无中间运行结果](lecture-writing-no-intermediate-results.md) — 讲义正文不得含代码中间运行结果/调试输出/过程叙述，书面严谨
+- [概念首现必须讲解](lecture-first-occurrence-explain.md) — 讲义中概念首次出现必须给出介绍讲解，不能只靠概念笔记/wikilink
+- [SVG 边界间距规则](svg-boundary-gap-rule.md) — 文本框边界与框外文字/其他文本框间距 ≥8px；任何形式重叠不允许
+- [知识库同步清单](knowledge-base-sync-checklist.md) — 术语/入口/编号/资产/路径/台账八类同步场景，新增内容必须逐项检查（权威清单在 3gpp/项目规则与记忆索引.md 第六节）
+- [SVG 审计盲区教训](svg-audit-blind-spots.md) — T2.10 图 1 三次遮盖漏检根因链：工具盲区/针对性验证/语义心算/误报干扰；固化 R8/R9 全元素穷举与修复闭环规则
+- [Mermaid parse error 漏检教训](mermaid-parse-error-lessons.md) — T2.0 括号问题漏检 4 层原因；固化引号节点规则、全库同类扫描、验证手段先行
+- [SVG CSS class 字体度量漏检](svg-css-class-font-metric-lessons.md) — 工具不解析 `<style>` class 样式导致 14px 文字按 12px 低估、超边 42px 漏检；固化 CSS 解析 + 8% 安全系数
+- [带圈数字禁令](circled-digits-forbidden.md) — 圈号序号两次替换 509 处仍反复出现；固化 audit_circled_digits.py 检查 + (1)(2)(3)/1. 2. 3. 写法
+- [SVG 注释书面语](formal-writing-svg-notes.md) — 注释/标注禁止"画…出的"类口语表达，用"补充表格之外的拓扑结构"式书面语
+- [纠错必固化元规则](error-fix-must-solidify.md) — 用户每次指出错误，修复外必须固化为工具规则/CLAUDE.md/项目记忆三选一或组合
+- [批量替换作用域限定](batch-rename-scope-scope-limit.md) — 批量重命名必须按目录限定 + 存在性闭环验证（2026-08-05 误伤 L2 引用 11 文件）
+- [重绘交付检查清单](svg-redraw-check-centering-density.md) — 图模型居中/面板边距/布局密度/文字余量四查（T11.1 四次返工教训）
+- [双推 Gitee+GitHub](dual-push-gitee-github.md) — push origin 已配双 pushurl；大仓库首同步走 GitHub Import，增量走 ssh.github.com:443
+- [链接格式全覆盖](link-format-completeness.md) — 死链检查必须覆盖 wikilink/Markdown/相对路径全格式；改名后验证文件内引用；第三次针对性盲区复发的工具化根治
+- [图谱空心节点教训](lesson-link-obsidian-hollow-nodes.md) — Obsidian 索引代码块/行内代码内无转义 `[[..]]` 产生幽灵节点；代码块展示一律插空格 `[ [`；工具 vault 根解析 + aliases + 代码块扫描
+- [写作计划先拷问](grill-before-planning.md) — 任何写作计划/设计方案/决策问题动手前必须先拷问用户（grill-me 风格），收敛写 PLAN.md 再执行；豁免纯问答/已批准步骤
+- [Q&A 沉淀流水线](qa-pipeline-knowledge-base.md) — 知识库问答先检索→命中策略（queries+1/扩充/链接/新建）→写回沉淀→终端展示归纳答案；复制自 ic 项目
+- [讲义习题数量上限](lecture-exercise-count-limit.md) — 每类 ≤3 禁止凑行数；深度不足合并而非注水（T15.1 并入 T15.5 先例）
+- [Claude settings.json 不可改](claude-settings-json-do-not-modify.md) — 用户明确 ~/.claude/settings.json 不要改；deepseek harness key 只动 settings_deepseek.json 与 ~/.bashrc
+- [dsh web 崩溃 ctx.webserver 笔误](dsh-web-cordis-webserver-typo.md) — "cannot get property webserver without inject" = 小写 webserver 笔误（应 ctx.webServer）；Cordis 插件自身 inject 始终生效，bundle 入口 inject 只服务 config 表达式；pkill -f "dsh web" 在 Bash 工具里会自杀；2026-08-27 已整体换为官方源码版（checkout ~/deepseek-harness，npm link，更新走 git pull + pnpm build，注意不可 npm i -g 目录装）
+- [docx WMF 公式抽取](docx-wmf-formula-extraction.md) — processed 抽取丢公式时从 docx word/media WMF 恢复：rId 映射 + LibreOffice SVG glyph 重组 + OCR 互证（38.213 §11.2 实例）
+- [插件更新走 SSH 443](plugin-update-git-url-rewrite-ssh443.md) — claude plugin update 卡死在 GitHub https clone 时用 GIT_CONFIG_COUNT URL 改写（insteadOf → git@github.com:）走 443 通道；Codex/Claude 两侧 superpowers 各持一份均已升 6.3.0
+- [计数声明必须实测](count-claims-verify-by-measurement.md) — README/口径线的术语 254+104/概念 107 与实测 241+105 漂移（上次 commit 还宣称已核实）；计数必须 grep/awk 实测行数再写声明

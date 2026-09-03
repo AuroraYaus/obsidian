@@ -11,7 +11,7 @@ tags:
   - concepts
   - probability-shaping
 source_spec: "非 3GPP 标准（6G 候选）; Qualcomm evaluation-link-simulator"
-queries: 1
+queries: 2
 ---
 
 # ESS 枚举球面整形
@@ -56,6 +56,16 @@ ESS 像"按编号查目录"：DP 计数表是目录索引，均匀 bit 组成一
 - TB/CB 粒度：TS 38.212 §5.2.2（接口锚）。
 - **ESS 本身：非 3GPP 标准，无标准小节**。
 - 仿真器实现：`+ProbShaping/+ess/`（ess.m、encode/decode.m、generateEnergyTable.m、dec2binFloat.m）。
+
+## 协议分布与边界（ESS 的协议族位置）
+
+ESS 本身是 6G 候选技术，**不落入任何 TS 小节**——它只在块粒度上贴靠标准接口：
+
+| 协议 | 讲了 ESS 的哪个方面 |
+|:---|:---|
+| TS 38.212 §5.2.2 | TB→CB 分段粒度——ESS block 按 nMax 分块、残差块按偶数化规则处理，贴此接口对齐；inverse ESS 必须位于 LDPC/CRC 之后的顺序纪律也由此节锚定 |
+
+**联系链**：212 固定"块粒度与顺序"（ESS 必须贴的部分）→ ESS 的全部自由度（能量球约束/DP 计数表/rank 映射/定点存储）都在标准之外实现——与 PS 同一条边界纪律：**接口贴标准、算法在标准外**。
 
 ## 图谱关联
 
