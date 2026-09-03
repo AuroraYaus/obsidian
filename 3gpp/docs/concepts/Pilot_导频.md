@@ -11,7 +11,7 @@ tags:
   - phy
   - reference-signal
 source_spec: "TS 38.211 Rel-19 §5.2 / §6.4.1 / §7.4.1"
-queries: 3
+queries: 4
 ---
 
 # Pilot 导频
