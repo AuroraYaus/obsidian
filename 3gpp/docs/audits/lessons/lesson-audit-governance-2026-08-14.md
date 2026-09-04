@@ -31,6 +31,10 @@
 
 拆仓后的复原 clone 若漏掉目标路径参数（只复制数据仓 URL），目录会落在仓库根 `3GPP_Rel19/`——协议锚点类引用全部失效，且约 8 万文件成为主仓未跟踪目录（根 `.gitignore` 只匹配 `3gpp/3GPP_Rel19/`，`git add .` 即误入库）。**How to apply**：README「协议证据数据」章节已扩充为配置步骤 + 落点警告（clone 必须带目标路径、放错位置的双后果、克隆后结构验证 + git status 干净）；复原或指导复原时直接照抄 README 命令，不得只发 URL。
 
+## 补记：graph.json 被 workspace.json 连坐误伤（2026-09-04）
+
+教训三将 `graph.json` 与 `workspace.json` 一并移出版本控制，但两者易失性不同：workspace.json 每次会话必改写；graph.json 仅在修改图谱设置时变化。图谱颜色分组（33 组 tag/path/type 查询）、过滤规则（`path:3gpp/docs -path:...lessons -path:...3GPP_Rel19`）、隐藏孤立节点开关全部存于 graph.json——另一台机器 clone 后该文件缺失，图谱无颜色、无过滤、非知识库文件与孤立节点全显（2026-09-04 换机实测）。**How to apply**：UI 状态文件按"是否随正常使用自变"区分易失与否，不按"是否位于 .obsidian/ 下"一刀切——workspace.json 保持忽略，graph.json 重新纳入版本控制（改图谱设置产生的 diff 值得提交）；警惕其它"看似易失实为配置"的文件被连坐。
+
 ## 补记：归档移动后引用必须同类同步
 
 Python 绘图工具归档至 `tools/archive_python_drawing/` 时，多级相对根 `parents[2]` 少算一层（4 个 render 脚本同类）、测试文件 3 类 import 路径未更新（tools.figures / tools.audit_* → archive 前缀）——测试套件 33 个失败全是 `ModuleNotFoundError`。**How to apply**：目录归档/移动后，除 md 引用外，必须扫描 py 脚本内 `parents[N]`/`__file__` 相对根与测试 import，跑一遍测试套件闭环（2026-08-14 修复后 59/59 通过）。
