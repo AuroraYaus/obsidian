@@ -1,9 +1,9 @@
 __pycache__/
 *.pyc
 
-# Obsidian UI 状态文件（2026-08-14 移出版本控制——易失状态入库造成每次会话必 dirty）
+# Obsidian UI 状态文件：workspace.json 易失（每次会话必 dirty），不入库；
+# graph.json 仅在修改图谱设置时变化，2026-09-04 重新纳入版本控制——承载颜色分组与过滤规则，换机复原图谱必需
 .obsidian/workspace.json
-.obsidian/graph.json
 
 # 协议证据数据（2026-08-14 拆分至独立数据仓 gitee.com/aurorayaus/3gpp_docs，
 # 可选下载：clone 数据仓到 3gpp/3GPP_Rel19/ 即复原讲义协议锚点）
