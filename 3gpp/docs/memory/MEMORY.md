@@ -28,3 +28,4 @@
 - [计数声明必须实测](count-claims-verify-by-measurement.md) — README/口径线的术语 254+104/概念 107 与实测 241+105 漂移（上次 commit 还宣称已核实）；计数必须 grep/awk 实测行数再写声明
 - [SVG 提交前渲染验证](svg-render-verify-before-commit.md) — SVG 生成后必须 Y 坐标扫描/PNG 目检再宣布完成，不能只信生成代码坐标（T3.2 圆形缓冲区图 4px 挤压教训，自旧 3gpp 工作目录并入）
 - [SKILL 优先检查](skill-first-check.md) — 每次响应前先扫可用 SKILL 列表，有匹配必须调用不得手写；已固化进 3gpp/CLAUDE.md 第 1 条最高优先级（自 ClaudeCode-3gpp 工作目录并入）
+- [PPT 展示偏好](ppt-presentation-preference.md) — 展示材料主体讲内容与经验而非过程数字（天数/提交数只作证据小字）；页数宁多勿少；经验必须落到机制+案例；标题禁模板化死板（2026-09-04 两轮纠错）
