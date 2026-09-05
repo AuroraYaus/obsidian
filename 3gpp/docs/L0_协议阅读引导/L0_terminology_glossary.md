@@ -96,6 +96,10 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | COT | 信道占用时间 | Channel Occupancy Time；共享频谱场景下信道接入后允许持续占用的时长。 |
 | RLC | 无线链路控制层 | Radio Link Control；无线链路控制层，有 TM/UM/AM 三模式。 |
 | RNTI | 无线网络临时标识 | Radio Network Temporary Identifier；UE 在小区内用于寻址/加扰的临时身份。 |
+| RA-RNTI | 随机接入无线网络临时标识 | Random Access Radio Network Temporary Identifier；Msg2 用其寻址 UE，竞争解决成功后身份被 C-RNTI 取代。 |
+| TC-RNTI | 临时小区无线网络临时标识 | Temporary Cell Radio Network Temporary Identifier；Msg2-Msg4 期间 UE 的临时身份，竞争解决成功即升格为 C-RNTI。 |
+| C-RNTI | 小区无线网络临时标识 | Cell Radio Network Temporary Identifier；连接态 UE 在小区的唯一寻址/加扰身份，由 TC-RNTI 升格而来。 |
+| SRB | 信令无线承载 | Signalling Radio Bearer；承载 RRC/NAS 信令，分 SRB0（CCCH，无安全）与 SRB1（DCCH，AS 安全激活后加密/完整性保护）。 |
 | UE | 用户设备 | User Equipment；协议与链路仿真的收端主体。 |
 | BWP | 带宽部分 | Bandwidth Part；UE 工作带宽的子集，是调度与 RF 配置的粒度。 |
 | RRC | 无线资源控制 | Radio Resource Control；信令层，负责配置与连接管理。 |
