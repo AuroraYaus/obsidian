@@ -28,4 +28,4 @@
 - [SKILL 优先检查](skill-first-check.md) — 每次响应前先扫可用 SKILL 列表，有匹配必须调用不得手写；已固化进 3gpp/CLAUDE.md 第 1 条最高优先级（自 ClaudeCode-3gpp 工作目录并入）
 - [PPT 展示偏好](ppt-presentation-preference.md) — 展示材料主体讲内容与经验而非过程数字（天数/提交数只作证据小字）；页数宁多勿少；经验必须落到机制+案例；标题禁模板化死板（2026-09-04 两轮纠错）
 - [Obsidian graph.json 版本控制](obsidian-graph-config-versioning.md) — graph.json 承载图谱颜色/过滤规则须随仓入库（2026-09-04 换机无颜色无过滤教训；workspace.json 保持忽略）
-- [GNOME 扩展 toggle 竞态卡死](gnome-extension-toggle-race.md) — gnome-extensions disable && enable 背靠背会卡死 INACTIVE（设置已启用/会话未加载）；必须顺序执行并验证 State: ACTIVE；本机 InternetSpeedMeter 已改 ↓/↑ 分向显示（升级会覆盖补丁）
+- [GNOME 扩展 toggle 竞态卡死](gnome-extension-toggle-race.md) — gnome-extensions disable && enable 背靠背会卡死 INACTIVE；且会话内重载不重读代码（ESM 模块缓存）——改代码必须注销重登；本机 InternetSpeedMeter 已改 ↓/↑ 分向显示（升级会覆盖补丁）
