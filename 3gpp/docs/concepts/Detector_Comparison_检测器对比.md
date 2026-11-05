@@ -15,11 +15,23 @@ source_spec: "接收机实现（非协议算法）; MIMO01 §5-6"
 
 # Detector Comparison 检测器对比
 
-在 MIMO 接收中，每个资源单元（RE，Resource Element）的接收信号可写成矩阵模型 $y = Hx + n$：$y$ 是接收符号向量，$H$ 是信道矩阵，$x$ 是发射符号向量，$n$ 是噪声。接收机用检测器（Detector）从 $y$ 中估计出符号 $\hat{x}$。匹配滤波（Matched Filter，MF）、迫零（Zero Forcing，ZF）、最小均方误差（Minimum Mean Square Error，MMSE）与球面检测（Sphere Decoding，Sphere）四族检测器，是精度与实现代价之间的不同折中；在接收机语境下"检测器"与"均衡器"常指同一概念（对应别名"均衡器对比"）。
+在 MIMO 接收中，每个资源单元（RE，Resource Element）的接收信号可写成矩阵模型 $y = Hx + n$：$y$ 是接收符号向量，$H$ 是信道矩阵，$x$ 是发射符号向量，$n$ 是噪声。接收机用检测器（Detector）从 $y$ 中估计出符号 $\hat{x}$。匹配滤波（Matched Filter，MF）、迫零（Zero Forcing，ZF）、最小均方误差（Minimum Mean Square Error，MMSE）与球面检测（Sphere Decoding，Sphere）四族检测器，是精度与实现代价之间的不同折中；在接收机语境下"检测器"与"均衡器"常指同一概念（对应别名"均衡器对比"）。一句话本质：**检测器选择是"四种听法"——MF 只对准目标不管干扰、ZF 把其他声源消掉但杂音放大、MMSE 在两者间找平衡、Sphere 把每种说法组合都核对一遍（最准最贵）**。
 
 ## 独立解释任务
 
 任务目标：解释四种检测器的公式、复杂度与性能损失，以及为什么 MMSE 是默认选择、Sphere 只在特定场景（高 SNR）使用。
+
+## 起源与演进
+
+(1) **起点：一个模型、四种折中。** 每 RE 都是 $y = Hx + n$——检测器的设计空间就是精度与实现代价的取舍。
+
+(2) **四族公式与极限。** MF（$H^H y$，噪声主导极限）；ZF（$(H^H H)^{-1}H^H y$，无噪声极限）；MMSE（正则化折中，比 ZF 有 1-3 dB 增益）；Sphere（ML 最优 0 dB 损失）。
+
+(3) **复杂度谱。** MF 最便宜；MMSE 约 100 MACs/tone（4×4）；Sphere 100-1000 MACs/tone，且低 SNR 时球内格点数爆炸 → 退化为穷举。
+
+(4) **性能排序与复杂度排序相反。** MF ≤ ZF ≤ MMSE ≤ ML（Sphere）；复杂度反向——这就是全部设计空间。
+
+(5) **工程默认。** MMSE 是线性默认、Sphere 是高 SNR 增强与 ML 参考——检测器是接收机自由度，协议不管。
 
 ## 科学定义
 
@@ -45,6 +57,15 @@ source_spec: "接收机实现（非协议算法）; MIMO01 §5-6"
 
 - 接收机自由度：TS 38.214 只定义传输假设（传输方案、层数、预编码），不规定检测器。
 - 仿真器实现：`new_pdsch_decode.m`（demapper 分支 mmse/sphere）、`nrEqualizeMMSE`、`comm.SphereDecoder`（MIMO01 §5-6、analysis 03 §3）。
+
+## 关键要点
+
+1. 四族检测器：MF/ZF/MMSE/Sphere——性能排序与复杂度排序相反。
+2. MMSE 比 ZF 有 1-3 dB 增益——线性默认。
+3. Sphere 性能 0 dB 损失（ML），但低 SNR 复杂度爆炸。
+4. ZF 消干扰必然放大噪声——深衰落处最严重。
+5. 检测器是接收机自由度，协议只定义传输假设。
+6. 工程组合：MMSE 保底 + Sphere 增强。
 
 ## 图谱关联
 
