@@ -14,11 +14,23 @@ source_spec: "非 3GPP 标准（6G 候选）; Qualcomm evaluation-link-simulator
 
 # PAS 概率幅度整形
 
-PAS（Probabilistic Amplitude Shaping）是概率整形与 FEC 结合的**框架**：把符号拆成"幅度"（决定能量，可整形）和"符号"（决定正负，保持均匀），只对幅度做概率整形：$s = a \cdot \sigma$（a ∈ {1,3,5,…}，σ ∈ {±1}）。
+PAS（Probabilistic Amplitude Shaping）是概率整形与 FEC 结合的**框架**：把符号拆成"幅度"（决定能量，可整形）和"符号"（决定正负，保持均匀），只对幅度做概率整形：$s = a \cdot \sigma$（a ∈ {1,3,5,…}，σ ∈ {±1}）。一句话本质：**PAS 是"分工打包"——货物（信息）分两路：一路走慢速整形通道（幅度，控制能量）、一路走快速均匀通道（符号，放校验冗余）；两条通道各干各的，整形的不会被 FEC 搅匀**。
 
 ## 独立解释任务
 
 任务目标：解释整形怎么和 FEC 共存而不被"搅匀"，以及 amplitude/sign 分工的依据。
+
+## 起源与演进
+
+(1) **起点：整形与纠错的天敌关系。** FEC 编码会把比特"搅匀"——直接对编码比特整形会被打散；需要一个让两者共存的框架。
+
+(2) **分工原理。** 符号拆成幅度（决定能量，可整形）与符号（决定正负，保持均匀）：$s = a \cdot \sigma$——只整形幅度。
+
+(3) **parity-as-sign。** FEC 的 parity 是信息位的线性组合、天然近似均匀——放 sign 位既不破坏均匀性、又完成纠错。
+
+(4) **前提与禁令。** systematic FEC 保留原始信息位（承载整形后的幅度信息）；sign 不能整形（±1 必须各半，否则破坏星座对称）。
+
+(5) **边界。** PAS 是框架，ESS 是其幅度映射器实现、SBPM 是 bit 组装器——ESS ⊂ DM ⊂ PAS。
 
 ## 科学定义
 
@@ -50,6 +62,15 @@ PAS 像"分工打包"：货物（信息）分两路——一路走"慢速整形�
 - 接口锚：TS 38.211 Rel-19 §5.1（星座）、§7.3.1.1/2（加扰/调制映射）；TS 38.212 Rel-19 §5.3.2（FEC）。
 - **PAS 本身：非 3GPP 标准，无标准小节**。
 - 仿真器实现：`+tbgen/build_tb_for_ps.m`、`+mapping/sbpm_deinterleave.m`、`+mapping/ps_scramble.m`。
+
+## 关键要点
+
+1. PAS = amplitude/sign 分工框架：只整形幅度、符号保持均匀。
+2. parity 近似均匀——放 sign 位是天然选择。
+3. systematic FEC 是 PAS 能工作的前提。
+4. sign 不能整形：破坏星座对称 + 与 parity 均匀性冲突。
+5. 整形后需要选择性加扰保护统计。
+6. 层级：ESS ⊂ DM ⊂ PAS。
 
 ## 图谱关联
 
