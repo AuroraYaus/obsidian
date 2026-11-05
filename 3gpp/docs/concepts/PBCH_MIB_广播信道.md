@@ -15,11 +15,23 @@ queries: 2
 
 # PBCH MIB 广播信道
 
-PBCH（物理广播信道，Physical Broadcast Channel）承载 MIB（主信息块，Master Information Block）——小区搜索的最后一步：UE 解出 PSS/SSS（主同步信号/辅同步信号，Primary/Secondary Synchronization Signal）拿到小区 ID 后，再解 PBCH 读出 MIB，MIB 里给出接入小区所需的最少系统参数，并指向 SIB1（系统信息块 1，System Information Block 1）的调度位置。NR 的 PBCH 用 Polar（极化码，Polar Code）编码、LTE 的 PBCH 用 TBCC（咬尾卷积码，Tail Biting Convolutional Code）编码——两代广播信道编码不同，但"MIB → SIB1 → 其他 SIB"的层级结构一致。
+PBCH（物理广播信道，Physical Broadcast Channel）承载 MIB（主信息块，Master Information Block）——小区搜索的最后一步：UE 解出 PSS/SSS（主同步信号/辅同步信号，Primary/Secondary Synchronization Signal）拿到小区 ID 后，再解 PBCH 读出 MIB，MIB 里给出接入小区所需的最少系统参数，并指向 SIB1（系统信息块 1，System Information Block 1）的调度位置。NR 的 PBCH 用 Polar（极化码，Polar Code）编码、LTE 的 PBCH 用 TBCC（咬尾卷积码，Tail Biting Convolutional Code）编码——两代广播信道编码不同，但"MIB → SIB1 → 其他 SIB"的层级结构一致。一句话本质：**MIB 是"电台的频率报时"——报频道号（SFN）、信号制式（子载波间隔）和"下一档节目在哪个台"（pdcch-ConfigSIB1），听众按提示换台才能听到完整节目**。
 
 ## 独立解释任务
 
 任务目标：讲清 MIB 承载哪些字段、PBCH 的编码与加扰（NR Polar / LTE TBCC）、MIB 如何指向 SIB1，以及 PBCH 在 SSB（同步信号块，Synchronization Signal Block）内的位置与接收端解调流程。
+
+## 起源与演进
+
+(1) **起点：小区搜索的最后一步。** UE 解出 PSS/SSS 拿到小区 ID 后，还需要系统参数才能接入——PBCH 承载的 MIB 就是最少参数包。
+
+(2) **MIB 内容。** SFN 高 6 位（帧定时）、subCarrierSpacingCommon（接入配置）、ssb-SubcarrierOffset（网格对齐）、dmrs-TypeA-Position、pdcch-ConfigSIB1（指向 SIB1 的 CORESET 0/搜索空间 0）。
+
+(3) **编码与两代差异。** NR：32 bit 载荷 + CRC24C + Polar 编码；LTE：24 bit → TBCC 编码（40 ms 周期）——两代编码不同，"MIB→SIB1→其他 SIB"层级一致。
+
+(4) **接收前提。** 解 PBCH 需要先有小区 ID（解扰用）与信道估计（PBCH DM-RS）——顺序不可颠倒。
+
+(5) **层级衔接。** MIB 的 pdcch-ConfigSIB1 直接给出 SIB1 的 PDCCH 配置——解完 MIB 立刻盲检 SIB1，再接续其他 SIB。
 
 ## 科学定义
 
@@ -77,6 +89,15 @@ MIB 像"电台的频率报时"：报出频道号（SFN）、信号制式（子�
 | 射频/性能 | **要多准**（PBCH 解调性能、小区搜索要求） | TS 38.101/38.133；TS 36.101/36.133 |
 
 **联系链**：331 定义"广播什么"→ 212 定义"怎么编码"→ 211 定义"放在哪"→ 213 定义"怎么接收"→ 321 定义"怎么接续系统信息"→ 101/133 定义"解对的标准"——一条"内容 → 编码 → 承载 → 接收 → 接续 → 验收"链，全部围绕收发双方对广播信道的共同认知。LTE/NR 对照：NR 用 Polar、LTE 用 TBCC——编码哲学不同，但"MIB → SIB1 → 其他 SIB"的层级结构与 pdcch-ConfigSIB1 衔接机制两代一致。
+
+## 关键要点
+
+1. MIB 只有最少接入参数，全部系统信息在 SIB1 及后续 SIB。
+2. NR PBCH 用 Polar、LTE 用 TBCC——编码不同、层级一致。
+3. 解 PBCH 必须先有小区 ID（解扰）——顺序不可颠倒。
+4. pdcch-ConfigSIB1 把广播信道接到控制信道盲检。
+5. PBCH 是广播控制信道，不承载用户数据。
+6. MIB → SIB1 → 其他 SIB 是最小系统信息层级。
 
 ## 图谱关联
 
