@@ -16,11 +16,23 @@ source_spec: "TS 38.214 §5.1.3; evaluation-link-simulator MCS 表"
 
 # MCS Table & Effective Code Rate MCS表与有效码率
 
-调制与编码方案表（MCS Table）把调度索引（MCS index）映射为调制阶数（modulation order，Qm）与目标码率（target code rate，R）——PS 场景还额外含整形强度（shaping parameter，ν）；而"有效码率"（effective code rate，R_eff）是实际 payload 折算出来的真实码率，与目标码率脱钩。
+调制与编码方案表（MCS Table）把调度索引（MCS index）映射为调制阶数（modulation order，Qm）与目标码率（target code rate，R）——PS 场景还额外含整形强度（shaping parameter，ν）；而"有效码率"（effective code rate，R_eff）是实际 payload 折算出来的真实码率，与目标码率脱钩。一句话本质：**MCS 表是餐厅菜单（标称码率），R_eff 是结账实付（真实码率）——比较哪家划算永远看实付**。
 
 ## 独立解释任务
 
 任务目标：解释 4 张 MCS 表的结构差异（标准 qam64 表、标准 qam256 表、非标准 ps_mcs_table1、ps_mcs_table2）、PS 表为什么 SE≠Qm×R/1024、以及 R_eff 与目标码率脱钩的含义。
+
+## 起源与演进
+
+(1) **起点：为什么 MCS 要查表。** DCI 里只有 5 bit 的 MCS 字段，而调制阶数与码率的组合几乎是无限的——协议用一张表把 32 个索引压缩映射到 (Qm, R) 组合：空中只发索引、不发参数，信令开销极小。这像餐厅点套餐：报个编号，后厨自动配齐。
+
+(2) **标准表：qam64 与 qam256 两张。** qam64 表（MCS 0-28）覆盖 QPSK/16QAM/64QAM，是 Rel-15 主力；qam256 表把高阶档换成 256QAM。标准表内频谱效率严格成立 SE = Qm×R/1024——"每符号比特数 × 码率"，没有别的隐形成本。
+
+(3) **PS 表：整形参数入表，公式失效。** ps_mcs_table1/2 增加第 5 列 ν_MB（整形强度），1024QAM 只出现在 MCS 24-27。此时 SE ≠ Qm×R/1024：MCS 10 的表值是 2.5704，按 (Qm, R) 折算却是 4.5——概率整形把星座点分布压偏，信息速率被压缩，SE 列直接给出整形后的实际可达值。
+
+(4) **R_eff：实付码率。** $R_{\text{eff}} = N_{\text{TBS}}/(N_{\text{RE}} \cdot Q_m)$，由 payload 折算的真实码率。DMRS/控制开销、整形、TBS 对齐都会让它偏离目标码率 R——因此跨 PS/Uniform 公平比较必须统一到 R_eff（TBS matching 后同码率比能量），否则比较本身没有意义。
+
+(5) **两代差异与边界。** LTE 的 MCS 表（TS 36.213 §7.1.7）是"索引 → 调制阶数 + TBS index"的两级查表；NR 改为"索引 → Qm + R"，再走 TBS 公式。1024QAM 不是标准表能力，只存在于 PS 表——别把它当成通用 5G 能力。
 
 ## 科学定义
 
@@ -47,6 +59,15 @@ source_spec: "TS 38.214 §5.1.3; evaluation-link-simulator MCS 表"
 - MCS/TBS：TS 38.214 Rel-19 §5.1.3。
 - 本地锚点：`3GPP_Rel19/processed/TS_38.214_38214-j30/content.md`。
 - 仿真器实现：`getMcsInfo.m`（4 表硬编码，5 列解析）、`resolveMcsInfo.m`（表选择 + nu 参数流）。
+
+## 关键要点
+
+1. MCS 表 = 32 个索引 → (Qm, R) 的压缩映射，DCI 只发索引省信令。
+2. 标准表 SE = Qm×R/1024 严格成立；PS 表因整形压缩不成立（MCS10：2.5704 vs 4.5）。
+3. PS 表多第 5 列 ν_MB；1024QAM 只在 PS 表 MCS 24-27。
+4. R_eff = N_TBS/(N_RE×Qm)，与目标码率脱钩——跨场景公平比较的唯一口径。
+5. LTE 是"索引 → TBS index"两级查表，NR 是"索引 → Qm+R"再走 TBS 公式。
+6. 选型与仿真对比都看 R_eff，不能看标称码率。
 
 ## 图谱关联
 
