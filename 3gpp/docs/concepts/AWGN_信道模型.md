@@ -16,11 +16,23 @@ source_spec: "Communication theory; TS 36.211/38.211 modulation and channel anch
 
 # AWGN 加性高斯白噪声
 
-AWGN 信道模型是最基本的通信信道：接收信号 y = x + n，其中 n ~ N(0, σ²) 是独立同分布的高斯噪声。所有 LTE/NR 译码器的 BER/BLER 性能基准都在 AWGN 假设下定义。
+AWGN 信道模型是最基本的通信信道：接收信号 y = x + n，其中 n ~ N(0, σ²) 是独立同分布的高斯噪声。所有 LTE/NR 译码器的 BER/BLER 性能基准都在 AWGN 假设下定义。一句话本质：**AWGN 是"性能基准的地基"——所有 BLER 曲线的横轴 Eb/N0 都在这个最简模型下定义：y = x + n，噪声方差直接决定 LLR 的置信度**。
 
 ## 独立解释任务
 
 任务目标：解释加性高斯白噪声（Additive White Gaussian Noise, AWGN）模型中"加性""白""高斯"三个限定词各自的含义，并打通从 $E_b/N_0$ 到噪声方差、再到译码器输入软信息的完整换算链。在 LTE/NR 译码链路中，AWGN 位于软解调（soft demodulation）之前：接收采样经软解调与噪声缩放变成对数似然比（Log-Likelihood Ratio, LLR），噪声方差直接决定 LLR 的幅度，因此 AWGN 假设是全部块错误率（Block Error Rate, BLER）性能曲线的统一基准。
+
+## 起源与演进
+
+(1) **起点：性能基准的地基。** 任何译码器的 BER/BLER 曲线都需要一个统一假设——AWGN 是最基本的信道模型：$y = x + n$。
+
+(2) **三个限定词。** "加性"=噪声直接叠加；"高斯"=$n\sim\mathcal{N}(0,\sigma^2)$；"白"=不同时刻采样互不相关、每次扰动独立。
+
+(3) **换算链。** $E_b/N_0$ →（×$R Q_m$）→ $E_s/N_0$ → 噪声方差 $\sigma^2 = 1/(2RQ_m\gamma_b)$ → LLR 幅度（BPSK：$L = 2y/\sigma^2$）。
+
+(4) **数值走查。** R=0.5、BPSK、6 dB → $\sigma^2\approx 0.2512$；$y=0.7$ → $L\approx 5.57$（强可信 0）；$y=-0.2$ → $L\approx -1.59$（弱可信 1）。
+
+(5) **边界与陷阱。** dB 值必须先转线性再代入；漏掉 $R$ 或 $Q_m$ 整体缩放错误；复基带 I/Q 每路方差是 $N_0/2$ 而非 $N_0$。
 
 ## 科学定义
 
@@ -89,6 +101,15 @@ $$
 - 调制映射入口：TS 38.211 Rel-19 `38211-j30` §5.1 Modulation mapper，本地 `3GPP_Rel19/processed/TS_38.211_38211-j30/`。
 - LTE 等价锚点（TS 36.211/36.214）在讲义中标注待核验，本节不宣称已完成核验。
 - 本地讲义锚点：`docs/L1_基础/T2.9_AWGN_noise_scaling.md`。
+
+## 关键要点
+
+1. AWGN：y = x + n，n~N(0,σ²)——加性/高斯/白三限定词各有含义。
+2. 换算链：Eb/N0 →（×R·Qm）→ Es/N0 → σ² → LLR 幅度。
+3. σ² = 1/(2RQmγb)——漏 R 或 Qm 整体缩放错误。
+4. BPSK 最简 LLR：L = 2y/σ²——噪声方差在分母决定置信度。
+5. dB 先转线性再代入公式。
+6. AWGN 是仿真基准模型，3GPP 不定义信道模型。
 
 ## 图谱关联
 
