@@ -17,11 +17,25 @@ source_spec: "Algorithmic; TS 38.212 Polar decoder context"
 
 # CA-SCL CRC辅助SCL
 
+CA-SCL（CRC 辅助 SCL）是 NR Polar 控制信道接收链的最后一级：SCL 输出 L 条候选路径后，按 PM 升序逐条做 CRC 检查，输出第一条通过的路径。一句话本质：**CA-SCL 是"海选+背景核查"——初试按分数（PM）排名，录用必须过背景核查（CRC）；核查不过，分数再高也不录用**。
+
 ## 独立解释任务
 
 任务目标：解释循环冗余校验辅助逐次消除列表译码（CRC-aided Successive Cancellation List, CA-SCL）如何用 CRC 从 SCL 候选路径中选出最终输出，以及 NR 控制信道 CRC 长度的协议条件与 DCI 的 RNTI 边界。
 
 CA-SCL 是 NR Polar 控制信道接收链的最后一级：位于 SCL 树译码之后、控制比特交付之前，承担候选路径的最终选择。
+
+## 起源与演进
+
+(1) **起点：PM 会被骗。** PM 是软度量，PM 最小的路径不一定是正确路径——需要一个硬检错边界做最终把关。
+
+(2) **机制：CRC 逐条核查。** 发送端把信息位连同 CRC parity bits 一起送入 Polar 编码（TS 38.212 §5.2.1）；接收端 SCL 输出 L 条候选，按 PM 升序逐条查 CRC，输出第一条通过的——不是无脑取 PM 最小。
+
+(3) **NR 的 CRC 长度条件。** UCI：$A\ge 20$ 附加 CRC11、$12\le A\le 19$ 附加 CRC6、$A\le 11$ 不附加；DCI 用 24 bit 且与 RNTI 相关。随机错误候选误通过的概率量级约 $2^{-r}$。
+
+(4) **性能与边界。** 工程上 $L=8$ 时 CA-SCL 已接近最大似然译码；但 CRC 不能替代列表——正确路径若在 SCL 剪枝时被删除，CRC 检查根本看不到它。
+
+(5) **分工总结。** CRC 是硬检错边界、PM 是软度量——各司其职；CA-SCL 是接收机实现选择，协议只规定 CRC 与 Polar 编码。
 
 ## 科学定义
 
@@ -53,6 +67,15 @@ $L=8$ 的 SCL 译出 8 条候选路径：PM 最小的路径 CRC 不过，PM 第 
 - TS 38.212 §5.2.1 Polar 分段与 CRC attachment。本地：`content.md` 行 665-715。
 - TS 38.212 §6.3.1.2.1（PUCCH UCI）、§6.3.2.2.1（PUSCH UCI）与 §7.3.2/§7.3.3（DCI）。本地：`content.md` 行 2325-2335、2863-2865、7177-7207。CA-SCL 算法本身为非 3GPP 标准的接收机算法。
 - 讲义：`docs/L2_协议算法/T10.6_CRC_aided_SCL_control_reliability.md`；CRC 多项式家族见 `docs/L1_基础/T3.1_LTE_NR_CRC_families.md`。
+
+## 关键要点
+
+1. 最终输出必须过 CRC——PM 最小路径 CRC 不过时顺延到下一条通过的。
+2. CRC 长度条件：UCI A≥20→CRC11、12-19→CRC6、≤11→无；DCI 24 bit 与 RNTI 相关。
+3. 误通过概率约 2^-r；CRC 检错不是绝对零错误。
+4. CRC 不能替代 list size——正确路径被剪枝删了就找不回来。
+5. L=8 时 CA-SCL 接近最大似然译码。
+6. CA-SCL 是接收机实现选择，非 3GPP 规定算法。
 
 ## 图谱关联
 

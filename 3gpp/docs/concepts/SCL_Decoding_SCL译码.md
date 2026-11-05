@@ -16,11 +16,25 @@ source_spec: "Algorithmic; TS 38.212 Polar decoder context"
 
 # SCL 列表译码
 
+SCL（逐次消除列表译码，Successive Cancellation List）是 NR Polar 控制信道接收链的译码核心：每个信息位同时保留 0/1 两条候选，按路径度量（Path Metric，PM）排序剪枝保留 L 条。一句话本质：**SCL 是"迷宫多队探索"——每个岔路同时派 L 支小队走，定期按偏离证据程度（PM）淘汰落后小队**。
+
 ## 独立解释任务
 
 任务目标：解释逐次消除列表译码（Successive Cancellation List, SCL）的路径分裂、路径度量（Path Metric, PM）更新与剪枝机制，说明列表大小 $L$ 的工程含义与 L=1 退化为 SC 的关系。
 
 SCL 是 NR Polar 控制信道接收链的译码核心，位于 rate recovery 之后、CRC 辅助选择（CA-SCL）之前。
+
+## 起源与演进
+
+(1) **起点：SC 的致命伤。** SC 逐位贪心译码：一个信息位判错，后续所有位都建立在错误前提上——早期误判无法挽回。
+
+(2) **解法：列表并行。** 每个信息位分裂 0/1 两条候选，用 PM 度量路径与 LLR 证据的一致性（本库约定 PM 越小越好）；按 PM 排序剪枝保留最小 L 条——把"选一条"变成"养 L 条"。
+
+(3) **PM 更新。** LLR 域精确式 $\Delta PM(b,L)=\ln(1+\exp(-(1-2b)L))$；工程近似：候选与硬判决一致则 $\Delta PM\approx 0$、不一致则 $\Delta PM\approx |L|$——只需比较符号加绝对值。冻结位不分裂、不更新 PM。
+
+(4) **工程含义。** $L=1$ 退化为 SC；NR 工程常用 $L=8$；$L$ 翻倍时 f/g 计算、LLR 状态、路径存储与复制带宽都近似线性增长。
+
+(5) **边界。** PM 最小的路径不一定输出——最终由 CRC（CA-SCL）决定；SCL 与 PM 公式是接收机实现选择，协议只规定码结构。
 
 ## 科学定义
 
@@ -51,6 +65,15 @@ $N=4,\ L=2$ 的路径表走读：$u_0,u_1$ 为冻结位（强制 0，PM 不变�
 - TS 38.212 §5.3.1 Polar coding、§5.3.1.2 Polar sequence：决定信息集/冻结集与译码树结构。本地：`3GPP_Rel19/processed/TS_38.212_38212-j30/content.md` 行 815-943。
 - TS 38.212 §5.4.1 Polar rate matching：译码前 rate recovery 的协议依据。本地：`content.md` 行 1019-1125。SCL/PM 公式为非 3GPP 标准的接收机算法。
 - 讲义：`docs/L2_协议算法/T10.5_Polar_SCL_decoding.md`；SC 基础见 `docs/L2_协议算法/T10.4_Polar_SC_decoding.md`。
+
+## 关键要点
+
+1. SCL = 每个信息位保留 0/1 两候选，PM 排序剪枝留 L 条。
+2. PM 越小越好（负对数似然惩罚）——方向反了剪枝全错。
+3. 冻结位不分裂、不更新 PM；L=1 退化为 SC。
+4. 工程近似：与硬判决一致 ΔPM≈0、不一致 ΔPM≈|L|。
+5. L=8 是 NR 工程常用值；复杂度随 L 近似线性。
+6. 最终输出由 CRC 决定，PM 最小路径可能 CRC 不过。
 
 ## 图谱关联
 
