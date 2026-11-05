@@ -17,11 +17,23 @@ source_spec: "TS 36.211 §7.1; TS 38.211 §5.1"
 
 # 调制星座
 
-调制星座将比特组映射为复基带符号。LTE/NR 支持 BPSK（二进制相移键控，Binary Phase Shift Keying）、QPSK（正交相移键控，Quadrature Phase Shift Keying）、16QAM、64QAM 和 256QAM（正交幅度调制，Quadrature Amplitude Modulation, QAM；NR 下行最高阶），使用格雷映射（Gray Mapping）使相邻星座点仅差 1 bit。
+调制星座将比特组映射为复基带符号。LTE/NR 支持 BPSK（二进制相移键控，Binary Phase Shift Keying）、QPSK（正交相移键控，Quadrature Phase Shift Keying）、16QAM、64QAM 和 256QAM（正交幅度调制，Quadrature Amplitude Modulation, QAM；NR 下行最高阶），使用格雷映射（Gray Mapping）使相邻星座点仅差 1 bit。一句话本质：**星座是"城市地图上的规则格点"，格雷编码让相邻"门牌"只差一位数字——噪声把符号推到相邻格点时最多只错 1 个比特；阶数越高格点越密，越界越容易**。
 
 ## 独立解释任务
 
 任务目标：解释各阶星座的结构与能量归一化，以及星座几何如何决定软解调 LLR 的计算方式。
+
+## 起源与演进
+
+(1) **起点：比特到波形的编码。** 比特组需要映射成复基带符号——星座就是这张映射表。
+
+(2) **格雷映射。** 相邻星座点仅差 1 bit：噪声把符号推到相邻格点时最多错 1 bit——不能消除符号错误，但最小化比特错误。
+
+(3) **能量归一化。** 16QAM 未归一化坐标 $\{\pm1,\pm3\}$ 平均能量 10 → 归一化为 $\{\pm1/\sqrt{10},\ \pm3/\sqrt{10}\}$——平均能量恒为 1。
+
+(4) **阶数与 SNR。** 阶数越高格点越密：同样噪声下越容易越界——高阶调制需要更高的信噪比。
+
+(5) **边界。** 16QAM 及以上 I/Q 不再独立——LLR 需在星座子集上求最小距离；$L=2y/\sigma^2$ 只对 BPSK 成立。
 
 ## 科学定义
 
@@ -57,6 +69,15 @@ $$L(b_k) \approx \frac{1}{\sigma^2}\left( \min_{s:\; b_k=0} |y-s|^2 - \min_{s:\;
 - LTE：TS 36.211 Rel-19 `36211-j30_s06-s08` §7.1.1 BPSK、§7.1.2 QPSK、§7.1.3 16QAM、§7.1.4 64QAM、§7.1.5 256QAM。
 - NR：TS 38.211 Rel-19 `38211-j30` §5.1.2 BPSK、§5.1.3 QPSK、§5.1.4 16QAM、§5.1.5 64QAM、§5.1.6 256QAM。
 - 本地锚点：`3GPP_Rel19/processed/TS_36.211_36211-j30_s06-s08/sections.jsonl`、`content.md`；`3GPP_Rel19/processed/TS_38.211_38211-j30/sections.jsonl`、`content.md`。
+
+## 关键要点
+
+1. 星座 = 比特组 → 复符号的映射表；平均能量归一化为 1。
+2. 格雷映射：相邻点仅差 1 bit——噪声越界时最多错 1 bit。
+3. 阶数↑格点密↑：同样噪声越容易越界，需要更高 SNR。
+4. 16QAM+ 的 I/Q 不再独立——QPSK 才能拆两路独立 BPSK。
+5. L = 2y/σ² 只对 BPSK 成立。
+6. 星座几何决定软解调 LLR 的计算方式。
 
 ## 图谱关联
 
