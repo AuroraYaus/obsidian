@@ -16,11 +16,23 @@ queries: 1
 
 # PCCPCH 主公共控制物理信道
 
-PCCPCH（主公共控制物理信道，Primary Common Control Physical Channel）是承载广播信道 BCH 的下行公共物理信道，存在于 TD-SCDMA（写 PCCPCH）与 WCDMA（写 P-CCPCH）两代 3G 制式中——它是 UE 开机后读到的第一块系统信息的物理载体，与 P-CPICH（主公共导频信道）一字之差、职能相反。
+PCCPCH（主公共控制物理信道，Primary Common Control Physical Channel）是承载广播信道 BCH 的下行公共物理信道，存在于 TD-SCDMA（写 PCCPCH）与 WCDMA（写 P-CCPCH）两代 3G 制式中——它是 UE 开机后读到的第一块系统信息的物理载体，与 P-CPICH（主公共导频信道）一字之差、职能相反。一句话本质：**PCCPCH 是小区门口的"公告栏"——内容人人可读、位置固定；"怎么把字读清楚"靠旁边那盏常亮灯（P-CPICH 导频）**。
 
 ## 独立解释任务
 
 任务目标：解释 PCCPCH 在两代 3G 制式中的形态差异（TD-SCDMA 与 WCDMA 参数不同）、它与 BCH 的承载关系、与 P-CPICH 的一字之差辨析，以及知识库 36.133 里 PCCPCH RSCP 测量的由来。
+
+## 起源与演进
+
+(1) **起点：3G 时代广播的第一站。** UE 开机后第一块要读的系统信息需要一个物理载体——PCCPCH（TD-SCDMA）/P-CCPCH（WCDMA）承载 BCH。
+
+(2) **两代 3G 形态差异。** TD-SCDMA：固定 TS0 时隙、双 SF=16 码道、QPSK、小区最大功率；WCDMA：30 kbps、SF=256、码道 $C_{\mathrm{ch},256,1}$——紧邻 P-CPICH 的 $C_{\mathrm{ch},256,0}$。
+
+(3) **无导频设计。** 公共信道不携带导频符号，信道估计统一借用 P-CPICH——"载数据 vs 供参考"的配对。
+
+(4) **与 P-CPICH 一字之差。** 名字相邻、码道相邻、职能相反——信道缩写混淆的经典来源。
+
+(5) **继任者。** LTE/NR 用 PBCH 承载 MIB 取代之；PCCPCH 只留在 3G 制式与 36.133 的 UTRA 互操作测量里。
 
 ## 科学定义
 
@@ -47,6 +59,15 @@ PCCPCH（主公共控制物理信道，Primary Common Control Physical Channel�
 - 主定义：TS 25.211（WCDMA 物理信道与映射）§5.3.3 下行公共物理信道族（P-CCPCH）；TD-SCDMA 物理信道见 TS 25.221（1.28 Mcps TDD）。**本地 processed 库未收录 TS 25 系列**（仅 36/38 系列），本节以本地 36.133 互操作测量为锚点。
 - 本地锚点：TS 36.133（Rel-19 j50）§8.1.2.4.3（E-UTRAN TDD – UTRAN TDD 测量，P-CCPCH RSCP 测量与 1.28 Mcps TDD 参数），本地 `3GPP_Rel19/processed/TS_36.133_36133-j50_s00-11/full.md:14844` 起。
 - 演进对照：LTE/NR 广播承载 PBCH——TS 36.211 §6.6（本地 `TS_36.211_36211-j30_s06-s08`）与 TS 38.211 §7.3.3（本地 `TS_38.211_38211-j30`）。
+
+## 关键要点
+
+1. PCCPCH 承载 BCH 广播数据，是 3G 时代的"公告栏"。
+2. 两代 3G 形态不同：TD-SCDMA（TS0/SF16 双码道）vs WCDMA（30 kbps/SF256）。
+3. 不携带导频——信道估计统一借 P-CPICH。
+4. 与 P-CPICH 一字之差：载数据 vs 供参考，码道相邻（0/1）。
+5. LTE/NR 用 PBCH 取代——PCCPCH 只留在 3G 与互操作测量。
+6. 本地 processed 未收录 TS 25 系列，以 36.133 测量为锚。
 
 ## 图谱关联
 

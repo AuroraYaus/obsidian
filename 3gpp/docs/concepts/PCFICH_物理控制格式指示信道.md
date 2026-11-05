@@ -16,11 +16,23 @@ queries: 1
 
 # PCFICH 物理控制格式指示信道
 
-PCFICH（物理控制格式指示信道，Physical Control Format Indicator Channel）是 LTE 下行物理信道：每个子帧第 1 个 OFDM 符号上的 16 个资源元素（RE）承载 CFI（控制格式指示），告诉 UE 本子帧控制区域（PDCCH 的地盘）占用几个 OFDM 符号——它是 UE 解码 PDCCH 之前必须先读的第一块"路牌"。
+PCFICH（物理控制格式指示信道，Physical Control Format Indicator Channel）是 LTE 下行物理信道：每个子帧第 1 个 OFDM 符号上的 16 个资源元素（RE）承载 CFI（控制格式指示），告诉 UE 本子帧控制区域（PDCCH 的地盘）占用几个 OFDM 符号——它是 UE 解码 PDCCH 之前必须先读的第一块"路牌"。一句话本质：**PCFICH 是商场门口的"今日开放楼层"告示牌——牌子固定、内容就一个数（控制区域占几个符号）、人人都能先读到，读完才知道去哪层（PDCCH）找货**。
 
 ## 独立解释任务
 
 任务目标：解释 PCFICH 为什么是 LTE 下行接收的"先决信道"——它承载什么信息、放在哪里、怎么编码、UE 为什么必须先解它，以及 NR 为什么把这个角色整个删掉了。
+
+## 起源与演进
+
+(1) **起点：LTE 控制区域的动态宽度。** PDCCH 占几个 OFDM 符号每子帧可变——UE 必须先知道这个数才能定位 PDCCH 开始盲检。
+
+(2) **CFI 编码与映射。** CFI（1/2/3，窄带宽 2/3/4）查表编码为 32 bit 码字、QPSK 得 16 符号，组成 4 个 REG 均匀分散在第一个符号全带宽上——分散是可靠性的设计来源。
+
+(3) **先决性。** 位置固定、无需盲检、第一符号——解 PCFICH 是解 PDCCH 的前提。
+
+(4) **起始位置由小区 ID 决定（$v_{\mathrm{shift}} = N_{\mathrm{ID}}^{\mathrm{cell}} \bmod 6$）**——相邻小区错开、互不重叠。
+
+(5) **NR 的删除逻辑。** CORESET 是频域资源块、由 MIB 的 pdcch-ConfigSIB1 直接指示——不需要每子帧动态指示符号数，PCFICH 被收编。
 
 ## 科学定义
 
@@ -48,6 +60,15 @@ PCFICH（物理控制格式指示信道，Physical Control Format Indicator Chan
 - LTE PCFICH 物理结构：TS 36.211（Rel-19 j30）§6.7（§6.7.1 加扰、§6.7.2 调制、§6.7.4 RE 映射），本地 `3GPP_Rel19/processed/TS_36.211_36211-j30_s06-s08/content.md:857` 起。
 - CFI 信道编码：TS 36.212（Rel-19 j30）§5.3.4（§5.3.4.1 channel coding + Table 5.3.4-1 CFI 32 bit 码字），本地 `3GPP_Rel19/processed/TS_36.212_36212-j30/content.md:5583` 起。
 - NR 对照（无 PCFICH）：PDCCH/CORESET 见 TS 38.211 §7.3.2（本地 `TS_38.211_38211-j30`）；MIB 的 pdcch-ConfigSIB1 字段见 TS 38.331 §6.2.2（本地 `TS_38.331_38331-j20`）。
+
+## 关键要点
+
+1. PCFICH 只承载 CFI 一个数——控制区域符号数。
+2. 位置固定（小区 ID 决定）、无需盲检——盲检发生在 PDCCH。
+3. 4 个 REG 均匀分散第一符号——抗窄带干扰。
+4. CFI 是控制开销与数据容量的折中，不是越大越好。
+5. NR 删除 PCFICH——CORESET 由 MIB 直接指示。
+6. 解 PCFICH 依赖 CRS 信道估计。
 
 ## 图谱关联
 
