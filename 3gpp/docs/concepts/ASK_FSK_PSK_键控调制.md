@@ -14,11 +14,23 @@ source_spec: "TS 38.211 Rel-19 §5.1; 通信原理教材背景知识"
 
 # ASK FSK PSK 键控调制
 
-数字调制把二进制比特"画"到载波上。正弦载波有三个可变的参数——幅度 A、频率 f、相位 φ——键控调制（Keying）就是分别用比特去控制这三个参数：ASK（幅度键控，Amplitude Shift Keying）控幅度、FSK（频移键控，Frequency Shift Keying）控频率、PSK（相移键控，Phase Shift Keying）控相位。LTE/NR 实际使用的是 PSK 家族的 BPSK（二进制相移键控，Binary Phase Shift Keying）/QPSK（正交相移键控，Quadrature Phase Shift Keying）以及 QAM（正交幅度调制，Quadrature Amplitude Modulation），但 ASK/FSK 是理解"为什么是 PSK 胜出"的对照基础。
+数字调制把二进制比特"画"到载波上。正弦载波有三个可变的参数——幅度 A、频率 f、相位 φ——键控调制（Keying）就是分别用比特去控制这三个参数：ASK（幅度键控，Amplitude Shift Keying）控幅度、FSK（频移键控，Frequency Shift Keying）控频率、PSK（相移键控，Phase Shift Keying）控相位。LTE/NR 实际使用的是 PSK 家族的 BPSK（二进制相移键控，Binary Phase Shift Keying）/QPSK（正交相移键控，Quadrature Phase Shift Keying）以及 QAM（正交幅度调制，Quadrature Amplitude Modulation），但 ASK/FSK 是理解"为什么是 PSK 胜出"的对照基础。一句话本质：**三种键控是"三种提问方式"——ASK 灯亮=1 灯灭=0（幅度）、FSK 高音=1 低音=0（频率）、PSK 点头=1 摇头=0（相位）；点头摇头与幅度无关所以抗干扰最强，这正是 PSK 胜出的直觉**。
 
 ## 独立解释任务
 
 任务目标：讲清 ASK/FSK/PSK 三种键控调制的原理、信号表达式、解调方式与性能差异，说明 PSK 家族如何演进到 BPSK/QPSK 再到 QAM，并衔接知识库既有调制内容（T2.13 软解调、T2.14 QAM）。
+
+## 起源与演进
+
+(1) **起点：比特怎么"画"到载波上。** 正弦载波只有三个可调参数——幅度/频率/相位——键控调制就是用比特控制这三个参数。
+
+(2) **三种键控。** ASK 控幅度（灯亮=1 灯灭=0）；FSK 控频率（高音=1 低音=0）；PSK 控相位（点头=1 摇头=0）。
+
+(3) **性能排序。** AWGN 下 PSK 优于 FSK 优于 ASK：星座点欧氏距离 PSK 最大；ASK 一个点落在原点、衰落信道极易淹没；FSK 占两个频点、带宽代价高。
+
+(4) **PSK 的代价。** 需要载波相位同步（解调复杂度最高）——深衰落/非相干场景 FSK（GMSK）仍有优势。
+
+(5) **家族演进。** BPSK → QPSK → 8PSK → QAM（幅度+相位联合）：LTE/NR 数据用 QAM、控制用 BPSK/QPSK（可靠性优先）——QAM 是 PSK 的推广。
 
 ## 科学定义
 
@@ -104,6 +116,15 @@ classDef default fill:#F7F9FC,stroke:#C9D4DF,color:#17212F;
 - LTE 调制映射：TS 36.211 §7.1（本地 `TS_36.211_*`）。
 - GMSK 为 GSM（2G）调制：**非 3GPP LTE/NR 制式，本地无 GSM 资料，仅作背景对照**。
 - 误码率理论：AWGN 下 BPSK 误比特率 $P_b = Q(\sqrt{2E_b/N_0})$（通信原理教材背景，非协议强制）。
+
+## 关键要点
+
+1. 键控 = 用比特控制载波三参数：ASK（幅度）/FSK（频率）/PSK（相位）。
+2. 性能：PSK > FSK > ASK（欧氏距离 PSK 最大）。
+3. ASK 原点易淹、FSK 占两频点——PSK 胜出但需相位同步。
+4. 非相干场景 FSK（GMSK/GSM）仍有优势。
+5. QAM 是 PSK 推广：先键相位再加幅度。
+6. LTE/NR：数据 QAM、控制 BPSK/QPSK（可靠性优先）。
 
 ## 图谱关联
 
