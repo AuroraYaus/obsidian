@@ -14,11 +14,23 @@ source_spec: "TS 38.211 Rel-19 §4/§5; TS 36.211; 教材背景知识"
 
 # Multiple Access 多址接入
 
-多址接入（Multiple Access）解决"多个用户如何共享同一段无线频谱"的问题。历史上出现过四类主流方案：FDMA（频分多址）、TDMA（时分多址）、CDMA（码分多址）、OFDMA（正交频分多址）——它们分别在频率、时间、码、子载波四个维度上给用户划分互不干扰的资源。LTE/NR 最终选择了 OFDMA（下行）/SC-FDMA（上行，单载波频分多址，Single Carrier Frequency Division Multiple Access），这个选择是 1G 到 5G 演进的技术收敛。
+多址接入（Multiple Access）解决"多个用户如何共享同一段无线频谱"的问题。历史上出现过四类主流方案：FDMA（频分多址）、TDMA（时分多址）、CDMA（码分多址）、OFDMA（正交频分多址）——它们分别在频率、时间、码、子载波四个维度上给用户划分互不干扰的资源。LTE/NR 最终选择了 OFDMA（下行）/SC-FDMA（上行，单载波频分多址，Single Carrier Frequency Division Multiple Access），这个选择是 1G 到 5G 演进的技术收敛。一句话本质：**多址是"分蛋糕"——FDMA 分车道、TDMA 红绿灯轮放、CDMA 大厅里各讲各的语言、OFDMA 停车场划格子；四代方案在频/时/码/子载波四个维度切资源**。
 
 ## 独立解释任务
 
 任务目标：讲清 FDMA/TDMA/CDMA/OFDMA 四种多址方式各自的资源划分原理、代表系统、优缺点，解释为什么 LTE/NR 在 4G/5G 时代选择了 OFDMA 而不是 CDMA。
+
+## 起源与演进
+
+(1) **起点：一个基站要同时服务多个手机。** 物理层能区分用户的维度只有四个：频率/时间/码/子载波——四代多址本质是"把资源网格切成互不干扰的块分给用户"。
+
+(2) **FDMA → TDMA。** 1G 分频段（保护带浪费）；2G 的 GSM 是 FDMA+TDMA 结合（200 kHz 频带内 8 时隙）——频谱效率提升，代价是全网时钟同步。
+
+(3) **CDMA 的兴衰。** 3G 同频同时用码区分：抗窄带干扰、软切换、复用因子可为 1——但远近效应要求快速功控、容量受多用户干扰限制（呼吸效应）。
+
+(4) **OFDMA 的胜出。** 子载波正交重叠、无需保护带；RB 粒度支持频率选择性调度与 MIMO 波束成形——这是 LTE/NR 弃 CDMA 选 OFDMA 的三个原因。
+
+(5) **代价与边界。** OFDMA 对频偏敏感（ICI，T2.8）、PAPR 高（上行用 SC-FDMA 缓解）；OFDM 是单用户调制、OFDMA 是多址方案——别混。
 
 ## 科学定义
 
@@ -110,6 +122,15 @@ FDMA 是分车道：每辆车独占一条车道；TDMA 是红绿灯轮放：一�
 - SC-FDMA：TS 36.211 §5.6（LTE 上行）、TS 38.211 §5.4（NR 上行 DFT-s-OFDM）。
 - 调度粒度 RB/资源分配：TS 38.214 §5.1（本地 `TS_38.214_38214-j30`）。
 - WCDMA（TS 25.213）为 3G 制式：**本地 3GPP_Rel19 无 TS 25 系列资料，锚点仅指标准，不核验**。
+
+## 关键要点
+
+1. 四代多址：FDMA（频）/TDMA（时）/CDMA（码）/OFDMA（子载波）。
+2. GSM = FDMA+TDMA 结合；WCDMA = CDMA（3.84 Mcps、5 MHz）。
+3. CDMA 的致命伤：远近效应 + 呼吸效应——弃用是工程权衡。
+4. OFDMA 三胜因：调度规避干扰/频选调度+MIMO/接收机简单。
+5. OFDMA 代价：频偏敏感（ICI）+ 高 PAPR（上行 SC-FDMA）。
+6. OFDM ≠ OFDMA：单用户调制 vs 多址方案。
 
 ## 图谱关联
 
