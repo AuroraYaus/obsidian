@@ -15,11 +15,23 @@ source_spec: "TS 38.211 Rel-19 §7.4.2/§7.4.3; TS 36.211 §6.11"
 
 # PSS SSS 同步信号与小区搜索
 
-同步信号（PSS/SSS）是 UE 开机后第一个要找的东西：PSS（主同步信号，Primary Synchronization Signal）与 SSS（辅同步信号，Secondary Synchronization Signal）一起让 UE 完成符号/帧定时、频率粗同步并推导物理小区 ID，随后才能解 PBCH（物理广播信道，Physical Broadcast Channel）拿到系统信息。小区搜索（Cell Search）就是"沿同步栅格扫频 → 找 PSS/SSS → 推小区 ID → 读 PBCH"的完整流程——它是全链路的第一步，也是 [[Spectrum_and_Frequency_Point_频谱与频点]] 中同步栅格设计的落地场景。
+同步信号（PSS/SSS）是 UE 开机后第一个要找的东西：PSS（主同步信号，Primary Synchronization Signal）与 SSS（辅同步信号，Secondary Synchronization Signal）一起让 UE 完成符号/帧定时、频率粗同步并推导物理小区 ID，随后才能解 PBCH（物理广播信道，Physical Broadcast Channel）拿到系统信息。小区搜索（Cell Search）就是"沿同步栅格扫频 → 找 PSS/SSS → 推小区 ID → 读 PBCH"的完整流程——它是全链路的第一步，也是 [[Spectrum_and_Frequency_Point_频谱与频点]] 中同步栅格设计的落地场景。一句话本质：**小区搜索像"深夜在陌生城市找电台"——按频率表（同步栅格）扫一圈找到有信号的频道（PSS），听台呼确认是哪个台（SSS），再听报站信息（PBCH/MIB）**。
 
 ## 独立解释任务
 
 任务目标：讲清 PSS/SSS 的作用、序列结构与小区 ID 推导、SSB（同步信号块，Synchronization Signal Block）的时频结构，以及小区搜索流程如何与同步栅格、定时同步（T2.7）和频偏同步（T2.8）衔接。
+
+## 起源与演进
+
+(1) **起点：UE 开机时一无所知。** 不知道小区频率、定时、小区 ID 的任何信息——必须从零建立同步。
+
+(2) **三步功能。** PSS 给粗定时 + 粗频偏 + N_ID2；SSS 给帧定时 + N_ID1；两者合出小区 ID（3×336 = 1008）。
+
+(3) **序列设计。** NR PSS 用 127 长 m 序列（3 个取值）、SSS 双 m 序列交织（336 个取值）；LTE PSS 用 ZC 序列——两代序列不同、ID 推导逻辑相同。
+
+(4) **SSB 一体化。** SSB = PSS+SSS+PBCH+PBCH DM-RS（4 符号 × 240 子载波）——同步与广播一体；频域位置由同步栅格（GSCN）决定。
+
+(5) **边界。** PSS 只给符号级粗同步，精细同步靠 T2.7/T2.8 跟踪环；小区 ID 由 PSS/SSS 直接推导，不从 PBCH 读。
 
 ## 科学定义
 
@@ -76,6 +88,15 @@ classDef default fill:#F7F9FC,stroke:#C9D4DF,color:#17212F;
 - LTE PSS/SSS：TS 36.211（Rel-19 j30）§6.11，本地 `TS_36.211_*`。
 - 同步栅格/GSCN：TS 38.101-1 §5.4.3.1（本地 `TS_38.101_38101-1-j60_s00-0504/content.md` 1141 行起，已核验）。
 - 与接收链路衔接：T2.7（定时同步）、T2.8（CFO/SFO）——PSS/SSS 相关峰是它们的输入。
+
+## 关键要点
+
+1. 小区搜索是全链路第一步：扫栅格 → PSS → SSS → PBCH。
+2. PSS 给粗定时/粗频偏/N_ID2；SSS 给帧定时/N_ID1。
+3. 小区 ID = 3N_ID1 + N_ID2（NR 1008 个、LTE 504 个）。
+4. SSB = PSS+SSS+PBCH+DM-RS，4 符号×20 RB，位置由 GSCN 定。
+5. 小区 ID 由 PSS/SSS 直接推导，PBCH 只给帧号等系统信息。
+6. PSS/SSS 相关峰是 T2.7/T2.8 跟踪环的输入。
 
 ## 图谱关联
 
