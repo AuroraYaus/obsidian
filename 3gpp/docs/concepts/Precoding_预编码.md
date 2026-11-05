@@ -15,11 +15,23 @@ source_spec: "TS 38.211 Rel-19 §7.3.1.4; TS 38.214 Rel-19 §5.1"
 
 # Precoding 预编码
 
-预编码是 MIMO 发射链路的步骤：把层（layer）上的 QAM 符号通过矩阵 P 映射到天线端口，每 RE 的操作为 $\mathbf{y} = \mathbf{P} \cdot \mathbf{x}$（x 是层符号 Nlayers×1，P 是 Nports×Nlayers，y 是端口符号）。
+预编码是 MIMO 发射链路的步骤：把层（layer）上的 QAM 符号通过矩阵 P 映射到天线端口，每 RE 的操作为 $\mathbf{y} = \mathbf{P} \cdot \mathbf{x}$（x 是层符号 Nlayers×1，P 是 Nports×Nlayers，y 是端口符号）。一句话本质：**预编码是"分线器"——层是传送带、天线是出口，矩阵决定每条带上的货怎么分到各出口，功率归一化保证总量不超标**。
 
 ## 独立解释任务
 
 任务目标：解释预编码与层映射的分工，以及为什么接收端不需要知道预编码矩阵。
+
+## 起源与演进
+
+(1) **起点：层与天线不是一回事。** 层是逻辑数据流（数量 ≤ 信道秩），天线是物理出口（数量 = 硬件通道）——两者数量与含义都不同，必须有一个映射把它们接起来。
+
+(2) **分工：层映射与预编码两步。** 层映射管"符号分到哪一层"，预编码管"每层符号怎么加权到每根天线"——每 RE 的操作 $\mathbf{y}=\mathbf{P}\cdot\mathbf{x}$，两步两个矩阵。
+
+(3) **三种开环预编码器。** DFT（列正交、均匀铺开波束）、Hadamard（±1、实现最简）、Identity（层数 ≤ 天线数时直接映射）；矩阵做 Frobenius 归一化保证总发射功率与层数无关。
+
+(4) **DMRS 透明性。** DMRS 也经过预编码，接收端估计的是层域等效信道 H·P——因此**不需要知道 P 本身**，这是"透明"二字的含义。
+
+(5) **边界。** 层数 ≤ 秩 ≤ min(Ntx, Nrx)：天线多但信道秩低时层数上不去；矩阵选择影响波束与干扰特性。
 
 ## 科学定义
 
@@ -54,6 +66,15 @@ $$\mathbf{y}_{\text{port}} = \mathbf{P} \cdot \mathbf{x}_{\text{layer}}$$
 - 层数/码本：TS 38.214 Rel-19 §5.1。
 - 本地锚点：`3GPP_Rel19/processed/TS_38.211_38211-j30/content.md`。
 - 仿真器实现：`+phy/+mimo/build_dft_precoder.m`、`build_hadamard_precoder.m`、`build_identity_precoder.m`、`precode_resource_grid.m`。
+
+## 关键要点
+
+1. 预编码 = 层域→天线域的线性映射，每 RE 做 y = P·x。
+2. 与层映射分工：层映射管分发（符号→层），预编码管加权（层→端口）。
+3. 三种开环器：DFT（正交铺开）/Hadamard（最简）/Identity（直通）；Frobenius 归一化保功率。
+4. DMRS 透明性：接收端估计 H·P，无需知道 P。
+5. 层数 ≤ 秩 ≤ min(Ntx,Nrx)。
+6. MIMO 发射链三连步：层映射 → 预编码 → RE 映射。
 
 ## 图谱关联
 
