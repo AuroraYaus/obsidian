@@ -21,6 +21,10 @@ DCI（下行控制信息，Downlink Control Information）是基站下发给 UE 
 
 任务目标：讲清 DCI 的格式体系（0_0/0_1/1_0/1_1/2_x）、核心字段语义（资源分配/MCS/HARQ/NDI/RV/TPC（发射功率控制命令，Transmit Power Control Command））、CRC 与 RNTI（无线网络临时标识，Radio Network Temporary Identifier）加扰，以及 DCI 解析如何映射到译码器 descriptor（与 T9.0 衔接）。
 
+## 起源与演进
+
+UE 收数据前必须知道"给不给、在哪、怎么收"，这些信息不能塞进数据信道——于是需要独立的控制信息 DCI 与承载它的控制信道 PDCCH。DCI 分上行授权（UL grant，0_x 格式）与下行分配（DL assignment，1_x 格式）两大类，末尾 0/1 表示基础版/增强版；核心字段包括频域/时域资源分配（含跨时隙偏移 k0/k2）、MCS、HARQ 进程号、NDI、RV、TPC。DCI 尾部 CRC 用 RNTI 加扰——身份藏在锁芯里（38.321 §7.1 RNTI 值表），UE 盲检 PDCCH、逐个 RNTI 解扰认领。解析后的字段直接生成译码器 descriptor（T9.0）：MCS 查调制表、资源分配定 RE 与 LLR 长度、NDI/RV 定软缓存是清空还是合并。两代差异：NR（38.212 §7.3）格式更丰富（0_1/1_1 支持 CBG/波束/多载波等），LTE（36.212 §5.3.3）格式集较小。
+
 ## 科学定义
 
 ### DCI 格式体系（NR，TS 38.212 §7.3）
@@ -84,6 +88,15 @@ DCI 横跨五层规范，每层回答不同问题——理解协议间联系的�
 | MAC | **身份怎么定**（RNTI 值表，C-RNTI/RA-RNTI/TC-RNTI 等） | TS 38.321 §7.1 |
 
 **联系链**：331 配好"去哪找"（搜索空间与 CORESET）→ 211 定义承载信道 PDCCH 的物理结构 → 212 定义 DCI 格式与字段（"指令长什么样"）→ 213 规定监听与使用时序（"什么时候看、看完何时动作"）→ 321 用 RNTI 标识"指令发给谁"。接收端视角的闭环：T14.1 盲检产出 DCI → T14.2 解析字段 → T9.0 生成译码器 descriptor。
+
+## 关键要点
+
+1. DCI 是调度指令本体，由 PDCCH 承载，与数据信道分离。
+2. 0_x = 上行授权、1_x = 下行分配；NDI 翻转 = 新传，不翻转 = 重传。
+3. DCI 给 MCS + 资源分配，不给 TBS——TBS 由公式/查表算出。
+4. CRC 用 RNTI 加扰，RNTI 就是"收件人"；解扰成功才认领。
+5. DCI 是控制面与译码链路的接口：解析结果直通 descriptor（T9.0）。
+6. 字段位宽随配置变（如 CBGTI 0/2/4/6/8 bit），盲检需在多尺寸间尝试。
 
 ## 图谱关联
 
