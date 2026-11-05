@@ -14,11 +14,23 @@ source_spec: "非 3GPP 标准（6G 候选）; Qualcomm evaluation-link-simulator
 
 # SBPM 整形比特位置映射
 
-SBPM（Shaped Bit Position Mapping）是把 shaped bits 放到 QAM label 幅度位上的置换：ESS 输出的整形 bit 必须落在真正控制星座幅度的 bit 位置，整形才有效。
+SBPM（Shaped Bit Position Mapping）是把 shaped bits 放到 QAM label 幅度位上的置换：ESS 输出的整形 bit 必须落在真正控制星座幅度的 bit 位置，整形才有效。一句话本质：**SBPM 是"排座次的分拣员"——QAM label 是一列有固定职责的座位：sign 位是队长位（必须正负平衡、不允许整形）、幅度位是队员位（概率可调）；ESS 输出的 shaped bits 必须坐到队员位，TX 领位、RX 按同一张座位图还原**。
 
 ## 独立解释任务
 
 任务目标：解释为什么 shaped bits 必须落在 QAM label 的幅度位上，以及 SBPM 的 4^k 块组织、TX/RX 对称操作和与标准交织的区别。
+
+## 起源与演进
+
+(1) **起点：shaped bits 必须坐对位置。** QAM label 每维 1 个 sign 位 + 若干 amplitude 位——只有幅度位控制概率；放错位置整形失效。
+
+(2) **4^k 块组织。** 块大小 $4^k$ 对应 $2k$ 个 shaped bit/符号（16QAM 的 k=1、1024QAM 的 k=4）——1024QAM 的 4 个幅度位是最大舞台。
+
+(3) **TX/RX 对称。** TX deinterleave（重排到幅度位）、RX interleave（逆过程）——两端座位图必须一模一样，否则 bit 顺序错乱。
+
+(4) **与标准交织的区别。** 标准交织是 TS 38.212 §5.4.2.2 的 LDPC bit interleaving（标准步骤）；SBPM 是非标准扩展、叠加其后——对象、位置、目的完全不同。
+
+(5) **与选择性加扰配合。** SBPM 决定"哪些行是 shaped 行"，选择性加扰据此只对非 shaped 行 XOR——同一 bit 组织的两面。
 
 ## 科学定义
 
@@ -46,6 +58,15 @@ QAM label 像一列有固定职责的座位：sign 位是"队长位"（必须正
 - 对照：TS 38.212 §5.4.2.2（标准 bit interleaving）、TS 38.211 §7.3.1.2（调制映射）。
 - **SBPM 本身：非 3GPP 标准，无标准小节**。
 - 仿真器实现：`+mapping/sbpm_interleave.m`、`sbpm_deinterleave.m`。
+
+## 关键要点
+
+1. shaped bits 必须落在幅度位——放到 sign 位整形失效。
+2. block = 4^k：对应 2k 个 shaped bit/符号（1024QAM k=4）。
+3. TX/RX 严格对称：deinterleave/interleave 两端一致。
+4. SBPM ≠ 标准交织——叠加在标准交织之后的非标准扩展。
+5. SBPM 与选择性加扰是同一 bit 组织的两面。
+6. 1024QAM 的 4 个幅度位是 SBPM 的最大舞台。
 
 ## 图谱关联
 
