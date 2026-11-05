@@ -14,11 +14,23 @@ source_spec: "TS 38.211 Rel-19 §7.4.1.2/§6.4.1.2; TS 38.214 Rel-19 §5.1.6.3/�
 
 # PTRS 相位跟踪参考信号
 
-PTRS（相位跟踪参考信号，Phase Tracking Reference Signal）解决高频段的相位噪声问题：毫米波/高频下振荡器相位噪声使接收信号产生公共相位误差（CPE，Common Phase Error），破坏星座旋转。PTRS 提供已知相位基准，接收端用它估计并补偿 CPE。它随数据一起发送（DL 在 PDSCH（物理下行共享信道，Physical Downlink Shared Channel）、UL 在 PUSCH（物理上行共享信道，Physical Uplink Shared Channel）），密度随子载波间隔与调制阶数调整。
+PTRS（相位跟踪参考信号，Phase Tracking Reference Signal）解决高频段的相位噪声问题：毫米波/高频下振荡器相位噪声使接收信号产生公共相位误差（CPE，Common Phase Error），破坏星座旋转。PTRS 提供已知相位基准，接收端用它估计并补偿 CPE。它随数据一起发送（DL 在 PDSCH（物理下行共享信道，Physical Downlink Shared Channel）、UL 在 PUSCH（物理上行共享信道，Physical Uplink Shared Channel）），密度随子载波间隔与调制阶数调整。一句话本质：**PTRS 是"画框上的水平仪"——画家画完后给一条已知水平线，装裱师发现画歪了（CPE）就按水平线整体摆正，画本身不用重画**。
 
 ## 独立解释任务
 
 任务目标：讲清相位噪声问题与 CPE 的影响、PTRS 的补偿原理（相位基准）、时频密度配置（与 SCS（子载波间隔，Subcarrier Spacing）和调制阶数的关系），以及 DL/UL PTRS 的部署差异。
+
+## 起源与演进
+
+(1) **起点：高频段的相位噪声。** FR2 毫米波下振荡器相位噪声显著：所有子载波共享同一相位误差（CPE），星座整体旋转且随符号变化——256QAM 点距小，不补偿则误码率急剧上升。
+
+(2) **原理：已知相位基准。** PTRS 随数据同传，接收端估计 PTRS 位置的相位偏移 → 插值得每个符号的 CPE → 对数据符号做相位旋转校正（去旋转）。
+
+(3) **密度逻辑。** 频域每 K 个 RB 一个（带宽越大 K 越大）；时域每 L 个符号一个（调制阶数越高 L 越小——高阶对相位更敏感）；比 DMRS 稀疏得多——CPE 在频域近似恒定，少量频域点即可插值。
+
+(4) **部署。** DL 随 PDSCH（与 DMRS 端口关联）；UL 随 PUSCH（DFT-s-OFDM 下与变换预编码交互）。
+
+(5) **边界。** 仅配置且调度资源足够时发送；低频也有相位噪声但影响小——FR2 是主场。
 
 ## 科学定义
 
@@ -62,6 +74,15 @@ PTRS 像「画框上的水平仪」：画家（发送端）画完后给一条已
 - UL PTRS：TS 38.211 §6.4.1.2，本地同卷。
 - 密度参数（timeDensity/frequencyDensity）：TS 38.214（Rel-19 j30）§5.1.6.3/§6.2.3，本地 `TS_38.214_38214-j30`。
 - 相位噪声背景：T2.17（`docs/L1_基础/T2.17_OFDM_impairments_to_LLR.md` 手算例子提及）。
+
+## 关键要点
+
+1. PTRS 补偿 CPE（公共相位误差），不是 CSI 测量源。
+2. 原理：已知相位基准 → 估计偏移 → 插值 → 星座去旋转。
+3. 密度自适应：大带宽频域稀疏、高阶调制时域加密。
+4. 随数据同传（PDSCH/PUSCH 内），不独立发送。
+5. FR2 是主要应用场景。
+6. 与 DMRS/CSI-RS 分工：解调/测量/相位补偿各司其职。
 
 ## 图谱关联
 
