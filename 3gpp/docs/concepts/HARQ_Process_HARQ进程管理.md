@@ -15,11 +15,23 @@ source_spec: "TS 38.321 Rel-19 §5.3; TS 38.214 Rel-19 §5.1"
 
 # HARQ Process HARQ 进程管理
 
-HARQ（混合自动重传请求，Hybrid Automatic Repeat Request）进程管理解决「重传怎么组织」：每次传输属于哪个进程、是新传还是重传、软缓存写哪个地址、何时反馈——这些语义由 DCI（下行控制信息，Downlink Control Information）里的 HARQ 进程号与 NDI（新数据指示，New Data Indicator）字段驱动。它是软合并（T4.3/T7.3/T9.3）的调度侧伴侣：没有进程管理，软缓存就不知道把 LLR（对数似然比，Log-Likelihood Ratio）累加到哪。
+HARQ（混合自动重传请求，Hybrid Automatic Repeat Request）进程管理解决「重传怎么组织」：每次传输属于哪个进程、是新传还是重传、软缓存写哪个地址、何时反馈——这些语义由 DCI（下行控制信息，Downlink Control Information）里的 HARQ 进程号与 NDI（新数据指示，New Data Indicator）字段驱动。它是软合并（T4.3/T7.3/T9.3）的调度侧伴侣：没有进程管理，软缓存就不知道把 LLR（对数似然比，Log-Likelihood Ratio）累加到哪。一句话本质：**HARQ 进程是"快递单号"——每包一个单号，标记翻转=新包裹，不翻转=补发；补发时间可固定（LTE）也可自由（NR）**。
 
 ## 独立解释任务
 
 任务目标：讲清 HARQ 进程的编号与状态机、进程数（LTE/NR 差异）、NDI 翻转语义、k0/k1/k2 时序链，以及同步/异步 HARQ 的区别，并衔接软合并与软缓存（T7.3/T9.3/T9.7）。
+
+## 起源与演进
+
+(1) **起点：重传怎么组织？** 一个 TB 等待重传期间，其他传输不能停——必须把"传输-反馈-重传"链组织成可并行交错的单元，这就是 HARQ process。每个进程跟踪一条链的完整生命周期。
+
+(2) **进程语义：DCI 三字段驱动。** HARQ 进程号（3-4 bit）指示本次传输属于哪条链；NDI 与同进程上次值比较——翻转 = 新传（清空软缓存、覆盖写），不翻转 = 重传（增量写、LLR 相加）；RV 决定重传取哪段冗余。同一进程的重传与初传共享软缓存地址。
+
+(3) **进程数：LTE 同步 vs NR 异步。** LTE 同步 HARQ：重传固定 8 ms 后发生，进程号可由时间推导（FDD 8 进程）；NR 异步 HARQ：调度器自由安排重传时间，进程号必须显式携带（2-16，常见 16）——用信令开销换调度灵活性，这是两代最显眼的机制差异之一。
+
+(4) **时序链：k0/k1/k2。** PDCCH →(k0)→ PDSCH →(k1)→ PUCCH ACK；UL grant →(k2)→ PUSCH。默认值：k0=0、k2=j、k1 无固定默认——由 DCI 字段或 RRC 的 dl-DataToUL-ACK 指示。
+
+(5) **失败兜底。** maxHARQ-Tx 到顶 → 停止重传、数据交上层；RLC 层的 ARQ（AM 模式）在 HARQ 之上再兜一层——HARQ 失败不等于数据丢失。
 
 ## 科学定义
 
@@ -80,10 +92,19 @@ HARQ 进程像「快递单号」：每个包裹（TB（传输块，Transport Blo
 - HARQ-ACK 时序：TS 38.213（Rel-19 j30）§9.1，本地 `TS_38.213_38213-j30`。
 - 软合并语义：[[HARQ_混合自动重传请求]]、T7.3/T9.3（`docs/L2_协议算法/`）、T9.7（CB 增量写）。
 
+## 关键要点
+
+1. HARQ process 把"传输-反馈-重传"链组织成可并行单元。
+2. NDI 必须与同进程上次值比较：翻转=新传、不翻转=重传。
+3. LTE 同步 HARQ（固定 8 ms，进程号可推导）；NR 异步（调度自由，进程号显式）。
+4. 时序链：k0（PDCCH→PDSCH）、k1（PDSCH→ACK）、k2（grant→PUSCH）。
+5. 进程数是协议概念、软缓存大小是工程概念——两者不相等。
+6. HARQ 失败 ≠ 数据丢失：RLC ARQ 在上层兜底。
+
 ## 图谱关联
 
-- - [[T16.1_scheduler_HARQ_process|T16.1 调度与 HARQ 讲义]]
-[[概念图谱入口]]
+- [[T16.1_scheduler_HARQ_process|T16.1 调度与 HARQ 讲义]]
+- [[概念图谱入口]]
 - [[HARQ_混合自动重传请求]]
 - [[DCI_下行控制信息]]
 - [[PUCCH_上行控制信道与UCI]]
