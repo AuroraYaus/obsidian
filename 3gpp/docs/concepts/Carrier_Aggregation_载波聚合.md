@@ -14,11 +14,23 @@ source_spec: "TS 38.300 Rel-19 §5.4; TS 38.213 Rel-19 §10"
 
 # Carrier Aggregation 载波聚合
 
-载波聚合（Carrier Aggregation, CA）把多个载波（CC，分量载波，Component Carrier）聚合起来服务同一 UE：一个主载波（PCell，主小区，Primary Cell）管连接与移动性，多个辅载波（SCell，辅小区，Secondary Cell）加带宽提吞吐。CA 是吞吐扩展的机制——单载波带宽受限（FR1（频率范围 1，Frequency Range 1）100 MHz），聚合多个 CC 可达数百 MHz。每载波有独立的 HARQ（混合自动重传请求，Hybrid Automatic Repeat Request）进程与调度，跨载波调度经 CIF（载波指示字段，Carrier Indicator Field）指示。
+载波聚合（Carrier Aggregation, CA）把多个载波（CC，分量载波，Component Carrier）聚合起来服务同一 UE：一个主载波（PCell，主小区，Primary Cell）管连接与移动性，多个辅载波（SCell，辅小区，Secondary Cell）加带宽提吞吐。CA 是吞吐扩展的机制——单载波带宽受限（FR1（频率范围 1，Frequency Range 1）100 MHz），聚合多个 CC 可达数百 MHz。每载波有独立的 HARQ（混合自动重传请求，Hybrid Automatic Repeat Request）进程与调度，跨载波调度经 CIF（载波指示字段，Carrier Indicator Field）指示。一句话本质：**CA 是"多车道并道"——单车道限速就并成高速；主车道指挥、辅车道跑货，每条车道独立计程**。
 
 ## 独立解释任务
 
 任务目标：讲清 CA 的原理（多 CC 聚合）、PCell/SCell 的角色分工、跨载波调度（CIF）机制、每载波独立 HARQ/调度的含义，以及 CA 与 BWP（带宽部分，Bandwidth Part）的关系。
+
+## 起源与演进
+
+(1) **起点：单载波带宽不够用。** FR1 单载波最大 100 MHz、FR2 最大 400 MHz——要更粗的水管，只能并车道：把多个载波聚合给同一个 UE，吞吐逐载波叠加。这正是 CA 的存在理由：带宽受频谱规划约束，聚合受协议约束。
+
+(2) **结构：主辅分工。** PCell 管连接与移动性（RRC 连接、随机接入都在这里），SCell 纯数据承载、由 MAC CE 激活/去激活——"一个管方向，一群管运货"。这种分工让加带宽像加车厢一样灵活：按需激活、按需释放。
+
+(3) **跨载波调度：控制集中、数据分散。** 默认 DCI 只调度本载波；配置 3-bit CIF 后，PDCCH 可以在载波 A 上调度载波 B 的 PDSCH/PUSCH——UE 只需在一个载波盲检控制信道，省电、省盲检预算，代价是 PDCCH 设计复杂度上升。
+
+(4) **独立王国：每载波独立 HARQ/调度。** 每个 CC 是独立调度域，MCS/资源分配/HARQ 进程逐载波独立配置——一个 TB 通常只在一个 CC 上传输。这保证了各载波的链路自适应互不拖累。
+
+(5) **演进与边界。** 双连接（DC）是跨基站的 CA（MCG/SCG 两个小区组）；CA 内部每个 CC 还能再切 BWP——"聚合-子带"两级频域组织。LTE 自 Rel-10 引入 CA（最多 5 CC），NR 扩到 16 CC。
 
 ## 科学定义
 
@@ -61,10 +73,19 @@ CA 像「多车道并道」：单车道（单载波）限速低（带宽窄）�
 - SCell 配置：TS 38.331（Rel-19 j20）§6.3.2（SCellConfig），本地 `TS_38.331_38331-j20`。
 - 每载波 HARQ：[[HARQ_Process_HARQ进程管理]]。
 
+## 关键要点
+
+1. CA 把多个 CC 聚合给同一 UE，吞吐叠加——单载波带宽受限的解法。
+2. PCell 管连接/移动性，SCell 纯数据，激活/去激活走 MAC CE。
+3. 跨载波调度靠 3-bit CIF：控制集中一个载波，省 UE 盲检。
+4. 每 CC 独立调度域：MCS/资源/HARQ 逐载波独立，互不拖累。
+5. DC 是跨基站的 CA（MCG/SCG）；CA 内再切 BWP——两级频域组织。
+6. LTE Rel-10 起有 CA（≤5 CC），NR 支持到 16 CC。
+
 ## 图谱关联
 
-- - [[T16.3_CA_BWP|T16.3 载波聚合与 BWP 讲义]]
-[[概念图谱入口]]
+- [[T16.3_CA_BWP|T16.3 载波聚合与 BWP 讲义]]
+- [[概念图谱入口]]
 - [[HARQ_Process_HARQ进程管理]]
 - [[Scheduler_MAC调度器与资源分配]]
 - [[BWP_带宽部分]]

@@ -15,11 +15,23 @@ source_spec: "TS 38.214 Rel-19 §5.1/§6.1.2; TS 38.321 Rel-19 §5.4/§6.1"
 
 # Scheduler MAC 调度器与资源分配
 
-调度器（Scheduler）是 MAC（媒体接入控制层，Medium Access Control）层每时隙（slot）都要做一次的核心决策单元：决定哪个用户（UE，用户设备，User Equipment）在哪个时频资源上、用多大 MCS（调制与编码方案，Modulation and Coding Scheme）、发多少数据。它把「信道质量（CQI）、业务优先级、QoS（服务质量，Quality of Service）需求、缓冲区状态」综合成资源分配（Resource Allocation）指令，经 DCI（下行控制信息，Downlink Control Information）下发。调度是「从协议到物理资源」的决策层——不理解调度器，就无法理解 DCI 资源字段为什么长那样、descriptor（T9.0）从哪来。
+调度器（Scheduler）是 MAC（媒体接入控制层，Medium Access Control）层每时隙（slot）都要做一次的核心决策单元：决定哪个用户（UE，用户设备，User Equipment）在哪个时频资源上、用多大 MCS（调制与编码方案，Modulation and Coding Scheme）、发多少数据。它把「信道质量（CQI）、业务优先级、QoS（服务质量，Quality of Service）需求、缓冲区状态」综合成资源分配（Resource Allocation）指令，经 DCI（下行控制信息，Downlink Control Information）下发。调度是「从协议到物理资源」的决策层——不理解调度器，就无法理解 DCI 资源字段为什么长那样、descriptor（T9.0）从哪来。一句话本质：**调度器是餐厅经理——综合每桌胃口（CQI）、点单（BSR）、预约（QoS）在资源网格上排座，点菜单（DCI）就是调度结果**。
 
 ## 独立解释任务
 
 任务目标：讲清调度器在 MAC 层的角色与决策输入、资源分配的单位体系（RBG/VRB 与 PRB 的关系）、NR 资源分配类型（Type 0/1）、频域与时域调度的权衡，以及逻辑信道优先级（LCP）在 MAC 复用中的作用。
+
+## 起源与演进
+
+(1) **起点：资源稀缺、用户众多。** 每个 slot 都有几十个 UE 等着用同一段时频资源——必须有一个决策单元回答"这个 slot 给谁、给多少、用什么码率"。这个决策单元就是调度器，它是"从协议到物理资源"的枢纽。
+
+(2) **四类输入。** CQI/PMI/RI（信道质量）、BSR（上行缓冲数据量）、QoS（逻辑信道优先级与时延预算）、可用资源（RB 总数与干扰）——四类信息汇成一个决策。
+
+(3) **输出与下发。** 资源分配 + MCS 选择 + HARQ 进程分配，经 DCI 下发——调度结果是 DCI 的源头，也就间接是译码器 descriptor（T9.0）的源头：译码器的一切参数都从这一次决策流出来。
+
+(4) **单位体系：PRB → RBG → VRB。** PRB 是网格上的物理格子（12 子载波）；RBG 是位图分配的最小粒度（组尺寸 P 由 BWP 带宽查表）；VRB 是调度器的虚拟编号，经交织映射打散到物理 PRB 换取频率分集——三层单位各管一段。
+
+(5) **算法与权衡。** 比例公平（PF）调度在吞吐最大化与用户公平间折中（分数 = 瞬时速率/平均速率）；Type 0 位图灵活但 DCI 开销大，Type 1 的 RIV 紧凑；slot 级 vs mini-slot 时延取舍；LCP 规则保证控制信令不被大流量数据饿死。
 
 ## 科学定义
 
@@ -71,10 +83,19 @@ source_spec: "TS 38.214 Rel-19 §5.1/§6.1.2; TS 38.321 Rel-19 §5.4/§6.1"
 - descriptor 衔接：T9.0（`docs/L2_协议算法/T9.0_TS38214_MCS_TBS_decoder_descriptor.md`）。
 - 与 MCS/TBS 关系：[[MCS_Table_Effective_Code_Rate_MCS表与有效码率]]。
 
+## 关键要点
+
+1. 调度器在 MAC 层每 slot 运行一次，是"从协议到物理资源"的决策层。
+2. 输入四类：CQI/BSR/QoS/资源；输出：资源分配+MCS+HARQ 进程，经 DCI 下发。
+3. 单位体系：PRB（物理）→ RBG（位图粒度，尺寸由 BWP 查表）→ VRB（虚拟，交织换频率分集）。
+4. Type 0 位图 vs Type 1 RIV：灵活 vs 紧凑，按场景选。
+5. PF 调度在吞吐与公平间折中；LCP 保证信令不被数据饿死。
+6. 调度结果是 descriptor（T9.0）的源头——译码器一切参数的出发点。
+
 ## 图谱关联
 
-- - [[T16.1_scheduler_HARQ_process|T16.1 调度与 HARQ 讲义]]
-[[概念图谱入口]]
+- [[T16.1_scheduler_HARQ_process|T16.1 调度与 HARQ 讲义]]
+- [[概念图谱入口]]
 - [[DCI_下行控制信息]]
 - [[PDCCH_物理下行控制信道]]
 - [[HARQ_Process_HARQ进程管理]]

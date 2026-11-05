@@ -15,11 +15,23 @@ source_spec: "TS 38.321 Rel-19 §4-§6; TS 38.300 Rel-19 §5-§6"
 
 # MAC Layer Mapping MAC 层映射
 
-MAC（媒体接入控制层，Medium Access Control）层映射（MAC Layer Mapping）是信道三层体系的连接机制：逻辑信道（Logical Channel，按内容类型分，如数据/信令）→ 传输信道（Transport Channel，按传输方式分，如 DL-SCH（下行共享信道，Downlink Shared Channel）/UL-SCH（上行共享信道，Uplink Shared Channel））→ 物理信道（Physical Channel，空口承载，如 PDSCH（物理下行共享信道，Physical Downlink Shared Channel）/PUSCH（物理上行共享信道，Physical Uplink Shared Channel））。MAC 层在中间做映射与复用：把多个逻辑信道的数据按优先级组装进 MAC PDU（协议数据单元，Protocol Data Unit），交给传输信道。
+MAC（媒体接入控制层，Medium Access Control）层映射（MAC Layer Mapping）是信道三层体系的连接机制：逻辑信道（Logical Channel，按内容类型分，如数据/信令）→ 传输信道（Transport Channel，按传输方式分，如 DL-SCH（下行共享信道，Downlink Shared Channel）/UL-SCH（上行共享信道，Uplink Shared Channel））→ 物理信道（Physical Channel，空口承载，如 PDSCH（物理下行共享信道，Physical Downlink Shared Channel）/PUSCH（物理上行共享信道，Physical Uplink Shared Channel））。MAC 层在中间做映射与复用：把多个逻辑信道的数据按优先级组装进 MAC PDU（协议数据单元，Protocol Data Unit），交给传输信道。一句话本质：**MAC 层映射是"邮局分拣"——内容贴标签（LCID）、复用装包裹（MAC PDU）、按运输方式发出，收端按标签拆包**。
 
 ## 独立解释任务
 
 任务目标：讲清逻辑→传输→物理三层的映射关系、MAC PDU 的组装结构（MAC 头/LCID/复用）、LCP（逻辑信道优先级，Logical Channel Prioritization）在复用中的作用，以及常见信道（BCH/PCCH/CCCH 等）的映射特例。
+
+## 起源与演进
+
+(1) **起点：为什么需要三层信道。** 数据在协议栈里按"内容"分类——业务数据、控制信令、广播、寻呼各不相同；但在空口上只能按"物理方式"发送。内容与方式不是一回事，于是协议立起三层信道体系：逻辑信道管内容、传输信道管方式、物理信道管承载，中间需要一层翻译。
+
+(2) **映射：MAC 是枢纽。** MAC 负责逻辑信道 → 传输信道的映射与复用；传输信道 → 物理信道由物理层完成。MAC 与物理层之间的交付接口就是 TB——上层的内容世界与下层的比特世界在 MAC 这里接头。
+
+(3) **复用与 LCP：一包多业务。** 一个 MAC PDU 可以装多个逻辑信道的数据，MAC 头用 LCID 标注每段数据的归属；组装顺序由 LCP 决定——高优先级信令先装，同时用 PBR 约束防止低优先级业务被饿死。这是"公平与优先级"的经典平衡问题。
+
+(4) **特例：直通路径。** BCCH→BCH→PBCH 是 MIB 的专用路径，不经 MAC 复用直接上物理信道；PCCH→PCH 走寻呼流程。特例的存在提醒我们：三层映射是"默认规则 + 例外清单"。
+
+(5) **邮局模型收尾。** 信件按类型贴标签（逻辑信道 + LCID），邮局把多个寄件人的信装进一个包裹（MAC PDU 复用），按运输方式打包（传输信道），交给运输公司（物理信道）发出；收件人按标签拆包（解复用）分发给各收件人（上层实体）。
 
 ## 科学定义
 
@@ -65,10 +77,19 @@ MAC 层映射像「邮局分拣」：信件按类型贴不同标签（逻辑信�
 - LCP 规则：TS 38.321 §5.4.3，本地同卷。
 - 物理承载：[[Physical_Channels_物理信道]]、[[PBCH_MIB_广播信道]]。
 
+## 关键要点
+
+1. 三层体系：逻辑信道（内容）→ 传输信道（方式）→ 物理信道（承载）。
+2. MAC 的职责是映射与复用，与物理层的交付接口是 TB。
+3. LCID 在 MAC 头里，标明每段数据归属哪个逻辑信道。
+4. 一个 MAC PDU 可复用多个逻辑信道，LCP 管优先级、PBR 防饿死。
+5. MIB 经 BCH 直通 PBCH，不经 MAC 复用——特殊映射。
+6. 收端按 LCID 解复用，分发回各上层实体。
+
 ## 图谱关联
 
-- - [[T16.4_MAC_layer_mapping|T16.4 MAC 层映射讲义]]
-[[概念图谱入口]]
+- [[T16.4_MAC_layer_mapping|T16.4 MAC 层映射讲义]]
+- [[概念图谱入口]]
 - [[Scheduler_MAC调度器与资源分配]]
 - [[Protocol_Stack_协议栈]]
 - [[Physical_Channels_物理信道]]
