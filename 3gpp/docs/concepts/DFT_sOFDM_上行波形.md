@@ -15,11 +15,23 @@ source_spec: "TS 38.211 Rel-19 §5.4/§6.3.3; TS 36.211 Rel-19 §5.6"
 
 # DFT-s-OFDM 上行波形
 
-DFT-s-OFDM（离散傅里叶变换扩展正交频分复用，Discrete Fourier Transform Spread OFDM）是 NR 上行 PUSCH（物理上行共享信道，Physical Uplink Shared Channel）的一种波形选择——先在频域做 DFT 预编码再走 OFDM 调制，本质是「单载波」传输：峰均比 PAPR（峰均功率比，Peak-to-Average Power Ratio）低，功放效率高。LTE 的 SC-FDMA（单载波频分多址，Single Carrier Frequency Division Multiple Access）是它的前身；NR 同时支持 DFT-s-OFDM 与纯 OFDM（CP-OFDM，循环前缀正交频分复用，Cyclic Prefix OFDM）两种上行波形，按场景切换。
+DFT-s-OFDM（离散傅里叶变换扩展正交频分复用，Discrete Fourier Transform Spread OFDM）是 NR 上行 PUSCH（物理上行共享信道，Physical Uplink Shared Channel）的一种波形选择——先在频域做 DFT 预编码再走 OFDM 调制，本质是「单载波」传输：峰均比 PAPR（峰均功率比，Peak-to-Average Power Ratio）低，功放效率高。LTE 的 SC-FDMA（单载波频分多址，Single Carrier Frequency Division Multiple Access）是它的前身；NR 同时支持 DFT-s-OFDM 与纯 OFDM（CP-OFDM，循环前缀正交频分复用，Cyclic Prefix OFDM）两种上行波形，按场景切换。一句话本质：**OFDM 是"多车道并排运输"（每车道一辆车、车流起伏大），DFT-s-OFDM 是"单车道列车"（货物排成一列整体出发、速度均匀油耗低）——代价是灵活度不如多车道**。
 
 ## 独立解释任务
 
 任务目标：讲清 DFT-s-OFDM 的原理（DFT 预编码如何把多子载波变成"等效单载波"）、低 PAPR 优势的根源、与 OFDMA（正交频分多址，Orthogonal Frequency Division Multiple Access）的对比，以及 NR 上行波形选择的配置逻辑。
+
+## 起源与演进
+
+(1) **起点：OFDM 的上行难题。** OFDM 多子载波独立调制，时域是多路正弦叠加——幅度起伏大（高 PAPR），UE 功放需大回退才能线性放大，效率低、耗电池。
+
+(2) **解法：DFT 预编码。** 在子载波映射之前加一个 DFT——时域符号块整体变换后铺到子载波上，波形退化为单载波样式（近似恒包络），PAPR 比 OFDM 低 3-6 dB 量级。
+
+(3) **代价：频域分集下降。** 单载波展平，一个符号的错误不能靠跨子载波纠错恢复——靠编码/交织补偿。
+
+(4) **两代沿革。** LTE 上行全用 SC-FDMA（无选择）；NR 上行由 transformPrecoding 开关配置：开 → DFT-s-OFDM、关 → CP-OFDM——PUCCH format 4 也用它。
+
+(5) **边界。** DFT-s-OFDM 不是"OFDM 加个变换"——变换改变了波形本质（多载波 → 等效单载波），PAPR 特性完全不同。
 
 ## 科学定义
 
@@ -69,6 +81,15 @@ OFDM 像「多车道并排运输」：每车道（子载波）一辆车（符号
 - transformPrecoding 配置：TS 38.331（Rel-19 j20）§6.3.2（PUSCH-Config），本地 `TS_38.331_38331-j20`。
 - LTE SC-FDMA：TS 36.211（Rel-19 j30）§5.6，本地 `TS_36.211_*`。
 - PAPR 背景：T2.18（`docs/L1_基础/T2.18_OFDM_PAPR_power_amplifier.md`）。
+
+## 关键要点
+
+1. DFT-s-OFDM = DFT 预编码 + OFDM，本质是等效单载波——PAPR 低 3-6 dB。
+2. 低 PAPR 的收益：UE 功放回退小、效率高、省电池。
+3. 代价：频域分集下降，靠编码/交织补偿。
+4. LTE 称 SC-FDMA（上行全用）；NR 由 transformPrecoding 配置切换。
+5. NR 上行可配 CP-OFDM——DFT-s-OFDM 是选项之一。
+6. 处理链：调制符号 → DFT → 子载波映射 → IFFT → CP。
 
 ## 图谱关联
 
