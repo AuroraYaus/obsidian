@@ -17,11 +17,23 @@ source_spec: "Engineering methodology; verified against TS 36.212/38.212 codec p
 
 # Golden Model 黄金模型
 
-Golden Model 是用 Python 实现的浮点精度译码参考模型，作为定点化、RTL 实现和 bit-exact 回归验证的"黄金标准"。Golden Model 的输出是 BER/BLER 性能上界。
+Golden Model 是用 Python 实现的浮点精度译码参考模型，作为定点化、RTL 实现和 bit-exact 回归验证的"黄金标准"。Golden Model 的输出是 BER/BLER 性能上界。一句话本质：**Golden Model 是"验证链的黄金尺子"——浮点精度的译码参考模型，任何定点/RTL 实现的 BLER 都只能比它差不能比它好；失败帧的完整证据链保证第二天还能逐字段复现同一个失败**。
 
 ## 独立解释任务
 
 任务目标：解释黄金参考模型（Golden Model）的定义、工程布局与证据链要求——可复现输入、可解释协议身份、可回放随机性、可对比输出、可归档证据，并说明它为何成为定点化与寄存器传输级（Register Transfer Level, RTL）实现的正确性基准。在 LTE/NR 译码链路中，Golden Model 位于算法与硬件之间：Python 浮点模型先按 TS 36.212/38.212 协议链路验证译码算法，其输出性能上界与失败帧证据随后被 C/C++ 定点模型和 RTL 在比特精确（bit-exact）回归中逐项比对。
+
+## 起源与演进
+
+(1) **起点：验证链需要一把"尺子"。** 定点化与 RTL 的正确性需要基准——Golden Model 是浮点精度的译码参考模型，其 BLER 是任何实现都不可超越的上界。
+
+(2) **上界不等式。** $\mathrm{BLER}_{\mathrm{impl}} \ge \mathrm{BLER}_{\mathrm{golden}}$——任何实现侧误差（量化/饱和/近似）只会让曲线变差，不会变好。
+
+(3) **工程布局。** `common/`（descriptor/schema/seed/logging）+ 三类算法私有层（lte_turbo/nr_ldpc/nr_polar）+ `vectors/`（protocol/toy/random/regression 四类）+ `runs/` 归档证据。
+
+(4) **可复现性纪律。** 分层 seed（SHA256 派生、禁内置 hash()）、统一 DecodeResult 公共字段、失败帧完整证据链（run_id → vector_id → protocol_refs → input_llr_hash → seed_state → status → replay_command）。
+
+(5) **边界。** Golden Model 自身也要经协议向量与回归验证——不是天生完美；工程布局是方法论、非 3GPP 规定。
 
 ## 科学定义
 
@@ -63,6 +75,15 @@ $$
 - 系统级参数背景：TS 38.214 Rel-19 `38214-j30` §5.1.3、§6.1.4，本地 `3GPP_Rel19/processed/TS_38.214_38214-j30/`。
 - 标注：Golden Model 工程本身非 3GPP 标准内容——协议不规定 Python 包名、配置文件名、日志字段或随机种子格式；本节只登记向量来源，不重写协议公式。
 - 本地讲义锚点：`docs/L3_工程实现/T17.1_python_golden_model_project_layout.md`。
+
+## 关键要点
+
+1. Golden Model = 浮点参考模型——BLER_impl ≥ BLER_golden 是上界不等式。
+2. 实现侧误差只会让曲线变差，不会变好。
+3. 分层 seed：SHA256 派生——新增 stage 不改旧 stage 序列。
+4. 公共 DecodeResult 统一三类译码器输出——算法差异放 family_debug。
+5. 失败帧证据链七要素：run_id/vector_id/protocol_refs/llr_hash/seed_state/status/replay_command。
+6. Golden Model 自身也须协议向量验证——不是天生完美。
 
 ## 图谱关联
 

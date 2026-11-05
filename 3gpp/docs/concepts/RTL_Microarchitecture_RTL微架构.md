@@ -15,11 +15,23 @@ source_spec: "Hardware implementation; derived from TS 36.212/38.212 decoder req
 
 # RTL 微架构
 
-RTL（Register Transfer Level）微架构是译码器的硬件实现蓝图，用 Verilog/SystemVerilog 描述数据通路、控制状态机和存储结构。Turbo、LDPC、Polar 三类译码引擎各有独特的微架构挑战。
+RTL（Register Transfer Level）微架构是译码器的硬件实现蓝图，用 Verilog/SystemVerilog 描述数据通路、控制状态机和存储结构。Turbo、LDPC、Polar 三类译码引擎各有独特的微架构挑战。一句话本质：**RTL 微架构是"浮点算法到物理芯片的桥梁"——不是公式的逐行翻译，而是把算法变量与硬件对象一一对应：路径度量是存储化、外信息是交换通道、FSM 是时序化、trace 是证据化**。
 
 ## 独立解释任务
 
 任务目标：解释寄存器传输级（Register Transfer Level, RTL）微架构的层次化设计方法——数据通路、控制状态机（Finite State Machine, FSM）与存储结构如何把译码算法映射为可综合、可验证的硬件，并说明统一译码子系统中共享资源与引擎私有状态的边界。在 LTE/NR 译码链路中，RTL 微架构位于浮点/定点模型之后：它把协议 descriptor 与算法中间量落实到时钟、存储、地址生成与状态控制上，是浮点算法到物理芯片的桥梁。
+
+## 起源与演进
+
+(1) **起点：从模型到芯片。** 浮点/定点模型验证完算法——物理芯片需要把算法变量映射为时钟、存储、地址生成与状态控制。
+
+(2) **映射纪律。** alpha/beta 是路径度量的存储化、外信息是交换通道、FSM 是流程的时序化、trace 是工程后果的证据化。
+
+(3) **四层结构。** 寄存器/控制层（common config）→ 数据搬运层（DMA/软缓存读改写）→ 引擎层（Turbo/LDPC/Polar 私有状态）→ 证据层（trace FIFO）。
+
+(4) **存储与周期预算。** 全块 alpha/beta = $8K(W_{\alpha}+W_{\beta})$、外信息 ping-pong = $2KW_{\mathrm{ext}}$、吞吐 ≈ $K f_{\mathrm{clk}}/C_{\mathrm{block}}$——$K=6144$ 例：alpha/beta 约 144 KiB、6 次迭代最坏约 184 μs @ 400 MHz。
+
+(5) **边界。** 共享资源只管理数据所有权、不存算法私有状态；归一化策略必须写进 bit-exact policy——否则 trace 第一轮就分叉；bank 数/窗口大小是实现设计、非协议强制。
 
 ## 科学定义
 
@@ -74,6 +86,15 @@ $$
 - 统一子系统上下文证据：TS 36.213/36.321/36.331 与 TS 38.212/38.214/38.321/38.331 本地路径（TS 36.213 精确分册字段标注待核验）。
 - 标注：RTL 微架构本身是实现设计，非 3GPP 强制——协议不规定 SRAM bank 数、寄存器地址、DMA burst 大小或中断位定义，只提供任务上下文。
 - 本地讲义锚点：`docs/L3_工程实现/T19.1_LTE_Turbo_RTL_microarchitecture.md`、`docs/L3_工程实现/T19.4_unified_decoder_subsystem_architecture.md`。
+
+## 关键要点
+
+1. RTL ≠ 公式翻译——存储/带宽/时序/控制/证据的系统安排。
+2. 四层结构：控制/搬运/引擎/证据——共享资源不存算法私有状态。
+3. 存储公式：alpha/beta = 8K(Wα+Wβ)、外信息 2KW_ext。
+4. 吞吐 ≈ K·f_clk/C_block——不达标就并行 trellis/窗口流水。
+5. 归一化策略必须进 bit-exact policy——否则第一轮 trace 分叉。
+6. bank 数/窗口/早停是实现设计，非 3GPP 强制。
 
 ## 图谱关联
 

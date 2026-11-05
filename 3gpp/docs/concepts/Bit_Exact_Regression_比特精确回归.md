@@ -16,11 +16,23 @@ source_spec: "Engineering methodology; decoder verification"
 
 # Bit-Exact 回归验证
 
-Bit-Exact 回归验证要求同一输入在所有实现层级（Python ↔ C/C++ ↔ RTL（寄存器传输级，Register Transfer Level））产生逐比特一致的输出。
+Bit-Exact 回归验证要求同一输入在所有实现层级（Python ↔ C/C++ ↔ RTL（寄存器传输级，Register Transfer Level））产生逐比特一致的输出。一句话本质：**bit-exact 回归是"三方对账"——手算、Excel、银行流水分毫不差才算平账，差一分钱都说明某处进位或舍入不一致；差异点直接指向溢出、舍入或状态机错误，而不是笼统的"结果不对"**。
 
 ## 独立解释任务
 
 任务目标：解释分层比对框架中各层级的误差容限为何不同，以及 bit-exact 与功能正确之间的区别。
+
+## 起源与演进
+
+(1) **起点：多层实现的正确性怎么保证。** Python/C/C++/RTL 三层实现同一算法——必须逐比特一致才能互相替换。
+
+(2) **三级误差容限。** Golden Reference（浮点基准、无量化误差）；定点比对（量化误差在容许范围内）；RTL 比对（必须 bit-exact、容差为零）。
+
+(3) **对账纪律。** 不只比对最终 CRC——中途 checkpoint（各译码器内部状态）也要比对，才能定位首个发散点。
+
+(4) **两条边界。** bit-exact 保证一致性、不保证正确性（两个实现可能一致地错——正确性靠 Golden 与协议向量）；单条向量通过不构成回归证据（正常/边界/异常/重传都要覆盖）。
+
+(5) **协议边界。** TS 不规定回归框架——bit-exact 验证属工程方法论，非 3GPP 标准。
 
 ## 科学定义
 
@@ -53,6 +65,15 @@ $$A \overset{\text{bit-exact}}{=} B \quad\Longleftrightarrow\quad \forall v \in 
 - 协议向量来源：TS 36.212 Rel-19 `36212-j30`（LTE Turbo 语义）、TS 38.212 Rel-19 `38212-j30`（NR Polar/LDPC 语义）。
 - 本地锚点：`3GPP_Rel19/processed/TS_36.212_36212-j30`；`3GPP_Rel19/processed/TS_38.212_38212-j30`。
 - 协议边界：TS 不规定回归框架、文件命名、CI 命令或 RTL 端口；协议只规定每串逻辑比特和校验语义应是什么。bit-exact 验证属工程方法论，非 3GPP 标准。
+
+## 关键要点
+
+1. bit-exact：∀v∈V: A(v) = B(v)——所有层级必须一致。
+2. 三级容限：Golden 基准/定点容限内/RTL 零容差。
+3. 不只比 CRC——中途 checkpoint 定位首个发散点。
+4. bit-exact ≠ 功能正确——两个实现可能一致地错。
+5. 回归套件要覆盖正常/边界/异常/重传四类。
+6. 回归框架是工程方法论，非 3GPP 标准。
 
 ## 图谱关联
 
