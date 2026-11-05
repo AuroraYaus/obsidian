@@ -16,7 +16,7 @@ source_spec: "Mathematical foundation; TS 36.212/38.212 CRC polynomial context"
 
 # GF(2) 伽罗瓦域
 
-GF(2) 是只含 {0, 1} 两个元素的有限域。加法为 XOR（模2加），乘法为 AND（模2乘）。所有 CRC 计算、LDPC 校验矩阵和 Polar 极化变换都基于 GF(2) 运算。
+GF(2) 是只含 {0, 1} 两个元素的有限域。加法为 XOR（模2加），乘法为 AND（模2乘）。所有 CRC 计算、LDPC 校验矩阵和 Polar 极化变换都基于 GF(2) 运算。一句话本质：**GF(2) 是"只有奇偶性的算术"——加就是异或（1+1=0）、减等于加、乘就是与；CRC/LDPC/Polar 的全部校验运算都在这片两个元素的地基上**。
 
 ## 独立解释任务
 
@@ -92,6 +92,15 @@ $$
 - NR CRC 计算入口：TS 38.212 Rel-19 `38212-j30` §5.1 CRC calculation，本地 `3GPP_Rel19/processed/TS_38.212_38212-j30/content.md`、`sections.jsonl`。
 - NR LDPC 基图/提升与 Polar 编码在 TS 38.212 Rel-19 `38212-j30` §5.3.2、§5.3.1 章节以 GF(2) 校验矩阵与极化变换形式给出；CRC 多项式族细节由 T3.1 承接。
 - 本地讲义锚点：`docs/L1_基础/T1.1_GF2_binary_arithmetic_for_decoders.md`、`docs/L1_基础/T1.2_GF2_polynomials_crc_remainders.md`。
+
+## 关键要点
+
+1. GF(2) = {0,1}：加法 = XOR（1+1=0）、乘法 = AND——无进位无借位。
+2. 减法 = 加法（-1 mod 2 = 1）——"减掉"就是"异或掉"。
+3. CRC 计算核心是 GF(2) 多项式长除法（最高项对齐、逐位异或消项）。
+4. GF(2) 向量空间：生成矩阵 G 编码、校验矩阵 H 满足 GH^T=0、校验子 s=rH^T 检错。
+5. 硬件映射：GF(2) 加法 = XOR 门网络，无需进位链。
+6. CRC 是检测不是绝对正确——错误模式恰为生成多项式倍数时会漏检。
 
 ## 图谱关联
 

@@ -16,7 +16,7 @@ source_spec: "TS 36.212 §5.1.1; TS 38.212 §5.1"
 
 # GF(2) 多项式
 
-GF(2)（二元伽罗瓦域，Galois Field of two elements）多项式是系数在 GF(2) 上的多项式，如 $g(x)=x^3+x+1$。二进制串与多项式系数一一对应，是 CRC 计算和 LDPC 校验矩阵的代数基础。
+GF(2)（二元伽罗瓦域，Galois Field of two elements）多项式是系数在 GF(2) 上的多项式，如 $g(x)=x^3+x+1$。二进制串与多项式系数一一对应，是 CRC 计算和 LDPC 校验矩阵的代数基础。一句话本质：**GF(2) 多项式是"二进制串的代数化身"——比特串与多项式系数一一对应，CRC 就是一次没有进位、没有借位的长除法，余数即校验位**。
 
 ## 独立解释任务
 
@@ -53,6 +53,15 @@ $$a(x) = q(x)\, g(x) + r(x), \quad \deg r(x) < \deg g(x)$$
 - LTE：TS 36.212 Rel-19 `36212-j30` §5.1.1 CRC calculation（定义 gCRC24A(D)、gCRC24B(D)、gCRC16(D)、gCRC8(D) 与零余数检查）。
 - NR：TS 38.212 Rel-19 `38212-j30` §5.1 CRC calculation。
 - 本地锚点：`3GPP_Rel19/processed/TS_36.212_36212-j30/content.md`、`sections.jsonl`；`3GPP_Rel19/processed/TS_38.212_38212-j30/content.md`、`sections.jsonl`。
+
+## 关键要点
+
+1. GF(2) 多项式系数只取 0/1：加=减=XOR，1+1=0、1=-1。
+2. 多项式 ↔ 二进制串一一对应（x³+x+1 ↔ 1011）。
+3. CRC 校验位 = 数据左移 L 位后除以 g(x) 的余数，长度恒为 deg g(x)。
+4. 不可约多项式类似素数——用于构造扩域与生成多项式选择。
+5. 长除每步只看最高位：为 1 异或除数、为 0 跳过。
+6. 串拼接 ≠ 多项式乘法（1011×1001=1010011 而非 10111001）。
 
 ## 图谱关联
 
