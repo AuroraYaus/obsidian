@@ -10,6 +10,7 @@ tags:
   - protocol
   - l2
 source_spec: "TS 38.212 Rel-19 §7.3; TS 36.212 §5.3.3"
+queries: 1
 ---
 
 # DCI 下行控制信息
@@ -69,6 +70,20 @@ DCI 像"运单"：收货人（RNTI）、货物规格（MCS/TBS）、发车时间
 - LTE DCI 格式：TS 36.212（Rel-19 j30）§5.3.3，本地 `TS_36.212_36212-j30`。
 - descriptor 生成：T9.0（`docs/L2_协议算法/T9.0_TS38214_MCS_TBS_decoder_descriptor.md`）。
 - RNTI 定义：TS 38.321（Rel-19 j20）§7.1（RNTI 值表），本地 `3GPP_Rel19/processed/TS_38.321_38321-j20`。
+
+## DCI 在协议族中的分布（五层职责）
+
+DCI 横跨五层规范，每层回答不同问题——理解协议间联系的关键是"分层职责"：
+
+| 协议层 | 回答的问题 | 代表 TS（本地 Rel-19 资料） |
+|:---|:---|:---|
+| 物理信道 | DCI **用什么信道承载**（PDCCH 的 CCE/REG 结构、Polar 编码） | TS 38.211 §7.3.2（PDCCH） |
+| 信道编码/复用 | DCI **有哪些格式、每个字段是什么、CRC 怎么加扰** | TS 38.212 §7.3（NR）/TS 36.212 §5.3.3（LTE） |
+| 物理层控制 | DCI **怎么被监听与使用**（监听时机、k0/k2 时序、HARQ-ACK 时序） | TS 38.213 §10.1（PDCCH 分配） |
+| RRC 信令 | 盲检的**搜索空间/CORESET 怎么配**（DCI 在哪找得到） | TS 38.331：IE `SearchSpace`/`ControlResourceSet`/`PDCCH-Config` |
+| MAC | **身份怎么定**（RNTI 值表，C-RNTI/RA-RNTI/TC-RNTI 等） | TS 38.321 §7.1 |
+
+**联系链**：331 配好"去哪找"（搜索空间与 CORESET）→ 211 定义承载信道 PDCCH 的物理结构 → 212 定义 DCI 格式与字段（"指令长什么样"）→ 213 规定监听与使用时序（"什么时候看、看完何时动作"）→ 321 用 RNTI 标识"指令发给谁"。接收端视角的闭环：T14.1 盲检产出 DCI → T14.2 解析字段 → T9.0 生成译码器 descriptor。
 
 ## 图谱关联
 
