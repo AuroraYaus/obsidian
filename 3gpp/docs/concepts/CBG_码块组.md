@@ -30,6 +30,8 @@ CBG 是 code block group。NR 可以把一个 TB 分成多个 CB，再按规则�
 
 如果 TB 是一本书、CB 是一页，CBG 就是一章。重传时不一定重传整本书，也不一定逐页管理，而是按章节告诉接收端哪些页组需要更新。
 
+CBG 的另一大用武之地是 URLLC（超可靠低时延通信）抢占场景：eMBB 的大块传输被 URLLC 业务中途打孔，只损局部 CB——按组重传受损段即可，无需全量重发（打孔与指示见 [[Preemption_Indication_抢占指示]]）。
+
 ## 常见误解
 
 | 误解 | 正确理解 |
@@ -67,4 +69,5 @@ CBG 横跨五层规范，每层回答不同问题——理解协议间联系的�
 - [[LDPC_低密度奇偶校验码]]
 - [[T9.3_NR_LDPC_HARQ_soft_buffer_RV_k0]]
 - [[T9.6_NR_LDPC_decoder_edge_cases]]
+- [[Preemption_Indication_抢占指示]]
 - 关系语义：CBG 把 HARQ 部分重传语义映射到一组 CB 的 soft buffer 状态。

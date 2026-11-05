@@ -115,6 +115,8 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | TB | 传输块 | Transport Block；信道编码/译码链路最终交付的整体数据对象。→ [[TB_传输块]] |
 | CB | 码块 | Code Block；TB 分段后由译码核心逐块处理的工作单元。→ [[CB_码块]] |
 | CBG | 码块组 | Code Block Group；NR LDPC 中可作为部分重传粒度的一组 CB。→ [[CBG_码块组]] |
+| Cross-slot scheduling | 跨时隙调度 | PDCCH 与其调度的数据位于不同时隙的调度方式（k0/k2>0），核心动机是 UE 节能。→ [[Cross_Slot_Scheduling_跨时隙调度]] |
+| Paging | 寻呼 | 网络在空闲/非激活态寻找 UE 的广播机制；无 HARQ 反馈，"重传"指重复发送。→ [[Paging_寻呼]] |
 | LDPC | 低密度奇偶校验码 | Low-Density Parity-Check Code；NR 数据业务的主要信道编码家族。→ [[LDPC_低密度奇偶校验码]] |
 | Turbo | Turbo 码 | Turbo Code；LTE 数据业务的主要信道编码家族。→ [[Turbo_码]] |
 | Polar | 极化码 | Polar Code；NR 控制信息译码的主要编码家族。→ [[Polar_码]] |
@@ -327,6 +329,8 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | [[HARQ_混合自动重传请求]] | 把前向纠错和自动重传结合，CRC 失败后保留同一 process 的软信息，按 RV 和调度上下文补充接收证据。 |
 | [[RV_冗余版本]] | 描述一次传输选取哪一部分编码冗余，是 HARQ soft combining 的"地址语义"。 |
 | [[CBG_码块组]] | 把多个 CB 组合成部分重传粒度，把 HARQ 从整 TB 重传细化到一组 CB。 |
+| [[Cross_Slot_Scheduling_跨时隙调度]] | PDCCH 与数据不同时隙的调度方式（k0/k2>0），以时延换 UE 节能。 |
+| [[Paging_寻呼]] | 空闲/非激活态广播寻呼；无 HARQ 确认，重复发送提高到达率。 |
 | [[CB_码块]] | TB 分段后交给译码核心逐块处理的工作单元，是译码核心的最小主要工作单元。 |
 | [[TB_传输块]] | 物理层信道编码链路最终要交付或拒绝的整体数据对象，也是 HARQ 成败判断的主对象。 |
 | [[Segmentation_码块分段]] | 把一个 TB 拆成若干 CB，使每个译码核心处理的块长满足协议和编码器约束。 |

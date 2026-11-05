@@ -1,0 +1,68 @@
+---
+type: definition
+aliases:
+  - 寻呼
+  - Paging
+  - PO
+  - 寻呼时机
+tags:
+  - 3gpp
+  - concepts
+  - paging
+  - idle-mode
+source_spec: "TS 38.304 Rel-19 §7; TS 38.213 Rel-19 §13"
+queries: 1
+---
+
+# Paging 寻呼
+
+寻呼是网络在 UE 空闲态（RRC_IDLE）或非激活态（RRC_INACTIVE）主动"找到"UE 的广播机制：网络在预先约定的寻呼时机（PO，Paging Occasion）发送以 P-RNTI（寻呼无线网络临时标识，Paging Radio Network Temporary Identifier）加扰 CRC 的 DCI 与寻呼消息，被点名的 UE 醒来接入网络。寻呼没有 HARQ（混合自动重传请求，Hybrid Automatic Repeat Request）确认——"重传"指同一寻呼消息的重复发送，而非纠错重传。
+
+## 独立解释任务
+
+任务目标：解释寻呼时机（PO/PF）的计算、寻呼消息的收发流程、"寻呼无 HARQ、靠重复发送提高到达率"的关键语义，以及 PEI 节能预告，并与 PDCCH 盲检、随机接入衔接。
+
+## 科学定义
+
+UE 按 DRX（非连续接收，Discontinuous Reception）周期在寻呼帧（PF，Paging Frame）内的某个 PO 监听 PDCCH：若 DCI 的 CRC 用 P-RNTI 解扰成功，UE 继续接收对应的 PDSCH 寻呼消息，其中包含被寻呼 UE 的标识列表。PO 由 UE 标识（5G-S-TMSI）哈希到资源，使同一网络下不同 UE 的监听时点分散。寻呼消息（PCCH 逻辑信道）经 PDSCH 广播发送，不针对单个 UE 反馈 ACK/NACK。
+
+## 直观模型
+
+寻呼像校园广播找人：喇叭按课间铃声（PO）定时响起，喊出名字（UE 标识）；被喊到的人去门卫（随机接入）报到，没被喊到的人继续做自己的事。广播没有"收到请回答"环节——重要的事会多喊几遍（重复发送）。
+
+## 常见误解
+
+| 误解 | 正确理解 |
+|:---|:---|
+| 寻呼支持 HARQ 重传 | 寻呼是广播式发送，无 ACK/NACK 反馈；"重传"指同一消息在多个 PO 重复发送，属覆盖增强手段 |
+| 寻呼只在空闲态使用 | RRC_INACTIVE 态的 UE 同样监听寻呼 |
+| PO 对所有 UE 相同 | PO 按 UE 标识哈希分散，不同 UE 的监听时点不同 |
+| PEI 是寻呼消息本身 | PEI（寻呼早期指示，Paging Early Indication）是 PO 之前的"预告"比特，用于减少误唤醒、进一步省电 |
+
+## 协议锚点
+
+- 寻呼过程与 PO/PF 计算：TS 38.304 §7（本地 processed 目录暂无该 TS 抽取件，锚点为协议原文）。
+- 寻呼 PDCCH 监听与 PEI：TS 38.213 Rel-19 §13 / §10.4A，本地 `3GPP_Rel19/processed/TS_38.213_38213-j30/content.md`。
+- 寻呼配置：TS 38.331 IE `PCCH-Config`，本地 `TS_38.331_38331-j20`。
+- 寻呼 DCI：TS 38.212 §7.3.1.2.1（DCI format 1_0 用 P-RNTI 加扰 CRC），本地 `TS_38.212_38212-j30`。
+
+## 寻呼在协议族中的分布（五层职责）
+
+| 协议层 | 回答的问题 | 代表 TS（本地 Rel-19 资料） |
+|:---|:---|:---|
+| 空闲态过程 | **什么时候听、PO/PF 怎么算**（DRX 周期、UE 标识哈希） | TS 38.304 §7 |
+| 物理层控制 | 寻呼 PDCCH **怎么监听**、PEI 时机 | TS 38.213 §13/§10.4A |
+| 信道编码 | 寻呼 DCI **格式与 P-RNTI 加扰** | TS 38.212 §7.3.1.2.1 |
+| RRC 信令 | 寻呼参数**怎么配**（PCCH-Config、DRX 周期） | TS 38.331 |
+| MAC | **为什么没有重传**——广播传输无 HARQ 反馈，"重传"=网络侧重复发送 | TS 38.321（HARQ 仅用于单播） |
+
+**联系链**：304 定"何时何地听"→ 212 定"用 P-RNTI 认领指令"→ 213 定"怎么监听与预告"→ 331 定"参数"→ 321 定"为什么没有纠错重传"。整条链让"网络喊、UE 听"这一广播机制在收发双方共同认知下工作。
+
+## 图谱关联
+
+- [[概念图谱入口]]
+- [[DCI_下行控制信息]]
+- [[PDCCH_物理下行控制信道]]
+- [[T14.1_PDCCH_blind_decoding]]
+- [[T16.6_random_access_rrc_connection_setup]]
+- 关系语义：寻呼是 UE 从空闲态回到连接态的起点——寻呼触发随机接入，随机接入进入 RRC 连接建立（T16.6）；其 PDCCH 监听复用盲检机制（T14.1）。

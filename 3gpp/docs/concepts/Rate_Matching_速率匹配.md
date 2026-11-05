@@ -11,6 +11,7 @@ tags:
   - concepts
   - rate-matching
 source_spec: "TS 36.212 Rel-19 §5.1.4; TS 38.212 Rel-19 §5.4.1 and §5.4.2"
+queries: 1
 ---
 
 # Rate Matching 速率匹配
@@ -42,6 +43,20 @@ source_spec: "TS 36.212 Rel-19 §5.1.4; TS 38.212 Rel-19 §5.4.1 and §5.4.2"
 - LTE：TS 36.212 Rel-19 §5.1.4 Turbo rate matching。
 - NR Polar：TS 38.212 Rel-19 §5.4.1。
 - NR LDPC：TS 38.212 Rel-19 §5.4.2。
+
+## 速率匹配在协议族中的分布（五层职责）
+
+速率匹配横跨五层规范，每层回答不同问题——理解协议间联系的关键是"分层职责"：
+
+| 协议层 | 回答的问题 | 代表 TS（本地 Rel-19 资料） |
+|:---|:---|:---|
+| 信道编码 | **算法本体**：母码按 RV 起点截出每 CB 的 E 比特（比特选择） | TS 36.212 §5.1.4（Turbo）/TS 38.212 §5.4.1（Polar）/§5.4.2（LDPC） |
+| 物理层过程 | **可用资源总数 G 从哪来**（MCS/PRB 数 → TBS → G → 每 CB 输出 E） | TS 38.214 §5.1.3（NR PDSCH TBS）/TS 36.213 §7.1.7（LTE TBS） |
+| 物理层控制 | **MCS/RV/资源分配由谁指示** | TS 38.212 §7.3（DCI 字段） |
+| RRC 信令 | **哪些 RE 不能用**（rateMatchPattern 打孔/避让） | TS 38.331（RateMatchPattern IE） |
+| MAC | **调度决策与 HARQ 信息**（TB 大小、重传 RV 选择） | TS 38.321 §5.3.2.2 |
+
+**联系链**：MAC 决定 TB 大小与调度 → 213/214 定出总资源 G 与 TBS → 212 把母码按 RV 起点截出每 CB 的 E 比特 → 331 挖掉 rateMatchPattern 覆盖的 RE → 接收端 rate recovery 把 LLR 放回母码坐标（本笔记职责）。
 
 ## 图谱关联
 
