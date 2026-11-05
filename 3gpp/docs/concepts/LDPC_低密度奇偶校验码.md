@@ -14,11 +14,23 @@ source_spec: "TS 38.212 Rel-19 §5.2.2, §5.3.2, §5.4.2"
 
 # LDPC 低密度奇偶校验码
 
-LDPC 是 NR 数据业务使用的主要信道编码家族。它用稀疏奇偶校验矩阵描述约束，接收端通过 BP、Min-Sum 或 layered schedule 在 Tanner 图上迭代更新 LLR。
+LDPC 是 NR 数据业务使用的主要信道编码家族。它用稀疏奇偶校验矩阵描述约束，接收端通过 BP、Min-Sum 或 layered schedule 在 Tanner 图上迭代更新 LLR。一句话本质：**LDPC 是"很多条局部规则组成的推理网络"——每条规则只查少数几个比特，所有规则合起来约束整个码字，可靠比特的置信度沿边传播**。
 
 ## 独立解释任务
 
 任务目标：解释 LDPC 如何用稀疏校验矩阵和软信息迭代恢复 NR 数据块。
+
+## 起源与演进
+
+(1) **起点：Gallager 的遗产与 Turbo 的接力。** LDPC 1962 年由 Gallager 提出，因当时算力不足被遗忘近四十年；Turbo 码的成功重新点燃了迭代译码研究，Mackay 与 Neal 在 90 年代重新发现 LDPC 能以更低复杂度逼近香农极限——NR 最终选它做数据信道主力。
+
+(2) **核心结构：稀疏校验矩阵。** 校验矩阵 H 的绝大多数元素为 0（"低密度"），合法码字满足 H·c=0；稀疏性是图上迭代消息传递高效的根源——每条校验规则只牵涉少数比特。
+
+(3) **译码范式：Tanner 图双向消息。** 变量节点与校验节点沿图边交换 LLR：可靠 bit 的置信度通过边影响相邻 bit 的判断，逐轮逼近满足全部约束的候选码字——和积/最小和/分层调度三族实现（见 [[Sum_Product_Algorithm_和积算法]] 等）。
+
+(4) **NR 的落地。** 基图 BG1/BG2 + 提升 Zc + 前 2Zc 位恒打孔 + CB CRC/HARQ 验收——NR LDPC 是一整套结构化 QC-LDPC，不是"一张大矩阵"。
+
+(5) **与 Turbo 的分工。** Turbo 留在 LTE，LDPC 接管 NR 数据——长码块并行度与吞吐优势明显；NR 控制信道交给 Polar。三族各守一段。
 
 ## 科学定义
 
@@ -42,6 +54,15 @@ LDPC 像一个由很多局部规则组成的推理网络。每条规则只检查
 - NR：TS 38.212 Rel-19 §5.3.2 LDPC channel coding。
 - NR：TS 38.212 Rel-19 §5.4.2 LDPC rate matching。
 - 本地锚点示例：`3GPP_Rel19/processed/TS_38.212_38212-j30/content.md`。
+
+## 关键要点
+
+1. LDPC = 稀疏校验矩阵 + 图上迭代译码；"低密度"指矩阵里 1 少，不是速率低。
+2. 1962 年 Gallager 提出、90 年代复兴——NR 数据信道主力。
+3. 译码在 Tanner 图上双向传 LLR：可靠 bit 影响相邻 bit 的判断。
+4. NR LDPC = BG + Zc 提升 + 前 2Zc 打孔 + CB CRC/HARQ 验收。
+5. syndrome 全零 ≠ 交付通过：还要 CB/TB CRC 与重组边界。
+6. 分工：Turbo 留 LTE、LDPC 管 NR 数据、Polar 管 NR 控制。
 
 ## 图谱关联
 
