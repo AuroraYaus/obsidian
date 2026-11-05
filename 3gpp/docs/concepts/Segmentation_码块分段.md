@@ -10,6 +10,7 @@ tags:
   - concepts
   - segmentation
 source_spec: "TS 36.212 Rel-19 §5.1.2; TS 38.212 Rel-19 §5.2"
+queries: 1
 ---
 
 # Segmentation 码块分段
@@ -40,6 +41,18 @@ segmentation 像把一段长数据装进多个固定规格的盒子。盒子太�
 
 - LTE：TS 36.212 Rel-19 §5.1.2 Code block segmentation and code block CRC attachment。
 - NR：TS 38.212 Rel-19 §5.2.1 Polar coding；§5.2.2 LDPC coding。
+
+## 码块分段在协议族中的分布（五层职责）
+
+| 协议层 | 回答的问题 | 代表 TS（本地 Rel-19 资料） |
+|:---|:---|:---|
+| 信道编码 | **分段算法本体**（C/K+/K-/filler/CB CRC 计算） | TS 36.212 §5.1.2（LTE Turbo）/TS 38.212 §5.2.2（NR LDPC）/§5.2.1（NR Polar，C=1 特例） |
+| 物理层过程 | **要切的 B 从哪来**（调度结果 → TBS） | TS 38.214 §5.1.3（NR TBS）/TS 36.213 §7.1.7（LTE TBS） |
+| 物理层控制 | MCS/资源分配指示（决定 TBS 的 DCI 字段） | TS 38.212 §7.3（NR）/TS 36.212 §5.3.3（LTE） |
+| RRC 信令 | 编码相关配置（NR 基图选择依赖的 mcs-Table 等） | TS 38.331（泛提） |
+| MAC | TB 大小与码块交付（传输块组装） | TS 38.321 §5.3.2.2 |
+
+**联系链**：MAC/调度定 TB 大小 → 213/214 定 TBS → 212 按编码器约束切出 C 个 CB（合法块长 + filler + CB CRC）→ 331 提供编码配置 → 接收端按同一规则重组。CBG 分组是在分段结果之上的第二次"切"（见 [[CBG_码块组]]）。
 
 ## 图谱关联
 
