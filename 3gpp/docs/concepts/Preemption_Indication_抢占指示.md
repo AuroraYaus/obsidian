@@ -18,11 +18,23 @@ queries: 1
 
 # Preemption Indication 抢占指示
 
-抢占指示（Pre-emption Indication，PI）是 NR 中基站通过 DCI format 2_1（INT-RNTI 加扰的组公共 PDCCH（物理下行控制信道，Physical Downlink Control Channel））下发的通知：在最近一个监测周期内，哪些 PRB（物理资源块，Physical Resource Block）和 OFDM（正交频分复用，Orthogonal Frequency Division Multiplexing）符号上"基站可能没有向该 UE 发送数据"。它是 eMBB（增强移动宽带，Enhanced Mobile Broadband）与 URLLC（超可靠低时延通信，Ultra-Reliable Low-Latency Communication）下行复用的配套机制——URLLC 低时延分组不等时隙边界、直接打孔正在进行的 eMBB 传输之后，被抢占的 eMBB 接收端借助 PI 定位被打孔的位置，把受损的 LLR（对数似然比，Log-Likelihood Ratio）从软解调输入中剔除，避免用被破坏的信息参与译码。
+抢占指示（Pre-emption Indication，PI）是 NR 中基站通过 DCI format 2_1（INT-RNTI 加扰的组公共 PDCCH（物理下行控制信道，Physical Downlink Control Channel））下发的通知：在最近一个监测周期内，哪些 PRB（物理资源块，Physical Resource Block）和 OFDM（正交频分复用，Orthogonal Frequency Division Multiplexing）符号上"基站可能没有向该 UE 发送数据"。它是 eMBB（增强移动宽带，Enhanced Mobile Broadband）与 URLLC（超可靠低时延通信，Ultra-Reliable Low-Latency Communication）下行复用的配套机制——URLLC 低时延分组不等时隙边界、直接打孔正在进行的 eMBB 传输之后，被抢占的 eMBB 接收端借助 PI 定位被打孔的位置，把受损的 LLR（对数似然比，Log-Likelihood Ratio）从软解调输入中剔除，避免用被破坏的信息参与译码。一句话本质：**PI 是"事后补发的让行说明单"——救护车（URLLC）压坏长车队（eMBB）的货物后，调度中心标出破损位置，货主把压坏件丢掉继续验货**。
 
 ## 独立解释任务
 
 任务目标：讲清下行抢占为什么发生、PI 如何指示（DCI 2_1 的 14 位位图如何映射到时频平面）、UE 收到指示后能做什么不能做什么，以及它与上行取消指示（CI）的区别。
+
+## 起源与演进
+
+(1) **起点：URLLC 等不起时隙边界。** URLLC 业务的时延预算在毫秒量级，若等下一个 slot 边界再调度，排队时延不可接受。NR 允许基站直接在一个进行中的 eMBB 时隙内、用部分符号 × 部分 PRB 立即发送 URLLC——对 eMBB 而言相当于被打了孔。
+
+(2) **事后通知的必要性。** 打孔发生在调度 eMBB 的 DCI 之后，eMBB UE 事先毫不知情；若它把被打孔位置的 URLLC 干扰信号当作自己的数据软解调，译码将严重劣化。PI（DCI 2_1、INT-RNTI 加扰的组公共 PDCCH）就是事后的"补发通知"。
+
+(3) **指示机制：14 位时频位图。** 每个服务小区对应一条 14 位指示：set0 纯时域（每位对应一组连续符号、覆盖整个 BWP 宽度）；set1 时频二维（每对位对应一组符号 × 半个 BWP）。位值 1 = 该资源上基站没有向该 UE 的传输（可能被抢占）。
+
+(4) **行为边界：假设许可，而非强制动作。** UE 可假设指示资源上没有自己的数据，把对应位置的 LLR 剔除或置零再译码——协议不强制丢弃、不改变 HARQ 流程：丢弃后译码失败，照常反馈 NACK 触发重传；指示对 SS/PBCH 块接收不适用。
+
+(5) **公路救护车模型收尾。** 长车队（eMBB）排满公路，救护车（URLLC）不必等绿灯直接占道通过，压坏对应位置的货物；调度中心事后给货主发"让行说明单"（PI 位图）标出破损位置，货主丢掉压坏件继续验货。
 
 ## 科学定义
 
@@ -108,6 +120,15 @@ PI 给的是**假设许可**而不是强制动作：UE 检测到 2_1 后可以�
 | TS 38.331 Rel-19 DownlinkPreemption | `3GPP_Rel19/processed/TS_38.331_38331-j20/content.md:43295-43315` | RRC 配置参数；`maxINT-DCI-PayloadSize = 126` 见 `content.md:85049` |
 | TS 38.214 Rel-19 | 本地 `38214-j30` 正文仅至第 9 章 | Rel-15/16 时代的下行抢占 UE 过程曾位于 §11.2.2；现版本该过程由 TS 38.213 §11.2 完整定义 |
 | TS 38.133 | 本地抽取仅含附录 sA.1-A.3 | PI 监测的最小性能要求由该规范规定，条款正文不在本地证据范围内 |
+
+## 关键要点
+
+1. PI 是 URLLC 抢占 eMBB 的事后通知（DCI 2_1 + INT-RNTI），事前无法预知。
+2. 14 位时频位图：set0 纯时域 14 组符号；set1 为 7 组符号 × 半个 BWP。
+3. 位值 1 = 该资源无发给本 UE 的传输（可能被抢占），不是"一定被抢占"。
+4. UE 的行为是把受损位置 LLR 剔除/置零再译码——假设许可，协议不强制。
+5. PI 不改变 HARQ 流程；对 SS/PBCH 接收不适用。
+6. 上行对应物是取消指示 CI（DCI 2_4），配置与位图语义独立。
 
 ## 图谱关联
 
