@@ -18,11 +18,25 @@ source_spec: "Algorithmic; hardware implementation of LDPC decoding"
 
 # Min-Sum 及其变体
 
+最小和算法（Min-Sum，MS）及归一化/偏移变体（NMS/OMS）是 NR LDPC 硬件译码的主流选择：用最小值运算近似 SPA 的 tanh/atanh。一句话本质：**MS 族是"小组评审取最没把握的那位评委"——最弱证据决定置信度上限，是对精确概率计算（SPA）的保守近似**。
+
 ## 独立解释任务
 
 任务目标：解释最小和算法（Min-Sum Algorithm, MS）及其归一化最小和（Normalized Min-Sum, NMS）与偏移最小和（Offset Min-Sum, OMS）变体如何用最小值运算近似 SPA 的 tanh/atanh，并说明 min1/min2 硬件技巧。
 
 Min-Sum 族是 NR LDPC 接收端硬件译码的主流选择，作用于 LDPC 迭代译码的校验节点（Check Node, CN）更新环节。
+
+## 起源与演进
+
+(1) **起点：SPA 的硬件成本。** tanh/atanh 在定点硬件上昂贵且易发散（输入接近 ±1 时 atanh 发散），查表/CORDIC 都是面积与时延成本——硬件需要更便宜的近似。
+
+(2) **近似：用最小值替换。** CN 输出 = 输入符号之积 × 最小幅度——符号仍由全体输入决定，幅度只取"最不可靠的输入"。一次比较扫描替代一串超越函数。
+
+(3) **偏差与两档修正。** 纯 MS 高估可靠度约 1-3 dB；NMS 乘缩放系数 α（典型 0.75-0.85）压低过度自信，OMS 减固定偏置 β 并截零（只需减法与比较，硬件最友好）；修正后与 SPA 的差距收窄到 0.1-0.3 dB。α/β 是仿真调参的实现参数，不是协议常数。
+
+(4) **min1/min2 硬件技巧。** 一次扫描记录最小值 min1、其所在边 idx 与次小值 min2：输出给非 idx 边用 min1、给 idx 边自身必须换 min2——外信息原则的硬件落地。
+
+(5) **边界。** 3GPP 只规定码结构（38.212 §5.3.2），译码算法是接收机选择；β 过大会把弱但有用的消息压成 0，收敛反而变差。
 
 ## 科学定义
 
@@ -53,6 +67,15 @@ CN 输入 $q_0=+2.4,\ q_1=-0.9,\ q_2=+1.6,\ q_3=-3.1$：min1=0.9 来自 $q_1$，
 
 - LDPC 矩阵结构依据：TS 38.212 §5.3.2。本地：`3GPP_Rel19/processed/TS_38.212_38212-j30/content.md` 行 945-989；Table 5.3.2-2/3 见 `tables/table_0014.csv/html`、`tables/table_0015.csv/html`。MS/NMS/OMS 本身为非 3GPP 标准的接收机算法。
 - 讲义：`docs/L2_协议算法/T8.6_LDPC_MS_NMS_OMS.md`；精确 SPA 见 `docs/L2_协议算法/T8.5_LDPC_sum_product_BP.md`。
+
+## 关键要点
+
+1. MS = 符号乘积 × 最小幅度——用 min 近似 tanh/atanh 的 CN 更新。
+2. 纯 MS 高估 1-3 dB；NMS 乘 α、OMS 减 β 后与 SPA 差 0.1-0.3 dB。
+3. min1/min2 技巧：非 idx 边给 min1、idx 边自身给 min2。
+4. α/β 是实现调参参数，不是协议常数；β 过大压死弱消息。
+5. 3GPP 只规定码结构，算法为实现选择。
+6. MS 族是硬件译码主流，是 SPA 的工程近似。
 
 ## 图谱关联
 

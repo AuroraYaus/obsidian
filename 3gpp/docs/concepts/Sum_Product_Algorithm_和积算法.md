@@ -16,11 +16,25 @@ source_spec: "Algorithmic; TS 38.212 decoder context"
 
 # 和积算法 (SPA)
 
+和积算法（Sum-Product Algorithm，SPA，亦称置信传播 Belief Propagation）是 LDPC 软判决译码的标准算法形态：在 Tanner 图上按外信息原则迭代传递 LLR 消息，是数学最优的消息传递形式。一句话本质：**SPA 是"证人团协商"——每个节点只听别人的意见更新自己的结论，且绝不把自己的话原样传回；只要有一位证人含糊，结论就跟着含糊**。
+
 ## 独立解释任务
 
 任务目标：解释 LDPC 译码的和积算法（Sum-Product Algorithm, SPA，亦称置信传播（Belief Propagation, BP））如何在 Tanner 图上迭代传递对数似然比（Log-Likelihood Ratio, LLR）消息，并给出变量节点与校验节点的更新公式与收敛判据。
 
 SPA 位于 NR 数据信道接收链中解速率匹配之后、硬判决与 CRC 校验之前的 LDPC 迭代译码核心，是低密度奇偶校验码（Low-Density Parity-Check Code, LDPC）软判决译码的标准算法形态。
+
+## 起源与演进
+
+(1) **起点：LDPC 的译码需要"图上推理"。** H 矩阵的每一行是一条校验约束、每一列是一个比特——天然构成 Tanner 图；SPA 把这个图变成消息传递网络，让约束之间互相校正。
+
+(2) **两条更新规则。** VN→CN 求和（信道 LLR + 其他 CN 消息）；CN→VN 用 tanh/atanh 组合：符号乘积定方向、幅度被最不可靠的输入钳制。两侧都排除目标节点自身——外信息原则，防正反馈发散。
+
+(3) **数值直觉。** 度为 3 的校验节点收到 0.7 与 -1.0，向第三条边输出约 -0.313：输出幅度小于最小输入幅度——校验节点不会"过度自信"，只有其余输入都强可靠时输出才强（逐拍推演见直观模型）。
+
+(4) **工程问题。** tanh/atanh 定点实现困难（输入接近 ±1 时 atanh 发散），需查表/CORDIC/裁剪——这正是 Min-Sum 近似出现的动机。
+
+(5) **收敛与边界。** syndrome 全零可早停；SPA 是接收机算法，3GPP 只规定码结构不规定算法；所有简化算法（Min-Sum 族）都是对 SPA 的逼近。
 
 ## 科学定义
 
@@ -60,6 +74,15 @@ $$2\operatorname{atanh}\!\left(\tanh\frac{0.7}{2}\cdot\tanh\frac{-1.0}{2}\right)
 
 - 码结构依据：TS 38.212 §5.3.2 LDPC 矩阵与基图。本地：`3GPP_Rel19/processed/TS_38.212_38212-j30/content.md` 行 945-989；Table 5.3.2-1 见 `tables/table_0013.csv/html`。SPA 公式本身为非 3GPP 标准的接收机算法。
 - 讲义：`docs/L2_协议算法/T8.5_LDPC_sum_product_BP.md`；Tanner 图消息传递见 `docs/L2_协议算法/T8.4_LDPC_Tanner_graph_message_passing.md`。
+
+## 关键要点
+
+1. SPA = Tanner 图上 VN/CN 迭代传 LLR——LDPC 软判决标准形态。
+2. VN 求和、CN 用 tanh/atanh 组合；两侧都排除自身（外信息原则）。
+3. CN 输出幅度恒小于输入最小幅度——不"过度自信"。
+4. tanh/atanh 定点难实现 → Min-Sum 近似的动机。
+5. 收敛看 syndrome 全零；SPA 是接收机算法，3GPP 不强制。
+6. 所有简化算法（Min-Sum 族）都是对 SPA 的逼近。
 
 ## 图谱关联
 
