@@ -14,11 +14,23 @@ source_spec: "TS 38.211 Rel-19 §7.4.1.5; TS 38.214 Rel-19 §5.2"
 
 # CSI-RS 信道状态信息参考信号
 
-CSI-RS（信道状态信息参考信号，Channel State Information Reference Signal）是下行测量参考信号：基站周期性/按需发送已知序列，UE 测量它得到下行信道状态，进而生成 CSI（信道状态信息，Channel State Information）报告（CQI（信道质量指示，Channel Quality Indicator）/PMI（预编码矩阵指示，Precoding Matrix Indicator）/RI（秩指示，Rank Indicator），见 [[Link_Adaptation_链路自适应与CQI]]）。它是链路自适应闭环的测量源，同时服务波束管理（[[Beam_Management_波束管理]]）与时频跟踪（[[TRS_跟踪参考信号]]）。
+CSI-RS（信道状态信息参考信号，Channel State Information Reference Signal）是下行测量参考信号：基站周期性/按需发送已知序列，UE 测量它得到下行信道状态，进而生成 CSI（信道状态信息，Channel State Information）报告（CQI（信道质量指示，Channel Quality Indicator）/PMI（预编码矩阵指示，Precoding Matrix Indicator）/RI（秩指示，Rank Indicator），见 [[Link_Adaptation_链路自适应与CQI]]）。它是链路自适应闭环的测量源，同时服务波束管理（[[Beam_Management_波束管理]]）与时频跟踪（[[TRS_跟踪参考信号]]）。一句话本质：**CSI-RS 是"体检中心的检测设备"——定期体检或临时加检，体检报告（CSI 报告）决定下次饮食方案（MCS/波束）；DMRS 是"吃饭时的试菜"、CSI-RS 是"定期的营养评估"**。
 
 ## 独立解释任务
 
 任务目标：讲清 CSI-RS 的三大用途（CSI 测量/波束管理/跟踪）、时频结构与端口配置（端口数/密度/NZP-CSI-RS 资源集），以及与 DMRS（解调参考信号，Demodulation Reference Signal）和 SRS（探测参考信号，Sounding Reference Signal）在参考信号体系中的分工。
+
+## 起源与演进
+
+(1) **起点：链路自适应需要测量源。** 基站要选 MCS/波束/秩，必须先知道下行信道状态——CSI-RS 就是测量的标尺。
+
+(2) **三大用途。** CSI 测量（SINR → CQI/PMI/RI 上报）、波束管理（L1-RSRP 波束报告）、时频跟踪（trs-Info 配置兼作 TRS）。
+
+(3) **时频结构与配置。** 端口 1-32、密度 0.5/1/3 RE/PRB/端口；NZP-CSI-RS 由 RRC 配置，周期/半持续/非周期三类（非周期由 DCI 触发）。
+
+(4) **与 DMRS 的分工。** DMRS 与数据同传、解当次；CSI-RS 独立发送、管下次——"这包怎么解" vs "下次怎么配"。
+
+(5) **上下行对照。** 下行 CSI-RS（基站发、UE 测）↔ 上行 SRS（UE 发、基站测）——参考信号体系的两半边。
 
 ## 科学定义
 
@@ -53,6 +65,15 @@ CSI-RS 像「体检中心的检测设备」：定期体检（周期发送）或�
 - CSI 报告：TS 38.214（Rel-19 j30）§5.2，本地 `3GPP_Rel19/processed/TS_38.214_38214-j30`。
 - 配置参数：TS 38.331（Rel-19 j20）§6.3.2（CSI-ResourceConfig），本地 `3GPP_Rel19/processed/TS_38.331_38331-j20`。
 - 测量衔接：[[CSI_SINR]]、T2.11（`docs/L1_基础/`）。
+
+## 关键要点
+
+1. CSI-RS 是基站下行发送、UE 测量的参考信号——上行对应 SRS。
+2. 三大用途：CSI 测量/波束管理/时频跟踪（trs-Info）。
+3. 端口 1-32、密度 0.5/1/3 RE/PRB/端口；非周期由 DCI 触发。
+4. 与 DMRS 分工：解当次（DMRS）vs 配下次（CSI-RS）。
+5. 密度高测量准但开销大——按场景配置。
+6. CSI 报告（CQI/PMI/RI）是链路自适应闭环的输入。
 
 ## 图谱关联
 
