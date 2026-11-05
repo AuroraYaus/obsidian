@@ -15,11 +15,23 @@ source_spec: "TS 38.214 Rel-19 §5.2; TS 38.213 Rel-19 §9; TS 38.331 Rel-19 §6
 
 # Link Adaptation 链路自适应与CQI
 
-链路自适应（Link Adaptation）让传输速率跟着信道走：UE（用户设备，User Equipment）测量下行 CSI-RS（信道状态信息参考信号，Channel State Information Reference Signal）的 SINR（信干噪比，Signal-to-Interference-plus-Noise Ratio），折算成 CQI（信道质量指示，Channel Quality Indicator）上报，基站据此选择 MCS（调制与编码方案，Modulation and Coding Scheme）——信道好就传得快、信道差就传得稳。它由 CSI（信道状态信息，Channel State Information）反馈环路驱动，是 [[Scheduler_MAC调度器与资源分配]] 的频率选择性调度与 MCS 选择的上游输入。
+链路自适应（Link Adaptation）让传输速率跟着信道走：UE（用户设备，User Equipment）测量下行 CSI-RS（信道状态信息参考信号，Channel State Information Reference Signal）的 SINR（信干噪比，Signal-to-Interference-plus-Noise Ratio），折算成 CQI（信道质量指示，Channel Quality Indicator）上报，基站据此选择 MCS（调制与编码方案，Modulation and Coding Scheme）——信道好就传得快、信道差就传得稳。它由 CSI（信道状态信息，Channel State Information）反馈环路驱动，是 [[Scheduler_MAC调度器与资源分配]] 的频率选择性调度与 MCS 选择的上游输入。一句话本质：**链路自适应是"自助餐配菜"——顾客（UE）先报胃口（CQI），厨师（调度器）按胃口配菜量（MCS）；吃完反馈咸淡（ACK/NACK），厨师调盐（outer loop 修正），下一次配菜更准**。
 
 ## 独立解释任务
 
 任务目标：讲清链路自适应闭环（测量→CQI→MCS→反馈→修正）、CQI/PMI/RI 三件报告的内容与作用、CQI 报告的周期/非周期与宽带/子带类型，以及 outer loop（外环）如何用 ACK/NACK 校准 CQI 误差。
+
+## 起源与演进
+
+(1) **起点：信道时变、速率不能固定。** 信道好时固定低速率浪费、信道差时固定高速率全错——传输参数必须跟着信道走。
+
+(2) **闭环五段。** UE 测 SINR → 折算 CQI → 上报 → 调度器选 MCS → 传输 → ACK/NACK → outer loop 修正。
+
+(3) **三件报告。** CQI（4-bit，决定 MCS）、PMI（预编码矩阵建议）、RI（建议层数）——CQI 按 RI 假设折算。
+
+(4) **outer loop 自校准。** NACK → 下调折算 SINR 偏置（CQI 偏乐观）；连续 ACK → 上调——把实际 BLER 拉回 10% 目标。
+
+(5) **报告类型与边界。** 周期（PUCCH）/非周期（DCI 触发、PUSCH）；宽带/子带粒度；CQI 会过时，需周期/非周期持续跟踪。
 
 ## 科学定义
 
@@ -75,6 +87,15 @@ CQI 是 UE 的「预测」——测量误差、信道变化、干扰波动都会
 - PUCCH/PUSCH 承载 CSI：TS 38.213（Rel-19 j30）§9.2，本地 `TS_38.213_38213-j30`。
 - CSI 配置参数：TS 38.331（Rel-19 j20）§6.3.2（CSI-ReportConfig），本地 `TS_38.331_38331-j20`。
 - 测量侧衔接：T2.11（CSI/SINR，`docs/L1_基础/`）、[[CSI_SINR]]。
+
+## 关键要点
+
+1. 闭环：测量→CQI→MCS→传输→ACK/NACK→outer loop。
+2. CQI 是 SINR 按 BLER≤10% 折算的索引，不是 SINR 本身。
+3. PMI/RI 管波束/层数——上行用 SRS 探测 + TPMI。
+4. outer loop 用 ACK/NACK 校准 CQI 误差——闭环的自校准层。
+5. CQI 会过时：周期/非周期持续跟踪。
+6. 物理层与 MAC 层耦合最紧的闭环。
 
 ## 图谱关联
 
