@@ -16,7 +16,7 @@ queries: 1
 
 # Paging 寻呼
 
-寻呼是网络在 UE 空闲态（RRC_IDLE）或非激活态（RRC_INACTIVE）主动"找到"UE 的广播机制：网络在预先约定的寻呼时机（PO，Paging Occasion）发送以 P-RNTI（寻呼无线网络临时标识，Paging Radio Network Temporary Identifier）加扰 CRC 的 DCI 与寻呼消息，被点名的 UE 醒来接入网络。寻呼没有 HARQ（混合自动重传请求，Hybrid Automatic Repeat Request）确认——"重传"指同一寻呼消息的重复发送，而非纠错重传。
+寻呼是网络在 UE 空闲态（RRC_IDLE）或非激活态（RRC_INACTIVE）主动"找到"UE 的广播机制：网络在预先约定的寻呼时机（PO，Paging Occasion）发送以 P-RNTI（寻呼无线网络临时标识，Paging Radio Network Temporary Identifier）加扰 CRC 的 DCI 与寻呼消息，被点名的 UE 醒来接入网络。寻呼没有 HARQ（混合自动重传请求，Hybrid Automatic Repeat Request）确认——"重传"指同一寻呼消息的重复发送，而非纠错重传。一句话本质：**寻呼是"广播找人"——没有"收到请回答"，重要的事多喊几遍**。
 
 ## 独立解释任务
 
@@ -24,7 +24,13 @@ queries: 1
 
 ## 起源与演进
 
-UE 处于空闲态时不持续监听数据信道，网络要"找到"它必须靠一套双方预先约定的广播机制——寻呼。机制上，UE 按 DRX 周期在自己的寻呼帧（PF）内的寻呼时机（PO）醒来监听 PDCCH；PO 由 UE 标识（5G-S-TMSI）哈希分散，不同 UE 的监听时点错开。寻呼的 DCI 用 P-RNTI 加扰 CRC 标识"这是寻呼"，随后的 PDSCH 携带被寻呼 UE 的标识列表。关键语义：寻呼是广播式（一对多）发送，没有针对单个 UE 的 ACK/NACK 反馈，因此不存在 HARQ 重传——提高到达率的手段是同一消息在多个 PO 重复发送（覆盖增强）。演进方向：Rel-17 起引入寻呼早期指示（PEI，38.213 §10.4A），在 PO 之前先发预告比特，UE 不必每个 PO 都完整醒来，进一步省电。被寻呼的 UE 通过随机接入回到连接态——这是寻呼与 T16.6 的衔接点。
+(1) **起点：空闲态的 UE 怎么被找到。** UE 空闲态不持续监听数据信道，网络要"找到"它必须靠一套双方预先约定的广播机制——寻呼。
+
+(2) **机制：PO/PF 与哈希分散。** UE 按 DRX 周期在自己的寻呼帧（PF）内的寻呼时机（PO）醒来监听 PDCCH；PO 由 UE 标识（5G-S-TMSI）哈希分散，不同 UE 的监听时点错开。寻呼的 DCI 用 P-RNTI 加扰 CRC 标识"这是寻呼"，随后的 PDSCH 携带被寻呼 UE 的标识列表。
+
+(3) **关键语义：没有重传，只有重复。** 寻呼是广播式（一对多）发送，没有针对单个 UE 的 ACK/NACK 反馈，因此不存在 HARQ 重传——提高到达率的手段是同一消息在多个 PO 重复发送（覆盖增强）。
+
+(4) **演进：PEI 与回归路径。** Rel-17 起引入寻呼早期指示（PEI，38.213 §10.4A），在 PO 之前先发预告比特，UE 不必每个 PO 都完整醒来，进一步省电。被寻呼的 UE 通过随机接入回到连接态——这是寻呼与 T16.6 的衔接点。
 
 ## 科学定义
 

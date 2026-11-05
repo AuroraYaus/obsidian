@@ -15,7 +15,7 @@ queries: 1
 
 # DCI 下行控制信息
 
-DCI（下行控制信息，Downlink Control Information）是基站下发给 UE 的调度指令——"这次传输给你什么、在哪、怎么收"。它由 PDCCH（物理下行控制信道，Physical Downlink Control Channel）承载（[[PDCCH_物理下行控制信道]] 盲检获得），解析出的字段直接生成译码器的 descriptor（T9.0）：MCS（调制与编码方案，Modulation and Coding Scheme）、资源分配、HARQ（混合自动重传请求，Hybrid Automatic Repeat Request）进程号、NDI（新数据指示，New Data Indicator）、RV（冗余版本，Redundancy Version）等。DCI 是控制面与译码链路的接口——不理解 DCI 字段，就不知道 LLR（对数似然比，Log-Likelihood Ratio）从哪来、译码结果交给谁。
+DCI（下行控制信息，Downlink Control Information）是基站下发给 UE 的调度指令——"这次传输给你什么、在哪、怎么收"。它由 PDCCH（物理下行控制信道，Physical Downlink Control Channel）承载（[[PDCCH_物理下行控制信道]] 盲检获得），解析出的字段直接生成译码器的 descriptor（T9.0）：MCS（调制与编码方案，Modulation and Coding Scheme）、资源分配、HARQ（混合自动重传请求，Hybrid Automatic Repeat Request）进程号、NDI（新数据指示，New Data Indicator）、RV（冗余版本，Redundancy Version）等。一句话本质：**DCI 是"信封里的信"——PDCCH 是信封，RNTI 是收件人藏在锁芯里的身份**。DCI 是控制面与译码链路的接口——不理解 DCI 字段，就不知道 LLR（对数似然比，Log-Likelihood Ratio）从哪来、译码结果交给谁。
 
 ## 独立解释任务
 
@@ -23,7 +23,13 @@ DCI（下行控制信息，Downlink Control Information）是基站下发给 UE 
 
 ## 起源与演进
 
-UE 收数据前必须知道"给不给、在哪、怎么收"，这些信息不能塞进数据信道——于是需要独立的控制信息 DCI 与承载它的控制信道 PDCCH。DCI 分上行授权（UL grant，0_x 格式）与下行分配（DL assignment，1_x 格式）两大类，末尾 0/1 表示基础版/增强版；核心字段包括频域/时域资源分配（含跨时隙偏移 k0/k2）、MCS、HARQ 进程号、NDI、RV、TPC。DCI 尾部 CRC 用 RNTI 加扰——身份藏在锁芯里（38.321 §7.1 RNTI 值表），UE 盲检 PDCCH、逐个 RNTI 解扰认领。解析后的字段直接生成译码器 descriptor（T9.0）：MCS 查调制表、资源分配定 RE 与 LLR 长度、NDI/RV 定软缓存是清空还是合并。两代差异：NR（38.212 §7.3）格式更丰富（0_1/1_1 支持 CBG/波束/多载波等），LTE（36.212 §5.3.3）格式集较小。
+(1) **起点：UE 收数据前需要一张"提货单"。** UE 收数据前必须知道"给不给、在哪、怎么收"，这些信息不能塞进数据信道——于是需要独立的控制信息 DCI 与承载它的控制信道 PDCCH。
+
+(2) **形态：两大类格式与核心字段。** DCI 分上行授权（UL grant，0_x 格式）与下行分配（DL assignment，1_x 格式），末尾 0/1 表示基础版/增强版；核心字段包括频域/时域资源分配（含跨时隙偏移 k0/k2）、MCS、HARQ 进程号、NDI、RV、TPC。
+
+(3) **身份与认领：收件人藏在锁芯里。** DCI 尾部 CRC 用 RNTI 加扰（38.321 §7.1 RNTI 值表），UE 盲检 PDCCH、逐个 RNTI 解扰认领——解开了才是"我的"。
+
+(4) **落地：从字段到译码器 descriptor。** 解析结果直接生成 descriptor（T9.0）：MCS 查调制表、资源分配定 RE 与 LLR 长度、NDI/RV 定软缓存清空还是合并。两代差异：NR（38.212 §7.3）格式更丰富（0_1/1_1 支持 CBG/波束/多载波等），LTE（36.212 §5.3.3）格式集较小。
 
 ## 科学定义
 

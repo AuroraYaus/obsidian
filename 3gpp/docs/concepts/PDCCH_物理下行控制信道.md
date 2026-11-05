@@ -15,7 +15,7 @@ queries: 1
 
 # PDCCH 物理下行控制信道
 
-PDCCH（物理下行控制信道，Physical Downlink Control Channel）承载 DCI（下行控制信息，Downlink Control Information）——基站调度指令的载体。UE 在每个监测时机（monitor occasion）对一组候选 PDCCH 做盲检测（blind decoding）：不知道 DCI 发给谁、多大、放在哪，就按聚合等级逐个试，用 CRC（循环冗余校验，Cyclic Redundancy Check）加扰的 RNTI（无线网络临时标识，Radio Network Temporary Identifier）判断"这是不是给我的"。盲检是全链路调度入口的核心机制，也是控制面最独特的工程问题。
+PDCCH（物理下行控制信道，Physical Downlink Control Channel）承载 DCI（下行控制信息，Downlink Control Information）——基站调度指令的载体。UE 在每个监测时机（monitor occasion）对一组候选 PDCCH 做盲检测（blind decoding）：不知道 DCI 发给谁、多大、放在哪，就按聚合等级逐个试，用 CRC（循环冗余校验，Cyclic Redundancy Check）加扰的 RNTI（无线网络临时标识，Radio Network Temporary Identifier）判断"这是不是给我的"。一句话本质：**PDCCH 是信封、DCI 是信，收件人地址不在信封上而在锁芯（RNTI）里——UE 靠盲检拆封认领**。盲检是全链路调度入口的核心机制，也是控制面最独特的工程问题。
 
 ## 独立解释任务
 
@@ -23,7 +23,13 @@ PDCCH（物理下行控制信道，Physical Downlink Control Channel）承载 DC
 
 ## 起源与演进
 
-控制信息要有物理载体，且 UE 收数据前必须先拿到它——PDCCH 应运而生。结构上分三级：CORESET（频域 RB 集 + 时域 1~3 符号）→ REG（1 PRB × 1 符号）→ CCE（6 个 REG，PDCCH 最小分配单位）；聚合等级 1/2/4/8/16 决定一个 PDCCH 占几个 CCE，等级越高码率越低越可靠。为什么必须"盲检"：DCI 没有显式收件人字段，身份藏在 CRC 的 RNTI 加扰里；UE 按搜索空间候选集逐个试——解调、译码、用自己的一串 RNTI 解扰 CRC，解开了就是"我的"。协议用盲检换取零配置开销，代价是接收复杂度（候选 × RNTI × DCI 尺寸），故用搜索空间限候选、UE 能力限盲检上限。编码上两代差异：NR DCI 经 24 bit CRC（RNTI 加扰）+ Polar 编码；LTE 经 16 bit CRC + 咬尾卷积码（TBCC）。
+(1) **起点：控制信息要有物理载体。** UE 收数据前必须先拿到调度指令，PDCCH 就是它的专属信道。
+
+(2) **结构：三级资源组织。** CORESET（频域 RB 集 + 时域 1~3 符号）→ REG（1 PRB × 1 符号）→ CCE（6 个 REG，PDCCH 最小分配单位）；聚合等级 1/2/4/8/16 决定一个 PDCCH 占几个 CCE，等级越高码率越低越可靠。
+
+(3) **为什么必须盲检。** DCI 没有显式收件人字段，身份藏在 CRC 的 RNTI 加扰里；UE 按搜索空间候选集逐个试——解调、译码、用自己的一串 RNTI 解扰 CRC，解开了就是"我的"。协议用盲检换取零配置开销，代价是接收复杂度（候选 × RNTI × DCI 尺寸），故用搜索空间限候选、UE 能力限盲检上限。
+
+(4) **编码的两代差异。** NR DCI 经 24 bit CRC（RNTI 加扰）+ Polar 编码；LTE 经 16 bit CRC + 咬尾卷积码（TBCC）。
 
 ## 科学定义
 

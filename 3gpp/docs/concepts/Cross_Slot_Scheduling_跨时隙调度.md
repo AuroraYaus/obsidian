@@ -16,7 +16,7 @@ queries: 1
 
 # Cross-slot Scheduling 跨时隙调度
 
-跨时隙调度是 PDCCH（物理下行控制信道，Physical Downlink Control Channel）与其调度的数据信道不在同一个时隙（slot）的调度方式：基站在第 n 个时隙下发 DCI（下行控制信息，Downlink Control Information），数据在第 n+k0（下行）或第 n+k2（上行）个时隙才出现。它与同时隙调度（k0=0）相对，核心动机是 UE（用户设备，User Equipment）节能。
+跨时隙调度是 PDCCH（物理下行控制信道，Physical Downlink Control Channel）与其调度的数据信道不在同一个时隙（slot）的调度方式：基站在第 n 个时隙下发 DCI（下行控制信息，Downlink Control Information），数据在第 n+k0（下行）或第 n+k2（上行）个时隙才出现。它与同时隙调度（k0=0）相对，核心动机是 UE（用户设备，User Equipment）节能。一句话本质：**跨时隙调度是"下单与送达分开"的调度——用调度时延换 UE 关射频省电的机会**。
 
 ## 独立解释任务
 
@@ -24,7 +24,13 @@ queries: 1
 
 ## 起源与演进
 
-同时隙调度（k0=0）下，UE 每个时隙都要先把 PDCCH 译完才知道有没有自己的数据——射频与译码器几乎常开，待机功耗高。解法是允许数据在 PDCCH 之后的第 k0（下行）/k2（上行）个时隙出现：DCI 的时域资源分配字段从 RRC 配置的分配表里选一行（起始符号 S、长度 L 与时隙偏移）。Rel-16 进一步引入 minimumSchedulingOffsetK0/K2，承诺"数据最早 k 个时隙后才到"——UE 收到 DCI 后即可关闭射频休眠、到点再醒，配套还有 PDCCH 跳过（skipping）与搜索空间组切换。代价是调度时延变大，适合 eMBB 这类时延不敏感业务；URLLC 仍需同时隙调度。LTE 时代无此机制，Rel-16 之前的 NR 也没有——它是 5G 节能演进的一环。
+(1) **起点：同时隙调度的待机功耗。** 同时隙调度（k0=0）下，UE 每个时隙都要先把 PDCCH 译完才知道有没有自己的数据——射频与译码器几乎常开，待机功耗高。
+
+(2) **解法：数据晚 k0/k2 个时隙出现。** DCI 的时域资源分配字段从 RRC 配置的分配表里选一行（起始符号 S、长度 L 与时隙偏移），数据在 PDCCH 之后第 k0（下行）/k2（上行）个时隙出现。
+
+(3) **节能机制：最小偏移承诺。** Rel-16 引入 minimumSchedulingOffsetK0/K2，承诺"数据最早 k 个时隙后才到"——UE 收到 DCI 后即可关闭射频休眠、到点再醒；配套还有 PDCCH 跳过（skipping）与搜索空间组切换。
+
+(4) **代价与适用边界。** 调度时延变大，适合 eMBB 这类时延不敏感业务；URLLC 仍需同时隙调度。LTE 时代无此机制，Rel-16 之前的 NR 也没有——它是 5G 节能演进的一环。
 
 ## 科学定义
 
