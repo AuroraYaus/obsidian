@@ -14,11 +14,23 @@ source_spec: "TS 38.213 Rel-19 §6; TS 38.331 Rel-19 §6.3.2"
 
 # Beam Management 波束管理
 
-波束管理（Beam Management）管理高频段（FR2（频率范围 2，Frequency Range 2））的定向传输：基站与 UE 用窄波束收发，需要先找到最佳波束对（beam pair），并在波束失效时快速恢复。流程分四步——波束测量（SSB/CSI-RS 波束的 L1-RSRP（层 1 参考信号接收功率，Layer 1 Reference Signal Received Power））、波束报告（UE 上报最佳波束）、波束指示（TCI（传输配置指示，Transmission Configuration Indication）状态切换下行波束）、波束失败恢复（BFR，Beam Failure Recovery，检测+恢复）。它是 FR2 可靠性的核心机制，与 [[PSS_SSS_同步信号与小区搜索]]（SSB 波束扫描）、[[CSI_RS_信道状态信息参考信号]]（波束测量源）、[[PRACH_随机接入]]（BFR 专用前导）紧密衔接。
+波束管理（Beam Management）管理高频段（FR2（频率范围 2，Frequency Range 2））的定向传输：基站与 UE 用窄波束收发，需要先找到最佳波束对（beam pair），并在波束失效时快速恢复。流程分四步——波束测量（SSB/CSI-RS 波束的 L1-RSRP（层 1 参考信号接收功率，Layer 1 Reference Signal Received Power））、波束报告（UE 上报最佳波束）、波束指示（TCI（传输配置指示，Transmission Configuration Indication）状态切换下行波束）、波束失败恢复（BFR，Beam Failure Recovery，检测+恢复）。它是 FR2 可靠性的核心机制，与 [[PSS_SSS_同步信号与小区搜索]]（SSB 波束扫描）、[[CSI_RS_信道状态信息参考信号]]（波束测量源）、[[PRACH_随机接入]]（BFR 专用前导）紧密衔接。一句话本质：**波束管理是"手电筒照路"——初始不知道路在哪先四面八方扫一遍（SSB 波束扫描），找到最亮的照法（波束报告），走路时定期确认方向（CSI-RS 测量），手电筒坏了（波束失败）就换备用方案（BFR）**。
 
 ## 独立解释任务
 
 任务目标：讲清波束管理的四步流程（测量/报告/指示/恢复）、SSB 与 CSI-RS 在波束测量中的分工、TCI 状态机制，以及 BFR 的检测与恢复过程。
+
+## 起源与演进
+
+(1) **起点：FR2 的两难。** 毫米波路径损耗大，需窄波束定向增益；但窄波束有"盲区"——对准错误或被遮挡（人体/建筑）即信号中断。
+
+(2) **四步闭环。** 测量（SSB/CSI-RS 的 L1-RSRP）→ 报告（最佳波束）→ 指示（TCI 状态切换 QCL 假设）→ 恢复（BFR 检测 + 专用前导恢复）。
+
+(3) **测量分工。** SSB 波束负责初始扫描（同步栅格）、CSI-RS 波束负责连接态精细测量。
+
+(4) **TDD 互易性。** TDD 同频可用上行 SRS 探测替代下行波束测量——省下行测量开销。
+
+(5) **边界。** 四步是循环不是一次性；BFR 用专用前导快速恢复、不是重做竞争随机接入；TCI 由 RRC/MAC-CE 配置、DCI 指示（跨层机制）。
 
 ## 科学定义
 
@@ -57,10 +69,19 @@ TDD（时分双工，Time Division Duplexing）下上下行同频，可用上行
 - 波束测量报告：TS 38.214（Rel-19 j30）§5.2（CSI 报告含 L1-RSRP），本地 `TS_38.214_38214-j30`。
 - 衔接：[[PSS_SSS_同步信号与小区搜索]]、[[CSI_RS_信道状态信息参考信号]]、[[PRACH_随机接入]]。
 
+## 关键要点
+
+1. 波束管理四步：测量/报告/指示/恢复——循环不是一次性。
+2. SSB 波束管初始扫描、CSI-RS 管连接态精细测量。
+3. TCI 状态切换 QCL 假设——"这次传输与哪个参考信号同方向"。
+4. BFR 用专用 PRACH 前导快速恢复，非竞争接入。
+5. TDD 互易性：SRS 探测可替代下行波束测量。
+6. 上行也有波束；TCI 是跨层机制（RRC/MAC-CE/DCI）。
+
 ## 图谱关联
 
-- - [[T16.2_beam_management|T16.2 波束管理讲义]]
-[[概念图谱入口]]
+- [[T16.2_beam_management|T16.2 波束管理讲义]]
+- [[概念图谱入口]]
 - [[PSS_SSS_同步信号与小区搜索]]
 - [[CSI_RS_信道状态信息参考信号]]
 - [[PRACH_随机接入]]

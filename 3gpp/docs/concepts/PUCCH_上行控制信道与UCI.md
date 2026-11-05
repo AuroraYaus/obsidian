@@ -14,11 +14,23 @@ source_spec: "TS 38.213 Rel-19 §9; TS 38.212 §6.3"
 
 # PUCCH 上行控制信道与UCI
 
-PUCCH（物理上行控制信道，Physical Uplink Control Channel）承载 UCI（上行控制信息，Uplink Control Information）——UE（用户设备，User Equipment）回传给基站的控制反馈：HARQ-ACK（混合自动重传请求确认，Hybrid Automatic Repeat Request Acknowledgment，即下行数据收没收对的回执）、SR（调度请求，Scheduling Request，申请上行资源）与 CSI（信道状态信息，Channel State Information，报告信道质量）。PUCCH 是下行译码链路的"回执"，没有它 HARQ 重传无法闭环。
+PUCCH（物理上行控制信道，Physical Uplink Control Channel）承载 UCI（上行控制信息，Uplink Control Information）——UE（用户设备，User Equipment）回传给基站的控制反馈：HARQ-ACK（混合自动重传请求确认，Hybrid Automatic Repeat Request Acknowledgment，即下行数据收没收对的回执）、SR（调度请求，Scheduling Request，申请上行资源）与 CSI（信道状态信息，Channel State Information，报告信道质量）。PUCCH 是下行译码链路的"回执"，没有它 HARQ 重传无法闭环。一句话本质：**PUCCH 是"收货确认单"——收到货（PDSCH）后回一张单子（UCI），写明"货到了没（ACK/NACK）、还有没有货要发（SR）、道路怎么样（CSI）"；单子格式按内容多少选，渠道按包裹大小选**。
 
 ## 独立解释任务
 
 任务目标：讲清 UCI 三兄弟（HARQ-ACK/SR/CSI）的内容、PUCCH format 0-4 的划分逻辑（短/长格式、承载容量）、UCI 在 PUCCH 与 PUSCH（物理上行共享信道，Physical Uplink Shared Channel）间的承载选择，以及 HARQ-ACK 时序（k1）如何与下行译码的 HARQ 进程衔接。
+
+## 起源与演进
+
+(1) **起点：下行译码需要回执。** 基站发完 PDSCH 必须知道收没收对——HARQ 闭环的前提是反馈通道。
+
+(2) **UCI 三兄弟。** HARQ-ACK（每 TB/CBG 的回执）、SR（申请上行资源）、CSI（信道质量报告）。
+
+(3) **format 0-4 的划分。** 短格式（0/2，1-2 符号）省资源、长格式（1/3/4，4-14 符号）抗覆盖；≤2 bit 用序列选择/低速率扩展、多 bit 用 DMRS 相干解调——按内容多少选"信封"。
+
+(4) **承载选择与 k1 时序。** UCI 少且无 PUSCH → PUCCH；多或有 PUSCH → 搭 PUSCH。HARQ-ACK 在 slot n+k1 上报（k1 由 DCI 指示）——译码到反馈的时延链。
+
+(5) **资源分配。** PUCCH 资源由高层配置 + DCI 动态选择——反馈信道的位置由下行调度指令决定。
 
 ## 科学定义
 
@@ -70,6 +82,15 @@ PUCCH 像"收货确认单"：收到货（PDSCH）后回一张单子（UCI），�
 - UCI 在 PUSCH 的复用与交织：T10.9（`docs/L2_协议算法/T10.9_NR_UCI_interleaving_triangular.md`）。
 - LTE PUCCH：TS 36.211 §5.4（物理结构）、TS 36.212 §5.2.3（UCI 编码），本地 `3GPP_Rel19/processed/TS_36.211_*`/`TS_36.212_36212-j30`。
 - HARQ 反馈语义：T9.3/T9.8（HARQ 软缓存与 CBG 反馈）。
+
+## 关键要点
+
+1. PUCCH 承载 UCI 三兄弟：HARQ-ACK/SR/CSI。
+2. format 0-4：短省资源、长抗覆盖；按容量选格式。
+3. UCI 可复用进 PUSCH（有上行数据时）。
+4. k1 由 DCI 指示——HARQ 反馈时序动态可调。
+5. PUCCH 资源由高层配置 + DCI 动态选择。
+6. 没有 PUCCH，HARQ 重传无法闭环。
 
 ## 图谱关联
 
