@@ -48,6 +48,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | SIB | 系统信息块 | System Information Block；SIB1 由 MIB 指向，其余 SIB 由 SIB1 调度。 |
 | TBCC | 咬尾卷积码 | Tail Biting Convolutional Code；LTE PDCCH/PBCH 信道编码，非递归无迭代。→ [[TBCC_咬尾卷积码]] |
 | 调度器 | 调度器 | Scheduler；MAC 层每 slot 决策用户/资源/MCS 的单元。→ [[Scheduler_MAC调度器与资源分配]] |
+| OCC | 正交覆盖码 | Orthogonal Cover Code；一组互相正交的 ±1 序列，乘到连续资源上形成码道，用于参考信号的端口复用与控制信道的块状扩频。→ [[OCC_正交覆盖码]] |
 | 空口 | Air Interface | 终端与网络之间的无线链路（Uu 接口），指协议规定的整条处理链，不等同于空气或物理层。→ [[Air_Interface_空口与三个域]] |
 | 空域 | Spatial Domain | 以天线端口与层为坐标的资源维度，靠多天线加权形成方向性与空间复用；可用层数受 min(N_t,N_r) 与信道秩限制。→ [[Air_Interface_空口与三个域]] |
 | CRB | 公共资源块 | Common Resource Block；以 Point A 为原点、全载波统一编号的资源块，跨 BWP 描述同一频域位置的公共参照。→ [[Resource_Units_资源单位体系]] |
