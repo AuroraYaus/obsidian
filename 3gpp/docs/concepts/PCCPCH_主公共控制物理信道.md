@@ -16,7 +16,7 @@ queries: 1
 
 # PCCPCH 主公共控制物理信道
 
-PCCPCH（主公共控制物理信道，Primary Common Control Physical Channel）是 3G 制式中承载广播信道（Broadcast Channel, BCH）的下行公共物理信道，在时分同步码分多址（Time Division-Synchronous Code Division Multiple Access, TD-SCDMA）中写作 PCCPCH，在宽带码分多址（Wideband Code Division Multiple Access, WCDMA）中写作 P-CCPCH（带连字符）。它把小区级系统信息固定在一组所有 UE 都能事先算出的时隙、信道化码与扩频因子上，UE 在完成小区搜索后不需要任何调度信令即可读取；该信道不携带导频符号，解调所需的相位参考由主公共导频信道（Primary Common Pilot Channel, P-CPICH）提供。一句话本质：**PCCPCH 的作用是把 BCH 的传输块固定在小区内唯一确定的一组物理资源上，用资源的固定性换取免调度的可读性，同时把信道估计的负担转交给同小区的主公共导频。**
+PCCPCH（主公共控制物理信道，Primary Common Control Physical Channel）是 3G 制式中承载广播信道（Broadcast Channel, BCH）的下行公共物理信道，在时分同步码分多址（Time Division-Synchronous Code Division Multiple Access, TD-SCDMA）中写作 PCCPCH，在宽带码分多址（Wideband Code Division Multiple Access, WCDMA）中写作 P-CCPCH（带连字符）。它把小区级系统信息固定在一组所有 UE（用户设备，User Equipment）都能事先算出的时隙、信道化码与扩频因子上，UE 在完成小区搜索后不需要任何调度信令即可读取；该信道不携带导频符号，解调所需的相位参考由主公共导频信道（Primary Common Pilot Channel, P-CPICH）提供。一句话本质：**PCCPCH 的作用是把 BCH 的传输块固定在小区内唯一确定的一组物理资源上，用资源的固定性换取免调度的可读性，同时把信道估计的负担转交给同小区的主公共导频。**
 
 ## 符号与记号约定
 
@@ -56,7 +56,7 @@ PCCPCH（主公共控制物理信道，Primary Common Control Physical Channel�
 
 (2) **WCDMA 的形态：固定速率、固定码道、整时隙 2560 个码片。** WCDMA 的 P-CCPCH 采用固定速率 30 kbps、扩频因子 256、信道化码 $C_{ch,256,1}$，用小区主扰码加扰，以 QPSK 调制并采用由网络配置的固定功率发射。每个时隙 2560 个码片全部承载 P-CCPCH，折算为 10 个 QPSK 符号；同步信道（Synchronisation Channel, SCH）在每个时隙的前 256 个码片上与 P-CCPCH 同时发送，两者占用同一段时频资源，接收端按各自的码序列分离。固定速率使 UE 无需读取传输格式指示即可确定解调参数，码道固定使 UE 无需搜索码树。
 
-(3) **TD-SCDMA 的形态：TS0 时隙、双 SF=16 码道。** TD-SCDMA 的 PCCPCH 固定占用 TS0 时隙，使用两条扩频因子为 16 的信道化码并行承载，QPSK 调制，同样以小区最大功率发射。它与 WCDMA 的差别来自双工方式与帧结构：TD-SCDMA 以时隙区分上下行，广播信道必须落在全小区都能接收的下行时隙 TS0 上；WCDMA 以码道区分信道，广播信道落在固定的码号上。两代形态不同，设计约束相同——资源位置必须由协议写死。
+(3) **TD-SCDMA 的形态：TS0 时隙、双 SF=16 码道。** TD-SCDMA 的 PCCPCH 固定占用 TS0 时隙，使用两条扩频因子为 16 的信道化码并行承载，QPSK 调制，功率按协议规定取最大值（TS 25.221，本地未收录，未核实）。它与 WCDMA 的差别来自双工方式与帧结构：TD-SCDMA 以时隙区分上下行，广播信道必须落在全小区都能接收的下行时隙 TS0 上；WCDMA 以码道区分信道，广播信道落在固定的码号上。两代形态不同，设计约束相同——资源位置必须由协议写死。
 
 (4) **与 P-CPICH 的分工：码号相邻、职能相反。** 同一个小区的 P-CPICH 使用 $C_{ch,256,0}$，P-CCPCH 使用 $C_{ch,256,1}$，两条码在码树上相邻，这是「一字之差」说法的物理来源。但两者的职能完全相反：P-CCPCH 承载 BCH 的数据比特，P-CPICH 只发送收发双方已知的导频符号，不承载任何传输信道。UE 解调 P-CCPCH 时，用 P-CPICH 估计出的信道复增益对接收符号做相干检测，再按固定速率与编码方式译出 BCH。
 
@@ -84,7 +84,7 @@ WCDMA 的代入结果为 $R_s=3.84\times10^6/256=15$ ksps、$R_b=2\times15=30$ k
 
 WCDMA 的 P-CCPCH 资源由两个坐标固定：码号与帧内时隙位置。码号是扩频因子 256 下的 1 号码，与 P-CPICH 的 0 号码相邻；帧内位置覆盖全部 15 个时隙，每个时隙的 2560 个码片全部承载 P-CCPCH，同步信道只在前 256 个码片上与它同时发送。两个坐标合起来给出每帧 150 个符号位置，与 30 kbps 的固定速率一致；若把前 256 个码片误当成 P-CCPCH 的空白区，每时隙只剩 9 个符号，速率会降到 27 kbps，与协议的 30 kbps 不符。
 
-TD-SCDMA 的 PCCPCH 资源由另外两个坐标固定：时隙号与码道号。它固定占用 TS0 时隙，使用两条扩频因子 16 的信道化码并行发送，采用 QPSK 调制与小区最大功率。扩频因子 16 意味着每条码道每个符号占 16 个码片，两条码道合起来提供两路并行的符号流；具体的时隙长度、码道编号与功率偏置由 TS 25.221 规定，本地未收录该规范，本笔记不给出未核实的数值。
+TD-SCDMA 的 PCCPCH 资源由另外两个坐标固定：时隙号与码道号。它固定占用 TS0 时隙，使用两条扩频因子 16 的信道化码并行发送，采用 QPSK 调制，功率按协议规定取最大值（TS 25.221，本地未收录，未核实）。扩频因子 16 意味着每条码道每个符号占 16 个码片，两条码道合起来提供两路并行的符号流；具体的时隙长度、码道编号与功率偏置由 TS 25.221 规定，本地未收录该规范，本笔记不给出未核实的数值。
 
 两代形态的差异可以归纳为一条判据：资源位置必须能由 UE 在读取 BCH 之前独立算出。WCDMA 用码号与时隙位置满足这一判据，TD-SCDMA 用时隙号与码道号满足同一判据，两者的具体参数不同，约束相同。资源确定之后，剩下的问题是 LTE 侧为什么还在测量它。
 
