@@ -29,3 +29,4 @@
 - [PPT 展示偏好](ppt-presentation-preference.md) — 展示材料主体讲内容与经验而非过程数字（天数/提交数只作证据小字）；页数宁多勿少；经验必须落到机制+案例；标题禁模板化死板（2026-09-04 两轮纠错）
 - [Obsidian graph.json 版本控制](obsidian-graph-config-versioning.md) — graph.json 承载图谱颜色/过滤规则须随仓入库（2026-09-04 换机无颜色无过滤教训；workspace.json 保持忽略）
 - [GNOME 扩展 toggle 竞态卡死](gnome-extension-toggle-race.md) — gnome-extensions disable && enable 背靠背会卡死 INACTIVE；且会话内重载不重读代码（ESM 模块缓存）——改代码必须注销重登；本机 InternetSpeedMeter 已改 ↓/↑ 分向显示（升级会覆盖补丁）
+- [概念笔记禁比喻+术语三重义务](concept-note-no-metaphor.md) — 概念笔记/讲义禁生活比喻（书面化）；直觉由结构化描述/数值实例/协议流程承担；前置概念节+记号约定+首现就地解释；2026-11-10 E_Value_G_Value 首段"蛋糕/盘子/分账"纠错
