@@ -112,7 +112,7 @@ classDef default fill:#F7F9FC,stroke:#C9D4DF,color:#17212F;
 
 ## 协议锚点
 
-- NR 调制映射：TS 38.211 §5.1（星座表自 Table 5.1-1（π/2-BPSK）起，QPSK 为 Table 5.1-3，本地 `3GPP_Rel19/processed/TS_38.211_38211-j30`）。
+- NR 调制映射：TS 38.211 Rel-19 §5.1 以**公式**给出各阶调制的比特到符号映射（§5.1.1 π/2-BPSK、§5.1.2 BPSK、§5.1.3 QPSK、§5.1.4 16QAM、§5.1.5 64QAM、§5.1.6 256QAM、§5.1.7 1024QAM），本版本不含题注为 `Table 5.1-x` 的星座表；若引用旧版本的表号，须同时标注版本号，否则与本地 Rel-19 抽取件对不上。本地 `3GPP_Rel19/processed/TS_38.211_38211-j30`。
 - LTE 调制映射：TS 36.211 §7.1（本地 `TS_36.211_*`）。
 - GMSK 为 GSM（2G）调制：**非 3GPP LTE/NR 制式，本地无 GSM 资料，仅作背景对照**。
 - 误码率理论：AWGN 下 BPSK 误比特率 $P_b = Q(\sqrt{2E_b/N_0})$（通信原理教材背景，非协议强制）。

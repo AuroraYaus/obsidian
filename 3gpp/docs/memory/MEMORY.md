@@ -31,3 +31,4 @@
 - [GNOME 扩展 toggle 竞态卡死](gnome-extension-toggle-race.md) — gnome-extensions disable && enable 背靠背会卡死 INACTIVE；且会话内重载不重读代码（ESM 模块缓存）——改代码必须注销重登；本机 InternetSpeedMeter 已改 ↓/↑ 分向显示（升级会覆盖补丁）
 - [概念笔记禁比喻+术语三重义务](concept-note-no-metaphor.md) — 概念笔记/讲义禁生活比喻（书面化）；直觉由结构化描述/数值实例/协议流程承担；前置概念节+记号约定+首现就地解释；2026-11-10 E_Value_G_Value 首段"蛋糕/盘子/分账"纠错
 - [SVG 中文渲染与目检假通过](svg-render-cjk-font.md) — PNG 目检必须用 rsvg-convert；ImageMagick 的 MSVG 渲染器静默丢中文字形，会得出"无重叠但无文字"的假通过（2026-11-10 实测）
+- [星座图标签必须反推核对](svg-constellation-label-verify.md) — 比特标签要用映射式正向+反向 round-trip 核对；"抄邻点"错误几何审计与目检都看不见（2026-11-10 T2.1 3/4 标错）

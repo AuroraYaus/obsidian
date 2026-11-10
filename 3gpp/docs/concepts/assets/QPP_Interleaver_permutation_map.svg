@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+@file    QPP_Interleaver_permutation_map.svg
+@brief   QPP 交织器的置换散点、偏移量分布与参数约束的并列说明
+@note    本图以三块竖排面板并列说明 QPP 交织器的三件事。面板 A 是置换散点图，横轴为置换的
+          自变量 i，纵轴为落点 Π(i)，画出 K=40、f1=3、f2=10（TS 36.212 Table 5.1.3-3 第 1 行）
+          下全部 40 个点；虚斜线为恒等映射 Π(i)=i，供读者判断偏离程度。面板 B 用同一组参数画出
+          有符号偏移量 Π(i)−i，纵轴取值区间为 −20 至 19，横线为偏移 0 的参考线，竖线把每个点
+          引回零线以便读出正负。面板 C 给出 f1、f2 与 K 的取值约束（互质条件、表驱动）以及
+          K=40、f1=3、f2=10 时 Π(0..7) 的八个数。
+          图中散点由公式逐点算出，坐标换算为：面板 A 的 (i,Π(i)) → (126+14.3i, 392−5.3Π(i))，
+          面板 B 的 (i,Π(i)−i) → (126+14.3i, 620+5.3(20−d))。散点与宿主绘图区边界的最小距离
+          为 26 px，满足审计 R10 的 10 px 余量要求。三个面板的边框与坐标轴一律以 line 绘制；
+          所有文字均落在宿主 rect 内，页级标题为 class="free"，位于面板之外。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="960" viewBox="0 0 1200 960" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">
+  <rect x="0" y="0" width="1200" height="960" fill="#ffffff"/>
+
+  <!-- 页级标题（框外文字） -->
+  <text class="free" x="600" y="34" font-size="19" font-weight="bold" text-anchor="middle" fill="#222222">QPP 交织器的置换散点、偏移量分布与参数约束</text>
+
+  <!-- ================= 面板 A：置换散点 ================= -->
+  <rect x="24" y="60" width="736" height="424" fill="#fdfdfd" stroke="#cdd8e4" stroke-width="1"/>
+  <rect x="24" y="60" width="736" height="68" fill="#f2f6fb" stroke="#444444" stroke-width="1.5"/>
+  <text x="38" y="88" font-size="15" font-weight="bold" fill="#222222">面板 A｜置换散点：自变量 i 与落点 Π(i)</text>
+  <text x="38" y="112" font-size="11" fill="#333333">K=40、f1=3、f2=10（Table 5.1.3-3 第 1 行）；虚斜线为恒等映射 Π(i)=i</text>
+
+  <!-- 绘图区 -->
+  <rect x="96" y="150" width="632" height="272" fill="#f9fbfd" stroke="#cdd8e4" stroke-width="1"/>
+  <line x1="96" y1="150" x2="96" y2="422" stroke="#444444" stroke-width="1.5"/>
+  <line x1="96" y1="422" x2="728" y2="422" stroke="#444444" stroke-width="1.5"/>
+  <line x1="126" y1="392" x2="698" y2="180" stroke="#c6c6c6" stroke-width="1.2" stroke-dasharray="8 5"/>
+
+  <!-- 纵轴刻度：Π(i)=0,10,20,30,40 -->
+  <g font-size="11" text-anchor="end" fill="#333333">
+    <text x="86" y="396">0</text>
+    <text x="86" y="343">10</text>
+    <text x="86" y="290">20</text>
+    <text x="86" y="237">30</text>
+    <text x="86" y="184">40</text>
+  </g>
+  <!-- 横轴刻度：i=0,10,20,30,40 -->
+  <g font-size="11" text-anchor="middle" fill="#333333">
+    <text x="126" y="442">0</text>
+    <text x="269" y="442">10</text>
+    <text x="412" y="442">20</text>
+    <text x="555" y="442">30</text>
+    <text x="698" y="442">40</text>
+  </g>
+
+  <!-- 40 个散点：(i, Π(i)) -->
+  <g fill="#1d3f6e">
+    <circle cx="126.0" cy="392.0" r="4"/><circle cx="140.3" cy="323.1" r="4"/><circle cx="154.6" cy="360.2" r="4"/><circle cx="168.9" cy="291.3" r="4"/><circle cx="183.2" cy="328.4" r="4"/><circle cx="197.5" cy="259.5" r="4"/><circle cx="211.8" cy="296.6" r="4"/><circle cx="226.1" cy="227.7" r="4"/>
+    <circle cx="240.4" cy="264.8" r="4"/><circle cx="254.7" cy="195.9" r="4"/><circle cx="269.0" cy="233.0" r="4"/><circle cx="283.3" cy="376.1" r="4"/><circle cx="297.6" cy="201.2" r="4"/><circle cx="311.9" cy="344.3" r="4"/><circle cx="326.2" cy="381.4" r="4"/><circle cx="340.5" cy="312.5" r="4"/>
+    <circle cx="354.8" cy="349.6" r="4"/><circle cx="369.1" cy="280.7" r="4"/><circle cx="383.4" cy="317.8" r="4"/><circle cx="397.7" cy="248.9" r="4"/><circle cx="412.0" cy="286.0" r="4"/><circle cx="426.3" cy="217.1" r="4"/><circle cx="440.6" cy="254.2" r="4"/><circle cx="454.9" cy="185.3" r="4"/>
+    <circle cx="469.2" cy="222.4" r="4"/><circle cx="483.5" cy="365.5" r="4"/><circle cx="497.8" cy="190.6" r="4"/><circle cx="512.1" cy="333.7" r="4"/><circle cx="526.4" cy="370.8" r="4"/><circle cx="540.7" cy="301.9" r="4"/><circle cx="555.0" cy="339.0" r="4"/><circle cx="569.3" cy="270.1" r="4"/>
+    <circle cx="583.6" cy="307.2" r="4"/><circle cx="597.9" cy="238.3" r="4"/><circle cx="612.2" cy="275.4" r="4"/><circle cx="626.5" cy="206.5" r="4"/><circle cx="640.8" cy="243.6" r="4"/><circle cx="655.1" cy="386.7" r="4"/><circle cx="669.4" cy="211.8" r="4"/><circle cx="683.7" cy="354.9" r="4"/>
+  </g>
+
+  <text x="38" y="466" font-size="11" fill="#333333">点集不落在一条直线上：相邻步长在 13 与 −7 之间交替，二次项使落点间隔随 i 变化</text>
+
+  <!-- ================= 面板 B：偏移量分布 ================= -->
+  <rect x="24" y="500" width="736" height="436" fill="#fdfdfd" stroke="#cdd8e4" stroke-width="1"/>
+  <rect x="24" y="500" width="736" height="68" fill="#f2f6fb" stroke="#444444" stroke-width="1.5"/>
+  <text x="38" y="528" font-size="15" font-weight="bold" fill="#222222">面板 B｜偏移量 Π(i)−i 的分布</text>
+  <text x="38" y="552" font-size="11" fill="#333333">同一组参数；纵轴为有符号偏移（−20 至 16），横线为偏移 0 的参考线</text>
+
+  <rect x="96" y="590" width="632" height="272" fill="#f9fbfd" stroke="#cdd8e4" stroke-width="1"/>
+  <line x1="96" y1="590" x2="96" y2="862" stroke="#444444" stroke-width="1.5"/>
+  <line x1="96" y1="862" x2="728" y2="862" stroke="#444444" stroke-width="1.5"/>
+  <line x1="96" y1="726" x2="728" y2="726" stroke="#999999" stroke-width="1" stroke-dasharray="6 4"/>
+
+  <g font-size="11" text-anchor="end" fill="#333333">
+    <text x="86" y="624">20</text>
+    <text x="86" y="677">10</text>
+    <text x="86" y="730">0</text>
+    <text x="86" y="783">−10</text>
+    <text x="86" y="836">−20</text>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#333333">
+    <text x="126" y="882">0</text>
+    <text x="269" y="882">10</text>
+    <text x="412" y="882">20</text>
+    <text x="555" y="882">30</text>
+    <text x="698" y="882">40</text>
+  </g>
+
+  <!-- 每个点的偏移量以竖线引回零线 -->
+  <g stroke="#9bb0c8" stroke-width="1">
+    <line x1="140.3" y1="726" x2="140.3" y2="662.4"/><line x1="154.6" y1="726" x2="154.6" y2="704.8"/><line x1="168.9" y1="726" x2="168.9" y2="641.2"/><line x1="183.2" y1="726" x2="183.2" y2="683.6"/><line x1="197.5" y1="726" x2="197.5" y2="832.0"/><line x1="211.8" y1="726" x2="211.8" y2="662.4"/><line x1="226.1" y1="726" x2="226.1" y2="810.8"/><line x1="240.4" y1="726" x2="240.4" y2="641.2"/>
+    <line x1="254.7" y1="726" x2="254.7" y2="789.6"/><line x1="269.0" y1="726" x2="269.0" y2="832.0"/><line x1="283.3" y1="726" x2="283.3" y2="768.4"/><line x1="297.6" y1="726" x2="297.6" y2="810.8"/><line x1="311.9" y1="726" x2="311.9" y2="747.2"/><line x1="326.2" y1="726" x2="326.2" y2="789.6"/><line x1="354.8" y1="726" x2="354.8" y2="768.4"/><line x1="369.1" y1="726" x2="369.1" y2="704.8"/>
+    <line x1="383.4" y1="726" x2="383.4" y2="747.2"/><line x1="397.7" y1="726" x2="397.7" y2="683.6"/><line x1="426.3" y1="726" x2="426.3" y2="662.4"/><line x1="440.6" y1="726" x2="440.6" y2="704.8"/><line x1="454.9" y1="726" x2="454.9" y2="641.2"/><line x1="469.2" y1="726" x2="469.2" y2="683.6"/><line x1="483.5" y1="726" x2="483.5" y2="832.0"/><line x1="497.8" y1="726" x2="497.8" y2="662.4"/>
+    <line x1="512.1" y1="726" x2="512.1" y2="810.8"/><line x1="526.4" y1="726" x2="526.4" y2="641.2"/><line x1="540.7" y1="726" x2="540.7" y2="789.6"/><line x1="555.0" y1="726" x2="555.0" y2="832.0"/><line x1="569.3" y1="726" x2="569.3" y2="768.4"/><line x1="583.6" y1="726" x2="583.6" y2="810.8"/><line x1="597.9" y1="726" x2="597.9" y2="747.2"/><line x1="612.2" y1="726" x2="612.2" y2="789.6"/>
+    <line x1="640.8" y1="726" x2="640.8" y2="768.4"/><line x1="655.1" y1="726" x2="655.1" y2="704.8"/><line x1="669.4" y1="726" x2="669.4" y2="747.2"/><line x1="683.7" y1="726" x2="683.7" y2="683.6"/>
+  </g>
+  <g fill="#1d3f6e">
+    <circle cx="126.0" cy="726.0" r="3.5"/><circle cx="140.3" cy="662.4" r="3.5"/><circle cx="154.6" cy="704.8" r="3.5"/><circle cx="168.9" cy="641.2" r="3.5"/><circle cx="183.2" cy="683.6" r="3.5"/><circle cx="197.5" cy="832.0" r="3.5"/><circle cx="211.8" cy="662.4" r="3.5"/><circle cx="226.1" cy="810.8" r="3.5"/>
+    <circle cx="240.4" cy="641.2" r="3.5"/><circle cx="254.7" cy="789.6" r="3.5"/><circle cx="269.0" cy="832.0" r="3.5"/><circle cx="283.3" cy="768.4" r="3.5"/><circle cx="297.6" cy="810.8" r="3.5"/><circle cx="311.9" cy="747.2" r="3.5"/><circle cx="326.2" cy="789.6" r="3.5"/><circle cx="340.5" cy="726.0" r="3.5"/>
+    <circle cx="354.8" cy="768.4" r="3.5"/><circle cx="369.1" cy="704.8" r="3.5"/><circle cx="383.4" cy="747.2" r="3.5"/><circle cx="397.7" cy="683.6" r="3.5"/><circle cx="412.0" cy="726.0" r="3.5"/><circle cx="426.3" cy="662.4" r="3.5"/><circle cx="440.6" cy="704.8" r="3.5"/><circle cx="454.9" cy="641.2" r="3.5"/>
+    <circle cx="469.2" cy="683.6" r="3.5"/><circle cx="483.5" cy="832.0" r="3.5"/><circle cx="497.8" cy="662.4" r="3.5"/><circle cx="512.1" cy="810.8" r="3.5"/><circle cx="526.4" cy="641.2" r="3.5"/><circle cx="540.7" cy="789.6" r="3.5"/><circle cx="555.0" cy="832.0" r="3.5"/><circle cx="569.3" cy="768.4" r="3.5"/>
+    <circle cx="583.6" cy="810.8" r="3.5"/><circle cx="597.9" cy="747.2" r="3.5"/><circle cx="612.2" cy="789.6" r="3.5"/><circle cx="626.5" cy="726.0" r="3.5"/><circle cx="640.8" cy="768.4" r="3.5"/><circle cx="655.1" cy="704.8" r="3.5"/><circle cx="669.4" cy="747.2" r="3.5"/><circle cx="683.7" cy="683.6" r="3.5"/>
+  </g>
+
+  <text x="38" y="906" font-size="11" fill="#333333">40 个偏移只落在 10 个取值上（步长 4），每个取值恰好出现 4 次</text>
+  <text x="38" y="928" font-size="11" fill="#333333">原因：K=40 时 4f2=40 能被 K 整除，二次项随 i 的周期缩短为 4</text>
+
+  <!-- ================= 面板 C：参数约束与数值例 ================= -->
+  <rect x="772" y="60" width="404" height="876" fill="#fdfdfd" stroke="#cdd8e4" stroke-width="1"/>
+  <rect x="772" y="60" width="404" height="68" fill="#f2f6fb" stroke="#444444" stroke-width="1.5"/>
+  <text x="786" y="88" font-size="15" font-weight="bold" fill="#222222">面板 C｜参数约束与数值例</text>
+  <text x="786" y="112" font-size="11" fill="#333333">K=40，f1=3，f2=10；Π(0..7) 由公式逐项算出</text>
+
+  <!-- 取值约束 -->
+  <rect x="786" y="140" width="376" height="246" fill="#f9fbfd" stroke="#cdd8e4" stroke-width="1"/>
+  <text x="798" y="168" font-size="11" font-weight="bold" fill="#222222">取值约束</text>
+  <g font-size="11" fill="#333333">
+    <text x="798" y="192">条件一：f1 与 K 互质，即最大公约数为 1。</text>
+    <text x="798" y="216">f1 可逆，线性项 f1·i 才能在模 K 下遍历全部地址。</text>
+    <text x="798" y="240">条件二：f2 的每个素因子都整除 K。</text>
+    <text x="798" y="264">两条同时成立才是置换，缺一即出现重复地址。</text>
+    <text x="798" y="288">约束三：K 只取 Table 5.1.3-3 的 188 个值，</text>
+    <text x="798" y="312">f1、f2 逐行写死，实现不得自行选取参数。</text>
+    <text x="798" y="336">K=40 是表第 1 行；188 个 K 从 40 到 6144，</text>
+    <text x="798" y="360">分四段按步长 8、16、32、64 逐段收紧。</text>
+  </g>
+
+  <!-- 数值例：Π(0..7) -->
+  <rect x="786" y="402" width="376" height="196" fill="#f9fbfd" stroke="#cdd8e4" stroke-width="1"/>
+  <text x="798" y="430" font-size="11" font-weight="bold" fill="#222222">数值例：K=40、f1=3、f2=10 的 Π(0..7)</text>
+  <g stroke="#9bb0c8" stroke-width="1" fill="#eef4fb">
+    <rect x="798" y="448" width="40" height="34"/><rect x="838" y="448" width="39" height="34"/><rect x="877" y="448" width="39" height="34"/><rect x="916" y="448" width="39" height="34"/><rect x="955" y="448" width="39" height="34"/><rect x="994" y="448" width="39" height="34"/><rect x="1033" y="448" width="39" height="34"/><rect x="1072" y="448" width="39" height="34"/><rect x="1111" y="448" width="39" height="34"/>
+    <rect x="798" y="482" width="40" height="34"/><rect x="838" y="482" width="39" height="34"/><rect x="877" y="482" width="39" height="34"/><rect x="916" y="482" width="39" height="34"/><rect x="955" y="482" width="39" height="34"/><rect x="994" y="482" width="39" height="34"/><rect x="1033" y="482" width="39" height="34"/><rect x="1072" y="482" width="39" height="34"/><rect x="1111" y="482" width="39" height="34"/>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#333333">
+    <text x="818" y="470">i</text>
+    <text x="818" y="504">Π(i)</text>
+  </g>
+  <g font-size="15" text-anchor="middle" fill="#222222">
+    <text x="857.5" y="470">0</text><text x="896.5" y="470">1</text><text x="935.5" y="470">2</text><text x="974.5" y="470">3</text><text x="1013.5" y="470">4</text><text x="1052.5" y="470">5</text><text x="1091.5" y="470">6</text><text x="1130.5" y="470">7</text>
+    <text x="857.5" y="504">0</text><text x="896.5" y="504">13</text><text x="935.5" y="504">6</text><text x="974.5" y="504">19</text><text x="1013.5" y="504">12</text><text x="1052.5" y="504">25</text><text x="1091.5" y="504">18</text><text x="1130.5" y="504">31</text>
+  </g>
+  <text x="798" y="544" font-size="11" fill="#333333">第一行为 i，第二行为 Π(i)；8 个值互不相同，</text>
+  <text x="798" y="568" font-size="11" fill="#333333">且都在 0 至 39 之内，与面板 A 的散点逐点对应。</text>
+
+  <!-- 读法、反查与边界 -->
+  <rect x="786" y="614" width="376" height="308" fill="#f9fbfd" stroke="#cdd8e4" stroke-width="1"/>
+  <text x="798" y="642" font-size="11" font-weight="bold" fill="#222222">读法、反查与边界</text>
+  <g font-size="11" fill="#333333">
+    <text x="798" y="668">读法：横轴 i 是置换的自变量（协议中的输出序号），</text>
+    <text x="798" y="692">纵轴 Π(i) 是被读出的输入序号。</text>
+    <text x="798" y="716">面板 A 的 40 个点两两不重合，即为双射的直接证据。</text>
+    <text x="798" y="740">反查：Π(2)=6，故第 6 个输入比特落在输出第 2 位。</text>
+    <text x="798" y="764">Π(5)=25 且 Π(25)=5，二者互换落点，构成 2-循环。</text>
+    <text x="798" y="788">接收端不必存表，逐位代入同一公式即可还原。</text>
+    <text x="798" y="812">边界：Π 的取值必在 0 至 K-1，越界或重复即实现错误。</text>
+    <text x="798" y="836">区分：§5.1.4.1.1 规定的是速率匹配的子块交织器，</text>
+    <text x="798" y="860">它按 32 列行列换向；本节的二次置换是另一道交织。</text>
+    <text x="798" y="884">图中的参数取自 Table 5.1.3-3，不是自行选定。</text>
+    <text x="798" y="908">校验：40 个值穷举无重复，故 Π 在 0 至 39 上是双射。</text>
+  </g>
+</svg>
