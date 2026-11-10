@@ -48,6 +48,8 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | SIB | 系统信息块 | System Information Block；SIB1 由 MIB 指向，其余 SIB 由 SIB1 调度。 |
 | TBCC | 咬尾卷积码 | Tail Biting Convolutional Code；LTE PDCCH/PBCH 信道编码，非递归无迭代。→ [[TBCC_咬尾卷积码]] |
 | 调度器 | 调度器 | Scheduler；MAC 层每 slot 决策用户/资源/MCS 的单元。→ [[Scheduler_MAC调度器与资源分配]] |
+| CRB | 公共资源块 | Common Resource Block；以 Point A 为原点、全载波统一编号的资源块，跨 BWP 描述同一频域位置的公共参照。→ [[Resource_Units_资源单位体系]] |
+| RB | 资源块 | Resource Block；频域 12 个连续子载波，只定义频域宽度，不含编号与时域长度；与物理资源块（PRB）不是同义词。→ [[Resource_Units_资源单位体系]] |
 | RBG | 资源块组 | Resource Block Group；频域分配最小粒度，位图分配单位。 |
 | VRB | 虚拟资源块 | Virtual Resource Block；调度分配单位，经交织映射到 PRB。 |
 | CQI | 信道质量指示 | Channel Quality Indicator；4-bit 索引映射 MCS/码率，BLER 目标约束。→ [[Link_Adaptation_链路自适应与CQI]] |
