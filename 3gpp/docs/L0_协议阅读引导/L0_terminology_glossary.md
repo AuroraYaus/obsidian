@@ -125,8 +125,8 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | SCL | 连续消除列表译码 | Successive Cancellation List；Polar 译码中保留多条候选路径的算法。→ [[SCL_Decoding_SCL译码]] |
 | CA-SCL | CRC 辅助 SCL | CRC-aided SCL；用 CRC 在 Polar SCL 候选路径中辅助最终选择。→ [[CA_SCL_CRC辅助SCL]] |
 | k0 | 速率匹配起点 | Rate matching starting position；由 RV 决定的循环缓存起始位置，是 rate recovery 的坐标语义。→ [[Rate_Matching_速率匹配]] |
-| E 值 | 速率匹配输出长度 | Rate matching output sequence length；第 r 个码块本次输出的比特数 E_r，由 G 按 N_LQ_m 粒度切分。→ [[E_Value_G_Value_E值与G值]] |
-| G 值 | 总编码比特数 | Total number of coded bits available for transmission of the transport block；TB 本次可用的编码比特总预算，PDSCH 上 G=N_RE·Q_m·N_L。→ [[E_Value_G_Value_E值与G值]] |
+| E 值 | 速率匹配输出长度 | Rate matching output sequence length；第 $r$ 个码块本次输出的比特数 $E_r$，由 $G$ 按 $N_LQ_m$ 粒度切分。→ [[E_Value_G_Value_E值与G值]] |
+| G 值 | 总编码比特数 | Total number of coded bits available for transmission of the transport block；TB 本次可用的编码比特总预算，PDSCH 上 $G=N_{RE}\cdot Q_m\cdot N_L$。→ [[E_Value_G_Value_E值与G值]] |
 | 迭代译码 | iterative decoding | 多个软输入软输出译码器反复交换外信息、逐步提升比特置信度的译码范式。→ [[Iterative_Decoding_迭代译码]] |
 | 交织器 | interleaver | 按确定性置换重排比特/符号顺序的部件，不改变码率；QPP/三角/子块/块交织、SBPM、VRB 映射构成协议交织器家族。→ [[Interleaver_交织器]] |
 | SC | 逐次消除 | Successive Cancellation；Polar 译码的基础策略，逐比特依次译码，是 SCL/CA-SCL 的基础。→ [[Polar_码]] |
@@ -337,7 +337,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | [[Segmentation_码块分段]] | 把一个 TB 拆成若干 CB，使每个译码核心处理的块长满足协议和编码器约束。 |
 | [[Filler_Bits_填充位]] | 当 TB+CRC 不能刚好平分时插入的 <NULL> 位，使所有码块大小相等。 |
 | [[Rate_Matching_速率匹配]] | 把编码后比特适配到本次可发送资源；接收端 rate recovery 把 LLR 放回 circular buffer 坐标。 |
-| [[E_Value_G_Value_E值与G值]] | G 是 TB 级编码比特总预算，E_r 是切给第 r 个 CB 的份额，二者由 floor/ceil 分配绑定为 ΣE_r=G；CBG 未调度 CB 取 0。 |
+| [[E_Value_G_Value_E值与G值]] | G 是 TB 级编码比特总预算，$E_r$ 是切给第 $r$ 个 CB 的份额，二者由 floor/ceil 分配绑定为 $\sum_r E_r=G$；CBG 未调度 CB 取 0。 |
 | [[Circular_Buffer_循环缓存]] | 速率匹配的核心数据结构：编码比特按系统位→校验位写入环形缓存，RV 定义起始位置 k₀。 |
 | [[Soft_Buffer_软缓存]] | 保存译码前的软信息（LLR 坐标化证据）而非硬判决 bit，供 HARQ 重传之间累积。 |
 | [[Incremental_Redundancy_增量冗余]] | 每次重传用不同 RV 发送不同校验位，等效于降低码率，同时获得能量与编码增益。 |
@@ -441,7 +441,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | [[PAS_概率幅度整形]] | PS 与 FEC 结合的框架：符号拆成"幅度"（可整形）与"符号"（保持均匀），只对幅度整形。 |
 | [[Distribution_Matching_分布匹配]] | 概率整形的映射引擎：把均匀 0/1 bit 可逆映射为符合 MB 分布的幅度序列。 |
 | [[ESS_枚举球面整形]] | DM 的一种实现：能量球约束下用 DP 计数表把 rank 可逆映射为非均匀幅度序列。 |
-| [[MB_Distribution_MB分布]] | 概率整形使用的目标符号概率分布 P(a)∝e^(−νa²)，ν=0 退化为均匀分布。 |
+| [[MB_Distribution_MB分布]] | 概率整形使用的目标符号概率分布 $P(a)\propto e^{-\nu a^{2}}$，$\nu=0$ 退化为均匀分布。 |
 | [[SBPM_整形比特位置映射]] | 把 shaped bits 放到 QAM label 幅度位上的置换（4^k 块组织），TX/RX 对称操作。 |
 | [[Geometric_Shaping_几何整形]] | 改星座点坐标的整形路线，因标准兼容性差，是 PS 的对照路线而非替代方案。 |
 | [[LLR_Prior_LLR先验]] | PS 接收端在软解调时把符号的非均匀先验加入距离度量，内圈点更"可信"。 |

@@ -114,6 +114,10 @@ def check_file(path: Path, show: bool = False) -> tuple[bool, list[str]]:
         if set(stripped) <= set("|-: "):
             continue
         cells = [c.strip() for c in stripped.strip("|").split("|")]
+        # 2026-11-10 用户要求：不得用「含义：/取值：/单位：/来源：」标签前缀
+        label_hit = [k for k in ("含义：", "取值：", "单位：", "来源：") if k in stripped]
+        if label_hit:
+            problems.append(f"第 {stripped[:0] or ''}符号行使用了标签前缀 {'/'.join(label_hit)}（应写成连贯书面语）")
         if not cells:
             continue
         first = cells[0]
