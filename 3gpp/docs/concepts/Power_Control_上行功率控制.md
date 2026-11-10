@@ -88,7 +88,7 @@ PUCCH（物理上行控制信道，Physical Uplink Control Channel）/SRS（探�
 ## 关键要点
 
 1. 上行功控分两层：开环（P0+α·PL 粗对齐）+ 闭环（TPC 微调）。
-2. 公式 P = P0 + α·PL + ΔTF + f(TPC)；α<1 部分补偿在干扰受限场景更优。
+2. 公式 $P=P_{0}+\alpha\cdot PL+\Delta_{TF}+f(TPC)$；$\alpha<1$ 部分补偿在干扰受限场景更优。
 3. TPC 是 DCI 的 2-bit 字段，UE 累计到 f 项——闭环的执行通道。
 4. PHR 在 MAC 层（TS 38.321 §5.4.6），把功率余量反馈给调度器决定资源。
 5. 下行固定功率、上行闭环调节——上下行最大机制差异之一。

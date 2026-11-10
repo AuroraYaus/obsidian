@@ -68,7 +68,7 @@ $$A \overset{\text{bit-exact}}{=} B \quad\Longleftrightarrow\quad \forall v \in 
 
 ## 关键要点
 
-1. bit-exact：∀v∈V: A(v) = B(v)——所有层级必须一致。
+1. bit-exact：$\forall v\in V:\ A(v)=B(v)$——所有层级必须一致。
 2. 三级容限：Golden 基准/定点容限内/RTL 零容差。
 3. 不只比 CRC——中途 checkpoint 定位首个发散点。
 4. bit-exact ≠ 功能正确——两个实现可能一致地错。
