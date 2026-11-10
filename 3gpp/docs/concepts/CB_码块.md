@@ -71,4 +71,5 @@ CB 是把一本厚书拆成几册交给不同人校对。每册可以独立检�
 - [[Turbo_码]]
 - [[T3.2_transport_code_block_filler_bits]]
 - [[T8.1_NR_LDPC_decoder_chain_overview]]
+- [[E_Value_G_Value_E值与G值]]
 - 关系语义：CB 是译码核心的粒度，承接 TB 分段、速率恢复、译码、CB CRC 和重组。

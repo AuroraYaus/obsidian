@@ -12,7 +12,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 ---
 # 译码讲义术语总表
 
-本章集中收纳 `docs/` 作者讲义中反复出现的术语、缩写和简要解释。其他讲义正文默认直接使用这些简称；只有当某一节正在讲解概念本身时，才在正文中补充上下文说明。条目合并自既有术语表与 `docs/concepts/3GPP全流程_缩写概念理论清单.md` 缩写清单；末尾「概念笔记索引」收录 `docs/concepts/` 全部概念笔记（116 篇），可经 wikilink 跳转阅读。
+本章集中收纳 `docs/` 作者讲义中反复出现的术语、缩写和简要解释。其他讲义正文默认直接使用这些简称；只有当某一节正在讲解概念本身时，才在正文中补充上下文说明。条目合并自既有术语表与 `docs/concepts/3GPP全流程_缩写概念理论清单.md` 缩写清单；末尾「概念笔记索引」收录 `docs/concepts/` 全部概念笔记（117 篇），可经 wikilink 跳转阅读。
 
 ## 系统与协议
 
@@ -125,6 +125,8 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | SCL | 连续消除列表译码 | Successive Cancellation List；Polar 译码中保留多条候选路径的算法。→ [[SCL_Decoding_SCL译码]] |
 | CA-SCL | CRC 辅助 SCL | CRC-aided SCL；用 CRC 在 Polar SCL 候选路径中辅助最终选择。→ [[CA_SCL_CRC辅助SCL]] |
 | k0 | 速率匹配起点 | Rate matching starting position；由 RV 决定的循环缓存起始位置，是 rate recovery 的坐标语义。→ [[Rate_Matching_速率匹配]] |
+| E 值 | 速率匹配输出长度 | Rate matching output sequence length；第 r 个码块本次输出的比特数 E_r，由 G 按 N_LQ_m 粒度切分。→ [[E_Value_G_Value_E值与G值]] |
+| G 值 | 总编码比特数 | Total number of coded bits available for transmission of the transport block；TB 本次可用的编码比特总预算，PDSCH 上 G=N_RE·Q_m·N_L。→ [[E_Value_G_Value_E值与G值]] |
 | 迭代译码 | iterative decoding | 多个软输入软输出译码器反复交换外信息、逐步提升比特置信度的译码范式。→ [[Iterative_Decoding_迭代译码]] |
 | 交织器 | interleaver | 按确定性置换重排比特/符号顺序的部件，不改变码率；QPP/三角/子块/块交织、SBPM、VRB 映射构成协议交织器家族。→ [[Interleaver_交织器]] |
 | SC | 逐次消除 | Successive Cancellation；Polar 译码的基础策略，逐比特依次译码，是 SCL/CA-SCL 的基础。→ [[Polar_码]] |
@@ -312,7 +314,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 
 ## 概念笔记索引
 
-> `docs/concepts/` 全部概念笔记（116 篇），按主题分组；每条一句话取自笔记首段。
+> `docs/concepts/` 全部概念笔记（117 篇），按主题分组；每条一句话取自笔记首段。
 
 ### 协议、信道与信号
 
@@ -324,7 +326,6 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | [[DMRS_解调参考信号]] | 收发双方都已知的参考符号，接收端用它估计信道，才能解调数据。 |
 | [[Pilot_导频]] | 收发双方都已知的参考符号（NR 中称参考信号）；从序列生成、资源映射到接收端提取、估计、插值、使用的完整链路。 |
 | [[Interleaver_交织器]] | 按确定性置换重排比特/符号顺序的部件；QPP/三角/子块/块交织、SBPM、VRB 映射构成协议交织器家族。 |
-
 | [[Gold_序列加扰]] | 用两个 m 序列逐位异或生成的伪随机序列对编码 bit 流做 XOR，把数据"白化"。 |
 | [[HARQ_混合自动重传请求]] | 把前向纠错和自动重传结合，CRC 失败后保留同一 process 的软信息，按 RV 和调度上下文补充接收证据。 |
 | [[RV_冗余版本]] | 描述一次传输选取哪一部分编码冗余，是 HARQ soft combining 的"地址语义"。 |
@@ -336,6 +337,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | [[Segmentation_码块分段]] | 把一个 TB 拆成若干 CB，使每个译码核心处理的块长满足协议和编码器约束。 |
 | [[Filler_Bits_填充位]] | 当 TB+CRC 不能刚好平分时插入的 <NULL> 位，使所有码块大小相等。 |
 | [[Rate_Matching_速率匹配]] | 把编码后比特适配到本次可发送资源；接收端 rate recovery 把 LLR 放回 circular buffer 坐标。 |
+| [[E_Value_G_Value_E值与G值]] | G 是 TB 级编码比特总预算，E_r 是切给第 r 个 CB 的份额，二者由 floor/ceil 分配绑定为 ΣE_r=G；CBG 未调度 CB 取 0。 |
 | [[Circular_Buffer_循环缓存]] | 速率匹配的核心数据结构：编码比特按系统位→校验位写入环形缓存，RV 定义起始位置 k₀。 |
 | [[Soft_Buffer_软缓存]] | 保存译码前的软信息（LLR 坐标化证据）而非硬判决 bit，供 HARQ 重传之间累积。 |
 | [[Incremental_Redundancy_增量冗余]] | 每次重传用不同 RV 发送不同校验位，等效于降低码率，同时获得能量与编码增益。 |

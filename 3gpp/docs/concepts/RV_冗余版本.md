@@ -112,4 +112,5 @@ TS 38.214 Rel-19 §5.1.3 和 §6.1.4 提供 PDSCH/PUSCH 调度上下文。调度
 - [[T4.3_HARQ_soft_combining_basics]]
 - [[T7.3_LTE_HARQ_soft_buffer_RV]]
 - [[T9.3_NR_LDPC_HARQ_soft_buffer_RV_k0]]
+- [[E_Value_G_Value_E值与G值]]
 - 关系语义：RV 规定重传证据在 rate matching buffer 中的坐标，是 HARQ soft combining 的地址来源。

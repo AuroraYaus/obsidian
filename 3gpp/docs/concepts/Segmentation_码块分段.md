@@ -89,4 +89,5 @@ segmentation 像把一段长数据装进多个固定规格的盒子。盒子太�
 - [[T3.2_transport_code_block_filler_bits]]
 - [[T3.3_LTE_Turbo_segmentation_rules]]
 - [[T3.4_NR_LDPC_segmentation_rules]]
+- [[E_Value_G_Value_E值与G值]]
 - 关系语义：segmentation 定义 TB 到 CB 的结构边界，决定后续译码和 CRC 检查粒度。

@@ -93,4 +93,5 @@ CBG 横跨五层规范，每层回答不同问题——理解协议间联系的�
 - [[T9.3_NR_LDPC_HARQ_soft_buffer_RV_k0]]
 - [[T9.6_NR_LDPC_decoder_edge_cases]]
 - [[Preemption_Indication_抢占指示]]
+- [[E_Value_G_Value_E值与G值]]
 - 关系语义：CBG 把 HARQ 部分重传语义映射到一组 CB 的 soft buffer 状态。

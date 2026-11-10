@@ -70,4 +70,5 @@ TB 是一整件快递，CB 是快递拆开的包裹。每个包裹可以先检�
 - [[T3.2_transport_code_block_filler_bits]]
 - [[T7.4_LTE_code_block_reassembly_TB_CRC]]
 - [[T9.5_NR_LDPC_reassembly_TB_CRC]]
+- [[E_Value_G_Value_E值与G值]]
 - 关系语义：TB 通过 segmentation 形成 CB，经过 CB 译码和重组后由 TB CRC 决定交付边界。

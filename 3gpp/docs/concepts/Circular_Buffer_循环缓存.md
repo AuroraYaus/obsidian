@@ -88,4 +88,5 @@ $$e_j = w_{(k_0 + j) \bmod N_{cb}}, \quad j = 0,1,\dots,E-1$$
 - [[概念图谱入口]]
 - [[T7.2_LTE_subblock_deinterleaver_circular_buffer]]
 - [[T9.2_NR_LDPC_circular_buffer_states]]
+- [[E_Value_G_Value_E值与G值]]
 - 关系语义：CircBuf 桥接编码器和调制器，适配码长到物理资源。

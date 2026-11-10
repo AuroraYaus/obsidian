@@ -9,11 +9,11 @@ A full-stack teaching Obsidian knowledge base for the 3GPP LTE/NR decoding chain
 ├── .claude/                   # Project rules + user-level SKILL executables copy (skills/, synced from ~/.claude/skills/)
 ├── docs/rules/                # User global rules mirror copy (full text of ~/.claude/CLAUDE.md, synced on update)
 ├── 3gpp/                      # Core knowledge base (lectures / concepts / audits / tools)
-│   ├── docs/L0_协议阅读引导/    # Protocol reading map, master glossary (255 terms + 114 concept index)
+│   ├── docs/L0_协议阅读引导/    # Protocol reading map, master glossary (263 terms + 117 concept index)
 │   ├── docs/L1_基础/           # Math foundations, OFDM & soft demodulation, CRC/segmentation, decoding theory, HW basics
 │   ├── docs/L2_协议算法/       # Decoder protocols & algorithms (Turbo/LDPC/Polar), MIMO reception, probabilistic shaping
 │   ├── docs/L3_工程实现/       # Decoder engineering (simulation/fixed-point/RTL/verification), receiver-link engineering budgets
-│   ├── docs/concepts/          # Concept graph (114 concept notes, six-section template)
+│   ├── docs/concepts/          # Concept graph (117 concept notes, six-section template)
 │   ├── docs/audits/            # Audit ledgers, lessons-learned library (25 items) & reviews
 │   ├── docs/memory/            # Authoritative in-project auto-memory copy (travels with the folder, CLAUDE.md rule 17)
 │   ├── sim/ tools/ tests/      # Python simulation, audit toolchain, unit tests
@@ -30,7 +30,7 @@ A full-stack teaching Obsidian knowledge base for the 3GPP LTE/NR decoding chain
 1. **Detailed docs**: see [`3gpp/README.md`](3gpp/README.md) (structure / lecture system / reading path / quality system)
 2. **Reading entry**: `3gpp/docs/3GPP_讲义入口.md`
 3. **Terminology lookup**: `3gpp/docs/L0_协议阅读引导/L0_terminology_glossary.md`
-4. **Lecture system**: L1 foundations (T1-T5 + TX1-TX5 TX mirror) → L2 protocol/algorithms (M6-M16: decoding/control-plane/uplink/scheduling) → L3 engineering (T17-T23: decoder/RX chain/backend), all complete ✅ (156 lectures + 6 entry/glossary files + 114 concept notes)
+4. **Lecture system**: L1 foundations (T1-T5 + TX1-TX5 TX mirror) → L2 protocol/algorithms (M6-M16: decoding/control-plane/uplink/scheduling) → L3 engineering (T17-T23: decoder/RX chain/backend), all complete ✅ (156 lectures + 6 entry/glossary files + 117 concept notes)
 
 ## Quality System
 
