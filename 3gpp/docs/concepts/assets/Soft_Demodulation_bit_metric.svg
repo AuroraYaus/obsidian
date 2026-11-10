@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+@file    Soft_Demodulation_bit_metric.svg
+@brief   16QAM 软解调的比特度量结构，以及接收点到逐位 LLR 的换算与并行输出
+@note    本图以三个面板并列展示三件事：面板 A 按 38.211 的 16QAM 减号映射
+         （I=(1-2b0)[2-(1-2b2)]、Q=(1-2b1)[2-(1-2b3)]）给 16 个星座点标注 b0b1b2b3，
+         其中 b2=0 为内圈幅度 1、b2=1 为外圈幅度 3，b3 同理；按 b0 的取值分成 I>0 与
+         I<0 两组并分色，画出 b0 的判决边界 I=0，以及接收点 y=(1.2, 0.3) 到两组各自
+         最近点的距离 d0=0.7280 与 d1=2.309；面板 B 以 max-log 形式 L≈(d1²-d0²)/σ²
+         画出接收点 I 坐标 t 到 LLR 的映射，σ²=0.5、Q 固定 0.3 时该映射为分段线性折线
+         （|t|≤2 斜率 +8，|t|>2 斜率 +16），折点在内外层边界 |t|=2、过零点在 I=0；
+         面板 C 给出同一接收符号产生的 k=log2(M)=4 个 LLR 的数值 +9.6、+2.4、+6.4、
+         +13.6，硬判决 b0b1b2b3=0000，以及它们并行送入信道译码器的去向。图中数值与
+         笔记正文的手算数值例共用同一星座映射、同一接收点与同一噪声方差。本图遵守
+         R1-R11：全部文字均落在某个面板或方框 rect 内，页级标题用 class="free"；
+         轴线与距离线段用 line 绘制，不使用旋转文字，不使用箭头三角。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="870" viewBox="0 0 1180 870" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">
+  <rect x="0" y="0" width="1180" height="870" fill="#ffffff"/>
+
+  <!-- 页级标题（框外文字） -->
+  <text class="free" x="590" y="44" font-size="19" font-weight="bold" text-anchor="middle" fill="#222222">软解调的比特度量：星座分界、距离到 LLR 的映射与逐位输出</text>
+
+  <!-- ================= 面板 A：16QAM 星座与 b0 的比特分界 ================= -->
+  <rect x="30" y="70" width="550" height="520" fill="#fdfdfd" stroke="#444444" stroke-width="1.5"/>
+  <text x="305" y="104" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">面板 A｜16QAM 星座与 b0 的比特分界</text>
+  <text x="305" y="128" font-size="11" text-anchor="middle" fill="#333333">横轴 I（同相分量）、纵轴 Q（正交分量）；虚线为 b0 的判决边界 I = 0</text>
+
+  <!-- 图例 -->
+  <rect x="60" y="147" width="12" height="12" fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1.5"/>
+  <text x="78" y="158" font-size="11" fill="#2a4f86">b0 = 0：I &gt; 0 的 8 个点</text>
+  <rect x="280" y="147" width="12" height="12" fill="#ffd9a0" stroke="#d08000" stroke-width="1.5"/>
+  <text x="298" y="158" font-size="11" fill="#8a5200">b0 = 1：I &lt; 0 的 8 个点</text>
+  <circle cx="455" cy="153" r="5" fill="#b5483d"/>
+  <text x="468" y="158" font-size="11" fill="#222222">接收点 y</text>
+
+  <!-- b0 的判决边界：I = 0，即星座的 Q 轴 -->
+  <line x1="285" y1="166" x2="285" y2="522" stroke="#b5483d" stroke-width="1.6" stroke-dasharray="6,5"/>
+
+  <!-- 距离线段（先画线，再画圆点覆盖线端） -->
+  <line x1="345" y1="335" x2="335" y2="300" stroke="#b5483d" stroke-width="1.4" stroke-dasharray="5,4"/>
+  <line x1="345" y1="335" x2="235" y2="300" stroke="#b5483d" stroke-width="1.4" stroke-dasharray="5,4"/>
+
+  <!-- b0 = 1 组（I < 0） -->
+  <g fill="#ffd9a0" stroke="#d08000" stroke-width="1.5">
+    <circle cx="135" cy="200" r="6"/>
+    <circle cx="235" cy="200" r="6"/>
+    <circle cx="135" cy="300" r="6"/>
+    <circle cx="235" cy="300" r="6"/>
+    <circle cx="135" cy="400" r="6"/>
+    <circle cx="235" cy="400" r="6"/>
+    <circle cx="135" cy="500" r="6"/>
+    <circle cx="235" cy="500" r="6"/>
+  </g>
+
+  <!-- b0 = 0 组（I > 0） -->
+  <g fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1.5">
+    <circle cx="335" cy="200" r="6"/>
+    <circle cx="435" cy="200" r="6"/>
+    <circle cx="335" cy="300" r="6"/>
+    <circle cx="435" cy="300" r="6"/>
+    <circle cx="335" cy="400" r="6"/>
+    <circle cx="435" cy="400" r="6"/>
+    <circle cx="335" cy="500" r="6"/>
+    <circle cx="435" cy="500" r="6"/>
+  </g>
+
+  <!-- 两组各自最近的星座点（红圈） -->
+  <circle cx="335" cy="300" r="12" fill="none" stroke="#b5483d" stroke-width="1.4"/>
+  <circle cx="235" cy="300" r="12" fill="none" stroke="#b5483d" stroke-width="1.4"/>
+
+  <!-- 接收点 y 与距离标注 -->
+  <circle cx="345" cy="335" r="5" fill="#b5483d"/>
+  <text x="360" y="310" font-size="11" fill="#222222">d0 = 0.7280</text>
+  <text x="272" y="340" font-size="11" text-anchor="end" fill="#222222">d1 = 2.309</text>
+  <text x="356" y="356" font-size="11" fill="#222222">y = (1.2, 0.3)</text>
+
+  <!-- 16 个星座点的比特标签：b0b1b2b3；b0 为 I 的符号位、b2 为 I 的幅度位，b1、b3 同理对应 Q -->
+  <g font-size="11" text-anchor="middle" fill="#8a5200">
+    <text x="135" y="180">1011</text>
+    <text x="235" y="180">1001</text>
+    <text x="135" y="280">1010</text>
+    <text x="235" y="280">1000</text>
+    <text x="135" y="380">1110</text>
+    <text x="235" y="380">1100</text>
+    <text x="135" y="480">1111</text>
+    <text x="235" y="480">1101</text>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#2a4f86">
+    <text x="335" y="180">0001</text>
+    <text x="435" y="180">0011</text>
+    <text x="335" y="280">0000</text>
+    <text x="435" y="280">0010</text>
+    <text x="335" y="380">0100</text>
+    <text x="435" y="380">0110</text>
+    <text x="335" y="480">0101</text>
+    <text x="435" y="480">0111</text>
+  </g>
+
+  <!-- 面板 A 说明 -->
+  <text x="60" y="536" font-size="11" fill="#222222">d0 到 b0=0 组最近点 (+1, 1)；d1 到 b0=1 组最近点 (−1, 1)；红圈标出这两点</text>
+  <text x="60" y="562" font-size="11" fill="#222222">σ² = 0.5：L = (d1² − d0²)/σ² = (5.330 − 0.5300)/0.5 = +9.600，正号判 b0 = 0</text>
+
+  <!-- ================= 面板 B：距离到 LLR 的映射 ================= -->
+  <rect x="610" y="70" width="540" height="520" fill="#fdfdfd" stroke="#444444" stroke-width="1.5"/>
+  <text x="880" y="104" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">面板 B｜由距离到 LLR 的映射</text>
+  <text x="880" y="128" font-size="11" text-anchor="middle" fill="#333333">max-log：L ≈ (d1² − d0²)/σ²；横轴 t 为 I 坐标（Q 固定 0.3），纵轴为 LLR</text>
+
+  <!-- 公式与区域符号标注 -->
+  <text x="650" y="182" font-size="11" fill="#222222">L ≈ (d1² − d0²) / σ²</text>
+  <text x="1120" y="182" font-size="11" text-anchor="end" fill="#2a4f86">t &gt; 0 时 L &gt; 0：判 b0 = 0</text>
+
+  <!-- 坐标轴 -->
+  <line x1="870" y1="210" x2="870" y2="510" stroke="#333333" stroke-width="1.4"/>
+  <line x1="670" y1="350" x2="1070" y2="350" stroke="#333333" stroke-width="1.4"/>
+
+  <!-- LLR 轴刻度与标注 -->
+  <g stroke="#333333" stroke-width="1">
+    <line x1="862" y1="238" x2="870" y2="238"/>
+    <line x1="862" y1="294" x2="870" y2="294"/>
+    <line x1="862" y1="350" x2="870" y2="350"/>
+    <line x1="862" y1="406" x2="870" y2="406"/>
+    <line x1="862" y1="462" x2="870" y2="462"/>
+  </g>
+  <g font-size="11" text-anchor="end" fill="#333333">
+    <text x="856" y="242">+16</text>
+    <text x="856" y="298">+8</text>
+    <text x="856" y="340">0</text>
+    <text x="856" y="410">−8</text>
+    <text x="856" y="466">−16</text>
+  </g>
+
+  <!-- t 轴刻度与标注 -->
+  <g stroke="#333333" stroke-width="1">
+    <line x1="710" y1="350" x2="710" y2="358"/>
+    <line x1="870" y1="350" x2="870" y2="358"/>
+    <line x1="1030" y1="350" x2="1030" y2="358"/>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#333333">
+    <text x="710" y="372">−2</text>
+    <text x="1030" y="372">+2</text>
+  </g>
+  <text x="680" y="340" font-size="11" fill="#333333">t（I 坐标）</text>
+  <text x="1070" y="340" font-size="11" text-anchor="end" fill="#333333">L = 0（横轴）</text>
+
+  <!-- max-log 折线：|t| ≤ 2 斜率 +8，|t| > 2 斜率 +16 -->
+  <path d="M 694 484.4 L 710 462 L 870 350 L 1030 238 L 1046 215.6" fill="none" stroke="#3d6fb5" stroke-width="2.4"/>
+
+  <!-- 接收点所在位置：t = 1.2、L = +9.6 -->
+  <circle cx="966" cy="283" r="5" fill="#b5483d"/>
+  <text x="980" y="308" font-size="11" fill="#222222">I = 1.2 ⇒ L = +9.6</text>
+
+  <!-- 面板 B 说明 -->
+  <text x="650" y="520" font-size="11" fill="#8a5200">t &lt; 0 时 L &lt; 0：判 b0 = 1</text>
+  <text x="650" y="548" font-size="11" fill="#222222">折点 |t| = 2：近侧组内最近点由 I = ±1 换到 I = ±3，斜率由 +8 变为 +16</text>
+  <text x="650" y="574" font-size="11" fill="#222222">折线过零点即判决边界 I = 0；斜率 4/σ² 只由噪声方差决定</text>
+
+  <!-- ================= 面板 C：逐位软信息输出 ================= -->
+  <rect x="30" y="620" width="1120" height="220" fill="#fdfdfd" stroke="#444444" stroke-width="1.5"/>
+  <text x="590" y="654" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">面板 C｜逐位软信息输出：同一接收符号产生 k = 4 个 LLR</text>
+  <text x="590" y="678" font-size="11" text-anchor="middle" fill="#333333">16QAM 的 k = log2(M) = 4；4 个 LLR 并行送入信道译码器，各自按符号独立判决</text>
+
+  <!-- 四个比特度量的方框：数值、相对幅度条与判决 -->
+  <rect x="60" y="698" width="200" height="76" fill="#ffffff" stroke="#444444" stroke-width="1.2"/>
+  <text x="68" y="722" font-size="15" fill="#222222">L(b0) = +9.6</text>
+  <rect x="68" y="731" width="48" height="8" fill="#3d6fb5"/>
+  <text x="68" y="761" font-size="11" fill="#222222">判 b0 = 0</text>
+
+  <rect x="290" y="698" width="200" height="76" fill="#ffffff" stroke="#444444" stroke-width="1.2"/>
+  <text x="298" y="722" font-size="15" fill="#222222">L(b1) = +2.4</text>
+  <rect x="298" y="731" width="12" height="8" fill="#3d6fb5"/>
+  <text x="298" y="761" font-size="11" fill="#222222">判 b1 = 0</text>
+
+  <rect x="520" y="698" width="200" height="76" fill="#ffffff" stroke="#444444" stroke-width="1.2"/>
+  <text x="528" y="722" font-size="15" fill="#222222">L(b2) = +6.4</text>
+  <rect x="528" y="731" width="32" height="8" fill="#3d6fb5"/>
+  <text x="528" y="761" font-size="11" fill="#222222">判 b2 = 0</text>
+
+  <rect x="750" y="698" width="200" height="76" fill="#ffffff" stroke="#444444" stroke-width="1.2"/>
+  <text x="758" y="722" font-size="15" fill="#222222">L(b3) = +13.6</text>
+  <rect x="758" y="731" width="68" height="8" fill="#3d6fb5"/>
+  <text x="758" y="761" font-size="11" fill="#222222">判 b3 = 0</text>
+
+  <!-- 输出箭头与译码器 -->
+  <line x1="956" y1="736" x2="984" y2="736" stroke="#333333" stroke-width="1.5"/>
+  <line x1="976" y1="730" x2="984" y2="736" stroke="#333333" stroke-width="1.5"/>
+  <line x1="976" y1="742" x2="984" y2="736" stroke="#333333" stroke-width="1.5"/>
+  <rect x="990" y="698" width="150" height="76" fill="#f2f2f2" stroke="#444444" stroke-width="1.2"/>
+  <text x="1065" y="730" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">信道译码器</text>
+  <text x="1065" y="754" font-size="11" text-anchor="middle" fill="#333333">接收 LLR 序列</text>
+
+  <!-- 面板 C 说明 -->
+  <text x="60" y="800" font-size="11" fill="#222222">4 个 LLR 由同一个接收符号 y 产生，次序与调制映射的比特次序一致</text>
+  <text x="60" y="824" font-size="11" fill="#222222">硬判决取各 LLR 的符号：b0b1b2b3 = 0000，与最近星座点 (1, 1) 的比特标签相符</text>
+</svg>

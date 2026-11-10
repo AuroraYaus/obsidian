@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+@file    Channel_Polarization_butterfly.svg
+@brief   面板 A 画 N=8 极化变换的三层蝶形连接与异或门位置；面板 B 画 8 个子信道按 Z 参数升序的可靠性排序与信息位/冻结位划分；面板 C 画码长 N=2^n 与层数 n 的对数关系。
+@note    本图三个面板共用 N=8、二元删除信道擦除概率 0.5 的同一组数值。面板 B 的 Z 值由递推
+         ε⁻ = 1 − (1 − ε)² 与 ε⁺ = ε² 逐层算出，四舍五入到三位小数；横条长度按 Z 等比缩放，
+         最小宽度取 4 px 仅为可见性，故该面板标注为示意分布。面板 A 的实心点表示异或门：
+         每一对的上行输出为两输入在 GF(2) 上相加的结果，下行输出直接通过；第 r 层的连接跨度
+         为 2 的 r−1 次方，即 1、2、4。面板 C 的横轴为对数刻度，点列成直线表示层数 n 与
+         log2 N 成正比；N=8 对应 n=3。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">
+  <rect x="0" y="0" width="1200" height="800" fill="#ffffff"/>
+
+  <!-- 页级标题（框外文字） -->
+  <text class="free" x="600" y="42" font-size="19" font-weight="bold" text-anchor="middle" fill="#222222">信道极化的蝶形变换、子信道可靠性与码长扩展</text>
+
+  <!-- ================= 面板 A：N=8 三层蝶形变换 ================= -->
+  <rect x="24" y="70" width="648" height="700" fill="#fdfdfd" stroke="#444444" stroke-width="1.5"/>
+  <text x="348" y="102" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">面板 A｜N=8 的三层极化蝶形变换</text>
+  <text x="348" y="126" font-size="11" text-anchor="middle" fill="#333333">每层连接跨度：层 1 为 1、层 2 为 2、层 3 为 4；每对的上行输出为异或结果</text>
+
+  <!-- 层标题（位于连接区上方，避免连线穿字） -->
+  <text x="215" y="152" font-size="11" text-anchor="middle" fill="#1f3f6f">层 1｜跨度 1</text>
+  <text x="360" y="152" font-size="11" text-anchor="middle" fill="#1f3f6f">层 2｜跨度 2</text>
+  <text x="495" y="152" font-size="11" text-anchor="middle" fill="#1f3f6f">层 3｜跨度 4</text>
+
+  <!-- 输入/输出列标 -->
+  <text x="78" y="180" font-size="11" text-anchor="middle" fill="#333333">输入 u</text>
+  <text x="606" y="180" font-size="11" text-anchor="middle" fill="#333333">输出 x</text>
+
+  <!-- 行标签 u0..u7 / x0..x7 -->
+  <g font-size="11" text-anchor="middle" fill="#222222">
+    <text x="78" y="204">u0</text><text x="78" y="258">u1</text><text x="78" y="312">u2</text><text x="78" y="366">u3</text>
+    <text x="78" y="420">u4</text><text x="78" y="474">u5</text><text x="78" y="528">u6</text><text x="78" y="582">u7</text>
+    <text x="606" y="204">x0</text><text x="606" y="258">x1</text><text x="606" y="312">x2</text><text x="606" y="366">x3</text>
+    <text x="606" y="420">x4</text><text x="606" y="474">x5</text><text x="606" y="528">x6</text><text x="606" y="582">x7</text>
+  </g>
+
+  <!-- 层 1：跨度 1，配对 (0,1)(2,3)(4,5)(6,7) -->
+  <g stroke="#4a6fa5" stroke-width="1.3">
+    <line x1="140" y1="200" x2="290" y2="200"/><line x1="140" y1="254" x2="290" y2="254"/><line x1="140" y1="254" x2="290" y2="200"/>
+    <line x1="140" y1="308" x2="290" y2="308"/><line x1="140" y1="362" x2="290" y2="362"/><line x1="140" y1="362" x2="290" y2="308"/>
+    <line x1="140" y1="416" x2="290" y2="416"/><line x1="140" y1="470" x2="290" y2="470"/><line x1="140" y1="470" x2="290" y2="416"/>
+    <line x1="140" y1="524" x2="290" y2="524"/><line x1="140" y1="578" x2="290" y2="578"/><line x1="140" y1="578" x2="290" y2="524"/>
+  </g>
+  <g fill="#16365f">
+    <circle cx="290" cy="200" r="3.5"/><circle cx="290" cy="308" r="3.5"/>
+    <circle cx="290" cy="416" r="3.5"/><circle cx="290" cy="524" r="3.5"/>
+  </g>
+
+  <!-- 层 2：跨度 2，配对 (0,2)(1,3)(4,6)(5,7) -->
+  <g stroke="#4a6fa5" stroke-width="1.3">
+    <line x1="290" y1="200" x2="430" y2="200"/><line x1="290" y1="308" x2="430" y2="308"/><line x1="290" y1="308" x2="430" y2="200"/>
+    <line x1="290" y1="254" x2="430" y2="254"/><line x1="290" y1="362" x2="430" y2="362"/><line x1="290" y1="362" x2="430" y2="254"/>
+    <line x1="290" y1="416" x2="430" y2="416"/><line x1="290" y1="524" x2="430" y2="524"/><line x1="290" y1="524" x2="430" y2="416"/>
+    <line x1="290" y1="470" x2="430" y2="470"/><line x1="290" y1="578" x2="430" y2="578"/><line x1="290" y1="578" x2="430" y2="470"/>
+  </g>
+  <g fill="#16365f">
+    <circle cx="430" cy="200" r="3.5"/><circle cx="430" cy="254" r="3.5"/>
+    <circle cx="430" cy="416" r="3.5"/><circle cx="430" cy="470" r="3.5"/>
+  </g>
+
+  <!-- 层 3：跨度 4，配对 (0,4)(1,5)(2,6)(3,7) -->
+  <g stroke="#4a6fa5" stroke-width="1.3">
+    <line x1="430" y1="200" x2="560" y2="200"/><line x1="430" y1="416" x2="560" y2="416"/><line x1="430" y1="416" x2="560" y2="200"/>
+    <line x1="430" y1="254" x2="560" y2="254"/><line x1="430" y1="470" x2="560" y2="470"/><line x1="430" y1="470" x2="560" y2="254"/>
+    <line x1="430" y1="308" x2="560" y2="308"/><line x1="430" y1="524" x2="560" y2="524"/><line x1="430" y1="524" x2="560" y2="308"/>
+    <line x1="430" y1="362" x2="560" y2="362"/><line x1="430" y1="578" x2="560" y2="578"/><line x1="430" y1="578" x2="560" y2="362"/>
+  </g>
+  <g fill="#16365f">
+    <circle cx="560" cy="200" r="3.5"/><circle cx="560" cy="254" r="3.5"/>
+    <circle cx="560" cy="308" r="3.5"/><circle cx="560" cy="362" r="3.5"/>
+  </g>
+
+  <!-- 面板 A 读图说明（连线区之下，纵向留白填满） -->
+  <text x="44" y="646" font-size="11" fill="#222222">实心点 = 异或门：每对的上行输出等于两行输入在 GF(2) 上相加，下行输出直接通过。</text>
+  <text x="44" y="672" font-size="11" fill="#222222">层 1 配对 (0,1)(2,3)(4,5)(6,7)；层 2 配对 (0,2)(1,3)(4,6)(5,7)；层 3 配对 (0,4)(1,5)(2,6)(3,7)。</text>
+  <text x="44" y="698" font-size="11" fill="#222222">三层共 12 个异或门；层数 n = log2 8 = 3，与面板 C 的码长关系一致。</text>
+  <text x="44" y="724" font-size="11" fill="#222222">同一行在下一层继续参与配对，因此一个输入位的影响逐层扩散到更多输出位。</text>
+
+  <!-- ================= 面板 B：子信道可靠性排序 ================= -->
+  <rect x="696" y="70" width="480" height="350" fill="#fdfdfd" stroke="#444444" stroke-width="1.5"/>
+  <text x="936" y="102" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">面板 B｜子信道可靠性排序（示意分布）</text>
+  <text x="936" y="126" font-size="11" text-anchor="middle" fill="#333333">条长按擦除概率 Z 等比缩放：Z 越小越可靠，自上而下按 Z 升序排列</text>
+  <text x="936" y="148" font-size="11" text-anchor="middle" fill="#333333">取 K=4：信息集 {3,5,6,7}，冻结集 {0,1,2,4}（N=8，ε=0.5）</text>
+
+  <!-- 列标 -->
+  <text x="706" y="170" font-size="11" fill="#333333">子信道</text>
+  <text x="830" y="170" font-size="11" fill="#333333">越靠上越可靠</text>
+  <text x="1024" y="170" font-size="11" fill="#333333">Z(W)</text>
+  <text x="1104" y="170" font-size="11" fill="#333333">用途</text>
+
+  <!-- 第 1 行：i=7（最可靠），信息位 -->
+  <text x="706" y="196" font-size="11" fill="#222222">i=7</text>
+  <rect x="760" y="179" width="4" height="16" fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1"/>
+  <text x="1024" y="196" font-size="11" fill="#222222">Z=0.004</text>
+  <text x="1104" y="196" font-size="11" fill="#1f3f6f">信息位</text>
+
+  <!-- 第 2 行：i=6，信息位 -->
+  <text x="706" y="222" font-size="11" fill="#222222">i=6</text>
+  <rect x="760" y="205" width="28.5" height="16" fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1"/>
+  <text x="1024" y="222" font-size="11" fill="#222222">Z=0.121</text>
+  <text x="1104" y="222" font-size="11" fill="#1f3f6f">信息位</text>
+
+  <!-- 第 3 行：i=5，信息位 -->
+  <text x="706" y="248" font-size="11" fill="#222222">i=5</text>
+  <rect x="760" y="231" width="45" height="16" fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1"/>
+  <text x="1024" y="248" font-size="11" fill="#222222">Z=0.191</text>
+  <text x="1104" y="248" font-size="11" fill="#1f3f6f">信息位</text>
+
+  <!-- 第 4 行：i=3，信息位 -->
+  <text x="706" y="274" font-size="11" fill="#222222">i=3</text>
+  <rect x="760" y="257" width="74.4" height="16" fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1"/>
+  <text x="1024" y="274" font-size="11" fill="#222222">Z=0.316</text>
+  <text x="1104" y="274" font-size="11" fill="#1f3f6f">信息位</text>
+
+  <!-- 第 5 行：i=4，冻结位 -->
+  <text x="706" y="300" font-size="11" fill="#222222">i=4</text>
+  <rect x="760" y="283" width="160.6" height="16" fill="#ececec" stroke="#9a9a9a" stroke-width="1"/>
+  <text x="1024" y="300" font-size="11" fill="#222222">Z=0.684</text>
+  <text x="1104" y="300" font-size="11" fill="#555555">冻结位</text>
+
+  <!-- 第 6 行：i=2，冻结位 -->
+  <text x="706" y="326" font-size="11" fill="#222222">i=2</text>
+  <rect x="760" y="309" width="190" height="16" fill="#ececec" stroke="#9a9a9a" stroke-width="1"/>
+  <text x="1024" y="326" font-size="11" fill="#222222">Z=0.809</text>
+  <text x="1104" y="326" font-size="11" fill="#555555">冻结位</text>
+
+  <!-- 第 7 行：i=1，冻结位 -->
+  <text x="706" y="352" font-size="11" fill="#222222">i=1</text>
+  <rect x="760" y="335" width="206.5" height="16" fill="#ececec" stroke="#9a9a9a" stroke-width="1"/>
+  <text x="1024" y="352" font-size="11" fill="#222222">Z=0.879</text>
+  <text x="1104" y="352" font-size="11" fill="#555555">冻结位</text>
+
+  <!-- 第 8 行：i=0（最不可靠），冻结位 -->
+  <text x="706" y="378" font-size="11" fill="#222222">i=0</text>
+  <rect x="760" y="361" width="234.1" height="16" fill="#ececec" stroke="#9a9a9a" stroke-width="1"/>
+  <text x="1024" y="378" font-size="11" fill="#222222">Z=0.996</text>
+  <text x="1104" y="378" font-size="11" fill="#555555">冻结位</text>
+
+  <!-- 图例 -->
+  <rect x="706" y="390" width="14" height="14" fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1"/>
+  <text x="730" y="402" font-size="11" fill="#222222">信息位（K=4）</text>
+  <rect x="846" y="390" width="14" height="14" fill="#ececec" stroke="#9a9a9a" stroke-width="1"/>
+  <text x="870" y="402" font-size="11" fill="#222222">冻结位（N−K=4）</text>
+
+  <!-- ================= 面板 C：码长与层数的对数关系 ================= -->
+  <rect x="696" y="440" width="480" height="330" fill="#fdfdfd" stroke="#444444" stroke-width="1.5"/>
+  <text x="936" y="476" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">面板 C｜码长按 2 的幂扩展：n = log2 N</text>
+  <text x="936" y="500" font-size="11" text-anchor="middle" fill="#333333">每加一层，子信道数翻倍；横轴为对数刻度，纵轴为层数 n</text>
+
+  <!-- 坐标轴 -->
+  <line x1="790" y1="514" x2="790" y2="676" stroke="#666666" stroke-width="1.2"/>
+  <line x1="790" y1="676" x2="1130" y2="676" stroke="#666666" stroke-width="1.2"/>
+
+  <!-- 点列连线：n 每加 1，N 翻一倍，故为直线 -->
+  <g stroke="#4a6fa5" stroke-width="1.3">
+    <line x1="790" y1="676" x2="824" y2="660.4"/><line x1="824" y1="660.4" x2="858" y2="644.8"/>
+    <line x1="858" y1="644.8" x2="892" y2="629.2"/><line x1="892" y1="629.2" x2="926" y2="613.6"/>
+    <line x1="926" y1="613.6" x2="960" y2="598"/><line x1="960" y1="598" x2="994" y2="582.4"/>
+    <line x1="994" y1="582.4" x2="1028" y2="566.8"/><line x1="1028" y1="566.8" x2="1062" y2="551.2"/>
+    <line x1="1062" y1="551.2" x2="1096" y2="535.6"/><line x1="1096" y1="535.6" x2="1130" y2="520"/>
+  </g>
+
+  <!-- 数据点：N=2^n，n=0..10；N=8 的点用橙色突出 -->
+  <g fill="#3d6fb5">
+    <circle cx="790" cy="676" r="4"/><circle cx="824" cy="660.4" r="4"/><circle cx="858" cy="644.8" r="4"/>
+    <circle cx="926" cy="613.6" r="4"/><circle cx="960" cy="598" r="4"/><circle cx="994" cy="582.4" r="4"/>
+    <circle cx="1028" cy="566.8" r="4"/><circle cx="1062" cy="551.2" r="4"/><circle cx="1096" cy="535.6" r="4"/>
+    <circle cx="1130" cy="520" r="4"/>
+  </g>
+  <circle cx="892" cy="629.2" r="5" fill="#d08000" stroke="#a05c00" stroke-width="1.2"/>
+
+  <!-- 纵轴刻度 -->
+  <text x="778" y="680" font-size="11" text-anchor="end" fill="#333333">n=0</text>
+  <text x="778" y="602" font-size="11" text-anchor="end" fill="#333333">n=5</text>
+  <text x="778" y="524" font-size="11" text-anchor="end" fill="#333333">n=10</text>
+
+  <!-- 横轴刻度 -->
+  <text x="790" y="698" font-size="11" text-anchor="middle" fill="#333333">1</text>
+  <text x="892" y="698" font-size="11" text-anchor="middle" fill="#a05c00">8</text>
+  <text x="994" y="698" font-size="11" text-anchor="middle" fill="#333333">64</text>
+  <text x="1130" y="698" font-size="11" text-anchor="middle" fill="#333333">1024</text>
+
+  <!-- N=8 的读数标注 -->
+  <text x="900" y="658" font-size="11" fill="#8a4b00">N=8 → n=3</text>
+
+  <!-- 轴名与图注 -->
+  <text x="960" y="722" font-size="11" text-anchor="middle" fill="#333333">N（对数刻度，向右每格 ×2）</text>
+  <text x="936" y="750" font-size="11" text-anchor="middle" fill="#333333">示例：N=8 → n=3；N=1024 → n=10（NR 母码长度上限）</text>
+</svg>

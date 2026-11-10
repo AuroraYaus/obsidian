@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+@file    Spreading_code_domain.svg
+@brief   直接序列扩频在码域的三段运算：数据符号与扩频码逐位相乘、两路正交码片序列在时域叠加、接收序列与本地码做相关解扩
+@note    本图以三个面板并列展示扩频与解扩的码域关系。面板 A 取 Walsh 4 位码 c=[+1,−1,+1,−1]，
+         给出数据符号 d=+1 与码逐位相乘得到码片序列 s_k=d·c_k；面板 B 取 Walsh 码的两行
+         c1=[+1,−1,+1,−1]、c2=[+1,+1,−1,−1]，逐位相乘后求和为 0，用以标示正交性，
+         并把两路码片序列在时域相加得到 r=[+2,0,0,−2]；面板 C 在无干扰条件下令接收序列等于
+         用户 1 的码片序列，与 c1 逐位相乘求和得 4（等于码长乘符号幅度），与 c2 相关得 0。
+         三个面板共用同一组码字与同一码片编号 k=0..3，数值均可由图中方格逐位核对。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">
+  <rect x="0" y="0" width="1200" height="760" fill="#ffffff"/>
+
+  <!-- 页级标题（框外文字） -->
+  <text class="free" x="600" y="42" font-size="19" font-weight="bold" text-anchor="middle" fill="#1f1f1f">扩频的码域相乘、码分叠加与相关解扩</text>
+
+  <!-- ================= 面板 A：码域相乘 ================= -->
+  <rect x="30" y="70" width="370" height="650" fill="#fdfdfd" stroke="#444444" stroke-width="1.5"/>
+  <text x="215" y="102" font-size="15" font-weight="bold" text-anchor="middle" fill="#1f1f1f">面板 A｜数据符号与扩频码逐位相乘</text>
+  <text x="215" y="126" font-size="11" text-anchor="middle" fill="#333333">Walsh 4 位码，一个符号展成 4 个码片</text>
+
+  <!-- 数据符号：一个宽格覆盖 4 个码片位置 -->
+  <text x="46" y="183" font-size="11" fill="#333333">数据符号 d</text>
+  <rect x="130" y="160" width="222" height="36" fill="#f1f1f1" stroke="#777777" stroke-width="1.2"/>
+  <text x="241" y="183" font-size="11" text-anchor="middle" fill="#1f1f1f">d = +1（一个符号占 4 个码片）</text>
+
+  <!-- 扩频码 -->
+  <text x="46" y="255" font-size="11" fill="#333333">扩频码 c</text>
+  <g stroke="#4a6fa5" stroke-width="1.2" fill="#eaf2fb">
+    <rect x="130" y="232" width="48" height="36"/><rect x="188" y="232" width="48" height="36"/><rect x="246" y="232" width="48" height="36"/><rect x="304" y="232" width="48" height="36"/>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#1f1f1f">
+    <text x="154" y="255">+1</text><text x="212" y="255">−1</text><text x="270" y="255">+1</text><text x="328" y="255">−1</text>
+  </g>
+
+  <!-- 码片序列 = d · c -->
+  <text x="46" y="327" font-size="11" fill="#333333">码片 s = d·c</text>
+  <g stroke="#6b8f4e" stroke-width="1.2" fill="#f2f7ec">
+    <rect x="130" y="304" width="48" height="36"/><rect x="188" y="304" width="48" height="36"/><rect x="246" y="304" width="48" height="36"/><rect x="304" y="304" width="48" height="36"/>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#1f1f1f">
+    <text x="154" y="327">+1</text><text x="212" y="327">−1</text><text x="270" y="327">+1</text><text x="328" y="327">−1</text>
+  </g>
+
+  <g font-size="11" fill="#222222">
+    <text x="46" y="380">相乘在码域逐位进行：s_k = d · c_k，k = 0,1,2,3</text>
+    <text x="46" y="406">d = +1 时码片与扩频码同相，d = −1 时整体取反</text>
+    <text x="46" y="432">一个数据符号占 4 个码片周期，码片边界与符号边界对齐</text>
+    <text x="46" y="458">带宽从符号速率量级展宽到码片速率量级</text>
+  </g>
+
+  <!-- 面板 A 底部说明框 -->
+  <rect x="48" y="498" width="334" height="164" fill="#f7f9fc" stroke="#9aa9bb" stroke-width="1"/>
+  <g font-size="11" fill="#222222">
+    <text x="62" y="528">Walsh 4 位码 c = [+1, −1, +1, −1]</text>
+    <text x="62" y="554">另一条正交码 c2 = [+1, +1, −1, −1]</text>
+    <text x="62" y="580">扩频因子 N_sf = 4：1 个符号对应 4 个码片</text>
+    <text x="62" y="606">码片速率 = 4 × 符号速率，带宽同比展宽</text>
+    <text x="62" y="632">极性反转只改变符号，不改变码的正交结构</text>
+  </g>
+
+  <!-- ================= 面板 B：码分叠加 ================= -->
+  <rect x="415" y="70" width="370" height="650" fill="#fdfdfd" stroke="#444444" stroke-width="1.5"/>
+  <text x="600" y="102" font-size="15" font-weight="bold" text-anchor="middle" fill="#1f1f1f">面板 B｜两路正交码片的时域叠加</text>
+  <text x="600" y="126" font-size="11" text-anchor="middle" fill="#333333">两用户同发符号 +1，码字取 Walsh 两行</text>
+
+  <!-- 用户 1 码 -->
+  <text x="431" y="183" font-size="11" fill="#333333">用户 1 码 c1</text>
+  <g stroke="#4a6fa5" stroke-width="1.2" fill="#eaf2fb">
+    <rect x="515" y="160" width="48" height="36"/><rect x="573" y="160" width="48" height="36"/><rect x="631" y="160" width="48" height="36"/><rect x="689" y="160" width="48" height="36"/>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#1f1f1f">
+    <text x="539" y="183">+1</text><text x="597" y="183">−1</text><text x="655" y="183">+1</text><text x="713" y="183">−1</text>
+  </g>
+
+  <!-- 用户 2 码 -->
+  <text x="431" y="255" font-size="11" fill="#333333">用户 2 码 c2</text>
+  <g stroke="#c47a3a" stroke-width="1.2" fill="#fdf0e6">
+    <rect x="515" y="232" width="48" height="36"/><rect x="573" y="232" width="48" height="36"/><rect x="631" y="232" width="48" height="36"/><rect x="689" y="232" width="48" height="36"/>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#1f1f1f">
+    <text x="539" y="255">+1</text><text x="597" y="255">+1</text><text x="655" y="255">−1</text><text x="713" y="255">−1</text>
+  </g>
+
+  <!-- 逐位乘积 -->
+  <text x="431" y="327" font-size="11" fill="#333333">逐位乘积</text>
+  <g stroke="#6b8f4e" stroke-width="1.2" fill="#f2f7ec">
+    <rect x="515" y="304" width="48" height="36"/><rect x="573" y="304" width="48" height="36"/><rect x="631" y="304" width="48" height="36"/><rect x="689" y="304" width="48" height="36"/>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#1f1f1f">
+    <text x="539" y="327">+1</text><text x="597" y="327">−1</text><text x="655" y="327">−1</text><text x="713" y="327">+1</text>
+  </g>
+
+  <!-- 叠加序列 -->
+  <text x="431" y="399" font-size="11" fill="#333333">叠加 r_k</text>
+  <g stroke="#7a5ea8" stroke-width="1.2" fill="#f0ecf8">
+    <rect x="515" y="376" width="48" height="36"/><rect x="573" y="376" width="48" height="36"/><rect x="631" y="376" width="48" height="36"/><rect x="689" y="376" width="48" height="36"/>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#1f1f1f">
+    <text x="539" y="399">+2</text><text x="597" y="399">0</text><text x="655" y="399">0</text><text x="713" y="399">−2</text>
+  </g>
+
+  <g font-size="11" fill="#222222">
+    <text x="431" y="440">逐位乘积之和 = 1 − 1 − 1 + 1 = 0，即 c1 与 c2 的内积为 0</text>
+    <text x="431" y="466">内积为 0 称为正交：任一码在另一码上的投影为零</text>
+    <text x="431" y="492">叠加序列 r_k = d1·c1_k + d2·c2_k，本例 d1 = d2 = +1</text>
+    <text x="431" y="518">r = [+2, 0, 0, −2]：两路信号占用同一时频资源</text>
+    <text x="431" y="544">接收端分别用 c1、c2 做相关，即可把两路分开</text>
+  </g>
+
+  <!-- 面板 B 底部说明框 -->
+  <rect x="433" y="560" width="334" height="146" fill="#f7f9fc" stroke="#9aa9bb" stroke-width="1"/>
+  <g font-size="11" fill="#222222">
+    <text x="447" y="590">正交性是多用户共用同一频带的前提</text>
+    <text x="447" y="615">码字不正交时，相关输出会残留其他用户的能量</text>
+    <text x="447" y="640">多径与频偏破坏严格正交，码分多址需功率控制配合</text>
+    <text x="447" y="665">Walsh 码长取 2 的幂，长码可由短码递归构造</text>
+    <text x="447" y="690">叠加序列的幅度可超出单用户码片值 ±1</text>
+  </g>
+
+  <!-- ================= 面板 C：相关解扩 ================= -->
+  <rect x="800" y="70" width="370" height="650" fill="#fdfdfd" stroke="#444444" stroke-width="1.5"/>
+  <text x="985" y="102" font-size="15" font-weight="bold" text-anchor="middle" fill="#1f1f1f">面板 C｜接收序列与本地码做相关</text>
+  <text x="985" y="126" font-size="11" text-anchor="middle" fill="#333333">无干扰时接收序列即用户 1 的码片序列</text>
+
+  <!-- 接收序列 -->
+  <text x="816" y="183" font-size="11" fill="#333333">接收 r_k</text>
+  <g stroke="#7a5ea8" stroke-width="1.2" fill="#f0ecf8">
+    <rect x="900" y="160" width="48" height="36"/><rect x="958" y="160" width="48" height="36"/><rect x="1016" y="160" width="48" height="36"/><rect x="1074" y="160" width="48" height="36"/>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#1f1f1f">
+    <text x="924" y="183">+1</text><text x="982" y="183">−1</text><text x="1040" y="183">+1</text><text x="1098" y="183">−1</text>
+  </g>
+
+  <!-- 本地码 -->
+  <text x="816" y="255" font-size="11" fill="#333333">本地码 c1</text>
+  <g stroke="#4a6fa5" stroke-width="1.2" fill="#eaf2fb">
+    <rect x="900" y="232" width="48" height="36"/><rect x="958" y="232" width="48" height="36"/><rect x="1016" y="232" width="48" height="36"/><rect x="1074" y="232" width="48" height="36"/>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#1f1f1f">
+    <text x="924" y="255">+1</text><text x="982" y="255">−1</text><text x="1040" y="255">+1</text><text x="1098" y="255">−1</text>
+  </g>
+
+  <!-- 逐位乘积 -->
+  <text x="816" y="327" font-size="11" fill="#333333">逐位乘积</text>
+  <g stroke="#6b8f4e" stroke-width="1.2" fill="#f2f7ec">
+    <rect x="900" y="304" width="48" height="36"/><rect x="958" y="304" width="48" height="36"/><rect x="1016" y="304" width="48" height="36"/><rect x="1074" y="304" width="48" height="36"/>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#1f1f1f">
+    <text x="924" y="327">+1</text><text x="982" y="327">+1</text><text x="1040" y="327">+1</text><text x="1098" y="327">+1</text>
+  </g>
+
+  <!-- 相关结果 -->
+  <rect x="818" y="364" width="334" height="48" fill="#fff4d6" stroke="#c89a2e" stroke-width="1.2"/>
+  <text x="985" y="395" font-size="15" font-weight="bold" text-anchor="middle" fill="#5a4200">Σ = 1+1+1+1 = 4</text>
+
+  <g font-size="11" fill="#222222">
+    <text x="816" y="448">无干扰时 r_k = d·c1_k，四个码片与本地码同号</text>
+    <text x="816" y="474">逐位相乘后相干累加，符号幅度放大为码长的 4 倍</text>
+    <text x="816" y="500">与另一正交码 c2 相关：1 − 1 − 1 + 1 = 0</text>
+    <text x="816" y="526">相关值 0 说明用户 1 的信号在 c2 相关器上无输出</text>
+    <text x="816" y="552">两用户同时发送时，两个相关器各输出本用户符号的 4 倍</text>
+    <text x="816" y="578">相关值再除以码长 4，即恢复原数据符号 +1</text>
+  </g>
+
+  <!-- 面板 C 底部说明框 -->
+  <rect x="818" y="592" width="334" height="114" fill="#f7f9fc" stroke="#9aa9bb" stroke-width="1"/>
+  <g font-size="11" fill="#222222">
+    <text x="832" y="622">处理增益随扩频因子增大而增大</text>
+    <text x="832" y="646">N_sf = 4 → 6.0 dB；N_sf = 8 → 9.0 dB</text>
+    <text x="832" y="670">N_sf = 16 → 12.0 dB；N_sf = 128 → 21.1 dB</text>
+    <text x="832" y="694">增益来自相干累加，不来自发射功率的提高</text>
+  </g>
+</svg>

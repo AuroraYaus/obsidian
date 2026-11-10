@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+@file    Layer_Mapping_codeword_distribution.svg
+@brief   码字到空间层的符号分配关系，以及层数与每层符号数的数值对应
+@note    本图以三个面板并列展示三件事：面板 A 给出单码字在层数为 1（单天线端口）
+         与层数为 2（发送分集）两种配置下的符号分配，色块内数字为该层符号的源序号 n；
+         面板 B 给出两个码字到四层的分配，码字 0 占层 0 与层 1、码字 1 占层 2 与层 3，
+         每个码字内部按偶序号与奇序号分别交错进入自己的两层；
+         面板 C 给出源符号数 N_symb 与层数 N_L 决定每层符号数的数值关系，并以
+         N_symb=8、N_L=2 与 N_symb=8、N_L=4 两组算例列出层内符号序号。
+         表中行表示层、列表示该层的层内序号 i，色块颜色表示所属层。
+         分配规则按 TS 38.211 §7.3.1.3 表 7.3.1.3-1 的对应行绘制。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="920" viewBox="0 0 1200 920" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">
+  <rect x="0" y="0" width="1200" height="920" fill="#ffffff"/>
+
+  <!-- 页级标题（框外文字） -->
+  <text class="free" x="600" y="42" font-size="19" font-weight="bold" text-anchor="middle" fill="#222222">单码字与双码字到空间层的分配，以及层数与每层符号数的关系</text>
+
+  <!-- ================= 面板 A：单码字到多层的两种分配 ================= -->
+  <rect x="24" y="72" width="580" height="384" fill="#fdfdfd" stroke="#444444" stroke-width="1.5"/>
+  <text x="314" y="104" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">面板 A｜单码字到多层的两种分配</text>
+  <text x="314" y="128" font-size="11" text-anchor="middle" fill="#333333">码字 0 共 8 个符号 d0(0) 至 d0(7)；色块内数字为源符号序号 n</text>
+
+  <!-- 情形 1：N_L = 1，符号逐个直通层 0 -->
+  <text x="40" y="160" font-size="11" fill="#222222">情形 1｜N_L=1（单天线端口）：符号逐个直通层 0，层内序号等于源序号</text>
+  <g font-size="11" text-anchor="middle" fill="#333333">
+    <text x="160" y="186">i=0</text><text x="204" y="186">i=1</text><text x="248" y="186">i=2</text><text x="292" y="186">i=3</text>
+    <text x="336" y="186">i=4</text><text x="380" y="186">i=5</text><text x="424" y="186">i=6</text><text x="468" y="186">i=7</text>
+  </g>
+  <g fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1.5">
+    <rect x="138" y="194" width="44" height="34"/><rect x="182" y="194" width="44" height="34"/><rect x="226" y="194" width="44" height="34"/><rect x="270" y="194" width="44" height="34"/><rect x="314" y="194" width="44" height="34"/><rect x="358" y="194" width="44" height="34"/><rect x="402" y="194" width="44" height="34"/><rect x="446" y="194" width="44" height="34"/>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#222222">
+    <text x="160" y="216">0</text><text x="204" y="216">1</text><text x="248" y="216">2</text><text x="292" y="216">3</text>
+    <text x="336" y="216">4</text><text x="380" y="216">5</text><text x="424" y="216">6</text><text x="468" y="216">7</text>
+  </g>
+  <text x="40" y="216" font-size="11" fill="#222222">层 0</text>
+  <text x="520" y="216" font-size="11" fill="#333333">每层 8 个符号</text>
+  <text x="40" y="252" font-size="11" fill="#222222">层 0 的符号序列 x0(0) 至 x0(7) 与码字序列逐位相同，层内共 8 个符号</text>
+
+  <!-- 情形 2：N_L = 2，偶序号进层 0、奇序号进层 1 -->
+  <text x="40" y="286" font-size="11" fill="#222222">情形 2｜N_L=2（发送分集）：偶序号进层 0，奇序号进层 1</text>
+  <g font-size="11" text-anchor="middle" fill="#333333">
+    <text x="160" y="312">i=0</text><text x="204" y="312">i=1</text><text x="248" y="312">i=2</text><text x="292" y="312">i=3</text>
+  </g>
+  <g fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1.5">
+    <rect x="138" y="320" width="44" height="34"/><rect x="182" y="320" width="44" height="34"/><rect x="226" y="320" width="44" height="34"/><rect x="270" y="320" width="44" height="34"/>
+  </g>
+  <g fill="#ffd9a0" stroke="#d08000" stroke-width="1.5">
+    <rect x="138" y="364" width="44" height="34"/><rect x="182" y="364" width="44" height="34"/><rect x="226" y="364" width="44" height="34"/><rect x="270" y="364" width="44" height="34"/>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#222222">
+    <text x="160" y="342">0</text><text x="204" y="342">2</text><text x="248" y="342">4</text><text x="292" y="342">6</text>
+    <text x="160" y="386">1</text><text x="204" y="386">3</text><text x="248" y="386">5</text><text x="292" y="386">7</text>
+  </g>
+  <text x="40" y="342" font-size="11" fill="#222222">层 0</text>
+  <text x="40" y="386" font-size="11" fill="#222222">层 1</text>
+  <text x="350" y="342" font-size="11" fill="#333333">x0(i)=d0(2i)</text>
+  <text x="350" y="386" font-size="11" fill="#333333">x1(i)=d0(2i+1)</text>
+
+  <text x="40" y="430" font-size="11" fill="#222222">色块数字为源符号序号 n；行表示层，列表示层内序号 i；蓝色为层 0，橙色为层 1</text>
+
+  <!-- ================= 面板 B：两个码字到四层 ================= -->
+  <rect x="628" y="72" width="548" height="384" fill="#fdfdfd" stroke="#444444" stroke-width="1.5"/>
+  <text x="902" y="104" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">面板 B｜两个码字到四层的分配</text>
+  <text x="902" y="128" font-size="11" text-anchor="middle" fill="#333333">码字 0 占层 0 与层 1，码字 1 占层 2 与层 3；每层 4 个符号</text>
+
+  <g font-size="11" text-anchor="middle" fill="#333333">
+    <text x="822" y="166">i=0</text><text x="866" y="166">i=1</text><text x="910" y="166">i=2</text><text x="954" y="166">i=3</text>
+  </g>
+
+  <!-- 层 0：码字 0 的偶序号符号 -->
+  <g fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1.5">
+    <rect x="800" y="174" width="44" height="34"/><rect x="844" y="174" width="44" height="34"/><rect x="888" y="174" width="44" height="34"/><rect x="932" y="174" width="44" height="34"/>
+  </g>
+  <!-- 层 1：码字 0 的奇序号符号 -->
+  <g fill="#ffd9a0" stroke="#d08000" stroke-width="1.5">
+    <rect x="800" y="218" width="44" height="34"/><rect x="844" y="218" width="44" height="34"/><rect x="888" y="218" width="44" height="34"/><rect x="932" y="218" width="44" height="34"/>
+  </g>
+  <!-- 层 2：码字 1 的偶序号符号 -->
+  <g fill="#cdeccd" stroke="#3f7f3f" stroke-width="1.5">
+    <rect x="800" y="262" width="44" height="34"/><rect x="844" y="262" width="44" height="34"/><rect x="888" y="262" width="44" height="34"/><rect x="932" y="262" width="44" height="34"/>
+  </g>
+  <!-- 层 3：码字 1 的奇序号符号 -->
+  <g fill="#e8d5f2" stroke="#7a4a9a" stroke-width="1.5">
+    <rect x="800" y="306" width="44" height="34"/><rect x="844" y="306" width="44" height="34"/><rect x="888" y="306" width="44" height="34"/><rect x="932" y="306" width="44" height="34"/>
+  </g>
+
+  <g font-size="11" text-anchor="middle" fill="#222222">
+    <text x="822" y="196">0</text><text x="866" y="196">2</text><text x="910" y="196">4</text><text x="954" y="196">6</text>
+    <text x="822" y="240">1</text><text x="866" y="240">3</text><text x="910" y="240">5</text><text x="954" y="240">7</text>
+    <text x="822" y="284">0</text><text x="866" y="284">2</text><text x="910" y="284">4</text><text x="954" y="284">6</text>
+    <text x="822" y="328">1</text><text x="866" y="328">3</text><text x="910" y="328">5</text><text x="954" y="328">7</text>
+  </g>
+
+  <text x="640" y="196" font-size="11" fill="#222222">层 0 · cw0</text>
+  <text x="640" y="240" font-size="11" fill="#222222">层 1 · cw0</text>
+  <text x="640" y="284" font-size="11" fill="#222222">层 2 · cw1</text>
+  <text x="640" y="328" font-size="11" fill="#222222">层 3 · cw1</text>
+
+  <text x="1000" y="196" font-size="11" fill="#333333">x0(i)=d0(2i)</text>
+  <text x="1000" y="240" font-size="11" fill="#333333">x1(i)=d0(2i+1)</text>
+  <text x="1000" y="284" font-size="11" fill="#333333">x2(i)=d1(2i)</text>
+  <text x="1000" y="328" font-size="11" fill="#333333">x3(i)=d1(2i+1)</text>
+
+  <text x="640" y="380" font-size="11" fill="#222222">偶序号进层 0，奇序号进层 1：两个码字各按同一规则交错</text>
+  <text x="640" y="404" font-size="11" fill="#222222">层号在两组之间错开一行，构成对角结构的分配</text>
+  <text x="640" y="428" font-size="11" fill="#222222">每层 4 个符号；接收端按同一规则反向串接还原码字</text>
+
+  <!-- ================= 面板 C：层数与每层符号数 ================= -->
+  <rect x="24" y="480" width="1152" height="416" fill="#fdfdfd" stroke="#444444" stroke-width="1.5"/>
+  <text x="600" y="508" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">面板 C｜层数与每层符号数的数值关系</text>
+  <text x="600" y="532" font-size="11" text-anchor="middle" fill="#333333">标准表要求整除：每层符号数 = 源符号数 / 层数；不能整除时以 N_symb/N_L 的向上取整为上界</text>
+
+  <!-- 算例表：表头 -->
+  <g fill="#efefef" stroke="#9a9a9a" stroke-width="1">
+    <rect x="55" y="556" width="120" height="34"/><rect x="175" y="556" width="170" height="34"/><rect x="345" y="556" width="150" height="34"/><rect x="495" y="556" width="170" height="34"/><rect x="665" y="556" width="480" height="34"/>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#222222">
+    <text x="115" y="578">算例</text>
+    <text x="260" y="578">源符号数 N_symb</text>
+    <text x="420" y="578">层数 N_L</text>
+    <text x="580" y="578">每层符号数</text>
+    <text x="905" y="578">层内符号序号分配</text>
+  </g>
+
+  <!-- 算例表：第 1 行 -->
+  <g fill="#ffffff" stroke="#9a9a9a" stroke-width="1">
+    <rect x="55" y="590" width="120" height="34"/><rect x="175" y="590" width="170" height="34"/><rect x="345" y="590" width="150" height="34"/><rect x="495" y="590" width="170" height="34"/><rect x="665" y="590" width="480" height="34"/>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#222222">
+    <text x="115" y="612">算例 1</text>
+    <text x="260" y="612">8</text>
+    <text x="420" y="612">2</text>
+    <text x="580" y="612">4</text>
+    <text x="905" y="612">层 0：n=0,2,4,6；层 1：n=1,3,5,7</text>
+  </g>
+
+  <!-- 算例表：第 2 行 -->
+  <g fill="#ffffff" stroke="#9a9a9a" stroke-width="1">
+    <rect x="55" y="624" width="120" height="34"/><rect x="175" y="624" width="170" height="34"/><rect x="345" y="624" width="150" height="34"/><rect x="495" y="624" width="170" height="34"/><rect x="665" y="624" width="480" height="34"/>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#222222">
+    <text x="115" y="646">算例 2</text>
+    <text x="260" y="646">8</text>
+    <text x="420" y="646">4</text>
+    <text x="580" y="646">2</text>
+    <text x="905" y="646">层 0：n=0,4；层 1：n=1,5；层 2：n=2,6；层 3：n=3,7</text>
+  </g>
+
+  <!-- 分组条 1：N_L = 2 -->
+  <text x="55" y="680" font-size="11" fill="#222222">N_L=2 分组：层 0 取偶序号，层 1 取奇序号</text>
+  <g fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1.5">
+    <rect x="180" y="690" width="58" height="34"/><rect x="296" y="690" width="58" height="34"/><rect x="412" y="690" width="58" height="34"/><rect x="528" y="690" width="58" height="34"/>
+  </g>
+  <g fill="#ffd9a0" stroke="#d08000" stroke-width="1.5">
+    <rect x="238" y="690" width="58" height="34"/><rect x="354" y="690" width="58" height="34"/><rect x="470" y="690" width="58" height="34"/><rect x="586" y="690" width="58" height="34"/>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#222222">
+    <text x="209" y="712">0</text><text x="267" y="712">1</text><text x="325" y="712">2</text><text x="383" y="712">3</text>
+    <text x="441" y="712">4</text><text x="499" y="712">5</text><text x="557" y="712">6</text><text x="615" y="712">7</text>
+  </g>
+  <text x="680" y="712" font-size="11" fill="#333333">层 0：n=0,2,4,6；层 1：n=1,3,5,7</text>
+
+  <!-- 分组条 2：N_L = 4 -->
+  <text x="55" y="756" font-size="11" fill="#222222">N_L=4 分组：层号取源序号 n 除以 4 的余数</text>
+  <g fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1.5">
+    <rect x="180" y="766" width="58" height="34"/><rect x="412" y="766" width="58" height="34"/>
+  </g>
+  <g fill="#ffd9a0" stroke="#d08000" stroke-width="1.5">
+    <rect x="238" y="766" width="58" height="34"/><rect x="470" y="766" width="58" height="34"/>
+  </g>
+  <g fill="#cdeccd" stroke="#3f7f3f" stroke-width="1.5">
+    <rect x="296" y="766" width="58" height="34"/><rect x="528" y="766" width="58" height="34"/>
+  </g>
+  <g fill="#e8d5f2" stroke="#7a4a9a" stroke-width="1.5">
+    <rect x="354" y="766" width="58" height="34"/><rect x="586" y="766" width="58" height="34"/>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#222222">
+    <text x="209" y="788">0</text><text x="267" y="788">1</text><text x="325" y="788">2</text><text x="383" y="788">3</text>
+    <text x="441" y="788">4</text><text x="499" y="788">5</text><text x="557" y="788">6</text><text x="615" y="788">7</text>
+  </g>
+  <text x="680" y="788" font-size="11" fill="#333333">层 0：n=0,4；层 1：n=1,5；层 2：n=2,6；层 3：n=3,7</text>
+
+  <!-- 层色图例 -->
+  <g fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1.5">
+    <rect x="55" y="824" width="100" height="30"/>
+  </g>
+  <g fill="#ffd9a0" stroke="#d08000" stroke-width="1.5">
+    <rect x="165" y="824" width="100" height="30"/>
+  </g>
+  <g fill="#cdeccd" stroke="#3f7f3f" stroke-width="1.5">
+    <rect x="275" y="824" width="100" height="30"/>
+  </g>
+  <g fill="#e8d5f2" stroke="#7a4a9a" stroke-width="1.5">
+    <rect x="385" y="824" width="100" height="30"/>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#222222">
+    <text x="105" y="844">层 0</text>
+    <text x="215" y="844">层 1</text>
+    <text x="325" y="844">层 2</text>
+    <text x="435" y="844">层 3</text>
+  </g>
+  <text x="55" y="878" font-size="11" fill="#222222">色块颜色表示所属层；数字为源符号序号 n；同一层内按 n 递增顺序读出符号序列</text>
+</svg>

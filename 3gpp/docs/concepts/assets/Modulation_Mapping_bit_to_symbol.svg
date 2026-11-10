@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+@file    Modulation_Mapping_bit_to_symbol.svg
+@brief   调制映射的三个环节：比特流按调制阶数分组、一组比特到复符号的代入与落点、符号数与编码比特数的换算
+@note    本图以三个面板说明同一条发送端流程。面板 A 取同一串 12 个比特，分别按 QPSK 的 2 位、16QAM 的 4 位、
+         64QAM 的 6 位切组，格内上行为比特值、下行为组内位序，竖线标出组边界，三行的组数依次为 6、3、2；
+         面板 B 以 16QAM 的比特组 1011（即面板 A 第一行的前 4 位）为例，按 TS 38.211 §5.1.4 的映射式逐位代入，
+         得到 I = -3/√10、Q = +3/√10，并在右侧 I/Q 平面上标出该点；面板 C 按 N_symb = G/Q_m 给出同一编码比特
+         预算 G = 8000 在 Q_m = 2、4、6 下的符号数，横条长度与符号数成正比。星座点的整体排布与归一化因子的
+         对照已在 Modulation_Constellations_constellation_map.svg 中给出，本图不重复该构图，只画"比特组到落点"
+         的流程。图中数值均按协议映射式计算，手算过程见配套笔记「科学定义」一节。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1260" height="820" viewBox="0 0 1260 820" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">
+  <rect x="0" y="0" width="1260" height="820" fill="#ffffff"/>
+
+  <!-- 页级标题（框外文字） -->
+  <text class="free" x="630" y="42" font-size="19" font-weight="bold" text-anchor="middle" fill="#222222">调制映射：比特分组、符号代入与符号数换算</text>
+
+  <!-- ================= 面板 A：比特流按 Qm 分组 ================= -->
+  <rect x="30" y="70" width="560" height="350" fill="#fdfdfd" stroke="#444444" stroke-width="1.5"/>
+  <text x="310" y="104" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">面板 A｜比特流按 Qm 分组与组内位序</text>
+  <text x="310" y="128" font-size="11" text-anchor="middle" fill="#333333">同一串 12 个比特，分别按 2 位、4 位、6 位切组</text>
+
+  <!-- 第 1 行：QPSK，12 个比特格，6 组 -->
+  <g font-size="11" text-anchor="middle">
+    <text x="52" y="168" text-anchor="start" fill="#222222">QPSK（Qm=2）</text>
+    <text x="52" y="186" text-anchor="start" fill="#333333">6 组，每组 2 bit</text>
+  </g>
+  <g stroke="#6f7f92" stroke-width="1">
+    <rect x="200" y="150" width="28" height="38" fill="#e8f1fb"/>
+    <rect x="228" y="150" width="28" height="38" fill="#e8f1fb"/>
+    <rect x="256" y="150" width="28" height="38" fill="#fdf1e0"/>
+    <rect x="284" y="150" width="28" height="38" fill="#fdf1e0"/>
+    <rect x="312" y="150" width="28" height="38" fill="#e8f1fb"/>
+    <rect x="340" y="150" width="28" height="38" fill="#e8f1fb"/>
+    <rect x="368" y="150" width="28" height="38" fill="#fdf1e0"/>
+    <rect x="396" y="150" width="28" height="38" fill="#fdf1e0"/>
+    <rect x="424" y="150" width="28" height="38" fill="#e8f1fb"/>
+    <rect x="452" y="150" width="28" height="38" fill="#e8f1fb"/>
+    <rect x="480" y="150" width="28" height="38" fill="#fdf1e0"/>
+    <rect x="508" y="150" width="28" height="38" fill="#fdf1e0"/>
+  </g>
+  <g stroke="#1f4e79" stroke-width="2">
+    <line x1="256" y1="150" x2="256" y2="188"/>
+    <line x1="312" y1="150" x2="312" y2="188"/>
+    <line x1="368" y1="150" x2="368" y2="188"/>
+    <line x1="424" y1="150" x2="424" y2="188"/>
+    <line x1="480" y1="150" x2="480" y2="188"/>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#1f2d3d">
+    <text x="214" y="166">1</text><text x="214" y="182">b0</text>
+    <text x="242" y="166">0</text><text x="242" y="182">b1</text>
+    <text x="270" y="166">1</text><text x="270" y="182">b0</text>
+    <text x="298" y="166">1</text><text x="298" y="182">b1</text>
+    <text x="326" y="166">0</text><text x="326" y="182">b0</text>
+    <text x="354" y="166">1</text><text x="354" y="182">b1</text>
+    <text x="382" y="166">0</text><text x="382" y="182">b0</text>
+    <text x="410" y="166">0</text><text x="410" y="182">b1</text>
+    <text x="438" y="166">1</text><text x="438" y="182">b0</text>
+    <text x="466" y="166">0</text><text x="466" y="182">b1</text>
+    <text x="494" y="166">1</text><text x="494" y="182">b0</text>
+    <text x="522" y="166">1</text><text x="522" y="182">b1</text>
+  </g>
+
+  <!-- 第 2 行：16QAM，12 个比特格，3 组 -->
+  <g font-size="11" text-anchor="middle">
+    <text x="52" y="248" text-anchor="start" fill="#222222">16QAM（Qm=4）</text>
+    <text x="52" y="266" text-anchor="start" fill="#333333">3 组，每组 4 bit</text>
+  </g>
+  <g stroke="#6f7f92" stroke-width="1">
+    <rect x="200" y="230" width="28" height="38" fill="#e8f1fb"/>
+    <rect x="228" y="230" width="28" height="38" fill="#e8f1fb"/>
+    <rect x="256" y="230" width="28" height="38" fill="#e8f1fb"/>
+    <rect x="284" y="230" width="28" height="38" fill="#e8f1fb"/>
+    <rect x="312" y="230" width="28" height="38" fill="#fdf1e0"/>
+    <rect x="340" y="230" width="28" height="38" fill="#fdf1e0"/>
+    <rect x="368" y="230" width="28" height="38" fill="#fdf1e0"/>
+    <rect x="396" y="230" width="28" height="38" fill="#fdf1e0"/>
+    <rect x="424" y="230" width="28" height="38" fill="#e8f1fb"/>
+    <rect x="452" y="230" width="28" height="38" fill="#e8f1fb"/>
+    <rect x="480" y="230" width="28" height="38" fill="#e8f1fb"/>
+    <rect x="508" y="230" width="28" height="38" fill="#e8f1fb"/>
+  </g>
+  <g stroke="#1f4e79" stroke-width="2">
+    <line x1="312" y1="230" x2="312" y2="268"/>
+    <line x1="424" y1="230" x2="424" y2="268"/>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#1f2d3d">
+    <text x="214" y="246">1</text><text x="214" y="262">b0</text>
+    <text x="242" y="246">0</text><text x="242" y="262">b1</text>
+    <text x="270" y="246">1</text><text x="270" y="262">b2</text>
+    <text x="298" y="246">1</text><text x="298" y="262">b3</text>
+    <text x="326" y="246">0</text><text x="326" y="262">b0</text>
+    <text x="354" y="246">1</text><text x="354" y="262">b1</text>
+    <text x="382" y="246">0</text><text x="382" y="262">b2</text>
+    <text x="410" y="246">0</text><text x="410" y="262">b3</text>
+    <text x="438" y="246">1</text><text x="438" y="262">b0</text>
+    <text x="466" y="246">0</text><text x="466" y="262">b1</text>
+    <text x="494" y="246">1</text><text x="494" y="262">b2</text>
+    <text x="522" y="246">1</text><text x="522" y="262">b3</text>
+  </g>
+
+  <!-- 第 3 行：64QAM，12 个比特格，2 组 -->
+  <g font-size="11" text-anchor="middle">
+    <text x="52" y="328" text-anchor="start" fill="#222222">64QAM（Qm=6）</text>
+    <text x="52" y="346" text-anchor="start" fill="#333333">2 组，每组 6 bit</text>
+  </g>
+  <g stroke="#6f7f92" stroke-width="1">
+    <rect x="200" y="310" width="28" height="38" fill="#e8f1fb"/>
+    <rect x="228" y="310" width="28" height="38" fill="#e8f1fb"/>
+    <rect x="256" y="310" width="28" height="38" fill="#e8f1fb"/>
+    <rect x="284" y="310" width="28" height="38" fill="#e8f1fb"/>
+    <rect x="312" y="310" width="28" height="38" fill="#e8f1fb"/>
+    <rect x="340" y="310" width="28" height="38" fill="#e8f1fb"/>
+    <rect x="368" y="310" width="28" height="38" fill="#fdf1e0"/>
+    <rect x="396" y="310" width="28" height="38" fill="#fdf1e0"/>
+    <rect x="424" y="310" width="28" height="38" fill="#fdf1e0"/>
+    <rect x="452" y="310" width="28" height="38" fill="#fdf1e0"/>
+    <rect x="480" y="310" width="28" height="38" fill="#fdf1e0"/>
+    <rect x="508" y="310" width="28" height="38" fill="#fdf1e0"/>
+  </g>
+  <line x1="368" y1="310" x2="368" y2="348" stroke="#1f4e79" stroke-width="2"/>
+  <g font-size="11" text-anchor="middle" fill="#1f2d3d">
+    <text x="214" y="326">1</text><text x="214" y="342">b0</text>
+    <text x="242" y="326">0</text><text x="242" y="342">b1</text>
+    <text x="270" y="326">1</text><text x="270" y="342">b2</text>
+    <text x="298" y="326">1</text><text x="298" y="342">b3</text>
+    <text x="326" y="326">0</text><text x="326" y="342">b4</text>
+    <text x="354" y="326">1</text><text x="354" y="342">b5</text>
+    <text x="382" y="326">0</text><text x="382" y="342">b0</text>
+    <text x="410" y="326">0</text><text x="410" y="342">b1</text>
+    <text x="438" y="326">1</text><text x="438" y="342">b2</text>
+    <text x="466" y="326">0</text><text x="466" y="342">b3</text>
+    <text x="494" y="326">1</text><text x="494" y="342">b4</text>
+    <text x="522" y="326">1</text><text x="522" y="342">b5</text>
+  </g>
+
+  <text x="52" y="380" font-size="11" fill="#222222">三行取同一串 12 个比特；竖线为组边界，组内位序自 b0 起算。</text>
+  <text x="52" y="402" font-size="11" fill="#222222">Qm 越大，每组越长、组数越少：依次为 6 组、3 组、2 组。</text>
+
+  <!-- ================= 面板 B：一组比特到复符号 ================= -->
+  <rect x="610" y="70" width="620" height="350" fill="#fdfdfd" stroke="#444444" stroke-width="1.5"/>
+  <text x="920" y="104" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">面板 B｜一组比特到复符号：代入映射式与落点</text>
+  <text x="920" y="128" font-size="11" text-anchor="middle" fill="#333333">以 16QAM 的 1011 为例；左列为映射链，右列为 I/Q 平面上的落点</text>
+
+  <text x="640" y="156" font-size="11" fill="#222222">(1) 取一组 Qm=4 个比特 b0 b1 b2 b3</text>
+  <g stroke="#6f7f92" stroke-width="1">
+    <rect x="640" y="166" width="28" height="38" fill="#e8f1fb"/>
+    <rect x="668" y="166" width="28" height="38" fill="#e8f1fb"/>
+    <rect x="696" y="166" width="28" height="38" fill="#e8f1fb"/>
+    <rect x="724" y="166" width="28" height="38" fill="#e8f1fb"/>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#1f2d3d">
+    <text x="654" y="182">1</text><text x="654" y="198">b0</text>
+    <text x="682" y="182">0</text><text x="682" y="198">b1</text>
+    <text x="710" y="182">1</text><text x="710" y="198">b2</text>
+    <text x="738" y="182">1</text><text x="738" y="198">b3</text>
+  </g>
+
+  <g stroke="#444444" stroke-width="1.5">
+    <line x1="696" y1="210" x2="696" y2="232"/>
+    <line x1="690" y1="226" x2="696" y2="232"/>
+    <line x1="702" y1="226" x2="696" y2="232"/>
+  </g>
+
+  <text x="640" y="252" font-size="11" fill="#222222">(2) 代入 16QAM 映射式（与查 TS 38.211 Table 5.1-4 等价）</text>
+  <rect x="640" y="262" width="330" height="120" fill="#f7f9fc" stroke="#b9c3d0" stroke-width="1"/>
+  <g font-size="11" fill="#222222">
+    <text x="652" y="286">I = (1-2b0)·[2-(1-2b2)]/√10</text>
+    <text x="652" y="308">  = (-1)·3/√10 = -3/√10 ≈ -0.949</text>
+    <text x="652" y="330">Q = (1-2b1)·[2-(1-2b3)]/√10</text>
+    <text x="652" y="352">  = (+1)·3/√10 = +3/√10 ≈ +0.949</text>
+    <text x="652" y="374">d = I + jQ = -0.949 + j0.949</text>
+  </g>
+
+  <g stroke="#444444" stroke-width="1.5">
+    <line x1="976" y1="300" x2="996" y2="300"/>
+    <line x1="990" y1="294" x2="996" y2="300"/>
+    <line x1="990" y1="306" x2="996" y2="300"/>
+  </g>
+
+  <!-- I/Q 平面：16QAM 的 16 个点，红点为 1011 的落点 -->
+  <rect x="1000" y="160" width="210" height="210" fill="#ffffff" stroke="#666666" stroke-width="1"/>
+  <line x1="1006" y1="265" x2="1204" y2="265" stroke="#555555" stroke-width="1.2"/>
+  <line x1="1105" y1="166" x2="1105" y2="364" stroke="#555555" stroke-width="1.2"/>
+  <text x="1198" y="252" font-size="11" text-anchor="end" fill="#333333">I</text>
+  <text x="1112" y="179" font-size="11" fill="#333333">Q</text>
+  <g fill="#b9c6d8">
+    <circle cx="1033" cy="193" r="3"/><circle cx="1081" cy="193" r="3"/><circle cx="1129" cy="193" r="3"/><circle cx="1177" cy="193" r="3"/>
+    <circle cx="1033" cy="241" r="3"/><circle cx="1081" cy="241" r="3"/><circle cx="1129" cy="241" r="3"/><circle cx="1177" cy="241" r="3"/>
+    <circle cx="1033" cy="289" r="3"/><circle cx="1081" cy="289" r="3"/><circle cx="1129" cy="289" r="3"/><circle cx="1177" cy="289" r="3"/>
+    <circle cx="1033" cy="337" r="3"/><circle cx="1081" cy="337" r="3"/><circle cx="1129" cy="337" r="3"/><circle cx="1177" cy="337" r="3"/>
+  </g>
+  <circle cx="1033" cy="193" r="5" fill="#c0392b"/>
+  <text x="1042" y="182" font-size="11" fill="#c0392b">1011</text>
+  <text x="1105" y="392" font-size="11" text-anchor="middle" fill="#222222">每维取 ±1、±3 再除以 √10</text>
+  <text x="1105" y="410" font-size="11" text-anchor="middle" fill="#222222">红点即 1011 的落点</text>
+
+  <!-- ================= 面板 C：符号数与编码比特数的换算 ================= -->
+  <rect x="30" y="440" width="1200" height="350" fill="#fdfdfd" stroke="#444444" stroke-width="1.5"/>
+  <text x="630" y="474" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">面板 C｜符号数与编码比特数的换算</text>
+  <text x="630" y="498" font-size="11" text-anchor="middle" fill="#333333">Nsymb = G / Qm：编码比特数除以每符号比特数；以下三行取同一 G = 8000</text>
+
+  <rect x="60" y="510" width="1140" height="44" fill="#f7f9fc" stroke="#b9c3d0" stroke-width="1"/>
+  <text x="72" y="538" font-size="11" fill="#222222">Nsymb = G / Qm；G 为编码比特数，Qm 为每符号比特数，Nsymb 必须为整数</text>
+
+  <text x="60" y="584" font-size="11" fill="#222222">Qm=2（QPSK）</text>
+  <rect x="260" y="566" width="380" height="26" fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1"/>
+  <text x="652" y="584" font-size="11" fill="#222222">4000 个符号（8000/2）</text>
+
+  <text x="60" y="650" font-size="11" fill="#222222">Qm=4（16QAM）</text>
+  <rect x="260" y="632" width="190" height="26" fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1"/>
+  <text x="462" y="650" font-size="11" fill="#222222">2000 个符号（8000/4）</text>
+
+  <text x="60" y="716" font-size="11" fill="#222222">Qm=6（64QAM）</text>
+  <rect x="260" y="698" width="126.7" height="26" fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1"/>
+  <text x="399" y="716" font-size="11" fill="#222222">1333.3 个符号（8000/6，非整数）</text>
+
+  <rect x="880" y="566" width="330" height="190" fill="#f7f9fc" stroke="#b9c3d0" stroke-width="1"/>
+  <g font-size="11" fill="#222222">
+    <text x="896" y="592">同一符号数 2000 时：</text>
+    <text x="896" y="614">Qm=2 → 4000 bit</text>
+    <text x="896" y="636">Qm=4 → 8000 bit</text>
+    <text x="896" y="658">Qm=6 → 12000 bit</text>
+    <text x="896" y="688">G 必须是 Qm 的整数倍；</text>
+    <text x="896" y="710">8000 不能被 6 整除，</text>
+    <text x="896" y="732">故 64QAM 的 G 取 6 的倍数。</text>
+  </g>
+
+  <text x="60" y="756" font-size="11" fill="#222222">横条长度与符号数成正比（4000 个符号对应 380 px）</text>
+  <text x="60" y="780" font-size="11" fill="#222222">阶数越高，同一比特预算所需符号越少；同一符号数携带的比特越多。</text>
+</svg>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+@file    Interleaver_matrix_read_write.svg
+@brief   块交织的矩阵行列换向、12 元素写入序与读出序的对应关系，以及连续错误的分散效果
+@note    本图以三个面板并列说明块交织的三件事。面板 A 给出 R=4 行、C=3 列的矩阵结构与两个方向：
+         写入沿行自左向右、写到行尾下移一行；读出沿列自上向下、读到列尾右移一列。格内数字为
+         写入序号 i=r·C+c，按列读出得到输出序 0、3、6、9、1、4、7、10、2、5、8、11；
+         第 0 列（橙色）的 4 个元素在读出序上连续占据前 4 位。
+         面板 B 以同一个 12 元块为例，把输入序 c_i 与输出序 c'_j 分两行排列，用直线连接同一个
+         比特的两处位置，映射为 π(j)=(j mod R)·C+⌊j/R⌋。
+         面板 C 对照突发错误的分散效果：空口序中连续 4 个错误（位置 0 至 3，恰好占满矩阵一列）
+         解交织后位于写入序的 0、3、6、9，间隔为交织深度 D=C=3。
+         图中只画一个 12 元块；列数 C 增大则分散间隔同步增大，代价是矩阵容量 R·C 与交织时延。
+         三个面板的边框以 line 绘制，箭头三角只落在卡片之间的空白处，不侵入任何 rect 或 text；
+         面板内容文字均落在各自的卡片 rect 内，页级标题为 class="free"，位于面板之外。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="960" viewBox="0 0 1200 960" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">
+  <rect x="0" y="0" width="1200" height="960" fill="#ffffff"/>
+
+  <!-- 页级标题（框外文字） -->
+  <text class="free" x="600" y="36" font-size="19" font-weight="bold" text-anchor="middle" fill="#222222">块交织的矩阵换向、12 元素实例与突发错误分散</text>
+
+  <!-- ================= 面板 A：矩阵结构与行列换向 ================= -->
+  <rect x="30" y="70" width="555" height="66" fill="#f2f6fb" stroke="#444444" stroke-width="1.5"/>
+  <text x="307" y="100" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">面板 A｜块交织矩阵：按行写入、按列读出</text>
+  <text x="307" y="124" font-size="11" text-anchor="middle" fill="#333333">R=4 行、C=3 列，N=R·C=12；格内数字为写入序号 i=r·C+c</text>
+  <!-- 面板 A 边框（line 绘制，箭头三角不落入 rect） -->
+  <line x1="30" y1="136" x2="30" y2="470" stroke="#444444" stroke-width="1.5"/>
+  <line x1="585" y1="136" x2="585" y2="470" stroke="#444444" stroke-width="1.5"/>
+  <line x1="30" y1="470" x2="585" y2="470" stroke="#444444" stroke-width="1.5"/>
+
+  <!-- 方向说明卡片 -->
+  <rect x="45" y="170" width="205" height="255" fill="#f9fbfd" stroke="#cdd8e4" stroke-width="1"/>
+  <text x="57" y="198" font-size="15" font-weight="bold" fill="#222222">方向与读出序</text>
+  <text x="57" y="230" font-size="11" fill="#b3652b">写入：沿行向右</text>
+  <text x="57" y="248" font-size="11" fill="#b3652b">行尾下移一行</text>
+  <text x="57" y="276" font-size="11" fill="#1d3f6e">读出：沿列向下</text>
+  <text x="57" y="294" font-size="11" fill="#1d3f6e">列尾右移一列</text>
+  <text x="57" y="324" font-size="11" fill="#333333">按列读出序 c'_j：</text>
+  <text x="57" y="342" font-size="11" fill="#333333">0、3、6、9、1、4、7、</text>
+  <text x="57" y="360" font-size="11" fill="#333333">10、2、5、8、11</text>
+  <text x="57" y="390" font-size="11" fill="#333333">第 0 列 4 个元素</text>
+  <text x="57" y="408" font-size="11" fill="#333333">占据读出序前 4 位</text>
+
+  <!-- 列标条 -->
+  <rect x="330" y="204" width="168" height="24" fill="#f9fbfd" stroke="#cdd8e4" stroke-width="1"/>
+  <g font-size="11" text-anchor="middle" fill="#333333">
+    <text x="358" y="222">c=0</text>
+    <text x="414" y="222">c=1</text>
+    <text x="470" y="222">c=2</text>
+  </g>
+
+  <!-- 行标条 -->
+  <rect x="284" y="240" width="38" height="152" fill="#f9fbfd" stroke="#cdd8e4" stroke-width="1"/>
+  <g font-size="11" text-anchor="end" fill="#333333">
+    <text x="318" y="263">r=0</text>
+    <text x="318" y="301">r=1</text>
+    <text x="318" y="339">r=2</text>
+    <text x="318" y="377">r=3</text>
+  </g>
+
+  <!-- 矩阵：3 列 × 4 行，格 56×38；格内为写入序号 i=r·C+c -->
+  <g stroke="#9bb0c8" stroke-width="1" fill="#eef4fb">
+    <rect x="330" y="240" width="56" height="38"/><rect x="386" y="240" width="56" height="38"/><rect x="442" y="240" width="56" height="38"/>
+    <rect x="330" y="278" width="56" height="38"/><rect x="386" y="278" width="56" height="38"/><rect x="442" y="278" width="56" height="38"/>
+    <rect x="330" y="316" width="56" height="38"/><rect x="386" y="316" width="56" height="38"/><rect x="442" y="316" width="56" height="38"/>
+    <rect x="330" y="354" width="56" height="38"/><rect x="386" y="354" width="56" height="38"/><rect x="442" y="354" width="56" height="38"/>
+  </g>
+  <!-- 第 0 列高亮：读出时连续占据前 4 位 -->
+  <g stroke="#c2703b" stroke-width="1.5" fill="#fbeada">
+    <rect x="330" y="240" width="56" height="38"/>
+    <rect x="330" y="278" width="56" height="38"/>
+    <rect x="330" y="316" width="56" height="38"/>
+    <rect x="330" y="354" width="56" height="38"/>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#222222">
+    <text x="358" y="263">0</text><text x="414" y="263">1</text><text x="470" y="263">2</text>
+    <text x="358" y="301">3</text><text x="414" y="301">4</text><text x="470" y="301">5</text>
+    <text x="358" y="339">6</text><text x="414" y="339">7</text><text x="470" y="339">8</text>
+    <text x="358" y="377">9</text><text x="414" y="377">10</text><text x="470" y="377">11</text>
+  </g>
+
+  <!-- 写入方向：沿行向右，行尾下移一行 -->
+  <line x1="330" y1="192" x2="512" y2="192" stroke="#d08000" stroke-width="1.5"/>
+  <line x1="520" y1="192" x2="520" y2="270" stroke="#d08000" stroke-width="1.5"/>
+  <polygon points="520,282 514,270 526,270" fill="#d08000"/>
+
+  <!-- 读出方向：沿列向下，列尾右移一列 -->
+  <line x1="272" y1="240" x2="272" y2="422" stroke="#3d6fb5" stroke-width="1.5"/>
+  <line x1="272" y1="422" x2="520" y2="422" stroke="#3d6fb5" stroke-width="1.5"/>
+  <polygon points="532,422 520,416 520,428" fill="#3d6fb5"/>
+
+  <!-- ================= 面板 B：12 元素输入序与输出序 ================= -->
+  <rect x="605" y="70" width="565" height="66" fill="#f2f6fb" stroke="#444444" stroke-width="1.5"/>
+  <text x="887" y="100" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">面板 B｜12 元素实例：输入序列与输出序列</text>
+  <text x="887" y="124" font-size="11" text-anchor="middle" fill="#333333">同一矩阵：按行写入、按列读出；连线连接同一比特的两处位置</text>
+  <line x1="605" y1="136" x2="605" y2="470" stroke="#444444" stroke-width="1.5"/>
+  <line x1="1170" y1="136" x2="1170" y2="470" stroke="#444444" stroke-width="1.5"/>
+  <line x1="605" y1="470" x2="1170" y2="470" stroke="#444444" stroke-width="1.5"/>
+
+  <!-- 内容卡：承载序列标签、序列格与说明行 -->
+  <rect x="620" y="150" width="535" height="312" fill="#fdfdfd" stroke="#cdd8e4" stroke-width="1"/>
+  <text x="690" y="170" font-size="11" fill="#333333">输入序 c_i（写入顺序）</text>
+  <text x="626" y="210" font-size="11" fill="#1d3f6e">输入 i</text>
+
+  <!-- 输入行：12 格，格 38×32 -->
+  <g stroke="#9bb0c8" stroke-width="1" fill="#eef4fb">
+    <rect x="690" y="190" width="38" height="32"/><rect x="728" y="190" width="38" height="32"/><rect x="766" y="190" width="38" height="32"/><rect x="804" y="190" width="38" height="32"/><rect x="842" y="190" width="38" height="32"/><rect x="880" y="190" width="38" height="32"/><rect x="918" y="190" width="38" height="32"/><rect x="956" y="190" width="38" height="32"/><rect x="994" y="190" width="38" height="32"/><rect x="1032" y="190" width="38" height="32"/><rect x="1070" y="190" width="38" height="32"/><rect x="1108" y="190" width="38" height="32"/>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#222222">
+    <text x="709" y="210">0</text><text x="747" y="210">1</text><text x="785" y="210">2</text><text x="823" y="210">3</text><text x="861" y="210">4</text><text x="899" y="210">5</text><text x="937" y="210">6</text><text x="975" y="210">7</text><text x="1013" y="210">8</text><text x="1051" y="210">9</text><text x="1089" y="210">10</text><text x="1127" y="210">11</text>
+  </g>
+
+  <!-- 连接线：同一个比特在输入序与输出序中的两处位置 -->
+  <g stroke="#7a8fa8" stroke-width="1">
+    <line x1="709" y1="222" x2="709" y2="350"/>
+    <line x1="747" y1="222" x2="861" y2="350"/>
+    <line x1="785" y1="222" x2="1013" y2="350"/>
+    <line x1="823" y1="222" x2="747" y2="350"/>
+    <line x1="861" y1="222" x2="899" y2="350"/>
+    <line x1="899" y1="222" x2="1051" y2="350"/>
+    <line x1="937" y1="222" x2="785" y2="350"/>
+    <line x1="975" y1="222" x2="937" y2="350"/>
+    <line x1="1013" y1="222" x2="1089" y2="350"/>
+    <line x1="1051" y1="222" x2="823" y2="350"/>
+    <line x1="1089" y1="222" x2="975" y2="350"/>
+    <line x1="1127" y1="222" x2="1127" y2="350"/>
+  </g>
+
+  <text x="690" y="338" font-size="11" fill="#333333">输出序 c'_j = c_π(j)（读出顺序）</text>
+  <text x="626" y="370" font-size="11" fill="#1d3f6e">输出 j</text>
+
+  <!-- 输出行：格内为落在该输出位置的输入序号 π(j) -->
+  <g stroke="#8fb394" stroke-width="1" fill="#eef7ee">
+    <rect x="690" y="350" width="38" height="32"/><rect x="728" y="350" width="38" height="32"/><rect x="766" y="350" width="38" height="32"/><rect x="804" y="350" width="38" height="32"/><rect x="842" y="350" width="38" height="32"/><rect x="880" y="350" width="38" height="32"/><rect x="918" y="350" width="38" height="32"/><rect x="956" y="350" width="38" height="32"/><rect x="994" y="350" width="38" height="32"/><rect x="1032" y="350" width="38" height="32"/><rect x="1070" y="350" width="38" height="32"/><rect x="1108" y="350" width="38" height="32"/>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#222222">
+    <text x="709" y="370">0</text><text x="747" y="370">3</text><text x="785" y="370">6</text><text x="823" y="370">9</text><text x="861" y="370">1</text><text x="899" y="370">4</text><text x="937" y="370">7</text><text x="975" y="370">10</text><text x="1013" y="370">2</text><text x="1051" y="370">5</text><text x="1089" y="370">8</text><text x="1127" y="370">11</text>
+  </g>
+
+  <text x="690" y="404" font-size="11" fill="#333333">输出序：0、3、6、9、1、4、7、10、2、5、8、11（读第 0 列起）</text>
+  <text x="690" y="426" font-size="11" fill="#333333">例：i=1 位于 (r=1,c=0)，读出落点 j=r·C+c=4，故 c'_4=c_1</text>
+  <text x="690" y="448" font-size="11" fill="#333333">映射 π(j)=(j mod R)·C+⌊j/R⌋；逆映射 j=(i mod C)·R+⌊i/C⌋</text>
+
+  <!-- ================= 面板 C：突发错误的分散效果 ================= -->
+  <rect x="30" y="490" width="1140" height="66" fill="#f2f6fb" stroke="#444444" stroke-width="1.5"/>
+  <text x="600" y="520" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">面板 C｜交织深度与突发错误的分散效果</text>
+  <text x="600" y="544" font-size="11" text-anchor="middle" fill="#333333">同一 12 元块、同一置换：连续 4 个错误解交织后间隔为 D=C=3</text>
+  <line x1="30" y1="556" x2="30" y2="930" stroke="#444444" stroke-width="1.5"/>
+  <line x1="1170" y1="556" x2="1170" y2="930" stroke="#444444" stroke-width="1.5"/>
+  <line x1="30" y1="930" x2="1170" y2="930" stroke="#444444" stroke-width="1.5"/>
+
+  <!-- 空口序卡片 -->
+  <rect x="45" y="566" width="1110" height="92" fill="#fdfdfd" stroke="#cdd8e4" stroke-width="1"/>
+  <text x="60" y="584" font-size="11" fill="#333333">空口传输序 c'_j：位置 0 至 3 连续 4 位出错，恰好占满矩阵第 0 列</text>
+  <g stroke="#b0b0b0" stroke-width="1" fill="#f4f4f4">
+    <rect x="60" y="596" width="90" height="52"/><rect x="150" y="596" width="90" height="52"/><rect x="240" y="596" width="90" height="52"/><rect x="330" y="596" width="90" height="52"/><rect x="420" y="596" width="90" height="52"/><rect x="510" y="596" width="90" height="52"/><rect x="600" y="596" width="90" height="52"/><rect x="690" y="596" width="90" height="52"/><rect x="780" y="596" width="90" height="52"/><rect x="870" y="596" width="90" height="52"/><rect x="960" y="596" width="90" height="52"/><rect x="1050" y="596" width="90" height="52"/>
+  </g>
+  <g stroke="#b23b3b" stroke-width="1.5" fill="#f7d4d4">
+    <rect x="60" y="596" width="90" height="52"/><rect x="150" y="596" width="90" height="52"/><rect x="240" y="596" width="90" height="52"/><rect x="330" y="596" width="90" height="52"/>
+  </g>
+  <g font-size="15" text-anchor="middle" fill="#222222">
+    <text x="105" y="627">0</text><text x="195" y="627">1</text><text x="285" y="627">2</text><text x="375" y="627">3</text><text x="465" y="627">4</text><text x="555" y="627">5</text><text x="645" y="627">6</text><text x="735" y="627">7</text><text x="825" y="627">8</text><text x="915" y="627">9</text><text x="1005" y="627">10</text><text x="1095" y="627">11</text>
+  </g>
+
+  <!-- 解交织箭头 -->
+  <line x1="600" y1="666" x2="600" y2="700" stroke="#3d6fb5" stroke-width="1.5"/>
+  <polygon points="600,708 594,696 606,696" fill="#3d6fb5"/>
+  <rect x="616" y="676" width="250" height="26" fill="#f9fbfd" stroke="#cdd8e4" stroke-width="1"/>
+  <text x="622" y="694" font-size="11" fill="#1d3f6e">解交织：按 π 的逆置换还原写入序</text>
+
+  <!-- 译码序卡片 -->
+  <rect x="45" y="716" width="1110" height="92" fill="#fdfdfd" stroke="#cdd8e4" stroke-width="1"/>
+  <text x="60" y="730" font-size="11" fill="#333333">译码输入序 c_i：错误位于 0、3、6、9，相邻间隔 D=C=3</text>
+  <g stroke="#b0b0b0" stroke-width="1" fill="#f4f4f4">
+    <rect x="60" y="742" width="90" height="52"/><rect x="150" y="742" width="90" height="52"/><rect x="240" y="742" width="90" height="52"/><rect x="330" y="742" width="90" height="52"/><rect x="420" y="742" width="90" height="52"/><rect x="510" y="742" width="90" height="52"/><rect x="600" y="742" width="90" height="52"/><rect x="690" y="742" width="90" height="52"/><rect x="780" y="742" width="90" height="52"/><rect x="870" y="742" width="90" height="52"/><rect x="960" y="742" width="90" height="52"/><rect x="1050" y="742" width="90" height="52"/>
+  </g>
+  <g stroke="#b23b3b" stroke-width="1.5" fill="#f7d4d4">
+    <rect x="60" y="742" width="90" height="52"/><rect x="330" y="742" width="90" height="52"/><rect x="600" y="742" width="90" height="52"/><rect x="870" y="742" width="90" height="52"/>
+  </g>
+  <g font-size="15" text-anchor="middle" fill="#222222">
+    <text x="105" y="773">0</text><text x="195" y="773">1</text><text x="285" y="773">2</text><text x="375" y="773">3</text><text x="465" y="773">4</text><text x="555" y="773">5</text><text x="645" y="773">6</text><text x="735" y="773">7</text><text x="825" y="773">8</text><text x="915" y="773">9</text><text x="1005" y="773">10</text><text x="1095" y="773">11</text>
+  </g>
+
+  <!-- 间隔标注：从位置 0 到位置 3 -->
+  <line x1="115" y1="824" x2="365" y2="824" stroke="#b23b3b" stroke-width="1.2"/>
+  <polygon points="105,824 115,818 115,830" fill="#b23b3b"/>
+  <polygon points="375,824 365,818 365,830" fill="#b23b3b"/>
+  <rect x="200" y="834" width="80" height="24" fill="#f9fbfd" stroke="#cdd8e4" stroke-width="1"/>
+  <text x="240" y="851" font-size="11" text-anchor="middle" fill="#b23b3b">间隔 3 = D</text>
+
+  <!-- 结论卡片 -->
+  <rect x="45" y="866" width="1110" height="54" fill="#fdfdfd" stroke="#cdd8e4" stroke-width="1"/>
+  <text x="60" y="888" font-size="11" fill="#333333">分散间隔等于交织深度 D，块交织中 D=C：同一列的 4 个元素在写入序上相差 C，读出时连续</text>
+  <text x="60" y="908" font-size="11" fill="#333333">错误总数不变（4 个），只是从相邻位置变成间隔 3 的位置；列数 C 增大则间隔增大，代价是时延</text>
+</svg>

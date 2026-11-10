@@ -117,7 +117,7 @@ source_spec: "3GPP_6G_PS（evaluation-link-simulator-main）"
 ### C. 接收链路
 - OFDM 解调（信号+噪声各一次 FFT）
 - 定时同步（仿真：nrPerfectTimingEstimate；实际：PSS/SSS 或 CP 相关滑动窗 O(Nfft×Ncp) MACs）
-- 信道估计实现（LS：Ĥ=Y_DMRS/X_DMRS，噪声放大 1/|X|²；维纳滤波：Ĥ=R(R+σ²I)⁻¹Ĥ_LS，低 SNR 显著优于 LS，O(N³)）
+- 信道估计实现（LS：Ĥ=Y_DMRS/X_DMRS，噪声放大 $1/\lvert X\rvert^{2}$；维纳滤波：Ĥ=R(R+σ²I)⁻¹Ĥ_LS，低 SNR 显著优于 LS，O(N³)）
 - 估计误差三途径（均衡输出偏置、CSI 失真、噪声方差失配；256QAM d_min≈0.16，偏移超 0.08 硬判决翻转）
 - MMSE 均衡（W=Hᴴ(HHᴴ+σ²I)⁻¹、归一化危险点）
 - 球面检测（ML/Fincke-Pohst/Schnorr-Euchner）
@@ -196,7 +196,7 @@ source_spec: "3GPP_6G_PS（evaluation-link-simulator-main）"
 | MMSE 均衡推导 | Wirtinger 求导、csi≥1 恒成立、归一化=ZF 化 | MIMO01 §5 |
 | ZF/MF 两极限 | σ²→0 退化为 ZF（消干扰放大噪声）；σ²→∞ 退化为匹配滤波；MMSE 相对 ZF 1-3 dB 增益 | MIMO01 §5.1 |
 | MRC 分集阶数 | SNR_out=‖h‖²/σ²～χ²₆₄（32 分支）；P(‖h‖²<ε)~ε³²/32!；32 天线 ≈ +15 dB，0-6 dB 下 256QAM 可行 | MIMO01 §3.2-3.3 |
-| LS 与维纳滤波信道估计 | Ĥ_LS=Y_DMRS/X_DMRS（噪声放大 1/|X|²）；Ĥ_MMSE=R_HH(R_HH+σ²I)⁻¹Ĥ_LS（低 SNR 显著优、O(N³)）；估计误差三途径 | MIMO01 §4.2-4.3 |
+| LS 与维纳滤波信道估计 | Ĥ_LS=Y_DMRS/X_DMRS（噪声放大 $1/\lvert X\rvert^{2}$）；Ĥ_MMSE=R_HH(R_HH+σ²I)⁻¹Ĥ_LS（低 SNR 显著优、O(N³)）；估计误差三途径 | MIMO01 §4.2-4.3 |
 | Cholesky 分解 | 正定矩阵三角分解、PS 正则化 Rhh=HᴴH+ν̃σ²I | MIMO01 §5、PS02 §6 |
 | Tikhonov 正则化 | MAP 先验 → ν̃σ²I 正则项（ν 与 MB 分布的联系） | MIMO01 §5 |
 | 球面检测 | ML 枚举、QR 树搜索、FP/SE 剪枝 | MIMO01 §6 |
@@ -207,8 +207,8 @@ source_spec: "3GPP_6G_PS（evaluation-link-simulator-main）"
 | MCS 表 5 列结构与 PS SE 口径 | [MCS, SE, Qm, R×1024, ν_MB]；PS 表 SE ≠ Qm·R/1024（整形压缩信息速率） | SIM01 §4.1 |
 | 有效码率新定义 | R_eff=payloadTBS/(N_RE·Qm)，与目标码率 R 脱钩；PS 公平比较口径 | PS02 §8.1 |
 | 位宽追踪方法 | 逐级位宽表、最坏位宽推导链 | PHY01 §7 |
-| LLR 裁剪-损失权衡 | 动态范围（1024QAM max|y−x|²≈11.2、SNR 30dB → LLR_max≈11200 需 14-bit）；裁剪表 ±7~±63 损失 <0.1 dB；±31 吸收 MMSE 归一化放大 | PHY01 §12、MIMO01 §5.4 |
-| 定点量化漂移 | dec2binFloat 截断（非四舍五入）误差 <2^(−(M−1))=0.39%；|A|=8 ν=0.0054 时 n≥64 指数漂移（367 vs 368，0.3%） | PS01 §5.3 |
+| LLR 裁剪-损失权衡 | 动态范围（1024QAM $\max\lvert y-x\rvert^{2}\approx11.2$、SNR 30dB → LLR_max≈11200 需 14-bit）；裁剪表 ±7~±63 损失 <0.1 dB；±31 吸收 MMSE 归一化放大 | PHY01 §12、MIMO01 §5.4 |
+| 定点量化漂移 | dec2binFloat 截断（非四舍五入）误差 <2^(−(M−1))=0.39%；$\lvert A\rvert=8$、$\nu=0.0054$ 时 n≥64 指数漂移（367 vs 368，0.3%） | PS01 §5.3 |
 | 链路仿真统计 | BLER 置信度、公共随机数、TBS matching 公平性 | SIM01 §1/§2 |
 | BLER 零错误上界 3/N | N=200 → 分辨率 0.5%、零错误点 95% 上界 3/N=1.5e-2；公共随机数使点间误差相关，不可当独立样本 | SIM01 §2.8 |
 | 功率缩放数学 | E_new=4E+1 递推、7-14× 实测 | PS02 §7 |
