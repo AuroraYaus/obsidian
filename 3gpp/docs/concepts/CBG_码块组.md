@@ -11,7 +11,7 @@ tags:
   - concepts
   - cbg
 source_spec: "TS 38.214 Rel-19 §5.1.7 and §6.1.5; TS 38.212 Rel-19 §5.4.2.1"
-queries: 2
+queries: 3
 ---
 
 # CBG 码块组
