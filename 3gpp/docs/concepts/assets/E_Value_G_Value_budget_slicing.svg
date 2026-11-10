@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+@file    E_Value_G_Value_budget_slicing.svg
+@brief   G 的资源来源，以及 G 按 N_L·Q_m 步长切分为各码块 E_r 的两级结构
+@note    本图补充正文表格之外的几何与计数关系。面板 A 把 G = N_RE × Q_m × N_L 的三个因子并置，
+         说明 G 是编码比特总量而非信息比特数；面板 B 与面板 C 用同一横向比例（1 个单位 = 0.86 px）
+         画出 C' = 3 与 C' = 2 两种调度下各 E_r 的长度条，使「余数 1 个单位只加给最后一条」
+         与「未被调度的码块长度为 0、G 不随之缩小」两件事可以直接比较；表格只能给出数值，
+         无法给出三条长度的相对关系。每行浅灰轨道表示 G 的完整范围，蓝色条表示该码块分得的 E_r，
+         二者长度之比即 E_r/G。三条长度条按比特数成比例绘制，333 个单位与 334 个单位在图上
+         相差不足 1 px，读数以标注数值为准。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="1040" viewBox="0 0 1120 1040" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">
+  <rect x="0" y="0" width="1120" height="1040" fill="#ffffff"/>
+
+  <!-- 页级标题（框外文字） -->
+  <text class="free" x="560" y="42" font-size="19" font-weight="bold" text-anchor="middle" fill="#222222">G 的资源来源与按 N_L·Q_m 步长的两级切分</text>
+
+  <!-- ================= 面板 A：资源 → G ================= -->
+  <rect x="24" y="68" width="1072" height="260" fill="#fdfdfd" stroke="#444444" stroke-width="1.5"/>
+  <text x="560" y="100" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">面板 A｜由资源算出 G：三个因子相乘</text>
+  <text x="560" y="124" font-size="11" text-anchor="middle" fill="#333333">N_RE = 1000、Q_m = 4、N_L = 2，故 G = 1000 × 4 × 2 = 8000 bit</text>
+
+  <!-- 算式容器：承载三个因子框、结果框与乘号、等号 -->
+  <rect x="48" y="142" width="1024" height="126" fill="#ffffff" stroke="#d5dce5" stroke-width="1"/>
+
+  <rect x="84" y="160" width="214" height="96" fill="#f5f8fc" stroke="#7f93a8" stroke-width="1.2"/>
+  <text x="191" y="186" font-size="11" font-weight="bold" text-anchor="middle" fill="#1d3d5c">N_RE</text>
+  <text x="191" y="212" font-size="11" text-anchor="middle" fill="#333333">可用 RE 总数</text>
+  <text x="191" y="238" font-size="11" font-weight="bold" text-anchor="middle" fill="#1d3d5c">1000</text>
+
+  <text x="318" y="214" font-size="11" font-weight="bold" text-anchor="middle" fill="#333333">×</text>
+
+  <rect x="338" y="160" width="214" height="96" fill="#f5f8fc" stroke="#7f93a8" stroke-width="1.2"/>
+  <text x="445" y="186" font-size="11" font-weight="bold" text-anchor="middle" fill="#1d3d5c">Q_m</text>
+  <text x="445" y="212" font-size="11" text-anchor="middle" fill="#333333">调制阶数</text>
+  <text x="445" y="238" font-size="11" font-weight="bold" text-anchor="middle" fill="#1d3d5c">4</text>
+
+  <text x="572" y="214" font-size="11" font-weight="bold" text-anchor="middle" fill="#333333">×</text>
+
+  <rect x="592" y="160" width="214" height="96" fill="#f5f8fc" stroke="#7f93a8" stroke-width="1.2"/>
+  <text x="699" y="186" font-size="11" font-weight="bold" text-anchor="middle" fill="#1d3d5c">N_L</text>
+  <text x="699" y="212" font-size="11" text-anchor="middle" fill="#333333">层数</text>
+  <text x="699" y="238" font-size="11" font-weight="bold" text-anchor="middle" fill="#1d3d5c">2</text>
+
+  <text x="826" y="214" font-size="11" font-weight="bold" text-anchor="middle" fill="#333333">=</text>
+
+  <rect x="846" y="160" width="190" height="96" fill="#e8f0fb" stroke="#3d6fb5" stroke-width="1.5"/>
+  <text x="941" y="186" font-size="11" font-weight="bold" text-anchor="middle" fill="#1d3d5c">G</text>
+  <text x="941" y="212" font-size="11" text-anchor="middle" fill="#333333">编码比特总数</text>
+  <text x="941" y="238" font-size="11" font-weight="bold" text-anchor="middle" fill="#1d3d5c">8000</text>
+
+  <text x="52" y="292" font-size="11" fill="#222222">量纲：RE 数 ×（bit / RE）× 层数 = 编码比特数；三个因子都取自本次调度参数。</text>
+  <text x="52" y="316" font-size="11" fill="#222222">数值例取自正文：N_RE = 1000、Q_m = 4（16QAM）、N_L = 2，故 G = 1000 × 4 × 2 = 8000 bit。</text>
+
+  <!-- ================= 面板 B：C'=3 的切分 ================= -->
+  <rect x="24" y="352" width="1072" height="320" fill="#fdfdfd" stroke="#444444" stroke-width="1.5"/>
+  <text x="560" y="384" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">面板 B｜由 G 切分各码块 E_r：C' = 3、R_rem = 1</text>
+  <text x="560" y="408" font-size="11" text-anchor="middle" fill="#333333">X = G /（N_L·Q_m）= 8000 / 8 = 1000 个单位；q = 333、R_rem = 1000 mod 3 = 1</text>
+  <text x="560" y="432" font-size="11" text-anchor="middle" fill="#333333">浅灰轨道 = G 的完整范围（1000 个单位 = 8000 bit）；蓝色条 = 该码块分得的 E_r（1 个单位 = 0.86 px）</text>
+
+  <text x="52" y="475" font-size="11" font-weight="bold" fill="#222222">CB0</text>
+  <rect x="200" y="452" width="860" height="38" fill="#f1f4f8" stroke="#ccd3dc" stroke-width="1"/>
+  <rect x="200" y="452" width="286.38" height="38" fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1.5"/>
+  <text x="214" y="475" font-size="11" fill="#17324f">E_0 = 2664 bit（333 个单位）</text>
+
+  <text x="52" y="523" font-size="11" font-weight="bold" fill="#222222">CB1</text>
+  <rect x="200" y="500" width="860" height="38" fill="#f1f4f8" stroke="#ccd3dc" stroke-width="1"/>
+  <rect x="200" y="500" width="286.38" height="38" fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1.5"/>
+  <text x="214" y="523" font-size="11" fill="#17324f">E_1 = 2664 bit（333 个单位）</text>
+
+  <text x="52" y="571" font-size="11" font-weight="bold" fill="#222222">CB2</text>
+  <rect x="200" y="548" width="860" height="38" fill="#f1f4f8" stroke="#ccd3dc" stroke-width="1"/>
+  <rect x="200" y="548" width="287.24" height="38" fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1.5"/>
+  <text x="214" y="571" font-size="11" fill="#17324f">E_2 = 2672 bit（334 个单位）</text>
+
+  <rect x="48" y="602" width="1024" height="60" fill="#f7f9fc" stroke="#b7c4d4" stroke-width="1"/>
+  <text x="60" y="626" font-size="11" fill="#222222">长度之差至多 1 个单位：第 3 条比前两条多 1 个单位（+8 bit），图上不足 1 px，读数以标注数值为准。</text>
+  <text x="60" y="650" font-size="11" fill="#222222">校验：2664 + 2664 + 2672 = 8000 = G；每条都是 N_L·Q_m = 8 的整数倍。</text>
+
+  <!-- ================= 面板 C：C'=2 的切分 ================= -->
+  <rect x="24" y="696" width="1072" height="320" fill="#fdfdfd" stroke="#444444" stroke-width="1.5"/>
+  <text x="560" y="728" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">面板 C｜CBGTI 只调度 2 个码块：C' = 2、R_rem = 0</text>
+  <text x="560" y="752" font-size="11" text-anchor="middle" fill="#333333">X = 1000 个单位；q = 500、R_rem = 1000 mod 2 = 0；两个被调度 CB 各取 500 个单位 = 4000 bit</text>
+  <text x="560" y="776" font-size="11" text-anchor="middle" fill="#333333">横向比例与面板 B 相同（1 个单位 = 0.86 px）；G 不因 C' &lt; C 而缩小，故每个 E_r 反而更大</text>
+
+  <text x="52" y="819" font-size="11" font-weight="bold" fill="#222222">CB0</text>
+  <rect x="200" y="796" width="860" height="38" fill="#f1f4f8" stroke="#ccd3dc" stroke-width="1"/>
+  <rect x="200" y="796" width="430" height="38" fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1.5"/>
+  <text x="214" y="819" font-size="11" fill="#17324f">E_0 = 4000 bit（500 个单位）</text>
+
+  <text x="52" y="867" font-size="11" font-weight="bold" fill="#222222">CB1</text>
+  <rect x="200" y="844" width="860" height="38" fill="#f1f4f8" stroke="#ccd3dc" stroke-width="1"/>
+  <rect x="200" y="844" width="430" height="38" fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1.5"/>
+  <text x="214" y="867" font-size="11" fill="#17324f">E_1 = 4000 bit（500 个单位）</text>
+
+  <text x="52" y="915" font-size="11" font-weight="bold" fill="#222222">CB2</text>
+  <rect x="200" y="892" width="860" height="38" fill="#f1f4f8" stroke="#ccd3dc" stroke-width="1"/>
+  <text x="214" y="915" font-size="11" fill="#444444">E_2 = 0：未被 CBGTI 调度，本次不取比特，轨道上无蓝色条</text>
+
+  <rect x="48" y="946" width="1024" height="60" fill="#f7f9fc" stroke="#b7c4d4" stroke-width="1"/>
+  <text x="60" y="970" font-size="11" fill="#222222">未调度 CB 取 E_r = 0，不参与求和，也不改变 G；预算由 C' = 2 个码块均分，故每个 E_r 翻倍。</text>
+  <text x="60" y="994" font-size="11" fill="#222222">校验：4000 + 4000 + 0 = 8000 = G；第 3 行轨道为空，长度 0，其宽度只表示 G 的范围。</text>
+</svg>

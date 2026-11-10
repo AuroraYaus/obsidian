@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+@file    Circular_Buffer_address_space.svg
+@brief   循环缓存的地址空间结构、三种读取长度的覆盖关系，以及 NULL/filler 位置对输出计数的影响
+@note    本图以三个面板并列呈现同一段长度为 N_cb 的地址空间上的读取语义：面板 A 给出首尾相接的
+         地址带、两个冗余版本入口 k_0 与读取段长度 E_r；面板 B 按 E_r 与 N_cb 的大小关系给出
+         未覆盖、整轮、回绕重复三种覆盖形态；面板 C 给出 NULL/filler 位置只推进扫描地址 j、
+         不产生输出比特 k 的错位关系。图中地址与比特均按离散位置表示，箭头只表示读取方向与
+         回绕路径，不表示数据流动方向。示例数值 N_cb = 12672 = 33 Z_c 取自 Z_c = 384、基图 1、
+         有限缓存速率匹配生效的手算例。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="960" viewBox="0 0 1180 960" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">
+  <rect x="0" y="0" width="1180" height="960" fill="#ffffff"/>
+
+  <!-- 页级标题（框外文字） -->
+  <text class="free" x="590" y="42" font-size="19" font-weight="bold" text-anchor="middle" fill="#222222">循环缓存的地址空间与三种读取语义</text>
+
+  <!-- ================= 面板 A：地址带与读取段 ================= -->
+  <rect x="30" y="70" width="1120" height="250" fill="#fdfdfd" stroke="#444444" stroke-width="1.5"/>
+  <text x="590" y="102" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">面板 A｜首尾相接的地址带 0 … N_cb−1 与两个 RV 入口</text>
+  <text x="590" y="124" font-size="11" text-anchor="middle" fill="#333333">读取地址自 k_0 起逐位递增，越过上界后按 mod N_cb 回到 0</text>
+
+  <!-- 两个 RV 入口的标注与指示箭头 -->
+  <text x="120" y="148" font-size="11" text-anchor="middle" fill="#222222">RV=0 入口 k_0 = 0</text>
+  <text x="565" y="148" font-size="11" text-anchor="middle" fill="#222222">RV=2 入口 k_0 ≈ N_cb/2</text>
+  <line x1="120" y1="156" x2="120" y2="176" stroke="#222222" stroke-width="1.5"/>
+  <line x1="115" y1="167" x2="120" y2="176" stroke="#222222" stroke-width="1.5"/>
+  <line x1="125" y1="167" x2="120" y2="176" stroke="#222222" stroke-width="1.5"/>
+  <line x1="565" y1="156" x2="565" y2="176" stroke="#222222" stroke-width="1.5"/>
+  <line x1="560" y1="167" x2="565" y2="176" stroke="#222222" stroke-width="1.5"/>
+  <line x1="570" y1="167" x2="565" y2="176" stroke="#222222" stroke-width="1.5"/>
+
+  <!-- 地址带：三段首尾相接（未读取 / 读取段 / 未读取） -->
+  <rect x="120" y="178" width="445" height="36" fill="#efefef" stroke="#9a9a9a" stroke-width="1"/>
+  <rect x="565" y="178" width="356" height="36" fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1.5"/>
+  <rect x="921" y="178" width="89" height="36" fill="#f7f7f7" stroke="#9a9a9a" stroke-width="1"/>
+  <text x="342" y="201" font-size="11" text-anchor="middle" fill="#333333">本次未读取</text>
+  <text x="743" y="201" font-size="11" text-anchor="middle" fill="#222222">读取段：E_r 个输出比特</text>
+  <text x="965" y="201" font-size="11" text-anchor="middle" fill="#333333">未读取</text>
+
+  <!-- 地址刻度 -->
+  <line x1="120" y1="214" x2="120" y2="222" stroke="#666666" stroke-width="1"/>
+  <line x1="565" y1="214" x2="565" y2="222" stroke="#666666" stroke-width="1"/>
+  <line x1="1010" y1="214" x2="1010" y2="222" stroke="#666666" stroke-width="1"/>
+  <text x="120" y="234" font-size="11" text-anchor="middle" fill="#333333">0</text>
+  <text x="565" y="234" font-size="11" text-anchor="middle" fill="#333333">k_0</text>
+  <text x="1010" y="234" font-size="11" text-anchor="end" fill="#333333">N_cb − 1</text>
+
+  <!-- 读取长度的括号标注 -->
+  <line x1="565" y1="244" x2="565" y2="256" stroke="#3d6fb5" stroke-width="1"/>
+  <line x1="921" y1="244" x2="921" y2="256" stroke="#3d6fb5" stroke-width="1"/>
+  <line x1="565" y1="250" x2="921" y2="250" stroke="#3d6fb5" stroke-width="1"/>
+  <text x="743" y="268" font-size="11" text-anchor="middle" fill="#3d6fb5">E_r（读取长度：输出比特数）</text>
+
+  <!-- 回绕路径：自地址带上界回到起点 -->
+  <line x1="1010" y1="196" x2="1040" y2="196" stroke="#d08000" stroke-width="1.5"/>
+  <line x1="1040" y1="196" x2="1040" y2="300" stroke="#d08000" stroke-width="1.5"/>
+  <line x1="1040" y1="300" x2="100" y2="300" stroke="#d08000" stroke-width="1.5"/>
+  <line x1="100" y1="300" x2="100" y2="196" stroke="#d08000" stroke-width="1.5"/>
+  <line x1="100" y1="196" x2="120" y2="196" stroke="#d08000" stroke-width="1.5"/>
+  <line x1="110" y1="191" x2="120" y2="196" stroke="#d08000" stroke-width="1.5"/>
+  <line x1="110" y1="201" x2="120" y2="196" stroke="#d08000" stroke-width="1.5"/>
+  <text x="560" y="288" font-size="11" text-anchor="middle" fill="#8a5200">地址首尾相接：越过上界后的下一个地址为 0（mod N_cb）</text>
+
+  <!-- ================= 面板 B：三种读取长度 ================= -->
+  <rect x="30" y="340" width="1120" height="330" fill="#fdfdfd" stroke="#444444" stroke-width="1.5"/>
+  <text x="590" y="374" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">面板 B｜E_r 与 N_cb 的三种长度关系</text>
+  <text x="590" y="398" font-size="11" text-anchor="middle" fill="#333333">三条按同一比例绘制，满长即 N_cb；覆盖比例决定本次读取的处理方式</text>
+
+  <!-- 情形 1：E_r < N_cb -->
+  <text x="52" y="456" font-size="11" fill="#222222">E_r &lt; N_cb</text>
+  <rect x="330" y="436" width="300" height="30" fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1.5"/>
+  <rect x="630" y="436" width="260" height="30" fill="#efefef" stroke="#9a9a9a" stroke-width="1"/>
+  <text x="480" y="456" font-size="11" text-anchor="middle" fill="#222222">已读取 E_r 位</text>
+  <text x="760" y="456" font-size="11" text-anchor="middle" fill="#333333">未覆盖（本次不发送）</text>
+  <text x="900" y="456" font-size="11" fill="#333333">打孔或缩短</text>
+
+  <!-- 情形 2：E_r = N_cb -->
+  <text x="52" y="516" font-size="11" fill="#222222">E_r = N_cb</text>
+  <rect x="330" y="496" width="560" height="30" fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1.5"/>
+  <text x="610" y="516" font-size="11" text-anchor="middle" fill="#222222">正好一轮：既无重复也无遗漏</text>
+  <text x="900" y="516" font-size="11" fill="#333333">不改变码率</text>
+
+  <!-- 情形 3：E_r > N_cb -->
+  <text x="52" y="576" font-size="11" fill="#222222">E_r &gt; N_cb</text>
+  <rect x="330" y="556" width="560" height="30" fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1.5"/>
+  <text x="610" y="576" font-size="11" text-anchor="middle" fill="#222222">第 1 遍：整轮 N_cb 位</text>
+  <rect x="330" y="606" width="224" height="30" fill="#ffe3c0" stroke="#d08000" stroke-width="1.5"/>
+  <text x="442" y="626" font-size="11" text-anchor="middle" fill="#222222">第 2 遍</text>
+  <text x="570" y="626" font-size="11" fill="#8a5200">余下 E_r − N_cb 位：同一地址第 2 次读取，LLR 累加</text>
+
+  <!-- 判据说明 -->
+  <text x="52" y="656" font-size="11" fill="#333333">判据用 N_cb，不用母码长度 N；示例 N_cb = 12672 = 33 Z_c</text>
+
+  <!-- ================= 面板 C：NULL/filler 的错位 ================= -->
+  <rect x="30" y="690" width="1120" height="240" fill="#fdfdfd" stroke="#444444" stroke-width="1.5"/>
+  <text x="590" y="724" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">面板 C｜NULL/filler 位置只推进地址，不产生输出比特</text>
+  <text x="590" y="748" font-size="11" text-anchor="middle" fill="#333333">地址序列 j 与输出序列 k 在 filler 之后错开一位</text>
+
+  <!-- 地址序列（j = 0 … 9，j = 4 为 NULL） -->
+  <text x="52" y="806" font-size="11" fill="#222222">地址序列 j</text>
+  <rect x="150" y="786" width="64" height="30" fill="#ffffff" stroke="#666666" stroke-width="1"/>
+  <rect x="214" y="786" width="64" height="30" fill="#ffffff" stroke="#666666" stroke-width="1"/>
+  <rect x="278" y="786" width="64" height="30" fill="#ffffff" stroke="#666666" stroke-width="1"/>
+  <rect x="342" y="786" width="64" height="30" fill="#ffffff" stroke="#666666" stroke-width="1"/>
+  <rect x="406" y="786" width="64" height="30" fill="#e9e2f5" stroke="#6b4f9e" stroke-width="1.5"/>
+  <rect x="470" y="786" width="64" height="30" fill="#ffffff" stroke="#666666" stroke-width="1"/>
+  <rect x="534" y="786" width="64" height="30" fill="#ffffff" stroke="#666666" stroke-width="1"/>
+  <rect x="598" y="786" width="64" height="30" fill="#ffffff" stroke="#666666" stroke-width="1"/>
+  <rect x="662" y="786" width="64" height="30" fill="#ffffff" stroke="#666666" stroke-width="1"/>
+  <rect x="726" y="786" width="64" height="30" fill="#ffffff" stroke="#666666" stroke-width="1"/>
+  <text x="182" y="806" font-size="11" text-anchor="middle" fill="#333333">0</text>
+  <text x="246" y="806" font-size="11" text-anchor="middle" fill="#333333">1</text>
+  <text x="310" y="806" font-size="11" text-anchor="middle" fill="#333333">2</text>
+  <text x="374" y="806" font-size="11" text-anchor="middle" fill="#333333">3</text>
+  <text x="438" y="806" font-size="11" text-anchor="middle" fill="#4a3372">NULL</text>
+  <text x="502" y="806" font-size="11" text-anchor="middle" fill="#333333">5</text>
+  <text x="566" y="806" font-size="11" text-anchor="middle" fill="#333333">6</text>
+  <text x="630" y="806" font-size="11" text-anchor="middle" fill="#333333">7</text>
+  <text x="694" y="806" font-size="11" text-anchor="middle" fill="#333333">8</text>
+  <text x="758" y="806" font-size="11" text-anchor="middle" fill="#333333">9</text>
+
+  <!-- 地址与输出的对应连线：NULL 位置无连线，输出行在此处留空 -->
+  <line x1="182" y1="816" x2="182" y2="862" stroke="#9a9a9a" stroke-width="1"/>
+  <line x1="246" y1="816" x2="246" y2="862" stroke="#9a9a9a" stroke-width="1"/>
+  <line x1="310" y1="816" x2="310" y2="862" stroke="#9a9a9a" stroke-width="1"/>
+  <line x1="374" y1="816" x2="374" y2="862" stroke="#9a9a9a" stroke-width="1"/>
+  <line x1="502" y1="816" x2="502" y2="862" stroke="#9a9a9a" stroke-width="1"/>
+  <line x1="566" y1="816" x2="566" y2="862" stroke="#9a9a9a" stroke-width="1"/>
+  <line x1="630" y1="816" x2="630" y2="862" stroke="#9a9a9a" stroke-width="1"/>
+  <line x1="694" y1="816" x2="694" y2="862" stroke="#9a9a9a" stroke-width="1"/>
+  <line x1="758" y1="816" x2="758" y2="862" stroke="#9a9a9a" stroke-width="1"/>
+
+  <!-- NULL 位置不产生输出比特 -->
+  <text x="438" y="840" font-size="11" text-anchor="middle" fill="#4a3372">无输出</text>
+
+  <!-- 输出序列（k = 0 … 8，整体相对地址序列错开一位） -->
+  <text x="52" y="882" font-size="11" fill="#222222">输出序列 k</text>
+  <rect x="150" y="862" width="64" height="30" fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1"/>
+  <rect x="214" y="862" width="64" height="30" fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1"/>
+  <rect x="278" y="862" width="64" height="30" fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1"/>
+  <rect x="342" y="862" width="64" height="30" fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1"/>
+  <rect x="470" y="862" width="64" height="30" fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1"/>
+  <rect x="534" y="862" width="64" height="30" fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1"/>
+  <rect x="598" y="862" width="64" height="30" fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1"/>
+  <rect x="662" y="862" width="64" height="30" fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1"/>
+  <rect x="726" y="862" width="64" height="30" fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1"/>
+  <text x="182" y="882" font-size="11" text-anchor="middle" fill="#222222">0</text>
+  <text x="246" y="882" font-size="11" text-anchor="middle" fill="#222222">1</text>
+  <text x="310" y="882" font-size="11" text-anchor="middle" fill="#222222">2</text>
+  <text x="374" y="882" font-size="11" text-anchor="middle" fill="#222222">3</text>
+  <text x="502" y="882" font-size="11" text-anchor="middle" fill="#222222">4</text>
+  <text x="566" y="882" font-size="11" text-anchor="middle" fill="#222222">5</text>
+  <text x="630" y="882" font-size="11" text-anchor="middle" fill="#222222">6</text>
+  <text x="694" y="882" font-size="11" text-anchor="middle" fill="#222222">7</text>
+  <text x="758" y="882" font-size="11" text-anchor="middle" fill="#222222">8</text>
+
+  <!-- 右侧说明 -->
+  <text x="810" y="800" font-size="11" fill="#222222">地址推进 10 次，输出只有 9 位</text>
+  <text x="810" y="824" font-size="11" fill="#4a3372">NULL 位置：j 增 1，k 不变</text>
+  <text x="810" y="848" font-size="11" fill="#222222">接收端在该地址无 LLR 可写</text>
+
+  <!-- 结论 -->
+  <text x="52" y="916" font-size="11" fill="#333333">E_r 计的是输出比特数，不是扫描地址数；有 filler 时一轮读取推进的地址数大于 E_r</text>
+</svg>

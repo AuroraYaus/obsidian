@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+@file    CBG_hierarchy_partial_retransmission.svg
+@brief   TB 到 CB 再到 CBG 的两级切分关系，以及 CBGTI 部分调度时未调度码块取 E_r=0 的后果
+@note    本图以三个面板并列展示同一套调度参数下的三个侧面：面板 A 按 TS 38.214 §5.1.7.1
+         的分组公式，给出 C=8 个 CB 归入 M=4 个 CBG 的层次与编号；面板 B 按
+         TS 38.214 §5.1.7.2 的比特映射规则，给出 CBGTI=1100 时被调度的 4 个 CB 与
+         未被调度的 4 个 CB；面板 C 按 TS 38.212 §5.4.2.1 的分配规则，在同一 G 下
+         对比全部调度（C'=8）与部分调度（C'=4）的每码块速率匹配长度 E_r。
+         图中数值取 G=8000、N_L=2、Q_m=4、C=8、M=4，四舍五入处均整除，无取整余量。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1000" viewBox="0 0 1200 1000" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">
+  <rect x="0" y="0" width="1200" height="1000" fill="#ffffff"/>
+
+  <!-- 页级标题（框外文字，class="free" 豁免宿主规则） -->
+  <text class="free" x="600" y="44" font-size="19" font-weight="bold" text-anchor="middle" fill="#222222">CBG 层次结构与 CBGTI 部分调度下的 E_r 置零</text>
+
+  <!-- ================= 面板 A：TB → CB → CBG 的层次与编号 ================= -->
+  <rect x="30" y="70" width="1140" height="340" fill="#fdfdfd" stroke="#444444" stroke-width="1.5"/>
+  <text x="600" y="104" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">面板 A｜传输块到码块再到码块组的两级切分（C=8、M=4）</text>
+  <text x="600" y="130" font-size="11" text-anchor="middle" fill="#333333">分组公式（TS 38.214 §5.1.7.1）：M=min(N,C)=4，M1=mod(C,M)，K1=ceil(C/M)，K2=floor(C/M)</text>
+
+  <!-- TB 条 -->
+  <rect x="108" y="152" width="985" height="42" fill="#e8f0fb" stroke="#3d6fb5" stroke-width="1.5"/>
+  <text x="600" y="179" font-size="11" text-anchor="middle" fill="#1d3f6b">传输块（Transport Block, TB）：一次调度交付物理层的数据单元，切分为 C=8 个码块（Code Block, CB）</text>
+
+  <!-- TB 到各 CB 的连接线 -->
+  <g stroke="#7a8a9e" stroke-width="1.2">
+    <line x1="163" y1="194" x2="163" y2="226"/>
+    <line x1="288" y1="194" x2="288" y2="226"/>
+    <line x1="413" y1="194" x2="413" y2="226"/>
+    <line x1="538" y1="194" x2="538" y2="226"/>
+    <line x1="663" y1="194" x2="663" y2="226"/>
+    <line x1="788" y1="194" x2="788" y2="226"/>
+    <line x1="913" y1="194" x2="913" y2="226"/>
+    <line x1="1038" y1="194" x2="1038" y2="226"/>
+  </g>
+
+  <!-- 8 个 CB 单元 -->
+  <g fill="#f4f7fb" stroke="#6b7a90" stroke-width="1.2">
+    <rect x="108" y="226" width="110" height="60"/>
+    <rect x="233" y="226" width="110" height="60"/>
+    <rect x="358" y="226" width="110" height="60"/>
+    <rect x="483" y="226" width="110" height="60"/>
+    <rect x="608" y="226" width="110" height="60"/>
+    <rect x="733" y="226" width="110" height="60"/>
+    <rect x="858" y="226" width="110" height="60"/>
+    <rect x="983" y="226" width="110" height="60"/>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#222222">
+    <text x="163" y="249">CB 0</text><text x="288" y="249">CB 1</text><text x="413" y="249">CB 2</text><text x="538" y="249">CB 3</text><text x="663" y="249">CB 4</text><text x="788" y="249">CB 5</text><text x="913" y="249">CB 6</text><text x="1038" y="249">CB 7</text>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#44556b">
+    <text x="163" y="273">r=0</text><text x="288" y="273">r=1</text><text x="413" y="273">r=2</text><text x="538" y="273">r=3</text><text x="663" y="273">r=4</text><text x="788" y="273">r=5</text><text x="913" y="273">r=6</text><text x="1038" y="273">r=7</text>
+  </g>
+
+  <!-- CB 到 CBG 的连接线：每组两段 -->
+  <g stroke="#b08a1e" stroke-width="1.2">
+    <line x1="163" y1="286" x2="163" y2="316"/><line x1="288" y1="286" x2="288" y2="316"/>
+    <line x1="413" y1="286" x2="413" y2="316"/><line x1="538" y1="286" x2="538" y2="316"/>
+    <line x1="663" y1="286" x2="663" y2="316"/><line x1="788" y1="286" x2="788" y2="316"/>
+    <line x1="913" y1="286" x2="913" y2="316"/><line x1="1038" y1="286" x2="1038" y2="316"/>
+  </g>
+
+  <!-- 4 个 CBG 分组框 -->
+  <g fill="#fdf6e3" stroke="#b08a1e" stroke-width="1.5">
+    <rect x="108" y="316" width="235" height="54"/>
+    <rect x="358" y="316" width="235" height="54"/>
+    <rect x="608" y="316" width="235" height="54"/>
+    <rect x="858" y="316" width="235" height="54"/>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#5a4310">
+    <text x="225" y="343">CBG 0｜CB 0、CB 1</text>
+    <text x="475" y="343">CBG 1｜CB 2、CB 3</text>
+    <text x="725" y="343">CBG 2｜CB 4、CB 5</text>
+    <text x="975" y="343">CBG 3｜CB 6、CB 7</text>
+  </g>
+
+  <text x="52" y="400" font-size="11" fill="#222222">C=8、M=4 时 M1=mod(8,4)=0、K1=K2=2：CBG0={CB0,CB1}，CBG1={CB2,CB3}，CBG2={CB4,CB5}，CBG3={CB6,CB7}</text>
+
+  <!-- ================= 面板 B：CBGTI=1100 的调度范围 ================= -->
+  <rect x="30" y="440" width="560" height="450" fill="#fdfdfd" stroke="#444444" stroke-width="1.5"/>
+  <text x="310" y="476" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">面板 B｜CBGTI=1100 的比特映射与被调度码块</text>
+  <text x="310" y="502" font-size="11" text-anchor="middle" fill="#333333">4 位比特图自最高位起与 CBG#0 至 CBG#3 一一对应</text>
+
+  <text x="60" y="532" font-size="11" fill="#222222">CBGTI 位值：1 = 该 CBG 本次传输，0 = 该 CBG 不传输</text>
+
+  <!-- CBG 编号单元 -->
+  <g fill="#f4f7fb" stroke="#6b7a90" stroke-width="1.2">
+    <rect x="60" y="556" width="110" height="44"/>
+    <rect x="190" y="556" width="110" height="44"/>
+    <rect x="320" y="556" width="110" height="44"/>
+    <rect x="450" y="556" width="110" height="44"/>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#222222">
+    <text x="115" y="584">CBG 0</text><text x="245" y="584">CBG 1</text><text x="375" y="584">CBG 2</text><text x="505" y="584">CBG 3</text>
+  </g>
+
+  <!-- CBGTI 位图单元 -->
+  <g stroke-width="1.5">
+    <rect x="60" y="608" width="110" height="48" fill="#cfe3ff" stroke="#3d6fb5"/>
+    <rect x="190" y="608" width="110" height="48" fill="#cfe3ff" stroke="#3d6fb5"/>
+    <rect x="320" y="608" width="110" height="48" fill="#efefef" stroke="#999999"/>
+    <rect x="450" y="608" width="110" height="48" fill="#efefef" stroke="#999999"/>
+  </g>
+  <g font-size="15" text-anchor="middle" fill="#1d3f6b">
+    <text x="115" y="640">1</text><text x="245" y="640">1</text>
+  </g>
+  <g font-size="15" text-anchor="middle" fill="#555555">
+    <text x="375" y="640">0</text><text x="505" y="640">0</text>
+  </g>
+
+  <text x="60" y="682" font-size="11" fill="#222222">被调度 CB：CB 0 至 CB 3 共 4 个（C'=4）；未调度：CB 4 至 CB 7 共 4 个；数字为 E_r（bit）</text>
+
+  <!-- 8 个 CB 的调度状态 -->
+  <g stroke-width="1.2">
+    <rect x="60" y="706" width="55" height="44" fill="#cfe3ff" stroke="#3d6fb5"/>
+    <rect x="124" y="706" width="55" height="44" fill="#cfe3ff" stroke="#3d6fb5"/>
+    <rect x="188" y="706" width="55" height="44" fill="#cfe3ff" stroke="#3d6fb5"/>
+    <rect x="252" y="706" width="55" height="44" fill="#cfe3ff" stroke="#3d6fb5"/>
+    <rect x="316" y="706" width="55" height="44" fill="#efefef" stroke="#999999"/>
+    <rect x="380" y="706" width="55" height="44" fill="#efefef" stroke="#999999"/>
+    <rect x="444" y="706" width="55" height="44" fill="#efefef" stroke="#999999"/>
+    <rect x="508" y="706" width="55" height="44" fill="#efefef" stroke="#999999"/>
+  </g>
+  <line x1="311" y1="700" x2="311" y2="784" stroke="#b05050" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <g font-size="11" text-anchor="middle" fill="#222222">
+    <text x="87" y="733">CB0</text><text x="151" y="733">CB1</text><text x="215" y="733">CB2</text><text x="279" y="733">CB3</text><text x="343" y="733">CB4</text><text x="407" y="733">CB5</text><text x="471" y="733">CB6</text><text x="535" y="733">CB7</text>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#1d3f6b">
+    <text x="87" y="774">2000</text><text x="151" y="774">2000</text><text x="215" y="774">2000</text><text x="279" y="774">2000</text>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#777777">
+    <text x="343" y="774">0</text><text x="407" y="774">0</text><text x="471" y="774">0</text><text x="535" y="774">0</text>
+  </g>
+
+  <text x="60" y="800" font-size="11" fill="#222222">码块级联序列 g：长度 G=8000，仅由 4 个被调度 CB 的编码比特构成</text>
+
+  <!-- 级联序列 g -->
+  <g fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1.2">
+    <rect x="60" y="818" width="125" height="40"/>
+    <rect x="185" y="818" width="125" height="40"/>
+    <rect x="310" y="818" width="125" height="40"/>
+    <rect x="435" y="818" width="125" height="40"/>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#1d3f6b">
+    <text x="122" y="845">CB0 段</text><text x="247" y="845">CB1 段</text><text x="372" y="845">CB2 段</text><text x="497" y="845">CB3 段</text>
+  </g>
+
+  <text x="60" y="882" font-size="11" fill="#222222">未调度的 4 个 CB 不占 g 中的位置，其 E_r 恒为 0。</text>
+
+  <!-- ================= 面板 C：同一 G 下的每 CB 长度对比 ================= -->
+  <rect x="620" y="440" width="550" height="450" fill="#fdfdfd" stroke="#444444" stroke-width="1.5"/>
+  <text x="895" y="476" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">面板 C｜同一 G 下全部调度与部分调度的每 CB 长度</text>
+  <text x="895" y="502" font-size="11" text-anchor="middle" fill="#333333">G=8000、N_L=2、Q_m=4，X=G/(N_L·Q_m)=1000；两行采用同一比特比例</text>
+
+  <text x="650" y="534" font-size="11" fill="#222222">全部调度：无 CBGTI，C'=C=8</text>
+  <text x="650" y="558" font-size="11" fill="#333333">q=125（X 被 C' 整除），每个 CB 得 E_r=N_L·Q_m·q=1000 bit</text>
+
+  <!-- 全部调度的 8 根柱 -->
+  <line x1="686" y1="640" x2="1104" y2="640" stroke="#999999" stroke-width="1"/>
+  <g fill="#9fc4ef" stroke="#3d6fb5" stroke-width="1.2">
+    <rect x="686" y="590" width="40" height="50"/>
+    <rect x="740" y="590" width="40" height="50"/>
+    <rect x="794" y="590" width="40" height="50"/>
+    <rect x="848" y="590" width="40" height="50"/>
+    <rect x="902" y="590" width="40" height="50"/>
+    <rect x="956" y="590" width="40" height="50"/>
+    <rect x="1010" y="590" width="40" height="50"/>
+    <rect x="1064" y="590" width="40" height="50"/>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#1d3f6b">
+    <text x="706" y="618">1000</text><text x="760" y="618">1000</text><text x="814" y="618">1000</text><text x="868" y="618">1000</text><text x="922" y="618">1000</text><text x="976" y="618">1000</text><text x="1030" y="618">1000</text><text x="1084" y="618">1000</text>
+  </g>
+
+  <g font-size="11" text-anchor="middle" fill="#222222">
+    <text x="706" y="664">CB0</text><text x="760" y="664">CB1</text><text x="814" y="664">CB2</text><text x="868" y="664">CB3</text><text x="922" y="664">CB4</text><text x="976" y="664">CB5</text><text x="1030" y="664">CB6</text><text x="1084" y="664">CB7</text>
+  </g>
+
+  <text x="650" y="716" font-size="11" fill="#222222">部分调度：CBGTI=1100，C'=4</text>
+  <text x="650" y="740" font-size="11" fill="#333333">q=250（X 被 C' 整除），被调度 CB 得 E_r=2000 bit，未调度 CB 得 E_r=0</text>
+
+  <!-- 部分调度的 8 根柱：前 4 根加倍，后 4 根为零 -->
+  <line x1="686" y1="856" x2="1104" y2="856" stroke="#999999" stroke-width="1"/>
+  <g fill="#ffd9a0" stroke="#d08000" stroke-width="1.2">
+    <rect x="686" y="756" width="40" height="100"/>
+    <rect x="740" y="756" width="40" height="100"/>
+    <rect x="794" y="756" width="40" height="100"/>
+    <rect x="848" y="756" width="40" height="100"/>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#7a4a00">
+    <text x="706" y="786">2000</text><text x="760" y="786">2000</text><text x="814" y="786">2000</text><text x="868" y="786">2000</text>
+  </g>
+  <g fill="#efefef" stroke="#999999" stroke-width="1.2">
+    <rect x="902" y="830" width="40" height="26"/>
+    <rect x="956" y="830" width="40" height="26"/>
+    <rect x="1010" y="830" width="40" height="26"/>
+    <rect x="1064" y="830" width="40" height="26"/>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="#666666">
+    <text x="922" y="848">0</text><text x="976" y="848">0</text><text x="1030" y="848">0</text><text x="1084" y="848">0</text>
+  </g>
+
+  <g font-size="11" text-anchor="middle" fill="#222222">
+    <text x="706" y="878">CB0</text><text x="760" y="878">CB1</text><text x="814" y="878">CB2</text><text x="868" y="878">CB3</text><text x="922" y="878">CB4</text><text x="976" y="878">CB5</text><text x="1030" y="878">CB6</text><text x="1084" y="878">CB7</text>
+  </g>
+
+  <!-- ================= 图注说明带 ================= -->
+  <rect x="30" y="905" width="1140" height="80" fill="#fafafa" stroke="#444444" stroke-width="1.5"/>
+  <text x="52" y="930" font-size="11" fill="#222222">读图约定：CB 索引 r 按 TB 内顺序从 0 编号，CBG 索引 m 从 0 编号；CBGTI 的最高位对应 CBG#0（TS 38.214 §5.1.7.2）。</text>
+  <text x="52" y="954" font-size="11" fill="#222222">数值来源：C=8、M=4、G=8000、N_L=2、Q_m=4、CBGTI=1100；X=G/(N_L·Q_m)=1000，q 为 X 除以 C' 的整数商，E_r=N_L·Q_m·q。</text>
+  <text x="52" y="978" font-size="11" fill="#222222">对照结论：G 不变时 C' 由 8 降到 4，每个被调度 CB 的 E_r 由 1000 bit 升到 2000 bit，等效码率相应下降。</text>
+</svg>

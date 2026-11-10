@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+@file    RE_Mapping_grid_pilot_occupancy.svg
+@brief   资源网格的坐标结构，以及配置类型 1/2 下导频在单个 PRB 一个符号内的 RE 占位
+@note    本图以三个面板并列展示三件事：面板 A 给出 RE=(k,l) 的坐标结构与 PRB 的 12 子载波边界；
+         面板 B、C 分别按 TS 38.211 §7.4.1.1.2 的 k 生成式，在 12 个子载波上标出配置类型 1
+         （Δ∈{0,1}，每 CDM 组 6 个 RE）与配置类型 2（Δ∈{0,2,4}，每 CDM 组 4 个 RE）的占位。
+         高亮格表示导频 RE，空白格表示该 CDM 组未使用的位置。图中仅画单个 OFDM 符号，
+         时域方向的附加 DM-RS 位置按同一频域图样复制，不另绘。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="740" viewBox="0 0 1120 740" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">
+  <rect x="0" y="0" width="1120" height="740" fill="#ffffff"/>
+
+  <!-- 页级标题（框外文字） -->
+  <text class="free" x="560" y="42" font-size="19" font-weight="bold" text-anchor="middle" fill="#222222">资源网格坐标与导频在单个 PRB 内的 RE 占位</text>
+
+  <!-- ================= 面板 A：网格坐标与 PRB 边界 ================= -->
+  <rect x="30" y="70" width="430" height="600" fill="#fdfdfd" stroke="#444444" stroke-width="1.5"/>
+  <text x="245" y="104" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">面板 A｜资源网格与 RE 坐标</text>
+  <text x="245" y="128" font-size="11" text-anchor="middle" fill="#333333">横向 k = 子载波索引；纵向 l = OFDM 符号索引</text>
+
+  <!-- 纵向 l 标签 -->
+  <g font-size="11" text-anchor="end" fill="#333333">
+    <text x="56" y="218">l=0</text>
+    <text x="56" y="246">l=1</text>
+    <text x="56" y="274">l=2</text>
+    <text x="56" y="302">l=3</text>
+    <text x="56" y="330">l=4</text>
+    <text x="56" y="358">l=5</text>
+  </g>
+
+  <!-- 网格：12 列（k=0..11）× 6 行（l=0..5），格 28×28 -->
+  <g stroke="#9a9a9a" stroke-width="1" fill="#fafafa">
+    <rect x="70" y="200" width="28" height="28"/><rect x="98" y="200" width="28" height="28"/><rect x="126" y="200" width="28" height="28"/><rect x="154" y="200" width="28" height="28"/><rect x="182" y="200" width="28" height="28"/><rect x="210" y="200" width="28" height="28"/><rect x="238" y="200" width="28" height="28"/><rect x="266" y="200" width="28" height="28"/><rect x="294" y="200" width="28" height="28"/><rect x="322" y="200" width="28" height="28"/><rect x="350" y="200" width="28" height="28"/><rect x="378" y="200" width="28" height="28"/>
+    <rect x="70" y="228" width="28" height="28"/><rect x="98" y="228" width="28" height="28"/><rect x="126" y="228" width="28" height="28"/><rect x="154" y="228" width="28" height="28"/><rect x="182" y="228" width="28" height="28"/><rect x="210" y="228" width="28" height="28"/><rect x="238" y="228" width="28" height="28"/><rect x="266" y="228" width="28" height="28"/><rect x="294" y="228" width="28" height="28"/><rect x="322" y="228" width="28" height="28"/><rect x="350" y="228" width="28" height="28"/><rect x="378" y="228" width="28" height="28"/>
+    <rect x="70" y="256" width="28" height="28"/><rect x="98" y="256" width="28" height="28"/><rect x="126" y="256" width="28" height="28"/><rect x="154" y="256" width="28" height="28"/><rect x="182" y="256" width="28" height="28"/><rect x="210" y="256" width="28" height="28"/><rect x="238" y="256" width="28" height="28"/><rect x="266" y="256" width="28" height="28"/><rect x="294" y="256" width="28" height="28"/><rect x="322" y="256" width="28" height="28"/><rect x="350" y="256" width="28" height="28"/><rect x="378" y="256" width="28" height="28"/>
+    <rect x="70" y="284" width="28" height="28"/><rect x="98" y="284" width="28" height="28"/><rect x="126" y="284" width="28" height="28"/><rect x="154" y="284" width="28" height="28"/><rect x="182" y="284" width="28" height="28"/><rect x="210" y="284" width="28" height="28"/><rect x="238" y="284" width="28" height="28"/><rect x="266" y="284" width="28" height="28"/><rect x="294" y="284" width="28" height="28"/><rect x="322" y="284" width="28" height="28"/><rect x="350" y="284" width="28" height="28"/><rect x="378" y="284" width="28" height="28"/>
+    <rect x="70" y="312" width="28" height="28"/><rect x="98" y="312" width="28" height="28"/><rect x="126" y="312" width="28" height="28"/><rect x="154" y="312" width="28" height="28"/><rect x="182" y="312" width="28" height="28"/><rect x="210" y="312" width="28" height="28"/><rect x="238" y="312" width="28" height="28"/><rect x="266" y="312" width="28" height="28"/><rect x="294" y="312" width="28" height="28"/><rect x="322" y="312" width="28" height="28"/><rect x="350" y="312" width="28" height="28"/><rect x="378" y="312" width="28" height="28"/>
+    <rect x="70" y="340" width="28" height="28"/><rect x="98" y="340" width="28" height="28"/><rect x="126" y="340" width="28" height="28"/><rect x="154" y="340" width="28" height="28"/><rect x="182" y="340" width="28" height="28"/><rect x="210" y="340" width="28" height="28"/><rect x="238" y="340" width="28" height="28"/><rect x="266" y="340" width="28" height="28"/><rect x="294" y="340" width="28" height="28"/><rect x="322" y="340" width="28" height="28"/><rect x="350" y="340" width="28" height="28"/><rect x="378" y="340" width="28" height="28"/>
+  </g>
+
+  <!-- 横向 k 标签 -->
+  <g font-size="11" text-anchor="middle" fill="#333333">
+    <text x="84" y="388">0</text><text x="112" y="388">1</text><text x="140" y="388">2</text><text x="168" y="388">3</text><text x="196" y="388">4</text><text x="224" y="388">5</text><text x="252" y="388">6</text><text x="280" y="388">7</text><text x="308" y="388">8</text><text x="336" y="388">9</text><text x="364" y="388">10</text><text x="392" y="388">11</text>
+  </g>
+
+  <!-- 高亮单个 RE：k=2, l=1（坐标标注放在网格外，避免文字压住网格） -->
+  <rect x="126" y="228" width="28" height="28" fill="#ffd9a0" stroke="#d08000" stroke-width="1.5"/>
+
+  <!-- 面板 A 说明 -->
+  <text x="52" y="432" font-size="11" fill="#222222">一个 PRB = 12 个连续子载波（N_sc_RB = 12）</text>
+  <text x="52" y="456" font-size="11" fill="#222222">常规 CP 下一个时隙 = 14 个 OFDM 符号</text>
+  <text x="52" y="480" font-size="11" fill="#222222">图中只画 6 个符号，其余省略</text>
+  <text x="52" y="504" font-size="11" fill="#222222">高亮格 = 一个资源元素：k=2、l=1 的交点</text>
+  <text x="52" y="544" font-size="11" fill="#222222">PRB 在带宽部分（BWP）内从 0 编号，</text>
+  <text x="52" y="568" font-size="11" fill="#222222">与公共资源块（CRB）相差 BWP 起点偏移</text>
+  <text x="52" y="608" font-size="11" fill="#222222">一个 PRB 在某时隙内含 12 × N_symb 个 RE，</text>
+  <text x="52" y="632" font-size="11" fill="#222222">常规 CP 下为 12 × 14 = 168 个</text>
+
+  <!-- ================= 面板 B：配置类型 1 ================= -->
+  <rect x="490" y="70" width="600" height="290" fill="#fdfdfd" stroke="#444444" stroke-width="1.5"/>
+  <text x="790" y="104" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">面板 B｜配置类型 1：k = 4n + 2k' + Δ</text>
+  <text x="790" y="128" font-size="11" text-anchor="middle" fill="#333333">每个 CDM 组每个 PRB 每个符号占 6 个 RE</text>
+
+  <!-- k 索引 -->
+  <g font-size="11" text-anchor="middle" fill="#333333">
+    <text x="562" y="158">0</text><text x="596" y="158">1</text><text x="630" y="158">2</text><text x="664" y="158">3</text><text x="698" y="158">4</text><text x="732" y="158">5</text><text x="766" y="158">6</text><text x="800" y="158">7</text><text x="834" y="158">8</text><text x="868" y="158">9</text><text x="902" y="158">10</text><text x="936" y="158">11</text>
+  </g>
+
+  <!-- Δ=0 行：k'=0 → 0,4,8；k'=1 → 2,6,10 -->
+  <text x="498" y="192" font-size="12" fill="#222222">Δ=0</text>
+  <g stroke="#9a9a9a" stroke-width="1" fill="#ffffff">
+    <rect x="545" y="170" width="34" height="34"/><rect x="579" y="170" width="34" height="34"/><rect x="613" y="170" width="34" height="34"/><rect x="647" y="170" width="34" height="34"/><rect x="681" y="170" width="34" height="34"/><rect x="715" y="170" width="34" height="34"/><rect x="749" y="170" width="34" height="34"/><rect x="783" y="170" width="34" height="34"/><rect x="817" y="170" width="34" height="34"/><rect x="851" y="170" width="34" height="34"/><rect x="885" y="170" width="34" height="34"/><rect x="919" y="170" width="34" height="34"/>
+  </g>
+  <g fill="#ffd9a0" stroke="#d08000" stroke-width="1.5">
+    <rect x="545" y="170" width="34" height="34"/><rect x="613" y="170" width="34" height="34"/><rect x="681" y="170" width="34" height="34"/><rect x="749" y="170" width="34" height="34"/><rect x="817" y="170" width="34" height="34"/><rect x="885" y="170" width="34" height="34"/>
+  </g>
+
+  <!-- Δ=1 行 -->
+  <text x="498" y="272" font-size="12" fill="#222222">Δ=1</text>
+  <g stroke="#9a9a9a" stroke-width="1" fill="#ffffff">
+    <rect x="545" y="250" width="34" height="34"/><rect x="579" y="250" width="34" height="34"/><rect x="613" y="250" width="34" height="34"/><rect x="647" y="250" width="34" height="34"/><rect x="681" y="250" width="34" height="34"/><rect x="715" y="250" width="34" height="34"/><rect x="749" y="250" width="34" height="34"/><rect x="783" y="250" width="34" height="34"/><rect x="817" y="250" width="34" height="34"/><rect x="851" y="250" width="34" height="34"/><rect x="885" y="250" width="34" height="34"/><rect x="919" y="250" width="34" height="34"/>
+  </g>
+  <g fill="#ffd9a0" stroke="#d08000" stroke-width="1.5">
+    <rect x="579" y="250" width="34" height="34"/><rect x="647" y="250" width="34" height="34"/><rect x="715" y="250" width="34" height="34"/><rect x="783" y="250" width="34" height="34"/><rect x="851" y="250" width="34" height="34"/><rect x="919" y="250" width="34" height="34"/>
+  </g>
+
+  <text x="508" y="330" font-size="11" fill="#222222">两个 CDM 组全开 = 12 个 RE：该符号上此 PRB 无数据 RE</text>
+
+  <!-- ================= 面板 C：配置类型 2 ================= -->
+  <rect x="490" y="390" width="600" height="310" fill="#fdfdfd" stroke="#444444" stroke-width="1.5"/>
+  <text x="790" y="424" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">面板 C｜配置类型 2：k = 6n + k' + Δ</text>
+  <text x="790" y="448" font-size="11" text-anchor="middle" fill="#333333">每个 CDM 组每个 PRB 每个符号占 4 个 RE</text>
+
+  <!-- 面板 C 的 k 索引 -->
+  <g font-size="11" text-anchor="middle" fill="#333333">
+    <text x="562" y="478">0</text><text x="596" y="478">1</text><text x="630" y="478">2</text><text x="664" y="478">3</text><text x="698" y="478">4</text><text x="732" y="478">5</text><text x="766" y="478">6</text><text x="800" y="478">7</text><text x="834" y="478">8</text><text x="868" y="478">9</text><text x="902" y="478">10</text><text x="936" y="478">11</text>
+  </g>
+
+  <!-- Δ=0 行：k'=0,1 → 0,1,6,7 -->
+  <text x="498" y="512" font-size="12" fill="#222222">Δ=0</text>
+  <g stroke="#9a9a9a" stroke-width="1" fill="#ffffff">
+    <rect x="545" y="490" width="34" height="34"/><rect x="579" y="490" width="34" height="34"/><rect x="613" y="490" width="34" height="34"/><rect x="647" y="490" width="34" height="34"/><rect x="681" y="490" width="34" height="34"/><rect x="715" y="490" width="34" height="34"/><rect x="749" y="490" width="34" height="34"/><rect x="783" y="490" width="34" height="34"/><rect x="817" y="490" width="34" height="34"/><rect x="851" y="490" width="34" height="34"/><rect x="885" y="490" width="34" height="34"/><rect x="919" y="490" width="34" height="34"/>
+  </g>
+  <g fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1.5">
+    <rect x="545" y="490" width="34" height="34"/><rect x="579" y="490" width="34" height="34"/><rect x="749" y="490" width="34" height="34"/><rect x="783" y="490" width="34" height="34"/>
+  </g>
+
+  <!-- Δ=2 行：2,3,8,9 -->
+  <text x="498" y="578" font-size="12" fill="#222222">Δ=2</text>
+  <g stroke="#9a9a9a" stroke-width="1" fill="#ffffff">
+    <rect x="545" y="556" width="34" height="34"/><rect x="579" y="556" width="34" height="34"/><rect x="613" y="556" width="34" height="34"/><rect x="647" y="556" width="34" height="34"/><rect x="681" y="556" width="34" height="34"/><rect x="715" y="556" width="34" height="34"/><rect x="749" y="556" width="34" height="34"/><rect x="783" y="556" width="34" height="34"/><rect x="817" y="556" width="34" height="34"/><rect x="851" y="556" width="34" height="34"/><rect x="885" y="556" width="34" height="34"/><rect x="919" y="556" width="34" height="34"/>
+  </g>
+  <g fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1.5">
+    <rect x="613" y="556" width="34" height="34"/><rect x="647" y="556" width="34" height="34"/><rect x="817" y="556" width="34" height="34"/><rect x="851" y="556" width="34" height="34"/>
+  </g>
+
+  <!-- Δ=4 行：4,5,10,11 -->
+  <text x="498" y="644" font-size="12" fill="#222222">Δ=4</text>
+  <g stroke="#9a9a9a" stroke-width="1" fill="#ffffff">
+    <rect x="545" y="622" width="34" height="34"/><rect x="579" y="622" width="34" height="34"/><rect x="613" y="622" width="34" height="34"/><rect x="647" y="622" width="34" height="34"/><rect x="681" y="622" width="34" height="34"/><rect x="715" y="622" width="34" height="34"/><rect x="749" y="622" width="34" height="34"/><rect x="783" y="622" width="34" height="34"/><rect x="817" y="622" width="34" height="34"/><rect x="851" y="622" width="34" height="34"/><rect x="885" y="622" width="34" height="34"/><rect x="919" y="622" width="34" height="34"/>
+  </g>
+  <g fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1.5">
+    <rect x="681" y="622" width="34" height="34"/><rect x="715" y="622" width="34" height="34"/><rect x="885" y="622" width="34" height="34"/><rect x="919" y="622" width="34" height="34"/>
+  </g>
+
+  <text x="508" y="686" font-size="11" fill="#222222">三组全开 = 12 个 RE（占满 PRB）；两组全开 = 8 个 RE，余 4 个为数据 RE</text>
+</svg>
