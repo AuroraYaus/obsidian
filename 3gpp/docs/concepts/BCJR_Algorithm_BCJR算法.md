@@ -66,7 +66,7 @@ $$L(u_k) = \ln \frac{\sum_{(s',s):\, u_k=1} \alpha_{k-1}(s')\, \gamma_k(s' \to s
 | 误解 | 正确理解 |
 |:---|:---|
 | BCJR 只用于 Turbo 译码 | 任何可用网格描述的码（卷积码、Turbo 分量码）与符号间干扰（Inter-Symbol Interference, ISI）信道均衡都能用 BCJR。 |
-| Max-Log-MAP 与 Log-MAP 等价 | Max-Log-MAP 丢弃修正项 $\ln(1+e^{-|a-b|})$，约损失 0.5 dB 增益。 |
+| Max-Log-MAP 与 Log-MAP 等价 | Max-Log-MAP 丢弃修正项 $\ln(1+e^{-\lvert a-b\rvert})$，约损失 0.5 dB 增益。 |
 | BCJR 输出硬判决比特 | BCJR 输出逐比特后验 LLR，软信息才能支撑迭代译码。 |
 | α、β 各自独立就能给出判决 | 每比特判决需要 α 与 β 在同一条边上会合，二者缺一不可。 |
 

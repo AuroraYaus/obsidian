@@ -45,11 +45,12 @@ DEFAULT_ROOT = PROJECT_ROOT / "docs"
 
 MATH_SPAN = re.compile(r"\$[^$]*\$")
 # 表格中合法的竖线来源：Obsidian 别名 [[target|alias]]、行内代码 `a|b`、数学 $|x|$
-KEEP_PIPES = re.compile(r"\[\[[^\]]*\]\]|`[^`]*`|\$[^$]*\$")
+# 只掩码 wikilink 别名与行内代码；数学里的竖线不算合法，必须暴露出来
+KEEP_PIPES = re.compile(r"\[\[[^\]]*\]\]|`[^`]*`")
 
 
 def mask_legal_pipes(line: str) -> str:
-    """@brief 把 wikilink 别名/行内代码/数学片段内的竖线替换为占位符
+    """@brief 把 wikilink 别名/行内代码内的竖线替换为占位符
     @param line 原始行
     @return 掩码后的行（长度不变，竖线换成 U+2223）
     """
