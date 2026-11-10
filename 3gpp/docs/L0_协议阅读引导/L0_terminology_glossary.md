@@ -48,6 +48,8 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | SIB | 系统信息块 | System Information Block；SIB1 由 MIB 指向，其余 SIB 由 SIB1 调度。 |
 | TBCC | 咬尾卷积码 | Tail Biting Convolutional Code；LTE PDCCH/PBCH 信道编码，非递归无迭代。→ [[TBCC_咬尾卷积码]] |
 | 调度器 | 调度器 | Scheduler；MAC 层每 slot 决策用户/资源/MCS 的单元。→ [[Scheduler_MAC调度器与资源分配]] |
+| TRP | 发送接收点 | Transmission and Reception Point；网络侧的无线收发单元，协议用 TCI 状态数量表达「有几个传输点」，不定义实体本身。→ [[Multi_TRP_多点协作传输]] |
+| TRP 并发 | 多点同时传输 | 多个 TRP 在同一时隙内同时向同一终端传输，分空分（不同 CDM 组的层）、频分（同隙不同频段）、单频网（同频同内容叠加）三种。→ [[Multi_TRP_多点协作传输]] |
 | SIB1 | 系统信息块 1 | System Information Block Type 1；下行共享信道承载、160 ms 周期广播的小区级配置，含小区身份、驻留门限与其余 SIB 的调度信息。→ [[SIB1_系统信息块1]] |
 | OCC | 正交覆盖码 | Orthogonal Cover Code；一组互相正交的 ±1 序列，乘到连续资源上形成码道，用于参考信号的端口复用与控制信道的块状扩频。→ [[OCC_正交覆盖码]] |
 | 空口 | Air Interface | 终端与网络之间的无线链路（Uu 接口），指协议规定的整条处理链，不等同于空气或物理层。→ [[Air_Interface_空口与三个域]] |
