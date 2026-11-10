@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+@file    Rate_Matching_three_operations.svg
+@brief   母码长度与目标长度不等时速率匹配的三种长度关系，以及比特选择在循环缓存地址轴上的覆盖区间
+@note    本图以三个面板并列展示三件事。面板 A 用同一比例尺对比循环缓存长度 N_cb 与本次输出长度 E
+         在 E<N_cb、E=N_cb、E>N_cb 三种情形下的长度关系；灰条表示循环缓存的地址上界 N_cb，
+         蓝条表示本次实际发送的 E 个比特，E>N_cb 时蓝条越过灰条并回绕。面板 B 把同一关系画到
+         地址轴 [0, N_cb) 上：E<N_cb 时只覆盖一段连续地址，未覆盖地址在接收端没有观测；E>N_cb 时
+         地址绕回，同一批地址被覆盖两次以上，接收端按地址累加 LLR。面板 C 给出速率匹配在信道编码、
+         循环缓存、比特交织与级联之间的位置，以及接收端把 LLR 写回软缓存的逆过程。
+         图中 N_cb = min(N, N_ref)，无有限缓存速率匹配时 N_cb = N = 66Z_c 或 50Z_c。
+         所有文字均落在某个 rect 内；页级标题为 class="free"，位于面板之外。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="950" viewBox="0 0 1180 950" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">
+  <rect x="0" y="0" width="1180" height="950" fill="#ffffff"/>
+
+  <!-- 页级标题（框外文字，class="free"） -->
+  <text class="free" x="590" y="40" font-size="19" font-weight="bold" text-anchor="middle" fill="#222222">速率匹配的三种长度关系与循环缓存地址语义</text>
+
+  <!-- ================= 面板 A：长度对比 ================= -->
+  <rect x="30" y="70" width="540" height="450" fill="#fdfdfd" stroke="#444444" stroke-width="1.5"/>
+  <text x="300" y="102" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">面板 A｜母码长度 N、循环缓存 N_cb 与目标长度 E 的对比</text>
+  <text x="300" y="126" font-size="11" text-anchor="middle" fill="#333333">灰条 N_cb = min(N, N_ref)，无 LBRM 时取 N = 66Z_c 或 50Z_c；蓝条为 E</text>
+
+  <!-- 情形 1：E < N_cb -->
+  <text x="100" y="168" font-size="11" fill="#333333">N_cb</text>
+  <text x="100" y="201" font-size="11" fill="#333333">E</text>
+  <rect x="140" y="156" width="300" height="14" fill="#ececec" stroke="#9a9a9a" stroke-width="1"/>
+  <rect x="140" y="186" width="195" height="22" fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1.5"/>
+  <text x="237" y="201" font-size="11" text-anchor="middle" fill="#1d3f6e">E &lt; N_cb：截短或打孔</text>
+  <text x="52" y="236" font-size="11" fill="#333333">覆盖 [k0, k0+E)：未覆盖的 N_cb − E 个地址没有观测</text>
+
+  <!-- 情形 2：E = N_cb -->
+  <text x="100" y="282" font-size="11" fill="#333333">N_cb</text>
+  <text x="100" y="315" font-size="11" fill="#333333">E</text>
+  <rect x="140" y="270" width="300" height="14" fill="#ececec" stroke="#9a9a9a" stroke-width="1"/>
+  <rect x="140" y="300" width="300" height="22" fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1.5"/>
+  <text x="290" y="315" font-size="11" text-anchor="middle" fill="#1d3f6e">E = N_cb：一次取满</text>
+  <text x="52" y="350" font-size="11" fill="#333333">覆盖全部 N_cb 个地址，地址不回绕；E = N_cb 是两种机制的边界</text>
+
+  <!-- 情形 3：E > N_cb -->
+  <text x="100" y="396" font-size="11" fill="#333333">N_cb</text>
+  <text x="100" y="429" font-size="11" fill="#333333">E</text>
+  <rect x="140" y="384" width="300" height="14" fill="#ececec" stroke="#9a9a9a" stroke-width="1"/>
+  <rect x="140" y="414" width="300" height="22" fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1.5"/>
+  <rect x="440" y="414" width="90" height="22" fill="#a9c9f0" stroke="#3d6fb5" stroke-width="1.5"/>
+  <text x="290" y="429" font-size="11" text-anchor="middle" fill="#1d3f6e">E &gt; N_cb：绕回重复</text>
+  <text x="52" y="470" font-size="11" fill="#333333">E = 1.3N_cb：绕回一次，[k0, k0+0.3N_cb) 的地址被覆盖两次</text>
+
+  <!-- ================= 面板 B：地址轴上的覆盖区间 ================= -->
+  <rect x="590" y="70" width="560" height="450" fill="#fdfdfd" stroke="#444444" stroke-width="1.5"/>
+  <text x="870" y="102" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">面板 B｜比特选择在循环缓存地址轴上的覆盖区间</text>
+  <text x="870" y="126" font-size="11" text-anchor="middle" fill="#333333">横轴为地址 [0, N_cb)；同一地址被覆盖多次即重复，未被覆盖即没有观测</text>
+
+  <!-- 情形 1：E < N_cb，单段覆盖 -->
+  <text x="610" y="164" font-size="11" fill="#333333">E &lt; N_cb：单段覆盖——截短省略已知零，打孔省略未知比特</text>
+  <rect x="630" y="196" width="110" height="26" fill="#f2f2f2" stroke="#bbbbbb" stroke-width="1"/>
+  <rect x="740" y="196" width="180" height="26" fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1.5"/>
+  <rect x="920" y="196" width="170" height="26" fill="#f2f2f2" stroke="#bbbbbb" stroke-width="1"/>
+  <text x="830" y="214" font-size="11" text-anchor="middle" fill="#1d3f6e">E 个比特</text>
+  <line x1="630" y1="230" x2="1090" y2="230" stroke="#666666" stroke-width="1.2"/>
+  <line x1="630" y1="222" x2="630" y2="238" stroke="#666666" stroke-width="1.2"/>
+  <line x1="740" y1="222" x2="740" y2="238" stroke="#666666" stroke-width="1.2"/>
+  <line x1="920" y1="222" x2="920" y2="238" stroke="#666666" stroke-width="1.2"/>
+  <line x1="1090" y1="222" x2="1090" y2="238" stroke="#666666" stroke-width="1.2"/>
+  <text x="630" y="254" font-size="11" text-anchor="middle" fill="#333333">0</text>
+  <text x="740" y="254" font-size="11" text-anchor="middle" fill="#333333">k0</text>
+  <text x="920" y="254" font-size="11" text-anchor="middle" fill="#333333">k0+E</text>
+  <text x="1090" y="254" font-size="11" text-anchor="middle" fill="#333333">N_cb</text>
+  <text x="610" y="280" font-size="11" fill="#333333">灰区无发送比特：接收端不知道该地址的取值，只能记为未知、不写 LLR</text>
+  <text x="610" y="302" font-size="11" fill="#333333">截短省略的是 filler（已知为 0）；打孔省略的是取值未知的比特</text>
+
+  <!-- 情形 2：E > N_cb，绕回重复 -->
+  <text x="610" y="344" font-size="11" fill="#333333">E &gt; N_cb：回绕后重复覆盖，同一地址收到多份 LLR</text>
+  <rect x="740" y="360" width="350" height="24" fill="#cfe3ff" stroke="#3d6fb5" stroke-width="1.5"/>
+  <text x="915" y="376" font-size="11" text-anchor="middle" fill="#1d3f6e">第 1 遍：[k0, N_cb)</text>
+  <rect x="630" y="400" width="294" height="24" fill="#a9c9f0" stroke="#3d6fb5" stroke-width="1.5"/>
+  <text x="777" y="416" font-size="11" text-anchor="middle" fill="#1d3f6e">第 2 遍：[0, 0.64N_cb)</text>
+  <line x1="630" y1="432" x2="1090" y2="432" stroke="#666666" stroke-width="1.2"/>
+  <line x1="630" y1="424" x2="630" y2="440" stroke="#666666" stroke-width="1.2"/>
+  <line x1="740" y1="424" x2="740" y2="440" stroke="#666666" stroke-width="1.2"/>
+  <line x1="1090" y1="424" x2="1090" y2="440" stroke="#666666" stroke-width="1.2"/>
+  <text x="630" y="456" font-size="11" text-anchor="middle" fill="#333333">0</text>
+  <text x="740" y="456" font-size="11" text-anchor="middle" fill="#333333">k0</text>
+  <text x="1090" y="456" font-size="11" text-anchor="middle" fill="#333333">N_cb</text>
+  <text x="610" y="486" font-size="11" fill="#333333">重复地址的 LLR 按地址累加（软合并），不覆盖旧值</text>
+
+  <!-- ================= 面板 C：链路位置与收发两侧 ================= -->
+  <!-- 面板 C 的边框以 line 绘制：箭头三角只出现在节点之间的空白处，不落入任何 rect -->
+  <rect x="30" y="550" width="1120" height="62" fill="#fdfdfd" stroke="#444444" stroke-width="1.5"/>
+  <line x1="30" y1="612" x2="30" y2="910" stroke="#444444" stroke-width="1.5"/>
+  <line x1="1150" y1="612" x2="1150" y2="910" stroke="#444444" stroke-width="1.5"/>
+  <line x1="30" y1="910" x2="1150" y2="910" stroke="#444444" stroke-width="1.5"/>
+  <text x="590" y="582" font-size="15" font-weight="bold" text-anchor="middle" fill="#222222">面板 C｜速率匹配在编码、交织与级联之间的位置</text>
+  <text x="590" y="606" font-size="11" text-anchor="middle" fill="#333333">上行：编码 → 循环缓存 → 比特选择 → 比特交织 → 级联</text>
+
+  <!-- 发送端节点链 -->
+  <rect x="84" y="622" width="180" height="68" fill="#eef4fb" stroke="#3d6fb5" stroke-width="1.5"/>
+  <text x="174" y="640" font-size="11" text-anchor="middle" fill="#1d3f6e">信道编码</text>
+  <text x="174" y="657" font-size="11" text-anchor="middle" fill="#333333">母码 N = 66Z_c</text>
+  <text x="174" y="674" font-size="11" text-anchor="middle" fill="#333333">或 50Z_c</text>
+
+  <rect x="292" y="622" width="180" height="68" fill="#eef4fb" stroke="#3d6fb5" stroke-width="1.5"/>
+  <text x="382" y="640" font-size="11" text-anchor="middle" fill="#1d3f6e">循环缓存</text>
+  <text x="382" y="657" font-size="11" text-anchor="middle" fill="#333333">长度 N_cb</text>
+  <text x="382" y="674" font-size="11" text-anchor="middle" fill="#333333">上界 N_ref</text>
+
+  <rect x="500" y="622" width="180" height="68" fill="#eef4fb" stroke="#3d6fb5" stroke-width="1.5"/>
+  <text x="590" y="640" font-size="11" text-anchor="middle" fill="#1d3f6e">速率匹配</text>
+  <text x="590" y="657" font-size="11" text-anchor="middle" fill="#333333">RV 起点 k0</text>
+  <text x="590" y="674" font-size="11" text-anchor="middle" fill="#333333">取出 E 比特</text>
+
+  <rect x="708" y="622" width="180" height="68" fill="#eef4fb" stroke="#3d6fb5" stroke-width="1.5"/>
+  <text x="798" y="640" font-size="11" text-anchor="middle" fill="#1d3f6e">比特交织</text>
+  <text x="798" y="657" font-size="11" text-anchor="middle" fill="#333333">按 Q_m 行写读</text>
+  <text x="798" y="674" font-size="11" text-anchor="middle" fill="#333333">（§5.4.2.2）</text>
+
+  <rect x="916" y="622" width="180" height="68" fill="#eef4fb" stroke="#3d6fb5" stroke-width="1.5"/>
+  <text x="1006" y="640" font-size="11" text-anchor="middle" fill="#1d3f6e">级联</text>
+  <text x="1006" y="657" font-size="11" text-anchor="middle" fill="#333333">g_0, …, g_(G−1)</text>
+  <text x="1006" y="674" font-size="11" text-anchor="middle" fill="#333333">长度 G</text>
+
+  <!-- 发送端箭头（位于节点之间空白处） -->
+  <line x1="264" y1="656" x2="292" y2="656" stroke="#3d6fb5" stroke-width="1.5"/>
+  <polygon points="292,656 282,651 282,661" fill="#3d6fb5"/>
+  <line x1="472" y1="656" x2="500" y2="656" stroke="#3d6fb5" stroke-width="1.5"/>
+  <polygon points="500,656 490,651 490,661" fill="#3d6fb5"/>
+  <line x1="680" y1="656" x2="708" y2="656" stroke="#3d6fb5" stroke-width="1.5"/>
+  <polygon points="708,656 698,651 698,661" fill="#3d6fb5"/>
+  <line x1="888" y1="656" x2="916" y2="656" stroke="#3d6fb5" stroke-width="1.5"/>
+  <polygon points="916,656 906,651 906,661" fill="#3d6fb5"/>
+
+  <!-- 链路说明条 -->
+  <rect x="60" y="700" width="1060" height="52" fill="#f7f9fc" stroke="#d8e0ea" stroke-width="1"/>
+  <text x="590" y="718" font-size="11" text-anchor="middle" fill="#333333">发送端：编码输出写入循环缓存 [0, N_cb)，从 k0 起按地址取 E 个比特，交织后级联为 g_0…g_(G−1)</text>
+  <text x="590" y="736" font-size="11" text-anchor="middle" fill="#333333">接收端：按 E_r 切分 LLR 流，写回地址 (k0+j) mod N_cb；重复地址累加，NULL 位置跳过</text>
+
+  <!-- 接收端节点链（自右向左） -->
+  <rect x="916" y="762" width="180" height="68" fill="#f4f9f4" stroke="#4a8a52" stroke-width="1.5"/>
+  <text x="1006" y="780" font-size="11" text-anchor="middle" fill="#2f5d35">解调输出</text>
+  <text x="1006" y="797" font-size="11" text-anchor="middle" fill="#333333">LLR 流长度 G</text>
+  <text x="1006" y="814" font-size="11" text-anchor="middle" fill="#333333">对应 g_0…g_(G−1)</text>
+
+  <rect x="708" y="762" width="180" height="68" fill="#f4f9f4" stroke="#4a8a52" stroke-width="1.5"/>
+  <text x="798" y="780" font-size="11" text-anchor="middle" fill="#2f5d35">解级联与解交织</text>
+  <text x="798" y="797" font-size="11" text-anchor="middle" fill="#333333">按 E_r 切分</text>
+  <text x="798" y="814" font-size="11" text-anchor="middle" fill="#333333">恢复空口顺序</text>
+
+  <rect x="500" y="762" width="180" height="68" fill="#f4f9f4" stroke="#4a8a52" stroke-width="1.5"/>
+  <text x="590" y="780" font-size="11" text-anchor="middle" fill="#2f5d35">rate recovery</text>
+  <text x="590" y="797" font-size="11" text-anchor="middle" fill="#333333">写回 (k0+j) mod N_cb</text>
+  <text x="590" y="814" font-size="11" text-anchor="middle" fill="#333333">跳过 NULL</text>
+
+  <rect x="292" y="762" width="180" height="68" fill="#f4f9f4" stroke="#4a8a52" stroke-width="1.5"/>
+  <text x="382" y="780" font-size="11" text-anchor="middle" fill="#2f5d35">HARQ 软缓存</text>
+  <text x="382" y="797" font-size="11" text-anchor="middle" fill="#333333">按地址软合并</text>
+  <text x="382" y="814" font-size="11" text-anchor="middle" fill="#333333">保存未译码 LLR</text>
+
+  <rect x="84" y="762" width="180" height="68" fill="#f4f9f4" stroke="#4a8a52" stroke-width="1.5"/>
+  <text x="174" y="780" font-size="11" text-anchor="middle" fill="#2f5d35">LDPC 译码</text>
+  <text x="174" y="797" font-size="11" text-anchor="middle" fill="#333333">母码坐标输入</text>
+  <text x="174" y="814" font-size="11" text-anchor="middle" fill="#333333">码块级 CRC</text>
+
+  <!-- 接收端箭头（位于节点之间空白处，自右向左） -->
+  <line x1="916" y1="796" x2="888" y2="796" stroke="#4a8a52" stroke-width="1.5"/>
+  <polygon points="888,796 898,791 898,801" fill="#4a8a52"/>
+  <line x1="708" y1="796" x2="680" y2="796" stroke="#4a8a52" stroke-width="1.5"/>
+  <polygon points="680,796 690,791 690,801" fill="#4a8a52"/>
+  <line x1="500" y1="796" x2="472" y2="796" stroke="#4a8a52" stroke-width="1.5"/>
+  <polygon points="472,796 482,791 482,801" fill="#4a8a52"/>
+  <line x1="292" y1="796" x2="264" y2="796" stroke="#4a8a52" stroke-width="1.5"/>
+  <polygon points="264,796 274,791 274,801" fill="#4a8a52"/>
+
+  <!-- 地址空间对应关系说明条 -->
+  <rect x="60" y="846" width="1060" height="40" fill="#f7f9fc" stroke="#d8e0ea" stroke-width="1"/>
+  <text x="590" y="870" font-size="11" text-anchor="middle" fill="#333333">循环缓存是发送端地址空间，HARQ 软缓存是接收端同一地址空间；重复地址在写回时按地址累加</text>
+</svg>
