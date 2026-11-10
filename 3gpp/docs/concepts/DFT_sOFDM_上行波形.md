@@ -15,7 +15,7 @@ source_spec: "TS 38.211 Rel-19 §5.4/§6.3.3; TS 36.211 Rel-19 §5.6"
 
 # DFT-s-OFDM 上行波形
 
-DFT-s-OFDM（离散傅里叶变换扩展正交频分复用，Discrete Fourier Transform Spread OFDM）是 NR 上行 PUSCH（物理上行共享信道，Physical Uplink Shared Channel）的一种波形选择——先在频域做 DFT 预编码再走 OFDM 调制，本质是「单载波」传输：峰均比 PAPR（峰均功率比，Peak-to-Average Power Ratio）低，功放效率高。LTE 的 SC-FDMA（单载波频分多址，Single Carrier Frequency Division Multiple Access）是它的前身；NR 同时支持 DFT-s-OFDM 与纯 OFDM（CP-OFDM，循环前缀正交频分复用，Cyclic Prefix OFDM）两种上行波形，按场景切换。一句话本质：**OFDM 是"多车道并排运输"（每车道一辆车、车流起伏大），DFT-s-OFDM 是"单车道列车"（货物排成一列整体出发、速度均匀油耗低）——代价是灵活度不如多车道**。
+DFT-s-OFDM（离散傅里叶变换扩展正交频分复用，Discrete Fourier Transform Spread OFDM）是 NR 上行 PUSCH（物理上行共享信道，Physical Uplink Shared Channel）的一种波形选择——先在频域做 DFT 预编码再走 OFDM 调制，本质是「单载波」传输：峰均比 PAPR（峰均功率比，Peak-to-Average Power Ratio）低，功放效率高。LTE 的 SC-FDMA（单载波频分多址，Single Carrier Frequency Division Multiple Access）是它的前身；NR 同时支持 DFT-s-OFDM 与纯 OFDM（CP-OFDM，循环前缀正交频分复用，Cyclic Prefix OFDM）两种上行波形，按场景切换。一句话本质：**OFDM 把符号分散到大量子载波上并行发送，时域包络起伏大、峰均功率比高；DFT-s-OFDM 先做离散傅里叶变换再映射到连续子载波，包络平稳、峰均功率比低，代价是频域调度自由度下降**。
 
 ## 解释目标与范围
 
@@ -63,7 +63,7 @@ OFDM 多子载波独立调制，时域信号是多路正弦叠加——幅度起
 
 ## 直观模型
 
-OFDM 像「多车道并排运输」：每车道（子载波）一辆车（符号），车流起伏大（高 PAPR）；DFT-s-OFDM 像「单车道列车」：货物（符号）排成一列整体出发（DFT 预编码），速度均匀、油耗低（低 PAPR、功放省电）——代价是灵活度不如多车道。
+两者的差别体现在时域包络上。OFDM 把符号分散到大量子载波上并行发送，各子载波的相位随机叠加，时域包络起伏大，峰均功率比高；DFT-s-OFDM 先用离散傅里叶变换把符号扩展到频域再映射到连续子载波，等效为在时域上形成单载波式的连续波形，包络起伏小、峰均功率比低，功放可以工作在更高效的点上。代价是频域调度自由度下降：必须占用连续子载波，不能像 OFDM 那样任意分配不连续的资源块。
 
 ## 常见误解
 

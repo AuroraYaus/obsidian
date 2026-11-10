@@ -51,9 +51,24 @@ METAPHOR_PATTERNS = (
     "好比", "像一", "打个比方", "想象一", "犹如",
     "蛋糕", "盘子", "撤盘", "分账", "跑道", "考场", "排座", "考生", "监考",
     "货物", "标尺", "井水不犯河水", "黑暗隧道", "水管",
+    # 2026-11-10 第二轮：全文书面化扫描补入的实际样本
+    "商场", "电梯", "车站", "站台", "公告屏", "服务台", "车厢", "运货",
+    "公路", "车队", "救护车", "车道", "绿灯", "告示牌", "列车",
+    "索引卡", "工作单(?!元)", "自由职业", "凭什么", "门禁", "快车道",
 )
 
 REQUIRED_SECTIONS = ("## 解释目标与范围", "## 科学定义", "## 直观模型", "## 常见误解", "## 协议锚点", "## 图谱关联")
+
+
+def _hit(pattern: str, text: str) -> bool:
+    """@brief 判断某个比喻模式是否命中（含正则模式）
+    @param pattern 词或正则
+    @param text 被检查文本
+    @return 是否命中
+    """
+    if "(" in pattern or "[" in pattern:
+        return re.search(pattern, text) is not None
+    return pattern in text
 
 
 def split_frontmatter(text: str) -> tuple[str, str]:
@@ -92,7 +107,7 @@ def check_file(path: Path) -> dict:
     if mm and not mm.group(1).strip():
         fails.append("## 直观模型 内容为空")
 
-    hits = [w for w in METAPHOR_PATTERNS if w in body]
+    hits = [w for w in METAPHOR_PATTERNS if _hit(w, body)]
     if hits:
         fails.append("生活比喻残留： " + "、".join(hits))
 

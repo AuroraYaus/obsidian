@@ -16,7 +16,7 @@ source_spec: "TS 38.214 Rel-19 §5.1/§6.1; TS 38.321 Rel-19 §5.4"
 
 # Scheduling Grant 调度与授权
 
-调度授权（Scheduling Grant）是调度器决策的「送达方式」：基站把「这次给你多少资源、怎么收/发」写进 DCI（下行控制信息，Downlink Control Information）——下行叫 DL assignment（下行调度分配），上行叫 UL grant（上行授权）。授权有动态与半静态两种形态：动态授权每个时隙（slot）由 DCI 逐次下发；半静态（SPS/configured grant）一次配置、周期复用，省去重复信令。Grant 是 [[Scheduler_MAC调度器与资源分配]] 的输出、[[PDCCH_物理下行控制信道]] 盲检的收获、[[DCI_下行控制信息]] 字段的用途落地。一句话本质：**Grant 是"工作单"——动态授权每单派一次，SPS/configured grant 签长期合同周期执行，免授权连单都不用等**。
+调度授权（Scheduling Grant）是调度决策在空口上的**下达形式**：基站把「这次给你多少资源、怎么收/发」写进 DCI（下行控制信息，Downlink Control Information）——下行叫 DL assignment（下行调度分配），上行叫 UL grant（上行授权）。授权有动态与半静态两种形态：动态授权每个时隙（slot）由 DCI 逐次下发；半静态（SPS/configured grant）一次配置、周期复用，省去重复信令。Grant 是 [[Scheduler_MAC调度器与资源分配]] 的输出、[[PDCCH_物理下行控制信道]] 盲检的收获、[[DCI_下行控制信息]] 字段的用途落地。一句话本质：**Grant 是"工作单"——动态授权每单派一次，SPS/configured grant 签长期合同周期执行，免授权连单都不用等**。
 
 ## 解释目标与范围
 
@@ -24,13 +24,13 @@ source_spec: "TS 38.214 Rel-19 §5.1/§6.1; TS 38.321 Rel-19 §5.4"
 
 ## 起源与演进
 
-(1) **起点：调度决策要送达 UE。** 调度器做完了决策，UE 却一无所知——必须有一条"送达通道"把"这次给你多少资源、怎么收发"告诉 UE。这条通道就是授权：决策写进 DCI，经 PDCCH 盲检下发。
+(1) **起点：调度决策必须被终端获得。** 调度器做出决策时终端并不知情，因此需要一个信令载体把「本次分配多少资源、以什么参数收发」传递给它。这个载体就是授权：决策写入 DCI，经控制信道盲检下发。
 
 (2) **动态授权：每单派一次。** 每个 slot 的每次传输都由 DCI 逐次授权——灵活精确，但每单都要付一次 PDCCH 盲检与 DCI 开销。对周期小包业务（VoIP）来说，这笔开销重复且浪费。
 
 (3) **半静态授权：签长期合同。** SPS（下行）与 configured grant（上行）把"周期 + 资源位置"一次配好：Type 1 纯 RRC 配置连 DCI 都不需要；Type 2 与 SPS 由 DCI（CS-RNTI 加扰）激活/释放。周期执行、省去重复信令——VoIP 与 URLLC 的主流省信令机制。
 
-(4) **免授权：自由职业的代价。** configured grant 的进一步扩展：UE 按配置直接发，不用等授权——把时延压到极限，代价是多个 UE 可能撞在同一资源上，冲突靠 HARQ 重传与资源池管理兜底。
+(4) **免授权：以碰撞风险换时延。** configured grant 的进一步扩展：终端在配置好的资源池内自行选择传输机会，不必等待逐次授权——时延被压到极限，代价是多个终端可能占用同一资源，冲突由 HARQ 重传与资源池管理消化。
 
 (5) **时序与多用户收尾。** 授权内的 k0/k1/k2 决定 PDCCH→PDSCH→HARQ-ACK→PUSCH 的时隙链条；MU-MIMO 下同一个 RB 可以同时承载多个 UE 的不同层——一个 DCI 只管一个 UE，一个资源却能服务多个。
 
@@ -59,7 +59,7 @@ source_spec: "TS 38.214 Rel-19 §5.1/§6.1; TS 38.321 Rel-19 §5.4"
 
 ## 直观模型
 
-Grant 像「工作单」：动态授权是「每单派一次」（经理每次打电话交代）；SPS/configured grant 是「签订长期合同」（一次签约，周期执行，取消时发通知）；免授权是「自由职业」（不用等单，但可能撞单）。
+三种授权的差别在于「决策下发的时机与频次」。动态授权每次传输都由一条控制信息即时下发资源；半静态授权（SPS 与 configured grant）由高层配置一次周期与资源，之后按周期重复使用，变更或释放时才再发指示；免授权（grant-free）则连周期分配也不预先指定，终端在配置好的资源池内自行选择传输机会，代价是可能与其他终端碰撞。
 
 ## 常见误解
 
@@ -79,7 +79,7 @@ Grant 像「工作单」：动态授权是「每单派一次」（经理每次�
 
 ## 关键要点
 
-1. Grant 是调度决策的送达方式：DL assignment（1_x）调度下行，UL grant（0_x）调度上行。
+1. Grant 是调度决策在空口上的下达形式：DL assignment（1_x）调度下行，UL grant（0_x）调度上行。
 2. 动态授权每 slot 逐次下发；半静态（SPS/configured grant）一次配置周期复用。
 3. configured grant Type 1 纯 RRC 配置无 DCI；Type 2 与 SPS 需 DCI（CS-RNTI）激活/释放。
 4. 免授权把时延压到极限，冲突靠 HARQ 重传与资源池兜底。
@@ -93,4 +93,4 @@ Grant 像「工作单」：动态授权是「每单派一次」（经理每次�
 - [[DCI_下行控制信息]]
 - [[PDCCH_物理下行控制信道]]
 - [[HARQ_Process_HARQ进程管理]]
-- 关系语义：Grant 是调度链路的中枢——调度器产出决策（Scheduler）、DCI 承载字段（DCI）、PDCCH 盲检送达（PDCCH）、HARQ 进程与 k 时序执行（HARQ_Process）、UE 侧按 grant 收发的数据流进入译码链路（T9.0）。
+- 关系语义：Grant 是调度链路的中枢——调度器产出决策（Scheduler）、DCI 承载字段（DCI）、经 PDCCH 盲检下发（PDCCH）、HARQ 进程与 k 时序执行（HARQ_Process）、UE 侧按 grant 收发的数据流进入译码链路（T9.0）。
