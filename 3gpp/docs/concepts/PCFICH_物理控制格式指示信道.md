@@ -16,7 +16,7 @@ queries: 1
 
 # PCFICH 物理控制格式指示信道
 
-PCFICH（物理控制格式指示信道，Physical Control Format Indicator Channel）是 LTE 下行物理信道：每个子帧第 1 个 OFDM 符号上的 16 个资源元素（RE）承载 CFI（控制格式指示），告诉 UE 本子帧控制区域（PDCCH 的地盘）占用几个 OFDM 符号——它是 UE 解码 PDCCH 之前必须先读的第一块"路牌"。一句话本质：**PCFICH 是商场门口的"今日开放楼层"告示牌——牌子固定、内容就一个数（控制区域占几个符号）、人人都能先读到，读完才知道去哪层（PDCCH）找货**。
+PCFICH（物理控制格式指示信道，Physical Control Format Indicator Channel）是 LTE 下行物理信道：每个子帧第 1 个 OFDM 符号上的 16 个资源元素（RE）承载 CFI（控制格式指示），指示本子帧控制区域（PDCCH 的时频范围）占用的 OFDM 符号数——它是 UE 解码 PDCCH 之前必须先读的先决信道。一句话本质：**PCFICH 是控制区域宽度的先决指示信道——时频位置由小区 ID 固定、载荷只有 CFI 一个取值（1/2/3，窄带宽 2/3/4）、在首符号全带宽上分散为 4 个 REG；终端先解出 CFI，才能确定 PDCCH 的符号范围并开始盲检**。
 
 ## 解释目标与范围
 
@@ -73,9 +73,9 @@ PCFICH（物理控制格式指示信道，Physical Control Format Indicator Chan
 ## 图谱关联
 
 - [[概念图谱入口]]
-- [[PDCCH_物理下行控制信道]]（PCFICH 指示的控制区域就是 PDCCH 的地盘）
+- [[PDCCH_物理下行控制信道]]（PCFICH 指示的控制区域即 PDCCH 的时频范围）
 - [[DCI_下行控制信息]]（PDCCH 承载的调度内容本体）
 - [[PBCH_MIB_广播信道]]（同为 LTE 控制域成员、同天线端口发射；NR 中 MIB 取代了 PCFICH 的职能）
 - [[CRS_小区特定参考信号]]（PCFICH 解调依赖 CRS 信道估计）
 - [[Physical_Channels_物理信道]]
-- 关系语义：PCFICH 是 LTE 下行控制域的"开锁钥匙"——先解 PCFICH 得到控制区域符号数，才能定位并盲检 PDCCH 拿到 DCI；NR 时代这一职能被 MIB 的 pdcch-ConfigSIB1 收编。
+- 关系语义：PCFICH 是 LTE 下行控制域的先决信道——先解 PCFICH 得到控制区域符号数，才能定位并盲检 PDCCH 拿到 DCI；NR 时代这一职能被 MIB 的 pdcch-ConfigSIB1 收编。

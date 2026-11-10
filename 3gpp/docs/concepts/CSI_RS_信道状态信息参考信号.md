@@ -14,7 +14,7 @@ source_spec: "TS 38.211 Rel-19 §7.4.1.5; TS 38.214 Rel-19 §5.2"
 
 # CSI-RS 信道状态信息参考信号
 
-CSI-RS（信道状态信息参考信号，Channel State Information Reference Signal）是下行测量参考信号：基站周期性/按需发送已知序列，UE 测量它得到下行信道状态，进而生成 CSI（信道状态信息，Channel State Information）报告（CQI（信道质量指示，Channel Quality Indicator）/PMI（预编码矩阵指示，Precoding Matrix Indicator）/RI（秩指示，Rank Indicator），见 [[Link_Adaptation_链路自适应与CQI]]）。它是链路自适应闭环的测量源，同时服务波束管理（[[Beam_Management_波束管理]]）与时频跟踪（[[TRS_跟踪参考信号]]）。一句话本质：**CSI-RS 是"体检中心的检测设备"——定期体检或临时加检，体检报告（CSI 报告）决定下次饮食方案（MCS/波束）；DMRS 是"吃饭时的试菜"、CSI-RS 是"定期的营养评估"**。
+CSI-RS（信道状态信息参考信号，Channel State Information Reference Signal）是下行测量参考信号：基站周期性/按需发送已知序列，UE 测量它得到下行信道状态，进而生成 CSI（信道状态信息，Channel State Information）报告（CQI（信道质量指示，Channel Quality Indicator）/PMI（预编码矩阵指示，Precoding Matrix Indicator）/RI（秩指示，Rank Indicator），见 [[Link_Adaptation_链路自适应与CQI]]）。它是链路自适应闭环的测量源，同时服务波束管理（[[Beam_Management_波束管理]]）与时频跟踪（[[TRS_跟踪参考信号]]）。一句话本质：**CSI-RS 是下行信道的已知测量参考——基站在约定时频资源上发送已知序列，终端由接收值估计等效信道并折算为 CQI/PMI/RI 上报；测量按配置周期重复或由 DCI 按需触发，结果作用于后续传输的参数选择，本次解调则由与数据同传的 DMRS 承担**。
 
 ## 解释目标与范围
 
@@ -22,13 +22,13 @@ CSI-RS（信道状态信息参考信号，Channel State Information Reference Si
 
 ## 起源与演进
 
-(1) **起点：链路自适应需要测量源。** 基站要选 MCS/波束/秩，必须先知道下行信道状态——CSI-RS 就是测量的标尺。
+(1) **起点：链路自适应需要测量源。** 基站要选 MCS/波束/秩，必须先知道下行信道状态——CSI-RS 提供这一测量所需的已知序列及其时频位置，终端据此估计下行等效信道。
 
 (2) **三大用途。** CSI 测量（SINR → CQI/PMI/RI 上报）、波束管理（L1-RSRP 波束报告）、时频跟踪（trs-Info 配置兼作 TRS）。
 
 (3) **时频结构与配置。** 端口 1-32、密度 0.5/1/3 RE/PRB/端口；NZP-CSI-RS 由 RRC 配置，周期/半持续/非周期三类（非周期由 DCI 触发）。
 
-(4) **与 DMRS 的分工。** DMRS 与数据同传、解当次；CSI-RS 独立发送、管下次——"这包怎么解" vs "下次怎么配"。
+(4) **与 DMRS 的分工。** DMRS 与数据同传、服务当次解调；CSI-RS 独立发送、服务后续调度——前者决定当次传输块如何解调，后者决定下一次传输的参数配置。
 
 (5) **上下行对照。** 下行 CSI-RS（基站发、UE 测）↔ 上行 SRS（UE 发、基站测）——参考信号体系的两半边。
 
@@ -44,11 +44,11 @@ CSI-RS（信道状态信息参考信号，Channel State Information Reference Si
 
 - 端口数：1/2/4/8/12/16/24/32（协议表给出每端口密度组合）；密度：0.5/1/3 RE（资源元素，Resource Element）/PRB（物理资源块，Physical Resource Block）/端口。
 - 配置：NZP-CSI-RS（非零功率 CSI-RS，Non-Zero-Power CSI-RS）资源由 RRC（无线资源控制，Radio Resource Control）配置（CSI-ResourceConfig，TS 38.331），周期/半持续/非周期三类（非周期由 DCI（下行控制信息，Downlink Control Information）触发）。
-- 与 DMRS 分工：DMRS 用于 PDSCH（物理下行共享信道，Physical Downlink Shared Channel）/PUSCH（物理上行共享信道，Physical Uplink Shared Channel）解调（与数据同传、UE 专用），CSI-RS 用于测量（独立发送、可多用户共用）——一个服务于"这包数据怎么解"，一个服务于"下次传输怎么配"。
+- 与 DMRS 分工：DMRS 用于 PDSCH（物理下行共享信道，Physical Downlink Shared Channel）/PUSCH（物理上行共享信道，Physical Uplink Shared Channel）解调（与数据同传、UE 专用），CSI-RS 用于测量（独立发送、可多用户共用）——前者决定当次传输块如何解调，后者决定下一次传输的参数配置。
 
 ## 直观模型
 
-CSI-RS 像「体检中心的检测设备」：定期体检（周期发送）或临时加检（非周期触发），体检报告（CSI 报告）决定下次饮食方案（MCS（调制与编码方案，Modulation and Coding Scheme）/波束配置）；DMRS 是"吃饭时的试菜"（解调当次数据），CSI-RS 是"定期的营养评估"（规划后续传输）。
+CSI-RS 的测量关系可分解为三层。第一层是发送侧：基站在 RRC 配置的时频资源（周期、半持续或非周期）上发送已知序列，端口数与密度决定测量开销。第二层是测量侧：终端在相同资源上取接收值与已知序列之比，得到该时频点的等效信道，再按端口与资源集汇总为 SINR 或 L1-RSRP。第三层是上报侧：终端把测量结果折算为 CQI/PMI/RI 或波束指示，在 CSI 上报时机反馈给基站。三层的时序关系是单向的：本次测量结果只进入下一次调度的参数选择，不参与当次数据的解调——当次解调由与数据同传的 DMRS 承担。测量密度与开销同向：单位带宽内参考资源越多，估计越准，可用于数据的资源越少。
 
 ## 常见误解
 

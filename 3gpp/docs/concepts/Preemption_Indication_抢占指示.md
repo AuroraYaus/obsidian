@@ -18,7 +18,7 @@ queries: 1
 
 # Preemption Indication 抢占指示
 
-抢占指示（Pre-emption Indication，PI）是 NR 中基站通过 DCI format 2_1（INT-RNTI 加扰的组公共 PDCCH（物理下行控制信道，Physical Downlink Control Channel））下发的通知：在最近一个监测周期内，哪些 PRB（物理资源块，Physical Resource Block）和 OFDM（正交频分复用，Orthogonal Frequency Division Multiplexing）符号上"基站可能没有向该 UE 发送数据"。它是 eMBB（增强移动宽带，Enhanced Mobile Broadband）与 URLLC（超可靠低时延通信，Ultra-Reliable Low-Latency Communication）下行复用的配套机制——URLLC 低时延分组不等时隙边界、直接打孔正在进行的 eMBB 传输之后，被抢占的 eMBB 接收端借助 PI 定位被打孔的位置，把受损的 LLR（对数似然比，Log-Likelihood Ratio）从软解调输入中剔除，避免用被破坏的信息参与译码。一句话本质：**PI 是"事后补发的让行说明单"——救护车（URLLC）压坏长车队（eMBB）的货物后，调度中心标出破损位置，货主把压坏件丢掉继续验货**。
+抢占指示（Pre-emption Indication，PI）是 NR 中基站通过 DCI format 2_1（INT-RNTI 加扰的组公共 PDCCH（物理下行控制信道，Physical Downlink Control Channel））下发的通知：在最近一个监测周期内，哪些 PRB（物理资源块，Physical Resource Block）和 OFDM（正交频分复用，Orthogonal Frequency Division Multiplexing）符号上"基站可能没有向该 UE 发送数据"。它是 eMBB（增强移动宽带，Enhanced Mobile Broadband）与 URLLC（超可靠低时延通信，Ultra-Reliable Low-Latency Communication）下行复用的配套机制——URLLC 低时延分组不等时隙边界、直接打孔正在进行的 eMBB 传输之后，被抢占的 eMBB 接收端借助 PI 定位被打孔的位置，把受损的 LLR（对数似然比，Log-Likelihood Ratio）从软解调输入中剔除，避免用被破坏的信息参与译码。一句话本质：**PI 是对已发生资源占用的后验指示——URLLC 传输在 eMBB 已分配的时频资源上打孔之后，基站在下一监测时机用 DCI 2_1 的位图指明哪些符号组与 PRB 子集上未向该 UE 发送数据；UE 据此把这些位置的 LLR 置零或丢弃，其余位置照常合并译码，HARQ 流程不变**。
 
 ## 解释目标与范围
 
@@ -26,21 +26,21 @@ queries: 1
 
 ## 起源与演进
 
-(1) **起点：URLLC 等不起时隙边界。** URLLC 业务的时延预算在毫秒量级，若等下一个 slot 边界再调度，排队时延不可接受。NR 允许基站直接在一个进行中的 eMBB 时隙内、用部分符号 × 部分 PRB 立即发送 URLLC——对 eMBB 而言相当于被打了孔。
+(1) **起点：URLLC 无法等待时隙边界。** URLLC 业务的时延预算在毫秒量级，若等下一个 slot 边界再调度，排队时延不可接受。NR 允许基站直接在一个进行中的 eMBB 时隙内、用部分符号 × 部分 PRB 立即发送 URLLC——对 eMBB 而言即被打孔。
 
-(2) **事后通知的必要性。** 打孔发生在调度 eMBB 的 DCI 之后，eMBB UE 事先毫不知情；若它把被打孔位置的 URLLC 干扰信号当作自己的数据软解调，译码将严重劣化。PI（DCI 2_1、INT-RNTI 加扰的组公共 PDCCH）就是事后的"补发通知"。
+(2) **事后通知的必要性。** 打孔发生在调度 eMBB 的 DCI 之后，eMBB UE 事先毫不知情；若它把被打孔位置的 URLLC 干扰信号当作自己的数据软解调，译码将严重劣化。PI（DCI 2_1、INT-RNTI 加扰的组公共 PDCCH）就是这一事后的可用性通知。
 
 (3) **指示机制：14 位时频位图。** 每个服务小区对应一条 14 位指示：set0 纯时域（每位对应一组连续符号、覆盖整个 BWP 宽度）；set1 时频二维（每对位对应一组符号 × 半个 BWP）。位值 1 = 该资源上基站没有向该 UE 的传输（可能被抢占）。
 
 (4) **行为边界：假设许可，而非强制动作。** UE 可假设指示资源上没有自己的数据，把对应位置的 LLR 剔除或置零再译码——协议不强制丢弃、不改变 HARQ 流程：丢弃后译码失败，照常反馈 NACK 触发重传；指示对 SS/PBCH 块接收不适用。
 
-(5) **收束。** 综上所述，PI 把"事后才知道的损坏"转化为"译码前可执行的剔除"——受损位置 LLR 置零、其余证据照常合并（完整类比见直观模型）。
+(5) **收束。** 综上所述，PI 把"事后才知道的损坏"转化为"译码前可执行的剔除"——受损位置 LLR 置零、其余证据照常合并（完整机制见直观模型）。
 
 ## 科学定义
 
 ### 机制背景：URLLC 抢占 eMBB
 
-URLLC 业务的时延预算在毫秒量级，若等下一个时隙边界再调度，排队时延不可接受。NR 允许基站直接在一个进行中的 eMBB 时隙内、用部分符号与部分 PRB 立即调度 URLLC 传输——被覆盖的 eMBB 资源相当于被打孔（puncturing）。由于该打孔发生在调度 eMBB 的 DCI 之后，eMBB UE 事先不知情；若它把被打孔位置的干扰信号当作自己的数据软解调，译码将严重劣化。PI 就是事后的"补发通知"。
+URLLC 业务的时延预算在毫秒量级，若等下一个时隙边界再调度，排队时延不可接受。NR 允许基站直接在一个进行中的 eMBB 时隙内、用部分符号与部分 PRB 立即调度 URLLC 传输——被覆盖的 eMBB 资源即被打孔（puncturing）。由于该打孔发生在调度 eMBB 的 DCI 之后，eMBB UE 事先不知情；若它把被打孔位置的干扰信号当作自己的数据软解调，译码将严重劣化。PI 就是这一事后的可用性通知。
 
 ### 配置与监测（RRC 层）
 

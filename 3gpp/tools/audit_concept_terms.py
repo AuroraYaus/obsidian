@@ -138,7 +138,8 @@ def iter_notes(paths: list[str]) -> list[Path]:
         else:
             print(f"SKIP 路径不存在: {raw}", file=sys.stderr)
     # 入口类文件不是概念笔记，跳过
-    return [p for p in out if p.name not in {"概念图谱入口.md", "README.md"}]
+    # 清单类与索引类文件不是概念笔记，不适用六段式模板，排除
+    return [p for p in out if p.name not in {"概念图谱入口.md", "README.md", "3GPP全流程_缩写概念理论清单.md"}]
 
 
 def main() -> int:
