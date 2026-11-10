@@ -34,9 +34,9 @@ source_spec: "Engineering methodology; C/C++ implementation"
 
 运算符与记号惯例有三点。其一，$\lceil\cdot\rceil$ 表示向上取整，$K/L_{lane}$ 的结果只要有小数就进一位，这是补齐长度的来源。其二，$L_{lane}$ 的下标 lane 是限定词而不是变量，读作「lane 数」，不表示 $L$ 与 lane 相乘。其三，byte 与 bit 的换算是 1 byte 等于 8 bit，本笔记的数值例一律按 int16、2 byte 计算，换用 int8 时同一 cache line 能容纳的元素数翻倍。
 
-## 独立解释任务
+## 解释目标与范围
 
-任务目标：解释译码器 C/C++ 实现中 SIMD 与内存布局如何共同决定吞吐，给出向量宽度与 lane 数的换算、缓存行与步长对有效带宽的影响、结构数组与数组结构在 hot loop 上的差别，以及对齐与补齐对 bit-exact 回放稳定性的约束。
+本节目标：解释译码器 C/C++ 实现中 SIMD 与内存布局如何共同决定吞吐，给出向量宽度与 lane 数的换算、缓存行与步长对有效带宽的影响、结构数组与数组结构在 hot loop 上的差别，以及对齐与补齐对 bit-exact 回放稳定性的约束。
 
 ## 前置概念
 

@@ -16,9 +16,9 @@ source_spec: "TS 38.300 Rel-19 §5.4; TS 38.213 Rel-19 §10"
 
 载波聚合（Carrier Aggregation, CA）把多个载波（CC，分量载波，Component Carrier）聚合起来服务同一 UE：一个主载波（PCell，主小区，Primary Cell）管连接与移动性，多个辅载波（SCell，辅小区，Secondary Cell）加带宽提吞吐。CA 是吞吐扩展的机制——单载波带宽受限（FR1（频率范围 1，Frequency Range 1）100 MHz），聚合多个 CC 可达数百 MHz。每载波有独立的 HARQ（混合自动重传请求，Hybrid Automatic Repeat Request）进程与调度，跨载波调度经 CIF（载波指示字段，Carrier Indicator Field）指示。一句话本质：**CA 是"多车道并道"——单车道限速就并成高速；主车道指挥、辅车道跑货，每条车道独立计程**。
 
-## 独立解释任务
+## 解释目标与范围
 
-任务目标：讲清 CA 的原理（多 CC 聚合）、PCell/SCell 的角色分工、跨载波调度（CIF）机制、每载波独立 HARQ/调度的含义，以及 CA 与 BWP（带宽部分，Bandwidth Part）的关系。
+本节目标：讲清 CA 的原理（多 CC 聚合）、PCell/SCell 的角色分工、跨载波调度（CIF）机制、每载波独立 HARQ/调度的含义，以及 CA 与 BWP（带宽部分，Bandwidth Part）的关系。
 
 ## 起源与演进
 

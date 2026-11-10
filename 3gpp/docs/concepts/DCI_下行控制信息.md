@@ -71,9 +71,9 @@ queries: 1
 
 DCI 是基站下发给 UE 的调度载荷：一条 DCI 针对一个或多个小区、使用一个 RNTI 加扰，字段按规范描述的顺序排成比特串。接收端解析出的 MCS（调制与编码方案，Modulation and Coding Scheme）、资源分配、HARQ（混合自动重传请求，Hybrid Automatic Repeat Request）进程号、NDI（新数据指示，New Data Indicator）与 RV（冗余版本，Redundancy Version）直接生成译码器描述符（descriptor），链路位置见 [[Scheduling_Grant_调度与授权]]。一句话本质：**DCI 是字段到语义的查表索引——每段定长比特的含义由「查哪张协议表或 RRC 表」决定，字段宽度由 BWP 大小、RRC 配置与 RNTI 共同决定；DCI 本身不含目标标识字段，身份由 CRC 的 RNTI 加扰隐式承担。**
 
-## 独立解释任务
+## 解释目标与范围
 
-任务目标：讲清 DCI 的格式族与字段构成，说明字段位宽如何随 RRC 配置、BWP 大小与 RNTI 变化（以 format 1_1 的手算对照为例），并说明 DCI 与 PDCCH、搜索空间、盲检之间的承载关系。
+本节目标：讲清 DCI 的格式族与字段构成，说明字段位宽如何随 RRC 配置、BWP 大小与 RNTI 变化（以 format 1_1 的手算对照为例），并说明 DCI 与 PDCCH、搜索空间、盲检之间的承载关系。
 
 ## 前置概念
 

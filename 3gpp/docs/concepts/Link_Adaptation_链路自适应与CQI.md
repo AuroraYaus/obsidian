@@ -17,9 +17,9 @@ source_spec: "TS 38.214 Rel-19 §5.2; TS 38.213 Rel-19 §9; TS 38.331 Rel-19 §6
 
 链路自适应（Link Adaptation）让传输速率跟着信道走：UE（用户设备，User Equipment）测量下行 CSI-RS（信道状态信息参考信号，Channel State Information Reference Signal）的 SINR（信干噪比，Signal-to-Interference-plus-Noise Ratio），折算成 CQI（信道质量指示，Channel Quality Indicator）上报，基站据此选择 MCS（调制与编码方案，Modulation and Coding Scheme）——信道好就传得快、信道差就传得稳。它由 CSI（信道状态信息，Channel State Information）反馈环路驱动，是 [[Scheduler_MAC调度器与资源分配]] 的频率选择性调度与 MCS 选择的上游输入。一句话本质：**链路自适应是"自助餐配菜"——顾客（UE）先报胃口（CQI），厨师（调度器）按胃口配菜量（MCS）；吃完反馈咸淡（ACK/NACK），厨师调盐（outer loop 修正），下一次配菜更准**。
 
-## 独立解释任务
+## 解释目标与范围
 
-任务目标：讲清链路自适应闭环（测量→CQI→MCS→反馈→修正）、CQI/PMI/RI 三件报告的内容与作用、CQI 报告的周期/非周期与宽带/子带类型，以及 outer loop（外环）如何用 ACK/NACK 校准 CQI 误差。
+本节目标：讲清链路自适应闭环（测量→CQI→MCS→反馈→修正）、CQI/PMI/RI 三件报告的内容与作用、CQI 报告的周期/非周期与宽带/子带类型，以及 outer loop（外环）如何用 ACK/NACK 校准 CQI 误差。
 
 ## 起源与演进
 

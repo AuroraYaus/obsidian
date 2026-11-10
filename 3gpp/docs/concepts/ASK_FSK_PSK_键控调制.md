@@ -16,9 +16,9 @@ source_spec: "TS 38.211 Rel-19 §5.1; 通信原理教材背景知识"
 
 数字调制把二进制比特"画"到载波上。正弦载波有三个可变的参数——幅度 A、频率 f、相位 φ——键控调制（Keying）就是分别用比特去控制这三个参数：ASK（幅度键控，Amplitude Shift Keying）控幅度、FSK（频移键控，Frequency Shift Keying）控频率、PSK（相移键控，Phase Shift Keying）控相位。LTE/NR 实际使用的是 PSK 家族的 BPSK（二进制相移键控，Binary Phase Shift Keying）/QPSK（正交相移键控，Quadrature Phase Shift Keying）以及 QAM（正交幅度调制，Quadrature Amplitude Modulation），但 ASK/FSK 是理解"为什么是 PSK 胜出"的对照基础。一句话本质：**三种键控是"三种提问方式"——ASK 灯亮=1 灯灭=0（幅度）、FSK 高音=1 低音=0（频率）、PSK 点头=1 摇头=0（相位）；点头摇头与幅度无关所以抗干扰最强，这正是 PSK 胜出的直觉**。
 
-## 独立解释任务
+## 解释目标与范围
 
-任务目标：讲清 ASK/FSK/PSK 三种键控调制的原理、信号表达式、解调方式与性能差异，说明 PSK 家族如何演进到 BPSK/QPSK 再到 QAM，并衔接知识库既有调制内容（T2.13 软解调、T2.14 QAM）。
+本节目标：讲清 ASK/FSK/PSK 三种键控调制的原理、信号表达式、解调方式与性能差异，说明 PSK 家族如何演进到 BPSK/QPSK 再到 QAM，并衔接知识库既有调制内容（T2.13 软解调、T2.14 QAM）。
 
 ## 起源与演进
 

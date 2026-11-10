@@ -18,9 +18,9 @@ source_spec: "Engineering methodology; decoder verification"
 
 Bit-Exact 回归验证要求同一输入在所有实现层级（Python ↔ C/C++ ↔ RTL（寄存器传输级，Register Transfer Level））产生逐比特一致的输出。一句话本质：**bit-exact 回归是"三方对账"——手算、Excel、银行流水分毫不差才算平账，差一分钱都说明某处进位或舍入不一致；差异点直接指向溢出、舍入或状态机错误，而不是笼统的"结果不对"**。
 
-## 独立解释任务
+## 解释目标与范围
 
-任务目标：解释分层比对框架中各层级的误差容限为何不同，以及 bit-exact 与功能正确之间的区别。
+本节目标：解释分层比对框架中各层级的误差容限为何不同，以及 bit-exact 与功能正确之间的区别。
 
 ## 起源与演进
 

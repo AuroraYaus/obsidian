@@ -17,9 +17,9 @@ source_spec: "TS 36.213; TS 38.214 §5.1.7"
 
 Chase 合并（Chase Combining，CC）是 HARQ（混合自动重传请求，Hybrid Automatic Repeat reQuest）中最简单的软合并方式：每次重传发送相同编码比特，接收端把同一编码位置的多份 LLR（对数似然比，Log-Likelihood Ratio）相加后送译码。一句话本质：**CC 是"两位证人独立作证"——说法一致信心倍增（能量翻倍、等效信噪比约 +3 dB），说法矛盾置信度反而下降**。
 
-## 独立解释任务
+## 解释目标与范围
 
-任务目标：解释混合自动重传请求（Hybrid Automatic Repeat reQuest, HARQ）中最简单的软合并方式——Chase 合并（Chase Combining, CC）：重传相同编码比特、接收端按编码位置累加 LLR 的原理、增益来源与适用边界。
+本节目标：解释混合自动重传请求（Hybrid Automatic Repeat reQuest, HARQ）中最简单的软合并方式——Chase 合并（Chase Combining, CC）：重传相同编码比特、接收端按编码位置累加 LLR 的原理、增益来源与适用边界。
 
 CC 位于接收端解速率匹配之后、信道译码之前：把多次传输的对数似然比（Log-Likelihood Ratio, LLR）在软缓存（Soft Buffer）中按编码位置合并后送入译码器。
 

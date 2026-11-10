@@ -16,9 +16,9 @@ source_spec: "TS 38.211 Rel-19 §7.4.1.5; TS 38.214 Rel-19 §5.2"
 
 CSI-RS（信道状态信息参考信号，Channel State Information Reference Signal）是下行测量参考信号：基站周期性/按需发送已知序列，UE 测量它得到下行信道状态，进而生成 CSI（信道状态信息，Channel State Information）报告（CQI（信道质量指示，Channel Quality Indicator）/PMI（预编码矩阵指示，Precoding Matrix Indicator）/RI（秩指示，Rank Indicator），见 [[Link_Adaptation_链路自适应与CQI]]）。它是链路自适应闭环的测量源，同时服务波束管理（[[Beam_Management_波束管理]]）与时频跟踪（[[TRS_跟踪参考信号]]）。一句话本质：**CSI-RS 是"体检中心的检测设备"——定期体检或临时加检，体检报告（CSI 报告）决定下次饮食方案（MCS/波束）；DMRS 是"吃饭时的试菜"、CSI-RS 是"定期的营养评估"**。
 
-## 独立解释任务
+## 解释目标与范围
 
-任务目标：讲清 CSI-RS 的三大用途（CSI 测量/波束管理/跟踪）、时频结构与端口配置（端口数/密度/NZP-CSI-RS 资源集），以及与 DMRS（解调参考信号，Demodulation Reference Signal）和 SRS（探测参考信号，Sounding Reference Signal）在参考信号体系中的分工。
+本节目标：讲清 CSI-RS 的三大用途（CSI 测量/波束管理/跟踪）、时频结构与端口配置（端口数/密度/NZP-CSI-RS 资源集），以及与 DMRS（解调参考信号，Demodulation Reference Signal）和 SRS（探测参考信号，Sounding Reference Signal）在参考信号体系中的分工。
 
 ## 起源与演进
 

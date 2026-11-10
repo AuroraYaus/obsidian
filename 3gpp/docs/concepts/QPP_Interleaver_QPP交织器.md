@@ -61,9 +61,9 @@ queries: 1
 
 QPP 交织器（Quadratic Permutation Polynomial interleaver）是 LTE Turbo 编码器中两个递归系统卷积（Recursive Systematic Convolutional, RSC）编码器之间的地址置换，也是译码侧两个软输入软输出（Soft-Input Soft-Output, SISO）译码器交换外信息（extrinsic information）时使用的地址映射。它的置换不是查表得到的，而是由 $f_1$、$f_2$、$K$ 三个整数按公式现算；三个整数逐 $K$ 固定在一张协议表里，因此实现两端不需要传输置换表，也不能自行改参数。
 
-## 独立解释任务
+## 解释目标与范围
 
-任务目标：把 LTE Turbo 内部交织器解释为一个由二次置换多项式（Quadratic Permutation Polynomial, QPP）定义的确定性地址置换，说明它成为双射的充要条件、参数为什么必须查表而不能自选，并用 $K=40$、$f_1=3$、$f_2=10$ 逐项手算 $\Pi(0)$ 至 $\Pi(7)$、给出若干点的反函数值，最后读出置换散点图与偏移量分布图。链路位置：发射侧位于 Turbo 编码器的两个组成编码器之间，接收侧位于两个 SISO 译码器的外信息交换处。
+本节目标：把 LTE Turbo 内部交织器解释为一个由二次置换多项式（Quadratic Permutation Polynomial, QPP）定义的确定性地址置换，说明它成为双射的充要条件、参数为什么必须查表而不能自选，并用 $K=40$、$f_1=3$、$f_2=10$ 逐项手算 $\Pi(0)$ 至 $\Pi(7)$、给出若干点的反函数值，最后读出置换散点图与偏移量分布图。链路位置：发射侧位于 Turbo 编码器的两个组成编码器之间，接收侧位于两个 SISO 译码器的外信息交换处。
 
 ## 前置概念
 

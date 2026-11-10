@@ -58,9 +58,9 @@ queries: 2
 
 三者的关系是包含关系而非并列关系：资源网格由 $(k,l)$ 坐标组成，物理资源块截取其中 12 个连续子载波，导频（参考信号）再在 PRB 内截取若干具体坐标。该几何关系与导频开销的量化影响见下文「资源层级：RE、PRB 与导频占位」。
 
-## 独立解释任务
+## 解释目标与范围
 
-任务目标：讲清 RE 映射的填充规则（先频后时、符号到 (k,l) 的坐标映射）、参考信号避让（DMRS/CSI-RS/PTRS 占位与 rate matching around RS），以及 PDSCH（物理下行共享信道，Physical Downlink Shared Channel）/PUSCH（物理上行共享信道，Physical Uplink Shared Channel）RE 映射的差异。
+本节目标：讲清 RE 映射的填充规则（先频后时、符号到 (k,l) 的坐标映射）、参考信号避让（DMRS/CSI-RS/PTRS 占位与 rate matching around RS），以及 PDSCH（物理下行共享信道，Physical Downlink Shared Channel）/PUSCH（物理上行共享信道，Physical Uplink Shared Channel）RE 映射的差异。
 
 ## 前置概念
 

@@ -16,9 +16,9 @@ source_spec: "TS 38.213 Rel-19 §6; TS 38.331 Rel-19 §6.3.2"
 
 波束管理（Beam Management）管理高频段（FR2（频率范围 2，Frequency Range 2））的定向传输：基站与 UE 用窄波束收发，需要先找到最佳波束对（beam pair），并在波束失效时快速恢复。流程分四步——波束测量（SSB/CSI-RS 波束的 L1-RSRP（层 1 参考信号接收功率，Layer 1 Reference Signal Received Power））、波束报告（UE 上报最佳波束）、波束指示（TCI（传输配置指示，Transmission Configuration Indication）状态切换下行波束）、波束失败恢复（BFR，Beam Failure Recovery，检测+恢复）。它是 FR2 可靠性的核心机制，与 [[PSS_SSS_同步信号与小区搜索]]（SSB 波束扫描）、[[CSI_RS_信道状态信息参考信号]]（波束测量源）、[[PRACH_随机接入]]（BFR 专用前导）紧密衔接。一句话本质：**波束管理是"手电筒照路"——初始不知道路在哪先四面八方扫一遍（SSB 波束扫描），找到最亮的照法（波束报告），走路时定期确认方向（CSI-RS 测量），手电筒坏了（波束失败）就换备用方案（BFR）**。
 
-## 独立解释任务
+## 解释目标与范围
 
-任务目标：讲清波束管理的四步流程（测量/报告/指示/恢复）、SSB 与 CSI-RS 在波束测量中的分工、TCI 状态机制，以及 BFR 的检测与恢复过程。
+本节目标：讲清波束管理的四步流程（测量/报告/指示/恢复）、SSB 与 CSI-RS 在波束测量中的分工、TCI 状态机制，以及 BFR 的检测与恢复过程。
 
 ## 起源与演进
 

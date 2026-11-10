@@ -53,7 +53,7 @@ METAPHOR_PATTERNS = (
     "货物", "标尺", "井水不犯河水", "黑暗隧道", "水管",
 )
 
-REQUIRED_SECTIONS = ("## 独立解释任务", "## 科学定义", "## 直观模型", "## 常见误解", "## 协议锚点", "## 图谱关联")
+REQUIRED_SECTIONS = ("## 解释目标与范围", "## 科学定义", "## 直观模型", "## 常见误解", "## 协议锚点", "## 图谱关联")
 
 
 def split_frontmatter(text: str) -> tuple[str, str]:

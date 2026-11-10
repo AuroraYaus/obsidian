@@ -17,9 +17,9 @@ source_spec: "TS 36.212 §5.1.3"
 
 RSC（递归系统卷积码，Recursive Systematic Convolutional Code）是 LTE Turbo 编码器的基本组成单元：两个 8 状态 RSC 并行级联，译码端由 BCJR 算法沿对应网格译码。一句话本质：**RSC 是"带记忆回路的抄写员"——系统位直通留底、校验位带历史记忆，反馈回路把短记忆变成无限记忆**。
 
-## 独立解释任务
+## 解释目标与范围
 
-任务目标：解释递归系统卷积码（Recursive Systematic Convolutional Code, RSC）的"递归"与"系统"两重结构，说明它为什么是 Turbo 码组成编码器的必然选择。在 LTE/NR 译码链路中的位置：RSC 是 LTE Turbo 编码器的基本组成单元——两个 8 状态 RSC 并行级联，译码端由 BCJR 算法沿对应网格（Trellis）译码。
+本节目标：解释递归系统卷积码（Recursive Systematic Convolutional Code, RSC）的"递归"与"系统"两重结构，说明它为什么是 Turbo 码组成编码器的必然选择。在 LTE/NR 译码链路中的位置：RSC 是 LTE Turbo 编码器的基本组成单元——两个 8 状态 RSC 并行级联，译码端由 BCJR 算法沿对应网格（Trellis）译码。
 
 ## 起源与演进
 

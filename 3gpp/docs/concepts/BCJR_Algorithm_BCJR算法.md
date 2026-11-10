@@ -19,9 +19,9 @@ source_spec: "Bahl-Cocke-Jelinek-Raviv 1974; TS 36.212 algorithmic context"
 
 BCJR 是最优逐比特 MAP（最大后验概率，Maximum A Posteriori）译码算法，在网格图上运行前向 α 和后向 β 递归，输出每个信息比特的后验对数似然比（Log-Likelihood Ratio, LLR）。一句话本质：**BCJR 是"双向路网巡游"——α 从起点向终点累积证据、β 从终点向起点累积证据，两条证据在每条边上会合，才得到该比特的可靠度**。
 
-## 独立解释任务
+## 解释目标与范围
 
-任务目标：解释 BCJR 为什么能给出最优逐比特判决，以及 Log-MAP 与 Max-Log-MAP 两种工程实现之间的精度与复杂度取舍。
+本节目标：解释 BCJR 为什么能给出最优逐比特判决，以及 Log-MAP 与 Max-Log-MAP 两种工程实现之间的精度与复杂度取舍。
 
 ## 起源与演进
 

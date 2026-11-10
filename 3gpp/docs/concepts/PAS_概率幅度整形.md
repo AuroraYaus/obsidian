@@ -16,9 +16,9 @@ source_spec: "非 3GPP 标准（6G 候选）; Qualcomm evaluation-link-simulator
 
 PAS（Probabilistic Amplitude Shaping）是概率整形与 FEC 结合的**框架**：把符号拆成"幅度"（决定能量，可整形）和"符号"（决定正负，保持均匀），只对幅度做概率整形：$s = a \cdot \sigma$（a ∈ {1,3,5,…}，σ ∈ {±1}）。一句话本质：**PAS 是"分工打包"——货物（信息）分两路：一路走慢速整形通道（幅度，控制能量）、一路走快速均匀通道（符号，放校验冗余）；两条通道各干各的，整形的不会被 FEC 搅匀**。
 
-## 独立解释任务
+## 解释目标与范围
 
-任务目标：解释整形怎么和 FEC 共存而不被"搅匀"，以及 amplitude/sign 分工的依据。
+本节目标：解释整形怎么和 FEC 共存而不被"搅匀"，以及 amplitude/sign 分工的依据。
 
 ## 起源与演进
 

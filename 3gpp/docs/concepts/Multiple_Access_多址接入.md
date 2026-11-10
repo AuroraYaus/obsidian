@@ -16,9 +16,9 @@ source_spec: "TS 38.211 Rel-19 §4/§5; TS 36.211; 教材背景知识"
 
 多址接入（Multiple Access）解决"多个用户如何共享同一段无线频谱"的问题。历史上出现过四类主流方案：FDMA（频分多址）、TDMA（时分多址）、CDMA（码分多址）、OFDMA（正交频分多址）——它们分别在频率、时间、码、子载波四个维度上给用户划分互不干扰的资源。LTE/NR 最终选择了 OFDMA（下行）/SC-FDMA（上行，单载波频分多址，Single Carrier Frequency Division Multiple Access），这个选择是 1G 到 5G 演进的技术收敛。一句话本质：**多址是"分蛋糕"——FDMA 分车道、TDMA 红绿灯轮放、CDMA 大厅里各讲各的语言、OFDMA 停车场划格子；四代方案在频/时/码/子载波四个维度切资源**。
 
-## 独立解释任务
+## 解释目标与范围
 
-任务目标：讲清 FDMA/TDMA/CDMA/OFDMA 四种多址方式各自的资源划分原理、代表系统、优缺点，解释为什么 LTE/NR 在 4G/5G 时代选择了 OFDMA 而不是 CDMA。
+本节目标：讲清 FDMA/TDMA/CDMA/OFDMA 四种多址方式各自的资源划分原理、代表系统、优缺点，解释为什么 LTE/NR 在 4G/5G 时代选择了 OFDMA 而不是 CDMA。
 
 ## 起源与演进
 

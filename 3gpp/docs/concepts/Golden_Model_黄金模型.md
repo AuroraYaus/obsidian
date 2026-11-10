@@ -19,9 +19,9 @@ source_spec: "Engineering methodology; verified against TS 36.212/38.212 codec p
 
 Golden Model 是用 Python 实现的浮点精度译码参考模型，作为定点化、RTL 实现和 bit-exact 回归验证的"黄金标准"。Golden Model 的输出是 BER/BLER 性能上界。一句话本质：**Golden Model 是"验证链的黄金尺子"——浮点精度的译码参考模型，任何定点/RTL 实现的 BLER 都只能比它差不能比它好；失败帧的完整证据链保证第二天还能逐字段复现同一个失败**。
 
-## 独立解释任务
+## 解释目标与范围
 
-任务目标：解释黄金参考模型（Golden Model）的定义、工程布局与证据链要求——可复现输入、可解释协议身份、可回放随机性、可对比输出、可归档证据，并说明它为何成为定点化与寄存器传输级（Register Transfer Level, RTL）实现的正确性基准。在 LTE/NR 译码链路中，Golden Model 位于算法与硬件之间：Python 浮点模型先按 TS 36.212/38.212 协议链路验证译码算法，其输出性能上界与失败帧证据随后被 C/C++ 定点模型和 RTL 在比特精确（bit-exact）回归中逐项比对。
+本节目标：解释黄金参考模型（Golden Model）的定义、工程布局与证据链要求——可复现输入、可解释协议身份、可回放随机性、可对比输出、可归档证据，并说明它为何成为定点化与寄存器传输级（Register Transfer Level, RTL）实现的正确性基准。在 LTE/NR 译码链路中，Golden Model 位于算法与硬件之间：Python 浮点模型先按 TS 36.212/38.212 协议链路验证译码算法，其输出性能上界与失败帧证据随后被 C/C++ 定点模型和 RTL 在比特精确（bit-exact）回归中逐项比对。
 
 ## 起源与演进
 

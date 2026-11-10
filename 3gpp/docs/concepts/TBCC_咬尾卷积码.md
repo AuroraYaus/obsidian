@@ -16,9 +16,9 @@ source_spec: "TS 36.212 Rel-19 §5.1.3.1; TS 36.211 Rel-19 §6.8"
 
 咬尾卷积码（Tail Biting Convolutional Code, TBCC）是 LTE 控制信道的信道编码：PDCCH（物理下行控制信道）与 PBCH（物理广播信道）的比特都用它编码。它与 Turbo 的分量码一样是卷积码，但不用收尾比特（tail bits）——编码器的初态被设为"信息比特尾部对应的状态"，使网格首尾相连成环，零比特率损失。它没有迭代译码，是译码器三族（Turbo/LDPC/Polar）之外的第四块拼图。一句话本质：**TBCC 是"环形赛道"——发车位置就是终点位置，跑一圈头尾自然相接，没有停车（收尾）开销**。
 
-## 独立解释任务
+## 解释目标与范围
 
-任务目标：讲清 TBCC 的咬尾机制与普通卷积码（含收尾）的区别、编码结构与译码方式（Viterbi/BCJR），说明它在 LTE 控制信道中的位置，以及与 Turbo 分量码递归系统卷积码（Recursive Systematic Convolutional Code, RSC）的关系与区别。
+本节目标：讲清 TBCC 的咬尾机制与普通卷积码（含收尾）的区别、编码结构与译码方式（Viterbi/BCJR），说明它在 LTE 控制信道中的位置，以及与 Turbo 分量码递归系统卷积码（Recursive Systematic Convolutional Code, RSC）的关系与区别。
 
 ## 起源与演进
 

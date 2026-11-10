@@ -18,9 +18,9 @@ source_spec: "Mathematical foundation; TS 36.212/38.212 CRC polynomial context"
 
 GF(2) 是只含 {0, 1} 两个元素的有限域。加法为 XOR（模2加），乘法为 AND（模2乘）。所有 CRC 计算、LDPC 校验矩阵和 Polar 极化变换都基于 GF(2) 运算。一句话本质：**GF(2) 是"只有奇偶性的算术"——加就是异或（1+1=0）、减等于加、乘就是与；CRC/LDPC/Polar 的全部校验运算都在这片两个元素的地基上**。
 
-## 独立解释任务
+## 解释目标与范围
 
-任务目标：解释伽罗瓦域（Galois Field with 2 elements, GF(2)）的加法与乘法规则及其封闭性——任何运算的输入、中间结果和输出都落在 {0, 1} 内部，并说明它为何成为比特校验的算术地基。在 LTE/NR 译码链路中，GF(2) 位于最底层：循环冗余校验（Cyclic Redundancy Check, CRC）的多项式除法、低密度奇偶校验码（Low-Density Parity-Check Code, LDPC）的校验矩阵和极化码（Polar Code, Polar）的信道极化变换全部在 GF(2) 上定义。
+本节目标：解释伽罗瓦域（Galois Field with 2 elements, GF(2)）的加法与乘法规则及其封闭性——任何运算的输入、中间结果和输出都落在 {0, 1} 内部，并说明它为何成为比特校验的算术地基。在 LTE/NR 译码链路中，GF(2) 位于最底层：循环冗余校验（Cyclic Redundancy Check, CRC）的多项式除法、低密度奇偶校验码（Low-Density Parity-Check Code, LDPC）的校验矩阵和极化码（Polar Code, Polar）的信道极化变换全部在 GF(2) 上定义。
 
 ## 科学定义
 

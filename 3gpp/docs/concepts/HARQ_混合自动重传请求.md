@@ -16,9 +16,9 @@ source_spec: "TS 36.213 Rel-19 HARQ anchors; TS 38.214 Rel-19 §5.1.7 and §6.1.
 
 HARQ 把前向纠错和自动重传结合起来。接收端在 CRC 失败后保留同一 HARQ process 的软信息，后续重传按 RV 和调度上下文补充新的接收证据。一句话本质：**HARQ 是"错了不重来、接着补证据"——第一次译码失败的软信息不丢，重传带来新证据合并后再译**。
 
-## 独立解释任务
+## 解释目标与范围
 
-任务目标：解释 HARQ 如何把 CRC 结果、RV、soft buffer 和 ACK/NACK 组织成闭环。
+本节目标：解释 HARQ 如何把 CRC 结果、RV、soft buffer 和 ACK/NACK 组织成闭环。
 
 ## 起源与演进
 

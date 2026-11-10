@@ -19,9 +19,9 @@ source_spec: "Algorithmic; TS 38.212 Polar decoder context"
 
 CA-SCL（CRC 辅助 SCL）是 NR Polar 控制信道接收链的最后一级：SCL 输出 L 条候选路径后，按 PM 升序逐条做 CRC 检查，输出第一条通过的路径。一句话本质：**CA-SCL 是"海选+背景核查"——初试按分数（PM）排名，录用必须过背景核查（CRC）；核查不过，分数再高也不录用**。
 
-## 独立解释任务
+## 解释目标与范围
 
-任务目标：解释循环冗余校验辅助逐次消除列表译码（CRC-aided Successive Cancellation List, CA-SCL）如何用 CRC 从 SCL 候选路径中选出最终输出，以及 NR 控制信道 CRC 长度的协议条件与 DCI 的 RNTI 边界。
+本节目标：解释循环冗余校验辅助逐次消除列表译码（CRC-aided Successive Cancellation List, CA-SCL）如何用 CRC 从 SCL 候选路径中选出最终输出，以及 NR 控制信道 CRC 长度的协议条件与 DCI 的 RNTI 边界。
 
 CA-SCL 是 NR Polar 控制信道接收链的最后一级：位于 SCL 树译码之后、控制比特交付之前，承担候选路径的最终选择。
 

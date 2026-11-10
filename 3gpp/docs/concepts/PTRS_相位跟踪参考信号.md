@@ -16,9 +16,9 @@ source_spec: "TS 38.211 Rel-19 §7.4.1.2/§6.4.1.2; TS 38.214 Rel-19 §5.1.6.3/�
 
 PTRS（相位跟踪参考信号，Phase Tracking Reference Signal）解决高频段的相位噪声问题：毫米波/高频下振荡器相位噪声使接收信号产生公共相位误差（CPE，Common Phase Error），破坏星座旋转。PTRS 提供已知相位基准，接收端用它估计并补偿 CPE。它随数据一起发送（DL 在 PDSCH（物理下行共享信道，Physical Downlink Shared Channel）、UL 在 PUSCH（物理上行共享信道，Physical Uplink Shared Channel）），密度随子载波间隔与调制阶数调整。一句话本质：**PTRS 是"画框上的水平仪"——画家画完后给一条已知水平线，装裱师发现画歪了（CPE）就按水平线整体摆正，画本身不用重画**。
 
-## 独立解释任务
+## 解释目标与范围
 
-任务目标：讲清相位噪声问题与 CPE 的影响、PTRS 的补偿原理（相位基准）、时频密度配置（与 SCS（子载波间隔，Subcarrier Spacing）和调制阶数的关系），以及 DL/UL PTRS 的部署差异。
+本节目标：讲清相位噪声问题与 CPE 的影响、PTRS 的补偿原理（相位基准）、时频密度配置（与 SCS（子载波间隔，Subcarrier Spacing）和调制阶数的关系），以及 DL/UL PTRS 的部署差异。
 
 ## 起源与演进
 

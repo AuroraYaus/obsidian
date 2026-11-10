@@ -18,9 +18,9 @@ queries: 1
 
 寻呼是网络在 UE 空闲态（RRC_IDLE）或非激活态（RRC_INACTIVE）主动"找到"UE 的广播机制：网络在预先约定的寻呼时机（PO，Paging Occasion）发送以 P-RNTI（寻呼无线网络临时标识，Paging Radio Network Temporary Identifier）加扰 CRC 的 DCI 与寻呼消息，被点名的 UE 醒来接入网络。寻呼没有 HARQ（混合自动重传请求，Hybrid Automatic Repeat Request）确认——"重传"指同一寻呼消息的重复发送，而非纠错重传。一句话本质：**寻呼是"广播找人"——没有"收到请回答"，重要的事多喊几遍**。
 
-## 独立解释任务
+## 解释目标与范围
 
-任务目标：解释寻呼时机（PO/PF）的计算、寻呼消息的收发流程、"寻呼无 HARQ、靠重复发送提高到达率"的关键语义，以及 PEI 节能预告，并与 PDCCH 盲检、随机接入衔接。
+本节目标：解释寻呼时机（PO/PF）的计算、寻呼消息的收发流程、"寻呼无 HARQ、靠重复发送提高到达率"的关键语义，以及 PEI 节能预告，并与 PDCCH 盲检、随机接入衔接。
 
 ## 起源与演进
 

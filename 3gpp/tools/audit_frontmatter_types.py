@@ -40,7 +40,7 @@ CONCEPT_NAME_RE = re.compile(r"^[A-Za-z0-9]+_.+\.md$")
 # 六段式必检章节（documentation.md 三、概念笔记规范；2026-08-14 治理：
 # AWGN/GF2/Golden_Model 等 5 篇曾用旧式"核心子概念"结构逃逸模板）。
 CONCEPT_REQUIRED_SECTIONS = (
-    "## 独立解释任务",
+    "## 解释目标与范围",
     "## 科学定义",
     "## 直观模型",
     "## 常见误解",

@@ -18,9 +18,9 @@ source_spec: "Algorithmic; hardware implementation of LDPC decoding"
 
 分层译码调度（Layered Schedule）是 LDPC 译码器消息更新时序的安排：H 按行分组逐层执行"CN 更新→立即写回 VN"。一句话本质：**分层是"逐科批改、逐科公布"——下一科老师批改时已看到前面科目的最新成绩；泛洪则是全部改完统一公布**。
 
-## 独立解释任务
+## 解释目标与范围
 
-任务目标：解释 LDPC 译码器中校验节点（Check Node, CN）与变量节点（Variable Node, VN）消息按什么顺序更新、何时写回，说明分层调度（Layered Schedule）为什么通常比泛洪调度（Flooding Schedule）收敛更快。在 LTE/NR 译码链路中的位置：NR LDPC 译码器迭代核心的消息更新时序安排——同一个 $H$、同一套最小和（Min-Sum）节点单元，仅写回顺序不同，收敛速度与存储压力就不同。
+本节目标：解释 LDPC 译码器中校验节点（Check Node, CN）与变量节点（Variable Node, VN）消息按什么顺序更新、何时写回，说明分层调度（Layered Schedule）为什么通常比泛洪调度（Flooding Schedule）收敛更快。在 LTE/NR 译码链路中的位置：NR LDPC 译码器迭代核心的消息更新时序安排——同一个 $H$、同一套最小和（Min-Sum）节点单元，仅写回顺序不同，收敛速度与存储压力就不同。
 
 ## 起源与演进
 

@@ -66,9 +66,9 @@ queries: 1
 
 SCL（逐次消除列表译码，Successive Cancellation List）位于 NR 控制信道接收链的速率恢复之后、循环冗余校验（Cyclic Redundancy Check, CRC）辅助选择（CRC-aided SCL, CA-SCL）之前。它不改变极化码的编码结构，只改变接收端在判决树上的搜索方式：从「每条路径只走一步、判决不可回退」变成「同时维护 $L$ 条路径、每层按度量淘汰」。下文先补齐六个前置对象，再把路径度量的更新式在 $N=4$、$L=2$ 的例子上逐步算出，最后讨论列表大小的工程含义与若干边界情形。
 
-## 独立解释任务
+## 解释目标与范围
 
-任务目标：解释逐次消除列表译码（Successive Cancellation List, SCL）如何在极化码的串行抵消判决树上维护 $L$ 条候选路径，说明路径度量（Path Metric, PM）的更新式、排序剪枝规则与列表大小 $L$ 的工程含义，划清 $L=1$ 退化为串行抵消（Successive Cancellation, SC）的条件，并用 $N=4$、$L=2$ 的手算例给出逐层度量与最终判决。
+本节目标：解释逐次消除列表译码（Successive Cancellation List, SCL）如何在极化码的串行抵消判决树上维护 $L$ 条候选路径，说明路径度量（Path Metric, PM）的更新式、排序剪枝规则与列表大小 $L$ 的工程含义，划清 $L=1$ 退化为串行抵消（Successive Cancellation, SC）的条件，并用 $N=4$、$L=2$ 的手算例给出逐层度量与最终判决。
 
 ## 前置概念
 

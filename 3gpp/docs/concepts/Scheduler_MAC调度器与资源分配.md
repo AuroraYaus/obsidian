@@ -17,9 +17,9 @@ source_spec: "TS 38.214 Rel-19 §5.1/§6.1.2; TS 38.321 Rel-19 §5.4/§6.1"
 
 调度器（Scheduler）是 MAC（媒体接入控制层，Medium Access Control）层每时隙（slot）都要做一次的核心决策单元：决定哪个用户（UE，用户设备，User Equipment）在哪个时频资源上、用多大 MCS（调制与编码方案，Modulation and Coding Scheme）、发多少数据。它把「信道质量（CQI）、业务优先级、QoS（服务质量，Quality of Service）需求、缓冲区状态」综合成资源分配（Resource Allocation）指令，经 DCI（下行控制信息，Downlink Control Information）下发。调度是「从协议到物理资源」的决策层——不理解调度器，就无法理解 DCI 资源字段为什么长那样、descriptor（T9.0）从哪来。一句话本质：**调度器是餐厅经理——综合每桌胃口（CQI）、点单（BSR）、预约（QoS）在资源网格上排座，点菜单（DCI）就是调度结果**。
 
-## 独立解释任务
+## 解释目标与范围
 
-任务目标：讲清调度器在 MAC 层的角色与决策输入、资源分配的单位体系（RBG/VRB 与 PRB 的关系）、NR 资源分配类型（Type 0/1）、频域与时域调度的权衡，以及逻辑信道优先级（LCP）在 MAC 复用中的作用。
+本节目标：讲清调度器在 MAC 层的角色与决策输入、资源分配的单位体系（RBG/VRB 与 PRB 的关系）、NR 资源分配类型（Type 0/1）、频域与时域调度的权衡，以及逻辑信道优先级（LCP）在 MAC 复用中的作用。
 
 ## 起源与演进
 

@@ -18,9 +18,9 @@ queries: 1
 
 跨时隙调度是 PDCCH（物理下行控制信道，Physical Downlink Control Channel）与其调度的数据信道不在同一个时隙（slot）的调度方式：基站在第 n 个时隙下发 DCI（下行控制信息，Downlink Control Information），数据在第 n+k0（下行）或第 n+k2（上行）个时隙才出现。它与同时隙调度（k0=0）相对，核心动机是 UE（用户设备，User Equipment）节能。一句话本质：**跨时隙调度是"下单与送达分开"的调度——用调度时延换 UE 关射频省电的机会**。
 
-## 独立解释任务
+## 解释目标与范围
 
-任务目标：解释 k0/k2 时序参数的含义、跨时隙调度与同时隙调度的取舍、minimumSchedulingOffsetK0/K2 的节能机制，并与 DCI/PDCCH 概念和 T14.1 盲检讲义衔接。
+本节目标：解释 k0/k2 时序参数的含义、跨时隙调度与同时隙调度的取舍、minimumSchedulingOffsetK0/K2 的节能机制，并与 DCI/PDCCH 概念和 T14.1 盲检讲义衔接。
 
 ## 起源与演进
 

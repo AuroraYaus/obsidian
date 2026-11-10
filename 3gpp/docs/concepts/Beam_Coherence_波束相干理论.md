@@ -56,9 +56,9 @@ source_spec: "TR 38.901; TS 38.214 Rel-19 §5.2; TS 38.211 Rel-19 §7.4.1.5; 阵
 
 记号就位后，先把波束相干放回它在角度域的位置。信道相干回答的是「信道在多大频率范围与多长时间内可以当作同一个复增益」，波束相干回答的是「信道在多大角度范围内可以当作同一个复增益」，两者是同一套二阶统计在不同自变量上的表现。一句话本质：**波束相干由散射体的角度分布而非天线数量决定，它度量的是一对方向上的信道响应能否由同一个复增益描述；由此得到的角度分辨率上限、波束之间的独立性与空间复用的秩上界，是 NR 波束管理与 CSI 上报必须尊重的约束。**
 
-## 独立解释任务
+## 解释目标与范围
 
-任务目标：讲清波束相干的定义（角度域二阶统计）、它与相干带宽与相干时间的对偶关系、空间相关与阵元间距的定量关系、波束宽度与角度分辨率的来源，以及这些尺度如何决定 NR 的信道状态信息（Channel State Information，CSI）上报——预编码矩阵指示（Precoding Matrix Indicator，PMI）、秩指示（Rank Indicator，RI）与信道质量指示（Channel Quality Indicator，CQI）——和波束管理（同步信号块（Synchronization Signal Block，SSB）与信道状态信息参考信号（Channel State Information Reference Signal，CSI-RS）的测量、传输配置指示（Transmission Configuration Indication，TCI）状态）的工程取值；并给出三组可手算的数值例——最大时延扩展 1 μs 对应相干带宽 200 kHz、多普勒频移 30 Hz 对应相干时间 14.1 ms、半波长间距对应空间相关系数 0.30。
+本节目标：讲清波束相干的定义（角度域二阶统计）、它与相干带宽与相干时间的对偶关系、空间相关与阵元间距的定量关系、波束宽度与角度分辨率的来源，以及这些尺度如何决定 NR 的信道状态信息（Channel State Information，CSI）上报——预编码矩阵指示（Precoding Matrix Indicator，PMI）、秩指示（Rank Indicator，RI）与信道质量指示（Channel Quality Indicator，CQI）——和波束管理（同步信号块（Synchronization Signal Block，SSB）与信道状态信息参考信号（Channel State Information Reference Signal，CSI-RS）的测量、传输配置指示（Transmission Configuration Indication，TCI）状态）的工程取值；并给出三组可手算的数值例——最大时延扩展 1 μs 对应相干带宽 200 kHz、多普勒频移 30 Hz 对应相干时间 14.1 ms、半波长间距对应空间相关系数 0.30。
 
 ## 前置概念
 

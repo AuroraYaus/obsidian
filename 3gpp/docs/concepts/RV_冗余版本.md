@@ -17,9 +17,9 @@ source_spec: "TS 36.212 Rel-19 §5.1.4.1.2; TS 38.212 Rel-19 §5.4.2.1; TS 38.21
 
 RV 描述一次传输选取哪一部分编码冗余。接收端用 RV 和协议表确定 rate recovery 的起点或区域，把本次 LLR 放回正确的 circular buffer 或 soft buffer 坐标。一句话本质：**RV 是"环形货架上的取货窗口"——母码是整圈货架，每次传输只按 RV 起点取一段，其余位置留给旧软缓存**。
 
-## 独立解释任务
+## 解释目标与范围
 
-任务目标：把 RV 解释成 HARQ soft combining 的地址语义，而不是解释成“第几次重传”。
+本节目标：把 RV 解释成 HARQ soft combining 的地址语义，而不是解释成“第几次重传”。
 
 ## 起源与演进
 

@@ -17,9 +17,9 @@ source_spec: "Hardware implementation; derived from TS 36.212/38.212 decoder req
 
 RTL（Register Transfer Level）微架构是译码器的硬件实现蓝图，用 Verilog/SystemVerilog 描述数据通路、控制状态机和存储结构。Turbo、LDPC、Polar 三类译码引擎各有独特的微架构挑战。一句话本质：**RTL 微架构是"浮点算法到物理芯片的桥梁"——不是公式的逐行翻译，而是把算法变量与硬件对象一一对应：路径度量是存储化、外信息是交换通道、FSM 是时序化、trace 是证据化**。
 
-## 独立解释任务
+## 解释目标与范围
 
-任务目标：解释寄存器传输级（Register Transfer Level, RTL）微架构的层次化设计方法——数据通路、控制状态机（Finite State Machine, FSM）与存储结构如何把译码算法映射为可综合、可验证的硬件，并说明统一译码子系统中共享资源与引擎私有状态的边界。在 LTE/NR 译码链路中，RTL 微架构位于浮点/定点模型之后：它把协议 descriptor 与算法中间量落实到时钟、存储、地址生成与状态控制上，是浮点算法到物理芯片的桥梁。
+本节目标：解释寄存器传输级（Register Transfer Level, RTL）微架构的层次化设计方法——数据通路、控制状态机（Finite State Machine, FSM）与存储结构如何把译码算法映射为可综合、可验证的硬件，并说明统一译码子系统中共享资源与引擎私有状态的边界。在 LTE/NR 译码链路中，RTL 微架构位于浮点/定点模型之后：它把协议 descriptor 与算法中间量落实到时钟、存储、地址生成与状态控制上，是浮点算法到物理芯片的桥梁。
 
 ## 起源与演进
 

@@ -18,9 +18,9 @@ source_spec: "TS 38.214 Rel-19 §5.1/§6.1; TS 38.321 Rel-19 §5.4"
 
 调度授权（Scheduling Grant）是调度器决策的「送达方式」：基站把「这次给你多少资源、怎么收/发」写进 DCI（下行控制信息，Downlink Control Information）——下行叫 DL assignment（下行调度分配），上行叫 UL grant（上行授权）。授权有动态与半静态两种形态：动态授权每个时隙（slot）由 DCI 逐次下发；半静态（SPS/configured grant）一次配置、周期复用，省去重复信令。Grant 是 [[Scheduler_MAC调度器与资源分配]] 的输出、[[PDCCH_物理下行控制信道]] 盲检的收获、[[DCI_下行控制信息]] 字段的用途落地。一句话本质：**Grant 是"工作单"——动态授权每单派一次，SPS/configured grant 签长期合同周期执行，免授权连单都不用等**。
 
-## 独立解释任务
+## 解释目标与范围
 
-任务目标：讲清动态授权与半静态授权（SPS/configured grant）的机制与区别、DL assignment 与 UL grant 的处理差异、DCI 资源分配字段如何解析成实际资源，以及免授权（grant-free）在低时延场景的定位。
+本节目标：讲清动态授权与半静态授权（SPS/configured grant）的机制与区别、DL assignment 与 UL grant 的处理差异、DCI 资源分配字段如何解析成实际资源，以及免授权（grant-free）在低时延场景的定位。
 
 ## 起源与演进
 
