@@ -18,11 +18,36 @@ queries: 1
 
 # Preemption Indication 抢占指示
 
+## 符号与记号约定
+| 符号 | 含义与取值 | 协议锚点 |
+|:---|:---|:---|
+| $T_{\mathrm{INT}}$ | 抢占指示的监测周期，即承载 DCI format 2_1 的搜索空间集的监测时隙周期，取正整数、单位为时隙，由 RRC 的 monitoringSlotPeriodicityAndOffset 配置给出 | TS 38.213 §11.2 |
+| $N_{\mathrm{symb}}^{\mathrm{slot}}$ | 一个时隙内的 OFDM 符号数，常规循环前缀下取 14，单位为符号，由时隙格式表给出 | TS 38.211 §4.3.2 |
+| $\mu$ | 位图所对应服务小区的子载波间隔配置，取 0 至 6 的整数、无量纲，与子载波间隔数值（15 至 960 kHz）的对应关系由 numerology 表给出 | TS 38.211 §4.2 |
+| $\mu_{\mathrm{INT}}$ | UE 接收该 DCI format 2_1 的下行带宽部分的子载波间隔配置，取 0 至 6 的整数、无量纲 | TS 38.213 §11.2 |
+| $N$ | 指示范围包含的符号数，即最近一个监测周期内、该 PDCCH 接收首符号之前的符号个数，取正整数、单位为符号，按 $T_{\mathrm{INT}} \cdot N_{\mathrm{symb}}^{\mathrm{slot}} \cdot 2^{\mu-\mu_{\mathrm{INT}}}$ 算出 | 由 TS 38.213 §11.2 导出 |
+| $N_{\mathrm{INT}}$ | 剔除 tdd-UL-DL-ConfigurationCommon 指示的上行符号之后，指示范围内实际可用于下行传输的符号数，取正整数、单位为符号，由该配置的时隙格式逐符号筛出 | 由 TS 38.213 §11.2 导出 |
+| $B_{\mathrm{INT}}$ | 抢占指示在频域一侧覆盖的 PRB 数，等于激活下行带宽部分包含的 PRB 数，取正整数、单位为 PRB，是位图频域分割的基准 | TS 38.213 §11.2 |
+
+运算符与记号惯例：$\lceil\cdot\rceil$ 与 $\lfloor\cdot\rfloor$ 分别表示向上取整与向下取整，$\bmod$ 表示取余数，三者用于把符号数均分到 14 个（set0）或 7 个（set1）指示组；$2^{\mu-\mu_{\mathrm{INT}}}$ 把以时隙计的监测周期换算到位图所对应服务小区的符号粒度，指数中的差是两个配置之差而不是独立物理量；$T_{\mathrm{INT}}$ 的下标 INT 表示该量属于抢占指示，$N_{\mathrm{symb}}^{\mathrm{slot}}$ 的上标 slot 表示该计数以时隙为单位，上下标都不表示相乘。
+
 抢占指示（Pre-emption Indication，PI）是 NR 中基站通过 DCI format 2_1（INT-RNTI 加扰的组公共 PDCCH（物理下行控制信道，Physical Downlink Control Channel））下发的通知：在最近一个监测周期内，哪些 PRB（物理资源块，Physical Resource Block）和 OFDM（正交频分复用，Orthogonal Frequency Division Multiplexing）符号上"基站可能没有向该 UE 发送数据"。它是 eMBB（增强移动宽带，Enhanced Mobile Broadband）与 URLLC（超可靠低时延通信，Ultra-Reliable Low-Latency Communication）下行复用的配套机制——URLLC 低时延分组不等时隙边界、直接打孔正在进行的 eMBB 传输之后，被抢占的 eMBB 接收端借助 PI 定位被打孔的位置，把受损的 LLR（对数似然比，Log-Likelihood Ratio）从软解调输入中剔除，避免用被破坏的信息参与译码。一句话本质：**PI 是对已发生资源占用的后验指示——URLLC 传输在 eMBB 已分配的时频资源上打孔之后，基站在下一监测时机用 DCI 2_1 的位图指明哪些符号组与 PRB 子集上未向该 UE 发送数据；UE 据此把这些位置的 LLR 置零或丢弃，其余位置照常合并译码，HARQ 流程不变**。
 
 ## 解释目标与范围
 
 本节目标：讲清下行抢占为什么发生、PI 如何指示（DCI 2_1 的 14 位位图如何映射到时频平面）、UE 收到指示后能做什么不能做什么，以及它与上行取消指示（CI）的区别。
+
+## 前置概念
+
+微时隙（mini-slot）。长度短于一个时隙的调度单位，起点可以落在时隙内的任意符号上。URLLC 的低时延要求靠它实现：业务到达后不必等待下一个时隙边界，直接在正在进行的数据时隙中插入一段传输，被打断的数据传输就是本笔记所说的抢占，见 [[T2.2_NR_numerology_time_domain_hierarchy]]。
+
+业务复用与打孔（Puncturing）。同一时频资源上先后安排两类业务的做法。eMBB（增强移动宽带，Enhanced Mobile Broadband）传输按调度占满一片资源，URLLC 到达后在其中取走若干符号与若干资源块，被取走位置的调制符号无法按原计划发送；打孔与速率匹配式复用的区别在于，打孔不改变已约定的传输块大小，只让部分位置作废。
+
+软信息与对数似然比（Log-Likelihood Ratio, LLR）。解调器对每个编码比特给出的、以对数似然比表示的可靠度。抢占指示之所以作用在 LLR 层面，是因为被打孔位置的观测不再对应本 UE 的发送符号，这些位置给出的可靠度不可信；剔除或置零这些 LLR，可以避免错误证据进入译码，见 [[LLR_对数似然比]]。
+
+组公共下行控制信息（Group-common DCI）。由一组 UE 共同监测、以专用 RNTI 加扰的控制信令格式。format 2_1 用 INT-RNTI 加扰，指示的是"哪些资源上没有给本 UE 的传输"，而不是给某个 UE 的调度授权，因此它的载荷按服务小区逐条排列，见 [[DCI_下行控制信息]]。
+
+带宽部分（Bandwidth Part, BWP）。一个载波内为某个 UE 激活的一段连续频域资源。抢占指示的 PRB 集合以激活下行带宽部分为界，指示范围也只在这个频带内解释，见 [[BWP_带宽部分]]。
 
 ## 起源与演进
 
