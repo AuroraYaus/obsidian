@@ -21,49 +21,49 @@ queries: 2
 
 **表 1｜格式族与载荷对象**
 
-| 符号 | 读法 | 含义与取值 | 协议锚点 |
-|:---|:---|:---|:---|
-| $F$ | 格式标识 | DCI 格式名，写成「组号_序号」，如 1_0、1_1、1_2、2_0、2_1；组号表示用途，序号表示同组内的变体 | TS 38.212 Table 7.3.1-1 |
-| $F_{0}$ | 上行调度组 | 0_0/0_1/0_2/0_3，调度一个小区内一个或多个 PUSCH（物理上行共享信道，Physical Uplink Shared Channel），0_1 还可指示配置授权 PUSCH 的下行反馈信息 | TS 38.212 §7.3.1.1 |
-| $F_{1}$ | 下行调度组 | 1_0/1_1/1_2/1_3，调度一个小区内一个或多个 PDSCH（物理下行共享信道，Physical Downlink Shared Channel），1_1 还可触发一次性混合自动重传请求确认（Hybrid Automatic Repeat Request Acknowledgement, HARQ-ACK）码本反馈 | TS 38.212 §7.3.1.2 |
-| $F_{2}$ | 组公共组 | 2_0 至 2_9，通知时隙格式、抢占、TPC（发射功率控制，Transmit Power Control）、省电、波束指示等，CRC 用组公共 RNTI 加扰，发给一组 UE（用户设备，User Equipment） | TS 38.212 §7.3.1.3 |
-| $F_{3}$ | 侧行调度组 | 3_0/3_1/3_2，调度 NR 侧行、LTE 侧行或侧行定位参考信号 | TS 38.212 §7.3.1.4 |
-| $F_{4}$ | 广播组播组 | 4_0/4_1/4_2，调度广播、组播或 RRC_INACTIVE 状态下的组播 PDSCH | TS 38.212 §7.3.1.5 |
+| 符号 | 含义与取值 | 协议锚点 |
+|:---|:---|:---|
+| $F$ | DCI 格式名，写成「组号_序号」，如 1_0、1_1、1_2、2_0、2_1；组号表示用途，序号表示同组内的变体 | TS 38.212 Table 7.3.1-1 |
+| $F_{0}$ | 0_0/0_1/0_2/0_3，调度一个小区内一个或多个 PUSCH（物理上行共享信道，Physical Uplink Shared Channel），0_1 还可指示配置授权 PUSCH 的下行反馈信息 | TS 38.212 §7.3.1.1 |
+| $F_{1}$ | 1_0/1_1/1_2/1_3，调度一个小区内一个或多个 PDSCH（物理下行共享信道，Physical Downlink Shared Channel），1_1 还可触发一次性混合自动重传请求确认（Hybrid Automatic Repeat Request Acknowledgement, HARQ-ACK）码本反馈 | TS 38.212 §7.3.1.2 |
+| $F_{2}$ | 2_0 至 2_9，通知时隙格式、抢占、TPC（发射功率控制，Transmit Power Control）、省电、波束指示等，CRC 用组公共 RNTI 加扰，发给一组 UE（用户设备，User Equipment） | TS 38.212 §7.3.1.3 |
+| $F_{3}$ | 3_0/3_1/3_2，调度 NR 侧行、LTE 侧行或侧行定位参考信号 | TS 38.212 §7.3.1.4 |
+| $F_{4}$ | 4_0/4_1/4_2，调度广播、组播或 RRC_INACTIVE 状态下的组播 PDSCH | TS 38.212 §7.3.1.5 |
 
 **表 2｜载荷与字段位宽**
 
-| 符号 | 读法 | 含义与取值 | 协议锚点 |
-|:---|:---|:---|:---|
-| $A$ | 载荷位数 | DCI 的信息比特数，不含循环冗余校验（Cyclic Redundancy Check, CRC）；不足 12 位时补零到 12 位，尺寸对齐后再按对齐结果确定 | TS 38.212 §7.3.2 |
-| $L_{CRC}$ | CRC 位数 | 24；加扰前的 CRC 长度固定 | TS 38.212 §7.3.2 |
-| $R$ | 无线网络临时标识值 | 无线网络临时标识（Radio Network Temporary Identifier, RNTI）为 16 位标识，用于加扰 CRC 的后 16 位；同名格式 1_0 在不同 RNTI 下的字段清单不同，尺寸也随之不同 | TS 38.321 §7.1 |
-| $N_{RB}^{BWP}$ | 带宽部分的资源块数 | 频域资源分配位宽的输入；BWP（带宽部分，Bandwidth Part）指一段连续带宽，公共搜索空间取 CORESET（控制资源集，Control Resource Set）0 或初始 BWP 的资源块（Resource Block, RB）数，专用搜索空间取激活 BWP 的 RB 数 | TS 38.212 §7.3.1.2.1 |
-| $N_{RBG}$ | 资源块组个数 | 资源分配类型 0 下的资源块组（Resource Block Group, RBG）数，由 BWP 大小与 RBG 尺寸决定 | TS 38.214 §5.1.2.2.1 |
-| $b_{FDRA}$ | 频域资源分配位宽 | 类型 1 为 $\left\lceil\log_2\left(N_{RB}^{BWP}\left(N_{RB}^{BWP}+1\right)/2\right)\right\rceil$；类型 0 为 $N_{RBG}$；动态切换时取两者较大值加 1 | TS 38.212 §7.3.1.2.2 |
-| $I$ | 表项数 | 无线资源控制（Radio Resource Control, RRC）参数 pdsch-TimeDomainAllocationList 的表项数；未配置时取默认表的 16 行 | TS 38.212 §7.3.1.2.2 |
-| $b_{TDRA}$ | 时域资源分配位宽 | $\left\lceil\log_2 I\right\rceil$，单 PDSCH 时 0 至 4 位；多 PDSCH 调度的表可到 6 位 | TS 38.212 §7.3.1.2.2 |
-| $b_{MCS}$ | 调制与编码方案位宽 | 调制与编码方案（Modulation and Coding Scheme, MCS）索引的位宽为 5，索引 0 至 31 | TS 38.212 §7.3.1.2.2 |
-| $b_{NDI}$ | 新数据指示位宽 | 新数据指示（New Data Indicator, NDI），1（单 PDSCH）；多 PDSCH 调度时 2 至 8，每个 PDSCH 一位 | TS 38.212 §7.3.1.2.2 |
-| $b_{RV}$ | 冗余版本位宽 | 冗余版本（Redundancy Version, RV），2（单 PDSCH）；多 PDSCH 调度时 2 至 8 | TS 38.212 §7.3.1.2.2 |
-| $b_{HARQ}$ | HARQ 进程号位宽 | 4；配置 harq-ProcessNumberSizeDCI-1-1 或 -Ext 后 5 | TS 38.212 §7.3.1.2.2 |
-| $N_{HARQ}$ | HARQ 进程数 | nrofHARQ-ProcessesForPDSCH，取 2/4/6/10/12/16，扩展配置另可取 32 | TS 38.331 的 IE nrofHARQ-ProcessesForPDSCH |
-| $b_{CBGTI}$ | 码块组传输指示位宽 | 码块组传输指示（Code Block Group Transmission Information, CBGTI），0 位（未配置码块组传输）或 2/4/6/8 位 | TS 38.212 §7.3.1.2.2 |
-| $n_{CBG}$ | 每传输块最大码块组数 | maxCodeBlockGroupsPerTransportBlock，取 2/4/6/8；多码字时上限为 4 | TS 38.331 的 IE maxCodeBlockGroupsPerTransportBlock |
-| $N_{CW}$ | 码字数 | maxNrofCodeWordsScheduledByDCI，取 1 或 2 | TS 38.212 §7.3.1.2.2 |
-| $b_{TCI}$ | 传输配置指示位宽 | 传输配置指示（Transmission Configuration Indication, TCI），0 位（tci-PresentInDCI 未使能）或 3 位；1_2 可取 1、2 或 3 位 | TS 38.212 §7.3.1.2.2 |
-| $b_{AP}$ | 天线端口位宽 | 4/5/6/7/8，由解调参考信号（Demodulation Reference Signal, DMRS）配置与表 7.3.1.2.2-1 至 -10 决定；1_2 可取 0 位 | TS 38.212 §7.3.1.2.2 |
+| 符号 | 含义与取值 | 协议锚点 |
+|:---|:---|:---|
+| $A$ | DCI 的信息比特数，不含循环冗余校验（Cyclic Redundancy Check, CRC）；不足 12 位时补零到 12 位，尺寸对齐后再按对齐结果确定 | TS 38.212 §7.3.2 |
+| $L_{CRC}$ | 24；加扰前的 CRC 长度固定 | TS 38.212 §7.3.2 |
+| $R$ | 无线网络临时标识（Radio Network Temporary Identifier, RNTI）为 16 位标识，用于加扰 CRC 的后 16 位；同名格式 1_0 在不同 RNTI 下的字段清单不同，尺寸也随之不同 | TS 38.321 §7.1 |
+| $N_{RB}^{BWP}$ | 频域资源分配位宽的输入；BWP（带宽部分，Bandwidth Part）指一段连续带宽，公共搜索空间取 CORESET（控制资源集，Control Resource Set）0 或初始 BWP 的资源块（Resource Block, RB）数，专用搜索空间取激活 BWP 的 RB 数 | TS 38.212 §7.3.1.2.1 |
+| $N_{RBG}$ | 资源分配类型 0 下的资源块组（Resource Block Group, RBG）数，由 BWP 大小与 RBG 尺寸决定 | TS 38.214 §5.1.2.2.1 |
+| $b_{FDRA}$ | 类型 1 为 $\left\lceil\log_2\left(N_{RB}^{BWP}\left(N_{RB}^{BWP}+1\right)/2\right)\right\rceil$；类型 0 为 $N_{RBG}$；动态切换时取两者较大值加 1 | TS 38.212 §7.3.1.2.2 |
+| $I$ | 无线资源控制（Radio Resource Control, RRC）参数 pdsch-TimeDomainAllocationList 的表项数；未配置时取默认表的 16 行 | TS 38.212 §7.3.1.2.2 |
+| $b_{TDRA}$ | $\left\lceil\log_2 I\right\rceil$，单 PDSCH 时 0 至 4 位；多 PDSCH 调度的表可到 6 位 | TS 38.212 §7.3.1.2.2 |
+| $b_{MCS}$ | 调制与编码方案（Modulation and Coding Scheme, MCS）索引的位宽为 5，索引 0 至 31 | TS 38.212 §7.3.1.2.2 |
+| $b_{NDI}$ | 新数据指示（New Data Indicator, NDI），1（单 PDSCH）；多 PDSCH 调度时 2 至 8，每个 PDSCH 一位 | TS 38.212 §7.3.1.2.2 |
+| $b_{RV}$ | 冗余版本（Redundancy Version, RV），2（单 PDSCH）；多 PDSCH 调度时 2 至 8 | TS 38.212 §7.3.1.2.2 |
+| $b_{HARQ}$ | 4；配置 harq-ProcessNumberSizeDCI-1-1 或 -Ext 后 5 | TS 38.212 §7.3.1.2.2 |
+| $N_{HARQ}$ | nrofHARQ-ProcessesForPDSCH，取 2/4/6/10/12/16，扩展配置另可取 32 | TS 38.331 的 IE nrofHARQ-ProcessesForPDSCH |
+| $b_{CBGTI}$ | 码块组传输指示（Code Block Group Transmission Information, CBGTI），0 位（未配置码块组传输）或 2/4/6/8 位 | TS 38.212 §7.3.1.2.2 |
+| $n_{CBG}$ | maxCodeBlockGroupsPerTransportBlock，取 2/4/6/8；多码字时上限为 4 | TS 38.331 的 IE maxCodeBlockGroupsPerTransportBlock |
+| $N_{CW}$ | maxNrofCodeWordsScheduledByDCI，取 1 或 2 | TS 38.212 §7.3.1.2.2 |
+| $b_{TCI}$ | 传输配置指示（Transmission Configuration Indication, TCI），0 位（tci-PresentInDCI 未使能）或 3 位；1_2 可取 1、2 或 3 位 | TS 38.212 §7.3.1.2.2 |
+| $b_{AP}$ | 4/5/6/7/8，由解调参考信号（Demodulation Reference Signal, DMRS）配置与表 7.3.1.2.2-1 至 -10 决定；1_2 可取 0 位 | TS 38.212 §7.3.1.2.2 |
 
 **表 3｜搜索空间与承载结构**
 
-| 符号 | 读法 | 含义与取值 | 协议锚点 |
-|:---|:---|:---|:---|
-| $k_s$ | 监测周期 | 搜索空间集的 PDCCH 监测周期，单位时隙（slot） | TS 38.213 §10.1 |
-| $o_s$ | 监测偏移 | 搜索空间集的监测偏移，单位时隙，取值小于 $k_s$ | TS 38.213 §10.1 |
-| $T_s$ | 持续槽数 | 搜索空间集存在的连续时隙数，取值小于 $k_s$ | TS 38.213 §10.1 |
-| $L$ | 聚合等级 | 1/2/4/8/16，一个 PDCCH 占用的 CCE（控制信道单元，Control Channel Element）数 | TS 38.211 §7.3.2.1 |
-| $M_s^{(L)}$ | 候选数 | 搜索空间集 $s$ 在聚合等级 $L$ 下配置的候选 PDCCH 个数 | TS 38.213 §10.1 |
-| $N_{CCE}$ | CCE 数 | 一个 CORESET 内的 CCE 总数，候选从中取 $L$ 个 | TS 38.213 §10.1 |
-| $N_{REG}^{CCE}$ | 每 CCE 的 REG 数 | 6；一个 REG（资源元素组，Resource Element Group）等于一个资源块在一个 OFDM（正交频分复用）符号上的资源 | TS 38.211 §7.3.2.2 |
+| 符号 | 含义与取值 | 协议锚点 |
+|:---|:---|:---|
+| $k_s$ | 搜索空间集的 PDCCH 监测周期，单位时隙（slot） | TS 38.213 §10.1 |
+| $o_s$ | 搜索空间集的监测偏移，单位时隙，取值小于 $k_s$ | TS 38.213 §10.1 |
+| $T_s$ | 搜索空间集存在的连续时隙数，取值小于 $k_s$ | TS 38.213 §10.1 |
+| $L$ | 1/2/4/8/16，一个 PDCCH 占用的 CCE（控制信道单元，Control Channel Element）数 | TS 38.211 §7.3.2.1 |
+| $M_s^{(L)}$ | 搜索空间集 $s$ 在聚合等级 $L$ 下配置的候选 PDCCH 个数 | TS 38.213 §10.1 |
+| $N_{CCE}$ | 一个 CORESET 内的 CCE 总数，候选从中取 $L$ 个 | TS 38.213 §10.1 |
+| $N_{REG}^{CCE}$ | 6；一个 REG（资源元素组，Resource Element Group）等于一个资源块在一个 OFDM（正交频分复用）符号上的资源 | TS 38.211 §7.3.2.2 |
 
 运算符方面，$\lceil\cdot\rceil$ 表示向上取整（组合数一般不是 2 的整数次幂，位宽必须取整），$\log_2$ 表示以 2 为底的对数，$\bmod$ 表示取余。
 
