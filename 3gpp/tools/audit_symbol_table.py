@@ -54,7 +54,7 @@ OPERATOR_CMDS = {
     "mathrm", "operatorname", "begin", "end", "matrix", "dots", "ldots", "cdots",
     "mid", "vert", "infty", "partial", "Delta", "in", "forall", "exists", "to",
     # 字体修饰：其后的字母才是符号本体
-    "mathcal", "mathbb", "mathsf", "mathfrak", "boldsymbol",
+    "mathcal", "mathbb", "mathsf", "mathfrak", "boldsymbol", "mathbf", "mathit",
     # 括号、关系符与集合符
     "lvert", "rvert", "lVert", "rVert", "sim", "subseteq", "supseteq", "subset",
     "supset", "cup", "cap", "emptyset", "neq", "equiv", "propto", "odot",
@@ -68,15 +68,15 @@ MATH_RE = re.compile(r"\$\$(.+?)\$\$|\$(.+?)\$", re.DOTALL)
 # base：LaTeX 命令，或多字母大写标识（TBS/NRE/DMRS，仅当后接上下标），或单字母
 # 下标/上标允许一层嵌套花括号，使 \text{DMRS}、\mathcal{A} 这类写法整体成为一个记号，
 # 避免被拆成 D/M/R/S、A 等单字母而误报「符号未定义」。
-_GROUP = r"(?:[^{}]|\{[^{}]*\})*"
+_GROUP = r"(?:[^{}]|\{(?:[^{}]|\{[^{}]*\})*\})*"
 TOKEN_RE = re.compile(
-    r"(\\[A-Za-z]+|[A-Za-z]{2,6}(?=[_^])|[A-Za-z])"
+    r"(\\[A-Za-z]+|[A-Za-z]{2,6}(?=[_^])|[A-Z]{2,6}|[A-Za-z])"
     r"(?:_(?:\{(" + _GROUP + r")\}|([A-Za-z0-9])))?"
     r"(?:\^(?:\{(" + _GROUP + r")\}|([A-Za-z0-9])))?"
 )
 
 
-CALLOUT_CMDS = ("mathcal", "mathbb", "mathsf", "mathfrak", "boldsymbol")
+CALLOUT_CMDS = ("mathcal", "mathbb", "mathsf", "mathfrak", "boldsymbol", "mathbf", "mathit", "mathrm")
 
 
 def normalize_math(body: str) -> str:
@@ -85,7 +85,13 @@ def normalize_math(body: str) -> str:
     @return 归一后的正文
     """
     for cmd in CALLOUT_CMDS:
-        body = re.sub(r"\\" + cmd + r"\{([^{}]*)\}", r"\1", body)
+        def _repl(m):
+            inner = m.group(1)
+            # 加粗/花体里出现多个字母时，逐字母拆开（\mathbf{HW} 表示 H 与 W 的乘积）
+            if cmd in ("mathbf", "boldsymbol", "mathcal", "mathbb") and len(inner) > 1 and inner.isalpha() and inner.isupper():
+                inner = " ".join(inner)
+            return f" {inner} "
+        body = re.sub(r"\\" + cmd + r"\{([^{}]*)\}", _repl, body)
     return body
 
 
@@ -133,7 +139,7 @@ def extract_symbols(text: str) -> list[tuple[str, int]]:
     """
     out: list[tuple[str, int]] = []
     for m in MATH_RE.finditer(text):
-        body = m.group(1) or m.group(2) or ""
+        body = normalize_math(m.group(1) or m.group(2) or "")
         base_off = m.start()
         for tm in TOKEN_RE.finditer(body):
             base = tm.group(1)
@@ -175,15 +181,21 @@ def check_file(path: Path, show: bool = False) -> tuple[bool, list[str]]:
     stop = re.search(r"^#{2,%d}\s" % level, rest, re.MULTILINE)
     sec_text = rest[: stop.start()] if stop else rest
     defined = {canonical(m.group(1), (m.group(2) or m.group(3) or "").strip(), (m.group(4) or m.group(5) or "").strip())
-               for m in TOKEN_RE.finditer(sec_text)
+               for m in TOKEN_RE.finditer(normalize_math(sec_text))
                if not (m.group(1).startswith("\\") and m.group(1)[1:] in OPERATOR_CMDS)}
+
+    # 定义集的宽松匹配：允许
+    #   (1) 上标是同一基符号的具体实例（M^L 之于 M、a^2 之于 a）；
+    #   (2) 数学常数 j / e / pi 与无穷，不作为待定义符号。
+    definst = {k.split("^")[0] for k in defined}
+    consts = {"j", "e", "pi", "infty"}
 
     seen: set[str] = set()
     for key, off in extract_symbols(body):
         if key in seen:
             continue
         seen.add(key)
-        if key in defined:
+        if key in defined or key.split("^")[0] in definst or key in consts:
             continue
         line = body[:off].count("\n") + 1
         problems.append(f"符号 {key} 在首次使用（第 {line} 行）前未定义")
