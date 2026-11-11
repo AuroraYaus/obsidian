@@ -15,11 +15,23 @@ source_spec: "TS 38.214 Rel-19 §5.2; TS 38.213 Rel-19 §9; TS 38.331 Rel-19 §6
 
 # Link Adaptation 链路自适应与CQI
 
+## 符号与记号约定
+
+本笔记以文字与表格描述机制，不引入 LaTeX 数学公式；文中涉及的带宽、数量与码率等量均以文字就地说明其含义与来源，无需符号表。
+
 链路自适应（Link Adaptation）让传输速率跟着信道走：UE（用户设备，User Equipment）测量下行 CSI-RS（信道状态信息参考信号，Channel State Information Reference Signal）的 SINR（信干噪比，Signal-to-Interference-plus-Noise Ratio），折算成 CQI（信道质量指示，Channel Quality Indicator）上报，基站据此选择 MCS（调制与编码方案，Modulation and Coding Scheme）——信道好就传得快、信道差就传得稳。它由 CSI（信道状态信息，Channel State Information）反馈环路驱动，是 [[Scheduler_MAC调度器与资源分配]] 的频率选择性调度与 MCS 选择的上游输入。一句话本质：**链路自适应是"自助餐配菜"——顾客（UE）先报胃口（CQI），厨师（调度器）按胃口配菜量（MCS）；吃完反馈咸淡（ACK/NACK），厨师调盐（outer loop 修正），下一次配菜更准**。
 
 ## 解释目标与范围
 
 本节目标：讲清链路自适应闭环（测量→CQI→MCS→反馈→修正）、CQI/PMI/RI 三件报告的内容与作用、CQI 报告的周期/非周期与宽带/子带类型，以及 outer loop（外环）如何用 ACK/NACK 校准 CQI 误差。
+
+## 前置概念
+
+信道状态信息与测量。终端在下行参考信号上测量信干噪比，作为信道质量的量化依据，见 [[CSI_RS_信道状态信息参考信号]] 与 [[CSI_SINR]]。链路自适应的全部输入都来自这项测量，测量的时延与误差直接决定闭环的准确度。
+
+调制与编码方案。调制阶数决定每个符号承载的比特数，码率决定信息比特占编码比特的比例，二者组合成一张可索引的表，见 [[MCS_Table_Effective_Code_Rate_MCS表与有效码率]] 与 [[Modulation_Mapping_调制映射]]。信道质量与调制编码方案的对应关系由误块率目标标定。
+
+误块率与 HARQ 反馈。系统把目标误块率固定在一个工作点（常见为百分之十），再用确认与否认的统计结果修正折算偏置，见 [[HARQ_混合自动重传请求]] 与 [[CRC_循环冗余校验]]。外环修正之所以必要，是因为终端上报的信干噪比与真实译码结果之间存在系统性偏差。
 
 ## 起源与演进
 

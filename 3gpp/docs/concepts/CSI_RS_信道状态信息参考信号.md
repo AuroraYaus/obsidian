@@ -14,11 +14,23 @@ source_spec: "TS 38.211 Rel-19 §7.4.1.5; TS 38.214 Rel-19 §5.2"
 
 # CSI-RS 信道状态信息参考信号
 
+## 符号与记号约定
+
+本笔记以文字与表格描述机制，不引入 LaTeX 数学公式；文中涉及的带宽、数量与码率等量均以文字就地说明其含义与来源，无需符号表。
+
 CSI-RS（信道状态信息参考信号，Channel State Information Reference Signal）是下行测量参考信号：基站周期性/按需发送已知序列，UE 测量它得到下行信道状态，进而生成 CSI（信道状态信息，Channel State Information）报告（CQI（信道质量指示，Channel Quality Indicator）/PMI（预编码矩阵指示，Precoding Matrix Indicator）/RI（秩指示，Rank Indicator），见 [[Link_Adaptation_链路自适应与CQI]]）。它是链路自适应闭环的测量源，同时服务波束管理（[[Beam_Management_波束管理]]）与时频跟踪（[[TRS_跟踪参考信号]]）。一句话本质：**CSI-RS 是下行信道的已知测量参考——基站在约定时频资源上发送已知序列，终端由接收值估计等效信道并折算为 CQI/PMI/RI 上报；测量按配置周期重复或由 DCI 按需触发，结果作用于后续传输的参数选择，本次解调则由与数据同传的 DMRS 承担**。
 
 ## 解释目标与范围
 
 本节目标：讲清 CSI-RS 的三大用途（CSI 测量/波束管理/跟踪）、时频结构与端口配置（端口数/密度/NZP-CSI-RS 资源集），以及与 DMRS（解调参考信号，Demodulation Reference Signal）和 SRS（探测参考信号，Sounding Reference Signal）在参考信号体系中的分工。
+
+## 前置概念
+
+参考信号与信道估计。参考信号是基站与终端共同已知的序列，接收端用它估计等效信道，见 [[Pilot_导频]] 与 [[Channel_Estimation_信道估计]]。CSI-RS 与解调参考信号的区别在于用途：前者独立发送、服务后续调度，后者与数据同传、服务当次解调。
+
+信道状态信息与链路自适应。终端把测量结果折算成信道质量指示、预编码矩阵指示与秩指示上报，基站据此选择调制与编码方案、预编码与层数，见 [[Link_Adaptation_链路自适应与CQI]] 与 [[CSI_SINR]]。CSI-RS 是这条闭环的测量源，缺少它链路自适应只能退回外环修正。
+
+波束与准共址。多波束场景下每个 CSI-RS 资源对应一个发射波束，终端按资源指示与层 1 参考信号接收功率上报最佳波束；准共址与传输配置指示状态则把波束假设传给后续信道，见 [[Beam_Management_波束管理]] 与 [[DMRS_解调参考信号]]。跟踪参考信号同样由 CSI-RS 资源派生，见 [[TRS_跟踪参考信号]]。
 
 ## 起源与演进
 

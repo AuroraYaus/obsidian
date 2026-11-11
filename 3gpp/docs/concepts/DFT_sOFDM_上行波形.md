@@ -15,11 +15,23 @@ source_spec: "TS 38.211 Rel-19 §5.4/§6.3.3; TS 36.211 Rel-19 §5.6"
 
 # DFT-s-OFDM 上行波形
 
+## 符号与记号约定
+
+本笔记以文字与表格描述机制，不引入 LaTeX 数学公式；文中涉及的带宽、数量与码率等量均以文字就地说明其含义与来源，无需符号表。
+
 DFT-s-OFDM（离散傅里叶变换扩展正交频分复用，Discrete Fourier Transform Spread OFDM）是 NR 上行 PUSCH（物理上行共享信道，Physical Uplink Shared Channel）的一种波形选择——先在频域做 DFT 预编码再走 OFDM 调制，本质是「单载波」传输：峰均比 PAPR（峰均功率比，Peak-to-Average Power Ratio）低，功放效率高。LTE 的 SC-FDMA（单载波频分多址，Single Carrier Frequency Division Multiple Access）是它的前身；NR 同时支持 DFT-s-OFDM 与纯 OFDM（CP-OFDM，循环前缀正交频分复用，Cyclic Prefix OFDM）两种上行波形，按场景切换。一句话本质：**OFDM 把符号分散到大量子载波上并行发送，时域包络起伏大、峰均功率比高；DFT-s-OFDM 先做离散傅里叶变换再映射到连续子载波，包络平稳、峰均功率比低，代价是频域调度自由度下降**。
 
 ## 解释目标与范围
 
 本节目标：讲清 DFT-s-OFDM 的原理（DFT 预编码如何把多子载波变成"等效单载波"）、低 PAPR 优势的根源、与 OFDMA（正交频分多址，Orthogonal Frequency Division Multiple Access）的对比，以及 NR 上行波形选择的配置逻辑。
+
+## 前置概念
+
+正交频分复用与离散傅里叶变换。正交频分复用把可用带宽划分为大量互相正交的子载波，逐子载波独立调制，见 [[Multiple_Access_多址接入]] 与 [[Fourier_Transform_傅里叶变换]]。DFT-s-OFDM 在子载波映射之前增加一次离散傅里叶变换，因此必须先理解正交频分复用的多载波结构与变换关系。
+
+峰均功率比与功放线性度。多路子载波叠加使时域信号包络起伏大，峰均功率比高，功放需要回退到线性区才能不失真，回退越多效率越低。终端对功耗与功放成本敏感，这是上行波形选择的核心约束。
+
+调制、子载波映射与资源元素映射。数据比特先经调制成为复符号，再映射到子载波并落到资源元素，见 [[Modulation_Mapping_调制映射]] 与 [[RE_Mapping_资源元素映射]]。DFT-s-OFDM 要求映射到连续子载波，这一限制决定了它在频域调度自由度上的代价。
 
 ## 起源与演进
 

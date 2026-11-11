@@ -15,11 +15,23 @@ source_spec: "TS 38.321 Rel-19 §4-§6; TS 38.300 Rel-19 §5-§6"
 
 # MAC Layer Mapping MAC 层映射
 
+## 符号与记号约定
+
+本笔记以文字与表格描述分层与通道结构，不引入 LaTeX 数学公式，也不涉及需要单独定义的量，故无需符号表。
+
 MAC（媒体接入控制层，Medium Access Control）层映射（MAC Layer Mapping）是信道三层体系的连接机制：逻辑信道（Logical Channel，按内容类型分，如数据/信令）→ 传输信道（Transport Channel，按传输方式分，如 DL-SCH（下行共享信道，Downlink Shared Channel）/UL-SCH（上行共享信道，Uplink Shared Channel））→ 物理信道（Physical Channel，空口承载，如 PDSCH（物理下行共享信道，Physical Downlink Shared Channel）/PUSCH（物理上行共享信道，Physical Uplink Shared Channel））。MAC 层在中间做映射与复用：把多个逻辑信道的数据按优先级组装进 MAC PDU（协议数据单元，Protocol Data Unit），交给传输信道。一句话本质：**MAC 层映射是"邮局分拣"——内容贴标签（LCID）、复用装包裹（MAC PDU）、按运输方式发出，收端按标签拆包**。
 
 ## 解释目标与范围
 
 本节目标：讲清逻辑→传输→物理三层的映射关系、MAC PDU 的组装结构（MAC 头/LCID/复用）、LCP（逻辑信道优先级，Logical Channel Prioritization）在复用中的作用，以及常见信道（BCH/PCCH/CCCH 等）的映射特例。
+
+## 前置概念
+
+协议栈分层。空口协议按物理层、数据链路层与无线资源控制层划分，层与层之间以服务数据单元和协议数据单元交接，见 [[Protocol_Stack_协议栈]]。MAC 层映射处在数据链路层内部，承担逻辑信道到传输信道的翻译。
+
+逻辑信道、传输信道与物理信道。逻辑信道按承载内容分类，传输信道按传输方式分类，物理信道是空口上的实际承载，三者的定义与典型成员见 [[Physical_Channels_物理信道]]。理解三者的差别是理解映射关系的前提。
+
+传输块与复用。MAC 交给物理层的最小数据单元是传输块，一个传输块在一个传输时间间隔内发送；MAC 头用逻辑信道标识标注每段数据的归属，见 [[TB_传输块]] 与 [[Scheduler_MAC调度器与资源分配]]。复用与优先级处理决定一个传输块里装哪些逻辑信道的数据。
 
 ## 起源与演进
 
