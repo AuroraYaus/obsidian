@@ -9,13 +9,18 @@
 `floor(TBS_LBRM/(C*R_LBRM))` 作为定义，而 `TBS_LBRM`、`C`、`R_LBRM` 三个符号
 当时还没有在符号表里出现过——读者读到第一个公式就撞到三个未解释的符号。
 
+**修法不是删掉公式，而是把这三个符号的定义提前**（预先解释）；公式本身要保留。
+
 规则（与「符号必须先定义后使用」同源）：
   在 `## 符号与记号约定` 的表格中，按行自上而下扫描；
   第 k 行的「含义与取值」「协议锚点」两列里出现的每个数学符号，
   必须满足以下之一，否则记为违规：
     (1) 它就是本行的符号；
     (2) 它已出现在前面某行的符号列中；
-    (3) 它属于运算符/常量白名单（由 audit_symbol_table 的 OPERATOR_CMDS 提供）。
+    (3) 它是本行符号的具体实例（同一基符号、数字下标，如 B_0 之于 B_r）；
+    (4) 它属于运算符/常量白名单（由 audit_symbol_table 的 OPERATOR_CMDS 提供）。
+  违规时的处置方式：把被引用符号的定义行**移到使用行之前**，或在表中**补一行**
+  定义；不得以删掉定义式、改成文字描述来规避。
 
 @usage
     python3 tools/audit_symbol_selfcontained.py                # 全库 docs/concepts
@@ -215,7 +220,14 @@ def check_file(path: Path, show: bool = False) -> list[str]:
             continue
         deps = tokens_in(cells[1:], formula_only=True)
         for key, raw in deps:
-            if key == cur or key in defined:
+            # 数字下标是同一符号的具体实例（如 E_1 之于 E_r），按基符号判定
+            base_key = re.sub(r"_\d+$", "", key)
+            cur_base = re.sub(r"_.*$", "", cur)
+            key_base = re.sub(r"_.*$", "", key)
+            if key == cur or key in defined or base_key in defined or base_key == cur:
+                continue
+            # 同一基符号的具体实例（B_0/B_1 之于 B_r，E_1 之于 E_r）视为本行自身
+            if key_base == cur_base:
                 continue
             problems.append(
                 f"第 {lineno} 行解释 ${cur}$ 时使用了尚未定义的 ${raw}$"
