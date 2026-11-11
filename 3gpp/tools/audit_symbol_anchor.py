@@ -158,7 +158,7 @@ def iter_notes(paths: list[str]) -> list[Path]:
             out.extend(sorted(p.glob("*.md")))
         elif p.is_file():
             out.append(p)
-    return [p for p in out if p.name not in {"概念图谱入口.md", "README.md"}]
+    return [p for p in out if p.name not in {"概念图谱入口.md", "3GPP全流程_缩写概念理论清单.md", "README.md"}]
 
 
 def main() -> int:
