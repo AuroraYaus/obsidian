@@ -70,6 +70,20 @@ TOKEN_RE = re.compile(
 )
 
 
+CALLOUT_CMDS = ("mathcal", "mathbb", "mathsf", "mathfrak", "boldsymbol")
+
+
+def normalize_math(body: str) -> str:
+    """@brief 把 \\mathcal{X} 之类的字体修饰去掉，只保留内容
+    @param body 数学片段正文
+    @return 归一后的正文
+    """
+    for cmd in CALLOUT_CMDS:
+        body = re.sub(r"\\" + cmd + r"\{([^{}]*)\}", r"\1", body)
+    return body
+
+
+
 def split_frontmatter(text: str) -> tuple[str, str]:
     """@brief 拆出 frontmatter 与正文
     @param text 文件全文
@@ -113,7 +127,7 @@ def extract_symbols(text: str) -> list[tuple[str, int]]:
     """
     out: list[tuple[str, int]] = []
     for m in MATH_RE.finditer(text):
-        body = m.group(1) or m.group(2) or ""
+        body = normalize_math(m.group(1) or m.group(2) or "")
         base_off = m.start()
         for tm in TOKEN_RE.finditer(body):
             base = tm.group(1)
