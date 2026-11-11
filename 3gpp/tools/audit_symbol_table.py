@@ -60,10 +60,13 @@ SECTION_RE = re.compile(r"^#{2,3}\s*(符号与记号约定|符号约定|记号�
 MATH_RE = re.compile(r"\$\$(.+?)\$\$|\$(.+?)\$", re.DOTALL)
 # 符号 token：字母（或 \cmd）+ 可选上下标组；上下标允许单字符或 {...}
 # base：LaTeX 命令，或多字母大写标识（TBS/NRE/DMRS，仅当后接上下标），或单字母
+# 下标/上标允许一层嵌套花括号，使 \text{DMRS}、\mathcal{A} 这类写法整体成为一个记号，
+# 避免被拆成 D/M/R/S、A 等单字母而误报「符号未定义」。
+_GROUP = r"(?:[^{}]|\{[^{}]*\})*"
 TOKEN_RE = re.compile(
     r"(\\[A-Za-z]+|[A-Za-z]{2,6}(?=[_^])|[A-Za-z])"
-    r"(?:_(?:\{([^{}]*)\}|([A-Za-z0-9])))?"
-    r"(?:\^(?:\{([^{}]*)\}|([A-Za-z0-9])))?"
+    r"(?:_(?:\{(" + _GROUP + r")\}|([A-Za-z0-9])))?"
+    r"(?:\^(?:\{(" + _GROUP + r")\}|([A-Za-z0-9])))?"
 )
 
 
@@ -87,11 +90,19 @@ def canonical(base: str, sub: str, sup: str) -> str:
     @param sup  上标（可为空）
     @return 形如 N_RE、E_r、TBS_temp、nu 的键
     """
+    def clean(part: str) -> str:
+        """去掉 \\text{...} / \\mathrm{...} 等包装，只保留内容"""
+        if not part:
+            return part
+        for cmd in ("\\text", "\\mathrm", "\\mathit", "\\mathbf"):
+            part = part.replace(cmd + "{", "").replace("}", "")
+        return part
+
     key = base[1:] if base.startswith("\\") else base
     if sub:
-        key += "_" + sub
+        key += "_" + clean(sub)
     if sup:
-        key += "^" + sup
+        key += "^" + clean(sup)
     return key
 
 
