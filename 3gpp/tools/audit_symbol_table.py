@@ -53,6 +53,12 @@ OPERATOR_CMDS = {
     "leq", "geq", "ne", "neq", "approx", "left", "right", "quad", "qquad", "text",
     "mathrm", "operatorname", "begin", "end", "matrix", "dots", "ldots", "cdots",
     "mid", "vert", "infty", "partial", "Delta", "in", "forall", "exists", "to",
+    # 字体修饰：其后的字母才是符号本体
+    "mathcal", "mathbb", "mathsf", "mathfrak", "boldsymbol",
+    # 括号、关系符与集合符
+    "lvert", "rvert", "lVert", "rVert", "sim", "subseteq", "supseteq", "subset",
+    "supset", "cup", "cap", "emptyset", "neq", "equiv", "propto", "odot",
+    "otimes", "oplus", "prime", "ell", "nabla", "rangle", "langle",
 }
 
 # 符号小节标题（按优先级）
@@ -127,7 +133,7 @@ def extract_symbols(text: str) -> list[tuple[str, int]]:
     """
     out: list[tuple[str, int]] = []
     for m in MATH_RE.finditer(text):
-        body = normalize_math(m.group(1) or m.group(2) or "")
+        body = m.group(1) or m.group(2) or ""
         base_off = m.start()
         for tm in TOKEN_RE.finditer(body):
             base = tm.group(1)
