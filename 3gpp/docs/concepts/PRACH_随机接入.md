@@ -28,12 +28,12 @@ queries: 1
 | $F$                    | 前导格式（preamble format）标识；长格式为 0 至 3（$L_{RA}=839$），短格式为 A1 至 A3、B1 至 B4、C0 与 C2（$L_{RA}$ 取 139、571 或 1151，随 $\mu$ 而定） | TS 38.211 表 6.3.3.1-1、表 6.3.3.1-2            |
 | $\Delta f_{RA}$        | 前导的子载波间隔；$L_{RA}=839$ 时为 1.25 kHz 或 5 kHz，短格式为 $15\cdot 2^{\mu}$ kHz                                                | TS 38.211 §6.3.3.1 与表 6.3.3.1-2              |
 | $u$                    | 物理根序列号（sequence number），决定 ZC 序列的根；取值 0 至 $L_{RA}-1$                                                                | TS 38.211 §6.3.3.1                           |
-| $n_{shift}^{RA}$       | 一根根序列可生成的循环移位数，$n_{shift}^{RA}=\lfloor L_{RA}/N_{CS}\rfloor$；$N_{CS}=0$ 时为 1                                        | 由 §6.3.3.1 导出                                |
+| $n_{shift}^{RA}$       | 一根根序列可生成的循环移位数，$n_{shift}^{RA}=\lfloor L_{RA}/N_{CS}\rfloor$；$N_{CS}=0$ 时为 1                                        | 由 TS 38.211 §6.3.3.1 导出                        |
 | $n_{RA}$               | 频域 PRACH occasion 序号，$0\le n_{RA}<M$，从上行带宽最低频起编号                                                                    | TS 38.211 §6.3.3.2                           |
-| $v$                    | 循环移位序号，$v=0,1,\ldots,n_{shift}^{RA}-1$；是前导索引的第二个维度                                                                  | 由 §6.3.3.1 导出                                |
+| $v$                    | 循环移位序号，$v=0,1,\ldots,n_{shift}^{RA}-1$；是前导索引的第二个维度                                                                  | 由 TS 38.211 §6.3.3.1 导出                        |
 | $x_u$                  | 第 $u$ 号根序列，即长度 $L_{RA}$ 的 Zadoff-Chu（ZC）序列；前导由它的循环移位得到                                                              | TS 38.211 §6.3.3.1                           |
 | $i$                    | 逻辑根序列索引，由 prach-RootSequenceIndex 给出起点，经表 6.3.3.1-3 至表 6.3.3.1-4B 映射成 $u$                                           | TS 38.211 §6.3.3.1                           |
-| $K$                    | 生成一个 occasion 内 64 个前导所需的根序列个数，$K=\lceil 64/n_{shift}^{RA}\rceil$                                                   | 由 §6.3.3.1 导出                                |
+| $K$                    | 生成一个 occasion 内 64 个前导所需的根序列个数，$K=\lceil 64/n_{shift}^{RA}\rceil$                                                   | 由 TS 38.211 §6.3.3.1 导出                        |
 | $C_v$                  | 第 $v$ 个前导相对根序列的循环移位量，以元素计；无约束集合下 $C_v=v\cdot N_{CS}$                                                                | TS 38.211 §6.3.3.1                           |
 
 **表 2｜标识与过程量**
@@ -56,14 +56,14 @@ queries: 1
 
 | 符号           | 含义与取值                                                                              | 协议锚点                            |
 | :----------- | :--------------------------------------------------------------------------------- | :------------------------------ |
-| $P_{PRACH}$  | PRACH 发射功率，$P_{PRACH}=\min\{P_{CMAX},P_{tgt}+P_{loss}\}$，单位 dBm                    | TS 38.213 §7.4                  |
 | $P_{CMAX}$   | 配置的最大输出功率，PRACH 发射功率的上界                                                            | TS 38.213 §7.4                  |
 | $P_{tgt}$    | 前导目标接收功率 preambleReceivedTargetPower，单位 dBm                                        | TS 38.321 §5.1.1；TS 38.213 §7.4 |
 | $P_{loss}$   | 下行路损估计，即参考信号功率与参考信号接收功率（Reference Signal Received Power, RSRP）之差，单位 dB；协议原文记作 `PL` | TS 38.213 §7.4                  |
+| $P_{PRACH}$  | PRACH 发射功率，$P_{PRACH}=\min\{P_{CMAX},P_{tgt}+P_{loss}\}$，单位 dBm                    | TS 38.213 §7.4                  |
 | $\Delta_{F}$ | 与前导格式相关的功率偏移 DELTA_PREAMBLE，单位 dB；长格式取 0、−3、−6，短格式为 $\mu$ 的一次式                     | TS 38.321 §7.3 表 7.3-1、表 7.3-2  |
 | $S_{step}$   | 功率爬坡步长 PREAMBLE_POWER_RAMPING_STEP，由 powerRampingStep 给出，单位 dB                     | TS 38.321 §5.1.3                |
-| $N_{ramp}$   | 功率爬坡计数器 PREAMBLE_POWER_RAMPING_COUNTER，从 1 起，每次重发前按条件加 1                           | 由 §5.1.3 导出                     |
-| $N_{tx}$     | 前导发送计数器 PREAMBLE_TRANSMISSION_COUNTER，达到 `preambleTransMax` 加 1 时上报随机接入问题          | 由 §5.1.3 导出                     |
+| $N_{ramp}$   | 功率爬坡计数器 PREAMBLE_POWER_RAMPING_COUNTER，从 1 起，每次重发前按条件加 1                           | 由 TS 38.321 §5.1.3 导出            |
+| $N_{tx}$     | 前导发送计数器 PREAMBLE_TRANSMISSION_COUNTER，达到 `preambleTransMax` 加 1 时上报随机接入问题          | 由 TS 38.321 §5.1.3 导出            |
 | $T_{RTT}$    | 最大往返时延，用于把零相关区长度换算成小区半径                                                            | 非 3GPP 标准                       |
 | $d$          | 小区半径，即基站到 UE 的最大距离，单位 m                                                            | 非 3GPP 标准                       |
 | $c_{0}$      | 电磁波在自由空间的传播速度，约 $3\times 10^{8}$ m/s                                               | 非 3GPP 标准                       |
